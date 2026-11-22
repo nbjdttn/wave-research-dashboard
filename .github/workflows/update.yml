@@ -14,7 +14,7 @@ on:
         description: "What to refresh"
         type: choice
         default: all
-        options: [all, profile, citations, papers, peers, grants]
+        options: [all, profile, citations, papers, grants]
 
 permissions:
   contents: write

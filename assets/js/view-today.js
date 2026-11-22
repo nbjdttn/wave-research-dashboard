@@ -47,7 +47,7 @@ export function renderToday(root, D, ctx) {
       <div>
         <section class="section" aria-labelledby="h-stories">
           <div class="section-head"><h2 class="eyebrow" id="h-stories">New papers<span class="count">${num(stories.length)}</span></h2><a class="more" href="#papers">All papers ${icon('arrow', 'xs')}</a></div>
-          ${lead ? `<div class="stories">${storyHTML(lead, { lead: true, saved: ctx.papers.has(lead.id), ownTitle, showNew: false })}${rest.map((p) => storyHTML(p, { saved: ctx.papers.has(p.id), ownTitle, abstract: false, showNew: false })).join('')}</div>`
+          ${lead ? `<div class="stories">${[lead, ...rest].map((p) => storyHTML(p, { saved: ctx.papers.has(p.id), ownTitle, plain: true, showNew: false })).join('')}</div>`
             : `<div class="empty"><h3>No new papers this week</h3></div>`}
         </section>
       </div>
@@ -121,19 +121,20 @@ function briefingHTML(B) {
 function recordHTML(D) {
   const m = D.profile?.metrics;
   if (!m) return '';
-  const t = D.citations?.totals, ps = D.peers?.summary;
+  const t = D.citations?.totals;
   const KIND = [['independent', 'Independent', 'var(--series-1)'], ['collaborator', 'Co-authors', 'var(--series-2)'], ['self', 'Own', 'var(--series-3)']];
   const total = t ? KIND.reduce((a, [k]) => a + (t[k] || 0), 0) : 0;
-  const rank = ps?.rank ? `${ps.rank}${['th', 'st', 'nd', 'rd'][ps.rank % 10 < 4 && (ps.rank % 100 < 11 || ps.rank % 100 > 13) ? ps.rank % 10 : 0]}` : null;
-  return `<a class="card record" href="#profile" aria-label="Your record: ${num(m.citations)} citations">
-    <div class="record-top"><span class="kpi-label">Citations · all time</span>${m.citations_this_year ? `<span class="trend"><b>↗ +${num(m.citations_this_year)}</b> this year</span>` : ''}</div>
-    <div class="bignum">${num(m.citations)}</div>
-    ${total ? `<div class="segbar" role="img" aria-label="${KIND.map(([k, l]) => `${l} ${Math.round(((t[k] || 0) / total) * 100)}%`).join(', ')}">${KIND.filter(([k]) => t[k]).map(([k, , c]) => `<span style="flex:${t[k]};background:${c}"></span>`).join('')}</div>
-    <div class="legend">${KIND.filter(([k]) => t[k]).map(([k, l, c]) => `<span><i style="background:${c}"></i>${l} ${Math.round((t[k] / total) * 100)}%</span>`).join('')}</div>` : ''}
+  return `<section class="card record" aria-label="Your record">
+    <a href="#profile/citations" aria-label="${num(m.citations)} citations: who cites you">
+      <div class="record-top"><span class="kpi-label">Citations · all time</span>${m.citations_this_year ? `<span class="trend"><b>↗ +${num(m.citations_this_year)}</b> this year</span>` : ''}</div>
+      <div class="bignum">${num(m.citations)}</div>
+      ${total ? `<div class="segbar" role="img" aria-label="${KIND.map(([k, l]) => `${l} ${Math.round(((t[k] || 0) / total) * 100)}%`).join(', ')}">${KIND.filter(([k]) => t[k]).map(([k, , c]) => `<span style="flex:${t[k]};background:${c}"></span>`).join('')}</div>
+      <div class="legend">${KIND.filter(([k]) => t[k]).map(([k, l, c]) => `<span><i style="background:${c}"></i>${l} ${Math.round((t[k] / total) * 100)}%</span>`).join('')}</div>` : ''}
+    </a>
     <div class="ministats">
-      <div><b>${num(m.h_index)}</b><span>h-index</span></div>
-      <div><b>${num(m.i10_index)}</b><span>i10</span></div>
-      <div><b>${num(m.outputs)}</b><span>papers</span></div>
-      <div><b>${rank || num(t?.citing_papers)}</b><span>${rank ? 'among peers' : 'citing papers'}</span></div>
-    </div></a>`;
+      <a href="#profile"><b>${num(m.h_index)}</b><span>h-index</span></a>
+      <a href="#profile"><b>${num(m.i10_index)}</b><span>i10</span></a>
+      <a href="#profile/publications"><b>${num(m.outputs)}</b><span>papers</span></a>
+      <a href="#profile/citations"><b>${num(t?.citing_papers)}</b><span>citing papers</span></a>
+    </div></section>`;
 }

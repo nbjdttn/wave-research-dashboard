@@ -65,7 +65,8 @@ export function paperDate(p) {
 /** Every paper rendered so far, by id — lets a tap on "save" find the object (incl. live search hits). */
 export const paperIndex = new Map();
 
-export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abstract = true, showNew = true } = {}) {
+export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abstract = true, showNew = true, plain = false } = {}) {
+  // `plain` (the Today screen): every card the same size, bullet points only, no abstract
   paperIndex.set(p.id, p);
   const venue = p.venue ? `<span class="venue">${esc(p.venue)}</span><span class="sep">·</span>` : '';
   const near = p.similar_to && !(p.cites || []).length
@@ -79,13 +80,14 @@ export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abs
     </div>
     <h3 class="story-title"><a href="${safeUrl(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a></h3>
     <p class="byline">${people(p.authors, p.author_count, 2)}</p>
-    ${p.abstract ? `<p class="abstract" data-toggle="abstract"${lead && abstract ? '' : ' hidden'}>${esc(p.abstract)}</p>` : ''}
+    ${p.bullets?.length ? `<ul class="bullets">${p.bullets.slice(0, 3).map((b) => `<li>${esc(b)}</li>`).join('')}</ul>` : ''}
+    ${p.abstract && !plain ? `<p class="abstract" data-toggle="abstract"${lead && abstract && !p.bullets?.length ? '' : ' hidden'}>${esc(p.abstract)}</p>` : ''}
     ${cites.length ? `<div class="cites-you">${icon('quote', 'sm')}<span>Cites <i>${esc(cites[0])}</i>${cites.length > 1 ? ` +${cites.length - 1}` : ''}</span></div>` : ''}
     ${near}
     <div class="story-foot">
       <span class="match" title="How close this is to your own papers"><span class="meter" style="--v:${Number(p.score) || 0}"></span>${Number(p.score) || 0}%</span>
       <span class="story-actions">
-        ${p.abstract && !(lead && abstract) ? `<button class="act" type="button" data-abs aria-expanded="false">Abstract</button>` : ''}
+        ${p.abstract && !plain && !(lead && abstract && !p.bullets?.length) ? `<button class="act" type="button" data-abs aria-expanded="false">Abstract</button>` : ''}
         ${p.pdf_url ? `<a class="act" href="${safeUrl(p.pdf_url)}" target="_blank" rel="noopener">${icon('pdf', 'sm')}PDF</a>` : ''}
         <a class="act" href="${safeUrl(claudeLink(paperPrompt(p)))}" target="_blank" rel="noopener" aria-label="Send to Claude" title="Send to Claude">${icon('spark', 'sm')}</a>
         <button class="act" type="button" data-save-paper="${esc(p.id)}" aria-pressed="${saved}" aria-label="${saved ? 'Remove from reading list' : 'Save to reading list'}">${icon('save', 'sm')}</button>

@@ -9,7 +9,7 @@ import { renderProfile } from './view-profile.js';
 
 const VIEWS = { today: renderToday, papers: renderPapers, funding: renderFunding, profile: renderProfile };
 const TITLES = { today: 'Today', papers: 'Papers', funding: 'Funding', profile: 'Profile' };
-const D = { profile: null, papers: null, grants: null, citations: null, peers: null, briefing: null };
+const D = { profile: null, papers: null, grants: null, citations: null, briefing: null };
 const view = $('#view');
 const scroller = $('#scroller');                       // the only thing that scrolls (see index.html)
 let leave = [];

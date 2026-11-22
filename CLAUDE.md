@@ -23,9 +23,9 @@ static site with no build step, published by GitHub Pages from the branch
 
 | Where | What |
 | --- | --- |
-| `config/researcher.toml` | Profile, career stage, interests, thresholds, the peer-group rules |
+| `config/researcher.toml` | Profile, career stage, interests, thresholds |
 | `config/schemes.json` | Watch-list of recurring funder schemes that have no feed |
-| `scripts/update.py`, `scripts/wave/` | The pipeline: `profile`, `citations`, `papers`, `peers`, `grants` |
+| `scripts/update.py`, `scripts/wave/` | The pipeline: `profile`, `citations`, `papers`, `grants`, `alerts` |
 | `scripts/seed_tools.py` | Review funding calls by hand (no API key) and import the answers |
 | `data/*.json`, `data/cache/` | Generated data and the pipeline's memory |
 | `index.html`, `assets/`, `sw.js` | The interface (vanilla ES modules). Bump `CACHE` in `sw.js` when you change it |
@@ -60,22 +60,24 @@ fails, skip it and say so.
      Never invent a date; leave it empty and say what to check.
 3. **Papers.** From the new items in `data/papers.json`, pick at most three worth the owner's time
    today and say why in one line each.
-4. **Record.** Run `python scripts/update.py profile citations peers`. Google Scholar often refuses
+4. **Record.** Run `python scripts/update.py profile citations`. Google Scholar often refuses
    GitHub's servers but may answer here, which refreshes the headline numbers.
-5. **Peers.** For up to three people in `data/peers.json` whose `phd_source` is `estimate`, find the
-   real PhD year from a university or thesis page and add it under `[peers.phd_years]` in the config.
-6. **Briefing.** Write `data/briefing.json` — it appears at the top of the Today screen for four days:
+5. **Briefing.** Write `data/briefing.json` — it appears at the top of the Today screen for four days.
+   **Findings only**: funding first (a new call, a deadline, a changed date), then at most two papers
+   worth reading. No housekeeping, no notes about what you did, no citation or profile statistics.
 
    ```json
    {"generated_at": "2026-11-23T06:50:00Z", "by": "Claude (agent pass)",
     "headline": "At most eight words",
-    "items": [{"kind": "funding | deadline | paper | citation | note", "important": true,
+    "items": [{"kind": "funding | deadline | paper", "important": true,
                "title": "At most ten words", "text": "One sentence, at most 22 words.",
-               "url": "#funding/<id>, #papers, #profile/peers or an https link"}]}
+               "url": "#funding/<id>, #papers or an https link"}]}
    ```
 
-   Two to five items, most important first. `important: true` only for something that needs action
-   within a fortnight or a new opportunity that fits strongly.
-7. **Publish.** Commit and push. Finish with a short message whose **first line** is the one thing the
-   owner should know — a strong new call, a deadline within fourteen days, a milestone — or
-   "Nothing urgent today." That line is what reaches their phone as a notification.
+   One to four items, most important first; if there is nothing worth saying, write an empty list.
+   `important: true` only for funding that needs action within a fortnight or a new call that fits strongly.
+6. **Publish.** Commit and push. Finish with a short message whose **first line** is the one thing the
+   owner should know about **funding** — a strong new call, or a deadline within fourteen days — or
+   "No funding news today." The owner wants notifications about funding only: send a push
+   notification (if you have such a tool) only on days with a funding item that needs action, and
+   never for papers, citations or housekeeping.

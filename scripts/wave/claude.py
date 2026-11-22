@@ -104,6 +104,13 @@ ANALYSIS_SCHEMA = _obj({
     "next_steps": {"type": "array", "items": STR},
 })
 
+BULLETS_SCHEMA = _obj({
+    "papers": {"type": "array", "items": _obj({
+        "id": STR,
+        "bullets": {"type": "array", "items": STR},
+    })},
+})
+
 TRIAGE_SCHEMA = _obj({
     "decisions": {"type": "array", "items": _obj({
         "id": STR,
@@ -362,6 +369,28 @@ class Claude:
             data = self._json(self._request(user=user, schema=TRIAGE_SCHEMA, effort="low", max_tokens=12000))
             for d in (data or {}).get("decisions", []):
                 out[d["id"]] = {"keep": bool(d["keep"]), "reason": squash(d["reason"])[:140]}
+        return out
+
+    def bullets(self, papers: list[dict]) -> dict[str, list[str]]:
+        """Two or three short bullet points per paper, from its abstract. Returns {id: [bullet, …]}."""
+        out: dict[str, list[str]] = {}
+        for start in range(0, len(papers), 12):
+            chunk = papers[start:start + 12]
+            blocks = "\n\n".join(f"[{p['id']}] {p['title']}\n{p['abstract']}" for p in chunk)
+            user = (
+                "Below are new papers (id in brackets, title, abstract) from the researcher's reading feed. For each, write "
+                "the summary they would want on a phone: two or three bullet points, each at most 12 words, plain and "
+                "specific. First: what was done. Second: the main finding, with the number if the abstract gives one. "
+                "Third (only if it is real): why it matters for THIS researcher's own work. No hedging, no 'this paper', "
+                "no restating the title, nothing that is not in the abstract. Return every id.\n\n" + blocks)
+            try:
+                data = self._json(self._request(user=user, schema=BULLETS_SCHEMA, effort="low", max_tokens=6000))
+            except Budget:
+                break
+            for row in (data or {}).get("papers", []):
+                points = [squash(b).rstrip(".") for b in row.get("bullets") or [] if squash(b)][:3]
+                if points:
+                    out[row["id"]] = points
         return out
 
     def analyse(self, facts: str, body: str, history: str = "") -> dict | None:

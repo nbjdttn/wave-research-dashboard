@@ -135,6 +135,34 @@ def _collect(cfg: dict, profile: dict, status: dict) -> dict[str, dict]:
     return pool
 
 
+def summarise(cfg: dict, papers: list[dict]) -> dict:
+    """Bullet-point summaries for the feed. Kept between runs; Claude is asked only about papers that
+    have none yet (newest first, a bounded number per run). Without an API key the cache is still used."""
+    from .claude import Claude          # imported here so the step also runs without the SDK
+
+    cache = read_json(CACHE / "paper_bullets.json", {}) or {}
+    limit = int(cfg.get("papers", {}).get("bullets_per_run", 48))
+    todo = sorted((p for p in papers if p["id"] not in cache and len(p.get("abstract") or "") > 200),
+                  key=lambda x: x["news_date"], reverse=True)
+    ai = {"calls": 0, "estimated_cost_usd": 0.0, "added": 0}
+    client = Claude(cfg)
+    if client.available and todo:
+        got = client.bullets(todo[:limit])
+        for pid, points in got.items():
+            cache[pid] = {"at": today().isoformat(), "b": points}
+        ai = {"calls": client.calls, "estimated_cost_usd": client.cost_estimate(), "added": len(got)}
+        log(f"  bullets: {len(got)} papers summarised in {client.calls} Claude calls (≈${client.cost_estimate()})"
+            + (f"; {client.errors[0]}" if client.errors else ""))
+    live = {p["id"] for p in papers}
+    for pid in [k for k, v in cache.items() if k not in live and (today() - dt.date.fromisoformat(v["at"])).days > 200]:
+        del cache[pid]
+    write_json(CACHE / "paper_bullets.json", cache, compact=True)
+    for paper in papers:
+        paper["bullets"] = (cache.get(paper["id"]) or {}).get("b") or None
+    ai["with_bullets"] = sum(1 for x in papers if x["bullets"])
+    return ai
+
+
 def run(cfg: dict) -> dict:
     profile = read_json(DATA / "profile.json")
     sim = read_json(DATA / "similarity.json")
@@ -237,8 +265,10 @@ def run(cfg: dict) -> dict:
     new_cut = (today() - dt.timedelta(days=int(pc.get("new_days", 10)))).isoformat()
     for p in keep:
         p["is_new"] = p["news_date"] >= new_cut
+    ai = summarise(cfg, keep)
     result = {
         "generated_at": now_iso(),
+        "ai": ai,
         "window_days": int(pc["window_days"]),
         "new_days": int(pc.get("new_days", 10)),
         "sources": status,

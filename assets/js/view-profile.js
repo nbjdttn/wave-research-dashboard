@@ -3,7 +3,6 @@
 import { esc, safeUrl, icon, num, initials, $, copyText, fmtDate, brief } from './util.js';
 import { columns, stacked, dataTable, sparkline, heatgrid } from './charts.js';
 import { citationTrend, scholarAge } from './cards.js';
-import { peersHTML, mountPeers } from './view-peers.js';
 
 const state = { tab: 'overview', q: '', type: 'all', theme: 'all', sort: 'year', tables: {} };
 const TYPE_LABEL = { journal: 'Journal', conference: 'Conference', preprint: 'Preprint', thesis: 'Thesis', other: 'Other' };
@@ -28,7 +27,7 @@ const country = (code) => {
 export function renderProfile(root, D, ctx, sub) {
   const P = D.profile;
   if (!P) { root.innerHTML = '<div class="empty"><h3>Profile data is not available yet</h3></div>'; return; }
-  if (['overview', 'citations', 'peers', 'publications'].includes(sub)) state.tab = sub;
+  if (['overview', 'citations', 'publications'].includes(sub)) state.tab = sub;
   const r = P.researcher, m = P.metrics, C = D.citations;
 
   const head = () => `
@@ -41,15 +40,12 @@ export function renderProfile(root, D, ctx, sub) {
       <div class="seg" role="tablist" aria-label="Profile sections">
         <button role="tab" type="button" data-tab="overview" aria-selected="${state.tab === 'overview'}">Overview</button>
         <button role="tab" type="button" data-tab="citations" aria-selected="${state.tab === 'citations'}">Citations</button>
-        <button role="tab" type="button" data-tab="peers" aria-selected="${state.tab === 'peers'}">Peers</button>
         <button role="tab" type="button" data-tab="publications" aria-selected="${state.tab === 'publications'}">Papers <span class="n">${m.outputs}</span></button>
       </div>
     </div>`;
 
   const draw = () => {
-    root.innerHTML = head() + (state.tab === 'overview' ? overviewHTML(P) : state.tab === 'citations' ? citationsHTML(P, C)
-      : state.tab === 'peers' ? peersHTML(D) : publicationsHTML(P));
-    if (state.tab === 'peers') mountPeers(root, D, draw);
+    root.innerHTML = head() + (state.tab === 'overview' ? overviewHTML(P) : state.tab === 'citations' ? citationsHTML(P, C) : publicationsHTML(P));
     if (state.tab === 'overview') mountOverview(root, P);
     if (state.tab === 'citations' && C) mountCitations(root, C);
   };
