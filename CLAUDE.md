@@ -40,8 +40,10 @@ A scheduled session runs this once a day, after the GitHub Action. The Action do
 fetching; the agent does what a script cannot. Aim to finish in about twenty minutes; if a step
 fails, skip it and say so.
 
-1. **Sync and check.** Check out the branch and pull. Look at the last "Update data" run; if it
-   failed, read its log and fix the cause if it is small, otherwise report it.
+1. **Sync and check.** Check out the branch and pull. The scripted job should have run this morning:
+   `generated_at` in `data/grants.json` and `data/papers.json` should be today, and `ai.errors` in
+   `data/grants.json` empty. If not (and if GitHub tools are available, read the last "Update data"
+   run's log), fix the cause when it is small, otherwise report it.
 2. **Funding — the main job.** Read `data/grants.json` and `config/schemes.json`, then search the web
    for opportunities the feeds miss or have out of date: funders without feeds (Royal Society,
    Leverhulme, Royal Academy of Engineering, ICE, Lloyd's Register Foundation, ONR Global, ARIA,
