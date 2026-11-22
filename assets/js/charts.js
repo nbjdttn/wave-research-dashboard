@@ -49,7 +49,7 @@ function bindTips(svg, tipFor) {
     g.addEventListener('click', (e) => { e.stopPropagation(); show(g, e); });
   });
 }
-document.addEventListener('click', hideTip);
+document.addEventListener('click', () => { hideTip(); document.querySelectorAll('.chart .cross').forEach((c) => { c.hidden = true; }); });
 
 /**
  * Single-series columns. data: [{label, value, partial?}]
@@ -137,6 +137,110 @@ export function stacked(el, { data, series, height = 190, unit = 'outputs' }) {
     bindTips(el.firstChild, (i) => `<b>${esc(data[i].label)} · ${num(totals[i])} ${esc(unit)}</b>` + series
       .filter((sr) => data[i].values[sr.key])
       .map((sr) => `<span class="k"><span><i style="background:${sr.color}"></i>${esc(sr.label)}</span><span>${data[i].values[sr.key]}</span></span>`).join(''));
+  });
+}
+
+/**
+ * Emphasis lines: one series is the point (accent), an optional picked one is second (next hue), the
+ * rest are grey context; the cohort's middle half is a band and its median a line. A crosshair snaps
+ * to the nearest x and one tooltip reads every emphasised series there.
+ * series:  [{ id, label, role: 'focus' | 'pick' | 'context', points: [[x, y], …] }]
+ * summary: [{ x, lo, mid, hi, min, max, n }]
+ */
+export function lines(el, { series, summary = [], xFormat = String, tipTitle = String, unit = '', height = 232, mark = null }) {
+  mount(el, () => {
+    const W = el.clientWidth, H = height, padL = 36, padR = 14, padT = 22, padB = 24;
+    const xs = [...new Set(series.flatMap((sr) => sr.points.map((pt) => pt[0])))].sort((a, b) => a - b);
+    if (!xs.length) { el.innerHTML = ''; return; }
+    const x0 = xs[0], x1 = xs.at(-1);
+    const ticks = niceTicks(Math.max(1, ...series.flatMap((sr) => sr.points.map((pt) => pt[1]))), 4);
+    const top = ticks.at(-1);
+    const plotW = W - padL - padR, plotH = H - padT - padB;
+    const X = (v) => padL + (x1 === x0 ? plotW / 2 : ((v - x0) / (x1 - x0)) * plotW);
+    const Y = (v) => padT + plotH - (v / top) * plotH;
+    const path = (pts) => pts.map((pt, i) => `${i ? 'L' : 'M'}${X(pt[0]).toFixed(1)},${Y(pt[1]).toFixed(1)}`).join('');
+    const focus = series.find((sr) => sr.role === 'focus'), pick = series.find((sr) => sr.role === 'pick');
+    const band = summary.filter((q) => q.n >= 3);
+    let s = `<svg viewBox="0 0 ${W} ${H}" height="${H}" role="group" aria-label="Line chart" style="touch-action:pan-y">`;
+    for (const t of ticks) s += `<line class="gridline" x1="${padL}" x2="${W - padR}" y1="${Y(t)}" y2="${Y(t)}"/><text x="${padL - 8}" y="${Y(t) + 3.5}" text-anchor="end">${num(t)}</text>`;
+    const step = Math.max(1, Math.ceil((xs.length * 30) / plotW));
+    xs.forEach((v, i) => { if ((v - (mark ?? x0)) % step === 0 || i === xs.length - 1 && step === 1) s += `<text x="${X(v)}" y="${H - 6}" text-anchor="middle"${v === mark ? ' class="val"' : ''}>${esc(xFormat(v))}</text>`; });
+    if (mark != null && mark >= x0 && mark <= x1) s += `<line class="markline" x1="${X(mark)}" x2="${X(mark)}" y1="${padT}" y2="${padT + plotH}"/>`;
+    if (band.length > 1) s += `<path class="band" d="${path(band.map((q) => [q.x, q.hi]))}L${[...band].reverse().map((q) => `${X(q.x).toFixed(1)},${Y(q.lo).toFixed(1)}`).join('L')}Z"/>`;
+    for (const sr of series.filter((x) => x.role === 'context')) s += `<path class="ln ctx" d="${path(sr.points)}"/>`;
+    if (summary.length > 1) s += `<path class="ln median" d="${path(summary.map((q) => [q.x, q.mid]))}"/>`;
+    if (pick) s += `<path class="ln pick" d="${path(pick.points)}"/>`;
+    if (focus) {
+      const [ex, ey] = focus.points.at(-1);
+      s += `<path class="ln focus" d="${path(focus.points)}"/><circle class="dot focus" cx="${X(ex)}" cy="${Y(ey)}" r="4.5"/>`;
+      s += `<text class="val" x="${X(ex) - 9}" y="${Math.max(12, Y(ey) - 9)}" text-anchor="end">${esc(focus.label)} ${num(ey)}</text>`;
+    }
+    s += `<g class="cross" hidden><line x1="0" x2="0" y1="${padT}" y2="${padT + plotH}"/><circle class="dot median" r="4"/><circle class="dot pick" r="4"/><circle class="dot focus" r="4.5"/></g>`;
+    s += `<rect class="hit" tabindex="0" role="img" aria-label="Line chart; use the arrow keys to read values" x="${padL}" y="${padT}" width="${plotW}" height="${plotH + padB}"/></svg>`;
+    el.innerHTML = s;
+
+    const svg = el.firstChild, cross = svg.querySelector('.cross'), hit = svg.querySelector('.hit');
+    const at = (sr, v) => sr?.points.find((pt) => pt[0] === v)?.[1];
+    const key = (cls, label, value) => `<span class="k"><span><i class="line ${cls}"></i>${esc(label)}</span><span>${value}</span></span>`;
+    let idx = xs.length - 1;
+    const show = (i, clientX) => {
+      idx = Math.max(0, Math.min(xs.length - 1, i));
+      const v = xs[idx], q = summary.find((z) => z.x === v), fy = at(focus, v), py = at(pick, v);
+      cross.hidden = false;
+      cross.querySelector('line').setAttribute('x1', X(v));
+      cross.querySelector('line').setAttribute('x2', X(v));
+      const place = (sel, y) => { const c = cross.querySelector(sel); c.style.display = y == null ? 'none' : ''; if (y != null) { c.setAttribute('cx', X(v)); c.setAttribute('cy', Y(y)); } };
+      place('.dot.focus', fy); place('.dot.pick', py); place('.dot.median', q?.mid);
+      const r = svg.getBoundingClientRect();
+      showTip(`<b>${esc(tipTitle(v))}</b>${fy != null ? key('focus', focus.label, num(fy)) : ''}${py != null ? key('pick', pick.label, num(py)) : ''}`
+        + (q ? key('median', 'Peer median', num(q.mid)) + key('ctx', `${q.n} peers`, `${num(q.min)}–${num(q.max)}`) : '')
+        + (unit ? `<span class="k"><span>${esc(unit)}</span><span></span></span>` : ''),
+        clientX ?? r.left + X(v), r.top + padT);
+    };
+    const nearest = (e) => { const r = svg.getBoundingClientRect(); const v = x0 + ((e.clientX - r.left - padL) / plotW) * (x1 - x0); return xs.reduce((best, x, i) => (Math.abs(x - v) < Math.abs(xs[best] - v) ? i : best), 0); };
+    const hide = () => { cross.hidden = true; hideTip(); };
+    hit.addEventListener('pointerdown', (e) => show(nearest(e), e.clientX));
+    hit.addEventListener('pointermove', (e) => show(nearest(e), e.clientX));
+    hit.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') hide(); });
+    hit.addEventListener('click', (e) => e.stopPropagation());
+    hit.addEventListener('focus', () => show(idx));
+    hit.addEventListener('blur', hide);
+    hit.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); show(idx + (e.key === 'ArrowLeft' ? -1 : 1)); } });
+  });
+}
+
+/**
+ * Heat grid: one row per year, one cell per month; one hue, more is stronger (five steps).
+ * rows: [{ label, cells: [{ label, value } | null] }], cols: ['J', 'F', …]
+ */
+export function heatgrid(el, { rows, cols, unit = '' }) {
+  mount(el, () => {
+    const W = el.clientWidth, padL = 34, gap = 3;
+    const cell = Math.min(26, (W - padL - gap * (cols.length - 1)) / cols.length);
+    const H = 16 + rows.length * (cell + gap);
+    const max = Math.max(1, ...rows.flatMap((r) => r.cells.map((c) => c?.value || 0)));
+    const step = (v) => (v <= 0 ? 0 : Math.min(5, 1 + Math.floor((v / max) * 4.999)));
+    let s = `<svg viewBox="0 0 ${W} ${H}" height="${H}" role="group" aria-label="Heat map">`;
+    cols.forEach((c, i) => { s += `<text x="${padL + i * (cell + gap) + cell / 2}" y="10" text-anchor="middle">${esc(c)}</text>`; });
+    rows.forEach((r, j) => {
+      const y = 16 + j * (cell + gap);
+      s += `<text x="${padL - 8}" y="${y + cell / 2 + 3.5}" text-anchor="end">${esc(r.label)}</text>`;
+      r.cells.forEach((c, i) => {
+        if (!c) return;
+        s += `<g class="col" tabindex="0" role="img" data-i="${j}-${i}" data-top="${y}" aria-label="${esc(c.label)}: ${num(c.value)} ${esc(unit)}">`
+          + `<rect class="mark heat h${step(c.value)}" x="${padL + i * (cell + gap)}" y="${y}" width="${cell}" height="${cell}" rx="5"/></g>`;
+      });
+    });
+    el.innerHTML = `${s}</svg>`;
+    el.querySelectorAll('g.col').forEach((g) => {
+      const [j, i] = g.dataset.i.split('-').map(Number), c = rows[j].cells[i];
+      const show = () => { const r = g.getBoundingClientRect(); showTip(`<b>${esc(c.label)}</b>${num(c.value)} ${esc(unit)}`, r.left + r.width / 2, r.top); };
+      g.addEventListener('pointerenter', show);
+      g.addEventListener('pointerleave', hideTip);
+      g.addEventListener('focus', show);
+      g.addEventListener('blur', hideTip);
+      g.addEventListener('click', (e) => { e.stopPropagation(); show(); });
+    });
   });
 }
 

@@ -9,7 +9,7 @@ import { renderProfile } from './view-profile.js';
 
 const VIEWS = { today: renderToday, papers: renderPapers, funding: renderFunding, profile: renderProfile };
 const TITLES = { today: 'Today', papers: 'Papers', funding: 'Funding', profile: 'Profile' };
-const D = { profile: null, papers: null, grants: null, citations: null, peers: null };
+const D = { profile: null, papers: null, grants: null, citations: null, peers: null, briefing: null };
 const view = $('#view');
 const scroller = $('#scroller');                       // the only thing that scrolls (see index.html)
 let leave = [];
@@ -151,16 +151,16 @@ function sourceRows(group, labels) {
   }).join('');
 }
 
-/** A small preview of one palette: hero gradient, wave line, text and accent. */
+/** A small preview of one palette: page, card, wave line, text and accent. */
 function swatch(key, pal, mode, on) {
   const t = pal[mode];
   return `<button class="swatch" type="button" role="radio" aria-checked="${on}" data-palette-set="${esc(key)}">
     <svg viewBox="0 0 96 60" aria-hidden="true">
-      <defs><linearGradient id="sw-${esc(key)}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${esc(t.hero1)}"/><stop offset="1" stop-color="${esc(t.hero3)}"/></linearGradient></defs>
-      <rect width="96" height="60" fill="${esc(t.bg)}"/><rect width="96" height="36" fill="url(#sw-${esc(key)})"/>
-      <path d="M0 24c8 0 9-3 13-3s5 9 9 9 5-18 10-18 5 14 9 14 5-5 9-5 6 3 10 3 8-1 36-1" fill="none" stroke="${esc(t.heroAccent)}" stroke-width="1.8" stroke-linecap="round"/>
-      <rect x="8" y="43" width="30" height="5" rx="2.5" fill="${esc(t.ink)}"/><rect x="8" y="51" width="18" height="3" rx="1.5" fill="${esc(t.ink3)}"/>
-      <circle cx="82" cy="48" r="6" fill="${esc(t.accent)}"/><circle cx="66" cy="48" r="6" fill="${esc(t.surface)}" stroke="${esc(t.line2)}" stroke-width="1"/>
+      <rect width="96" height="60" fill="${esc(t.bg)}"/>
+      <rect x="7" y="7" width="82" height="34" rx="8" fill="${esc(t.surface)}" stroke="${esc(t.line)}" stroke-width="1"/>
+      <path d="M7 27c8 0 9-3 13-3s5 8 9 8 5-16 10-16 5 12 9 12 5-4 9-4 6 3 10 3 8-1 22-1" fill="none" stroke="${esc(t.accent)}" stroke-width="1.8" stroke-linecap="round"/>
+      <rect x="8" y="47" width="30" height="5" rx="2.5" fill="${esc(t.ink)}"/><rect x="42" y="48" width="16" height="3" rx="1.5" fill="${esc(t.ink3)}"/>
+      <circle cx="83" cy="50" r="5" fill="${esc(t.accent)}"/>
     </svg><span class="swatch-name">${esc(pal.name)}</span></button>`;
 }
 

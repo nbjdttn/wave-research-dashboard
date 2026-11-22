@@ -1,0 +1,9 @@
+{
+ "generated_at": "2026-11-22T21:00:00Z",
+ "by": "Claude (agent pass)",
+ "headline": "One deadline needs a decision this week",
+ "items": [
+  {"kind": "deadline", "important": true, "title": "UKRI Enabling AI adoption closes 1 Dec, 16:00", "text": "Nine days left; you need an AI or domain co-lead and your research office's internal sign-off.", "url": "#funding/ukri-204237"},
+  {"kind": "citation", "title": "Citations are up 277 this year", "text": "63% come from groups you have never published with; your peer group's median at the same stage is 146.", "url": "#profile/peers"}
+ ]
+}

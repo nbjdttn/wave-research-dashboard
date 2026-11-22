@@ -161,6 +161,8 @@ def run(cfg: dict) -> dict:
     year_ago = (today() - dt.timedelta(days=365)).isoformat()
     kinds = Counter()
     by_year: dict[int, Counter] = defaultdict(Counter)
+    by_month: Counter = Counter()
+    this_month = today().isoformat()[:7]
     venues, countries, institutions = Counter(), Counter(), Counter()
     authors: dict[str, dict] = {}
     intents = Counter()
@@ -170,6 +172,8 @@ def run(cfg: dict) -> dict:
         kinds[c["kind"]] += 1
         if c.get("year"):
             by_year[min(int(c["year"]), this_year)][c["kind"]] += 1      # in-press papers count in the current year
+        if len(c.get("date") or "") >= 7:
+            by_month[min(c["date"][:7], this_month)] += 1
         oa = oa_cache.get(c.get("doi") or "") or {}
         venue = tidy_venue(c.get("venue") or oa.get("v"))[0]
         if venue and c["kind"] != "self":
@@ -225,6 +229,9 @@ def run(cfg: dict) -> dict:
             "located": located, "papers_covered": len(covered), "papers_with_doi": len(pubs),
             "scholar_citations": (profile.get("metrics") or {}).get("citations"),
         },
+        # citing papers per month for the last six years, oldest first (a heat-map on the page)
+        "by_month": [{"month": f"{y}-{m:02d}", "count": by_month.get(f"{y}-{m:02d}", 0)}
+                     for y in range(this_year - 5, this_year + 1) for m in range(1, 13) if f"{y}-{m:02d}" <= this_month],
         "by_year": [{"year": y, "self": by_year[y]["self"], "collaborator": by_year[y]["collaborator"],
                      "independent": by_year[y]["independent"]}
                     for y in range(max(years[0], this_year - 9), this_year + 1)] if years else [],

@@ -1,5 +1,5 @@
 // "Today" — the front page: what is new in papers and funding since you last looked.
-import { esc, icon, longToday, daysTo, num, plural } from './util.js';
+import { esc, icon, longToday, daysTo, num, plural, fmtDate, safeUrl } from './util.js';
 import { storyHTML, oppRow, isLive, citationTrend } from './cards.js';
 import { sparkline } from './charts.js';
 import { mountWave } from './wave.js';
@@ -40,6 +40,8 @@ export function renderToday(root, D, ctx) {
         <a href="#funding">${next ? `<b>${nextDays === 0 ? 'Today' : `${num(nextDays)} d`}</b><span>next deadline</span>` : '<b>–</b><span>no deadline</span>'}</a>
       </nav>
     </header>
+    ${briefingHTML(D.briefing)}
+    ${recordHTML(D)}
 
     <div class="cols split">
       <div>
@@ -101,4 +103,37 @@ function fundingDesk(newOpps, deadlines, prepare, opps, grants) {
   return `<div class="card pad">${blocks.map(([title, list], i) => `
     <h3 class="fact-label" style="margin:${i ? '18px' : '0'} 0 10px">${esc(title)}</h3>
     <div>${list.map(oppRow).join('')}</div>`).join('')}</div>`;
+}
+
+/** What the daily agent found: a headline and a few lines, shown for four days. */
+function briefingHTML(B) {
+  if (!B?.items?.length || daysTo(String(B.generated_at || '').slice(0, 10)) < -4) return '';
+  const ICON = { funding: 'spark', deadline: 'clock', paper: 'pdf', citation: 'quote', note: 'info' };
+  return `<section class="card briefing" aria-label="From your agent">
+    <div class="record-top"><span class="kpi-label">From your agent · ${esc(fmtDate(String(B.generated_at).slice(0, 10)))}</span></div>
+    ${B.headline ? `<h2>${esc(B.headline)}</h2>` : ''}
+    <ul>${B.items.slice(0, 5).map((it) => `<li class="${it.important ? 'hot' : ''}">${icon(ICON[it.kind] || 'info')}
+      <span><b>${esc(it.title)}</b>${esc(it.text || '')}${it.url ? ` <a href="${safeUrl(it.url)}"${/^#/.test(it.url) ? '' : ' target="_blank" rel="noopener"'}>Open</a>` : ''}</span></li>`).join('')}</ul>
+  </section>`;
+}
+
+/** The record at a glance: citations in large figures, who cites, four small numbers. */
+function recordHTML(D) {
+  const m = D.profile?.metrics;
+  if (!m) return '';
+  const t = D.citations?.totals, ps = D.peers?.summary;
+  const KIND = [['independent', 'Independent', 'var(--series-1)'], ['collaborator', 'Co-authors', 'var(--series-2)'], ['self', 'Own', 'var(--series-3)']];
+  const total = t ? KIND.reduce((a, [k]) => a + (t[k] || 0), 0) : 0;
+  const rank = ps?.rank ? `${ps.rank}${['th', 'st', 'nd', 'rd'][ps.rank % 10 < 4 && (ps.rank % 100 < 11 || ps.rank % 100 > 13) ? ps.rank % 10 : 0]}` : null;
+  return `<a class="card record" href="#profile" aria-label="Your record: ${num(m.citations)} citations">
+    <div class="record-top"><span class="kpi-label">Citations · all time</span>${m.citations_this_year ? `<span class="trend"><b>↗ +${num(m.citations_this_year)}</b> this year</span>` : ''}</div>
+    <div class="bignum">${num(m.citations)}</div>
+    ${total ? `<div class="segbar" role="img" aria-label="${KIND.map(([k, l]) => `${l} ${Math.round(((t[k] || 0) / total) * 100)}%`).join(', ')}">${KIND.filter(([k]) => t[k]).map(([k, , c]) => `<span style="flex:${t[k]};background:${c}"></span>`).join('')}</div>
+    <div class="legend">${KIND.filter(([k]) => t[k]).map(([k, l, c]) => `<span><i style="background:${c}"></i>${l} ${Math.round((t[k] / total) * 100)}%</span>`).join('')}</div>` : ''}
+    <div class="ministats">
+      <div><b>${num(m.h_index)}</b><span>h-index</span></div>
+      <div><b>${num(m.i10_index)}</b><span>i10</span></div>
+      <div><b>${num(m.outputs)}</b><span>papers</span></div>
+      <div><b>${rank || num(t?.citing_papers)}</b><span>${rank ? 'among peers' : 'citing papers'}</span></div>
+    </div></a>`;
 }

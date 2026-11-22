@@ -1,8 +1,9 @@
 // "Profile" — the researcher's own record: headline numbers, where citations come from,
 // and the full publication list. Short labels and figures; no paragraphs.
 import { esc, safeUrl, icon, num, initials, $, copyText, fmtDate, brief } from './util.js';
-import { columns, stacked, dataTable, sparkline } from './charts.js';
+import { columns, stacked, dataTable, sparkline, heatgrid } from './charts.js';
 import { citationTrend, scholarAge } from './cards.js';
+import { peersHTML, mountPeers } from './view-peers.js';
 
 const state = { tab: 'overview', q: '', type: 'all', theme: 'all', sort: 'year', tables: {} };
 const TYPE_LABEL = { journal: 'Journal', conference: 'Conference', preprint: 'Preprint', thesis: 'Thesis', other: 'Other' };
@@ -27,7 +28,7 @@ const country = (code) => {
 export function renderProfile(root, D, ctx, sub) {
   const P = D.profile;
   if (!P) { root.innerHTML = '<div class="empty"><h3>Profile data is not available yet</h3></div>'; return; }
-  if (['overview', 'citations', 'publications'].includes(sub)) state.tab = sub;
+  if (['overview', 'citations', 'peers', 'publications'].includes(sub)) state.tab = sub;
   const r = P.researcher, m = P.metrics, C = D.citations;
 
   const head = () => `
@@ -40,12 +41,15 @@ export function renderProfile(root, D, ctx, sub) {
       <div class="seg" role="tablist" aria-label="Profile sections">
         <button role="tab" type="button" data-tab="overview" aria-selected="${state.tab === 'overview'}">Overview</button>
         <button role="tab" type="button" data-tab="citations" aria-selected="${state.tab === 'citations'}">Citations</button>
+        <button role="tab" type="button" data-tab="peers" aria-selected="${state.tab === 'peers'}">Peers</button>
         <button role="tab" type="button" data-tab="publications" aria-selected="${state.tab === 'publications'}">Papers <span class="n">${m.outputs}</span></button>
       </div>
     </div>`;
 
   const draw = () => {
-    root.innerHTML = head() + (state.tab === 'overview' ? overviewHTML(P) : state.tab === 'citations' ? citationsHTML(P, C) : publicationsHTML(P));
+    root.innerHTML = head() + (state.tab === 'overview' ? overviewHTML(P) : state.tab === 'citations' ? citationsHTML(P, C)
+      : state.tab === 'peers' ? peersHTML(D) : publicationsHTML(P));
+    if (state.tab === 'peers') mountPeers(root, D, draw);
     if (state.tab === 'overview') mountOverview(root, P);
     if (state.tab === 'citations' && C) mountCitations(root, C);
   };
@@ -71,6 +75,9 @@ export function renderProfile(root, D, ctx, sub) {
   ctx.redraw = draw;
   draw();
 }
+
+const HEAT_LEGEND = `<div class="legend" style="margin-bottom:10px;align-items:center"><span>Less</span>${[0, 1, 2, 3, 4, 5].map((n) => `<i class="heat h${n}" style="margin:0 -4px 0 0"></i>`).join('')}<span style="margin-left:6px">More</span></div>`;
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 // ── shared pieces ────────────────────────────────────────────────────────────
 function chartCard(id, title, sub, extra = '') {
@@ -184,6 +191,7 @@ function citationsHTML(P, C) {
           <span class="fig">${num(t[k.key])} <span>· ${pct(t[k.key])}</span></span></div>`).join('')}</div>
       </section>
       ${chartCard('citing', 'Citing papers per year', 'By who is citing', legend(KINDS))}
+      ${C.by_month?.length ? chartCard('months', 'Month by month', 'Citing papers published each month', HEAT_LEGEND) : ''}
     </div>
 
     <div class="cols half section">
@@ -218,6 +226,15 @@ function mountCitations(root, C) {
   const rows = C.by_year.map((y) => ({ label: String(y.year), values: { independent: y.independent, collaborator: y.collaborator, self: y.self } }));
   if (state.tables.citing) el.innerHTML = dataTable([{ key: 'label', label: 'Year' }, ...KINDS.map((k) => ({ key: k.key, label: k.label }))], rows.map((o) => ({ label: o.label, ...o.values })));
   else stacked(el, { data: rows, series: KINDS, unit: 'citing papers' });
+
+  const hm = root.querySelector('#chart-months');
+  if (hm && C.by_month?.length) {
+    const years = [...new Set(C.by_month.map((x) => x.month.slice(0, 4)))];
+    const at = Object.fromEntries(C.by_month.map((x) => [x.month, x.count]));
+    const grid = years.map((y) => ({ label: y, cells: MONTHS.map((name, i) => { const k = `${y}-${String(i + 1).padStart(2, '0')}`; return k in at ? { label: `${name} ${y}`, value: at[k] } : null; }) }));
+    if (state.tables.months) hm.innerHTML = dataTable([{ key: 'y', label: 'Year' }, ...MONTHS.map((name) => ({ key: name, label: name }))], grid.map((r) => ({ y: r.label, ...Object.fromEntries(r.cells.map((c, i) => [MONTHS[i], c ? c.value : ''])) })));
+    else heatgrid(hm, { rows: grid, cols: MONTHS.map((name) => name[0]), unit: 'citing papers' });
+  }
 }
 
 // ── publications ─────────────────────────────────────────────────────────────

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T20:19:38Z",
+ "generated_at": "2026-11-22T20:55:33Z",
  "source": "OpenAlex",
  "you": {
   "id": "A5039175173",
@@ -57,10 +57,11 @@
    2019,
    2025
   ],
-  "candidates": 1299,
-  "looked_up": 426,
-  "eligible": 41,
+  "candidates": 1437,
+  "looked_up": 474,
+  "eligible": 44,
   "shown": 12,
+  "bench": 24,
   "institutions": 64,
   "estimated_phd": 9
  },
@@ -82,11 +83,6 @@
    "phd_source": "estimate",
    "first_year": 2020,
    "similarity": 0.97,
-   "topics": [
-    "Ocean Waves and Remote Sensing",
-    "Coastal and Marine Dynamics",
-    "Nonlinear Waves and Solitons"
-   ],
    "coauthor": false,
    "citations": 73,
    "works": 15,
@@ -139,11 +135,6 @@
    "phd_source": "estimate",
    "first_year": 2017,
    "similarity": 0.97,
-   "topics": [
-    "Ocean Waves and Remote Sensing",
-    "Coastal and Marine Dynamics",
-    "Nonlinear Waves and Solitons"
-   ],
    "coauthor": false,
    "citations": 481,
    "works": 29,
@@ -211,11 +202,6 @@
    "phd_source": "estimate",
    "first_year": 2018,
    "similarity": 0.96,
-   "topics": [
-    "Coastal and Marine Dynamics",
-    "Ocean Waves and Remote Sensing",
-    "Nonlinear Waves and Solitons"
-   ],
    "coauthor": false,
    "citations": 186,
    "works": 21,
@@ -278,11 +264,6 @@
    "phd_source": "orcid",
    "first_year": 2018,
    "similarity": 0.96,
-   "topics": [
-    "Coastal and Marine Dynamics",
-    "Ocean Waves and Remote Sensing",
-    "Nonlinear Waves and Solitons"
-   ],
    "coauthor": false,
    "citations": 402,
    "works": 29,
@@ -350,11 +331,6 @@
    "phd_source": "orcid",
    "first_year": 2020,
    "similarity": 0.96,
-   "topics": [
-    "Coastal and Marine Dynamics",
-    "Ocean Waves and Remote Sensing",
-    "Nonlinear Waves and Solitons"
-   ],
    "coauthor": false,
    "citations": 215,
    "works": 23,
@@ -422,11 +398,6 @@
    "phd_source": "estimate",
    "first_year": 2020,
    "similarity": 0.96,
-   "topics": [
-    "Ocean Waves and Remote Sensing",
-    "Coastal and Marine Dynamics",
-    "Nonlinear Waves and Solitons"
-   ],
    "coauthor": false,
    "citations": 44,
    "works": 8,
@@ -479,11 +450,6 @@
    "phd_source": "orcid",
    "first_year": 2020,
    "similarity": 0.94,
-   "topics": [
-    "Coastal and Marine Dynamics",
-    "Ocean Waves and Remote Sensing",
-    "Nonlinear Waves and Solitons"
-   ],
    "coauthor": false,
    "citations": 106,
    "works": 15,
@@ -546,11 +512,6 @@
    "phd_source": "estimate",
    "first_year": 2018,
    "similarity": 0.93,
-   "topics": [
-    "Coastal and Marine Dynamics",
-    "Ocean Waves and Remote Sensing",
-    "Nonlinear Waves and Solitons"
-   ],
    "coauthor": false,
    "citations": 403,
    "works": 44,
@@ -613,11 +574,6 @@
    "phd_source": "estimate",
    "first_year": 2022,
    "similarity": 0.93,
-   "topics": [
-    "Coastal and Marine Dynamics",
-    "Nonlinear Waves and Solitons",
-    "Ocean Waves and Remote Sensing"
-   ],
    "coauthor": false,
    "citations": 52,
    "works": 13,
@@ -660,11 +616,6 @@
    "phd_source": "estimate",
    "first_year": 2021,
    "similarity": 0.93,
-   "topics": [
-    "Ocean Waves and Remote Sensing",
-    "Coastal and Marine Dynamics",
-    "Nonlinear Waves and Solitons"
-   ],
    "coauthor": true,
    "citations": 139,
    "works": 24,
@@ -712,11 +663,6 @@
    "phd_source": "estimate",
    "first_year": 2020,
    "similarity": 0.9,
-   "topics": [
-    "Nonlinear Waves and Solitons",
-    "Ocean Waves and Remote Sensing",
-    "Coastal and Marine Dynamics"
-   ],
    "coauthor": false,
    "citations": 265,
    "works": 23,
@@ -769,11 +715,6 @@
    "phd_source": "estimate",
    "first_year": 2016,
    "similarity": 0.88,
-   "topics": [
-    "Coastal and Marine Dynamics",
-    "Ocean Waves and Remote Sensing",
-    "Nonlinear Waves and Solitons"
-   ],
    "coauthor": false,
    "citations": 178,
    "works": 27,
@@ -836,6 +777,1395 @@
     }
    ],
    "url": "https://openalex.org/A5000157986"
+  }
+ ],
+ "bench": [
+  {
+   "id": "A5001591448",
+   "name": "Thobani Hlophe",
+   "institution": "The University of Western Australia",
+   "country": "AU",
+   "phd_year": 2023,
+   "phd_source": "estimate",
+   "first_year": 2020,
+   "similarity": 0.83,
+   "coauthor": true,
+   "citations": 145,
+   "works": 19,
+   "h_index": 7,
+   "by_year": [
+    {
+     "year": 2020,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2021,
+     "cites": 3,
+     "works": 2
+    },
+    {
+     "year": 2022,
+     "cites": 9,
+     "works": 4
+    },
+    {
+     "year": 2023,
+     "cites": 25,
+     "works": 4
+    },
+    {
+     "year": 2024,
+     "cites": 24,
+     "works": 3
+    },
+    {
+     "year": 2025,
+     "cites": 28,
+     "works": 4
+    },
+    {
+     "year": 2026,
+     "cites": 56,
+     "works": 1
+    }
+   ],
+   "url": "https://openalex.org/A5001591448",
+   "near_stage": false
+  },
+  {
+   "id": "A5010041690",
+   "name": "Maxime Canard",
+   "institution": "École Centrale de Nantes",
+   "country": "FR",
+   "phd_year": 2024,
+   "phd_source": "orcid",
+   "first_year": 2020,
+   "similarity": 0.83,
+   "coauthor": false,
+   "citations": 117,
+   "works": 15,
+   "h_index": 7,
+   "by_year": [
+    {
+     "year": 2020,
+     "cites": 0,
+     "works": 2
+    },
+    {
+     "year": 2021,
+     "cites": 3,
+     "works": 3
+    },
+    {
+     "year": 2022,
+     "cites": 14,
+     "works": 5
+    },
+    {
+     "year": 2023,
+     "cites": 16,
+     "works": 0
+    },
+    {
+     "year": 2024,
+     "cites": 28,
+     "works": 3
+    },
+    {
+     "year": 2025,
+     "cites": 14,
+     "works": 0
+    },
+    {
+     "year": 2026,
+     "cites": 42,
+     "works": 2
+    }
+   ],
+   "url": "https://openalex.org/A5010041690",
+   "near_stage": false
+  },
+  {
+   "id": "A5021288849",
+   "name": "Zhuxiao Shao",
+   "institution": "Ocean University of China",
+   "country": "CN",
+   "phd_year": 2019,
+   "phd_source": "estimate",
+   "first_year": 2016,
+   "similarity": 0.82,
+   "coauthor": false,
+   "citations": 899,
+   "works": 45,
+   "h_index": 15,
+   "by_year": [
+    {
+     "year": 2016,
+     "cites": 0,
+     "works": 3
+    },
+    {
+     "year": 2017,
+     "cites": 7,
+     "works": 3
+    },
+    {
+     "year": 2018,
+     "cites": 18,
+     "works": 3
+    },
+    {
+     "year": 2019,
+     "cites": 26,
+     "works": 4
+    },
+    {
+     "year": 2020,
+     "cites": 74,
+     "works": 3
+    },
+    {
+     "year": 2021,
+     "cites": 61,
+     "works": 2
+    },
+    {
+     "year": 2022,
+     "cites": 100,
+     "works": 10
+    },
+    {
+     "year": 2023,
+     "cites": 93,
+     "works": 0
+    },
+    {
+     "year": 2024,
+     "cites": 134,
+     "works": 7
+    },
+    {
+     "year": 2025,
+     "cites": 190,
+     "works": 8
+    },
+    {
+     "year": 2026,
+     "cites": 196,
+     "works": 2
+    }
+   ],
+   "url": "https://openalex.org/A5021288849",
+   "near_stage": false
+  },
+  {
+   "id": "A5087909508",
+   "name": "Akanksha Gupta",
+   "institution": "University of California San Diego",
+   "country": "US",
+   "phd_year": 2022,
+   "phd_source": "orcid",
+   "first_year": 2019,
+   "similarity": 0.76,
+   "coauthor": false,
+   "citations": 91,
+   "works": 11,
+   "h_index": 4,
+   "by_year": [
+    {
+     "year": 2019,
+     "cites": 38,
+     "works": 1
+    },
+    {
+     "year": 2020,
+     "cites": 2,
+     "works": 5
+    },
+    {
+     "year": 2021,
+     "cites": 8,
+     "works": 1
+    },
+    {
+     "year": 2022,
+     "cites": 6,
+     "works": 1
+    },
+    {
+     "year": 2023,
+     "cites": 5,
+     "works": 0
+    },
+    {
+     "year": 2024,
+     "cites": 9,
+     "works": 1
+    },
+    {
+     "year": 2025,
+     "cites": 8,
+     "works": 0
+    },
+    {
+     "year": 2026,
+     "cites": 15,
+     "works": 2
+    }
+   ],
+   "url": "https://openalex.org/A5087909508",
+   "near_stage": false
+  },
+  {
+   "id": "A5028132291",
+   "name": "Fukai Song",
+   "institution": "University of Strathclyde",
+   "country": "GB",
+   "phd_year": 2025,
+   "phd_source": "estimate",
+   "first_year": 2022,
+   "similarity": 0.69,
+   "coauthor": false,
+   "citations": 106,
+   "works": 12,
+   "h_index": 5,
+   "by_year": [
+    {
+     "year": 2022,
+     "cites": 1,
+     "works": 2
+    },
+    {
+     "year": 2023,
+     "cites": 2,
+     "works": 2
+    },
+    {
+     "year": 2024,
+     "cites": 19,
+     "works": 3
+    },
+    {
+     "year": 2025,
+     "cites": 39,
+     "works": 0
+    },
+    {
+     "year": 2026,
+     "cites": 43,
+     "works": 4
+    }
+   ],
+   "url": "https://openalex.org/A5028132291",
+   "near_stage": false
+  },
+  {
+   "id": "A5006839335",
+   "name": "Yufei Wang",
+   "institution": "National University of Singapore",
+   "country": "SG",
+   "phd_year": 2025,
+   "phd_source": "estimate",
+   "first_year": 2022,
+   "similarity": 0.68,
+   "coauthor": false,
+   "citations": 83,
+   "works": 12,
+   "h_index": 5,
+   "by_year": [
+    {
+     "year": 2022,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2023,
+     "cites": 4,
+     "works": 3
+    },
+    {
+     "year": 2024,
+     "cites": 12,
+     "works": 0
+    },
+    {
+     "year": 2025,
+     "cites": 28,
+     "works": 6
+    },
+    {
+     "year": 2026,
+     "cites": 39,
+     "works": 2
+    }
+   ],
+   "url": "https://openalex.org/A5006839335",
+   "near_stage": false
+  },
+  {
+   "id": "A5041703033",
+   "name": "Zongbing Yu",
+   "institution": "Dalian University of Technology",
+   "country": "CN",
+   "phd_year": 2019,
+   "phd_source": "estimate",
+   "first_year": 2016,
+   "similarity": 0.67,
+   "coauthor": false,
+   "citations": 318,
+   "works": 54,
+   "h_index": 12,
+   "by_year": [
+    {
+     "year": 2016,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2017,
+     "cites": 0,
+     "works": 0
+    },
+    {
+     "year": 2018,
+     "cites": 8,
+     "works": 5
+    },
+    {
+     "year": 2019,
+     "cites": 15,
+     "works": 2
+    },
+    {
+     "year": 2020,
+     "cites": 14,
+     "works": 3
+    },
+    {
+     "year": 2021,
+     "cites": 21,
+     "works": 2
+    },
+    {
+     "year": 2022,
+     "cites": 14,
+     "works": 4
+    },
+    {
+     "year": 2023,
+     "cites": 24,
+     "works": 7
+    },
+    {
+     "year": 2024,
+     "cites": 38,
+     "works": 11
+    },
+    {
+     "year": 2025,
+     "cites": 76,
+     "works": 12
+    },
+    {
+     "year": 2026,
+     "cites": 108,
+     "works": 7
+    }
+   ],
+   "url": "https://openalex.org/A5041703033",
+   "near_stage": false
+  },
+  {
+   "id": "A5080177638",
+   "name": "Koushik Kanti Barman",
+   "institution": "Tianjin University",
+   "country": "CN",
+   "phd_year": 2023,
+   "phd_source": "estimate",
+   "first_year": 2020,
+   "similarity": 0.64,
+   "coauthor": false,
+   "citations": 234,
+   "works": 39,
+   "h_index": 10,
+   "by_year": [
+    {
+     "year": 2020,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2021,
+     "cites": 8,
+     "works": 3
+    },
+    {
+     "year": 2022,
+     "cites": 10,
+     "works": 1
+    },
+    {
+     "year": 2023,
+     "cites": 29,
+     "works": 3
+    },
+    {
+     "year": 2024,
+     "cites": 66,
+     "works": 6
+    },
+    {
+     "year": 2025,
+     "cites": 63,
+     "works": 11
+    },
+    {
+     "year": 2026,
+     "cites": 58,
+     "works": 14
+    }
+   ],
+   "url": "https://openalex.org/A5080177638",
+   "near_stage": false
+  },
+  {
+   "id": "A5069589379",
+   "name": "Robert Mayon",
+   "institution": "Dalian University of Technology",
+   "country": "CN",
+   "phd_year": 2019,
+   "phd_source": "estimate",
+   "first_year": 2016,
+   "similarity": 0.63,
+   "coauthor": false,
+   "citations": 856,
+   "works": 54,
+   "h_index": 17,
+   "by_year": [
+    {
+     "year": 2016,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2017,
+     "cites": 4,
+     "works": 2
+    },
+    {
+     "year": 2018,
+     "cites": 1,
+     "works": 1
+    },
+    {
+     "year": 2019,
+     "cites": 5,
+     "works": 3
+    },
+    {
+     "year": 2020,
+     "cites": 10,
+     "works": 2
+    },
+    {
+     "year": 2021,
+     "cites": 29,
+     "works": 2
+    },
+    {
+     "year": 2022,
+     "cites": 33,
+     "works": 8
+    },
+    {
+     "year": 2023,
+     "cites": 71,
+     "works": 7
+    },
+    {
+     "year": 2024,
+     "cites": 127,
+     "works": 7
+    },
+    {
+     "year": 2025,
+     "cites": 252,
+     "works": 9
+    },
+    {
+     "year": 2026,
+     "cites": 324,
+     "works": 12
+    }
+   ],
+   "url": "https://openalex.org/A5069589379",
+   "near_stage": false
+  },
+  {
+   "id": "A5102931797",
+   "name": "Xuanlie Zhao",
+   "institution": "University of Lisbon",
+   "country": "PT",
+   "phd_year": 2023,
+   "phd_source": "estimate",
+   "first_year": 2020,
+   "similarity": 0.63,
+   "coauthor": false,
+   "citations": 805,
+   "works": 43,
+   "h_index": 17,
+   "by_year": [
+    {
+     "year": 2020,
+     "cites": 2,
+     "works": 2
+    },
+    {
+     "year": 2021,
+     "cites": 30,
+     "works": 5
+    },
+    {
+     "year": 2022,
+     "cites": 61,
+     "works": 5
+    },
+    {
+     "year": 2023,
+     "cites": 98,
+     "works": 6
+    },
+    {
+     "year": 2024,
+     "cites": 159,
+     "works": 5
+    },
+    {
+     "year": 2025,
+     "cites": 234,
+     "works": 15
+    },
+    {
+     "year": 2026,
+     "cites": 221,
+     "works": 5
+    }
+   ],
+   "url": "https://openalex.org/A5102931797",
+   "near_stage": false
+  },
+  {
+   "id": "A5066263036",
+   "name": "Tao Xu",
+   "institution": "Ocean University of China",
+   "country": "CN",
+   "phd_year": 2019,
+   "phd_source": "estimate",
+   "first_year": 2016,
+   "similarity": 0.61,
+   "coauthor": false,
+   "citations": 161,
+   "works": 14,
+   "h_index": 7,
+   "by_year": [
+    {
+     "year": 2016,
+     "cites": 1,
+     "works": 1
+    },
+    {
+     "year": 2017,
+     "cites": 1,
+     "works": 1
+    },
+    {
+     "year": 2018,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2019,
+     "cites": 3,
+     "works": 1
+    },
+    {
+     "year": 2020,
+     "cites": 3,
+     "works": 2
+    },
+    {
+     "year": 2021,
+     "cites": 19,
+     "works": 1
+    },
+    {
+     "year": 2022,
+     "cites": 19,
+     "works": 0
+    },
+    {
+     "year": 2023,
+     "cites": 16,
+     "works": 2
+    },
+    {
+     "year": 2024,
+     "cites": 31,
+     "works": 1
+    },
+    {
+     "year": 2025,
+     "cites": 32,
+     "works": 3
+    },
+    {
+     "year": 2026,
+     "cites": 36,
+     "works": 1
+    }
+   ],
+   "url": "https://openalex.org/A5066263036",
+   "near_stage": false
+  },
+  {
+   "id": "A5031420484",
+   "name": "Bing Tai",
+   "institution": "Dalian University of Technology",
+   "country": "CN",
+   "phd_year": 2022,
+   "phd_source": "estimate",
+   "first_year": 2019,
+   "similarity": 0.59,
+   "coauthor": true,
+   "citations": 225,
+   "works": 21,
+   "h_index": 10,
+   "by_year": [
+    {
+     "year": 2019,
+     "cites": 2,
+     "works": 1
+    },
+    {
+     "year": 2020,
+     "cites": 6,
+     "works": 3
+    },
+    {
+     "year": 2021,
+     "cites": 7,
+     "works": 1
+    },
+    {
+     "year": 2022,
+     "cites": 16,
+     "works": 1
+    },
+    {
+     "year": 2023,
+     "cites": 28,
+     "works": 1
+    },
+    {
+     "year": 2024,
+     "cites": 31,
+     "works": 5
+    },
+    {
+     "year": 2025,
+     "cites": 70,
+     "works": 5
+    },
+    {
+     "year": 2026,
+     "cites": 65,
+     "works": 4
+    }
+   ],
+   "url": "https://openalex.org/A5031420484",
+   "near_stage": false
+  },
+  {
+   "id": "A5038127249",
+   "name": "Weizhi Wang",
+   "institution": "Norwegian University of Science and Technology",
+   "country": "NO",
+   "phd_year": 2019,
+   "phd_source": "orcid",
+   "first_year": 2019,
+   "similarity": 0.57,
+   "coauthor": false,
+   "citations": 295,
+   "works": 40,
+   "h_index": 10,
+   "by_year": [
+    {
+     "year": 2016,
+     "cites": 0,
+     "works": 0
+    },
+    {
+     "year": 2017,
+     "cites": 0,
+     "works": 0
+    },
+    {
+     "year": 2018,
+     "cites": 0,
+     "works": 0
+    },
+    {
+     "year": 2019,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2020,
+     "cites": 7,
+     "works": 2
+    },
+    {
+     "year": 2021,
+     "cites": 13,
+     "works": 1
+    },
+    {
+     "year": 2022,
+     "cites": 30,
+     "works": 4
+    },
+    {
+     "year": 2023,
+     "cites": 46,
+     "works": 1
+    },
+    {
+     "year": 2024,
+     "cites": 35,
+     "works": 6
+    },
+    {
+     "year": 2025,
+     "cites": 88,
+     "works": 21
+    },
+    {
+     "year": 2026,
+     "cites": 76,
+     "works": 4
+    }
+   ],
+   "url": "https://openalex.org/A5038127249",
+   "near_stage": false
+  },
+  {
+   "id": "A5075251907",
+   "name": "Mingze Ji",
+   "institution": "Harbin Engineering University",
+   "country": "CN",
+   "phd_year": 2023,
+   "phd_source": "estimate",
+   "first_year": 2020,
+   "similarity": 0.56,
+   "coauthor": false,
+   "citations": 69,
+   "works": 17,
+   "h_index": 3,
+   "by_year": [
+    {
+     "year": 2020,
+     "cites": 0,
+     "works": 2
+    },
+    {
+     "year": 2021,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2022,
+     "cites": 9,
+     "works": 3
+    },
+    {
+     "year": 2023,
+     "cites": 7,
+     "works": 0
+    },
+    {
+     "year": 2024,
+     "cites": 8,
+     "works": 2
+    },
+    {
+     "year": 2025,
+     "cites": 22,
+     "works": 5
+    },
+    {
+     "year": 2026,
+     "cites": 23,
+     "works": 4
+    }
+   ],
+   "url": "https://openalex.org/A5075251907",
+   "near_stage": false
+  },
+  {
+   "id": "A5068110816",
+   "name": "Sam Hartharn-Evans",
+   "institution": "Newcastle University",
+   "country": "GB",
+   "phd_year": 2023,
+   "phd_source": "estimate",
+   "first_year": 2020,
+   "similarity": 0.54,
+   "coauthor": false,
+   "citations": 63,
+   "works": 59,
+   "h_index": 4,
+   "by_year": [
+    {
+     "year": 2020,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2021,
+     "cites": 0,
+     "works": 2
+    },
+    {
+     "year": 2022,
+     "cites": 3,
+     "works": 21
+    },
+    {
+     "year": 2023,
+     "cites": 5,
+     "works": 21
+    },
+    {
+     "year": 2024,
+     "cites": 24,
+     "works": 2
+    },
+    {
+     "year": 2025,
+     "cites": 10,
+     "works": 2
+    },
+    {
+     "year": 2026,
+     "cites": 21,
+     "works": 10
+    }
+   ],
+   "url": "https://openalex.org/A5068110816",
+   "near_stage": false
+  },
+  {
+   "id": "A5090734976",
+   "name": "Yikuan He",
+   "institution": "Tsinghua University",
+   "country": "CN",
+   "phd_year": 2022,
+   "phd_source": "orcid",
+   "first_year": 2016,
+   "similarity": 0.54,
+   "coauthor": false,
+   "citations": 195,
+   "works": 22,
+   "h_index": 10,
+   "by_year": [
+    {
+     "year": 2016,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2017,
+     "cites": 1,
+     "works": 0
+    },
+    {
+     "year": 2018,
+     "cites": 2,
+     "works": 1
+    },
+    {
+     "year": 2019,
+     "cites": 3,
+     "works": 0
+    },
+    {
+     "year": 2020,
+     "cites": 5,
+     "works": 0
+    },
+    {
+     "year": 2021,
+     "cites": 4,
+     "works": 2
+    },
+    {
+     "year": 2022,
+     "cites": 10,
+     "works": 4
+    },
+    {
+     "year": 2023,
+     "cites": 16,
+     "works": 0
+    },
+    {
+     "year": 2024,
+     "cites": 26,
+     "works": 6
+    },
+    {
+     "year": 2025,
+     "cites": 46,
+     "works": 3
+    },
+    {
+     "year": 2026,
+     "cites": 82,
+     "works": 5
+    }
+   ],
+   "url": "https://openalex.org/A5090734976",
+   "near_stage": false
+  },
+  {
+   "id": "A5016349222",
+   "name": "Haoyu Ding",
+   "institution": "Dalian University of Technology",
+   "country": "CN",
+   "phd_year": 2021,
+   "phd_source": "estimate",
+   "first_year": 2018,
+   "similarity": 0.53,
+   "coauthor": true,
+   "citations": 618,
+   "works": 39,
+   "h_index": 12,
+   "by_year": [
+    {
+     "year": 2018,
+     "cites": 2,
+     "works": 2
+    },
+    {
+     "year": 2019,
+     "cites": 7,
+     "works": 4
+    },
+    {
+     "year": 2020,
+     "cites": 38,
+     "works": 5
+    },
+    {
+     "year": 2021,
+     "cites": 59,
+     "works": 0
+    },
+    {
+     "year": 2022,
+     "cites": 53,
+     "works": 1
+    },
+    {
+     "year": 2023,
+     "cites": 67,
+     "works": 7
+    },
+    {
+     "year": 2024,
+     "cites": 90,
+     "works": 7
+    },
+    {
+     "year": 2025,
+     "cites": 131,
+     "works": 8
+    },
+    {
+     "year": 2026,
+     "cites": 171,
+     "works": 4
+    }
+   ],
+   "url": "https://openalex.org/A5016349222",
+   "near_stage": false
+  },
+  {
+   "id": "A5071876175",
+   "name": "Michael Hart‐Davis",
+   "institution": "Technical University of Munich",
+   "country": "DE",
+   "phd_year": 2021,
+   "phd_source": "estimate",
+   "first_year": 2018,
+   "similarity": 0.53,
+   "coauthor": false,
+   "citations": 671,
+   "works": 88,
+   "h_index": 14,
+   "by_year": [
+    {
+     "year": 2018,
+     "cites": 3,
+     "works": 5
+    },
+    {
+     "year": 2019,
+     "cites": 8,
+     "works": 3
+    },
+    {
+     "year": 2020,
+     "cites": 17,
+     "works": 6
+    },
+    {
+     "year": 2021,
+     "cites": 44,
+     "works": 10
+    },
+    {
+     "year": 2022,
+     "cites": 80,
+     "works": 11
+    },
+    {
+     "year": 2023,
+     "cites": 83,
+     "works": 13
+    },
+    {
+     "year": 2024,
+     "cites": 123,
+     "works": 3
+    },
+    {
+     "year": 2025,
+     "cites": 134,
+     "works": 8
+    },
+    {
+     "year": 2026,
+     "cites": 179,
+     "works": 20
+    }
+   ],
+   "url": "https://openalex.org/A5071876175",
+   "near_stage": false
+  },
+  {
+   "id": "A5044443612",
+   "name": "Xiutao Jiang",
+   "institution": "Ocean University of China",
+   "country": "CN",
+   "phd_year": 2023,
+   "phd_source": "estimate",
+   "first_year": 2020,
+   "similarity": 0.53,
+   "coauthor": false,
+   "citations": 124,
+   "works": 16,
+   "h_index": 6,
+   "by_year": [
+    {
+     "year": 2020,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2021,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2022,
+     "cites": 2,
+     "works": 1
+    },
+    {
+     "year": 2023,
+     "cites": 5,
+     "works": 4
+    },
+    {
+     "year": 2024,
+     "cites": 27,
+     "works": 2
+    },
+    {
+     "year": 2025,
+     "cites": 46,
+     "works": 3
+    },
+    {
+     "year": 2026,
+     "cites": 44,
+     "works": 4
+    }
+   ],
+   "url": "https://openalex.org/A5044443612",
+   "near_stage": false
+  },
+  {
+   "id": "A5063536229",
+   "name": "Li Ma",
+   "institution": "Imperial College London",
+   "country": "GB",
+   "phd_year": 2019,
+   "phd_source": "estimate",
+   "first_year": 2016,
+   "similarity": 0.52,
+   "coauthor": false,
+   "citations": 128,
+   "works": 14,
+   "h_index": 8,
+   "by_year": [
+    {
+     "year": 2016,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2017,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2018,
+     "cites": 2,
+     "works": 0
+    },
+    {
+     "year": 2019,
+     "cites": 4,
+     "works": 2
+    },
+    {
+     "year": 2020,
+     "cites": 11,
+     "works": 1
+    },
+    {
+     "year": 2021,
+     "cites": 7,
+     "works": 1
+    },
+    {
+     "year": 2022,
+     "cites": 7,
+     "works": 1
+    },
+    {
+     "year": 2023,
+     "cites": 13,
+     "works": 2
+    },
+    {
+     "year": 2024,
+     "cites": 12,
+     "works": 0
+    },
+    {
+     "year": 2025,
+     "cites": 28,
+     "works": 3
+    },
+    {
+     "year": 2026,
+     "cites": 44,
+     "works": 2
+    }
+   ],
+   "url": "https://openalex.org/A5063536229",
+   "near_stage": false
+  },
+  {
+   "id": "A5076097052",
+   "name": "Bjarke Nilsson",
+   "institution": "Technical University of Denmark",
+   "country": "DK",
+   "phd_year": 2025,
+   "phd_source": "estimate",
+   "first_year": 2022,
+   "similarity": 0.48,
+   "coauthor": false,
+   "citations": 90,
+   "works": 22,
+   "h_index": 6,
+   "by_year": [
+    {
+     "year": 2022,
+     "cites": 2,
+     "works": 2
+    },
+    {
+     "year": 2023,
+     "cites": 5,
+     "works": 0
+    },
+    {
+     "year": 2024,
+     "cites": 2,
+     "works": 2
+    },
+    {
+     "year": 2025,
+     "cites": 20,
+     "works": 8
+    },
+    {
+     "year": 2026,
+     "cites": 60,
+     "works": 10
+    }
+   ],
+   "url": "https://openalex.org/A5076097052",
+   "near_stage": false
+  },
+  {
+   "id": "A5059567210",
+   "name": "Florian Hulin",
+   "institution": "École Centrale de Nantes",
+   "country": "FR",
+   "phd_year": 2025,
+   "phd_source": "estimate",
+   "first_year": 2022,
+   "similarity": 0.47,
+   "coauthor": false,
+   "citations": 106,
+   "works": 15,
+   "h_index": 7,
+   "by_year": [
+    {
+     "year": 2022,
+     "cites": 3,
+     "works": 2
+    },
+    {
+     "year": 2023,
+     "cites": 12,
+     "works": 3
+    },
+    {
+     "year": 2024,
+     "cites": 21,
+     "works": 4
+    },
+    {
+     "year": 2025,
+     "cites": 13,
+     "works": 2
+    },
+    {
+     "year": 2026,
+     "cites": 57,
+     "works": 4
+    }
+   ],
+   "url": "https://openalex.org/A5059567210",
+   "near_stage": false
+  },
+  {
+   "id": "A5068235365",
+   "name": "Yelin Gao",
+   "institution": "Dalian University of Technology",
+   "country": "CN",
+   "phd_year": 2024,
+   "phd_source": "estimate",
+   "first_year": 2021,
+   "similarity": 0.46,
+   "coauthor": false,
+   "citations": 52,
+   "works": 11,
+   "h_index": 5,
+   "by_year": [
+    {
+     "year": 2021,
+     "cites": 1,
+     "works": 1
+    },
+    {
+     "year": 2022,
+     "cites": 0,
+     "works": 0
+    },
+    {
+     "year": 2023,
+     "cites": 0,
+     "works": 2
+    },
+    {
+     "year": 2024,
+     "cites": 9,
+     "works": 3
+    },
+    {
+     "year": 2025,
+     "cites": 26,
+     "works": 2
+    },
+    {
+     "year": 2026,
+     "cites": 16,
+     "works": 3
+    }
+   ],
+   "url": "https://openalex.org/A5068235365",
+   "near_stage": false
+  },
+  {
+   "id": "A5052638728",
+   "name": "Vaibhav Raghavan",
+   "institution": "Delft University of Technology",
+   "country": "NL",
+   "phd_year": 2025,
+   "phd_source": "estimate",
+   "first_year": 2022,
+   "similarity": 0.45,
+   "coauthor": false,
+   "citations": 105,
+   "works": 26,
+   "h_index": 7,
+   "by_year": [
+    {
+     "year": 2022,
+     "cites": 1,
+     "works": 1
+    },
+    {
+     "year": 2023,
+     "cites": 3,
+     "works": 2
+    },
+    {
+     "year": 2024,
+     "cites": 13,
+     "works": 6
+    },
+    {
+     "year": 2025,
+     "cites": 35,
+     "works": 11
+    },
+    {
+     "year": 2026,
+     "cites": 49,
+     "works": 4
+    }
+   ],
+   "url": "https://openalex.org/A5052638728",
+   "near_stage": false
   }
  ]
 }

@@ -1,5 +1,5 @@
 // The two repeating units of the app: a paper "story" and a funding opportunity card.
-import { esc, safeUrl, icon, fmtDate, fmtTime, fmtMonth, daysTo, rel, left, people, parseDay, isoDay, today, store, download, brief } from './util.js';
+import { esc, safeUrl, icon, fmtDate, fmtTime, fmtMonth, daysTo, rel, left, people, parseDay, isoDay, today, store, download, brief, claudeLink } from './util.js';
 
 // ── funder names ─────────────────────────────────────────────────────────────
 const FUNDERS = [
@@ -22,6 +22,20 @@ export function funderShort(name) {
 }
 /** The funder tag used on every funding card and row. */
 export const funderTag = (name, cls = 'accent') => `<span class="tag clip ${cls}" title="${esc(name || '')}">${esc(funderShort(name))}</span>`;
+
+// ── prompts handed to Claude (opened in a new session; you press send there) ──
+function paperPrompt(p) {
+  return `Read this paper and tell me, in five short bullets, what is new in it and how it bears on my own research. `
+    + `My profile and interests are in config/researcher.toml in this repository.\n\n`
+    + `"${p.title}"${p.venue ? ` — ${p.venue}` : ''}${p.year ? `, ${p.year}` : ''}\n${p.url || (p.doi ? `https://doi.org/${p.doi}` : '')}`;
+}
+function oppPrompt(o) {
+  const when = o.closes ? ` The deadline is ${String(o.closes).slice(0, 10)}.` : '';
+  return `Help me decide on, and then plan, an application to "${o.title}" (${o.funder}).${when}\n\n`
+    + `The call: ${o.url}\nMy profile and priorities are in config/researcher.toml; the dashboard's own assessment of this call is in `
+    + `data/grants.json under the id "${o.id}".\n\nStart with a go / no-go view in five bullets, then a week-by-week plan to the deadline `
+    + `and a first outline of the case for support.`;
+}
 
 // ── profile numbers ──────────────────────────────────────────────────────────
 /**
@@ -73,6 +87,7 @@ export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abs
       <span class="story-actions">
         ${p.abstract && !(lead && abstract) ? `<button class="act" type="button" data-abs aria-expanded="false">Abstract</button>` : ''}
         ${p.pdf_url ? `<a class="act" href="${safeUrl(p.pdf_url)}" target="_blank" rel="noopener">${icon('pdf', 'sm')}PDF</a>` : ''}
+        <a class="act" href="${safeUrl(claudeLink(paperPrompt(p)))}" target="_blank" rel="noopener" aria-label="Send to Claude" title="Send to Claude">${icon('spark', 'sm')}</a>
         <button class="act" type="button" data-save-paper="${esc(p.id)}" aria-pressed="${saved}" aria-label="${saved ? 'Remove from reading list' : 'Save to reading list'}">${icon('save', 'sm')}</button>
       </span>
     </div>
@@ -227,6 +242,7 @@ export function oppHTML(o, { saved = false, open = false } = {}) {
     <div class="opp-actions">
       <a class="btn primary" href="${safeUrl(o.url)}" target="_blank" rel="noopener">Open the call ${icon('ext', 'sm')}</a>
       ${canCal ? `<button class="btn" type="button" data-cal="${esc(o.id)}">${icon('cal', 'sm')}Add to calendar</button>` : ''}
+      <a class="btn" href="${safeUrl(claudeLink(oppPrompt(o)))}" target="_blank" rel="noopener">${icon('spark', 'sm')}Plan it with Claude</a>
     </div>
     <div class="opp-foot">${icon('spark', 'xs')}Reviewed by Claude · ${fmtDate(o.analysed?.at)}</div>
   </article>`;

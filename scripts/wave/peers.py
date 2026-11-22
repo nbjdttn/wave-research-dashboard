@@ -251,13 +251,14 @@ def run(cfg: dict) -> dict:
         except SourceError:
             break
 
-    peers, far = [], 0
+    main, near, far = [], [], 0
     for aid in shortlist:
         rec = authors[aid]
         if aid.lower() in exclude or rec["name"].strip().lower() in exclude:
             continue
         phd, source = phd_of(aid, rec)
-        if phd is None or (abs(phd - my_phd) > window and aid not in include):
+        gap = abs(phd - my_phd) if phd is not None else 99
+        if gap > window + 2 and aid not in include:
             far += 1
             continue
         now_at = next((n for n, _ in rec["last"] if _inst_key(n) in leading), None)
@@ -267,21 +268,23 @@ def run(cfg: dict) -> dict:
         inst = now_at or recent or (rec["last"][0][0] if rec["last"] else None)
         country = next((c for n, c in rec["last"] if n == inst), rec["last"][0][1] if rec["last"] else None)
         fy = first_year(rec) or phd - lag
-        peers.append({
+        entry = {
             "id": aid, "name": rec["name"], "institution": inst, "country": country,
             "phd_year": phd, "phd_source": source, "first_year": fy,
             "similarity": round(similarity(me["topics"], rec["topics"]), 2),
-            "topics": rec.get("topic_names") or [],
             "coauthor": (_full_key(rec["name"]) or "") in coauthors,
             "citations": rec["cites"], "works": rec["works"], "h_index": rec["h"],
             "by_year": series(rec, min(fy, phd - 3), this_year),
             "url": f"https://openalex.org/{aid}",
-        })
-    eligible = len(peers)
-    peers = peers[:max_peers]
+        }
+        (main if gap <= window or aid in include else near).append(entry)
+    eligible = len(main)
+    peers = main[:max_peers]
+    # the bench: further candidates the reader can swipe into the comparison on the page
+    bench = [{**e, "near_stage": e in near} for e in (main[max_peers:] + near)][:int(pc.get("max_bench", 24))]
     if not pc.get("show_names", True):           # the data file is public: leave the names out of it altogether
-        for n, p in enumerate(peers):
-            p.update({"name": f"Peer {chr(65 + n % 26)}", "id": f"peer-{n + 1}", "url": None, "topics": [], "coauthor": False})
+        for n, e in enumerate(peers + bench):
+            e.update({"name": f"Peer {n + 1}", "id": f"peer-{n + 1}", "url": None, "coauthor": False})
     write_json(CACHE / "peers.json", cache, compact=True)
 
     # headline: where the researcher stands at the same number of years after the PhD
@@ -299,13 +302,14 @@ def run(cfg: dict) -> dict:
         "you": {"id": my_id, "name": r["short_name"], "phd_year": my_phd, "first_year": my_first,
                 "citations": me["cites"], "works": me["works"], "h_index": me["h"], "by_year": mine},
         "cohort": {"stage_window": [my_phd - window, my_phd + window], "candidates": len(pool), "looked_up": len(wanted),
-                   "eligible": eligible, "shown": len(peers), "institutions": len(leading),
+                   "eligible": eligible, "shown": len(peers), "bench": len(bench), "institutions": len(leading),
                    "estimated_phd": sum(1 for p in peers if p["phd_source"] == "estimate")},
         "summary": {"age": age, "you": you_now, "reached": len(reached),
                     "median": round(statistics.median(reached)) if reached else None,
                     "rank": 1 + sum(1 for v in reached if v > you_now) if reached else None},
         "show_names": bool(pc.get("show_names", True)),
         "peers": peers,
+        "bench": bench,
     }
     write_json(DATA / "peers.json", out)
     log(f"peers.json: {len(peers)} peers shown of {eligible} eligible · {fetched} author records read · "

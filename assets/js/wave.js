@@ -14,7 +14,7 @@ export function mountWave(host) {
   const norm = comps.reduce((s, c) => s + c.a, 0);
   host.innerHTML = `<svg viewBox="0 0 600 120" preserveAspectRatio="none" aria-hidden="true">
     <defs><linearGradient id="wave-fill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" style="stop-color:var(--hero-accent);stop-opacity:.30"/><stop offset="1" style="stop-color:var(--hero-accent);stop-opacity:0"/>
+      <stop offset="0" style="stop-color:var(--accent);stop-opacity:.22"/><stop offset="1" style="stop-color:var(--accent);stop-opacity:0"/>
     </linearGradient></defs>
     <line class="w-line w-still" x1="0" x2="600" y1="70" y2="70" vector-effect="non-scaling-stroke"/>
     <path class="w-fill"/><path class="w-line" vector-effect="non-scaling-stroke"/></svg>`;
