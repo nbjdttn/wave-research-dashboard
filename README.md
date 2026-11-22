@@ -75,6 +75,11 @@ grants    UKRI Funding Finder (live calls + two years of past calls, to spot rep
           data/grants.json
 ```
 
+**Alerts.** When a strong new call appears, or a selected call comes within a fortnight of its deadline,
+the job adds one short comment to an issue called *Funding alerts* in this repository. GitHub then
+notifies you — by email, and on your phone if you use the GitHub app. Switch it off or tune it with
+`alerts`, `alert_min_fit` and `alert_days_before` under `[grants]`.
+
 Every source is optional: if one is down, the previous data for it is kept and the run still succeeds.
 Results are cached by content, so Claude is only asked about calls that are **new or have changed**.
 

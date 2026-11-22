@@ -7,6 +7,7 @@
     python scripts/update.py papers       # similar-papers feed
     python scripts/update.py peers        # citation growth beside researchers at a similar stage
     python scripts/update.py grants       # funding opportunities
+    python scripts/update.py alerts       # (inside GitHub Actions) announce funding that needs attention
 
 Each step is independent and fault tolerant: if a source is down the previous data is kept.
 The Claude API is used only by the `grants` step and only when ANTHROPIC_API_KEY is set.
@@ -21,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from wave.util import DATA, load_config, log, read_json  # noqa: E402
 
-STEPS = ("profile", "citations", "papers", "peers", "grants")
+STEPS = ("profile", "citations", "papers", "peers", "grants", "alerts")
 
 
 def summary(failed: list[str]) -> None:

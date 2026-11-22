@@ -241,6 +241,9 @@ queries = [
 [grants]
 min_fit_score        = 60        # below this an opportunity is not shown
 closed_lookback_days = 760       # how far back to scan closed UKRI calls for ones that repeat
+alerts               = true      # tell me through GitHub (issue "Funding alerts") when a call needs attention
+alert_min_fit        = 75        # … a new call at or above this fit
+alert_days_before    = 14        # … or a selected call whose deadline is this close
 prefilter_min        = 1.6       # keyword pre-screen threshold (used before Claude sees anything)
 max_candidates       = 70        # hard cap on calls sent for analysis
 # EU Funding & Tenders portal — free-text searches; results are screened afterwards.

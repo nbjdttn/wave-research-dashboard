@@ -18,6 +18,7 @@ on:
 
 permissions:
   contents: write
+  issues: write                   # the "Funding alerts" issue: one comment when a call needs attention
 
 concurrency:
   group: update-data
@@ -46,6 +47,7 @@ jobs:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
           CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          GITHUB_TOKEN: ${{ github.token }}
           STEPS: ${{ inputs.steps }}
         run: |
           if [ -z "$STEPS" ] || [ "$STEPS" = "all" ]; then
