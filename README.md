@@ -137,7 +137,7 @@ export the same briefs for review by hand and import the answers.
 ```
 index.html, sw.js, manifest.webmanifest   the app shell (no build step, no dependencies)
 assets/css, assets/js                     interface: views, charts, similarity scoring
-assets/fonts                              Inter and Newsreader (SIL Open Font License)
+assets/fonts                              Inter (SIL Open Font License)
 config/                                   researcher.toml, schemes.json
 data/                                     generated JSON (+ data/cache, the pipeline's memory)
 scripts/update.py, scripts/wave/          the data pipeline (Python)

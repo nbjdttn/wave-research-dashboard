@@ -183,7 +183,7 @@ export function showTip(html, x, y) {
   el.style.top = `${top}px`;
 }
 export function hideTip() { const el = tip(); if (el) el.hidden = true; }
-window.addEventListener('scroll', hideTip, { passive: true });
+document.addEventListener('scroll', hideTip, { passive: true, capture: true });   // the page scrolls inside #scroller
 
 let toastTimer;
 export function toast(msg) {

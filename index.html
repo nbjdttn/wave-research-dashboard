@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
   <title>Wave Research</title>
   <meta name="description" content="A daily research briefing: new papers, funding opportunities and publication metrics.">
   <meta name="color-scheme" content="light dark">
@@ -17,7 +17,6 @@
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/app.css">
   <script>
     // Apply the saved theme before first paint so there is no flash.
@@ -31,6 +30,13 @@
 <body>
   <a class="skip" href="#view">Skip to content</a>
 
+  <!-- The app shell: the page itself never scrolls. Content scrolls inside #scroller; the tab bar,
+       settings sheet and messages are placed inside .app, so nothing relies on position: fixed. -->
+  <div class="app" id="app">
+  <div class="statusfade" aria-hidden="true"></div>
+  <div class="ptr" id="ptr" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.340-5.660M20 4v4.500h-4.500"/></svg></div>
+
+  <div class="scroller" id="scroller">
   <header class="topbar" id="topbar">
     <a class="brand" href="#today" aria-label="Wave Research — today's briefing">
       <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
@@ -61,6 +67,7 @@
       <div class="skeleton sk-card"></div>
     </div>
   </main>
+  </div>
 
   <nav class="tabbar" aria-label="Sections">
     <a href="#today" data-tab="today">
@@ -81,6 +88,10 @@
     </a>
   </nav>
 
+  <button class="to-top" id="to-top" type="button" aria-label="Back to top" hidden>
+    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5.500M6 11.500l6-6 6 6"/></svg>
+  </button>
+
   <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
   <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden>
     <div class="sheet-grip" aria-hidden="true"></div>
@@ -95,6 +106,7 @@
 
   <div class="tooltip" id="tooltip" role="status" hidden></div>
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  </div>
 
   <noscript><p class="noscript">This dashboard needs JavaScript to load its data.</p></noscript>
   <script type="module" src="assets/js/app.js"></script>

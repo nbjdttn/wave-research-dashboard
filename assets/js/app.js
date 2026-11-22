@@ -9,8 +9,9 @@ import { renderProfile } from './view-profile.js';
 
 const VIEWS = { today: renderToday, papers: renderPapers, funding: renderFunding, profile: renderProfile };
 const TITLES = { today: 'Today', papers: 'Papers', funding: 'Funding', profile: 'Profile' };
-const D = { profile: null, papers: null, grants: null, citations: null };
+const D = { profile: null, papers: null, grants: null, citations: null, peers: null };
 const view = $('#view');
+const scroller = $('#scroller');                       // the only thing that scrolls (see index.html)
 let leave = [];
 let currentTab = null;
 let similarityPromise = null;
@@ -25,8 +26,9 @@ const ctx = {
   updatedLine: '',
 };
 
-async function load(name) {
-  const res = await fetch(`data/${name}.json`, { cache: 'no-cache' });
+async function load(name, fresh = false) {
+  // `fresh` (pull to refresh) also gets past the ten-minute cache of the web host
+  const res = await fetch(`data/${name}.json${fresh ? `?t=${Date.now()}` : ''}`, { cache: fresh ? 'no-store' : 'no-cache' });
   if (!res.ok) throw new Error(`${name}: ${res.status}`);
   return res.json();
 }
@@ -48,7 +50,7 @@ function route() {
     console.error(err);
     view.innerHTML = `<div class="empty"><h3>This screen could not be drawn</h3><p>${esc(err.message)}</p></div>`;
   }
-  if (tab !== currentTab) window.scrollTo(0, 0);
+  if (tab !== currentTab) scroller.scrollTo(0, 0);
   currentTab = tab;
 }
 
@@ -97,9 +99,18 @@ document.addEventListener('click', (e) => {
 });
 
 // ── top bar ──────────────────────────────────────────────────────────────────
-const topbar = $('#topbar');
-const onScroll = () => topbar.classList.toggle('is-stuck', window.scrollY > 4);
-window.addEventListener('scroll', onScroll, { passive: true });
+// ── getting back to the top: a button after a long scroll, or tap the current tab ──
+const toTop = $('#to-top');
+const onScroll = () => { toTop.hidden = scroller.scrollTop < 1400; };
+scroller.addEventListener('scroll', onScroll, { passive: true });
+toTop.addEventListener('click', () => scroller.scrollTo({ top: 0, behavior: 'smooth' }));
+document.querySelector('.tabbar').addEventListener('click', (e) => {
+  const a = e.target.closest('a[data-tab]');
+  if (a && a.classList.contains('is-active') && location.hash === a.getAttribute('href')) {
+    e.preventDefault();
+    scroller.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});
 
 function freshness() {
   const stamps = [D.profile?.generated_at, D.papers?.generated_at, D.grants?.generated_at].filter(Boolean).sort();
@@ -225,12 +236,14 @@ sheet.addEventListener('click', async (e) => {
 window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); installEvent = e; });
 
 // ── start ────────────────────────────────────────────────────────────────────
+async function loadAll(fresh = false) {
+  const names = Object.keys(D);
+  const got = await Promise.allSettled(names.map((n) => load(n, fresh)));
+  got.forEach((r, i) => { if (r.status === 'fulfilled') D[names[i]] = r.value; });
+}
+
 async function start() {
-  const [profile, papers, grants, citations] = await Promise.allSettled([load('profile'), load('papers'), load('grants'), load('citations')]);
-  D.profile = profile.status === 'fulfilled' ? profile.value : null;
-  D.papers = papers.status === 'fulfilled' ? papers.value : null;
-  D.grants = grants.status === 'fulfilled' ? grants.value : null;
-  D.citations = citations.status === 'fulfilled' ? citations.value : null;
+  await loadAll();
   if (!D.profile && !D.papers && !D.grants) {
     view.innerHTML = `<div class="empty"><h3>No data yet</h3><p>Run the “Update data” workflow.</p></div>`;
     return;
@@ -242,6 +255,91 @@ async function start() {
   onScroll();
 }
 start();
+
+// ── the shell is exactly as tall as the visible screen ───────────────────────
+// A page opened from the home screen can report a viewport taller than the screen, which pushes
+// anything anchored to its bottom out of sight. The shell's height is therefore measured, and never
+// allowed to exceed the screen itself.
+function fitShell() {
+  const vv = window.visualViewport;
+  const seen = Math.max(window.innerHeight || 0, vv ? vv.height : 0);
+  const screenMax = Math.max(window.screen?.height || 0, window.screen?.width || 0) || Infinity;
+  const h = Math.min(seen, window.innerWidth > window.innerHeight ? seen : screenMax);
+  if (h > 100) document.documentElement.style.setProperty('--app-h', `${Math.round(h)}px`);
+}
+fitShell();
+['resize', 'orientationchange', 'pageshow'].forEach((ev) => window.addEventListener(ev, fitShell));
+window.visualViewport?.addEventListener('resize', fitShell);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) fitShell(); });
+[250, 1000, 2500].forEach((ms) => setTimeout(fitShell, ms));       // phones settle their bars after launch
+
+// ── no accidental zoom ───────────────────────────────────────────────────────
+// CSS touch-action switches off double-tap and pinch zoom; this covers Safari versions that ignore it.
+document.addEventListener('gesturestart', (e) => e.preventDefault());
+
+// ── pull down to refresh ─────────────────────────────────────────────────────
+const ptr = $('#ptr');
+const PULL_AT = 72;
+let pull = null, refreshing = false;
+
+async function refresh() {
+  const stamp = () => [D.profile, D.papers, D.grants].map((x) => x?.generated_at).join();
+  const before = stamp();
+  let newVersion = false;
+  try {
+    const reg = await navigator.serviceWorker?.getRegistration();
+    if (reg) {
+      reg.addEventListener('updatefound', () => { newVersion = true; }, { once: true });
+      await reg.update().catch(() => {});
+    }
+  } catch { /* no service worker: data only */ }
+  await loadAll(true);
+  freshness();
+  tabBadges();
+  route();
+  if (newVersion) { toast('New version — reloading'); setTimeout(() => location.reload(), 900); return; }
+  toast(!navigator.onLine ? 'Offline — showing the saved edition' : stamp() === before ? `Up to date · ${ctx.updatedLine.replace('Built', 'built')}` : 'Updated');
+}
+
+scroller.addEventListener('touchstart', (e) => {
+  const ok = !refreshing && sheet.hidden && scroller.scrollTop <= 2 && e.touches.length === 1
+    && !e.target.closest('.chart') && e.target !== document.activeElement;
+  pull = ok ? { x: e.touches[0].clientX, y: e.touches[0].clientY, d: 0, on: false } : null;
+}, { passive: true });
+scroller.addEventListener('touchmove', (e) => {
+  if (!pull) return;
+  const dx = e.touches[0].clientX - pull.x, dy = e.touches[0].clientY - pull.y;
+  if (!pull.on) {
+    if (dy < -6 || Math.abs(dx) > 14 || scroller.scrollTop > 2) { pull = null; return; }   // scrolling or swiping instead
+    if (dy < 10) return;
+    pull.on = true;
+  }
+  pull.d = Math.max(0, Math.min(120, dy * 0.5));
+  ptr.classList.remove('settle');
+  ptr.style.opacity = String(Math.min(1, pull.d / 36));
+  ptr.style.transform = `translateY(${pull.d - 52}px)`;
+  ptr.firstElementChild.style.transform = `rotate(${Math.round(pull.d * 3.2)}deg)`;
+}, { passive: true });
+const endPull = async () => {
+  if (!pull) return;
+  const go = pull.on && pull.d >= PULL_AT;
+  pull = null;
+  ptr.classList.add('settle');
+  ptr.firstElementChild.style.transform = '';
+  if (!go) { ptr.style.opacity = '0'; ptr.style.transform = ''; return; }
+  refreshing = true;
+  ptr.classList.add('busy');
+  ptr.style.opacity = '1';
+  ptr.style.transform = 'translateY(16px)';
+  try { await refresh(); } finally {
+    ptr.classList.remove('busy');
+    ptr.style.opacity = '0';
+    ptr.style.transform = '';
+    refreshing = false;
+  }
+};
+scroller.addEventListener('touchend', endPull);
+scroller.addEventListener('touchcancel', endPull);
 
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
   window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));

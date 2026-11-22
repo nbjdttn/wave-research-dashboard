@@ -31,8 +31,7 @@ export function renderToday(root, D, ctx) {
   root.innerHTML = `
     <header class="masthead">
       <div class="mast-date">${esc(longToday())}</div>
-      <h1 class="mast-title">Wave Research <em>Daily</em></h1>
-      <p class="mast-sub">${esc(greeting())}${first ? `, ${esc(first)}` : ''}.</p>
+      <h1 class="mast-title">${esc(greeting())}${first ? `, <em>${esc(first)}</em>` : ''}</h1>
       <div class="mast-wave" id="mast-wave"></div>
       <nav class="ticker" aria-label="Today at a glance">
         <a href="#papers"><b>${num(stories.length)}</b><span>new papers</span></a>
