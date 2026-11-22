@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T20:56:13Z",
+ "generated_at": "2026-11-22T21:21:43Z",
  "counts": {
   "scanned": {
    "ukri_open": 137,
@@ -3576,38 +3576,38 @@
   "ukri": {
    "ok": true,
    "count": 137,
-   "checked": "2026-11-22T20:56:13Z",
-   "last_success": "2026-11-22T20:56:13Z"
+   "checked": "2026-11-22T21:21:43Z",
+   "last_success": "2026-11-22T21:21:43Z"
   },
   "ukri_archive": {
    "ok": true,
    "count": 10,
-   "checked": "2026-11-22T20:56:13Z",
-   "last_success": "2026-11-22T20:56:13Z"
+   "checked": "2026-11-22T21:21:43Z",
+   "last_success": "2026-11-22T21:21:43Z"
   },
   "eu": {
    "ok": true,
    "count": 89,
-   "checked": "2026-11-22T20:56:13Z",
-   "last_success": "2026-11-22T20:56:13Z"
+   "checked": "2026-11-22T21:21:43Z",
+   "last_success": "2026-11-22T21:21:43Z"
   },
   "schemes": {
    "ok": true,
    "count": 31,
-   "checked": "2026-11-22T20:56:13Z"
+   "checked": "2026-11-22T21:21:43Z"
   }
  },
  "ai": {
   "enabled": true,
   "key_present": true,
   "model": "claude-opus-5-5",
-  "calls_this_run": 1,
-  "estimated_cost_usd": 0.02,
+  "calls_this_run": 0,
+  "estimated_cost_usd": 0.0,
   "usage": {
-   "input_tokens": 370,
-   "output_tokens": 149,
+   "input_tokens": 0,
+   "output_tokens": 0,
    "cache_read_input_tokens": 0,
-   "cache_creation_input_tokens": 3110,
+   "cache_creation_input_tokens": 0,
    "web_searches": 0
   },
   "errors": [],
