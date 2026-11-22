@@ -1,0 +1,3638 @@
+{
+ "generated_at": "2026-11-22T17:20:31Z",
+ "checked_at": "2026-11-22T17:20:31Z",
+ "researcher": {
+  "name": "Tim (Tianning) Tang",
+  "short_name": "Tim Tang",
+  "title": "Lecturer in Fluids Simulation and Digital Twins",
+  "department": "Department of Mechanical and Aerospace Engineering",
+  "institution": "The University of Manchester",
+  "location": "Manchester, UK",
+  "tagline": "Extreme ocean waves, wave–structure interaction and scientific machine learning",
+  "bio": "Tim joined the University of Manchester in 2025 as a Lecturer (Assistant Professor) in Fluids Simulation and Digital Twins. He was previously Course Director of the Intelligent Earth CDT and an Eric and Wendy Schmidt AI in Science Postdoctoral Fellow at the University of Oxford, where he also completed his DPhil. His group studies extreme events in fluid mechanics — rogue waves, wave breaking and extreme loads on offshore structures — combining experiments, field data and simulation with scientific machine learning.",
+  "links": {
+   "scholar": "https://scholar.google.com/citations?user=dofRHEwAAAAJ&hl=en",
+   "orcid": "https://orcid.org/0000-0002-6365-9342",
+   "university": "https://research.manchester.ac.uk/en/persons/tim-tang-beng-dphil-oxon-afhea/",
+   "website": "http://tim-tang.com/en",
+   "github": "https://github.com/nbjdttn",
+   "linkedin": "https://www.linkedin.com/in/nbjdttn"
+  },
+  "orcid": "0000-0002-6365-9342",
+  "interests": [
+   "Ocean Engineering",
+   "Rogue wave",
+   "Machine Learning",
+   "Knowledge Discovery"
+  ],
+  "avatar": "assets/img/avatar.jpg",
+  "career": {
+   "stage": "Early-career academic: Lecturer (Assistant Professor), permanent post",
+   "appointed_year": 2025,
+   "current_awards": [
+    "EPSRC New Investigator Award (machine learning for wave–structure interaction)"
+   ],
+   "recognition": [
+    "First place, Osborne Reynolds Day competition (UK's best doctoral student in fluid mechanics)"
+   ]
+  }
+ },
+ "metrics": {
+  "citations": 631,
+  "citations_recent": 624,
+  "h_index": 16,
+  "h_index_recent": 16,
+  "i10_index": 29,
+  "i10_index_recent": 29,
+  "recent_since": 2021,
+  "outputs": 77,
+  "journal_articles": 43,
+  "conference_papers": 20,
+  "preprints": 4,
+  "citations_this_year": 277,
+  "citations_last_year": 157,
+  "first_year": 2019,
+  "active_years": 8,
+  "m_index": 2.0,
+  "citations_per_output": 8.2,
+  "first_author": 19,
+  "senior_author": 8,
+  "coauthors": 87,
+  "ml_share": 0.36,
+  "open_access": 49,
+  "with_doi": 55,
+  "source": "Google Scholar",
+  "as_of": "2026-11-22",
+  "openalex": {
+   "works_count": 79,
+   "cited_by_count": 587,
+   "h_index": 15,
+   "i10_index": 23
+  }
+ },
+ "citations_by_year": [
+  {
+   "year": 2019,
+   "count": 2
+  },
+  {
+   "year": 2020,
+   "count": 5
+  },
+  {
+   "year": 2021,
+   "count": 9
+  },
+  {
+   "year": 2022,
+   "count": 26
+  },
+  {
+   "year": 2023,
+   "count": 58
+  },
+  {
+   "year": 2024,
+   "count": 90
+  },
+  {
+   "year": 2025,
+   "count": 157
+  },
+  {
+   "year": 2026,
+   "count": 277
+  }
+ ],
+ "publications_by_year": [
+  {
+   "year": 2019,
+   "journal": 1,
+   "conference": 2,
+   "preprint": 0,
+   "thesis": 0,
+   "other": 0
+  },
+  {
+   "year": 2020,
+   "journal": 1,
+   "conference": 2,
+   "preprint": 0,
+   "thesis": 1,
+   "other": 0
+  },
+  {
+   "year": 2021,
+   "journal": 3,
+   "conference": 0,
+   "preprint": 0,
+   "thesis": 0,
+   "other": 0
+  },
+  {
+   "year": 2022,
+   "journal": 4,
+   "conference": 3,
+   "preprint": 0,
+   "thesis": 0,
+   "other": 0
+  },
+  {
+   "year": 2023,
+   "journal": 7,
+   "conference": 4,
+   "preprint": 0,
+   "thesis": 0,
+   "other": 1
+  },
+  {
+   "year": 2024,
+   "journal": 8,
+   "conference": 4,
+   "preprint": 3,
+   "thesis": 0,
+   "other": 2
+  },
+  {
+   "year": 2025,
+   "journal": 13,
+   "conference": 1,
+   "preprint": 0,
+   "thesis": 0,
+   "other": 6
+  },
+  {
+   "year": 2026,
+   "journal": 5,
+   "conference": 4,
+   "preprint": 1,
+   "thesis": 0,
+   "other": 0
+  },
+  {
+   "year": 2027,
+   "journal": 1,
+   "conference": 0,
+   "preprint": 0,
+   "thesis": 0,
+   "other": 0
+  }
+ ],
+ "themes": [
+  {
+   "id": "rogue",
+   "label": "Rogue waves & wave statistics",
+   "count": 22,
+   "citations": 287,
+   "journal": 17
+  },
+  {
+   "id": "wsi",
+   "label": "Wave–structure interaction",
+   "count": 15,
+   "citations": 172,
+   "journal": 10
+  },
+  {
+   "id": "physics",
+   "label": "Nonlinear wave physics & breaking",
+   "count": 22,
+   "citations": 139,
+   "journal": 13
+  },
+  {
+   "id": "tides",
+   "label": "Tides, sea level & coastal",
+   "count": 18,
+   "citations": 83,
+   "journal": 5
+  },
+  {
+   "id": "energy",
+   "label": "Marine renewable energy",
+   "count": 6,
+   "citations": 66,
+   "journal": 4
+  },
+  {
+   "id": "ml",
+   "label": "Scientific machine learning",
+   "count": 28,
+   "citations": 200,
+   "journal": 12
+  }
+ ],
+ "theme_labels": {
+  "rogue": "Rogue waves & wave statistics",
+  "wsi": "Wave–structure interaction",
+  "physics": "Nonlinear wave physics & breaking",
+  "tides": "Tides, sea level & coastal",
+  "energy": "Marine renewable energy",
+  "ml": "Scientific machine learning"
+ },
+ "coauthors": [
+  {
+   "name": "Thomas Adcock",
+   "count": 56,
+   "citations": 447,
+   "first_year": 2019,
+   "last_year": 2026
+  },
+  {
+   "name": "Paul H. Taylor",
+   "count": 19,
+   "citations": 171,
+   "first_year": 2019,
+   "last_year": 2026
+  },
+  {
+   "name": "Thomas Monahan",
+   "count": 18,
+   "citations": 83,
+   "first_year": 2023,
+   "last_year": 2025
+  },
+  {
+   "name": "Stephen Roberts",
+   "count": 16,
+   "citations": 48,
+   "first_year": 2023,
+   "last_year": 2025
+  },
+  {
+   "name": "Jun Zang",
+   "count": 13,
+   "citations": 107,
+   "first_year": 2023,
+   "last_year": 2026
+  },
+  {
+   "name": "Yan Li",
+   "count": 12,
+   "citations": 136,
+   "first_year": 2019,
+   "last_year": 2025
+  },
+  {
+   "name": "Haoyu Ding",
+   "count": 11,
+   "citations": 86,
+   "first_year": 2023,
+   "last_year": 2025
+  },
+  {
+   "name": "Saishuai Dai",
+   "count": 11,
+   "citations": 80,
+   "first_year": 2019,
+   "last_year": 2025
+  },
+  {
+   "name": "Ton van den Bremer",
+   "count": 9,
+   "citations": 147,
+   "first_year": 2019,
+   "last_year": 2024
+  },
+  {
+   "name": "Binzhen Zhou",
+   "count": 6,
+   "citations": 74,
+   "first_year": 2023,
+   "last_year": 2026
+  },
+  {
+   "name": "Wentao Xu",
+   "count": 6,
+   "citations": 68,
+   "first_year": 2019,
+   "last_year": 2025
+  },
+  {
+   "name": "Harry B. Bingham",
+   "count": 5,
+   "citations": 86,
+   "first_year": 2020,
+   "last_year": 2023
+  },
+  {
+   "name": "Kanglixi Ding",
+   "count": 5,
+   "citations": 72,
+   "first_year": 2023,
+   "last_year": 2024
+  },
+  {
+   "name": "Lei Wang",
+   "count": 5,
+   "citations": 72,
+   "first_year": 2023,
+   "last_year": 2024
+  },
+  {
+   "name": "Zitan Zhang",
+   "count": 5,
+   "citations": 16,
+   "first_year": 2020,
+   "last_year": 2025
+  },
+  {
+   "name": "Wouter Mostert",
+   "count": 5,
+   "citations": 12,
+   "first_year": 2024,
+   "last_year": 2026
+  },
+  {
+   "name": "Dylan Barratt",
+   "count": 4,
+   "citations": 73,
+   "first_year": 2020,
+   "last_year": 2023
+  },
+  {
+   "name": "Yuntian Chen",
+   "count": 4,
+   "citations": 33,
+   "first_year": 2024,
+   "last_year": 2025
+  },
+  {
+   "name": "Guangwei Zhao",
+   "count": 4,
+   "citations": 25,
+   "first_year": 2023,
+   "last_year": 2025
+  },
+  {
+   "name": "Thobani Hlophe",
+   "count": 4,
+   "citations": 24,
+   "first_year": 2025,
+   "last_year": 2025
+  },
+  {
+   "name": "Lijun Zhang",
+   "count": 4,
+   "citations": 10,
+   "first_year": 2020,
+   "last_year": 2025
+  },
+  {
+   "name": "Xiaobo Zheng",
+   "count": 4,
+   "citations": 10,
+   "first_year": 2020,
+   "last_year": 2025
+  },
+  {
+   "name": "Xinyu Liu",
+   "count": 4,
+   "citations": 9,
+   "first_year": 2025,
+   "last_year": 2026
+  },
+  {
+   "name": "Rui Cao",
+   "count": 3,
+   "citations": 71,
+   "first_year": 2024,
+   "last_year": 2025
+  },
+  {
+   "name": "Jinxuan Li",
+   "count": 3,
+   "citations": 55,
+   "first_year": 2023,
+   "last_year": 2025
+  },
+  {
+   "name": "Samuel Draycott",
+   "count": 3,
+   "citations": 51,
+   "first_year": 2022,
+   "last_year": 2023
+  },
+  {
+   "name": "Peng Jin",
+   "count": 3,
+   "citations": 43,
+   "first_year": 2023,
+   "last_year": 2026
+  },
+  {
+   "name": "Xi Chen",
+   "count": 3,
+   "citations": 30,
+   "first_year": 2023,
+   "last_year": 2025
+  },
+  {
+   "name": "Bing Tai",
+   "count": 3,
+   "citations": 25,
+   "first_year": 2024,
+   "last_year": 2026
+  },
+  {
+   "name": "Yuxiang Ma",
+   "count": 3,
+   "citations": 25,
+   "first_year": 2024,
+   "last_year": 2026
+  },
+  {
+   "name": "Qingxiang Liu",
+   "count": 3,
+   "citations": 9,
+   "first_year": 2022,
+   "last_year": 2026
+  },
+  {
+   "name": "Adrian Callaghan",
+   "count": 2,
+   "citations": 68,
+   "first_year": 2025,
+   "last_year": 2025
+  },
+  {
+   "name": "Jinghua Wang",
+   "count": 2,
+   "citations": 41,
+   "first_year": 2023,
+   "last_year": 2023
+  },
+  {
+   "name": "Gerard V. Ryan",
+   "count": 2,
+   "citations": 40,
+   "first_year": 2024,
+   "last_year": 2025
+  },
+  {
+   "name": "Shuxue Liu",
+   "count": 2,
+   "citations": 29,
+   "first_year": 2023,
+   "last_year": 2023
+  },
+  {
+   "name": "Zhenhao Li",
+   "count": 2,
+   "citations": 29,
+   "first_year": 2022,
+   "last_year": 2023
+  },
+  {
+   "name": "Xingya Feng",
+   "count": 2,
+   "citations": 23,
+   "first_year": 2019,
+   "last_year": 2022
+  },
+  {
+   "name": "Cormac Reale",
+   "count": 2,
+   "citations": 13,
+   "first_year": 2025,
+   "last_year": 2025
+  },
+  {
+   "name": "Jason Monty",
+   "count": 2,
+   "citations": 9,
+   "first_year": 2024,
+   "last_year": 2025
+  },
+  {
+   "name": "Junghoon Lee",
+   "count": 2,
+   "citations": 9,
+   "first_year": 2024,
+   "last_year": 2025
+  },
+  {
+   "name": "Alexey V. Slunyaev",
+   "count": 2,
+   "citations": 7,
+   "first_year": 2020,
+   "last_year": 2024
+  },
+  {
+   "name": "Jialun Chen",
+   "count": 2,
+   "citations": 2,
+   "first_year": 2026,
+   "last_year": 2026
+  },
+  {
+   "name": "Ronald Clark",
+   "count": 2,
+   "citations": 2,
+   "first_year": 2026,
+   "last_year": 2026
+  },
+  {
+   "name": "Bikem Pastine",
+   "count": 2,
+   "citations": 0,
+   "first_year": 2026,
+   "last_year": 2026
+  },
+  {
+   "name": "Louise J. Slater",
+   "count": 2,
+   "citations": 0,
+   "first_year": 2026,
+   "last_year": 2026
+  },
+  {
+   "name": "Milan Klöwer",
+   "count": 2,
+   "citations": 0,
+   "first_year": 2026,
+   "last_year": 2026
+  },
+  {
+   "name": "Sarah Wilson Kemsley",
+   "count": 2,
+   "citations": 0,
+   "first_year": 2026,
+   "last_year": 2026
+  },
+  {
+   "name": "Enrique M. Padilla",
+   "count": 1,
+   "citations": 40,
+   "first_year": 2025,
+   "last_year": 2025
+  },
+  {
+   "name": "Merten Stender",
+   "count": 1,
+   "citations": 40,
+   "first_year": 2025,
+   "last_year": 2025
+  },
+  {
+   "name": "Norbert Hoffmann",
+   "count": 1,
+   "citations": 40,
+   "first_year": 2025,
+   "last_year": 2025
+  },
+  {
+   "name": "Svenja Ehlers",
+   "count": 1,
+   "citations": 40,
+   "first_year": 2025,
+   "last_year": 2025
+  },
+  {
+   "name": "Yuxin Fang",
+   "count": 1,
+   "citations": 40,
+   "first_year": 2025,
+   "last_year": 2025
+  },
+  {
+   "name": "Dongxiao Zhang",
+   "count": 1,
+   "citations": 28,
+   "first_year": 2025,
+   "last_year": 2025
+  },
+  {
+   "name": "Hao Jun Xu",
+   "count": 1,
+   "citations": 28,
+   "first_year": 2025,
+   "last_year": 2025
+  },
+  {
+   "name": "Mengge Du",
+   "count": 1,
+   "citations": 28,
+   "first_year": 2025,
+   "last_year": 2025
+  },
+  {
+   "name": "Peter S. Tromans",
+   "count": 1,
+   "citations": 23,
+   "first_year": 2019,
+   "last_year": 2019
+  },
+  {
+   "name": "Chan Ghee Koh",
+   "count": 1,
+   "citations": 22,
+   "first_year": 2024,
+   "last_year": 2024
+  },
+  {
+   "name": "Charlotte S. Moss",
+   "count": 1,
+   "citations": 22,
+   "first_year": 2023,
+   "last_year": 2023
+  },
+  {
+   "name": "Guohai Dong",
+   "count": 1,
+   "citations": 22,
+   "first_year": 2024,
+   "last_year": 2024
+  },
+  {
+   "name": "Marc Perlin",
+   "count": 1,
+   "citations": 22,
+   "first_year": 2024,
+   "last_year": 2024
+  }
+ ],
+ "venues": [
+  {
+   "name": "Journal of Fluid Mechanics",
+   "count": 7,
+   "citations": 141
+  },
+  {
+   "name": "Coastal Engineering",
+   "count": 5,
+   "citations": 84
+  },
+  {
+   "name": "Applied Ocean Research",
+   "count": 4,
+   "citations": 68
+  },
+  {
+   "name": "Physics of Fluids",
+   "count": 4,
+   "citations": 56
+  },
+  {
+   "name": "Physical Review Fluids",
+   "count": 3,
+   "citations": 57
+  },
+  {
+   "name": "Ocean Engineering",
+   "count": 3,
+   "citations": 44
+  },
+  {
+   "name": "JGR: Machine Learning and Computation",
+   "count": 2,
+   "citations": 14
+  },
+  {
+   "name": "Journal of Ocean Engineering and Marine Energy",
+   "count": 2,
+   "citations": 25
+  },
+  {
+   "name": "Nature Communications",
+   "count": 2,
+   "citations": 41
+  },
+  {
+   "name": "JGR: Oceans",
+   "count": 2,
+   "citations": 16
+  },
+  {
+   "name": "Proceedings of the Royal Society A",
+   "count": 2,
+   "citations": 10
+  },
+  {
+   "name": "Computer Methods in Applied Mechanics and Engineering",
+   "count": 1,
+   "citations": 1
+  },
+  {
+   "name": "Energy",
+   "count": 1,
+   "citations": 2
+  },
+  {
+   "name": "Journal of Offshore Mechanics and Arctic Engineering",
+   "count": 1,
+   "citations": 11
+  }
+ ],
+ "countries": [
+  {
+   "code": "GB",
+   "count": 53
+  },
+  {
+   "code": "CN",
+   "count": 21
+  },
+  {
+   "code": "AU",
+   "count": 11
+  },
+  {
+   "code": "DK",
+   "count": 6
+  },
+  {
+   "code": "NL",
+   "count": 6
+  },
+  {
+   "code": "HK",
+   "count": 4
+  },
+  {
+   "code": "US",
+   "count": 2
+  },
+  {
+   "code": "NO",
+   "count": 2
+  },
+  {
+   "code": "DE",
+   "count": 1
+  },
+  {
+   "code": "ES",
+   "count": 1
+  },
+  {
+   "code": "SG",
+   "count": 1
+  },
+  {
+   "code": "RU",
+   "count": 1
+  }
+ ],
+ "institutions": [
+  {
+   "name": "University of Oxford",
+   "count": 50
+  },
+  {
+   "name": "University of Manchester",
+   "count": 17
+  },
+  {
+   "name": "The University of Western Australia",
+   "count": 9
+  },
+  {
+   "name": "University of Bath",
+   "count": 7
+  },
+  {
+   "name": "Shanghai Jiao Tong University",
+   "count": 7
+  },
+  {
+   "name": "South China University of Technology",
+   "count": 6
+  },
+  {
+   "name": "Delft University of Technology",
+   "count": 6
+  },
+  {
+   "name": "Technical University of Denmark",
+   "count": 6
+  },
+  {
+   "name": "Dalian University of Technology",
+   "count": 5
+  },
+  {
+   "name": "State Key Laboratory of Coastal and Offshore Engineering",
+   "count": 5
+  },
+  {
+   "name": "University of Strathclyde",
+   "count": 5
+  },
+  {
+   "name": "Ocean University of China",
+   "count": 4
+  },
+  {
+   "name": "Hong Kong Polytechnic University",
+   "count": 3
+  },
+  {
+   "name": "Southern University of Science and Technology",
+   "count": 3
+  },
+  {
+   "name": "Jiangsu University of Science and Technology",
+   "count": 2
+  },
+  {
+   "name": "Imperial College London",
+   "count": 2
+  },
+  {
+   "name": "Eastern Institute of Technology, Ningbo",
+   "count": 2
+  },
+  {
+   "name": "Lanzhou University of Technology",
+   "count": 2
+  },
+  {
+   "name": "The University of Melbourne",
+   "count": 2
+  },
+  {
+   "name": "University of Bergen",
+   "count": 2
+  }
+ ],
+ "publications": [
+  {
+   "id": "dofRHEwAAAAJ:J_g5lzvAfSwC",
+   "title": "Learning mesh-free discrete differential operators with self-supervised graph neural networks",
+   "authors": [
+    "Lucas Gerken Starepravo",
+    "Georgios Fourtakas",
+    "Steven Lind",
+    "Ajay B. Harish",
+    "Tianning Tang",
+    "J.R.C. King"
+   ],
+   "authors_truncated": false,
+   "me_index": 4,
+   "role": "middle",
+   "year": 2027,
+   "date": "2027-01",
+   "venue": "Computer Methods in Applied Mechanics and Engineering",
+   "venue_detail": "463, 119388",
+   "citations": 1,
+   "doi": "10.1016/j.cma.2026.119388",
+   "url": "https://doi.org/10.1016/j.cma.2026.119388",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:J_g5lzvAfSwC",
+   "oa_url": "https://doi.org/10.1016/j.cma.2026.119388",
+   "abstract": "Mesh-free numerical methods provide flexible discretisations for complex geometries; however, classical meshless discrete differential operators typically trade low computational cost for limited accuracy or high accuracy for substantial per-stencil computation. We introduce a parametrised framework for learning mesh-free discrete differential operators using neural networks trained via polynomial moment constraints derived from truncated Taylor expansions. The model maps local stencils relative positions directly to discrete operator weights. The current work demonstrates that neural networks can learn classical polynomial consistency while retaining robustness to irregular neighbourhood geometry. The learned operators depend only on local geometry, and can be reused across particle configurations and governing equations. The framework introduces an additional design axis absent from traditional discretisations: the learned operators have a capacity-dependent error floor, so a model may be optimised for accuracy, for computational cost, or a balance of the two. A trained model may be applied across resolutions, though accuracy cannot be refined below the limiting error set by model capacity. We evaluate the framework using standard numerical analysis diagnostics, showing improved accuracy over Smoothed Particle Hydrodynamics, and applicability is demonstrated by solving the Poisson’s equation and the weakly compressible Navier–Stokes equations using the learned operators.",
+   "institutions": [
+    "Cardiff University",
+    "University of Manchester"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:hMod-77fHWUC",
+   "title": "Machine learning approximations for fast and accurate prediction of nonlinear four‐wave interactions in spectral wave models",
+   "authors": [
+    "Jialun Chen",
+    "Thomas A. A. Adcock",
+    "Qingxiang Liu",
+    "Ronald Clark",
+    "Tianning Tang"
+   ],
+   "authors_truncated": false,
+   "me_index": 4,
+   "role": "last",
+   "year": 2026,
+   "date": "2025-12-29",
+   "venue": "JGR: Machine Learning and Computation",
+   "venue_detail": null,
+   "citations": 2,
+   "doi": "10.1029/2025jh000864",
+   "url": "https://doi.org/10.1029/2025jh000864",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:hMod-77fHWUC",
+   "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2025JH000864",
+   "abstract": "Operational wave forecasting requires a delicate balance between the accuracy and computational speed of the spectral wave model used, in which the nonlinear wave–wave interaction “source” term plays an important role. The exact formulation of these nonlinear four‐wave interactions requires solving the six‐dimensional Boltzmann integral, an extremely time‐consuming process that has challenged researchers for over half a century. To match the computational speed required by practical applications, almost all state‐of‐the‐art operational wave models rely on simplified approximations such as Discrete Interaction Approximation (DIA) with known deficiencies. In this study, we consider four machine‐learning models to estimate the nonlinear four‐wave interaction term: a multilayer perceptron, a U‐Net, and two variants of these architectures. The model is trained on ERA5 reanalysis wave spectra covering a wide range of geographical locations and thus of various sea‐states. To evaluate its robustness, the model is first tested on ERA5 data at unseen locations. The results show that the proposed model is capable of predicting full nonlinear interaction at a comparable computational speed to DIA. We further assessed the model's performance on time‐evolving wave growth simulations, which show that the proposed model generalizes well beyond its training conditions and shows strong potential for application in more complex wave scenarios. The present work focuses on deep‐water conditions, but could be extended to finite depth. This new machine learning based approach not only paves the way for fast and accurate predictions of nonlinear source terms, but also heralds a new machine learning based pipeline for operational wave forecasting.",
+   "institutions": [
+    "Ocean University of China",
+    "University of Manchester",
+    "University of Oxford"
+   ],
+   "countries": [
+    "CN",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "physics",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:ns9cj8rnVeAC",
+   "title": "Performance study and multi-objective optimization of 3D cylindrical oscillating water column wave energy converter: balancing efficiency and structural cost",
+   "authors": [
+    "Xu Huang",
+    "Chusen Lin",
+    "Yifeng Yang",
+    "Peng Jin",
+    "Hengming Zhang",
+    "Tianning Tang",
+    "Binzhen Zhou"
+   ],
+   "authors_truncated": false,
+   "me_index": 5,
+   "role": "middle",
+   "year": 2026,
+   "date": "2026-03",
+   "venue": "Energy",
+   "venue_detail": "140337",
+   "citations": 2,
+   "doi": "10.1016/j.energy.2026.140337",
+   "url": "https://doi.org/10.1016/j.energy.2026.140337",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:ns9cj8rnVeAC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [
+    "Hong Kong Polytechnic University",
+    "South China University of Technology",
+    "University College London",
+    "University of Manchester"
+   ],
+   "countries": [
+    "CN",
+    "GB",
+    "HK"
+   ],
+   "type": "journal",
+   "themes": [
+    "energy"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:O3NaXMp0MMsC",
+   "title": "Estimating Superharmonic Bound Waves with the Variable Wavenumber Approximation",
+   "authors": [
+    "X Liu",
+    "T Tang",
+    "PH Taylor",
+    "W Mostert",
+    "TAA Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2026,
+   "date": null,
+   "venue": "Int. Workshop on Water Waves & Floating Bodies",
+   "venue_detail": null,
+   "citations": 1,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:O3NaXMp0MMsC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "conference",
+   "themes": [
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:M05iB0D1s5AC",
+   "title": "A neural network-based Universal Thermal Climate Index for reliable global thermal-stress classification across extreme weather",
+   "authors": [
+    "B Pastine",
+    "M Klöwer",
+    "T Tang",
+    "SW Kemsley",
+    "L Slater"
+   ],
+   "authors_truncated": false,
+   "me_index": 2,
+   "role": "middle",
+   "year": 2026,
+   "date": null,
+   "venue": "arXiv",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:M05iB0D1s5AC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "preprint",
+   "themes": [
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:NaGl4SEjCO4C",
+   "title": "An upgraded neural network-based operational procedure for the Universal Thermal Climate Index (UTCI)",
+   "authors": [
+    "Bikem Pastine",
+    "Milan Klöwer",
+    "Tianning Tang",
+    "Sarah Wilson Kemsley",
+    "Louise J. Slater"
+   ],
+   "authors_truncated": false,
+   "me_index": 2,
+   "role": "middle",
+   "year": 2026,
+   "date": "2026-03-13",
+   "venue": "EGU General Assembly",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": "10.5194/egusphere-egu26-5838",
+   "url": "https://doi.org/10.5194/egusphere-egu26-5838",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:NaGl4SEjCO4C",
+   "oa_url": "https://doi.org/10.5194/egusphere-egu26-5838",
+   "abstract": "Extreme temperatures are the leading cause of climate-related mortality worldwide. To inform mitigation and adaptation strategies, it is crucial to have accurate feels-like temperature measures that quantify thermal stress on human physiology. The Universal Thermal Climate Index (UTCI) is among the most widely used feels-like temperature metrics in climate-health research, applicable in a large range of weather conditions. UTCI is also used by several national and international weather forecasting services to predict thermal stress and issue warnings. However, because of the high complexity of the full UTCI model and associated computational cost, it is operationally approximated by a high-order polynomial to increase computational efficiency.Here, we demonstrate that a carefully trained and robustly tested neural network model calculates UTCI with significantly greater accuracy compared to the polynomial approximation used in the literature. The neural network model substantially outperforms the polynomial model with a similar computational cost, reducing the approximation error by 86%— from 2.78°C to 0.38°C— and thermal stress misclassification by 76%. We eliminate the need to exclude wind speeds above 17m/s from UTCI calculation, which currently limits the global application of the polynomial approximation. When applied to ERA5 reanalysis data, our model reveals a 25% operational difference in daily heat stress categorization between the two methods in Rome, Italy during the 2003 European heatwave. We provide our UTCI model as openly accessible software, as a more accurate way to calculate UTCI in operational procedures. The neural network UTCI model has the potential to enhance climate-health risk research and improve the accuracy of public weather warning systems.",
+   "institutions": [
+    "University of Manchester",
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "conference",
+   "themes": [
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:RGFaLdJalmkC",
+   "title": "Enforcing energy conservation in ML-based approximations of nonlinear four-wave interactions",
+   "authors": [
+    "Jialun Chen",
+    "Thomas A. A. Adcock",
+    "Ronald Clark",
+    "Q. L. Liu",
+    "Tianning Tang"
+   ],
+   "authors_truncated": false,
+   "me_index": 4,
+   "role": "last",
+   "year": 2026,
+   "date": "2026-06-07",
+   "venue": "OMAE — Ocean, Offshore & Arctic Engineering Conference",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": "10.1115/omae2026-178906",
+   "url": "https://doi.org/10.1115/omae2026-178906",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:RGFaLdJalmkC",
+   "oa_url": "https://asmedigitalcollection.asme.org/OMAE/proceedings-pdf/OMAE2026/89473/V001T01A049/7643408/v001t01a049-omae2026-178906.pdf",
+   "abstract": "Accurate and efficient approximation of nonlinear four-wave interactions remains one of the longstanding challenge in spectral wave modeling, as exact calculations are extremely computationally too demanding for practical models. Consequently, most operational wave models employ simplified parameterizations such as the Discrete Interaction Approximation (DIA), for fast computational speed despite known deficiencies. Recent advances in machine learning offer a promising alternative, but standard neural networks do not inherently conserve fundamental physical quantities such as energy, wave action, and momentum, potentially leading to unphysical energy shifts and numerical instability during predictions with these physically inconsistent parameterizations. This study develops two energy-conserving machine learning approaches: a soft constraint that penalizes energy imbalance in the loss function and a hard constraint implemented as a custom network layer that enforces energy conservation within the network architecture. Both approaches substantially reduce energy imbalance compared with unconstrained model, with the hard-constrained approach achieving exact conservation, while also improving numerical stability and generalization to unseen sea states, providing a physically consistent framework for computing nonlinear four-wave interactions.",
+   "institutions": [
+    "Ocean University of China",
+    "University of Manchester",
+    "University of Oxford"
+   ],
+   "countries": [
+    "CN",
+    "GB"
+   ],
+   "type": "conference",
+   "themes": [
+    "physics",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:2P1L_qKh6hAC",
+   "title": "Fast computation of bound components of free surface gravity waves",
+   "authors": [
+    "Xinyu Liu",
+    "Tianning Tang",
+    "Wouter Mostert",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2026,
+   "date": "2026-08-11",
+   "venue": "Journal of Ocean Engineering and Marine Energy",
+   "venue_detail": "12 (4), 2235-2241",
+   "citations": 0,
+   "doi": "10.1007/s40722-026-00536-8",
+   "url": "https://doi.org/10.1007/s40722-026-00536-8",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:2P1L_qKh6hAC",
+   "oa_url": "https://link.springer.com/content/pdf/10.1007/s40722-026-00536-8.pdf",
+   "abstract": "This paper presents a computationally fast implementation of the third-order wave interaction theory of Madsen and Fuhrman (2012) for multidirectional irregular waves. The evaluation stage is reformulated from direct summation of sinusoidal waves in the physical domain to spectral accumulation, followed by two-dimensional inverse fast Fourier transform, reducing the cost of full-grid evaluation from $${\\mathcal {O}}(N_gN_{\\textrm{terms}})$$ O ( N g N terms ) per time step to $${\\mathcal {O}}(N_{\\textrm{terms}})+{\\mathcal {O}}(N_{\\textrm{g}}\\log N_{\\textrm{g}}).$$ O ( N terms ) + O ( N g log N g ) . Numerical verification against direct physical-space evaluation shows machine-precision agreement, with typical errors of order $$10^{-13}$$ 10 - 13 – $$10^{-12}$$ 10 - 12 in tests using a finite-depth, high-steepness, multidirectional crossing-sea case. Representative benchmark cases show speedup of roughly three orders of magnitude. The method provides a practical route for higher-order nonlinear surface-field evaluation in larger multidirectional bound wave calculations and related time series where repeated time step evaluations are required, and more broadly suggests spectral-domain accumulation as a scalable strategy for problems involving large-scale superposition of sinusoidal wave components.",
+   "institutions": [
+    "University of Manchester",
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:RYcK_YlVTxYC",
+   "title": "Numerical investigation of extreme wave impacts on side-by-side piles: A cross-sectional analysis",
+   "authors": [
+    "Bing Tai",
+    "Yuxiang Ma",
+    "Tianning Tang",
+    "Jun Zang"
+   ],
+   "authors_truncated": false,
+   "me_index": 2,
+   "role": "middle",
+   "year": 2026,
+   "date": "2026-07",
+   "venue": "Coastal Engineering",
+   "venue_detail": "105041",
+   "citations": 0,
+   "doi": "10.1016/j.coastaleng.2026.105041",
+   "url": "https://doi.org/10.1016/j.coastaleng.2026.105041",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:RYcK_YlVTxYC",
+   "oa_url": "https://purehost.bath.ac.uk/ws/files/391209909/Manuscript_unmarked_-_Tai_et_al_Coastatl_Eng_2026.pdf",
+   "abstract": null,
+   "institutions": [
+    "Dalian University of Technology",
+    "Jiangsu University of Science and Technology",
+    "State Key Laboratory of Coastal and Offshore Engineering",
+    "University of Bath",
+    "University of Manchester"
+   ],
+   "countries": [
+    "CN",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue",
+    "wsi"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:pqnbT2bcN3wC",
+   "title": "On estimating superharmonic bound waves for unidirectional water waves",
+   "authors": [
+    "X Liu",
+    "T Tang",
+    "P Taylor",
+    "W Mostert",
+    "T Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2026,
+   "date": null,
+   "venue": "Journal of Fluid Mechanics",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:pqnbT2bcN3wC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "journal",
+   "themes": [
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:70eg2SAEIzsC",
+   "title": "SWIN-DeepONet: A Swin Transformer Enhanced DeepONet for Learning Wave Dynamics",
+   "authors": [
+    "P Sethi",
+    "M Beneitez",
+    "T Tang",
+    "A Mukherjee"
+   ],
+   "authors_truncated": false,
+   "me_index": 2,
+   "role": "middle",
+   "year": 2026,
+   "date": null,
+   "venue": "IJCAI Workshop",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:70eg2SAEIzsC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "conference",
+   "themes": [
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:e5wmG9Sq2KIC",
+   "title": "Physics-informed neural networks for phase-resolved data assimilation and prediction of nonlinear ocean waves",
+   "authors": [
+    "Svenja Ehlers",
+    "Norbert Hoffmann",
+    "Tianning Tang",
+    "Adrian H. Callaghan",
+    "Rui Cao",
+    "Enrique M. Padilla",
+    "Yuxin Fang",
+    "Merten Stender"
+   ],
+   "authors_truncated": false,
+   "me_index": 2,
+   "role": "middle",
+   "year": 2025,
+   "date": "2025-09-02",
+   "venue": "Physical Review Fluids",
+   "venue_detail": "10 (9), 094901",
+   "citations": 40,
+   "doi": "10.1103/ytyy-pvys",
+   "url": "https://doi.org/10.1103/ytyy-pvys",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:e5wmG9Sq2KIC",
+   "oa_url": "https://arxiv.org/pdf/2501.08430",
+   "abstract": "This work presents a novel Physics-Informed Neural Network (PINN) approach for nonlinear ocean wave data assimilation and prediction. The method leverages potential flow theory to parameterize wave dynamics and integrates physical constraints into the loss function, enabling accurate reconstruction and prediction of phase-resolved, nonlinear, and dispersive wave fields from sparse measurements. Validated against analytical solutions and laboratory experiments, this PINN framework infers full spatiotemporal wave and velocity potential fields efficiently and thus advances the use of physics-informed machine learning for ocean wave modeling and understanding.",
+   "institutions": [
+    "China University of Petroleum, East China",
+    "Hamburg University of Technology",
+    "Imperial College London",
+    "Ocean University of China",
+    "Technische Universität Berlin",
+    "Universitat Politècnica de Catalunya",
+    "University of Oxford"
+   ],
+   "countries": [
+    "CN",
+    "DE",
+    "ES",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "physics",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:isC4tDSrTZIC",
+   "title": "Generative discovery of partial differential equations by learning from math handbooks",
+   "authors": [
+    "Hao Jun Xu",
+    "Yuntian Chen",
+    "Rui Cao",
+    "Tianning Tang",
+    "Mengge Du",
+    "Jian Li",
+    "Adrian H. Callaghan",
+    "Dongxiao Zhang"
+   ],
+   "authors_truncated": false,
+   "me_index": 3,
+   "role": "middle",
+   "year": 2025,
+   "date": "2025-11-21",
+   "venue": "Nature Communications",
+   "venue_detail": "16 (1), 10255",
+   "citations": 28,
+   "doi": "10.1038/s41467-025-65114-2",
+   "url": "https://doi.org/10.1038/s41467-025-65114-2",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:isC4tDSrTZIC",
+   "oa_url": "https://www.nature.com/articles/s41467-025-65114-2.pdf",
+   "abstract": "Data-driven discovery of partial differential equations (PDEs) is a promising approach for uncovering the underlying laws governing complex systems. However, purely data-driven techniques face the dilemma of balancing search space with optimization efficiency. This study introduces a knowledge-guided approach that incorporates existing PDEs documented in a mathematical handbook to facilitate the discovery process. These PDEs are encoded as sentence-like structures composed of operators and basic terms, and used to train a generative model, called EqGPT, which enables the generation of free-form PDEs. A loop of \"generation-evaluation-optimization\" is constructed to autonomously identify the most suitable PDE. Experimental results demonstrate that this framework can recover a variety of PDE forms with high accuracy and computational efficiency, particularly in cases involving complex temporal derivatives or intricate spatial terms, which are often beyond the reach of conventional methods. The approach also exhibits generalizability to irregular spatial domains and higher dimensional settings. Notably, it succeeds in discovering a previously unreported PDE governing strongly nonlinear surface gravity waves propagating toward breaking, based on real-world experimental data, highlighting its applicability to practical scenarios and its potential to support scientific discovery.",
+   "institutions": [
+    "Eastern Institute of Technology, Ningbo",
+    "Imperial College London",
+    "Lingnan University",
+    "Ocean University of China",
+    "Peking University",
+    "Tsinghua University",
+    "University of Manchester",
+    "University of Oxford"
+   ],
+   "countries": [
+    "CN",
+    "GB",
+    "HK"
+   ],
+   "type": "journal",
+   "themes": [
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:_Qo2XoVZTnwC",
+   "title": "Influence of non-linear wave load models on monopile supported offshore wind turbines for extreme conditions",
+   "authors": [
+    "Gerard V. Ryan",
+    "Tianning Tang",
+    "Ross A. McAdam",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": "2025-04",
+   "venue": "Ocean Engineering",
+   "venue_detail": "323, 120510",
+   "citations": 18,
+   "doi": "10.1016/j.oceaneng.2025.120510",
+   "url": "https://doi.org/10.1016/j.oceaneng.2025.120510",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:_Qo2XoVZTnwC",
+   "oa_url": "https://doi.org/10.1016/j.oceaneng.2025.120510",
+   "abstract": "This paper investigates the influence of non-linear wave loads on the response and design of a monopile supported DTU 10 MW offshore wind turbine during extreme conditions. Morison’s equation with linear wave theory is compared to an experimental based Stokes-type approach and the Rainey force model, both currently considered state-of-the-art. These comparisons show that models incorporating non-linearity significantly impact structural response due to higher harmonic loading coinciding with natural periods. The Stokes-type model method is shown to predict the largest loading and response. These models are compared to the widely used constrained wave approach, showing that significant differences are predicted for steel and geotechnical design checks. This suggests that the industry standard approach may be inappropriate for the design of monopile structures against extreme wave loads. • Dynamic response of a monopile supported offshore wind turbine is analysed. • State-of-the-art non-linear wave load models are considered. • Consisting of a Stokes-type experimental approach and Rainey analytical method. • Comparisons are made with widely used linear models and current industry practice. • Significant differences are predicted in terms of extreme loading and response.",
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "wsi",
+    "energy"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:RHpTSmoSYBkC",
+   "title": "Tidal corrections from and for SWOT using a spatially coherent variational Bayesian harmonic analysis",
+   "authors": [
+    "Thomas Monahan",
+    "Tianning Tang",
+    "Stephen Roberts",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": "2025-03",
+   "venue": "JGR: Oceans",
+   "venue_detail": "130 (3), e2024JC021533",
+   "citations": 14,
+   "doi": "10.1029/2024jc021533",
+   "url": "https://doi.org/10.1029/2024jc021533",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:RHpTSmoSYBkC",
+   "oa_url": "https://doi.org/10.1029/2024jc021533",
+   "abstract": "The accuracy of global tidal models degrades significantly in coastal and estuarine regions. These models are important for correcting measurements from satellite altimetry and are used in numerous scientific and engineering applications. The new Surface Water Ocean Topography (SWOT) mission is providing measurements at unprecedented horizontal resolution in these regions. These data present both the opportunity and the necessity to quantify and correct the spatial variability in the model inaccuracies specific to these regions. We develop a variational Bayesian framework for tidal harmonic analysis which can be applied to SWOT, and is especially useful for exploting the data from the Cal/Val phase. The approach demonstrates superior robustness to different types of noise contamination in comparison to conventional least‐squares approaches while providing full uncertainty estimation. By imposing a spatially coherent inductive bias on the model, we achieve superior harmonic constituent inference from temporally sparse but spatially dense data. Bayesian uncertainty estimation gives rise to statistical methods for outlier removal and constituent selection. Using our approach, we estimate a lower bound for the residual tidal variability for two SWOT Cal/Val passes (003 and 016) around the European Shelf to be on average. We also show similar estimates cannot be produced using standard least‐squares approaches. Tide gauge validation in the same region confirms the superiority of our empirical approach in coastal environments. Empirical corrections for the SWOT data products are provided alongside an open‐source Python package, VTide.",
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "physics",
+    "tides",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:NMxIlDl6LWMC",
+   "title": "An investigation of the secondary load cycle associated with wave scattering in severe wave–cylinder interactions",
+   "authors": [
+    "Haoyu Ding",
+    "Tianning Tang",
+    "Paul H. Taylor",
+    "Thomas A. A. Adcock",
+    "Guangwei Zhao",
+    "Saishuai Dai",
+    "Thobani Hlophe",
+    "Cormac Reale",
+    "Jun Zang"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": "2025-10-15",
+   "venue": "Journal of Fluid Mechanics",
+   "venue_detail": "1021, A24",
+   "citations": 13,
+   "doi": "10.1017/jfm.2025.10738",
+   "url": "https://doi.org/10.1017/jfm.2025.10738",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:NMxIlDl6LWMC",
+   "oa_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/56036E7332177EB2D8AC31C99D3578FD/S0022112025107386a.pdf/div-class-title-an-investigation-of-the-secondary-load-cycle-associated-with-wave-scattering-in-severe-wave-cylinder-interactions-div.pdf",
+   "abstract": "This research examines in detail the complex nonlinear forces generated when steep waves interact with vertical cylindrical structures, such as those typically used as offshore wind turbine foundations. These interactions, particularly the nonlinear wave forces associated with the secondary load cycle, present unanswered questions about how they are triggered. Our experimental campaigns underscore the occurrence of the secondary load cycle. We also investigate how the vertical distributions of the scattering force, pressure field and wave field affect the nonlinear wave forces associated with the secondary load cycle phenomena. A phase-based harmonic separation method isolates harmonic components of the scattering force’s vertical distribution, pressure field and wave field. This approach facilitates the clear separation of individual harmonics by controlling the phase of incident waves, which offers new insights into the mechanisms of the secondary load cycle. Our findings highlight the importance of complex nonlinear wave–structure interactions in this context. In certain wave regimes, nonlinear forces are locally larger than the linear forces, highlighting the need to consider the secondary load cycle in structural design. In addition, a novel discovery emerges from our comparative analysis, whereby very high-frequency (over the fifth in harmonic and order) oscillations, strongly correlated to wave steepness, have the potential to play a role in structural fatigue. This new in-depth analysis provides a unique insight regarding the complex interplay between severe waves and typical cylindrical offshore structures, adding to our understanding of the secondary load cycle for applications related to offshore wind turbine foundations.",
+   "institutions": [
+    "The University of Western Australia",
+    "University of Bath",
+    "University of Manchester",
+    "University of Oxford",
+    "University of Strathclyde"
+   ],
+   "countries": [
+    "AU",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "wsi"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:JV2RwH3_ST0C",
+   "title": "Observations of the seiche that shook the world",
+   "authors": [
+    "Thomas Monahan",
+    "Tianning Tang",
+    "Stephen Roberts",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": "2025-06-03",
+   "venue": "Nature Communications",
+   "venue_detail": "16 (1), 4777",
+   "citations": 13,
+   "doi": "10.1038/s41467-025-59851-7",
+   "url": "https://doi.org/10.1038/s41467-025-59851-7",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:JV2RwH3_ST0C",
+   "oa_url": "https://www.nature.com/articles/s41467-025-59851-7.pdf",
+   "abstract": "On September 16th, 2023, an anomalous 10.88 mHz seismic signal was observed globally, persisting for 9 days. One month later an identical signal appeared, lasting for another week. Several studies have theorized that these signals were produced by seiches which formed after two landslide-generated mega-tsunamis in an East Greenland fjord. This theory is supported by seismic inversions, and analytical and numerical modeling, but no direct observations have been made. Here, we present primary observations of this phenomenon using data from the Surface Water Ocean Topography mission. By ruling out other oceanographic processes, we validate the seiche theory of previous authors and independently estimate its initial amplitude at 7.9 m using Bayesian machine learning and seismic data. This study demonstrates the value of satellite altimetry for studying fast oceanic processes and extreme events, while also highlighting the need for specialized methods to address the altimetric data’s limitations, namely temporal sparsity. These data and approaches will help in understanding future unseen extremes driven by climate change.",
+   "institutions": [
+    "University of Manchester",
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "tides"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:M3NEmzRMIkIC",
+   "title": "RTide: Automating the tidal response method",
+   "authors": [
+    "Thomas Monahan",
+    "Tianning Tang",
+    "Stephen Roberts",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": "2025-05-23",
+   "venue": "JGR: Machine Learning and Computation",
+   "venue_detail": null,
+   "citations": 12,
+   "doi": "10.1029/2024jh000525",
+   "url": "https://doi.org/10.1029/2024jh000525",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:M3NEmzRMIkIC",
+   "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2024JH000525",
+   "abstract": "Nonstationary tidal processes, such as tidal rivers and storm surge, present challenges for analysis and prediction because their inherent nonstationarity encumbers the use of standard tidal analysis tools like harmonic analysis. Moreover, specialized approaches impose problem‐specific functional forms and rely on auxiliary data, limiting their applicability across different nonstationary tidal processes. Although Munk and Cartwright's tidal response method avoids these assumptions, its lack of automation has hindered broader application. Here, we develop a nonparametric, automated response‐based analysis procedure. Our approach embeds a class of neural networks capable of representing any arbitrary Volterra series—the mathematical basis of the response method—within the classic framework. Our model facilitates the inclusion of meteorological and other non‐tidal forcing. By explicitly accounting for nonstationarity, our method yields improved astronomical tidal estimates. We further devise a strategy to extract physical insights from the learned model, demonstrating its utility in studying the interaction and modulation of astronomical tides by external forcing. By taking a nonparametric approach, our framework enables the investigation of phenomena that heretofore could not be accounted for straightforwardly, as illustrated by several case studies on tide–surge interaction, riverine tides, and storm surge. These applications, and more, can be replicated with just three lines of code using the open‐source Python package, RTide.",
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "tides"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:4DMP91E08xMC",
+   "title": "Experimental investigation of nonlinear forces on a monopile offshore wind turbine foundation under directionally spread waves",
+   "authors": [
+    "Haoyu Ding",
+    "Guangwei Zhao",
+    "Tianning Tang",
+    "Paul H. Taylor",
+    "Thomas A. A. Adcock",
+    "Saishuai Dai",
+    "Dezhi Ning",
+    "Lifen Chen",
+    "Jinxuan Li",
+    "Rongquan Wang",
+    "Jun Zang"
+   ],
+   "authors_truncated": false,
+   "me_index": 2,
+   "role": "middle",
+   "year": 2025,
+   "date": "2024-11-26",
+   "venue": "Journal of Offshore Mechanics and Arctic Engineering",
+   "venue_detail": "147 (4), 042002",
+   "citations": 11,
+   "doi": "10.1115/1.4067116",
+   "url": "https://doi.org/10.1115/1.4067116",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:4DMP91E08xMC",
+   "oa_url": "https://admin.research-repository.uwa.edu.au/en/publications/4f703cb5-c5cc-4890-aa9b-a1766522691a",
+   "abstract": "Accurate prediction of nonlinear wave loading is crucial for designing marine and offshore structures, yet it remains a challenging task. Prior research has primarily focused on unidirectional extreme sea states, revealing that linear loading cannot accurately represent the total wave forces acting on offshore wind turbine foundations, with significant contributions from high-order harmonics. This study broadens the scope to include multidirectional and bidirectional wave interactions with monopile offshore wind turbine foundations. We use a phase-based harmonic separation method to isolate harmonic components in the presence of complex wave scenarios. This approach allows for the clear delineation of individual harmonics from the total wave force by controlling the phase of incident-focused waves. Remarkably, this method is effective even with multidirectional and bidirectional spreading. The clean separation of individual harmonics enables the estimation of contributions from each harmonic. Our findings are in line with previous research, showing that nonlinear loading can constitute up to 40% of the total under certain wave conditions. We have also observed that wider wave spreading reduces nonlinear high-order harmonics, and unidirectional waves induce the most severe nonlinear forces. These insights emphasize the importance of accounting for high-order nonlinear wave loading in offshore structure design.",
+   "institutions": [
+    "Dalian University of Technology",
+    "State Key Laboratory of Coastal and Offshore Engineering",
+    "The University of Western Australia",
+    "University of Bath",
+    "University of Glasgow",
+    "University of Oxford",
+    "University of Strathclyde"
+   ],
+   "countries": [
+    "AU",
+    "CN",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "wsi",
+    "energy"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:YFjsv_pBGBYC",
+   "title": "Nonlinear wave loads on monopile foundations and structural response in severe wave conditions",
+   "authors": [
+    "Thobani Hlophe",
+    "Thomas A. A. Adcock",
+    "Haoyu Ding",
+    "Jun Zang",
+    "Saishuai Dai",
+    "Tianning Tang",
+    "Paul H. Taylor"
+   ],
+   "authors_truncated": false,
+   "me_index": 5,
+   "role": "middle",
+   "year": 2025,
+   "date": "2025-11",
+   "venue": "Applied Ocean Research",
+   "venue_detail": "164, 104790",
+   "citations": 11,
+   "doi": "10.1016/j.apor.2025.104790",
+   "url": "https://doi.org/10.1016/j.apor.2025.104790",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:YFjsv_pBGBYC",
+   "oa_url": "https://doi.org/10.1016/j.apor.2025.104790",
+   "abstract": "This study investigates nonlinear wave loading on monopile-like offshore structures subjected to steep, intermediate-depth focused wave groups—conditions representative of offshore wind turbine environments. Physical model tests in a wave flume were conducted to isolate and analyse first- and higher-order force components via decomposition techniques, made possible by repeating tests at different initial phase angles. A Stokes-type fitting of nonlinear force harmonics based on the linear component is improved by generalising the analytical formulation to arbitrary order. The new formulation is now limited only by the separability of individual harmonics used in the fitting. The Stokes approach effectively captures key harmonic features, preserving phase information more robustly than the nonlinear Transformed-FNV (T-FNV) force model, particularly at higher wave steepnesses. Nonetheless, the T-FNV model captures the fundamental force behaviour. To assess structural response under complex nonlinear loading, a simplified damped oscillator model is used. Dynamic response analysis reveals that the secondary load cycle contributes negligibly to the overall response in adequately damped structures. In contrast, slam loads impart sharp impulses to the system. Although damping mechanisms effectively dissipate this energy at the system’s first eigenfrequency and lower modes, reduced damping efficiency at very high frequencies allows a small residual response to emerge. These findings support the use of computationally efficient nonlinear modelling approaches in wind turbine foundations and structural design, affirming that secondary nonlinearities and impulsive effects can be safely neglected for inertia-dominated loading and compact monopile geometries, with adequate damping, without compromising response accuracy. • Nonlinear wave loads have the potential to excite resonance in offshore wind turbines. • Stokes-type fitting accurately reconstructs highly nonlinear wave loading • The nonlinear T-FNV model performs well at moderate wave steepness. • Secondary load cycles and slam loads have negligible influence on structural response.",
+   "institutions": [
+    "The University of Western Australia",
+    "University of Bath",
+    "University of Manchester",
+    "University of Oxford",
+    "University of Strathclyde"
+   ],
+   "countries": [
+    "AU",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "wsi"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:iH-uZ7U-co4C",
+   "title": "Phase manipulation to analyse different types of non-linearity using water waves as a case study",
+   "authors": [
+    "Xinyu Liu",
+    "Tianning Tang",
+    "Wouter Mostert",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": "2025-05",
+   "venue": "Proceedings of the Royal Society A",
+   "venue_detail": null,
+   "citations": 8,
+   "doi": "10.1098/rspa.2024.0831",
+   "url": "https://doi.org/10.1098/rspa.2024.0831",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:iH-uZ7U-co4C",
+   "oa_url": "https://doi.org/10.1098/rspa.2024.0831",
+   "abstract": "We develop a phase-based manipulation technique, which can be adopted for many physical problems that involve separating the slave harmonics from the free waves. This technique extends the existing literature by developing a general solution to the problem while enabling the incorporation of arbitrary numbers and combinations of phases for computation. We further extend our matrix formulation to phase-based reconstruction applications, where a missing phase can be predicted from other phase-shifted signals with all slave harmonics included. This allows a clean separation between weakly nonlinear effects from the strong nonlinear process such as the breaking of water waves. We examine the possible sources for the phase-based reconstruction error, including the bandwidth of the input signal, the nonlinear effects, different phase combinations and phase misalignment. We aim to provide a reference for the optimal choice of the number and combination of phases to be selected. We use surface gravity-driven water waves as a case study.",
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:blknAaTinKkC",
+   "title": "Experimental design and analysis of the evolution of unidirectional wind wave interaction",
+   "authors": [
+    "Zitan Zhang",
+    "Tianning Tang",
+    "Wentao Xu",
+    "Xiaobo Zheng",
+    "Lijun Zhang",
+    "Junghoon Lee",
+    "Jason Monty",
+    "Ye Li"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": "2025-07",
+   "venue": "IEEE Journal of Oceanic Engineering",
+   "venue_detail": "50 (3), 2016-2029",
+   "citations": 2,
+   "doi": "10.1109/joe.2025.3549967",
+   "url": "https://doi.org/10.1109/joe.2025.3549967",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:blknAaTinKkC",
+   "oa_url": "https://pure.manchester.ac.uk/ws/files/1172036300/Experimental_design_and_analysis_of_the_evolution_of_uni-directional_wind_wave_interaction.pdf",
+   "abstract": "The greatest threat to floating structures at sea is the huge waves formed with extreme meteorological conditions. However, the lack of a systematic large-scale facility for sea–air interaction limits the further development of wind–wave interaction. Therefore, we have designed and developed an extreme wave experimental facility with wind forcing. We performed unidirectional random wave experiments to investigate the wind impact on waves. The results suggest that the effect of wind on wave height distribution is significant. The wave height distribution cannot be well described by the Rayleigh distribution, especially in cases with a large Benjamin–Feir index (BFI). It is worth noting that the case with the largest BFI in the experiment did not increase with the wind forcing as expected. We attempt to provide a possible explanation for this issue by understanding the differences between the facility specification. We consider that the dimensionless length of the tank and the quality of turbulent wind can have a significant impact on wave evolution, especially the probability of extreme events.",
+   "institutions": [
+    "Lanzhou University of Technology",
+    "Shanghai Jiao Tong University",
+    "Southern University of Science and Technology",
+    "The University of Melbourne",
+    "University of Oxford"
+   ],
+   "countries": [
+    "AU",
+    "CN",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:k_IJM867U9cC",
+   "title": "Prediction of tidal currents in the Inner Sound of the Pentland Firth using RTide",
+   "authors": [
+    "Thomas Monahan",
+    "Tianning Tang",
+    "Stephen Roberts",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": "2025-09-08",
+   "venue": "European Wave & Tidal Energy Conference",
+   "venue_detail": null,
+   "citations": 2,
+   "doi": "10.36688/ewtec-2025-838",
+   "url": "https://doi.org/10.36688/ewtec-2025-838",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:k_IJM867U9cC",
+   "oa_url": "https://ora.ox.ac.uk/objects/uuid:b212b0d1-7bd9-47d4-a863-fbb6345849ea/files/sdb78tf523",
+   "abstract": "The design and operation of tidal stream energy farms will require the accurate prediction of tidal currents from field data. In the present paper we compare the performance of a physics based flow model, the traditional harmonic analysis method, and a newly developed code RTide. RTide is based on the Response Method proposed by Munk and Cartwright in the 1960s and uses machine learning to overcome the key disadvantages of their original approach. We use field data from the Meygen site in the Inner Sound of the Pentland Firth. We find RTide predictions based solely on the field data outperform both the flow model predictions and the currents predicted by harmonic analysis. Interestingly, feeding the physics-based flow model into RTide as an additional input does not outperform the predictions based on the field data alone. However, RTide can still be used as a correction tool to physics-based flow models.",
+   "institutions": [
+    "University of Manchester",
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "conference",
+   "themes": [
+    "tides"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:GnPB-g6toBAC",
+   "title": "Response‐based prediction of tidal currents",
+   "authors": [
+    "Thomas Monahan",
+    "Tianning Tang",
+    "Stephen Roberts",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": "2025-12",
+   "venue": "JGR: Oceans",
+   "venue_detail": "130 (12), e2025JC022758",
+   "citations": 2,
+   "doi": "10.1029/2025jc022758",
+   "url": "https://doi.org/10.1029/2025jc022758",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:GnPB-g6toBAC",
+   "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2025JC022758",
+   "abstract": "This study evaluates the response method for predicting tidal currents. We introduce a coupled response model which explicitly accounts for interactions between velocity components. By leveraging non‐parametric and data‐driven weight estimation, the approach demonstrates superior predictive accuracy compared to classical harmonic analysis (HA), particularly for fast‐moving and non‐linear tidal currents. Using ADCP data from the world's largest deployment of tidal stream turbines, the coupled model achieves superior accuracy with fewer than 30 days of input measurements compared to HA using over 180 days of data. Accuracy improvements extend to both current predictions and the derived harmonic constituents, obtained through a specialized procedure. The response approach shows greater robustness when applied to extremely sparse data. This is reflected by the pseudo‐admittances, which also show the non‐parametric approach advanced can effectively capture unsmooth deviations in the admittance. Analysis of 40 active NOAA current stations highlight when the response approach should and should not be used, yielding average reductions in absolute error of 9.6%. The framework offers new opportunities for studying non‐tidal forcing and sediment transport and has significant implications for tidal energy site development. The proposed method is implemented in the open‐source RTide Python package, providing a practical and accessible tool that reduces the level of expertise required to apply the response method to higher‐order nonlinear processes.",
+   "institutions": [
+    "University of Manchester",
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "tides"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:r0BpntZqJG4C",
+   "title": "Solitary wave interactions modelled using conserved and empirically conserved quantities discovered with machine learning",
+   "authors": [
+    "Tianning Tang",
+    "Paul H. Taylor",
+    "Yuntian Chen",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2025,
+   "date": "2025-04",
+   "venue": "Proceedings of the Royal Society A",
+   "venue_detail": null,
+   "citations": 2,
+   "doi": "10.1098/rspa.2024.0904",
+   "url": "https://doi.org/10.1098/rspa.2024.0904",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:r0BpntZqJG4C",
+   "oa_url": "https://doi.org/10.1098/rspa.2024.0904",
+   "abstract": "Conservation laws play an important role in analysing physical systems and solving partial differential equations (PDEs). In this paper, we use associated conserved quantities (CQs) to construct a simple and robust way to approximate the interaction between surface solitary waves—a common nonlinear phenomenon in many research fields and engineering applications. One major constraint of such an approach is how many CQs are available from the governing equation. In this study, we start with the Korteweg–De Vries (KdV) equation, which has an infinite number of CQs. We show that these CQs can be used to predict soliton interaction accurately. The regularized long wave (RLW) equation—an equivalent reduction form to the KdV equation, however, has insufficient CQs to apply the approach. To address this problem, we use a new symbolic-based machine learning (ML) approach to search for any higher-order empirically CQs (e-CQs), which allow the proposed approach to be applied directly to the RLW equations and leverages the constraints on the number of CQs available. This opens a new opportunity for more complex systems governed by a variety range of PDEs to be modelled with such a CQ-based approach.",
+   "institutions": [
+    "The University of Western Australia",
+    "University of Manchester",
+    "University of Oxford"
+   ],
+   "countries": [
+    "AU",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "physics",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:TFP_iSt0sucC",
+   "title": "A novel machine learning model to fast predict nonlinear waveforces on monopile-type offshore wind turbine foundations",
+   "authors": [
+    "H Ding",
+    "J Zang",
+    "C Reale",
+    "T Tang",
+    "T Hlophe",
+    "TAA Adcock",
+    "S Dai",
+    "PH Taylor"
+   ],
+   "authors_truncated": false,
+   "me_index": 3,
+   "role": "middle",
+   "year": 2025,
+   "date": null,
+   "venue": "CADE School of Engineering, University of Bristol",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:TFP_iSt0sucC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "other",
+   "themes": [
+    "wsi",
+    "energy",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:BqipwSGYUEgC",
+   "title": "RTide: Physics-informed ML for ocean water levels and currents",
+   "authors": [
+    "T Monahan",
+    "T Tang",
+    "S Roberts",
+    "T Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": null,
+   "venue": null,
+   "venue_detail": null,
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:BqipwSGYUEgC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "other",
+   "themes": [
+    "tides",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:bEWYMUwI8FkC",
+   "title": "RTide: a machine learning enabled implementation of Munk andCartwright’s response method",
+   "authors": [
+    "T Monahan",
+    "T Tang",
+    "S Roberts",
+    "T Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": null,
+   "venue": "CADE School of Engineering, University of Bristol",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:bEWYMUwI8FkC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "other",
+   "themes": [
+    "tides",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:g5m5HwL7SMYC",
+   "title": "SWOT observations of the seiche that shook the world",
+   "authors": [
+    "T Monahan",
+    "T Tang",
+    "S Roberts",
+    "T Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": null,
+   "venue": "Centre National d'Etudes Spatiales Data Set",
+   "venue_detail": "510",
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:g5m5HwL7SMYC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "other",
+   "themes": [
+    "tides"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:ldfaerwXgEUC",
+   "title": "SeaSwallowsTool",
+   "authors": [
+    "J Zang",
+    "H Ding",
+    "X Chen",
+    "TAA Adcock",
+    "T Tang",
+    "T Hlophe",
+    "S Dai",
+    "PH Taylor"
+   ],
+   "authors_truncated": false,
+   "me_index": 4,
+   "role": "middle",
+   "year": 2025,
+   "date": null,
+   "venue": "University of Bath",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:ldfaerwXgEUC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "other",
+   "themes": []
+  },
+  {
+   "id": "dofRHEwAAAAJ:vV6vV6tmYwMC",
+   "title": "Supporting information for Observations of the seiche that shook the world",
+   "authors": [
+    "T Monahan",
+    "T Tang",
+    "S Roberts",
+    "TAA Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": null,
+   "venue": "Earth",
+   "venue_detail": "2, 1",
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:vV6vV6tmYwMC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "other",
+   "themes": [
+    "tides"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:qxL8FJ1GzNcC",
+   "title": "A new Gaussian process based model for non-linear wave loading on vertical cylinders",
+   "authors": [
+    "Tianning Tang",
+    "Gerard V. Ryan",
+    "Haoyu Ding",
+    "Xi Chen",
+    "Jun Zang",
+    "Paul H. Taylor",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2024,
+   "date": "2024-03",
+   "venue": "Coastal Engineering",
+   "venue_detail": "188, 104427",
+   "citations": 22,
+   "doi": "10.1016/j.coastaleng.2023.104427",
+   "url": "https://doi.org/10.1016/j.coastaleng.2023.104427",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:qxL8FJ1GzNcC",
+   "oa_url": "https://purehost.bath.ac.uk/ws/files/314901393/A_new_Gaussian_Process_based_model_for_non-linear_wave_loading_on_vertical_cylinders.pdf",
+   "abstract": null,
+   "institutions": [
+    "The University of Western Australia",
+    "University of Bath",
+    "University of Oxford"
+   ],
+   "countries": [
+    "AU",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "wsi",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:hFOr9nPyWt4C",
+   "title": "An enhanced model for an extreme wave impacting a vertical cylinder",
+   "authors": [
+    "Bing Tai",
+    "Yuxiang Ma",
+    "Guohai Dong",
+    "Chan Ghee Koh",
+    "Tianning Tang",
+    "Marc Perlin"
+   ],
+   "authors_truncated": false,
+   "me_index": 4,
+   "role": "middle",
+   "year": 2024,
+   "date": "2024-12",
+   "venue": "Coastal Engineering",
+   "venue_detail": "194, 104630",
+   "citations": 22,
+   "doi": "10.1016/j.coastaleng.2024.104630",
+   "url": "https://doi.org/10.1016/j.coastaleng.2024.104630",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:hFOr9nPyWt4C",
+   "oa_url": "https://research.manchester.ac.uk/en/publications/38b97efb-54d3-49b3-813a-366c0902c0ff",
+   "abstract": null,
+   "institutions": [
+    "Dalian University of Technology",
+    "Jiangsu University of Science and Technology",
+    "National University of Singapore",
+    "State Key Laboratory of Coastal and Offshore Engineering",
+    "Texas A&M University",
+    "Texas A&M University at Galveston",
+    "University of Oxford"
+   ],
+   "countries": [
+    "CN",
+    "GB",
+    "SG",
+    "US"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue",
+    "wsi"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:aqlVkmm33-oC",
+   "title": "Transformed-FNV: wave forces on a vertical cylinder—a free-surface formulation",
+   "authors": [
+    "Paul H. Taylor",
+    "Tianning Tang",
+    "Thomas A. A. Adcock",
+    "Jun Zang"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2024,
+   "date": "2024-04",
+   "venue": "Coastal Engineering",
+   "venue_detail": "189, 104454",
+   "citations": 21,
+   "doi": "10.1016/j.coastaleng.2024.104454",
+   "url": "https://doi.org/10.1016/j.coastaleng.2024.104454",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:aqlVkmm33-oC",
+   "oa_url": "https://purehost.bath.ac.uk/ws/files/328445376/TFNV_CE_paper_2024.pdf",
+   "abstract": null,
+   "institutions": [
+    "The University of Western Australia",
+    "University of Bath",
+    "University of Oxford"
+   ],
+   "countries": [
+    "AU",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "wsi"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:ZeXyd9-uunAC",
+   "title": "An experimental study of a quasi-impulsive backwards wave force associated with the secondary load cycle on a vertical cylinder",
+   "authors": [
+    "Tianning Tang",
+    "Haoyu Ding",
+    "Saishuai Dai",
+    "Paul H. Taylor",
+    "Jun Zang",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2024,
+   "date": "2024-09-10",
+   "venue": "Journal of Fluid Mechanics",
+   "venue_detail": "994, A9",
+   "citations": 20,
+   "doi": "10.1017/jfm.2024.648",
+   "url": "https://doi.org/10.1017/jfm.2024.648",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:ZeXyd9-uunAC",
+   "oa_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/306E40ACC15CADCEDFD6733CC3C8D7D4/S0022112024006487a.pdf/div-class-title-an-experimental-study-of-a-quasi-impulsive-backwards-wave-force-associated-with-the-secondary-load-cycle-on-a-vertical-cylinder-div.pdf",
+   "abstract": "Steep wave breaking on a vertical cylinder (a typical foundation supporting offshore wind turbines) will induce slam loads. Many questions on the important violent wave loading and the associated secondary load cycle remain unanswered. We use laboratory experiments with unidirectional waves to investigate the fluid loading on vertical cylinders. We use a novel three-phase decomposition approach that allows us to separate different types of nonlinearity. Our findings reveal the existence of an additional quasi-impulsive loading component that is associated with the secondary load cycle and occurs in the backwards direction against that of the incoming waves. This quasi-impulsive force occurs at the end of the secondary load cycle and close to the passage of the downward zero-crossing point of the undisturbed wave. Wavelet analysis showed that the impulsive force exhibits superficially similar behaviour to a typical wave-slamming event but in the reverse direction. To monitor the scattered wave field and extract run-up on the cylinder, we installed a four-camera synchronised video system and found a strong temporal correlation between the arrival time of the Type-II scattered wave onto the cylinder and the occurrence of this quasi-impulsive force. The temporal characteristics of this quasi-impulsive force can be approximated by the Goda wave impact model, taking the collision of the Type-II scattered waves at the rear stagnation point as the impact source.",
+   "institutions": [
+    "The University of Western Australia",
+    "University of Bath",
+    "University of Oxford",
+    "University of Strathclyde"
+   ],
+   "countries": [
+    "AU",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "wsi"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:9ZlFYXVOiuMC",
+   "title": "Influence of uniform currents on nonlinear characteristics of double-wave-group focusing",
+   "authors": [
+    "Binzhen Zhou",
+    "Kanglixi Ding",
+    "Jiashuo Huang",
+    "Lei Wang",
+    "Jinling Guo",
+    "Tianning Tang"
+   ],
+   "authors_truncated": false,
+   "me_index": 5,
+   "role": "last",
+   "year": 2024,
+   "date": "2024-03-01",
+   "venue": "Physics of Fluids",
+   "venue_detail": "36 (3)",
+   "citations": 12,
+   "doi": "10.1063/5.0190701",
+   "url": "https://doi.org/10.1063/5.0190701",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:9ZlFYXVOiuMC",
+   "oa_url": "https://pubs.aip.org/aip/pof/article-pdf/doi/10.1063/5.0190701/19719610/037125_1_5.0190701.pdf",
+   "abstract": "Current is considered to be a crucial environmental factor in producing extreme waves. The study of nonlinear characteristics in wave–current interactions has been explored, but the role of currents in the more complex interaction processes of double-wave-group focusing is not yet known. Based on our previous research about the nonlinear interactions between wave groups, the impact of uniform current on nonlinear characteristics of double-wave-group focusing is to be investigated in this paper. A fully nonlinear numerical model using the high-order spectral method is developed to simulate various currents interacting with focused bimodal waves. Three ranges of variation exist: strongly opposing current, weakly opposing current, and following current. Unlike the conclusion in the unimodal waves, the asymmetries of the wave crest and that of the wave envelope influenced by currents are not synchronous, which is explained by the changes in the asymmetry of the secondary crests received energy from the currents, in addition to those of the magnitude of the maximum crest and the adjacent secondary crests. When opposing currents enhance to a certain level, a dynamic equilibrium between the energy of waves and currents would be achieved, in which the proportion of the linear components to their own is almost equivalent to that in the non-current state, revealing that the majority of nonlinearity generated by wave–current interaction is blocked at that time. These findings can promote an understanding of nonlinear characteristics due to wave–current interactions.",
+   "institutions": [
+    "South China University of Technology",
+    "University of Oxford"
+   ],
+   "countries": [
+    "CN",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:qUcmZB5y_30C",
+   "title": "Laboratory study of wind impact on steep unidirectional waves in a long tank",
+   "authors": [
+    "Zitan Zhang",
+    "Tianning Tang",
+    "Xiaobo Zheng",
+    "Wentao Xu",
+    "Lijun Zhang",
+    "Junghoon Lee",
+    "Thomas A. A. Adcock",
+    "Jason Monty",
+    "Alexey V. Slunyaev",
+    "Ton S. van den Bremer",
+    "Ye Li"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2024,
+   "date": "2024-10-02",
+   "venue": "Physical Review Fluids",
+   "venue_detail": "9 (10), 104801",
+   "citations": 7,
+   "doi": "10.1103/physrevfluids.9.104801",
+   "url": "https://doi.org/10.1103/physrevfluids.9.104801",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:qUcmZB5y_30C",
+   "oa_url": "https://research.manchester.ac.uk/en/publications/3e740729-d19d-42f1-817d-eff873ba5828",
+   "abstract": "Although phase-averaged modeling of energy input from wind to waves is relatively mature, the effect of wind on wave evolution on a wave-by-wave basis has received less attention. In this paper, we perform parametric laboratory experiments in a large-scale wave tank to investigate the interaction between waves and the wind. We focus on the properties and evolution of deep-water gravity waves under the following wind forcing and analyze the effects of forcing wind on waves with different initial wave steepness. In addition, we discuss wave energy input in the wave spectra tail and the exceeding probability of wave height and wave crest height.",
+   "institutions": [
+    "Delft University of Technology",
+    "Institute of Applied Physics",
+    "Lanzhou University of Technology",
+    "Russian Academy of Sciences",
+    "Shanghai Jiao Tong University",
+    "Southern University of Science and Technology",
+    "Technical University of Denmark",
+    "The University of Melbourne",
+    "University of Edinburgh",
+    "University of Oxford"
+   ],
+   "countries": [
+    "AU",
+    "CN",
+    "DK",
+    "GB",
+    "NL",
+    "RU"
+   ],
+   "type": "journal",
+   "themes": [
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:Wp0gIr-vW9MC",
+   "title": "Spatial estimation of unidirectional wave evolution based on ensemble data assimilation",
+   "authors": [
+    "Zitan Zhang",
+    "Tianning Tang",
+    "Ye Li"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2024,
+   "date": "2024-07",
+   "venue": "European Journal of Mechanics B/Fluids",
+   "venue_detail": "106, 1-12",
+   "citations": 6,
+   "doi": "10.1016/j.euromechflu.2024.02.006",
+   "url": "https://doi.org/10.1016/j.euromechflu.2024.02.006",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:Wp0gIr-vW9MC",
+   "oa_url": "https://ora.ox.ac.uk/objects/uuid:7f9482da-47b0-4a0d-bdc1-28749fd7023a/files/sxs55md97v",
+   "abstract": null,
+   "institutions": [
+    "Shanghai Jiao Tong University",
+    "Southern University of Science and Technology",
+    "Technical University of Denmark",
+    "University of Oxford"
+   ],
+   "countries": [
+    "CN",
+    "DK",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:R3hNpaxXUhUC",
+   "title": "Discovering boundary equations for wave breaking using machine learning",
+   "authors": [
+    "T Tang",
+    "Y Chen",
+    "R Cao",
+    "W Mostert",
+    "PH Taylor",
+    "ML McAllister",
+    "B Tai",
+    "Y Ma"
+   ],
+   "authors_truncated": true,
+   "me_index": 0,
+   "role": "first",
+   "year": 2024,
+   "date": null,
+   "venue": "arXiv",
+   "venue_detail": null,
+   "citations": 3,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:R3hNpaxXUhUC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "preprint",
+   "themes": [
+    "physics",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:L8Ckcad2t8MC",
+   "title": "Energy transfer in the spatial evolution of double-wave-group focusing",
+   "authors": [
+    "Binzhen Zhou",
+    "Kanglixi Ding",
+    "Yi Xiao",
+    "Lei Wang",
+    "Tianning Tang"
+   ],
+   "authors_truncated": false,
+   "me_index": 4,
+   "role": "last",
+   "year": 2024,
+   "date": "2024-04-01",
+   "venue": "Physics of Fluids",
+   "venue_detail": "36 (4)",
+   "citations": 3,
+   "doi": "10.1063/5.0201617",
+   "url": "https://doi.org/10.1063/5.0201617",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:L8Ckcad2t8MC",
+   "oa_url": "https://pubs.aip.org/aip/pof/article-pdf/doi/10.1063/5.0201617/19889836/047132_1_5.0201617.pdf",
+   "abstract": "The linear superposition of the individual wave groups underestimates the bimodal waves, as it overlooks the interactions between these wave groups, which is thought to be connected to the generation of extreme waves. Continuing our previous work [Zhou et al., “Experimental study on the interactions between wave groups in double-wave-group focusing,” Phys. Fluids 35(3), 037118 (2023)], the energy transfer in the spatial evolution of double-wave-group focusing is highlighted based on a fully nonlinear numerical wave tank with the high-order spectral method. The findings reveal that a sea state with a narrower intermodal distance or an uneven distribution of the bimodal spectrum tends to induce larger waves. The third-order nonlinear interaction is primarily triggered by the transient wave focusing, as opposed to a prolonged evolution like the behavior of even-order components. The configurations of the sea state exert varying impacts on the evolution of harmonical energy, with the most potent nonlinearity observed away from the actual focused position, the nonlinear energy amplified relative to the initial state, and the energy redistributed after wave focus. The study also uncovers that during the wave focus and defocus process, waves experience an irreversible energy exchange, with frequencies shifting from higher to lower, likely due to second-order harmonics. These discoveries broaden our comprehension of the nonlinear characteristics inherent in the interaction between the swell and wind-sea waves.",
+   "institutions": [
+    "Hong Kong Polytechnic University",
+    "South China University of Technology",
+    "University of Oxford"
+   ],
+   "countries": [
+    "CN",
+    "GB",
+    "HK"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:j3f4tGmQtD8C",
+   "title": "RTide: Machine learning enhanced response method for the analysis and prediction of estuarine tides and storm surge",
+   "authors": [
+    "T Monahan",
+    "T Tang",
+    "S Roberts",
+    "T Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2024,
+   "date": null,
+   "venue": null,
+   "venue_detail": null,
+   "citations": 2,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:j3f4tGmQtD8C",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "other",
+   "themes": [
+    "tides",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:IWHjjKOFINEC",
+   "title": "Tidal and mean sea surface corrections from and for SWOT using a spatially coherent variational Bayesian harmonic analysis",
+   "authors": [
+    "Thomas Monahan",
+    "Tianning Tang",
+    "Stephen Roberts",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2024,
+   "date": "2024-07-11",
+   "venue": "ESS Open Archive",
+   "venue_detail": null,
+   "citations": 2,
+   "doi": "10.22541/essoar.172072179.92243659/v1",
+   "url": "https://doi.org/10.22541/essoar.172072179.92243659/v1",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:IWHjjKOFINEC",
+   "oa_url": "https://doi.org/10.1029/2024jc021533",
+   "abstract": "The accuracy of global tidal and mean sea surface (MSS) models degrades significantly in coastal and estuarine regions. These geophysical models are important for correcting measurements from satellite altimetry and are used in numerous scientific and engineering applications. The new Surface Water Ocean Topography (SWOT) mission is providing measurements at unprecedented horizontal resolution in these regions. This dataset provides both the opportunity and the need to quantify and correct the spatial variability of these errors. We develop a variational Bayesian framework for tidal harmonic analysis and MSS estimation which can be applied in the early stages of SWOT. The approach demonstrates superior robustness to different types of noise contamination in comparison to conventional least-squares approaches whilst providing full uncertainty estimation. By imposing a spatially coherent inductive bias on the model, we achieve superior harmonic constituent inference using extremely sparsely sampled data. Bayesian uncertainty estimation gives rise to statistical methods for outlier removal and constituent selection. Using our approach, we estimate a lower bound for the residual tidal variability for two SWOT Cal/Val passes (003 and 016) around the European Shelf to be at least 7% on average. We also show similar estimates cannot be produced using standard least-squares approaches. Tide gauge validation in the same region confirms the superiority of our empirical approach in coastal environments. Analysis of the estimated MSS error highlights the danger of interpolation and averaging in masking small-scale oceanographic processes. Empirical corrections for the SWOT data products are provided alongside an open-source Python package, VTide.",
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "preprint",
+   "themes": [
+    "physics",
+    "tides",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:mVmsd5A6BfQC",
+   "title": "An investigation of high-order harmonics in the pressure field around a vertical cylinder in steep wave conditions",
+   "authors": [
+    "H Ding",
+    "J Zang",
+    "T Tang",
+    "PH Taylor",
+    "T Adcock",
+    "G Zhao",
+    "S Dai"
+   ],
+   "authors_truncated": false,
+   "me_index": 2,
+   "role": "middle",
+   "year": 2024,
+   "date": null,
+   "venue": "Int. Workshop on Water Waves & Floating Bodies",
+   "venue_detail": null,
+   "citations": 1,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:mVmsd5A6BfQC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "conference",
+   "themes": [
+    "wsi",
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:TQgYirikUcIC",
+   "title": "First observations of the seiche that shook the world",
+   "authors": [
+    "T Monahan",
+    "T Tang",
+    "S Roberts",
+    "TAA Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2024,
+   "date": null,
+   "venue": "arXiv",
+   "venue_detail": null,
+   "citations": 1,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:TQgYirikUcIC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "preprint",
+   "themes": [
+    "tides"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:7PzlFSSx8tAC",
+   "title": "A framework for early-stage coastal and estuarine tidal and mean sea surface correction from the Surface Water Ocean Topography mission",
+   "authors": [
+    "Thomas Monahan",
+    "Tianning Tang",
+    "Stephen Roberts",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2024,
+   "date": "2025-01-20",
+   "venue": "EGU General Assembly",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": "10.5194/egusphere-egu24-15396",
+   "url": "https://doi.org/10.5194/egusphere-egu24-15396",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:7PzlFSSx8tAC",
+   "oa_url": "https://doi.org/10.5194/egusphere-egu24-15396",
+   "abstract": "The NASA Surface Water Ocean Topography mission (SWOT), launched on 16 December 2022, will provide the highest spatial and temporal altimetric measurements of coastal oceans to date. The mission is ideally suited to studying mesoscale and submesoscale processes and is expected to enhance our understanding of coastal tides greatly. Although improved tidal analysis and prediction is, of course, useful for studying tides, arguably more important is the accurate removal of tidal variability from SWOT observations. This is a consequence of the fact that the tidal signal often dominates other sub-mesoscale processes which are of high interest to SWOT researchers. While SWOT presents unprecedented spatial resolution, the temporal sparsity renders the applications of conventional tidal analysis methods difficult in the early stages of the mission. Despite significant improvements in global and regional barotropic tidal models in the past few decades, the complexity of coastal and estuarine tides as well as the relatively limited in-situ measurements available for assimilation can lead to significant errors when used for tidal corrections. Further complications are introduced by the uncertainty in mean sea surface (MSS) estimates from gridded MSS Products. These errors can account for large percentages of the global Sea Level Anomaly error and grow significantly over rough bathymetry. As such, the accurate assessment of the uncertainty for the released data products and corrections derived from primary SWOT data are critical to the early success of SWOT science teams. We develop a fully Bayesian variant of tidal harmonic analysis to achieve tidal super-resolution and MSS correction for early-stage (",
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "conference",
+   "themes": [
+    "tides"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:QIV2ME_5wuYC",
+   "title": "Discovering equations that govern wave breaking evolution using scientific machine learning",
+   "authors": [
+    "Tianning Tang",
+    "Yuntian Chen",
+    "Paul H. Taylor",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2024,
+   "date": "2025-01-20",
+   "venue": "EGU General Assembly",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": "10.5194/egusphere-egu24-12541",
+   "url": "https://doi.org/10.5194/egusphere-egu24-12541",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:QIV2ME_5wuYC",
+   "oa_url": "https://doi.org/10.5194/egusphere-egu24-12541",
+   "abstract": "Artificial intelligence and machine learning are known to be excellent at empirical modelling of complex systems. These empirical models, however, usually can only provide limited physical explanations about the underlying systems. With a &#8220;knowledge discovery&#8221; scheme in machine learning, instead of being constrained by fitting the coefficients, can we now discover an equation that can shed light on the underlying physics? In this presentation, we will focus on a real fluid mechanics challenge as an example to demonstrate the potential of such a scheme &#8211; modelling wave breaking evolution.In this ongoing study, we use symbolic regression to discover the equation that describes the wave breaking evolution from a large dataset of Direct Numerical Simulations of breaking waves. We found a new boundary equation that approximates the surface elevation (water-air interface) to evolve forward in time even during the breaking-in-progress stage, whereas traditional potential flow type equations will eventually become unstable when the overturning jet touches the crest. Unlike empirical models where the underlying dynamics are hidden in coefficients/matrixes, the physical meaning of each term of the discovered equation can be revealed successfully through math derivation and simulation. The new boundary equation suggests a new characteristic of breaking waves in deep water &#8211; a decoupling between the water-air interface and the fluid velocities. The current model is only limited to unidirectional spilling breaking waves in deep water but can be easily extended to accommodate more complex breaking behaviour.",
+   "institutions": [
+    "Eastern Institute of Technology, Ningbo",
+    "The University of Western Australia",
+    "University of Oxford"
+   ],
+   "countries": [
+    "AU",
+    "CN",
+    "GB"
+   ],
+   "type": "conference",
+   "themes": [
+    "physics",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:dhFuZR0502QC",
+   "title": "Enhancing tidal analysis and prediction using physics informed machine learning",
+   "authors": [
+    "T Monahan",
+    "T Tang",
+    "S Roberts",
+    "TAA Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2024,
+   "date": null,
+   "venue": null,
+   "venue_detail": null,
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:dhFuZR0502QC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "other",
+   "themes": [
+    "tides",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:maZDTaKrznsC",
+   "title": "RTide: A Python Package for the Analysis and Prediction of Compound Coastal Flooding Events",
+   "authors": [
+    "T Monahan",
+    "T Tang",
+    "T Adcock",
+    "S Roberts"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2024,
+   "date": null,
+   "venue": "AGU Fall Meeting",
+   "venue_detail": "2024, OS01-1",
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:maZDTaKrznsC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "conference",
+   "themes": [
+    "tides"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:3fE2CSJIrl8C",
+   "title": "A hybrid model for online short-term tidal energy forecasting",
+   "authors": [
+    "Thomas Monahan",
+    "Tianning Tang",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2023,
+   "date": "2023-08",
+   "venue": "Applied Ocean Research",
+   "venue_detail": "137, 103596",
+   "citations": 35,
+   "doi": "10.1016/j.apor.2023.103596",
+   "url": "https://doi.org/10.1016/j.apor.2023.103596",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:3fE2CSJIrl8C",
+   "oa_url": "https://doi.org/10.1016/j.apor.2023.103596",
+   "abstract": "A hybrid model is proposed for the short-term online prediction of tidal currents. The harmonic residual analysis (HRA) model is designed to augment the numerical schemes employed by tidal energy installations by forecasting the residual error of existing methods. Using a combination of techniques from Information and Fractal Theory, a novel component selection criterion for singular spectrum analysis (SSA) is used to remove true noise from the residual time series and to decompose the signal into components that are appropriate for linear-recurrent forecasting (LRF) and high order fuzzy time series (HOFTS) respectively. The performance of the HRA method is evaluated using a combination of simulated and real data from sites in the United Kingdom and the United States. Results demonstrate the model’s viability for 6-minute and 1-hour forecast horizons across sites exhibiting variable degrees of non-linearity. Empirical analysis of the resultant tidal energy forecast verifies the superior accuracy and reliability of the HRA method when compared with existing numerical schemes. Simulated data from three sites at the Pentland Firth, UK is also provided to facilitate further study of the site’s power generation characteristics and to allow for direct model performance comparisons.",
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "tides",
+    "energy",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:0EnyYjriUFMC",
+   "title": "Experimental study on the interactions between wave groups in double-wave-group focusing",
+   "authors": [
+    "Binzhen Zhou",
+    "Kanglixi Ding",
+    "Jiahao Wang",
+    "Lei Wang",
+    "Peng Jin",
+    "Tianning Tang"
+   ],
+   "authors_truncated": false,
+   "me_index": 5,
+   "role": "last",
+   "year": 2023,
+   "date": "2023-03-01",
+   "venue": "Physics of Fluids",
+   "venue_detail": "35 (3)",
+   "citations": 28,
+   "doi": "10.1063/5.0142042",
+   "url": "https://doi.org/10.1063/5.0142042",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:0EnyYjriUFMC",
+   "oa_url": "https://ora.ox.ac.uk/objects/uuid:31902a0f-0392-4910-bae9-675c1531b98f/files/rn009w328r",
+   "abstract": "Nonlinear interactions in wave-group focusing are regarded as one of the main mechanisms in the generation of destructive extreme waves. In real seas, the wideband bimodal state is a typical configuration, containing interactions within a single wave group and between different wave groups. The former has been well uncovered under the assumption of narrow bandwidth, but the latter is poorly understood. In this paper, physical experiments are conducted to reveal the physics of double-wave-group focusing considering various energy distributions. Superposed wavemaker signals generated by the iteration method are applied to produce a double-wave-group focusing with the interactions being decomposed. Results of the wavelet-based bicoherence spectrum show that double-wave-group focusing is distinguished from the linear superposition of two single-wave-group focusing mainly in the nonlinear interactions induced by the second-order sum harmonics. Under the assumption of equivalent energy, interactions of the second-order sum harmonics between the lower frequency group and higher frequency group cannot be ignored in swell-dominated states, and lesser linear interactions and stronger nonlinear interactions are observed while the spectral distribution of the double-wave-group is more asymmetrical. This work is anticipated to contribute to the understanding of the generation mechanism of extreme waves driven by strong nonlinearity.",
+   "institutions": [
+    "South China University of Technology",
+    "University of Oxford"
+   ],
+   "countries": [
+    "CN",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:roLk4NBRz8UC",
+   "title": "Wave loads on ocean infrastructure increase as a result of waves passing over abrupt depth transitions",
+   "authors": [
+    "Zhenhao Li",
+    "Tianning Tang",
+    "Yan Li",
+    "Samuel Draycott",
+    "Ton S. van den Bremer",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2023,
+   "date": "2022-11-23",
+   "venue": "Journal of Ocean Engineering and Marine Energy",
+   "venue_detail": "9 (2), 309-317",
+   "citations": 25,
+   "doi": "10.1007/s40722-022-00269-4",
+   "url": "https://doi.org/10.1007/s40722-022-00269-4",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:roLk4NBRz8UC",
+   "oa_url": "https://link.springer.com/content/pdf/10.1007/s40722-022-00269-4.pdf",
+   "abstract": "Abrupt changes in water depth are known to lead to abnormal free-surface wave statistics. The present study considers whether this translates into abnormal loads on offshore infrastructure. A fully non-linear numerical model is used which is carefully validated against experiments. The wave kinematics from the numerical model are used as input to a simple wave loading model. We find enhanced overturning moments, an increase of approximately 20%, occur over a distance of a few wavelengths after an abrupt depth transition. We observe similar results for 1:1 and 1:3 slopes. This increase does not occur in linear simulations.",
+   "institutions": [
+    "Delft University of Technology",
+    "University of Bergen",
+    "University of Manchester",
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB",
+    "NL",
+    "NO"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue",
+    "wsi"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:M3ejUd6NZC8C",
+   "title": "The influence of directional spreading on rogue waves triggered by abrupt depth transitions",
+   "authors": [
+    "Tianning Tang",
+    "Charlotte S. Moss",
+    "Samuel Draycott",
+    "Harry Bradford Bingham",
+    "Ton S. van den Bremer",
+    "Yan Li",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2023,
+   "date": "2023-09-29",
+   "venue": "Journal of Fluid Mechanics",
+   "venue_detail": "972, R2",
+   "citations": 22,
+   "doi": "10.1017/jfm.2023.737",
+   "url": "https://doi.org/10.1017/jfm.2023.737",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:M3ejUd6NZC8C",
+   "oa_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3F8560720B1D487CD9C8CAD1216D5996/S0022112023007371a.pdf/div-class-title-the-influence-of-directional-spreading-on-rogue-waves-triggered-by-abrupt-depth-transitions-div.pdf",
+   "abstract": "An increased number of rogue waves, relative to standard distributions, can be induced by unidirectional waves passing over abrupt decreases in water depth. We investigate this phenomenon in a more general setting of multidirectional waves. We examine the influence of the directionality on the occurrence probability of rogue waves using laboratory experiments and fully nonlinear potential flow simulations. Based on the analysis of the statistics of random waves, we find that directional spreading reduces the formation probability of rogue waves relative to unidirectional seas. Nevertheless, for typical values of directional spreading in the ocean ( $15^{\\circ }\\unicode{x2013}30^{\\circ }$ ), our numerical results suggest that there is still a significant enhancement to the number of rogue waves just beyond the top of a depth discontinuity.",
+   "institutions": [
+    "Delft University of Technology",
+    "Technical University of Denmark",
+    "University of Bergen",
+    "University of Manchester",
+    "University of Oxford"
+   ],
+   "countries": [
+    "DK",
+    "GB",
+    "NL",
+    "NO"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:UebtZRa9Y70C",
+   "title": "Quantitative prediction of the freak wave occurrence probability in co-propagating mixed waves",
+   "authors": [
+    "Lei Wang",
+    "Kanglixi Ding",
+    "Binzhen Zhou",
+    "Jinxuan Li",
+    "Shuxue Liu",
+    "Tianning Tang"
+   ],
+   "authors_truncated": false,
+   "me_index": 5,
+   "role": "last",
+   "year": 2023,
+   "date": "2023-03",
+   "venue": "Ocean Engineering",
+   "venue_detail": "271, 113810",
+   "citations": 16,
+   "doi": "10.1016/j.oceaneng.2023.113810",
+   "url": "https://doi.org/10.1016/j.oceaneng.2023.113810",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:UebtZRa9Y70C",
+   "oa_url": "https://ora.ox.ac.uk/objects/uuid:85f5b147-2053-4ee0-96ea-14d5149ee177/files/sgt54kp46x",
+   "abstract": null,
+   "institutions": [
+    "Dalian University of Technology",
+    "South China University of Technology",
+    "State Key Laboratory of Coastal and Offshore Engineering",
+    "University of Oxford"
+   ],
+   "countries": [
+    "CN",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:_kc_bZDykSQC",
+   "title": "Nonlinear statistical characteristics of the multi-directional waves with equivalent energy",
+   "authors": [
+    "Lei Wang",
+    "Kanglixi Ding",
+    "Binzhen Zhou",
+    "Peng Jin",
+    "Shuxue Liu",
+    "Jinghua Wang",
+    "Tianning Tang"
+   ],
+   "authors_truncated": false,
+   "me_index": 6,
+   "role": "last",
+   "year": 2023,
+   "date": "2023-08-01",
+   "venue": "Physics of Fluids",
+   "venue_detail": "35 (8)",
+   "citations": 13,
+   "doi": "10.1063/5.0160775",
+   "url": "https://doi.org/10.1063/5.0160775",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:_kc_bZDykSQC",
+   "oa_url": "https://ora.ox.ac.uk/objects/uuid:b7264511-653f-4932-a832-420d2fcc48e4/files/sx346d565f",
+   "abstract": "Directional distribution is believed to have a significant impact on the statistical characteristics in multi-directional sea states. In real sea states, short-crested waves are discrete not only in frequency but also in direction. For the former one, they are well explained in unidirectional mode, but for the latter one, they are not. In this paper, the kurtosis of short-crested waves with equivalent energy is first discussed. Unimodal-spectrum-multi-direction sea states and bimodal-spectrum-multi-direction sea states are simulated for a long time in a numerical wave basin based on the high-order spectral method. In the equivalent sea-swell sea state, the spatial evolution of kurtosis becomes more inhomogeneous, along with the maximum value of kurtosis being larger and the area where the maximum value occurs wider in the configuration with a crossing angle β = 40° than that with β = 0°, while little variations in swell-dominated and wind-sea-dominated states. A positive linear correlation between wavelet group steepness and kurtosis is obtained in a unimodal sea state, but not applied to a crossing sea state characterized by a bimodal spectrum. The exceedance probability of wave height and wave crest distribution at maximum kurtosis is also given. These findings can help predict the probability of extreme waves occurring, guiding the selection of ocean engineering sites to avoid extreme configurations.",
+   "institutions": [
+    "Dalian University of Technology",
+    "Hong Kong Polytechnic University",
+    "South China University of Technology",
+    "State Key Laboratory of Coastal and Offshore Engineering",
+    "University of Oxford"
+   ],
+   "countries": [
+    "CN",
+    "GB",
+    "HK"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:8k81kl-MbHgC",
+   "title": "Comparison of breaking models in envelope-based surface gravity wave evolution equations",
+   "authors": [
+    "Yuxuan Liu",
+    "Debbie Eeltink",
+    "Tianning Tang",
+    "Dylan Barratt",
+    "Ye Li",
+    "Thomas A. A. Adcock",
+    "Ton S. van den Bremer"
+   ],
+   "authors_truncated": false,
+   "me_index": 2,
+   "role": "middle",
+   "year": 2023,
+   "date": "2023-05-15",
+   "venue": "Physical Review Fluids",
+   "venue_detail": "8 (5), 054803",
+   "citations": 10,
+   "doi": "10.1103/physrevfluids.8.054803",
+   "url": "https://doi.org/10.1103/physrevfluids.8.054803",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:8k81kl-MbHgC",
+   "oa_url": "http://link.aps.org/pdf/10.1103/PhysRevFluids.8.054803",
+   "abstract": "The paper compares four existing wave breaking models applied in the modified non-linear Schquotodinger equation and examines their potential extension to waves with a continuous spectrum. The authors propose a modification to the breaking model by Kato and Oikawa (1995) in order to model breaking in focused wave groups. The modified model also predicts breaking in perturbed plane waves well.",
+   "institutions": [
+    "Delft University of Technology",
+    "Massachusetts Institute of Technology",
+    "Shanghai Jiao Tong University",
+    "State Key Laboratory of Ocean Engineering",
+    "University of Oxford"
+   ],
+   "countries": [
+    "CN",
+    "GB",
+    "NL",
+    "US"
+   ],
+   "type": "journal",
+   "themes": [
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:YOwf2qJgpHMC",
+   "title": "Data informed model test design with machine learning-An example in nonlinear load on vertical cylinder",
+   "authors": [
+    "T Tang",
+    "H Ding",
+    "S Dai",
+    "X Chen",
+    "PH Taylor",
+    "J Zang",
+    "TAA Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2023,
+   "date": null,
+   "venue": "OMAE — Ocean, Offshore & Arctic Engineering Conference",
+   "venue_detail": null,
+   "citations": 8,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:YOwf2qJgpHMC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "conference",
+   "themes": [
+    "wsi",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:hqOjcs7Dif8C",
+   "title": "An experimental investigation of nonlinear wave loading on a vertical cylinder-Stokes type expansion and secondary load cycle",
+   "authors": [
+    "T Tang",
+    "H Ding",
+    "S Dai",
+    "PH Taylor",
+    "J Zang",
+    "T Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2023,
+   "date": null,
+   "venue": "Int. Workshop on Water Waves & Floating Bodies",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:hqOjcs7Dif8C",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "conference",
+   "themes": [
+    "wsi"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:5nxA0vEk-isC",
+   "title": "Enhancing Tidal Energy Forecasting Using Hybrid Online Machine Learning",
+   "authors": [
+    "Thomas Monahan",
+    "Tianning Tang",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2023,
+   "date": "2023-05-15",
+   "venue": "EGU General Assembly",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": "10.5194/egusphere-egu23-17544",
+   "url": "https://doi.org/10.5194/egusphere-egu23-17544",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:5nxA0vEk-isC",
+   "oa_url": "https://doi.org/10.5194/egusphere-egu23-17544",
+   "abstract": "A hybrid model is proposed for the short-term online prediction of tidal currents. The harmonic residual analysis (HRA) model is designed to augment the numerical schemes employed by tidal energy installations by forecasting the residual error of existing methods. Using a combination of techniques from Information and Fractal Theory, a novel component selection criterion for singular spectrum analysis (SSA) is used to remove true noise from the residual time series and to decompose the signal into components that are appropriate for linear-recurrent forecasting (LRF) and high order fuzzy time series (HOFTS) respectively. The performance of the HRA method is evaluated using a combination of simulated and real data from sites in the United Kingdom and the United States. Results demonstrate the model's viability for 6-minute and 1-hour forecast horizons across sites exhibiting variable degrees of non-linearity. Empirical analysis of the resultant tidal energy forecast verifies the superior accuracy and reliability of the HRA method when compared with existing numerical schemes. Simulated data from three sites at the Pentland Firth, UK is also provided to facilitate further study of the site's power generation characteristics and to allow for direct model performance comparisons.",
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "conference",
+   "themes": [
+    "tides",
+    "energy",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:Zph67rFs4hoC",
+   "title": "Recent experimental wave load study on bottom fixed vertical cylinder study at the Kelvin Hydrodynamics Laboratory",
+   "authors": [
+    "G Zhao",
+    "S Dai",
+    "H Ding",
+    "T Tang",
+    "P Taylor",
+    "T Adcock",
+    "J Zang"
+   ],
+   "authors_truncated": false,
+   "me_index": 3,
+   "role": "middle",
+   "year": 2023,
+   "date": null,
+   "venue": "PRIMaRE Conference on Marine Renewable Energy",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:Zph67rFs4hoC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "conference",
+   "themes": [
+    "wsi"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:4TOpqqG69KYC",
+   "title": "Response Framework: Tidal analysis and prediction through physics-informed ML",
+   "authors": [
+    "T Monahan",
+    "T Tang",
+    "S Roberts",
+    "T Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2023,
+   "date": null,
+   "venue": null,
+   "venue_detail": null,
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:4TOpqqG69KYC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "other",
+   "themes": [
+    "tides",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:Se3iqnhoufwC",
+   "title": "The impact of removing the high-frequency spectral tail on rogue wave statistics",
+   "authors": [
+    "Tianning Tang",
+    "Dylan Barratt",
+    "Harry Bradford Bingham",
+    "Ton S. van den Bremer",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2022,
+   "date": "2022-12-02",
+   "venue": "Journal of Fluid Mechanics",
+   "venue_detail": "953, A9",
+   "citations": 21,
+   "doi": "10.1017/jfm.2022.961",
+   "url": "https://doi.org/10.1017/jfm.2022.961",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:Se3iqnhoufwC",
+   "oa_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/86CFE72802DFE55C7C6D6B2D900D5632/S0022112022009612a.pdf/div-class-title-the-impact-of-removing-the-high-frequency-spectral-tail-on-rogue-wave-statistics-div.pdf",
+   "abstract": "When making directional surface gravity waves in a wave tank or when initialising numerical simulations of the ocean, the wave spectrum is often curtailed suppressing higher frequencies and wavenumbers. We consider the impact of doing this by numerically simulating two seminal experiments, those of Onorato et al. ( J. Fluid Mech. , vol. 627, 2009, pp. 235–257, R2) and Latheef & Swan ( Proc. R. Soc. A , vol. 469, no. 2152, 2013, p. 20120696). We simulate waves using a fully nonlinear potential-flow model. We find that curtailing the spectrum can have a significant impact on the subsequent evolution. In particular, for cases where the spectrum has been curtailed, the nonlinear physics produces significantly more extreme or rogue waves than are observed in the case where the full spectral tail was included in the initial conditions, and this difference persists over tens of periods after the waves are initialised. This suggests that sea states that are ‘out of equilibrium’ (i.e. with their tails removed) can produce a greater number of rogue waves. We show this can also have an impact on predicted loads on offshore infrastructure.",
+   "institutions": [
+    "Delft University of Technology",
+    "Technical University of Denmark",
+    "University of Oxford"
+   ],
+   "countries": [
+    "DK",
+    "GB",
+    "NL"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:YsMSGLbcyi4C",
+   "title": "Estimating space–time wave statistics using a sequential sampling method and Gaussian process regression",
+   "authors": [
+    "Tianning Tang",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2022,
+   "date": "2022-05",
+   "venue": "Applied Ocean Research",
+   "venue_detail": "122, 103127",
+   "citations": 12,
+   "doi": "10.1016/j.apor.2022.103127",
+   "url": "https://doi.org/10.1016/j.apor.2022.103127",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:YsMSGLbcyi4C",
+   "oa_url": "https://doi.org/10.1016/j.apor.2022.103127",
+   "abstract": "The traditional Monte Carlo sampling of waves requires generating tens of thousands of random waves to achieve stable statistics in the tail of the distribution, which is computationally costly for numerical simulations and time-consuming and often impractical for experiments. To improve the sampling efficiency, we present a sequential sampling method, which predicts the wave statistics based on the nonlinear response of deterministic wave groups. This data-driven method starts with parameterising the linear random wave field with a series of Gaussian wave groups. The nonlinear system response from the water wave system is then approximated by observations through the nonlinear evolution of wave groups with carefully designed initial conditions. A sequential sampling method is introduced during this sampling procedure, which determines the next best sampling point based on the previous observations and the distance metric. We examine the performance of the proposed method with Monte Carlo simulation of random wave fields as well as a grid search sampling strategy. The results show the proposed method can achieve computational cost savings over several orders of magnitude for numerical simulations. The results also suggest such a sequential sampling method can be used to determine the test matrix of the wave experiments with better coverage over the parameter space.",
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:ufrVoPGSRksC",
+   "title": "A reduced order model for space–time wave statistics using probabilistic decomposition–synthesis method",
+   "authors": [
+    "Tianning Tang",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2022,
+   "date": "2022-09",
+   "venue": "Ocean Engineering",
+   "venue_detail": "259, 111860",
+   "citations": 10,
+   "doi": "10.1016/j.oceaneng.2022.111860",
+   "url": "https://doi.org/10.1016/j.oceaneng.2022.111860",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:ufrVoPGSRksC",
+   "oa_url": "https://www.sciencedirect.com/science/article/pii/S0029801822012033/pdf",
+   "abstract": "We present a reduced order model for predicting space–time extreme wave statistics for directionally spread water waves. This reduced order model relies on the probabilistic decomposition–synthesis framework. In this framework, the probabilistic distribution is decomposed into a ‘background’ region, where there are negligible nonlinear effects and a ‘instability’ region where the nonlinear physics leads to heavy-tailed statistical behaviour. In our reduced order model, we approximate the statistics in the background region with linear simulations to reduce the computational cost. The statistics in the instability region are estimated with nonlinear simulations of focused wave groups with carefully chosen initial conditions to capture the nonlinear effects during the formation of the extreme waves. The probabilistic statistics from these two components are synthesised with analytical expressions to model the overall behaviour of weakly nonlinear waves. This reduced order wave statistical model can provide accurate predictions of nonlinear space–time wave statistics at a fraction of computational cost of direct nonlinear Monte-Carlo simulations.",
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:_FxGoFyzp5QC",
+   "title": "A machine learning model for wave prediction based on support vector machine",
+   "authors": [
+    "Qiang Liu",
+    "Xingya Feng",
+    "Tianning Tang"
+   ],
+   "authors_truncated": false,
+   "me_index": 2,
+   "role": "last",
+   "year": 2022,
+   "date": "2022-12-01",
+   "venue": "Int. Journal of Offshore and Polar Engineering",
+   "venue_detail": "32 (04), 394-401",
+   "citations": 7,
+   "doi": "10.17736/ijope.2022.jc879",
+   "url": "https://doi.org/10.17736/ijope.2022.jc879",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:_FxGoFyzp5QC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "journal",
+   "themes": [
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:LkGwnXOMwfcC",
+   "title": "On rogue waves generated by abrupt depth transitions",
+   "authors": [
+    "Zhenhao Li",
+    "Tianning Tang",
+    "Samuel Draycott",
+    "Yan Li",
+    "Ton S. van den Bremer",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2022,
+   "date": "2022-06-05",
+   "venue": "OMAE — Ocean, Offshore & Arctic Engineering Conference",
+   "venue_detail": null,
+   "citations": 4,
+   "doi": "10.1115/omae2022-80596",
+   "url": "https://doi.org/10.1115/omae2022-80596",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:LkGwnXOMwfcC",
+   "oa_url": null,
+   "abstract": "Wave propagation over variable bathymetry is known as one of the possible mechanisms that can provoke rogue waves. In this paper, we use a fully nonlinear potential-flow solver, Ocean-Wave3D, to simulate the process of waves propagating over variable bathymetry and analyse the kinematics under the free surface near the top of the slope. To achieve this, we first evaluate the accuracy of the numerical results generated by Ocean-Wave3D. We carry out convergence tests to examine the influence of different parameters in OceanWave3D on the numerical results. Based on verification and validation tests, we evaluate the accuracy of OceanWave3D for problems with variable bathymetry comparing numerical and experimental results. We find that OceanWave3D is accurate enough to solve equations for problems with abrupt depth transitions and the agreement between experimental results and numerical results is good. Finally, we investigate the kinematics and we find that a slope can not only amplify crest amplitudes but also increase the wave kinematics near the top of the slope, which has obvious implications for loads on offshore structures.",
+   "institutions": [
+    "University of Manchester",
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "conference",
+   "themes": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:eQOLeE2rZwMC",
+   "title": "A reduced order parameterization of random wave fields with deterministic wave groups",
+   "authors": [
+    "Tianning Tang",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2022,
+   "date": "2022-06-05",
+   "venue": "OMAE — Ocean, Offshore & Arctic Engineering Conference",
+   "venue_detail": null,
+   "citations": 2,
+   "doi": "10.1115/omae2022-80636",
+   "url": "https://doi.org/10.1115/omae2022-80636",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:eQOLeE2rZwMC",
+   "oa_url": null,
+   "abstract": "Under a linear model of gravity wave evolution the expected shape of large events is given by Quasi-determinism theory. However, nonlinear physics modifies the averaged shape of the largest events. In this study, we examine these nonlinear modifications to the averaged shape of the largest events for directionally spread random wave fields. We first compare these nonlinear changes from the extreme events in random wave fields with the nonlinear changes during the evolution of deterministic wave groups. We then explore whether it is possible to predict these nonlinear changes observed in random wave fields with only nonlinear wave group simulations. We applied a modified version of the wave group detection algorithm in [1, 2] to isolate the individual wave groups from random wave fields. We perform the nonlinear wave group simulations with the initial conditions matching these isolated individual wave groups extracted from linear random wave field. The nonlinear evolution of these isolated wave groups can predict the envelope contraction of averaged shape of extreme events in random wave fields quantitatively over a wide range of local steepness under current conditions. This suggests some statistical connections between the nonlinear evolution of deterministic wave groups and the evolution of the largest waves in the random wave fields.",
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "conference",
+   "themes": [
+    "rogue",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:WF5omc3nYNoC",
+   "title": "The influence of spectral cutoff in random wave simulations",
+   "authors": [
+    "Thomas A. A. Adcock",
+    "Dylan Barratt",
+    "Tianning Tang",
+    "Harry Bradford Bingham",
+    "Ton S. van den Bremer"
+   ],
+   "authors_truncated": false,
+   "me_index": 2,
+   "role": "middle",
+   "year": 2022,
+   "date": "2022-03-27",
+   "venue": "EGU General Assembly",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": "10.5194/egusphere-egu22-5837",
+   "url": "https://doi.org/10.5194/egusphere-egu22-5837",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:WF5omc3nYNoC",
+   "oa_url": "https://doi.org/10.5194/egusphere-egu22-5837",
+   "abstract": "&lt;p&gt;When investigating large ocean waves we frequently run simulations or experiments with random waves. For practical reasons such seastates are often initalised without the full spectral tail which would normally be present in the ocean. The change in the distribution of energy associated with this is generally very small and it impact on subsequent wave statistics presumed negligible. Here we investigate this by running firstly fully non-linear simulations of the sea-state considered in the experiments of Latheef &amp; Swan (2013) and secondly Modified non-linear Schr&amp;#246;dinger equation simulations of the experiments of Onorato et al. (2009). We find a consistent pattern across our simulations (which are also consistent with other results in the literature). We find that the curtailing of the spectrum in the initial conditions has a significant impact on the subsequent wave statistics&amp;#8212;cutting off the spectrum leads to significantly more rogue waves than would otherwise be expected. We attribute this to the curtailed spectrum being far from equilibrium and this driving a strongly non-linear response. The results presented here are only for directionally spread waves&amp;#8212;unidirectional waves are not expected to show the same physics.&lt;/p&gt;",
+   "institutions": [
+    "Delft University of Technology",
+    "Technical University of Denmark",
+    "University of Oxford"
+   ],
+   "countries": [
+    "DK",
+    "GB",
+    "NL"
+   ],
+   "type": "conference",
+   "themes": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:IjCSPb-OGe4C",
+   "title": "The influence of finite depth on the evolution of extreme wave statistics in numerical wave tanks",
+   "authors": [
+    "Tianning Tang",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2021,
+   "date": "2021-06",
+   "venue": "Coastal Engineering",
+   "venue_detail": "166, 103870",
+   "citations": 19,
+   "doi": "10.1016/j.coastaleng.2021.103870",
+   "url": "https://doi.org/10.1016/j.coastaleng.2021.103870",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:IjCSPb-OGe4C",
+   "oa_url": "https://ora.ox.ac.uk/objects/uuid:5b1c0d7e-89b1-4967-b76c-14229940f6c7/files/st148fh697",
+   "abstract": null,
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:zYLM7Y9cAGgC",
+   "title": "Data driven analysis on the extreme wave statistics over an area",
+   "authors": [
+    "Tianning Tang",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2021,
+   "date": "2021-10",
+   "venue": "Applied Ocean Research",
+   "venue_detail": "115, 102809",
+   "citations": 10,
+   "doi": "10.1016/j.apor.2021.102809",
+   "url": "https://doi.org/10.1016/j.apor.2021.102809",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:zYLM7Y9cAGgC",
+   "oa_url": "https://ora.ox.ac.uk/objects/uuid:1fdca7bd-6d72-4a25-bc05-1d0b1ad0dc1a/files/svq27zp06n",
+   "abstract": null,
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue",
+    "ml"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:lSLTfruPkqcC",
+   "title": "Preliminary investigation on statistical properties of extreme waves under unsteady wind",
+   "authors": [
+    "ZHANG ZiTan",
+    "Wentao Xu",
+    "Tianning Tang",
+    "ZHENG XiaoBo",
+    "Wenhai Qu",
+    "ZHANG LiJun",
+    "Ye Li"
+   ],
+   "authors_truncated": false,
+   "me_index": 2,
+   "role": "middle",
+   "year": 2021,
+   "date": "2021-05-13",
+   "venue": "Scientia Sinica Physica, Mechanica & Astronomica",
+   "venue_detail": "51 (8), 1",
+   "citations": 1,
+   "doi": "10.1360/sspma-2020-0438",
+   "url": "https://doi.org/10.1360/sspma-2020-0438",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:lSLTfruPkqcC",
+   "oa_url": "https://www.sciengine.com/doi/pdf/2BFC6AB2CC8D49CE95A526DC5731E1E9",
+   "abstract": "Freak waves have the properties of strong nonlinearity and suddenness, which are often accompanied by extreme weather conditions. As an important environmental load, wind has a significant transient characteristic and plays an important role in the generation of freak waves. In order to understand the statistical properties of waves under the action of wind, especially the influence of wind on freak waves, laboratory experiments were carried out. In this paper, based on the Benjamin-Feir instability, long time series of wave field under unsteady wind are simulated by Joint North Sea Wave Project (JONSWAP) spectra with random phases in a two-dimensional wave tank. The freak waves generated in the experiment are similar in shape to those measured at sea, and are more than twice the significant wave height of the sea state. Through the statistical analysis of wave significant wave height, kurtosis and skewness, the influence of unsteady wind on the statistical properties of wave evolution is analyzed, and the response of wave energy spectrum is further investigated. The results of experiment show that the waves with larger Benjamin-Feir index are often broken under the unsteady wind, resulting in the loss of wave energy and the significant decrease of wave significant wave height. The skewness of waves depends on the steepness and decreases slightly during wave evolution. It is worth noting that the wave kurtosis increases under the unsteady wind. As an important parameter to measure Benjamin-Feir index, kurtosis will play an important role in the generation of freak waves. The increase of kurtosis will increase the probability of freak waves. Through the analysis of wave energy spectrum, it is found that there is energy dissipation in the process of wave evolution. The wave breaking under the unsteady wind leads to the decrease of the peak value of energy spectrum, and the energy obtained by the wave from the wind is mainly concentrated in the high frequency part of the wave.",
+   "institutions": [
+    "Shanghai Jiao Tong University",
+    "State Key Laboratory of Ocean Engineering",
+    "University of Oxford"
+   ],
+   "countries": [
+    "CN",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue",
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:2osOgNQ5qMEC",
+   "title": "Spatial evolution of the kurtosis of steep unidirectional random waves",
+   "authors": [
+    "Tianning Tang",
+    "Wentao Xu",
+    "Dylan Barratt",
+    "Harry Bradford Bingham",
+    "Ye Li",
+    "Paul H. Taylor",
+    "Ton S. van den Bremer",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2020,
+   "date": "2020-12-02",
+   "venue": "Journal of Fluid Mechanics",
+   "venue_detail": null,
+   "citations": 42,
+   "doi": "10.1017/jfm.2020.841",
+   "url": "https://doi.org/10.1017/jfm.2020.841",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:2osOgNQ5qMEC",
+   "oa_url": "https://ora.ox.ac.uk/objects/uuid:c8b2ae31-ece3-4aaf-b504-0da4dbbdf6f2/files/szg64tm281",
+   "abstract": "We study the evolution of unidirectional water waves from a randomly forced input condition with uncorrelated Fourier components. We examine the kurtosis of the linearised free surface as a convenient proxy for the probability of a rogue wave. We repeat the laboratory experiments of Onorato et al. (Phys. Rev. E, vol. 70, 2004, 067302), both experimentally and numerically, and extend the parameter space in our numerical simulations. We consider numerical simulations based on the modified nonlinear Schrödinger equation and the fully nonlinear water wave equations, which are in good agreement. For low steepness, existing analytical models based on the nonlinear Schrödinger equation (NLS) are found to be accurate. For cases which are steep or have very narrow bandwidths, these analytical models over-predict the rate at which excess kurtosis develops. In these steep cases, the kurtosis in both our experiments and numerical simulations peaks before returning to an equilibrium level. Such transient maxima are not predicted by NLS-based analytical models. Above a certain threshold of steepness, the steady-state value of kurtosis is primarily dependent on the spectral bandwidth. We also examine how the average shape of extreme events is modified by nonlinearity over the evolution distance, showing significant asymmetry during the initial evolution, which is greatly reduced once the spectrum has reached equilibrium. The locations of the maxima in asymmetry coincide approximately with the locations of the maxima in kurtosis.",
+   "institutions": [
+    "Shanghai Jiao Tong University",
+    "Technical University of Denmark",
+    "The University of Western Australia",
+    "University of Oxford"
+   ],
+   "countries": [
+    "AU",
+    "CN",
+    "DK",
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:qjMakFHDy7sC",
+   "title": "Comparison of two versions of the MNLS with the full water wave equations",
+   "authors": [
+    "Tianning Tang",
+    "Ye Li",
+    "Harry Bradford Bingham",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2020,
+   "date": "2021-07-16",
+   "venue": "OMAE — Ocean, Offshore & Arctic Engineering Conference",
+   "venue_detail": null,
+   "citations": 1,
+   "doi": "10.1115/1.0000763v",
+   "url": "https://doi.org/10.1115/1.0000763v",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:qjMakFHDy7sC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "conference",
+   "themes": [
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:hC7cP41nSMkC",
+   "title": "Experimental investigation on the effects of abrupt wind forcing on deep water gravity waves",
+   "authors": [
+    "W Xu",
+    "Z Zhang",
+    "T Tang",
+    "X Zheng",
+    "L Zhang",
+    "Y Li",
+    "A Slunyaev",
+    "E Pelinovsky"
+   ],
+   "authors_truncated": false,
+   "me_index": 2,
+   "role": "middle",
+   "year": 2020,
+   "date": null,
+   "venue": "AGU Fall Meeting",
+   "venue_detail": "2020, OS044-0008",
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:hC7cP41nSMkC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "conference",
+   "themes": [
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:-f6ydRqryjwC",
+   "title": "On the probability and averaged shape of extreme water waves",
+   "authors": [
+    "T Tang"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2020,
+   "date": null,
+   "venue": "University of Oxford",
+   "venue_detail": null,
+   "citations": 0,
+   "doi": null,
+   "url": null,
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:-f6ydRqryjwC",
+   "oa_url": null,
+   "abstract": null,
+   "institutions": [],
+   "countries": [],
+   "type": "thesis",
+   "themes": [
+    "rogue"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:d1gkVwhDpl0C",
+   "title": "Field measurement of nonlinear changes to large gravity wave groups",
+   "authors": [
+    "Tianning Tang",
+    "Peter S. Tromans",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2019,
+   "date": "2019-07-01",
+   "venue": "Journal of Fluid Mechanics",
+   "venue_detail": "873, 1158-1178",
+   "citations": 23,
+   "doi": "10.1017/jfm.2019.454",
+   "url": "https://doi.org/10.1017/jfm.2019.454",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:d1gkVwhDpl0C",
+   "oa_url": "https://ora.ox.ac.uk/objects/uuid:efffcd2e-54a7-4b4e-af12-feaa3b1067b2/files/m3235f6d7dfaf3d6ec9c52c6bb1de3932",
+   "abstract": "The dynamics of large gravity waves are known to be modified from the linear model by nonlinear physics. In this paper we analyse Eulerian surface elevation time histories measured from two sites, Lake George (Australia) and the North Sea, to examine how weak nonlinearity has modified the shape of extreme wave groups relative to linear theory. We analyse the asymmetry of the extreme wave groups and find that, on average, the wave in front of an extreme wave is smaller than the wave following it. We also observe a contraction in the envelope width of the wave group relative to linear theory. The departures from linear theory are strongly correlated with the steepness of the underlying sea state and are generally consistent with theoretical expectations, providing strong evidence that such nonlinear phenomena arise in naturally occurring water waves.",
+   "institutions": [
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "rogue",
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:9yKSN-GCB0IC",
+   "title": "Application of phase decomposition to the analysis of random time series from wave basin tests",
+   "authors": [
+    "Thomas A. A. Adcock",
+    "Xingya Feng",
+    "Tianning Tang",
+    "Ton S. van den Bremer",
+    "Sandy Day",
+    "Saishuai Dai",
+    "Ye Li",
+    "Zhiliang Lin",
+    "Wentao Xu",
+    "Paul H. Taylor"
+   ],
+   "authors_truncated": false,
+   "me_index": 2,
+   "role": "middle",
+   "year": 2019,
+   "date": "2019-06-09",
+   "venue": "OMAE — Ocean, Offshore & Arctic Engineering Conference",
+   "venue_detail": null,
+   "citations": 16,
+   "doi": "10.1115/omae2019-95172",
+   "url": "https://doi.org/10.1115/omae2019-95172",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:9yKSN-GCB0IC",
+   "oa_url": "https://strathprints.strath.ac.uk/69909/1/Adcock_etal_OMAE_2019_Application_of_phase_decomposition_to_the_analysis_of_random_time_series_from_wave_basin_tests.pdf",
+   "abstract": "Many ocean engineering problems involve bound harmonics which are slaved to some underlying assumed close to linear time series. When analyzing signals we often want to remove the bound harmonics so as to “linearise” the data or to extract individual bound harmonic components so that they may be studied. For even moderately broadbanded systems filtering in the frequency domain is not sufficient to separate components as they overlap in frequency. One way to overcome this difficulty is to use input signals with the same linear envelope but with different phases and then use simple addition and subtraction of the resulting signals to extract different harmonics. This approach has been established for the analysis of wave groups. In this paper we examine whether this approach can be used on random time series as well. We analyse random wave time series of wave elevation from the towing tank in Shanghai Jiao Tong University and force measurements on a cylinder taken in the Kelvin tank at the University of Strathclyde.",
+   "institutions": [
+    "Shanghai Jiao Tong University",
+    "University of Oxford",
+    "University of Strathclyde"
+   ],
+   "countries": [
+    "CN",
+    "GB"
+   ],
+   "type": "conference",
+   "themes": [
+    "physics"
+   ]
+  },
+  {
+   "id": "dofRHEwAAAAJ:u-x6o8ySG0sC",
+   "title": "The average shape of large waves in the Norwegian sea–is non-linear physics important?",
+   "authors": [
+    "Tianning Tang",
+    "Margaret J. Yelland",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 0,
+   "role": "first",
+   "year": 2019,
+   "date": "2019-06-09",
+   "venue": "OMAE — Ocean, Offshore & Arctic Engineering Conference",
+   "venue_detail": null,
+   "citations": 2,
+   "doi": "10.1115/omae2019-95068",
+   "url": "https://doi.org/10.1115/omae2019-95068",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:u-x6o8ySG0sC",
+   "oa_url": null,
+   "abstract": "Linear wave theory predicts that in a random sea, the shape of the average wave is given by the scaled autocorrelation function — the “NewWave”. However, the gravity wave problem is non-linear. Numerical simulations of waves on deep water have suggested that their average shape can become modified in a number of ways, including the largest wave in a group tending to move to the front of the group through non-linear dispersion. In this paper we examine whether this occurs for waves in the Norwegian Sea. Field data measured from the weather ship Polarfront is analysed for the period 2000 to 2009. We find that, at this location, the effect of non-linearity is small due to the moderate steepness of the sea-states.",
+   "institutions": [
+    "National Oceanography Centre",
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "conference",
+   "themes": [
+    "rogue"
+   ],
+   "duplicates": 2
+  }
+ ],
+ "history": [
+  {
+   "date": "2026-11-22",
+   "citations": 631,
+   "h_index": 16,
+   "i10_index": 29,
+   "outputs": 77
+  }
+ ],
+ "sources": {
+  "scholar": {
+   "ok": true,
+   "checked": "2026-11-22T17:20:31Z",
+   "note": "78 items",
+   "last_success": "2026-11-22T17:20:31Z"
+  },
+  "orcid": {
+   "ok": true,
+   "checked": "2026-11-22T17:20:31Z",
+   "note": "45 works",
+   "last_success": "2026-11-22T17:20:31Z"
+  },
+  "openalex": {
+   "ok": true,
+   "checked": "2026-11-22T17:20:31Z",
+   "note": "",
+   "last_success": "2026-11-22T17:20:31Z"
+  },
+  "crossref": {
+   "ok": true,
+   "checked": "2026-11-22T17:20:31Z",
+   "note": "56 records cached",
+   "last_success": "2026-11-22T17:20:31Z"
+  }
+ }
+}

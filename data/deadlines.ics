@@ -1,0 +1,657 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Wave Research//Funding deadlines//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Funding deadlines
+X-PUBLISHED-TTL:PT12H
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+BEGIN:VEVENT
+UID:ukri-204237-deadline@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:Deadline 16:00 UK — UKRI Enabling AI adoption across science an
+ d engineering (UKRI)
+DESCRIPTION:A UKRI call\, with EPSRC as a lead funder\, for exploratory p
+ rojects of up to 12 months and £250\,000 full economic cost that pair a
+ n AI expert with a domain expert to test how AI could transform a scienc
+ e or engineering research challenge. It closes on 1 December 2026 at 16:
+ 00 and is decided entirely by distributed peer review.\n\nEffort: modera
+ te (2-3 weeks part-time).\n\nWhat you need:\n• Scope check against the
+  priority research domains — The list is cut off in the brief — conf
+ irm on the call page or in the webinar slides that your challenge sits i
+ n a priority domain before doing anything else.\n• Research office slo
+ t — The research office must check and submit the application on the U
+ KRI Funding Service before 16:00 on 1 December 2026\, so agree its inter
+ nal deadline first.\n• AI and domain pairing — The team must bring t
+ ogether an AI expert and an expert from a non-AI discipline\, with a cle
+ arly defined\, application-focused research challenge at its centre.\n
+ • Summary — 550 words\, in plain English.\n• Vision and Approach d
+ ocument — PDF of no more than four sides of A4 (11-point Arial\, margi
+ ns of at least 2cm\, maximum 8MB)\, plus one extra page for a diagrammat
+ ic workplan.\n• Applicant and team capability to deliver — 1\,650 wo
+ rds.\n• Resources and cost justification — Up to £250\,000 full eco
+ nomic cost at 80%\; compute counts as a consumable\; no PhD studentships
+  and no equipment over £25\,000 per item. The word limit is not shown i
+ n the brief.\n• Ethics and responsible research and innovation\; risk 
+ and reward — Both are assessment areas\; their word limits are not sho
+ wn in the brief — confirm in the guidance.\n• Nominated reviewers (d
+ istributed peer review) — Name any team members who will share the rev
+ iewing\; the team must review around eight proposals\, and missing the r
+ eview deadline means automatic rejection.\n\nhttps://www.ukri.org/opport
+ unity/ukri-enabling-ai-adoption-across-science-and-engineering/
+URL:https://www.ukri.org/opportunity/ukri-enabling-ai-adoption-across-sci
+ ence-and-engineering/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Deadline 16:00 UK — UKRI Enabling AI adoption across scienc
+ e and engineering (UKRI)
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:scheme-leverhulme-early-career-fellowships-deadline@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270218
+DTEND;VALUE=DATE:20270219
+SUMMARY:Deadline 16:00 UK — Early Career Fellowships (Leverhulme Trust)
+DESCRIPTION:Three-year postdoctoral fellowship in any discipline for rese
+ archers within about four years of submitting their doctorate\, co-funde
+ d by the Leverhulme Trust and the host university\; around 145 awards ar
+ e expected in 2027.\n\nEffort: moderate (3-5 days over 6-8 weeks).\n\nWh
+ at you need:\n• Eligible candidate — Thesis submitted within four ye
+ ars of the deadline\; fewer than three years of own-research postdoctora
+ l posts\; UK degree or UK academic post.\n• Departmental matching-fund
+ ing commitment — Must be identified and secured before the closing dat
+ e from general university funds (not another grant) and allocated to the
+  named individual.\n• Head of department / host statement — Typical\
+ ; confirm the format in the 2027 guidance for applicants.\n• Candidate
+ 's research proposal and CV — Typical\; confirm limits in the 2027 app
+ lication help notes.\n• Referees — Typical\; confirm number in the h
+ elp notes.\n• University approval — The host university approves and
+  submits the application by 4pm on the closing date.\n\nhttps://www.leve
+ rhulme.ac.uk/early-career-fellowships
+URL:https://www.leverhulme.ac.uk/early-career-fellowships
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Deadline 16:00 UK — Early Career Fellowships (Leverhulme Tr
+ ust)
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:scheme-leverhulme-early-career-fellowships-start@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:Start preparing — Early Career Fellowships (Leverhulme Trust)
+DESCRIPTION:Effort: moderate (3-5 days over 6-8 weeks).\n\nWhat you need:
+ \n• Eligible candidate — Thesis submitted within four years of the d
+ eadline\; fewer than three years of own-research postdoctoral posts\; UK
+  degree or UK academic post.\n• Departmental matching-funding commitme
+ nt — Must be identified and secured before the closing date from gener
+ al university funds (not another grant) and allocated to the named indiv
+ idual.\n• Head of department / host statement — Typical\; confirm th
+ e format in the 2027 guidance for applicants.\n• Candidate's research 
+ proposal and CV — Typical\; confirm limits in the 2027 application hel
+ p notes.\n• Referees — Typical\; confirm number in the help notes.\n
+ • University approval — The host university approves and submits the
+  application by 4pm on the closing date.\n\nhttps://www.leverhulme.ac.uk
+ /early-career-fellowships
+URL:https://www.leverhulme.ac.uk/early-career-fellowships
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Start preparing — Early Career Fellowships (Leverhulme Trus
+ t)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:scheme-royal-society-research-grants-deadline@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270325
+DTEND;VALUE=DATE:20270326
+SUMMARY:Deadline — Research Grants (Royal Society)
+DESCRIPTION:Seed-corn grant of up to £30\,000 for up to 12 months for ne
+ wly independent researchers to buy specialised equipment and consumables
+  and to fund essential fieldwork travel.\n\nEffort: moderate (2-3 weeks 
+ part-time).\n\nWhat you need:\n• Evidence of independent status — Fu
+ ll list of positions showing when you became independent\; Annex 1 of th
+ e scheme notes gives examples of eligible posts.\n• Lay summary and sc
+ ientific abstract — Lay summary max 250 words\; a scientific abstract 
+ is now also required.\n• Research proposal — 1\,000 words in the for
+ m or a PDF of up to 2 pages of A4 (Arial 10 or larger\, under 3MB).\n•
+  Relevance to earlier work — Max 200 words.\n• How the proposal diff
+ ers from current research — Max 500 words\, including confirmation tha
+ t it does not supplement ongoing research or existing grants and that yo
+ u will lead.\n• Rationale and motivation — Max 250 words\, including
+  how the award helps secure future funding.\n• Collaborations — Max 
+ 500 words.\n• Justification of expenses and equipment — Full justifi
+ cation of every consumable\, travel and equipment item\, with supplier q
+ uotations uploaded as PDF. A Head of Department letter is needed only wh
+ ere shared-use equipment requires confirmed priority access.\n• Data m
+ anagement and sharing plan — Max 200 words.\n• No Head of Department
+  statement or referee — Not required for this scheme\; CVs and support
+ ing letters are not accepted.\n\nhttps://royalsociety.org/grants/researc
+ h-grants/
+URL:https://royalsociety.org/grants/research-grants/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Deadline — Research Grants (Royal Society)
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:scheme-royal-society-research-grants-start@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270215
+DTEND;VALUE=DATE:20270216
+SUMMARY:Start preparing — Research Grants (Royal Society)
+DESCRIPTION:Effort: moderate (2-3 weeks part-time).\n\nWhat you need:\n
+ • Evidence of independent status — Full list of positions showing wh
+ en you became independent\; Annex 1 of the scheme notes gives examples o
+ f eligible posts.\n• Lay summary and scientific abstract — Lay summa
+ ry max 250 words\; a scientific abstract is now also required.\n• Rese
+ arch proposal — 1\,000 words in the form or a PDF of up to 2 pages of 
+ A4 (Arial 10 or larger\, under 3MB).\n• Relevance to earlier work — 
+ Max 200 words.\n• How the proposal differs from current research — M
+ ax 500 words\, including confirmation that it does not supplement ongoin
+ g research or existing grants and that you will lead.\n• Rationale and
+  motivation — Max 250 words\, including how the award helps secure fut
+ ure funding.\n• Collaborations — Max 500 words.\n• Justification o
+ f expenses and equipment — Full justification of every consumable\, tr
+ avel and equipment item\, with supplier quotations uploaded as PDF. A He
+ ad of Department letter is needed only where shared-use equipment requir
+ es confirmed priority access.\n• Data management and sharing plan — 
+ Max 200 words.\n• No Head of Department statement or referee — Not r
+ equired for this scheme\; CVs and supporting letters are not accepted.\n
+ \nhttps://royalsociety.org/grants/research-grants/
+URL:https://royalsociety.org/grants/research-grants/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Start preparing — Research Grants (Royal Society)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eu-HORIZON-CL5-2027-02-D3-09-deadline@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+SUMMARY:Deadline — Innovative technologies and solutions to improve wav
+ e and tidal energy systems (Horizon Europe)
+DESCRIPTION:A single Horizon Europe Innovation Action of about €43 mill
+ ion to develop\, validate and demonstrate wave and tidal energy technolo
+ gy\, covering survival in harsh seas\, moorings\, foundations\, conditio
+ n monitoring and the use of AI. It opens on 3 December 2026 and closes o
+ n 31 March 2027\; you would join as a partner rather than lead.\n\nEffor
+ t: moderate (2-3 weeks of your time).\n\nWhat you need:\n• A place in 
+ a consortium — Only one grant is expected\; find out who is coordinati
+ ng a bid and offer a defined contribution before partner lists close\n
+ • One-page statement of what you bring — For example survivability a
+ nd wave-loading modelling\, tank testing or AI methods\, mapped to the b
+ reakthrough\, validation or demonstration challenge\n• Your tasks in t
+ he work plan — Text for the coordinator on your tasks\, deliverables a
+ nd effort\; the whole proposal is limited to 60 pages for this topic\n
+ • Partner profile and key staff — Organisation description\, relevan
+ t projects and facilities for the application form\; typical — confirm
+  in the guidance\n• Budget for Manchester's share — Staff effort and
+  costs agreed with the coordinator and your research office\; typical 
+ — confirm in the guidance\n• Institutional registration and sign-off
+  — Manchester's research office approves participation and costs\; typ
+ ical — confirm in the guidance\n\nhttps://ec.europa.eu/info/funding-te
+ nders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL
+ 5-2027-02-D3-09
+URL:https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen
+ /opportunities/topic-details/HORIZON-CL5-2027-02-D3-09
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Deadline — Innovative technologies and solutions to improve
+  wave and tidal energy systems (Horizon Europe)
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eu-HORIZON-CL5-2027-02-D3-09-start@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:Start preparing — Innovative technologies and solutions to impr
+ ove wave and tidal energy systems (Horizon Europe)
+DESCRIPTION:Effort: moderate (2-3 weeks of your time).\n\nWhat you need:\
+ n• A place in a consortium — Only one grant is expected\; find out w
+ ho is coordinating a bid and offer a defined contribution before partner
+  lists close\n• One-page statement of what you bring — For example s
+ urvivability and wave-loading modelling\, tank testing or AI methods\, m
+ apped to the breakthrough\, validation or demonstration challenge\n• Y
+ our tasks in the work plan — Text for the coordinator on your tasks\, 
+ deliverables and effort\; the whole proposal is limited to 60 pages for 
+ this topic\n• Partner profile and key staff — Organisation descripti
+ on\, relevant projects and facilities for the application form\; typical
+  — confirm in the guidance\n• Budget for Manchester's share — Staf
+ f effort and costs agreed with the coordinator and your research office\
+ ; typical — confirm in the guidance\n• Institutional registration an
+ d sign-off — Manchester's research office approves participation and c
+ osts\; typical — confirm in the guidance\n\nhttps://ec.europa.eu/info/
+ funding-tenders/opportunities/portal/screen/opportunities/topic-details/
+ HORIZON-CL5-2027-02-D3-09
+URL:https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen
+ /opportunities/topic-details/HORIZON-CL5-2027-02-D3-09
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Start preparing — Innovative technologies and solutions to 
+ improve wave and tidal energy systems (Horizon Europe)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:scheme-royal-society-short-industry-fellowship-deadline@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270527
+DTEND;VALUE=DATE:20270528
+SUMMARY:Deadline — Short Industry Fellowship (Royal Society)
+DESCRIPTION:Short secondment (3-6 months full-time\, or 50% for up to 12 
+ months) for an academic and/or their postdoctoral researcher to work on 
+ a joint project with a UK company\; covers basic salary during the secon
+ dment plus up to £1\,000 research expenses.\n\nEffort: moderate (3-5 we
+ eks elapsed).\n\nWhat you need:\n• UK industry partner — Company wit
+ h an established research team and facilities\; small and early-stage co
+ mpanies are encouraged.\n• Abstract and lay summary — Scientific abs
+ tract plus a lay summary of max 250 words.\n• Research proposal — Se
+ lf-contained case for support (background\, aims\, programme with milest
+ ones\, potential impact): 1\,000 words in the form or a PDF of up to 2 p
+ ages of A4 (Arial 10 or larger) in the 2026 notes\; if the PDRA is secon
+ ded\, state each person's role and time.\n• Benefits and mechanism of 
+ collaboration — Max 200 words each: mutual benefit to both organisatio
+ ns (and to the PDRA)\, and how the secondment will run (days at the part
+ ner\, other contact).\n• Current employer Head of Department support 
+ — Submitted through Flexi-Grant.\n• Partner organisation Head of Dep
+ artment support — Submitted through Flexi-Grant.\n• One nominated re
+ feree — Someone able to comment independently on the application.\n•
+  PDRA details (if the PDRA is seconded) — The PDRA's contract must cov
+ er the whole fellowship.\n• Host organisation approval — University 
+ approver must approve in Flexi-Grant by the deadline.\n\nhttps://royalso
+ ciety.org/grants/short-industry-fellowships/
+URL:https://royalsociety.org/grants/short-industry-fellowships/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Deadline — Short Industry Fellowship (Royal Society)
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:scheme-royal-society-short-industry-fellowship-start@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+SUMMARY:Start preparing — Short Industry Fellowship (Royal Society)
+DESCRIPTION:Effort: moderate (3-5 weeks elapsed).\n\nWhat you need:\n• 
+ UK industry partner — Company with an established research team and fa
+ cilities\; small and early-stage companies are encouraged.\n• Abstract
+  and lay summary — Scientific abstract plus a lay summary of max 250 w
+ ords.\n• Research proposal — Self-contained case for support (backgr
+ ound\, aims\, programme with milestones\, potential impact): 1\,000 word
+ s in the form or a PDF of up to 2 pages of A4 (Arial 10 or larger) in th
+ e 2026 notes\; if the PDRA is seconded\, state each person's role and ti
+ me.\n• Benefits and mechanism of collaboration — Max 200 words each:
+  mutual benefit to both organisations (and to the PDRA)\, and how the se
+ condment will run (days at the partner\, other contact).\n• Current em
+ ployer Head of Department support — Submitted through Flexi-Grant.\n
+ • Partner organisation Head of Department support — Submitted throug
+ h Flexi-Grant.\n• One nominated referee — Someone able to comment in
+ dependently on the application.\n• PDRA details (if the PDRA is second
+ ed) — The PDRA's contract must cover the whole fellowship.\n• Host o
+ rganisation approval — University approver must approve in Flexi-Grant
+  by the deadline.\n\nhttps://royalsociety.org/grants/short-industry-fell
+ owships/
+URL:https://royalsociety.org/grants/short-industry-fellowships/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Start preparing — Short Industry Fellowship (Royal Society)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:scheme-msca-postdoctoral-fellowships-deadline@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270908
+DTEND;VALUE=DATE:20270909
+SUMMARY:Deadline — Marie Sklodowska-Curie Postdoctoral Fellowships 2027
+  (European Commission (Marie Sklodowska-Curie Actions))
+DESCRIPTION:EU-funded fellowships of 12-24 months (European Fellowships) 
+ for researchers with a PhD and up to eight years of research experience 
+ to carry out their own project at a host in another country\, prepared j
+ ointly with the host supervisor.\n\nEffort: moderate (5-8 days over abou
+ t 3 months).\n\nWhat you need:\n• Eligible candidate — PhD by the de
+ adline\, eight years of research experience or less\, and compliant with
+  the 12-in-36-months mobility rule\; hosting offers can be advertised on
+  Euraxess.\n• Jointly written proposal — Developed by the candidate 
+ with the host\; template and page limits are in the guide for applicants
+  (typical\; confirm in the 2027 guide).\n• Supervisor and host descrip
+ tion — Supervision\, training and career-development arrangements and 
+ facilities (typical\; confirm in the 2027 guide).\n• Candidate CV — 
+ In the call template (typical\; confirm in the 2027 guide).\n• Host or
+ ganisation submission — The host submits through the EU Funding & Tend
+ ers Portal\, so research-office sign-off is needed.\n• Optional non-ac
+ ademic placement — Up to 6 months at a non-academic organisation can b
+ e added at the end of the fellowship.\n\nhttps://marie-sklodowska-curie-
+ actions.ec.europa.eu/funding/msca-postdoctoral-fellowships-2027
+URL:https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-post
+ doctoral-fellowships-2027
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Deadline — Marie Sklodowska-Curie Postdoctoral Fellowships 
+ 2027 (European Commission (Marie Sklodowska-Curie Actions))
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:scheme-msca-postdoctoral-fellowships-start@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+SUMMARY:Start preparing — Marie Sklodowska-Curie Postdoctoral Fellowshi
+ ps 2027 (European Commission (Marie Sklodowska-Curie Actions))
+DESCRIPTION:Effort: moderate (5-8 days over about 3 months).\n\nWhat you 
+ need:\n• Eligible candidate — PhD by the deadline\, eight years of r
+ esearch experience or less\, and compliant with the 12-in-36-months mobi
+ lity rule\; hosting offers can be advertised on Euraxess.\n• Jointly w
+ ritten proposal — Developed by the candidate with the host\; template 
+ and page limits are in the guide for applicants (typical\; confirm in th
+ e 2027 guide).\n• Supervisor and host description — Supervision\, tr
+ aining and career-development arrangements and facilities (typical\; con
+ firm in the 2027 guide).\n• Candidate CV — In the call template (typ
+ ical\; confirm in the 2027 guide).\n• Host organisation submission —
+  The host submits through the EU Funding & Tenders Portal\, so research-
+ office sign-off is needed.\n• Optional non-academic placement — Up t
+ o 6 months at a non-academic organisation can be added at the end of the
+  fellowship.\n\nhttps://marie-sklodowska-curie-actions.ec.europa.eu/fund
+ ing/msca-postdoctoral-fellowships-2027
+URL:https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-post
+ doctoral-fellowships-2027
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Start preparing — Marie Sklodowska-Curie Postdoctoral Fello
+ wships 2027 (European Commission (Marie Sklodowska-Curie Actions))
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ukri-173818-start@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+SUMMARY:Start preparing (round expected\, dates not announced) — Access
+  to high performance computing facilities: autumn 2025 (UKRI)
+DESCRIPTION:Effort: light (3-5 days over two weeks).\n\nWhat you need:\n
+ • Choice of HPC service — Name one service and\, if you wish\, a res
+ erve (10 words)\; contact the service early to check your request is rea
+ listic\, as it runs a technical assessment if you succeed\n• Resource 
+ request — Quantity and units (CU\, CPUh\, GPUh or node-hours) in 20 wo
+ rds\; no more than 50% of the resource available on that system\n• Cas
+ e document — One document with your responses to all the criteria: 2 s
+ ides of A4 for requests up to 300k CU\, 2M CPUh\, 50k GPUh or 200k node-
+ hours\, 3 or 4 sides for larger requests\; single-spaced 11-point Arial\
+ , margins of at least 2cm\, references included\; over-length applicatio
+ ns are rejected\n• Diagrammatic work plan — One optional extra page 
+ with a timeline of work packages\n• Summary — 550 words\, in plain E
+ nglish\n• Core team and keywords — Project lead\, co-leads and other
+  roles\; three keywords\n• HEC consortium statement (ARCHER2 only) —
+  100 words if you belong to a funded HEC consortium\, explaining why you
+  are not applying through it\n• Research office check and submission 
+ — UKRI Funding Service (not Je-S)\; applications cannot be changed onc
+ e sent\, and one rejected for substantive errors cannot be resubmitted t
+ o that round\n\nhttps://www.ukri.org/opportunity/access-to-high-performa
+ nce-computing-facilities-autumn-2025/
+URL:https://www.ukri.org/opportunity/access-to-high-performance-computing
+ -facilities-autumn-2025/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Start preparing (round expected\, dates not announced) — Ac
+ cess to high performance computing facilities: autumn 2025 (UKRI)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ukri-179370-start@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:Start preparing (round expected\, dates not announced) — Future
+  Leaders Fellowships: round 11 (UKRI)
+DESCRIPTION:Effort: major (4-5 months part-time).\n\nWhat you need:\n• 
+ Suitability check against the person specification — Read the person s
+ pecification annex in the round guidance for academic-hosted applicants 
+ and be ready to justify that you are still establishing independence\n
+ • Internal selection at Manchester — Applications per academic host 
+ are capped\; tell the university you intend to apply and go through its 
+ internal shortlisting before the UKRI deadline\n• Host organisation su
+ pport — Manchester must commit to a rising share of your salary and co
+ nfirm an open-ended independent position (which you already hold)\; limi
+ t not shown in the brief\n• Proposed work: vision and delivery — Wha
+ t you hope to achieve and how you will deliver it\; word limit not shown
+  in the brief\, confirm in the round guidance\n• Applicant capability 
+ (R4RI) — 1\,650 words: 1\,150 for Résumé for Research and Innovation
+  modules including references\, plus an optional 500 for Additions\n• 
+ Career development and skills plan — Why a fellowship is the right veh
+ icle and how you will use it to benefit others\; a clear programme of sk
+ ills development is essential\; limit not shown in the brief\n• Resour
+ ces and cost justification — No cost limit\, funded at 80% FEC with ta
+ pered salary support\; email fellows@ukri.org if the total will exceed 
+ £1.4 million\n• Ethics and responsible research and innovation — Im
+ plications and issues raised by the proposed work\; limit not shown in t
+ he brief\n• Summary and core team — 550-word plain-English summary\;
+  list team members by role (fellow\, research and innovation associate\,
+  technician and so on)\n• Response to reviewers and interview — 10 w
+ orking days to respond to at least three expert reviews\; shortlisted ap
+ plicants are interviewed by an expert panel\n\nhttps://www.ukri.org/oppo
+ rtunity/future-leaders-fellowship-round-11/
+URL:https://www.ukri.org/opportunity/future-leaders-fellowship-round-11/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Start preparing (round expected\, dates not announced) — Fu
+ ture Leaders Fellowships: round 11 (UKRI)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:scheme-royal-society-international-exchanges-start@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+SUMMARY:Start preparing (round expected\, dates not announced) — Intern
+ ational Exchanges (Royal Society)
+DESCRIPTION:Effort: light (3-4 weeks elapsed).\n\nWhat you need:\n• Ove
+ rseas co-applicant (new collaboration) — Co-applicant must hold a PhD 
+ and a contract covering the project and cannot be a former colleague or 
+ PhD student/supervisor. The UK applicant starts the application on behal
+ f of both teams.\n• Abstract and lay summary — Scientific abstract m
+ ax 400 words\; lay summary max 250 words (the panel is not all specialis
+ ts).\n• Research proposal — Max 500 words\, including methods and te
+ chniques.\n• Participants and benefits sections — Participants max 2
+ 00 words\; benefits to individuals/institutions\, to the UK and to the o
+ verseas country max 200 words each.\n• Applicant and co-applicant care
+ er summaries — Completed by each lead in Flexi-Grant (field of special
+ isation max 20 words\; current research max 200 words).\n• Head of Dep
+ artment support (UK and overseas) — Both Heads of Department confirm s
+ upport through Flexi-Grant\, ideally at least 5 working days before the 
+ deadline.\n• Visit plan and budget — Travel\, subsistence and resear
+ ch expenses within the cap for the chosen duration\; multi-visit awards 
+ must be bilateral.\n• Data management and sharing plan — Max 200 wor
+ ds.\n• Host organisation approval — University approver must approve
+  in Flexi-Grant by the deadline. For Cost Share rounds the overseas part
+ ner submits a parallel application to its own funder.\n\nhttps://royalso
+ ciety.org/grants/international-exchanges/
+URL:https://royalsociety.org/grants/international-exchanges/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Start preparing (round expected\, dates not announced) — In
+ ternational Exchanges (Royal Society)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:scheme-raeng-research-fellowships-start@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270301
+DTEND;VALUE=DATE:20270302
+SUMMARY:Start preparing (round expected\, dates not announced) — Resear
+ ch Fellowships (Royal Academy of Engineering)
+DESCRIPTION:Effort: major (2-3 weeks\, then 5-6 weeks).\n\nWhat you need:
+ \n• PhD date check — Confirm the DPhil award date against the four-y
+ ear limit first\; extenuating circumstances statement max 200 words.\n
+ • Internal university selection — Host limit of two Expressions of I
+ nterest (up to four under the positive-action route).\n• Expression of
+  Interest - project details — Title (15 words)\, summary (250 words)\,
+  engineering research vision (500 words)\, up to 10 keywords\, external 
+ collaborators (50 words). The guidance estimates about four hours to com
+ plete the form.\n• Expression of Interest - statements — Motivation\
+ , profile and fit (500 words)\; engineering contribution (200)\; choice 
+ of host institution (150)\; collaborations (200)\; diversity\, inclusion
+  and research culture (200). No costings at this stage.\n• Host instit
+ ution declaration letter — From the research support office\; confirms
+  the application limit has been respected and that the fellow will get t
+ he support normal for a permanent employee.\n• Invited full applicatio
+ n (stage 2) — Detailed proposal with cost breakdown and collaborator l
+ etters of support\; assessed by three expert reviewers.\n• Interview 
+ — 30 minutes with a panel of four Academy Fellows\, including a five-m
+ inute presentation.\n\nhttps://raeng.org.uk/programmes-and-prizes/progra
+ mmes/uk-grants-and-prizes/support-for-research/research-fellowships/
+URL:https://raeng.org.uk/programmes-and-prizes/programmes/uk-grants-and-p
+ rizes/support-for-research/research-fellowships/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Start preparing (round expected\, dates not announced) — Re
+ search Fellowships (Royal Academy of Engineering)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ukri-191210-start@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+SUMMARY:Start preparing (round expected\, dates not announced) — Enviro
+ nmental sciences: Global Partnerships Seedcorn Fund 2026 (NERC)
+DESCRIPTION:Effort: moderate (About 3 weeks part-time).\n\nWhat you need:
+ \n• New international partner — At least one overseas partner you ha
+ ve not worked with: no joint funding\, no paper with one of you as lead 
+ author and the other as co-author\, no more than two co-authored papers\
+ , never in the same lab or department\, not your supervisor or student\n
+ • NERC remit check — The majority of the project must sit within NER
+ C's environmental science remit\; check this before writing\n• Vision 
+ — 1\,000 words\, including the aim of the new partnership and specific
+  scientific objectives\n• Approach — 1\,000 words\, including each p
+ artner's intellectual and material contribution and an even balance of p
+ artnership building and direct research\n• Applicant and team capabili
+ ty to deliver — 1\,650 words\n• Project partner details — Enter ov
+ erseas collaborators and their contributions under 'Project partner'\, n
+ ot in the core team\; they fund their own involvement apart from travel 
+ and subsistence\n• Costings — Up to £100\,000 FEC\; no PhD students
+ hips\, conference attendance\, equipment of £25\,000 or more\, or partn
+ er salaries\n• FAPESP or NSTC paperwork (only for São Paulo or Taiwan
+  partners) — Title prefix 'NERC-FAPESP' or 'NERC-NSTC'\; attach the FA
+ PESP SAGe submission or the completed NSTC budget form as a PDF\n• Sum
+ mary and research office submission — 550-word plain-English summary\;
+  your research office submits through the UKRI Funding Service\n\nhttps:
+ //www.ukri.org/opportunity/environmental-sciences-global-partnerships-se
+ edcorn-fund-2026/
+URL:https://www.ukri.org/opportunity/environmental-sciences-global-partne
+ rships-seedcorn-fund-2026/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Start preparing (round expected\, dates not announced) — En
+ vironmental sciences: Global Partnerships Seedcorn Fund 2026 (NERC)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:scheme-erc-starting-grant-start@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+SUMMARY:Start preparing (round expected\, dates not announced) — ERC St
+ arting Grant (European Research Council)
+DESCRIPTION:Effort: major (4-5 months part-time).\n\nWhat you need:\n• 
+ Part I of the scientific proposal — Up to 5 pages\; with the CV it is 
+ all the panel assesses at step 1.\n• CV and track record — Up to 4 p
+ ages.\n• Part II of the scientific proposal — Up to 7 pages: detaile
+ d methodology\, risks and background.\n• Resources and time commitment
+  — Up to 2 pages\; minimum 50% of your working time on the project.\n
+ • Host Institution Support Letter — Binding statement of support fro
+ m the University\; proposals without the required sections may be declar
+ ed inadmissible.\n• PhD certificate and eligibility evidence — Proof
+  of the PhD defence date\, plus documents for any extension claimed.\n
+ • Administrative forms and ethics self-assessment — Completed online
+  in the EU Funding & Tenders Portal.\n• Step-2 interview — Shortlist
+ ed PIs present their proposal to the evaluation panel.\n\nhttps://erc.eu
+ ropa.eu/apply-grant/starting-grant
+URL:https://erc.europa.eu/apply-grant/starting-grant
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Start preparing (round expected\, dates not announced) — ER
+ C Starting Grant (European Research Council)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ukri-202899-start@wave-research
+DTSTAMP:20261122T172325Z
+DTSTART;VALUE=DATE:20271001
+DTEND;VALUE=DATE:20271002
+SUMMARY:Start preparing (round expected\, dates not announced) — Explor
+ ing the frontiers of environmental research 2026 (NERC)
+DESCRIPTION:Effort: moderate (2-3 weeks part-time).\n\nWhat you need:\n
+ • Remit check with NERC — The research must sit predominantly within
+  NERC's research areas and address a clearly defined environmental scien
+ ce question\; NERC encourages you to contact it first if the idea may cr
+ oss council boundaries.\n• Internal quality assurance at Manchester 
+ — NERC strongly recommends an institutional quality-assurance step\; y
+ ou may appear on at most two applications and lead only one.\n• Summar
+ y — 550 words\, in plain English.\n• Core team and discipline areas 
+ — List team members by role\; name up to five discipline areas from NE
+ RC's list (50 words).\n• Vision — 1\,200 words.\n• Approach\, and 
+ ethics and responsible research and innovation — Both are assessment a
+ reas\; their word limits are not shown in the brief — confirm in the g
+ uidance.\n• Costing through the research office — £100\,000–£200
+ \,000 full economic cost at 80%\; at least 0.2 FTE of your own time\; no
+  PhD studentships\, no equipment item over £25\,000 and no data archivi
+ ng costs.\n• Facility agreement\, if needed — Prior agreement and a 
+ technical assessment from any NERC facility\; ship-time\, marine equipme
+ nt and HPC have their own access rules and must fit within the grant lim
+ it.\n• Research office submission on the UKRI Funding Service — Only
+  the lead research organisation can submit\; allow for internal deadline
+ s.\n• Reviewer commitment (distributed peer review) — Review about s
+ ix to eight other applications within 15 working days\; in the 2026 roun
+ d the window is 6–27 January 2027\, and missing it means automatic rej
+ ection.\n\nhttps://www.ukri.org/opportunity/exploring-the-frontiers-of-e
+ nvironmental-research-2026/
+URL:https://www.ukri.org/opportunity/exploring-the-frontiers-of-environme
+ ntal-research-2026/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Start preparing (round expected\, dates not announced) — Ex
+ ploring the frontiers of environmental research 2026 (NERC)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+END:VCALENDAR
