@@ -1,6 +1,6 @@
 {
  "generated_at": "2026-11-22T17:20:31Z",
- "checked_at": "2026-11-22T17:20:31Z",
+ "checked_at": "2026-11-22T17:26:24Z",
  "researcher": {
   "name": "Tim (Tianning) Tang",
   "short_name": "Tim Tang",
@@ -3611,16 +3611,16 @@
  ],
  "sources": {
   "scholar": {
-   "ok": true,
-   "checked": "2026-11-22T17:20:31Z",
-   "note": "78 items",
+   "ok": false,
+   "checked": "2026-11-22T17:26:24Z",
+   "note": "scholar.google.com: HTTP 403 for https://scholar.google.com/citations",
    "last_success": "2026-11-22T17:20:31Z"
   },
   "orcid": {
    "ok": true,
-   "checked": "2026-11-22T17:20:31Z",
+   "checked": "2026-11-22T17:26:24Z",
    "note": "45 works",
-   "last_success": "2026-11-22T17:20:31Z"
+   "last_success": "2026-11-22T17:26:24Z"
   },
   "openalex": {
    "ok": true,
