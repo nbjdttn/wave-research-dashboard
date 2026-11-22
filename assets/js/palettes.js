@@ -33,6 +33,7 @@
     }
     root.style.setProperty('--grid', set.line);
     root.setAttribute('data-palette', name);
+    root.setAttribute('data-mode', mode());
     var metas = document.querySelectorAll('meta[name="theme-color"]');
     for (var i = 0; i < metas.length; i++) metas[i].setAttribute('content', set.bg);
     return name;

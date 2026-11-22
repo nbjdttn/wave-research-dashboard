@@ -117,6 +117,22 @@ export function people(list, total, max = 3) {
 }
 export const initials = (name) => name.replace(/\(.*?\)/g, '').trim().split(/\s+/).filter(Boolean).map((w) => w[0]).filter((c, i, a) => i === 0 || i === a.length - 1).join('').toUpperCase();
 
+// ── how tall the app shell should be ────────────────────────────────────────
+/**
+ * The height of the visible screen, from what the browser reports. Two faults are corrected:
+ *  - opened from the home screen, some iPhones leave the strip under the status bar out of the
+ *    height although the page is drawn there too (`top` is that strip: env(safe-area-inset-top));
+ *  - a web view can report a height taller than the screen itself.
+ * inner/visual: window.innerHeight and visualViewport.height; screenW/screenH: screen.width/height.
+ */
+export function shellHeight({ inner, visual = 0, screenW = 0, screenH = 0, portrait = true, top = 0, standalone = false }) {
+  let h = Math.max(inner || 0, visual || 0);
+  const longSide = Math.max(screenW, screenH), shortSide = Math.min(screenW, screenH);
+  const full = longSide ? (portrait ? longSide : shortSide) : Infinity;      // phones keep screen.* in portrait terms or swap them
+  if (top > 0 && (standalone || Math.abs(h + top - full) < 3)) h = Math.max(h, full === Infinity ? h + top : full);
+  return Math.round(Math.min(h, full));
+}
+
 // ── hand a task to Claude ────────────────────────────────────────────────────
 /** owner/name of the GitHub repository behind a github.io page ('' anywhere else). */
 export function repoSlug() {

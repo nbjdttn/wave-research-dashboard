@@ -429,6 +429,11 @@ body {
   position: absolute; z-index: 30; inset: 0 0 auto 0; height: calc(env(safe-area-inset-top, 0px) + 8px); pointer-events: none;
   background: linear-gradient(var(--bg) 60%, transparent);
 }
+/* Opened from the home screen, the phone draws its clock in white over the page: give it a dark
+   backdrop when the page itself is light. */
+@media (display-mode: standalone) {
+  :root[data-mode="light"] .statusfade { background: linear-gradient(rgba(12, 14, 20, .62) 50%, transparent); }
+}
 button, summary, .chip, .seg, .tabbar a, .ticker a, .brand { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
 .pressable:active, .btn:active, .act:active, .chip:active, .tabbar a:active, .icon-btn:active { transform: scale(.97); }
 

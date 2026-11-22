@@ -1,5 +1,5 @@
 // Wave Research — bootstrap, routing and the settings sheet.
-import { $, $$, esc, icon, store, shelf, toast, ago, daysTo, fmtDate, safeUrl, num } from './util.js';
+import { $, $$, esc, icon, store, shelf, toast, ago, daysTo, fmtDate, safeUrl, num, shellHeight } from './util.js';
 import { clearCharts } from './charts.js';
 import { paperIndex, isLive } from './cards.js';
 import { renderToday } from './view-today.js';
@@ -260,12 +260,19 @@ start();
 // A page opened from the home screen can report a viewport taller than the screen, which pushes
 // anything anchored to its bottom out of sight. The shell's height is therefore measured, and never
 // allowed to exceed the screen itself.
+let insetProbe = null;
 function fitShell() {
-  const vv = window.visualViewport;
-  const seen = Math.max(window.innerHeight || 0, vv ? vv.height : 0);
-  const screenMax = Math.max(window.screen?.height || 0, window.screen?.width || 0) || Infinity;
-  const h = Math.min(seen, window.innerWidth > window.innerHeight ? seen : screenMax);
-  if (h > 100) document.documentElement.style.setProperty('--app-h', `${Math.round(h)}px`);
+  if (!insetProbe) {                                     // reads env(safe-area-inset-top): the strip under the status bar
+    insetProbe = document.createElement('div');
+    insetProbe.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;height:0;padding-top:env(safe-area-inset-top,0px)';
+    document.body.appendChild(insetProbe);
+  }
+  const h = shellHeight({
+    inner: window.innerHeight, visual: window.visualViewport?.height, screenW: window.screen?.width, screenH: window.screen?.height,
+    portrait: window.innerWidth <= window.innerHeight, top: parseFloat(getComputedStyle(insetProbe).paddingTop) || 0,
+    standalone: window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches,
+  });
+  if (h > 100) document.documentElement.style.setProperty('--app-h', `${h}px`);
 }
 fitShell();
 ['resize', 'orientationchange', 'pageshow'].forEach((ev) => window.addEventListener(ev, fitShell));
@@ -294,12 +301,24 @@ async function refresh() {
     }
   } catch { /* no service worker: data only */ }
   await loadAll(true);
+  loadedAt = Date.now();
   freshness();
   tabBadges();
   route();
   if (newVersion) { toast('New version — reloading'); setTimeout(() => location.reload(), 900); return; }
   toast(!navigator.onLine ? 'Offline — showing the saved edition' : stamp() === before ? `Up to date · ${ctx.updatedLine.replace('Built', 'built')}` : 'Updated');
 }
+
+// Coming back to the app after a while: fetch the latest edition quietly if you are at the top.
+let loadedAt = Date.now();
+document.addEventListener('visibilitychange', async () => {
+  if (document.hidden || refreshing || Date.now() - loadedAt < 2 * 36e5 || scroller.scrollTop > 40 || !sheet.hidden) return;
+  loadedAt = Date.now();
+  await loadAll(true);
+  freshness();
+  tabBadges();
+  route();
+});
 
 scroller.addEventListener('touchstart', (e) => {
   const ok = !refreshing && sheet.hidden && scroller.scrollTop <= 2 && e.touches.length === 1

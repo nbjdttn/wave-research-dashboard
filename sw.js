@@ -1,6 +1,6 @@
 // Offline support. Pages, scripts and data are fetched fresh whenever the network answers and
 // fall back to the last copy when it does not; fonts and icons are served from the cache.
-const CACHE = 'wave-research-v3';
+const CACHE = 'wave-research-v4';
 const SHELL = [
   './', 'index.html', 'manifest.webmanifest',
   'assets/css/app.css',
