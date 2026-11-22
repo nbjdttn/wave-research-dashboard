@@ -1,0 +1,114 @@
+// "Today" — the front page: what is new in papers and funding since you last looked.
+import { esc, icon, longToday, daysTo, num, plural } from './util.js';
+import { storyHTML, oppRow, isLive } from './cards.js';
+import { sparkline } from './charts.js';
+import { mountWave } from './wave.js';
+
+const greeting = () => { const h = new Date().getHours(); return h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening'; };
+
+export function renderToday(root, D, ctx) {
+  const { profile, papers, grants } = D;
+  const feed = papers?.papers || [];
+  const newDays = papers?.new_days || 10;
+  const isNew = (p) => { const d = daysTo(p.news_date); return d != null && d >= -newDays; };
+  const fresh = feed.filter(isNew).sort((a, b) => b.score - a.score);
+  const stories = fresh.filter((p) => !p.cites?.length);
+  const citing = feed.filter((p) => p.cites?.length).sort((a, b) => (b.news_date || '').localeCompare(a.news_date || '') || b.score - a.score);
+  const citingNew = citing.filter(isNew);
+  const opps = (grants?.opportunities || []).filter(isLive);
+  const deadlines = opps.filter((o) => o.bucket === 'deadline').sort((a, b) => a.closes.localeCompare(b.closes));
+  const newOpps = opps.filter((o) => o.is_new);
+  const prepare = opps.filter((o) => o.bucket === 'prepare');
+  const next = deadlines[0];
+  const nextDays = next ? daysTo(next.closes) : null;
+  const m = profile?.metrics;
+  const first = (profile?.researcher?.short_name || '').split(' ')[0];
+  const own = Object.fromEntries((profile?.publications || []).map((p) => [p.id, p.title]));
+  const ownTitle = (id) => own[id];
+
+  // one-sentence edition summary
+  const bits = [];
+  if (stories.length) bits.push(`${plural(stories.length, 'new paper')} close to your work${citingNew.length ? `, plus ${plural(citingNew.length, 'new citation')} of yours` : ''}`);
+  if (opps.length) bits.push(`${plural(opps.length, 'funding opportunity', 'funding opportunities')} on your list${next ? `, the next closing ${nextDays === 0 ? 'today' : `in ${plural(nextDays, 'day')}`}` : ''}`);
+  const summary = bits.length ? `${bits.join('. ')}.` : 'Nothing new since the last edition.';
+
+  const lead = stories[0];
+  const rest = stories.slice(1, 6);
+  const hist = (profile?.history || []);
+  const monthAgo = [...hist].reverse().find((h) => daysTo(h.date) <= -28);
+  const delta = monthAgo ? m.citations - monthAgo.citations : null;
+
+  root.innerHTML = `
+    <header class="masthead">
+      <div class="mast-date">${esc(longToday())}</div>
+      <h1 class="mast-title">Wave Research <em>Daily</em></h1>
+      <p class="mast-sub">${esc(greeting())}${first ? `, ${esc(first)}` : ''}. ${esc(summary)}</p>
+      <div class="mast-wave" id="mast-wave"></div>
+      <nav class="ticker" aria-label="Today at a glance">
+        <a href="#papers"><b>${num(stories.length)}</b><span>new papers this week</span></a>
+        <a href="#papers/citing"><b>${num(citingNew.length || citing.length)}</b><span>${citingNew.length ? 'new papers citing you' : 'recent papers citing you'}</span></a>
+        <a href="#funding"><b>${num(opps.length)}</b><span>calls selected for you</span></a>
+        <a href="#funding">${next ? `<b>${nextDays === 0 ? 'Today' : `${num(nextDays)} d`}</b><span>to the next deadline</span>` : '<b>–</b><span>no fixed deadline ahead</span>'}</a>
+      </nav>
+    </header>
+
+    <div class="cols split">
+      <div>
+        <section class="section" aria-labelledby="h-stories">
+          <div class="section-head"><h2 class="eyebrow" id="h-stories">New papers<span class="count">${num(stories.length)}</span></h2><a class="more" href="#papers">All papers ${icon('arrow', 'xs')}</a></div>
+          ${lead ? `<div class="stories">${storyHTML(lead, { lead: true, saved: ctx.papers.has(lead.id), ownTitle, showNew: false })}${rest.map((p) => storyHTML(p, { saved: ctx.papers.has(p.id), ownTitle, abstract: false, showNew: false })).join('')}</div>`
+            : `<div class="empty"><h3>No new papers this week</h3><p>The feed refreshes every morning.</p></div>`}
+        </section>
+      </div>
+
+      <div>
+        <section class="section" aria-labelledby="h-fund">
+          <div class="section-head"><h2 class="eyebrow" id="h-fund">Funding desk</h2><a class="more" href="#funding">All funding ${icon('arrow', 'xs')}</a></div>
+          ${fundingDesk(newOpps, deadlines, prepare, opps, grants)}
+        </section>
+
+        ${citing.length ? `<section class="section" aria-labelledby="h-cite">
+          <div class="section-head"><h2 class="eyebrow" id="h-cite">Citing your work<span class="count">${num(citing.length)}</span></h2><a class="more" href="#papers/citing">All ${icon('arrow', 'xs')}</a></div>
+          <div class="stories">${citing.slice(0, 3).map((p) => storyHTML(p, { saved: ctx.papers.has(p.id), ownTitle, abstract: false })).join('')}</div>
+        </section>` : ''}
+
+        ${m ? `<section class="section" aria-labelledby="h-num">
+          <div class="section-head"><h2 class="eyebrow" id="h-num">Your numbers</h2><a class="more" href="#profile">Profile ${icon('arrow', 'xs')}</a></div>
+          <div class="kpis" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+            <div class="card kpi"><div class="kpi-label">Citations</div><div class="kpi-value">${num(m.citations)}</div>
+              <div class="kpi-delta">${delta != null && delta > 0 ? `<b>+${num(delta)}</b> in the last month` : `<b>+${num(m.citations_this_year)}</b> so far this year`}</div>
+              ${sparkline((profile.citations_by_year || []).map((c) => c.count))}</div>
+            <div class="card kpi"><div class="kpi-label">h-index</div><div class="kpi-value">${num(m.h_index)}</div>
+              <div class="kpi-delta">i10-index ${num(m.i10_index)} · ${num(m.outputs)} outputs</div></div>
+          </div>
+        </section>` : ''}
+      </div>
+    </div>
+
+    <p class="scan" style="margin-top:28px">${esc(ctx.updatedLine || '')}</p>`;
+
+  const stop = mountWave(root.querySelector('#mast-wave'));
+  ctx.onLeave(stop);
+}
+
+function fundingDesk(newOpps, deadlines, prepare, opps, grants) {
+  if (!opps.length) {
+    const pending = grants?.counts?.awaiting_review || 0;
+    return `<div class="card pad"><div class="notice">${icon('info', 'sm')}<span>${pending
+      ? `<b>${pending} calls are waiting for review.</b> They will be assessed on the next scheduled run.`
+      : '<b>No opportunities selected yet.</b> The funding list fills in after the first scheduled run.'}</span></div></div>`;
+  }
+  const seen = new Set();
+  const take = (list, n) => list.filter((o) => !seen.has(o.id)).slice(0, n).map((o) => { seen.add(o.id); return o; });
+  const blocks = [];
+  const a = take(deadlines, 3);
+  if (a.length) blocks.push(['Next deadlines', a]);
+  const b = take(newOpps, 3);
+  if (b.length) blocks.push(['New on your list', b]);
+  const c = take(prepare.slice().sort((x, y) => (x.analysis.recurrence.next_expected_close || '9').localeCompare(y.analysis.recurrence.next_expected_close || '9')), 2);
+  if (c.length) blocks.push(['Coming round again — prepare ahead', c]);
+  if (!blocks.length) blocks.push(['Always open', take(opps, 3)]);
+  return `<div class="card pad">${blocks.map(([title, list], i) => `
+    <h3 class="fact-label" style="margin:${i ? '18px' : '0'} 0 10px">${esc(title)}</h3>
+    <div>${list.map(oppRow).join('')}</div>`).join('')}</div>`;
+}
