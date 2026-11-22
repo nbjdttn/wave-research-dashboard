@@ -1,0 +1,71 @@
+name: Publish site
+
+# GitHub Pages can publish this repository in two ways, chosen in Settings → Pages → Source:
+#   • "Deploy from a branch" — GitHub publishes the branch itself, so this workflow has nothing to do.
+#   • "GitHub Actions"       — this workflow publishes the site after every code or data change.
+# It checks which one is selected, so either choice gives a live site.
+on:
+  push:
+  workflow_run:
+    workflows: ["Update data"]      # the daily data commit does not raise a push event of its own
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: publish-site
+  cancel-in-progress: true
+
+jobs:
+  check:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    outputs:
+      mode: ${{ steps.mode.outputs.mode }}
+    steps:
+      - name: How is Pages set up?
+        id: mode
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          if json=$(gh api "repos/$REPO/pages" 2>pages.err); then
+            mode=$(jq -r '.build_type // "legacy"' <<<"$json")
+            url=$(jq -r '.html_url // ""' <<<"$json")
+            src=$(jq -r '"\(.source.branch // "-") \(.source.path // "")"' <<<"$json")
+            echo "Pages is on: build_type=$mode source=$src url=$url status=$(jq -r '.status // "none"' <<<"$json")"
+          else
+            mode=off
+            echo "Pages is not enabled: $(head -c 300 pages.err)"
+          fi
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+          {
+            echo "## Publish site"
+            case "$mode" in
+              workflow) echo "Pages source is **GitHub Actions** — publishing from this workflow → $url" ;;
+              legacy)   echo "Pages source is **Deploy from a branch** ($src) — GitHub publishes it directly → $url" ;;
+              *)        echo "GitHub Pages is **not enabled yet**. Open *Settings → Pages* and under *Source* choose **GitHub Actions** (or *Deploy from a branch* → this branch → */ (root)* → *Save*)." ;;
+            esac
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  deploy:
+    needs: check
+    if: needs.check.outputs.mode == 'workflow'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
