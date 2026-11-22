@@ -1,0 +1,222 @@
+{
+ "_about": "Recurring funder schemes without a machine-readable feed. The daily job re-reads each page and asks Claude to refresh the round dates. Add or remove entries freely.",
+ "schemes": [
+  {
+   "slug": "royal-society-urf",
+   "title": "University Research Fellowship",
+   "funder": "Royal Society",
+   "url": "https://royalsociety.org/grants/university-research/",
+   "note": "Annual; opens mid-July, closes early-to-mid September (2027 round: 14 Jul - 9 Sep 2026); interviews in April, results in May"
+  },
+  {
+   "slug": "royal-society-international-exchanges",
+   "title": "International Exchanges",
+   "funder": "Royal Society",
+   "url": "https://royalsociety.org/grants/international-exchanges/",
+   "note": "Several rounds a year, each open about eight weeks: in 2026, Round 2 ran 9 Apr - 4 Jun and Round 3 ran 30 Jul - 24 Sep (15:00 UK time)"
+  },
+  {
+   "slug": "royal-society-industry-fellowship",
+   "title": "Industry Fellowship",
+   "funder": "Royal Society",
+   "url": "https://royalsociety.org/grants/industry-fellowships/",
+   "note": "Two rounds a year: opens early February and closes around 31 March/1 April; opens late July and closes mid-September"
+  },
+  {
+   "slug": "royal-society-short-industry-fellowship",
+   "title": "Short Industry Fellowship",
+   "funder": "Royal Society",
+   "url": "https://royalsociety.org/grants/short-industry-fellowships/",
+   "note": "Two rounds a year: opens early April and closes late May; opens mid-August and closes early October"
+  },
+  {
+   "slug": "royal-society-newton-international",
+   "title": "Newton International Fellowships",
+   "funder": "Royal Society (with the British Academy)",
+   "url": "https://royalsociety.org/grants/newton-international/",
+   "note": "Annual; opens mid-January, closes around the second week of March; results in August"
+  },
+  {
+   "slug": "royal-society-research-grants",
+   "title": "Research Grants",
+   "funder": "Royal Society",
+   "url": "https://royalsociety.org/grants/research-grants/",
+   "note": "Annual; opens late January, closes late March; decisions in August"
+  },
+  {
+   "slug": "royal-society-ispf-collaboration-awards",
+   "title": "ISPF International Collaboration Awards",
+   "funder": "Royal Society (International Science Partnerships Fund)",
+   "url": "https://royalsociety.org/grants/international-collaboration-awards-ispf/",
+   "note": "Country-specific calls; the current call (Brazil and South Africa) is open 13 October - 3 December 2026, and results have been reported in each financial year since 2023/24"
+  },
+  {
+   "slug": "raeng-research-fellowships",
+   "title": "Research Fellowships",
+   "funder": "Royal Academy of Engineering",
+   "url": "https://raeng.org.uk/programmes-and-prizes/programmes/uk-grants-and-prizes/support-for-research/research-fellowships/",
+   "note": "Annual, one round a year; Expression of Interest opens in May and closes in late June; invited full applications due in December; interviews the following May"
+  },
+  {
+   "slug": "raeng-industrial-fellowships",
+   "title": "Industrial Fellowships",
+   "funder": "Royal Academy of Engineering",
+   "url": "https://raeng.org.uk/industrial-fellowships",
+   "note": null
+  },
+  {
+   "slug": "raeng-green-future-fellowships",
+   "title": "Green Future Fellowships",
+   "funder": "Royal Academy of Engineering",
+   "url": "https://raeng.org.uk/green-future-fellowships",
+   "note": "Annual call; Expressions of Interest close in mid-November; stage-1 outcome in late March; assessment day the following October"
+  },
+  {
+   "slug": "leverhulme-research-project-grants",
+   "title": "Research Project Grants",
+   "funder": "Leverhulme Trust",
+   "url": "https://www.leverhulme.ac.uk/research-project-grants",
+   "note": "Two-stage; outline applications accepted at any time (reopened 21 September 2026 on the new grant system); invited detailed applications follow"
+  },
+  {
+   "slug": "leverhulme-philip-leverhulme-prizes",
+   "title": "Philip Leverhulme Prizes",
+   "funder": "Leverhulme Trust",
+   "url": "https://www.leverhulme.ac.uk/philip-leverhulme-prizes",
+   "note": "Annual; the 2026 round closed on 14 May 2026 with decisions in November; subjects rotate on a three-year cycle"
+  },
+  {
+   "slug": "leverhulme-research-fellowships",
+   "title": "Research Fellowships",
+   "funder": "Leverhulme Trust",
+   "url": "https://www.leverhulme.ac.uk/research-fellowships",
+   "note": "Annual; the latest round closed on 5 November 2026 (4pm) for fellowships starting between 1 June 2027 and 1 May 2028"
+  },
+  {
+   "slug": "leverhulme-early-career-fellowships",
+   "title": "Early Career Fellowships",
+   "funder": "Leverhulme Trust",
+   "url": "https://www.leverhulme.ac.uk/early-career-fellowships",
+   "note": "Annual; opens at the start of January, closes in the third week of February (4pm); decisions in May"
+  },
+  {
+   "slug": "ukri-future-leaders-fellowships",
+   "title": "Future Leaders Fellowships",
+   "funder": "UK Research and Innovation",
+   "url": "https://www.ukri.org/opportunity/future-leaders-fellowship-round-11/",
+   "note": "Annual; opens early February, closes mid-June (round 10: 3 Feb - 18 Jun 2025; round 11: 2 Feb - 16 Jun 2026); sift the following March, interviews in May"
+  },
+  {
+   "slug": "erc-starting-grant",
+   "title": "ERC Starting Grant",
+   "funder": "European Research Council",
+   "url": "https://erc.europa.eu/apply-grant/starting-grant",
+   "note": "Annual; the call opens in July with a deadline in mid-October (ERC-2026-StG: 9 Jul - 14 Oct 2025; ERC-2027-StG: 22 Jul - 14 Oct 2026); step-1 results the following May, final results in August"
+  },
+  {
+   "slug": "msca-postdoctoral-fellowships",
+   "title": "Marie Sklodowska-Curie Postdoctoral Fellowships 2027",
+   "funder": "European Commission (Marie Sklodowska-Curie Actions)",
+   "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-postdoctoral-fellowships-2027",
+   "note": "Annual; the call launches in early April and closes in the second week of September; results the following February"
+  },
+  {
+   "slug": "lrf-small-grants",
+   "title": "Small Grants Programme 2026",
+   "funder": "Lloyd's Register Foundation",
+   "url": "https://www.lrfoundation.org.uk/news/small-grants-programme-2026",
+   "note": "Appears annual: the 2026 programme was announced on 14 October 2026 and closes on 14 December 2026"
+  },
+  {
+   "slug": "lrf-grant-funding",
+   "title": "Grant funding (invited applications and themed calls)",
+   "funder": "Lloyd's Register Foundation",
+   "url": "https://www.lrfoundation.org.uk/partnerships-and-funding/grant-funding",
+   "note": "No fixed cycle: most funding is directed or by invitation; open competitive calls are announced on the Calls for funding page"
+  },
+  {
+   "slug": "supergen-ore-flexible-fund",
+   "title": "Supergen ORE Hub Flexible Funding",
+   "funder": "Supergen Offshore Renewable Energy Hub (EPSRC)",
+   "url": "https://supergen-ore.net/flexible-funding",
+   "note": "Irregular calls: April 2019, March 2020, April 2021, July 2023 and July 2024, plus a sixth call that is now closed"
+  },
+  {
+   "slug": "supergen-ore-ecr-research-fund",
+   "title": "Supergen ORE Hub Early Career Researcher (ECR) Research Fund",
+   "funder": "Supergen Offshore Renewable Energy Hub (EPSRC)",
+   "url": "https://supergen-ore.net/ecr-community/ecr-research-funding",
+   "note": "Roughly yearly with gaps: calls dated October 2019, October 2020, March 2021, October 2021, March 2022, July 2023, October 2024 and November 2026"
+  },
+  {
+   "slug": "aria-forecasting-tipping-points-phase-2",
+   "title": "Forecasting Tipping Points Phase 2: full proposals",
+   "funder": "Advanced Research and Invention Agency (ARIA)",
+   "url": "https://www.aria.org.uk/opportunity-spaces/resilient-climate-and-ecosystems/forecasting-tipping-points/funding",
+   "note": null
+  },
+  {
+   "slug": "aria-opportunity-seeds",
+   "title": "ARIA opportunity seeds",
+   "funder": "Advanced Research and Invention Agency (ARIA)",
+   "url": "https://www.aria.org.uk/funding-opportunities",
+   "note": "Irregular: seed calls are issued per opportunity space (past deadlines in April, June and August 2024, February and April 2025, February and July 2026)"
+  },
+  {
+   "slug": "ice-rd-enabling-fund",
+   "title": "ICE Research and Development Enabling Fund",
+   "funder": "Institution of Civil Engineers",
+   "url": "https://www.ice.org.uk/get-involved/awards-and-grants/research-and-development-enabling-fund",
+   "note": "Application window 1 November - 30 December 2026 with results by the end of February 2027; the page says updates on any further reopening will follow (older wording on the page said there were no deadlines)"
+  },
+  {
+   "slug": "onr-global",
+   "title": "ONR Global research grants, Visiting Scientists Program and Collaborative Science Program",
+   "funder": "US Office of Naval Research Global",
+   "url": "https://www.onr.navy.mil/organization/onr-global/funding-opportunities",
+   "note": "Rolling: proposals are submitted under ONR's Long Range Broad Agency Announcement (the current one, N0001425SB001, was published 1 October 2024 and accepts full proposals until 31 December 2026, 11:59 PM EST)"
+  },
+  {
+   "slug": "royal-commission-1851-research-fellowships",
+   "title": "1851 Research Fellowships",
+   "funder": "Royal Commission for the Exhibition of 1851",
+   "url": "https://royalcommission1851.org/fellowships/research-fellowships/",
+   "note": "Annual; the 2027 round closes at midday on 20 January 2027; shortlist by mid-March, interviews in May, fellowships start on 1 October"
+  },
+  {
+   "slug": "british-council-ispf-research-collaborations",
+   "title": "ISPF Research Collaboration Grants",
+   "funder": "British Council (International Science Partnerships Fund)",
+   "url": "https://opportunities-insight.britishcouncil.org/short-articles/opportunities/ispf-research-collaboration-grants-2025",
+   "note": "Occasional calls for specific partner countries; the third call opened 2 June 2025 (expression of interest by 30 June 2025, full application by 4 August 2025)"
+  },
+  {
+   "slug": "british-council-ispf-early-career-fellowships",
+   "title": "ISPF Early Career Fellowships 2026",
+   "funder": "British Council (International Science Partnerships Fund)",
+   "url": "https://opportunities-insight.britishcouncil.org/short-articles/opportunities/ispf-early-career-fellowships-2026",
+   "note": null
+  },
+  {
+   "slug": "daiwa-foundation-awards-small-grants",
+   "title": "Daiwa Foundation Awards and Small Grants",
+   "funder": "Daiwa Anglo-Japanese Foundation",
+   "url": "https://dajf.org.uk/daiwa-foundation-small-grants-and-awards",
+   "note": "Two deadlines a year: 31 March (decision by end of May) and 30 September (decision by end of November)"
+  },
+  {
+   "slug": "nerc-pushing-the-frontiers",
+   "title": "Pushing the frontiers of environmental research",
+   "funder": "Natural Environment Research Council (UKRI)",
+   "url": "https://www.ukri.org/opportunity/pushing-the-frontiers-of-environmental-research/",
+   "note": "Open with no closing date since 23 September 2026; NERC aims to give a decision within nine months of submission"
+  },
+  {
+   "slug": "epsrc-standard-research-grant",
+   "title": "EPSRC standard research grant (responsive mode)",
+   "funder": "Engineering and Physical Sciences Research Council (UKRI)",
+   "url": "https://www.ukri.org/opportunity/epsrc-standard-research-grant-nov-2023-responsive-mode/",
+   "note": "Always open; applications are batched and sent to quarterly responsive-mode panels (Engineering, ICT, Mathematical Sciences, Physical Sciences)"
+  }
+ ]
+}

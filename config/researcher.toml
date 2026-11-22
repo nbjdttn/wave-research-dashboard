@@ -1,0 +1,345 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  Researcher profile — the single place that drives the whole dashboard.
+#  Edit this file to change what the pipeline looks for; the daily GitHub
+#  Action picks the changes up on its next run.
+# ─────────────────────────────────────────────────────────────────────────────
+
+[researcher]
+name          = "Tim (Tianning) Tang"
+short_name    = "Tim Tang"
+family_name   = "Tang"
+given_initial = "T"
+title         = "Lecturer in Fluids Simulation and Digital Twins"
+department    = "Department of Mechanical and Aerospace Engineering"
+institution   = "The University of Manchester"
+location      = "Manchester, UK"
+country       = "UK"
+tagline       = "Extreme ocean waves, wave–structure interaction and scientific machine learning"
+
+# Identifiers used to pull the publication record.
+scholar_id  = "dofRHEwAAAAJ"
+orcid       = "0000-0002-6365-9342"
+openalex_id = "A5039175173"
+
+bio = """
+Tim joined the University of Manchester in 2025 as a Lecturer (Assistant Professor) in Fluids \
+Simulation and Digital Twins. He was previously Course Director of the Intelligent Earth CDT and an \
+Eric and Wendy Schmidt AI in Science Postdoctoral Fellow at the University of Oxford, where he also \
+completed his DPhil. His group studies extreme events in fluid mechanics — rogue waves, wave breaking \
+and extreme loads on offshore structures — combining experiments, field data and simulation with \
+scientific machine learning."""
+
+[researcher.links]
+scholar    = "https://scholar.google.com/citations?user=dofRHEwAAAAJ&hl=en"
+orcid      = "https://orcid.org/0000-0002-6365-9342"
+university = "https://research.manchester.ac.uk/en/persons/tim-tang-beng-dphil-oxon-afhea/"
+website    = "http://tim-tang.com/en"
+github     = "https://github.com/nbjdttn"
+linkedin   = "https://www.linkedin.com/in/nbjdttn"
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Career stage — this is what the funding filter reasons about.
+#  Please check these; they decide which fellowships you are eligible for.
+# ─────────────────────────────────────────────────────────────────────────────
+[career]
+stage              = "Early-career academic: Lecturer (Assistant Professor), permanent post"
+appointed_year     = 2025          # first permanent academic appointment
+phd                = "DPhil in Engineering Science, University of Oxford"
+phd_award_year     = 0             # ← set this (e.g. 2021). 0 = unknown, so 'years since PhD' rules are flagged "check"
+phd_note           = "Thesis dated Michaelmas Term 2020, so the award was most likely late 2020 or 2021 — exact date not recorded here"
+previous_roles     = [
+  "Eric and Wendy Schmidt AI in Science Postdoctoral Fellow, University of Oxford (2023–2025)",
+  "Course Director, Intelligent Earth CDT, University of Oxford",
+]
+current_awards     = ["EPSRC New Investigator Award (machine learning for wave–structure interaction)"]
+group              = "Leads a young group of PhD students and a postdoctoral researcher; keen to host postdoctoral fellows."
+recognition        = ["First place, Osborne Reynolds Day competition (UK's best doctoral student in fluid mechanics)"]
+# What kinds of funding are worth your time right now. Used verbatim in the brief given to Claude.
+priorities = [
+  "Project grants and fellowships I can lead as an early-career PI",
+  "Schemes explicitly aimed at early-career / new academics",
+  "Networking, travel and international collaboration awards that are light to apply for",
+  "Fellowships that let me host a postdoctoral researcher in my group",
+  "Co-investigator or partner roles in larger consortia where ocean/fluids expertise is needed",
+]
+not_wanted = [
+  "Calls that are purely about core AI/ML research with no physical-science or engineering application",
+  "Awards aimed at established professors or large centres that I could not credibly lead yet",
+  "Business-led innovation competitions where a university can only be a minor subcontractor",
+  "Medical, biological, social-science or arts-and-humanities calls",
+  "Schemes I already hold or cannot hold twice (e.g. EPSRC New Investigator Award)",
+]
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Research interests — weighted phrases. Higher weight = more central.
+#  Used to rank similar papers and to pre-screen funding calls.
+# ─────────────────────────────────────────────────────────────────────────────
+[interests]
+summary = """
+Extreme events in fluid mechanics with an emphasis on ocean waves: rogue waves and wave statistics, \
+nonlinear wave dynamics and instabilities, wave breaking, long–short wave interaction, nonlinear \
+wave–structure interaction and extreme loads on offshore wind foundations, tides and coastal \
+hydrodynamics, and marine renewable energy. Methods span wave-tank experiments, field data analysis, \
+numerical simulation and scientific machine learning — physics-informed neural networks, symbolic \
+regression and equation discovery, Gaussian processes, neural operators and reduced-order modelling."""
+
+[interests.core]            # the physics / engineering domain
+"rogue wave"                 = 3.0
+"freak wave"                 = 3.0
+"extreme wave"               = 3.0
+"wave statistics"            = 2.5
+"wave breaking"              = 3.0
+"breaking wave"              = 3.0
+"nonlinear wave"             = 2.5
+"water wave"                 = 2.5
+"surface gravity wave"       = 2.5
+"ocean wave"                 = 2.5
+"wave group"                 = 2.0
+"wave-structure interaction" = 3.0
+"wave load"                  = 2.5
+"wave loading"               = 2.5
+"wave force"                 = 2.5
+"monopile"                   = 1.5
+"offshore wind"              = 1.2
+"vertical cylinder"          = 2.0
+"wave energy"                = 2.0
+"tidal energy"               = 2.0
+"marine energy"              = 2.0
+"marine renewable"           = 2.0
+"offshore renewable"         = 2.0
+"tidal prediction"           = 2.0
+"tidal analysis"             = 2.0
+"coastal hydrodynamics"      = 2.0
+"coastal engineering"        = 1.8
+"ocean engineering"          = 2.0
+"offshore engineering"       = 1.8
+"wave tank"                  = 1.8
+"wave basin"                 = 1.8
+"wind wave"                  = 1.2
+"modulational instability"   = 2.0
+"kurtosis"                   = 1.8
+"depth transition"           = 1.8
+"free surface"               = 1.5
+"fluid mechanics"            = 1.5
+"hydrodynamics"              = 1.5
+"sea state"                  = 1.5
+"wave forecasting"           = 2.0
+"storm surge"                = 1.2
+"turbulence"                 = 1.0
+"phase resolved"             = 2.0
+"wave prediction"            = 2.0
+"wave field"                 = 1.5
+"irregular wave"             = 1.8
+"random wave"                = 1.8
+"focused wave"               = 2.0
+"wave focusing"              = 2.0
+"directional spreading"      = 2.0
+"wave spectrum"              = 1.5
+"wave height"                = 1.2
+"wave crest"                 = 1.8
+"wave impact"                = 2.0
+"wave run-up"                = 1.5
+"floating offshore wind"     = 1.5
+"sea level"                  = 1.2
+"tidal current"              = 1.8
+"harmonic analysis"          = 1.2
+"wave propagation"           = 1.0
+"deep water"                 = 1.2
+"finite depth"               = 1.5
+"numerical wave tank"        = 2.0
+"spectral wave model"        = 2.0
+"wave turbulence"            = 1.5
+
+[interests.methods]         # how the work is done — counts only alongside the domain
+"physics-informed"           = 2.0
+"scientific machine learning" = 2.0
+"symbolic regression"        = 2.0
+"equation discovery"         = 2.0
+"knowledge discovery"        = 1.8
+"neural operator"            = 1.8
+"gaussian process"           = 1.5
+"data assimilation"          = 1.5
+"reduced order model"        = 1.5
+"digital twin"               = 2.0
+"surrogate model"            = 1.2
+"machine learning"           = 1.0
+"deep learning"              = 0.8
+"data-driven"                = 1.0
+
+[interests.avoid]           # look-alike topics that are NOT mine — each hit lowers a paper's score
+"optical"            = 1.5
+"optic"              = 1.5
+"fiber"              = 1.5
+"laser"              = 1.5
+"plasma"             = 1.5
+"bose einstein"      = 1.5
+"lump"               = 1.2
+"kink"               = 1.2
+"integrable"         = 1.0
+"hirota"             = 1.5
+"darboux"            = 1.5
+"soliton solution"   = 1.2
+"exact solution"     = 0.8
+"fractional"         = 0.8
+"soil"               = 1.2
+"seismic"            = 1.2
+"earthquake"         = 1.2
+"geotechnical"       = 1.2
+"scour"              = 0.6
+"blade"              = 0.8
+"rock socketed"      = 1.5
+"bucket"             = 1.0
+"vibration"          = 0.8
+"damper"             = 1.2
+"aerodynamic"        = 1.0
+"yawed"              = 1.0
+"mooring"            = 0.6
+"aquaculture"        = 1.0
+"beach"              = 0.6
+"acoustic"           = 0.8
+"electromagnetic"    = 1.2
+"quantum"            = 1.2
+"gravitational wave" = 2.0
+"shock wave"         = 1.2
+"brain"              = 2.0
+"clinical"           = 2.0
+"groundwater"        = 1.0
+"traffic"            = 1.5
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Similar-papers feed
+# ─────────────────────────────────────────────────────────────────────────────
+[papers]
+# The feed is a newspaper, not a literature review: it only carries recent work.
+window_days   = 120          # nothing older than this is kept
+new_days      = 10           # "new" = published (or first spotted) within this many days
+max_items     = 140          # papers kept in the feed
+min_score     = 0.30         # similarity floor (0–1)
+# Journals whose papers get a small boost (your own venues are added automatically).
+preferred_venues = [
+  "Journal of Fluid Mechanics", "Physical Review Fluids", "Physics of Fluids", "Coastal Engineering",
+  "Applied Ocean Research", "Ocean Engineering", "Journal of Geophysical Research", "Geophysical Research Letters",
+  "Nature Communications", "Proceedings of the Royal Society A", "Journal of Physical Oceanography",
+  "Physical Review Letters", "Journal of Computational Physics", "Computer Methods in Applied Mechanics and Engineering",
+  "Renewable Energy", "Marine Structures", "Journal of Fluids and Structures", "Ocean Modelling", "arXiv",
+]
+arxiv_categories = ["physics.flu-dyn", "physics.ao-ph", "physics.geo-ph", "nlin.PS", "cs.LG", "cs.CE", "math.NA", "eess.SP"]
+# Search phrases sent to arXiv / Crossref / OpenAlex. Keep them specific.
+queries = [
+  "rogue waves", "freak waves statistics", "extreme ocean waves prediction",
+  "wave breaking machine learning", "breaking waves deep water",
+  "nonlinear wave loads monopile", "wave-structure interaction cylinder",
+  "physics-informed neural network water waves", "symbolic regression fluid mechanics",
+  "equation discovery fluid dynamics", "neural operator ocean waves",
+  "phase-resolved wave prediction", "tidal prediction machine learning",
+  "wave energy converter nonlinear hydrodynamics", "digital twin offshore wind",
+  "surface gravity waves modulational instability",
+]
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Funding search
+# ─────────────────────────────────────────────────────────────────────────────
+[grants]
+min_fit_score        = 60        # below this an opportunity is not shown
+closed_lookback_days = 760       # how far back to scan closed UKRI calls for ones that repeat
+prefilter_min        = 1.6       # keyword pre-screen threshold (used before Claude sees anything)
+max_candidates       = 70        # hard cap on calls sent for analysis
+# EU Funding & Tenders portal — free-text searches; results are screened afterwards.
+eu_queries = [
+  "ocean waves", "offshore renewable energy", "wave energy", "tidal energy", "offshore wind",
+  "coastal resilience extreme events", "digital twin ocean", "marine hydrodynamics",
+  "fluid dynamics machine learning", "extreme weather sea level",
+]
+# Always pull these programmes regardless of keywords (bottom-up schemes with no topic text).
+eu_always = ["ERC-2027-STG", "ERC-2028-STG", "ERC-2027-COG", "HORIZON-MSCA-2027-PF", "HORIZON-MSCA-2027-DN", "HORIZON-MSCA-2026-DN"]
+
+# Keyword pre-screen for funding calls (title + summary). A call must clear `prefilter_min`.
+[grants.keywords]
+"ocean"            = 2.0
+"marine"           = 1.8
+"maritime"         = 1.5
+"offshore"         = 2.0
+"coastal"          = 1.8
+"wave"             = 2.0
+"tidal"            = 2.0
+"sea level"        = 1.5
+"flood"            = 1.0
+"fluid"            = 2.0
+"hydrodynamic"     = 2.0
+"renewable"        = 1.2
+"wind energy"      = 1.5
+"offshore wind"    = 2.5
+"net zero"         = 0.8
+"energy"           = 0.6
+"climate"          = 0.8
+"extreme weather"  = 1.5
+"extreme events"   = 1.5
+"environmental science" = 0.8
+"arctic"           = 1.0
+"engineering"      = 0.8
+"physical sciences" = 0.8
+"mathematical sciences" = 0.8
+"digital twin"     = 2.5
+"simulation"       = 1.2
+"modelling"        = 0.8
+"ai for science"   = 1.8
+"ai adoption across science" = 2.0
+"scientific discovery" = 1.2
+"machine learning" = 0.6
+"supercomput"      = 1.0
+"compute"          = 0.8
+"early career"     = 1.8
+"new investigator" = 1.5
+"fellowship"       = 1.2
+"responsive mode"  = 1.6
+"applicant-led"    = 1.2
+"standard research grant" = 2.0
+"network grant"    = 1.5
+"overseas"         = 1.2
+"international"    = 0.6
+"collaborate with researchers" = 1.2
+"lead agency"      = 1.0
+"travel"           = 0.8
+"infrastructure"   = 0.6
+"resilience"       = 0.8
+"knowledge transfer partnership" = 1.0
+"interdisciplinary" = 1.0
+"cross-research council" = 1.5
+
+# Funders / words that almost never fit — strong negative weights.
+[grants.negative]
+"medical research council" = -4.0
+"mrc"                      = -2.0
+"arts and humanities"      = -4.0
+"ahrc"                     = -3.0
+"economic and social"      = -3.5
+"esrc"                     = -3.0
+"biotechnology"            = -3.5
+"bbsrc"                    = -3.0
+"clinical"                 = -3.0
+"health"                   = -1.5
+"gambling"                 = -4.0
+"invite only"              = -4.0
+"invited"                  = -2.0
+"battery"                  = -2.0
+"quantum"                  = -2.0
+"semiconductor"            = -2.5
+"automotive"               = -2.0
+"biolog"                   = -2.5
+"heritage"                 = -3.0
+"doctoral focal award"     = -2.0
+"investor partnership"     = -3.0
+"scale-up fund"            = -3.0
+"innovation loan"          = -3.0
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Claude — used only by the scheduled GitHub Action (never by the web page).
+#  The API key lives in the repository secret ANTHROPIC_API_KEY.
+# ─────────────────────────────────────────────────────────────────────────────
+[claude]
+model              = "claude-opus-5-5"   # override without editing: repository variable CLAUDE_MODEL
+effort             = "medium"            # low | medium | high
+max_calls_per_run  = 40                  # spending guard: at most this many analyses per daily run
+reanalyse_after_days = 30                # refresh an unchanged call's analysis after this long
+scheme_check_days  = 7                   # how often a recurring scheme's page is re-read when unchanged
+use_web_tools      = true                # let Claude search/fetch when a funder page blocks the script

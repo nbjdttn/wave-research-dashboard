@@ -1,0 +1,65 @@
+name: Update data
+
+# Rebuilds the dashboard's data every morning and commits it. GitHub Pages then republishes the
+# site by itself. Run it by hand any time from the Actions tab ("Run workflow").
+on:
+  schedule:
+    - cron: "17 5 * * *"          # every day at 05:17 UTC — ready before the UK morning
+  workflow_dispatch:
+    inputs:
+      steps:
+        description: "What to refresh"
+        type: choice
+        default: all
+        options: [all, profile, papers, grants]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install --quiet -r requirements.txt
+
+      - name: Refresh data
+        env:
+          # Optional secrets. Without ANTHROPIC_API_KEY everything still runs; new funding calls
+          # are then listed as "awaiting review" instead of being assessed by Claude.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          S2_API_KEY: ${{ secrets.S2_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          STEPS: ${{ inputs.steps }}
+        run: |
+          if [ -z "$STEPS" ] || [ "$STEPS" = "all" ]; then
+            python scripts/update.py
+          else
+            python scripts/update.py "$STEPS"
+          fi
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data assets/img
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit --quiet -m "Daily data refresh ($(date -u +%F))"
+            git pull --quiet --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git push --quiet origin "HEAD:${GITHUB_REF_NAME}"
+          fi
