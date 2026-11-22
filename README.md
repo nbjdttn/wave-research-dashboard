@@ -24,6 +24,9 @@ Tap the sliders icon (top right) to choose a palette. Each one sets the colours 
 figure), **Lilac** (near-black and lilac, Figtree) and **Midnight** (deep indigo, Inter). A palette opens
 in its own mode; *Light or dark* switches to its companion.
 
+The sea under the greeting is a focused wave group: components travel in, come into phase and rise
+into one large crest. Tap the water to raise a crest where you tapped.
+
 ## Set-up — two steps, both doable from a phone
 
 **1. Turn on GitHub Pages**

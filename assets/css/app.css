@@ -35,7 +35,8 @@
   --tab-on-bg: #e9e9e4;
   --pill: #0b0b0b;                   /* the "New" label */
   --on-pill: #fcfcfb;
-  --wave: #eb6834;                   /* the wave line on Today */
+  --wave: #eb6834;                   /* the sea on Today: the wave groups… */
+  --wave-2: #1baf7a;                 /* …and the slower swell behind them */
   --glow: transparent;               /* a tint behind the header (Midnight has one) */
 
   /* data colours — validated categorical order (blue, orange, aqua, yellow) */
@@ -98,6 +99,7 @@
     --pill: #f4f4f1;
     --on-pill: #111110;
     --wave: #f07a48;
+    --wave-2: #2cc38d;
     --series-1: #3987e5;
     --series-2: #d95926;
     --series-3: #199e70;
@@ -135,6 +137,7 @@
   --pill: #f4f4f1;
   --on-pill: #111110;
   --wave: #f07a48;
+  --wave-2: #2cc38d;
   --series-1: #3987e5;
   --series-2: #d95926;
   --series-3: #199e70;
@@ -187,10 +190,6 @@ svg { display: block; }
 .nowrap { white-space: nowrap; }
 
 /* ── masthead ─────────────────────────────────────────────────────────────── */
-.mast-wave svg { width: 100%; height: 100%; }
-.mast-wave .w-fill { fill: url(#wave-fill); }
-.mast-wave .w-line { fill: none; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
-.mast-wave .w-still { stroke-width: 1; }
 
 /* ── chips, buttons, segmented control ────────────────────────────────────── */
 .chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 2px var(--gutter); margin: 0 calc(var(--gutter) * -1); }
@@ -527,9 +526,8 @@ button, summary, .chip, .seg, .tabbar a, .ticker a, .brand { -webkit-user-select
 .mast-date { font: 600 .6875rem/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
 .mast-title { font: var(--w-title) 1.75rem/1.08 var(--sans); letter-spacing: var(--ls-title); margin-top: 8px; }
 .mast-title em { font-style: normal; color: var(--accent-strong); }
-.mast-wave { height: 72px; margin: 4px -18px 0; position: relative; }
-.mast-wave .w-line { stroke: var(--wave); }
-.mast-wave .w-still { stroke: var(--line-2); }
+.mast-wave { height: 104px; margin: 0 -18px; position: relative; }            /* the sea: drawn by assets/js/wave.js */
+.mast-wave canvas { position: absolute; left: 0; top: -22px; width: 100%; height: calc(100% + 22px); cursor: pointer; }   /* room above for spray */
 .ticker { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 4px; padding-top: 12px; border-top: 1px solid var(--line); }
 .ticker a { display: block; min-width: 0; border-radius: 10px; transition: transform .12s; }
 .ticker a:active { transform: scale(.96); }
@@ -642,7 +640,7 @@ button, summary, .chip, .seg, .tabbar a, .ticker a, .brand { -webkit-user-select
   :root { --gutter: 24px; }
   .kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .masthead { padding: 24px 24px 18px; }
-  .mast-wave { height: 96px; margin-left: -24px; margin-right: -24px; }
+  .mast-wave { height: 128px; margin-left: -24px; margin-right: -24px; }
   .mast-title { font-size: 2.25rem; }
   
 }
