@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-22T21:35:19Z",
- "checked_at": "2026-11-22T21:35:19Z",
+ "generated_at": "2026-11-22T21:53:25Z",
+ "checked_at": "2026-11-22T21:53:25Z",
  "researcher": {
   "name": "Tim (Tianning) Tang",
   "short_name": "Tim Tang",
@@ -327,6 +327,7 @@
   "rogue": "Rogue waves & wave statistics",
   "wsi": "Wave–structure interaction",
   "physics": "Nonlinear wave physics & breaking",
+  "spectral": "Spectral wave modelling",
   "tides": "Tides, sea level & coastal",
   "energy": "Marine renewable energy",
   "ml": "Scientific machine learning"
@@ -3870,27 +3871,27 @@
  "sources": {
   "scholar": {
    "ok": false,
-   "checked": "2026-11-22T21:35:19Z",
+   "checked": "2026-11-22T21:53:25Z",
    "note": "scholar.google.com: HTTP 403 for https://scholar.google.com/citations",
    "last_success": "2026-11-22T21:19:35Z"
   },
   "orcid": {
    "ok": true,
-   "checked": "2026-11-22T21:35:19Z",
+   "checked": "2026-11-22T21:53:25Z",
    "note": "45 works",
-   "last_success": "2026-11-22T21:35:19Z"
+   "last_success": "2026-11-22T21:53:25Z"
   },
   "openalex": {
    "ok": true,
-   "checked": "2026-11-22T21:35:19Z",
+   "checked": "2026-11-22T21:53:25Z",
    "note": "",
-   "last_success": "2026-11-22T21:35:19Z"
+   "last_success": "2026-11-22T21:53:25Z"
   },
   "crossref": {
    "ok": true,
-   "checked": "2026-11-22T21:35:19Z",
+   "checked": "2026-11-22T21:53:25Z",
    "note": "56 records cached",
-   "last_success": "2026-11-22T21:35:19Z"
+   "last_success": "2026-11-22T21:53:25Z"
   }
  }
 }

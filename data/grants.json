@@ -1,21 +1,21 @@
 {
- "generated_at": "2026-11-22T21:37:15Z",
+ "generated_at": "2026-11-22T21:56:12Z",
  "counts": {
   "scanned": {
    "ukri_open": 137,
    "ukri_past": 525,
-   "eu": 87,
+   "eu": 102,
    "schemes": 31
   },
-  "screened": 470,
-  "read": 57,
-  "selected": 24,
-  "filtered": 33,
+  "screened": 485,
+  "read": 71,
+  "selected": 27,
+  "filtered": 44,
   "awaiting_review": 0,
   "by_bucket": {
    "deadline": 6,
-   "rolling": 10,
-   "prepare": 8
+   "rolling": 12,
+   "prepare": 9
   }
  },
  "opportunities": [
@@ -1473,122 +1473,6 @@
    "is_new": false
   },
   {
-   "id": "ukri-172727",
-   "source": "ukri",
-   "title": "Isambard-AI and Zenith AIRR supercomputers: Gateway route",
-   "funder": "UKRI",
-   "url": "https://www.ukri.org/opportunity/access-to-isambard-ai-and-zenith-airr-supercomputers-gateway-route/",
-   "published": "2025-08-18",
-   "first_seen": "2026-11-22",
-   "status": "rolling",
-   "bucket": "rolling",
-   "opens": null,
-   "closes": null,
-   "closes_note": "Open - no closing date",
-   "award": {},
-   "eu": null,
-   "history": [],
-   "last_round": null,
-   "analysis": {
-    "summary": "An always-open route to up to 10,000 GPU hours on the Isambard-AI or Zenith national AI supercomputers, to be used within three months, for testing and benchmarking AI code and workflows. It provides compute only (no money), is reviewed lightly by the delivery team and is awarded in fortnightly batches.",
-    "topic_fit": {
-     "verdict": "strong",
-     "notes": "The route covers AI-related research across the whole UKRI remit and explicitly lists AI that makes simulations in climate modelling and engineering design more predictive and less computationally intensive, which is what your neural-operator and physics-informed surrogate work aims at. It is not a waves or fluids call as such."
-    },
-    "career_stage": {
-     "verdict": "suitable",
-     "notes": "Open to any researcher whose contract outlasts the project, and pitched partly at first-time users of AI supercomputing. It is entirely realistic for you to lead."
-    },
-    "eligibility": {
-     "verdict": "eligible",
-     "notes": "A project lead needs a contract longer than the proposed project with a research organisation eligible for UKRI funding, which your permanent post at Manchester satisfies. There is no limit on applications per researcher, but each must be standalone."
-    },
-    "fit_score": 72,
-    "fit_label": "strong",
-    "why_fit": "It is a quick, low-risk way to get serious GPU time for training wave surrogates and to benchmark your code on a national system, with priority given to applicants who have not used AIRR before. The route is also intended as the testing step before larger AIRR allocations.",
-    "concerns": "There is no funding, the hours must be used within three months of the award and the start cannot be deferred, so your code and data need to be ready to run. Resources at each batching date are limited and allocated by tier with partial randomisation, and unsuccessful applications are not automatically reconsidered.",
-    "recommend": true,
-    "recommend_reason": "A day or two of work for a useful block of GPU time that directly supports your machine-learning-for-waves programme, with no deadline to chase.",
-    "focus": "domain_ai",
-    "themes": [
-     "ai-for-science"
-    ],
-    "opportunity_type": "compute_equipment",
-    "role": "lead",
-    "round": {
-     "status": "rolling",
-     "opens": null,
-     "closes": null,
-     "closes_time": null,
-     "stage": "Apply any time; awards batched fortnightly",
-     "other_dates": [],
-     "notes": "UKRI aims to award GPU hours at fortnightly batching dates, with access estimated about one month after submission. You may name a preferred start date up to one month after applying, but resources are released as soon as the project is approved."
-    },
-    "award_summary": {
-     "amount": "Up to 10,000 GPU hours on Isambard-AI or Zenith (compute only, no funding); a one-off 50% top-up can be requested once over 90% is used",
-     "duration": "3 months from project start"
-    },
-    "requirements": [
-     {
-      "item": "A workload that is ready to run",
-      "detail": "The 10,000 GPU hours must be used within three months of the award and the start date cannot be deferred."
-     },
-     {
-      "item": "AIRRPortal online form",
-      "detail": "Three unscored sections: project details, resource request (Isambard-AI or Zenith) and project team membership."
-     },
-     {
-      "item": "Assessment questions document",
-      "detail": "Scored; use the AIRRPortal template. Assessors look for fit to AIRR's scope and the novelty of your use of AI, the expected outputs and their wider benefit, and the link to the industrial strategy, government missions or other policy priorities."
-     },
-     {
-      "item": "Project and organisation details document",
-      "detail": "AIRRPortal template covering compliance, project costs and subsidy history (not scored); academic organisations do not need to provide project costs."
-     },
-     {
-      "item": "Team email addresses",
-      "detail": "Official organisational addresses unique to each team member (no Gmail or shared mailboxes), and no links to external web resources anywhere in the application."
-     },
-     {
-      "item": "Preferred start date",
-      "detail": "Up to one month after submission; the start cannot be deferred once the award is made."
-     }
-    ],
-    "effort": {
-     "level": "light",
-     "prep_time": "1-2 days",
-     "person_days": "1-2",
-     "drivers": [
-      "Short portal form and two templated documents",
-      "No costing or partner letters for academic applicants",
-      "Workload must be ready to run when the hours arrive"
-     ],
-     "start_by": null
-    },
-    "recurrence": {
-     "cadence": "rolling",
-     "typical_open_month": null,
-     "typical_close_month": null,
-     "next_expected_open": null,
-     "next_expected_close": null,
-     "is_estimate": false,
-     "evidence": "Listed as open with no closing date; GPU hours are awarded at fortnightly batching dates."
-    },
-    "next_steps": [
-     "Pick one training job that needs GPUs at scale (for example a neural-operator surrogate for wave–structure loads) and get the code running end to end on a small case.",
-     "Read the AIRRPortal 'how to apply' guidance and download the two document templates.",
-     "Submit when the code is ready, choosing Isambard-AI or Zenith, and time the three-month usage window around your group's availability.",
-     "Keep your usage figures and results: the larger AIRR calls so far (the Innovator route and the 2026 AI open access call) looked for earlier Gateway or GPU use as evidence that the work can scale."
-    ]
-   },
-   "analysed": {
-    "model": "claude (build-time review)",
-    "at": "2026-11-22",
-    "seeded": true
-   },
-   "is_new": false
-  },
-  {
    "id": "ukri-187145",
    "source": "ukri",
    "title": "Pushing the frontiers of environmental research",
@@ -1726,6 +1610,248 @@
     "model": "claude (build-time review)",
     "at": "2026-11-22",
     "seeded": true
+   },
+   "is_new": false
+  },
+  {
+   "id": "ukri-172727",
+   "source": "ukri",
+   "title": "Isambard-AI and Zenith AIRR supercomputers: Gateway route",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/access-to-isambard-ai-and-zenith-airr-supercomputers-gateway-route/",
+   "published": "2025-08-18",
+   "first_seen": "2026-11-22",
+   "status": "rolling",
+   "bucket": "rolling",
+   "opens": null,
+   "closes": null,
+   "closes_note": "Open - no closing date",
+   "award": {},
+   "eu": null,
+   "history": [],
+   "last_round": null,
+   "analysis": {
+    "summary": "An always-open route to up to 10,000 GPU hours on the Isambard-AI or Zenith national AI supercomputers, to be used within three months, for testing and benchmarking AI code and workflows. It provides compute only (no money), is reviewed lightly by the delivery team and is awarded in fortnightly batches.",
+    "topic_fit": {
+     "verdict": "strong",
+     "notes": "The route covers AI-related research across the whole UKRI remit and explicitly lists AI that makes simulations in climate modelling and engineering design more predictive and less computationally intensive, which is what your neural-operator and physics-informed surrogate work aims at. It is not a waves or fluids call as such."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "Open to any researcher whose contract outlasts the project, and pitched partly at first-time users of AI supercomputing. It is entirely realistic for you to lead."
+    },
+    "eligibility": {
+     "verdict": "eligible",
+     "notes": "A project lead needs a contract longer than the proposed project with a research organisation eligible for UKRI funding, which your permanent post at Manchester satisfies. There is no limit on applications per researcher, but each must be standalone."
+    },
+    "fit_score": 72,
+    "fit_label": "strong",
+    "why_fit": "It is a quick, low-risk way to get serious GPU time for training wave surrogates and to benchmark your code on a national system, with priority given to applicants who have not used AIRR before. The route is also intended as the testing step before larger AIRR allocations.",
+    "concerns": "There is no funding, the hours must be used within three months of the award and the start cannot be deferred, so your code and data need to be ready to run. Resources at each batching date are limited and allocated by tier with partial randomisation, and unsuccessful applications are not automatically reconsidered.",
+    "recommend": true,
+    "recommend_reason": "A day or two of work for a useful block of GPU time that directly supports your machine-learning-for-waves programme, with no deadline to chase.",
+    "focus": "domain_ai",
+    "themes": [
+     "ai-for-science"
+    ],
+    "opportunity_type": "compute_equipment",
+    "role": "lead",
+    "round": {
+     "status": "rolling",
+     "opens": null,
+     "closes": null,
+     "closes_time": null,
+     "stage": "Apply any time; awards batched fortnightly",
+     "other_dates": [],
+     "notes": "UKRI aims to award GPU hours at fortnightly batching dates, with access estimated about one month after submission. You may name a preferred start date up to one month after applying, but resources are released as soon as the project is approved."
+    },
+    "award_summary": {
+     "amount": "Up to 10,000 GPU hours on Isambard-AI or Zenith (compute only, no funding); a one-off 50% top-up can be requested once over 90% is used",
+     "duration": "3 months from project start"
+    },
+    "requirements": [
+     {
+      "item": "A workload that is ready to run",
+      "detail": "The 10,000 GPU hours must be used within three months of the award and the start date cannot be deferred."
+     },
+     {
+      "item": "AIRRPortal online form",
+      "detail": "Three unscored sections: project details, resource request (Isambard-AI or Zenith) and project team membership."
+     },
+     {
+      "item": "Assessment questions document",
+      "detail": "Scored; use the AIRRPortal template. Assessors look for fit to AIRR's scope and the novelty of your use of AI, the expected outputs and their wider benefit, and the link to the industrial strategy, government missions or other policy priorities."
+     },
+     {
+      "item": "Project and organisation details document",
+      "detail": "AIRRPortal template covering compliance, project costs and subsidy history (not scored); academic organisations do not need to provide project costs."
+     },
+     {
+      "item": "Team email addresses",
+      "detail": "Official organisational addresses unique to each team member (no Gmail or shared mailboxes), and no links to external web resources anywhere in the application."
+     },
+     {
+      "item": "Preferred start date",
+      "detail": "Up to one month after submission; the start cannot be deferred once the award is made."
+     }
+    ],
+    "effort": {
+     "level": "light",
+     "prep_time": "1-2 days",
+     "person_days": "1-2",
+     "drivers": [
+      "Short portal form and two templated documents",
+      "No costing or partner letters for academic applicants",
+      "Workload must be ready to run when the hours arrive"
+     ],
+     "start_by": null
+    },
+    "recurrence": {
+     "cadence": "rolling",
+     "typical_open_month": null,
+     "typical_close_month": null,
+     "next_expected_open": null,
+     "next_expected_close": null,
+     "is_estimate": false,
+     "evidence": "Listed as open with no closing date; GPU hours are awarded at fortnightly batching dates."
+    },
+    "next_steps": [
+     "Pick one training job that needs GPUs at scale (for example a neural-operator surrogate for wave–structure loads) and get the code running end to end on a small case.",
+     "Read the AIRRPortal 'how to apply' guidance and download the two document templates.",
+     "Submit when the code is ready, choosing Isambard-AI or Zenith, and time the three-month usage window around your group's availability.",
+     "Keep your usage figures and results: the larger AIRR calls so far (the Innovator route and the 2026 AI open access call) looked for earlier Gateway or GPU use as evidence that the work can scale."
+    ]
+   },
+   "analysed": {
+    "model": "claude (build-time review)",
+    "at": "2026-11-22",
+    "seeded": true
+   },
+   "is_new": false
+  },
+  {
+   "id": "ukri-72597",
+   "source": "ukri",
+   "title": "Work with Brazilian researchers: NERC FAPESP lead agency",
+   "funder": "NERC",
+   "url": "https://www.ukri.org/opportunity/work-with-brazilian-researchers-nerc-fapesp-lead-agency/",
+   "published": "2022-05-06",
+   "first_seen": "2026-11-22",
+   "status": "rolling",
+   "bucket": "rolling",
+   "opens": null,
+   "closes": null,
+   "closes_note": "Open - no closing date",
+   "award": {},
+   "eu": null,
+   "history": [],
+   "last_round": null,
+   "analysis": {
+    "summary": "Lets you apply with São Paulo partners to NERC Pushing the Frontiers, with NERC funding UK costs and FAPESP funding Brazilian costs.",
+    "topic_fit": {
+     "verdict": "open_call",
+     "notes": "Any NERC remit topic qualifies; ocean waves, wave modelling and forecasting fit physical oceanography."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "Pushing the Frontiers is responsive-mode and realistic for an early-career PI with a credible partner."
+    },
+    "eligibility": {
+     "verdict": "eligible",
+     "notes": "Manchester is a NERC-eligible organisation; you need a FAPESP-eligible São Paulo co-lead."
+    },
+    "fit_score": 70,
+    "fit_label": "strong",
+    "why_fit": "Adds international collaboration and Brazilian co-funding to a frontier NERC grant on wave science.",
+    "concerns": "Requires a committed São Paulo partner and Pushing the Frontiers' own rounds, limits and competition.",
+    "recommend": true,
+    "recommend_reason": "Open-topic NERC route matching your wave research and wish for international collaboration.",
+    "focus": "open",
+    "themes": [
+     "ocean",
+     "coastal",
+     "climate-environment",
+     "international"
+    ],
+    "opportunity_type": "project_grant",
+    "role": "lead",
+    "round": {
+     "status": "rolling",
+     "opens": null,
+     "closes": null,
+     "closes_time": null,
+     "stage": "Full application via Pushing the Frontiers",
+     "other_dates": [],
+     "notes": "Submit within seven days of receiving the FAPESP SAGe application; check Pushing the Frontiers round dates."
+    },
+    "award_summary": {
+     "amount": "£950,000–£3.45 million combined FEC; NERC pays 80% of UK FEC",
+     "duration": "As set by Pushing the Frontiers"
+    },
+    "requirements": [
+     {
+      "item": "São Paulo co-lead eligibility letter",
+      "detail": "Formal FAPESP confirmation obtained by the São Paulo lead"
+     },
+     {
+      "item": "SAGe registration",
+      "detail": "Register as Partner PI with photo ID; confirm participation"
+     },
+     {
+      "item": "FAPESP application via SAGe",
+      "detail": "Submitted by São Paulo lead; await pre-assessment confirmation"
+     },
+     {
+      "item": "Funding Service application",
+      "detail": "Pushing the Frontiers format; title prefixed 'NERC-FAPESP:'"
+     },
+     {
+      "item": "International collaborative proposals section",
+      "detail": "Mandatory; describe whole joint project"
+     },
+     {
+      "item": "Core team entry",
+      "detail": "FAPESP lead as project co-lead (international), no costs"
+     },
+     {
+      "item": "Differentiated costings",
+      "detail": "UK and São Paulo costs clearly separated and justified"
+     },
+     {
+      "item": "Collaboration agreement",
+      "detail": "Required before research begins, covering IP"
+     }
+    ],
+    "effort": {
+     "level": "major",
+     "prep_time": "3 months part-time",
+     "person_days": "30-45",
+     "drivers": [
+      "finding São Paulo partner",
+      "two-agency submission sequence",
+      "full Pushing the Frontiers case"
+     ],
+     "start_by": null
+    },
+    "recurrence": {
+     "cadence": "rolling",
+     "typical_open_month": null,
+     "typical_close_month": null,
+     "next_expected_open": null,
+     "next_expected_close": null,
+     "is_estimate": false,
+     "evidence": "Open with no closing date since 2022; last updated March 2026."
+    },
+    "next_steps": [
+     "Identify a São Paulo wave or ocean engineering partner, e.g. USP.",
+     "Check upcoming Pushing the Frontiers deadlines and Manchester demand management.",
+     "Register on SAGe and agree budget split with partner."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-22",
+    "seeded": false
    },
    "is_new": false
   },
@@ -1959,6 +2085,129 @@
     "model": "claude (build-time review)",
     "at": "2026-11-22",
     "seeded": true
+   },
+   "is_new": false
+  },
+  {
+   "id": "ukri-115004",
+   "source": "ukri",
+   "title": "Collaborate with researchers in Brazil",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/collaborate-with-researchers-in-brazil/",
+   "published": "2020-09-20",
+   "first_seen": "2026-11-22",
+   "status": "rolling",
+   "bucket": "rolling",
+   "opens": null,
+   "closes": null,
+   "closes_note": "Open - no closing date",
+   "award": {},
+   "eu": null,
+   "history": [],
+   "last_round": null,
+   "analysis": {
+    "summary": "Route for joint UK–São Paulo research grants via EPSRC/NERC responsive mode, co-funded by FAPESP, led by UK PIs.",
+    "topic_fit": {
+     "verdict": "open_call",
+     "notes": "Any topic within EPSRC or NERC remit, so your wave and offshore research fits."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "Standard responsive-mode grants are realistic for you as an early-career PI."
+    },
+    "eligibility": {
+     "verdict": "eligible",
+     "notes": "Manchester is UKRI-eligible, but you need a FAPESP-eligible São Paulo partner."
+    },
+    "fit_score": 64,
+    "fit_label": "possible",
+    "why_fit": "It lets you lead a full grant with São Paulo collaborators, such as USP offshore and ocean engineering groups.",
+    "concerns": "It is only worthwhile if you have or can build a credible São Paulo partner.",
+    "recommend": true,
+    "recommend_reason": "It is a flexible, always-open route to a PI-led international grant in your own research area.",
+    "focus": "open",
+    "themes": [
+     "international",
+     "ocean",
+     "offshore-energy",
+     "any-discipline"
+    ],
+    "opportunity_type": "project_grant",
+    "role": "lead",
+    "round": {
+     "status": "rolling",
+     "opens": null,
+     "closes": null,
+     "closes_time": null,
+     "stage": "Full application via the council's responsive-mode opportunity",
+     "other_dates": [],
+     "notes": "The lead agency agreement runs until December 2030; you submit within 7 days of receiving the SAGe copy."
+    },
+    "award_summary": {
+     "amount": "As per the EPSRC/NERC responsive-mode scheme; FAPESP funds the São Paulo costs",
+     "duration": "As per the chosen scheme"
+    },
+    "requirements": [
+     {
+      "item": "FAPESP eligibility letter",
+      "detail": "Obtained by the São Paulo lead before applying"
+     },
+     {
+      "item": "SAGe registration and confirmation",
+      "detail": "You create a SAGe login and confirm your participation"
+     },
+     {
+      "item": "FAPESP application in SAGe",
+      "detail": "Submitted by the São Paulo lead; await pre-assessment checks"
+     },
+     {
+      "item": "UKRI Funding Service application",
+      "detail": "Standard EPSRC/NERC responsive-mode sections — typical, confirm in guidance"
+     },
+     {
+      "item": "UK costings and justification",
+      "detail": "Entered in Funding Service finance fields"
+     },
+     {
+      "item": "FAPESP budget and proposal PDF",
+      "detail": "Uploaded as attachments; may be a separate budget form"
+     },
+     {
+      "item": "Research office check",
+      "detail": "Follow internal institutional deadlines before submission"
+     }
+    ],
+    "effort": {
+     "level": "heavy",
+     "prep_time": "2-3 months part-time",
+     "person_days": "25-40",
+     "drivers": [
+      "Full responsive-mode case for support",
+      "Coordinating a parallel FAPESP submission",
+      "Balancing effort across both sides",
+      "Strict 7-day submission window"
+     ],
+     "start_by": null
+    },
+    "recurrence": {
+     "cadence": "rolling",
+     "typical_open_month": null,
+     "typical_close_month": null,
+     "next_expected_open": null,
+     "next_expected_close": null,
+     "is_estimate": false,
+     "evidence": "The call has no closing date; the MoU was renewed for applications until December 2030."
+    },
+    "next_steps": [
+     "Identify São Paulo partners in ocean or offshore engineering, e.g. USP.",
+     "Choose between EPSRC and NERC responsive mode for the joint project.",
+     "Ask your partner to start FAPESP eligibility confirmation early."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-22",
+    "seeded": false
    },
    "is_new": false
   },
@@ -2643,6 +2892,148 @@
    "is_new": false
   },
   {
+   "id": "scheme-british-council-ispf-research-collaborations",
+   "source": "scheme",
+   "title": "ISPF Research Collaboration Grants",
+   "funder": "British Council (International Science Partnerships Fund)",
+   "url": "https://opportunities-insight.britishcouncil.org/short-articles/opportunities/ispf-research-collaboration-grants-2025",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "closed",
+   "bucket": "prepare",
+   "opens": "2025-06-02",
+   "closes": "2025-08-04",
+   "closes_note": null,
+   "award": {},
+   "eu": null,
+   "history": [],
+   "last_round": {
+    "opened": "2025-06-02",
+    "closed": "2025-08-04",
+    "label": "ISPF Research Collaboration Grants 2025 (third call)"
+   },
+   "analysis": {
+    "summary": "Small seed grants for UK institutions to start or deepen bilateral research collaborations with named ISPF partner countries.",
+    "topic_fit": {
+     "verdict": "open_call",
+     "notes": "Any research topic; you could propose coastal or wave work with Indonesian, Malaysian, Thai or Turkish partners."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "Small seed projects are realistic for an early-career PI to lead."
+    },
+    "eligibility": {
+     "verdict": "check",
+     "notes": "Partner-country list changes each call; you need an eligible partner institution in a listed country."
+    },
+    "fit_score": 62,
+    "fit_label": "possible",
+    "why_fit": "It is a light international collaboration award, which you asked for, with partners in coastal nations.",
+    "concerns": "The 2025 round has closed and no later round is confirmed; future ISPF funding is uncertain.",
+    "recommend": true,
+    "recommend_reason": "Worth watching for the next call if a suitable partner country is listed.",
+    "focus": "open",
+    "themes": [
+     "international",
+     "coastal",
+     "any-discipline"
+    ],
+    "opportunity_type": "travel_exchange",
+    "role": "lead",
+    "round": {
+     "status": "closed",
+     "opens": "2025-06-02",
+     "closes": "2025-08-04",
+     "closes_time": null,
+     "stage": "Expression of interest, then full application by invitation",
+     "other_dates": [
+      {
+       "label": "EOI deadline",
+       "date": "2025-06-30"
+      },
+      {
+       "label": "Invitation to full application",
+       "date": "2025-07-04"
+      },
+      {
+       "label": "Outcome of selection",
+       "date": "2025-12-01"
+      },
+      {
+       "label": "Project start",
+       "date": "2026-01-01"
+      },
+      {
+       "label": "Project end",
+       "date": "2027-12-31"
+      }
+     ],
+     "notes": "Third call; EOI closed 30 June 2025 at 12:00; panels in October 2025."
+    },
+    "award_summary": {
+     "amount": "About £79k per project on average (£1.9m across up to 24 projects)",
+     "duration": "Up to 2 years (January 2026 to December 2027)"
+    },
+    "requirements": [
+     {
+      "item": "Eligible partner institution",
+      "detail": "Partner must be in a listed country; it applies in parallel locally"
+     },
+     {
+      "item": "Expression of interest",
+      "detail": "Submitted via grants.britishcouncil.org; eligibility checked"
+     },
+     {
+      "item": "Full application form",
+      "detail": "By invitation only; no corrections allowed after the deadline"
+     },
+     {
+      "item": "Project plan and impact",
+      "detail": "Should include non-academic engagement; typical, confirm in the guidance"
+     },
+     {
+      "item": "Budget and costings",
+      "detail": "UK-side costs only; typical, confirm in the guidance"
+     },
+     {
+      "item": "Institutional approval",
+      "detail": "Research office sign-off; typical, confirm in the guidance"
+     }
+    ],
+    "effort": {
+     "level": "moderate",
+     "prep_time": "3-4 weeks part-time",
+     "person_days": "10-15",
+     "drivers": [
+      "Finding a partner in an eligible country",
+      "Two-stage process",
+      "Coordinating with the partner's in-country application"
+     ],
+     "start_by": "2027-07-04"
+    },
+    "recurrence": {
+     "cadence": "irregular",
+     "typical_open_month": 6,
+     "typical_close_month": 8,
+     "next_expected_open": "2027-06",
+     "next_expected_close": "2027-08",
+     "is_estimate": true,
+     "evidence": "Third call ran from June to August 2025; country-specific calls are occasional and ISPF continuation is unconfirmed."
+    },
+    "next_steps": [
+     "Set an alert on the British Council ISPF opportunities page for new calls.",
+     "Identify coastal or wave researchers in likely partner countries, such as Indonesia or Malaysia.",
+     "Email UK-ISPF@britishcouncil.org to ask about future call timing."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-22",
+    "seeded": false
+   },
+   "is_new": false
+  },
+  {
    "id": "scheme-erc-starting-grant",
    "source": "scheme",
    "title": "ERC Starting Grant",
@@ -3199,6 +3590,18 @@
    "fit_score": 62
   },
   {
+   "id": "eu-HORIZON-MISS-2024-OCEAN-IBA",
+   "source": "eu",
+   "title": "EU Public Infrastructure for the European Digital Twin Ocean, phase 2",
+   "funder": "Horizon Europe",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2024-OCEAN-IBA",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "open",
+   "reason": "The topic is promising but scope, budget and eligibility are unknown; monitor rather than commit now.",
+   "fit_score": 60
+  },
+  {
    "id": "scheme-royal-society-industry-fellowship",
    "source": "scheme",
    "title": "Industry Fellowship",
@@ -3295,18 +3698,6 @@
    "fit_score": 55
   },
   {
-   "id": "scheme-british-council-ispf-research-collaborations",
-   "source": "scheme",
-   "title": "ISPF Research Collaboration Grants",
-   "funder": "British Council (International Science Partnerships Fund)",
-   "url": "https://opportunities-insight.britishcouncil.org/short-articles/opportunities/ispf-research-collaboration-grants-2025",
-   "published": null,
-   "first_seen": "2026-11-22",
-   "status": "closed",
-   "reason": "The round is closed and recurrence is unconfirmed, so it is worth watching rather than acting on.",
-   "fit_score": 55
-  },
-  {
    "id": "ukri-122216",
    "source": "ukri",
    "title": "EPSRC network grant: Nov 2023: responsive mode",
@@ -3331,6 +3722,18 @@
    "fit_score": 52
   },
   {
+   "id": "ukri-1631",
+   "source": "ukri",
+   "title": "Knowledge Transfer Partnership",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership/",
+   "published": "2020-09-20",
+   "first_seen": "2026-11-22",
+   "status": "rolling",
+   "reason": "Business-led innovation scheme with modest research value; pursue only if a company approaches you.",
+   "fit_score": 50
+  },
+  {
    "id": "ukri-202875",
    "source": "ukri",
    "title": "Knowledge Transfer Partnership (KTP): 2026 – 2027 Round 3",
@@ -3340,6 +3743,18 @@
    "first_seen": "2026-11-22",
    "status": "closed",
    "reason": "Only worth pursuing once a UK company with a concrete need and budget is on board; it funds innovation in a business rather than the research grants and fellowships you asked for.",
+   "fit_score": 50
+  },
+  {
+   "id": "scheme-raeng-industrial-fellowships",
+   "source": "scheme",
+   "title": "Industrial Fellowships",
+   "funder": "Royal Academy of Engineering",
+   "url": "https://raeng.org.uk/industrial-fellowships",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "closed",
+   "reason": "The programme is paused and mid-career-focused; revisit when the revised rules are published.",
    "fit_score": 50
   },
   {
@@ -3375,7 +3790,7 @@
    "published": null,
    "first_seen": "2026-11-22",
    "status": "open",
-   "reason": "Topic: Civil engineering themes unknown; offshore foundations or coastal resilience might fit.",
+   "reason": "Topic: Civil engineering fund; this year's three themes are unseen, so offshore or coastal fit is unconfirmed.",
    "fit_score": 50
   },
   {
@@ -3391,6 +3806,18 @@
    "fit_score": 48
   },
   {
+   "id": "ukri-95437",
+   "source": "ukri",
+   "title": "Collaborate with researchers in Luxembourg",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/collaborate-with-researchers-in-luxembourg/",
+   "published": "2022-12-21",
+   "first_seen": "2026-11-22",
+   "status": "rolling",
+   "reason": "Mechanism, not new money; worthwhile only if a Luxembourg partner already exists.",
+   "fit_score": 48
+  },
+  {
    "id": "ukri-193012",
    "source": "ukri",
    "title": "Accelerated Knowledge Transfer Partnerships 6 (AKT 6)",
@@ -3400,18 +3827,6 @@
    "first_seen": "2026-11-22",
    "status": "closed",
    "reason": "Closed, dependent on a company partner you would have to find first, and outside the funding types you asked for; keep it in mind only if an industrial contact wants a joint project.",
-   "fit_score": 48
-  },
-  {
-   "id": "scheme-raeng-industrial-fellowships",
-   "source": "scheme",
-   "title": "Industrial Fellowships",
-   "funder": "Royal Academy of Engineering",
-   "url": "https://raeng.org.uk/industrial-fellowships",
-   "published": null,
-   "first_seen": "2026-11-22",
-   "status": "closed",
-   "reason": "It is paused, aimed at mid-career staff and poorly timed for a newly appointed lecturer.",
    "fit_score": 48
   },
   {
@@ -3437,18 +3852,6 @@
    "status": "upcoming",
    "reason": "Topic: The topic is mostly about demonstrating nature-based solutions with public authorities, ecological restoration and replication plans. Storm surge, flooding, erosion under extreme events and the required link to th",
    "fit_score": 46
-  },
-  {
-   "id": "ukri-179370",
-   "source": "ukri",
-   "title": "Future Leaders Fellowships: round 11",
-   "funder": "UKRI",
-   "url": "https://www.ukri.org/opportunity/future-leaders-fellowship-round-11/",
-   "published": "2026-02-02",
-   "first_seen": "2026-11-22",
-   "status": "closed",
-   "reason": "Your existing New Investigator Award likely makes you ineligible; major effort for a doubtful case.",
-   "fit_score": 45
   },
   {
    "id": "scheme-lrf-small-grants",
@@ -3483,8 +3886,20 @@
    "published": null,
    "first_seen": "2026-11-22",
    "status": "open",
-   "reason": "Topic: The AI strand targets public-sector policy challenges; coastal forecasting could fit, but this is not its focus.",
-   "fit_score": 45
+   "reason": "Topic: AI strand targets public-sector policy tools; coastal or flood forecasting could fit, but this is not the core aim.",
+   "fit_score": 44
+  },
+  {
+   "id": "ukri-144640",
+   "source": "ukri",
+   "title": "NERC urgency funding",
+   "funder": "NERC",
+   "url": "https://www.ukri.org/opportunity/nerc-urgency-funding-open/",
+   "published": "2026-09-24",
+   "first_seen": "2026-11-22",
+   "status": "rolling",
+   "reason": "Topic: Event-driven NERC remit; storms and extreme weather are largely excluded, so few wave events would qualify.",
+   "fit_score": 42
   },
   {
    "id": "ukri-178467",
@@ -3499,16 +3914,16 @@
    "fit_score": 42
   },
   {
-   "id": "ukri-157246",
+   "id": "ukri-184313",
    "source": "ukri",
-   "title": "Proof of concept",
+   "title": "UKRI Translation: Proof of Concept",
    "funder": "UKRI",
-   "url": "https://www.ukri.org/opportunity/proof-of-concept/",
-   "published": "2025-03-12",
+   "url": "https://www.ukri.org/opportunity/ukri-translation-proof-of-concept/",
+   "published": "2026-03-04",
    "first_seen": "2026-11-22",
    "status": "closed",
-   "reason": "Topic: Any discipline, but commercialisation only; your wave-prediction or loading tools would need a market case.",
-   "fit_score": 40
+   "reason": "Topic: Any discipline, but only commercialisation; fits only if you have a marketable wave-forecasting or loads tool.",
+   "fit_score": 42
   },
   {
    "id": "scheme-aria-opportunity-seeds",
@@ -3523,16 +3938,16 @@
    "fit_score": 38
   },
   {
-   "id": "ukri-193290",
+   "id": "ukri-157246",
    "source": "ukri",
-   "title": "Future offshore wind technologies: industrial research (research organisations)",
-   "funder": "Innovate UK",
-   "url": "https://www.ukri.org/opportunity/future-offshore-wind-technologies-industrial-research-research-organisations/",
-   "published": "2026-05-28",
+   "title": "Proof of concept",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/proof-of-concept/",
+   "published": "2025-03-12",
    "first_seen": "2026-11-22",
    "status": "closed",
-   "reason": "Business-led competition where a university is a minor partner, and the round has closed.",
-   "fit_score": 35
+   "reason": "Topic: Open to any discipline, but funds commercialisation only, not the wave research you want funded.",
+   "fit_score": 32
   },
   {
    "id": "ukri-207677",
@@ -3547,6 +3962,30 @@
    "fit_score": 30
   },
   {
+   "id": "eu-ERC-2027-COG",
+   "source": "eu",
+   "title": "ERC Consolidator Grant",
+   "funder": "ERC",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERC-2027-COG",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "open",
+   "reason": "Career stage: Built for PIs 7–12 years post-PhD with an established team; you are four years out.",
+   "fit_score": 30
+  },
+  {
+   "id": "ukri-193290",
+   "source": "ukri",
+   "title": "Future offshore wind technologies: industrial research (research organisations)",
+   "funder": "Innovate UK",
+   "url": "https://www.ukri.org/opportunity/future-offshore-wind-technologies-industrial-research-research-organisations/",
+   "published": "2026-05-28",
+   "first_seen": "2026-11-22",
+   "status": "closed",
+   "reason": "Business-led innovation competition you cannot lead, which you asked to exclude, and it is closed.",
+   "fit_score": 30
+  },
+  {
    "id": "scheme-raeng-research-fellowships",
    "source": "scheme",
    "title": "Research Fellowships",
@@ -3557,6 +3996,90 @@
    "status": "closed",
    "reason": "Not eligible: The 2026 EoI has closed; the 2027 cut-off (about Dec 2022) likely excludes your 2022 PhD.",
    "fit_score": 30
+  },
+  {
+   "id": "eu-HORIZON-MISS-2027-03-OCEAN-03",
+   "source": "eu",
+   "title": "Green, circular and resilient harbours",
+   "funder": "Horizon Europe",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2027-03-OCEAN-03",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "upcoming",
+   "reason": "Topic: Mainly port pollution, biodiversity and circularity; coastal resilience to extreme events is only a minor strand.",
+   "fit_score": 28
+  },
+  {
+   "id": "eu-HORIZON-NATURE-2027-04-01",
+   "source": "eu",
+   "title": "A stronger Global Ocean Observing System to enhance Europe’s strategic autonomy, climate resilience and biodiversity conservation",
+   "funder": "Horizon Europe",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-NATURE-2027-04-01",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "open",
+   "reason": "Topic: Ocean observing and biodiversity focus; waves appear only marginally through physical variables and observing-system design work.",
+   "fit_score": 22
+  },
+  {
+   "id": "ukri-203648",
+   "source": "ukri",
+   "title": "Water4All 2026 call: sustainable water management",
+   "funder": "NERC · EPSRC",
+   "url": "https://www.ukri.org/opportunity/water4all-2026-call-sustainable-water-management/",
+   "published": "2026-09-08",
+   "first_seen": "2026-11-22",
+   "status": "open",
+   "reason": "Topic: Focus is catchments, groundwater and infrastructure; extreme events are excluded, and coastal waters fall in unfunded Topic 4.",
+   "fit_score": 22
+  },
+  {
+   "id": "ukri-179370",
+   "source": "ukri",
+   "title": "Future Leaders Fellowships: round 11",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/future-leaders-fellowship-round-11/",
+   "published": "2026-02-02",
+   "first_seen": "2026-11-22",
+   "status": "closed",
+   "reason": "Career stage: Your New Investigator Award and permanent lectureship suggest you have already reached independence.",
+   "fit_score": 22
+  },
+  {
+   "id": "ukri-185188",
+   "source": "ukri",
+   "title": "Early Independence: NERC Independent Research Fellowship 2026",
+   "funder": "NERC",
+   "url": "https://www.ukri.org/opportunity/early-independence-nerc-independent-research-fellowship-2026/",
+   "published": "2026-02-25",
+   "first_seen": "2026-11-22",
+   "status": "closed",
+   "reason": "Career stage: Aimed at researchers not yet independent; you already hold a permanent lectureship.",
+   "fit_score": 15
+  },
+  {
+   "id": "ukri-156303",
+   "source": "ukri",
+   "title": "NERC Independent Research Fellowship 2024",
+   "funder": "NERC",
+   "url": "https://www.ukri.org/opportunity/nerc-independent-research-fellowship-2024/",
+   "published": "2024-12-23",
+   "first_seen": "2026-11-22",
+   "status": "closed",
+   "reason": "Career stage: Aimed at pre-independence researchers; you already hold a permanent lectureship.",
+   "fit_score": 10
+  },
+  {
+   "id": "ukri-4643",
+   "source": "ukri",
+   "title": "UKRI-SBE lead agency opportunity",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/ukri-sbe-lead-agency-opportunity/",
+   "published": "2020-09-20",
+   "first_seen": "2026-11-22",
+   "status": "rolling",
+   "reason": "Topic: Remit is AHRC, BBSRC, ESRC and NSF/SBE; ocean waves and fluids fall outside.",
+   "fit_score": 5
   },
   {
    "id": "scheme-royal-society-urf",
@@ -3576,43 +4099,43 @@
   "ukri": {
    "ok": true,
    "count": 137,
-   "checked": "2026-11-22T21:37:15Z",
-   "last_success": "2026-11-22T21:37:15Z"
+   "checked": "2026-11-22T21:56:12Z",
+   "last_success": "2026-11-22T21:56:12Z"
   },
   "ukri_archive": {
    "ok": true,
    "count": 10,
-   "checked": "2026-11-22T21:37:15Z",
-   "last_success": "2026-11-22T21:37:15Z"
+   "checked": "2026-11-22T21:56:12Z",
+   "last_success": "2026-11-22T21:56:12Z"
   },
   "eu": {
    "ok": true,
-   "count": 87,
-   "checked": "2026-11-22T21:37:15Z",
-   "last_success": "2026-11-22T21:37:15Z"
+   "count": 102,
+   "checked": "2026-11-22T21:56:12Z",
+   "last_success": "2026-11-22T21:56:12Z"
   },
   "schemes": {
    "ok": true,
    "count": 31,
-   "checked": "2026-11-22T21:37:15Z"
+   "checked": "2026-11-22T21:56:12Z"
   }
  },
  "ai": {
   "enabled": true,
   "key_present": true,
   "model": "claude-opus-5-5",
-  "calls_this_run": 0,
-  "estimated_cost_usd": 0.0,
+  "calls_this_run": 29,
+  "estimated_cost_usd": 1.643,
   "usage": {
-   "input_tokens": 0,
-   "output_tokens": 0,
-   "cache_read_input_tokens": 0,
-   "cache_creation_input_tokens": 0,
+   "input_tokens": 136106,
+   "output_tokens": 50046,
+   "cache_read_input_tokens": 133198,
+   "cache_creation_input_tokens": 8840,
    "web_searches": 0
   },
   "errors": [],
-  "last_ai_run": "2026-11-22T20:56:13Z",
-  "total_calls": 19,
-  "total_cost_usd": 1.62
+  "last_ai_run": "2026-11-22T21:56:12Z",
+  "total_calls": 48,
+  "total_cost_usd": 3.26
  }
 }
