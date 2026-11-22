@@ -385,6 +385,10 @@ def build(cfg: dict) -> dict:
     pubs_by_year = [{"year": y, **{t: by_year[y].get(t, 0) for t in ("journal", "conference", "preprint", "thesis", "other")}}
                     for y in range(years[0], max(years[-1], this_year) + 1)] if years else []
 
+    for p in pubs:                                # recomputed every run, so a new theme reaches older records too
+        title_l = p["title"].lower()
+        p["themes"] = [k for k, _, pat in THEMES if re.search(pat, title_l)] or \
+                      [k for k, _, pat in THEMES if re.search(pat, f"{title_l} {(p.get('abstract') or '').lower()}")][:2]
     themes = []
     for k, label, _ in THEMES:
         sel = [p for p in pubs if k in p["themes"]]
