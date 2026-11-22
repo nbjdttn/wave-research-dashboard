@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-11-22T17:35:44Z",
+ "generated_at": "2026-11-22T17:37:46Z",
  "counts": {
   "scanned": {
    "ukri_open": 137,
    "ukri_past": 525,
-   "eu": 89,
+   "eu": 87,
    "schemes": 31
   },
-  "screened": 472,
+  "screened": 470,
   "read": 57,
   "selected": 24,
   "filtered": 33,
@@ -3608,25 +3608,25 @@
   "ukri": {
    "ok": true,
    "count": 137,
-   "checked": "2026-11-22T17:35:44Z",
-   "last_success": "2026-11-22T17:35:44Z"
+   "checked": "2026-11-22T17:37:46Z",
+   "last_success": "2026-11-22T17:37:46Z"
   },
   "ukri_archive": {
    "ok": true,
    "count": 10,
-   "checked": "2026-11-22T17:35:44Z",
-   "last_success": "2026-11-22T17:35:44Z"
+   "checked": "2026-11-22T17:37:46Z",
+   "last_success": "2026-11-22T17:37:46Z"
   },
   "eu": {
    "ok": true,
-   "count": 89,
-   "checked": "2026-11-22T17:35:44Z",
-   "last_success": "2026-11-22T17:35:44Z"
+   "count": 87,
+   "checked": "2026-11-22T17:37:46Z",
+   "last_success": "2026-11-22T17:37:46Z"
   },
   "schemes": {
    "ok": true,
    "count": 31,
-   "checked": "2026-11-22T17:35:44Z"
+   "checked": "2026-11-22T17:37:46Z"
   }
  },
  "ai": {

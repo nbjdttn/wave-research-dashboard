@@ -27,7 +27,7 @@ from .util import (CACHE, CONFIG, DATA, SourceError, log, now_iso, parse_date, r
 
 # The pipeline's memory, split so that the large, slow-changing parts are not rewritten every day.
 CACHE_FILES = {
-    "grants.json": ("triage", "analysis", "first_seen", "baseline"),          # decisions
+    "grants.json": ("triage", "analysis", "first_seen", "last_seen", "baseline"),   # decisions
     "grants_listings.json": ("ukri_live", "ukri_archive", "eu_live"),         # what the funders list
     "grants_texts.json": ("detail", "scheme_pages"),                          # call texts already read
 }
@@ -37,7 +37,7 @@ def load_cache() -> dict:
     cache: dict = {}
     for name in CACHE_FILES:
         cache.update(read_json(CACHE / name, {}) or {})
-    for k in ("triage", "analysis", "detail", "first_seen", "scheme_pages"):
+    for k in ("triage", "analysis", "detail", "first_seen", "last_seen", "scheme_pages"):
         cache.setdefault(k, {})
     for k in ("ukri_live", "ukri_archive", "eu_live"):
         cache.setdefault(k, [])
@@ -48,6 +48,11 @@ def load_cache() -> dict:
 def save_cache(cache: dict) -> None:
     for name, keys in CACHE_FILES.items():
         write_json(CACHE / name, {k: cache[k] for k in keys if k in cache}, compact=True)
+
+
+def days_since(stamp: str | None) -> int:
+    d = parse_date(stamp)
+    return (today() - d).days if d else 9999
 
 
 GOOD_TOPIC = {"core", "strong", "open_call"}
@@ -374,6 +379,14 @@ def run(cfg: dict) -> dict:
                 if it["identifier"].startswith(ident):
                     it["_always"] = True
                     found[it["id"]] = it
+        # The portal's ranking shuffles between calls. A topic we have already decided to keep must
+        # not vanish because it slipped off a results page, so those are fetched by identifier.
+        wanted = [i for i in cache.get("eu_live", [])
+                  if i["id"] not in found and (cache["triage"].get(i["id"]) or {}).get("keep")]
+        for old in wanted[:25]:
+            for it in F.eu_search(f'"{old["identifier"]}"', page_size=5):
+                if it["identifier"] == old["identifier"]:
+                    found[it["id"]] = it
         return list(found.values())
     eu_items = attempt("eu", eu, None)
     if eu_items is None:
@@ -432,10 +445,6 @@ def run(cfg: dict) -> dict:
     # Each scheme page is re-read every day (free). Claude is asked again only when the page has
     # changed and the last look is at least `scheme_check_days` old, or after `reanalyse_after_days`.
     check_days = int(cc.get("scheme_check_days", 7))
-
-    def days_since(stamp: str | None) -> int:
-        d = parse_date(stamp)
-        return (today() - d).days if d else 9999
 
     listed = {i["url"].rstrip("/") for i in shortlist}
     for sc in schemes:
@@ -553,10 +562,14 @@ def run(cfg: dict) -> dict:
     filtered.sort(key=lambda f: -f["fit_score"])
     unreviewed.sort(key=lambda u: -(u.get("keyword_score") or 0))
 
-    # prune caches of things that left every list
-    alive = {r["item"]["id"] for r in out_items} | set(pool)
-    for part in ("detail", "analysis", "triage"):
-        cache[part] = {k: v for k, v in cache[part].items() if k in alive or k.startswith("scheme-")}
+    # Forget a call only after it has been gone for two months: a single day's absence (a listing
+    # hiccup, a shuffled search page) must not throw away a decision that cost a Claude call.
+    for cid in {r["item"]["id"] for r in out_items} | set(pool):
+        cache["last_seen"][cid] = tday
+    gone = {cid for cid, seen in cache["last_seen"].items() if days_since(seen) > 60}
+    for part in ("detail", "analysis", "triage", "first_seen", "last_seen"):
+        cache[part] = {k: v for k, v in cache[part].items()
+                       if k not in gone and (k in cache["last_seen"] or k.startswith("scheme-") or part == "last_seen")}
     save_cache(cache)
 
     ai_prev = prev.get("ai") or {}
