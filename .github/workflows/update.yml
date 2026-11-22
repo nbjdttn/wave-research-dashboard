@@ -63,8 +63,18 @@ jobs:
           git add -A data assets/img
           if git diff --cached --quiet; then
             echo "Nothing changed."
-          else
-            git commit --quiet -m "Daily data refresh ($(date -u +%F))"
-            git pull --quiet --rebase --autostash origin "${GITHUB_REF_NAME}"
-            git push --quiet origin "HEAD:${GITHUB_REF_NAME}"
+            exit 0
           fi
+          git commit --quiet -m "Daily data refresh ($(date -u +%F))"
+          # Someone else may have pushed meanwhile (another run, or the daily agent). The files here are
+          # generated, so on a clash this run's fresh copy wins; if it still cannot be published, the
+          # next run will do it — a busy branch must not fail the job.
+          for attempt in 1 2 3; do
+            if git pull --quiet --rebase -X theirs origin "${GITHUB_REF_NAME}" \
+               && git push --quiet origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            sleep 7
+          done
+          echo "::warning::This refresh could not be published because the branch kept changing; the next run will publish."

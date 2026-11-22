@@ -11,10 +11,12 @@ does nothing.
 from __future__ import annotations
 
 import os
+import re
 
 from .util import CACHE, DATA, SourceError, fetch, log, parse_date, read_json, today, write_json
 
 TITLE = "Funding alerts"
+MARK = re.compile(r"<!-- wave:(\S+) -->")
 API = "https://api.github.com"
 EFFORT = {"light": "light", "moderate": "moderate", "heavy": "heavy", "major": "major"}
 
@@ -56,6 +58,7 @@ def run(cfg: dict) -> dict:
         return state
     if not items:
         log("  alerts: nothing new to announce")
+        write_json(CACHE / "alerts.json", state)
         return state
     owner, name = repo.split("/", 1)
     site = f"https://{owner.lower()}.github.io/{name}/"
@@ -71,9 +74,16 @@ def run(cfg: dict) -> dict:
                         f"deadline within a fortnight. Subscribe to this issue to be told.\n\nDashboard: {site}"})
             issue = made.json()["number"]
         state["issue"] = issue
+        # what has been said already is read from the issue itself, so nothing is repeated even if an
+        # earlier run announced it and then failed to save its notes
+        said = fetch(f"{API}/repos/{repo}/issues/{issue}/comments", params={"per_page": 100}, headers=_headers(token)).json()
+        marked = {m for c in said for m in MARK.findall(c.get("body") or "")}
+        for key, _, _ in [i for i in items if i[0] in marked]:
+            sent[key] = today().isoformat()
+        items = [i for i in items if i[0] not in marked]
         done = 0
         for key, text, o in items[:6]:                     # never a flood
-            body = f"{text}\n\n[Open in the dashboard]({site}#funding/{o['id']}) · [the call]({o['url']})"
+            body = f"{text}\n\n[Open in the dashboard]({site}#funding/{o['id']}) · [the call]({o['url']})\n<!-- wave:{key} -->"
             fetch(f"{API}/repos/{repo}/issues/{issue}/comments", method="POST", headers=_headers(token), ok_statuses=(201,),
                   json_body={"body": body})
             sent[key] = today().isoformat()
