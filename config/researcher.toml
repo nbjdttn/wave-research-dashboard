@@ -332,6 +332,53 @@ eu_always = ["ERC-2027-STG", "ERC-2028-STG", "ERC-2027-COG", "HORIZON-MSCA-2027-
 "innovation loan"          = -3.0
 
 # ─────────────────────────────────────────────────────────────────────────────
+#  Peers — your citation growth beside people at a similar career stage, in the
+#  same field, at leading universities. Every curve is counted from the PhD year.
+#  Data: OpenAlex (open, no key). Candidates are the authors of papers that cite
+#  you or resemble your work.
+# ─────────────────────────────────────────────────────────────────────────────
+[peers]
+enabled            = true
+max_peers          = 12
+stage_window_years = 3      # PhD awarded within this many years of yours
+min_similarity     = 0.4    # 0-1 overlap between their research topics and yours
+min_works          = 5
+phd_lag_years      = 3      # when a PhD year is not on ORCID: first paper + this many years (shown with ~)
+show_names         = true   # false → "Peer A", "Peer B" … (the page and its data are public)
+
+include = []                # OpenAlex author ids to always show, e.g. ["A5066246575"]
+exclude = []                # names or OpenAlex ids to leave out
+
+# Where a "leading university" is, for this field. Names as OpenAlex writes them; edit freely.
+institutions = [
+  # UK
+  "University of Oxford", "University of Cambridge", "Imperial College London", "University College London",
+  "University of Edinburgh", "University of Manchester", "University of Southampton", "University of Bristol",
+  "University of Bath", "University of Strathclyde", "University of Plymouth", "University of Exeter", "Newcastle University",
+  # Europe
+  "Delft University of Technology", "ETH Zurich", "École Polytechnique Fédérale de Lausanne", "Technical University of Denmark",
+  "Norwegian University of Science and Technology", "KU Leuven", "Ghent University", "Aalborg University", "University of Twente",
+  "École Centrale de Nantes", "Technical University of Munich", "RWTH Aachen University", "KTH Royal Institute of Technology",
+  "Chalmers University of Technology", "University of Oslo", "University of Lisbon",
+  # North America
+  "Massachusetts Institute of Technology", "Stanford University", "University of California, Berkeley",
+  "University of California, San Diego", "University of Michigan", "Texas A&M University", "California Institute of Technology",
+  "Princeton University", "The University of Texas at Austin", "Georgia Institute of Technology", "Oregon State University",
+  # Asia-Pacific
+  "The University of Western Australia", "The University of Sydney", "The University of Melbourne", "UNSW Sydney",
+  "The University of Queensland", "National University of Singapore", "Nanyang Technological University", "The University of Tokyo",
+  "Kyoto University", "Seoul National University", "Korea Advanced Institute of Science and Technology",
+  "Shanghai Jiao Tong University", "Dalian University of Technology", "Tsinghua University", "Zhejiang University",
+  "Peking University", "Hong Kong University of Science and Technology", "Hong Kong Polytechnic University",
+  "University of Hong Kong", "Tianjin University", "Ocean University of China", "Hohai University",
+  "Southern University of Science and Technology", "Harbin Engineering University",
+]
+
+# Corrections. If you know someone's PhD year, put it here: name (as shown) or OpenAlex id = year.
+[peers.phd_years]
+# "Mark L. McAllister" = 2018
+
+# ─────────────────────────────────────────────────────────────────────────────
 #  Claude — used only by the scheduled GitHub Action (never by the web page).
 #  The API key lives in the repository secret ANTHROPIC_API_KEY.
 # ─────────────────────────────────────────────────────────────────────────────

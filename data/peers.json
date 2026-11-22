@@ -1,0 +1,841 @@
+{
+ "generated_at": "2026-11-22T20:19:38Z",
+ "source": "OpenAlex",
+ "you": {
+  "id": "A5039175173",
+  "name": "Tim Tang",
+  "phd_year": 2022,
+  "first_year": 2019,
+  "citations": 587,
+  "works": 79,
+  "h_index": 15,
+  "by_year": [
+   {
+    "year": 2019,
+    "cites": 1,
+    "works": 3
+   },
+   {
+    "year": 2020,
+    "cites": 4,
+    "works": 3
+   },
+   {
+    "year": 2021,
+    "cites": 8,
+    "works": 4
+   },
+   {
+    "year": 2022,
+    "cites": 22,
+    "works": 8
+   },
+   {
+    "year": 2023,
+    "cites": 73,
+    "works": 13
+   },
+   {
+    "year": 2024,
+    "cites": 80,
+    "works": 14
+   },
+   {
+    "year": 2025,
+    "cites": 143,
+    "works": 20
+   },
+   {
+    "year": 2026,
+    "cites": 256,
+    "works": 14
+   }
+  ]
+ },
+ "cohort": {
+  "stage_window": [
+   2019,
+   2025
+  ],
+  "candidates": 1299,
+  "looked_up": 426,
+  "eligible": 41,
+  "shown": 12,
+  "institutions": 64,
+  "estimated_phd": 9
+ },
+ "summary": {
+  "age": 4,
+  "you": 587,
+  "reached": 7,
+  "median": 146,
+  "rank": 1
+ },
+ "show_names": true,
+ "peers": [
+  {
+   "id": "A5101119020",
+   "name": "Shuya Xie",
+   "institution": "Hohai University",
+   "country": "CN",
+   "phd_year": 2023,
+   "phd_source": "estimate",
+   "first_year": 2020,
+   "similarity": 0.97,
+   "topics": [
+    "Ocean Waves and Remote Sensing",
+    "Coastal and Marine Dynamics",
+    "Nonlinear Waves and Solitons"
+   ],
+   "coauthor": false,
+   "citations": 73,
+   "works": 15,
+   "h_index": 5,
+   "by_year": [
+    {
+     "year": 2020,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2021,
+     "cites": 1,
+     "works": 3
+    },
+    {
+     "year": 2022,
+     "cites": 10,
+     "works": 1
+    },
+    {
+     "year": 2023,
+     "cites": 13,
+     "works": 1
+    },
+    {
+     "year": 2024,
+     "cites": 11,
+     "works": 2
+    },
+    {
+     "year": 2025,
+     "cites": 21,
+     "works": 2
+    },
+    {
+     "year": 2026,
+     "cites": 17,
+     "works": 5
+    }
+   ],
+   "url": "https://openalex.org/A5101119020"
+  },
+  {
+   "id": "A5066246575",
+   "name": "Mark L. McAllister",
+   "institution": "University of Oxford",
+   "country": "GB",
+   "phd_year": 2020,
+   "phd_source": "estimate",
+   "first_year": 2017,
+   "similarity": 0.97,
+   "topics": [
+    "Ocean Waves and Remote Sensing",
+    "Coastal and Marine Dynamics",
+    "Nonlinear Waves and Solitons"
+   ],
+   "coauthor": false,
+   "citations": 481,
+   "works": 29,
+   "h_index": 11,
+   "by_year": [
+    {
+     "year": 2017,
+     "cites": 1,
+     "works": 3
+    },
+    {
+     "year": 2018,
+     "cites": 5,
+     "works": 2
+    },
+    {
+     "year": 2019,
+     "cites": 25,
+     "works": 5
+    },
+    {
+     "year": 2020,
+     "cites": 20,
+     "works": 2
+    },
+    {
+     "year": 2021,
+     "cites": 36,
+     "works": 3
+    },
+    {
+     "year": 2022,
+     "cites": 58,
+     "works": 4
+    },
+    {
+     "year": 2023,
+     "cites": 54,
+     "works": 2
+    },
+    {
+     "year": 2024,
+     "cites": 72,
+     "works": 5
+    },
+    {
+     "year": 2025,
+     "cites": 100,
+     "works": 1
+    },
+    {
+     "year": 2026,
+     "cites": 110,
+     "works": 2
+    }
+   ],
+   "url": "https://openalex.org/A5066246575"
+  },
+  {
+   "id": "A5018450038",
+   "name": "Ruili Fu",
+   "institution": "Hohai University",
+   "country": "CN",
+   "phd_year": 2021,
+   "phd_source": "estimate",
+   "first_year": 2018,
+   "similarity": 0.96,
+   "topics": [
+    "Coastal and Marine Dynamics",
+    "Ocean Waves and Remote Sensing",
+    "Nonlinear Waves and Solitons"
+   ],
+   "coauthor": false,
+   "citations": 186,
+   "works": 21,
+   "h_index": 7,
+   "by_year": [
+    {
+     "year": 2018,
+     "cites": 0,
+     "works": 3
+    },
+    {
+     "year": 2019,
+     "cites": 0,
+     "works": 3
+    },
+    {
+     "year": 2020,
+     "cites": 0,
+     "works": 0
+    },
+    {
+     "year": 2021,
+     "cites": 9,
+     "works": 4
+    },
+    {
+     "year": 2022,
+     "cites": 21,
+     "works": 3
+    },
+    {
+     "year": 2023,
+     "cites": 35,
+     "works": 1
+    },
+    {
+     "year": 2024,
+     "cites": 39,
+     "works": 3
+    },
+    {
+     "year": 2025,
+     "cites": 42,
+     "works": 2
+    },
+    {
+     "year": 2026,
+     "cites": 40,
+     "works": 2
+    }
+   ],
+   "url": "https://openalex.org/A5018450038"
+  },
+  {
+   "id": "A5103128748",
+   "name": "Jie Zhang",
+   "institution": "Harbin Engineering University",
+   "country": "CN",
+   "phd_year": 2020,
+   "phd_source": "orcid",
+   "first_year": 2018,
+   "similarity": 0.96,
+   "topics": [
+    "Coastal and Marine Dynamics",
+    "Ocean Waves and Remote Sensing",
+    "Nonlinear Waves and Solitons"
+   ],
+   "coauthor": false,
+   "citations": 402,
+   "works": 29,
+   "h_index": 10,
+   "by_year": [
+    {
+     "year": 2017,
+     "cites": 0,
+     "works": 0
+    },
+    {
+     "year": 2018,
+     "cites": 0,
+     "works": 3
+    },
+    {
+     "year": 2019,
+     "cites": 3,
+     "works": 2
+    },
+    {
+     "year": 2020,
+     "cites": 10,
+     "works": 1
+    },
+    {
+     "year": 2021,
+     "cites": 17,
+     "works": 2
+    },
+    {
+     "year": 2022,
+     "cites": 38,
+     "works": 3
+    },
+    {
+     "year": 2023,
+     "cites": 87,
+     "works": 2
+    },
+    {
+     "year": 2024,
+     "cites": 78,
+     "works": 4
+    },
+    {
+     "year": 2025,
+     "cites": 73,
+     "works": 4
+    },
+    {
+     "year": 2026,
+     "cites": 96,
+     "works": 8
+    }
+   ],
+   "url": "https://openalex.org/A5103128748"
+  },
+  {
+   "id": "A5059545452",
+   "name": "Saulo Mendes",
+   "institution": "Nanyang Technological University",
+   "country": "SG",
+   "phd_year": 2020,
+   "phd_source": "orcid",
+   "first_year": 2020,
+   "similarity": 0.96,
+   "topics": [
+    "Coastal and Marine Dynamics",
+    "Ocean Waves and Remote Sensing",
+    "Nonlinear Waves and Solitons"
+   ],
+   "coauthor": false,
+   "citations": 215,
+   "works": 23,
+   "h_index": 8,
+   "by_year": [
+    {
+     "year": 2017,
+     "cites": 0,
+     "works": 0
+    },
+    {
+     "year": 2018,
+     "cites": 0,
+     "works": 0
+    },
+    {
+     "year": 2019,
+     "cites": 0,
+     "works": 0
+    },
+    {
+     "year": 2020,
+     "cites": 1,
+     "works": 1
+    },
+    {
+     "year": 2021,
+     "cites": 5,
+     "works": 3
+    },
+    {
+     "year": 2022,
+     "cites": 14,
+     "works": 4
+    },
+    {
+     "year": 2023,
+     "cites": 44,
+     "works": 4
+    },
+    {
+     "year": 2024,
+     "cites": 54,
+     "works": 5
+    },
+    {
+     "year": 2025,
+     "cites": 35,
+     "works": 2
+    },
+    {
+     "year": 2026,
+     "cites": 62,
+     "works": 3
+    }
+   ],
+   "url": "https://openalex.org/A5059545452"
+  },
+  {
+   "id": "A5022384295",
+   "name": "Yuxuan Liu",
+   "institution": "University of Oxford",
+   "country": "GB",
+   "phd_year": 2023,
+   "phd_source": "estimate",
+   "first_year": 2020,
+   "similarity": 0.96,
+   "topics": [
+    "Ocean Waves and Remote Sensing",
+    "Coastal and Marine Dynamics",
+    "Nonlinear Waves and Solitons"
+   ],
+   "coauthor": false,
+   "citations": 44,
+   "works": 8,
+   "h_index": 5,
+   "by_year": [
+    {
+     "year": 2020,
+     "cites": 0,
+     "works": 2
+    },
+    {
+     "year": 2021,
+     "cites": 2,
+     "works": 0
+    },
+    {
+     "year": 2022,
+     "cites": 6,
+     "works": 0
+    },
+    {
+     "year": 2023,
+     "cites": 4,
+     "works": 1
+    },
+    {
+     "year": 2024,
+     "cites": 9,
+     "works": 3
+    },
+    {
+     "year": 2025,
+     "cites": 12,
+     "works": 1
+    },
+    {
+     "year": 2026,
+     "cites": 11,
+     "works": 1
+    }
+   ],
+   "url": "https://openalex.org/A5022384295"
+  },
+  {
+   "id": "A5076371762",
+   "name": "Zuorui Lyu",
+   "institution": "Kyoto University",
+   "country": "JP",
+   "phd_year": 2021,
+   "phd_source": "orcid",
+   "first_year": 2020,
+   "similarity": 0.94,
+   "topics": [
+    "Coastal and Marine Dynamics",
+    "Ocean Waves and Remote Sensing",
+    "Nonlinear Waves and Solitons"
+   ],
+   "coauthor": false,
+   "citations": 106,
+   "works": 15,
+   "h_index": 4,
+   "by_year": [
+    {
+     "year": 2018,
+     "cites": 0,
+     "works": 0
+    },
+    {
+     "year": 2019,
+     "cites": 0,
+     "works": 0
+    },
+    {
+     "year": 2020,
+     "cites": 4,
+     "works": 4
+    },
+    {
+     "year": 2021,
+     "cites": 9,
+     "works": 3
+    },
+    {
+     "year": 2022,
+     "cites": 13,
+     "works": 0
+    },
+    {
+     "year": 2023,
+     "cites": 36,
+     "works": 5
+    },
+    {
+     "year": 2024,
+     "cites": 10,
+     "works": 0
+    },
+    {
+     "year": 2025,
+     "cites": 18,
+     "works": 2
+    },
+    {
+     "year": 2026,
+     "cites": 16,
+     "works": 1
+    }
+   ],
+   "url": "https://openalex.org/A5076371762"
+  },
+  {
+   "id": "A5020068453",
+   "name": "Ioannis Karmpadakis",
+   "institution": "Imperial College London",
+   "country": "GB",
+   "phd_year": 2021,
+   "phd_source": "estimate",
+   "first_year": 2018,
+   "similarity": 0.93,
+   "topics": [
+    "Coastal and Marine Dynamics",
+    "Ocean Waves and Remote Sensing",
+    "Nonlinear Waves and Solitons"
+   ],
+   "coauthor": false,
+   "citations": 403,
+   "works": 44,
+   "h_index": 10,
+   "by_year": [
+    {
+     "year": 2018,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2019,
+     "cites": 1,
+     "works": 4
+    },
+    {
+     "year": 2020,
+     "cites": 13,
+     "works": 2
+    },
+    {
+     "year": 2021,
+     "cites": 17,
+     "works": 0
+    },
+    {
+     "year": 2022,
+     "cites": 40,
+     "works": 2
+    },
+    {
+     "year": 2023,
+     "cites": 46,
+     "works": 4
+    },
+    {
+     "year": 2024,
+     "cites": 52,
+     "works": 3
+    },
+    {
+     "year": 2025,
+     "cites": 87,
+     "works": 13
+    },
+    {
+     "year": 2026,
+     "cites": 147,
+     "works": 15
+    }
+   ],
+   "url": "https://openalex.org/A5020068453"
+  },
+  {
+   "id": "A5062369285",
+   "name": "Jinyu Yao",
+   "institution": "Shanghai Jiao Tong University",
+   "country": "CN",
+   "phd_year": 2025,
+   "phd_source": "estimate",
+   "first_year": 2022,
+   "similarity": 0.93,
+   "topics": [
+    "Coastal and Marine Dynamics",
+    "Nonlinear Waves and Solitons",
+    "Ocean Waves and Remote Sensing"
+   ],
+   "coauthor": false,
+   "citations": 52,
+   "works": 13,
+   "h_index": 4,
+   "by_year": [
+    {
+     "year": 2022,
+     "cites": 0,
+     "works": 3
+    },
+    {
+     "year": 2023,
+     "cites": 9,
+     "works": 1
+    },
+    {
+     "year": 2024,
+     "cites": 9,
+     "works": 2
+    },
+    {
+     "year": 2025,
+     "cites": 14,
+     "works": 3
+    },
+    {
+     "year": 2026,
+     "cites": 20,
+     "works": 4
+    }
+   ],
+   "url": "https://openalex.org/A5062369285"
+  },
+  {
+   "id": "A5083250805",
+   "name": "Rui Cao",
+   "institution": "Imperial College London",
+   "country": "GB",
+   "phd_year": 2024,
+   "phd_source": "estimate",
+   "first_year": 2021,
+   "similarity": 0.93,
+   "topics": [
+    "Ocean Waves and Remote Sensing",
+    "Coastal and Marine Dynamics",
+    "Nonlinear Waves and Solitons"
+   ],
+   "coauthor": true,
+   "citations": 139,
+   "works": 24,
+   "h_index": 7,
+   "by_year": [
+    {
+     "year": 2021,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2022,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2023,
+     "cites": 1,
+     "works": 3
+    },
+    {
+     "year": 2024,
+     "cites": 13,
+     "works": 4
+    },
+    {
+     "year": 2025,
+     "cites": 27,
+     "works": 7
+    },
+    {
+     "year": 2026,
+     "cites": 98,
+     "works": 8
+    }
+   ],
+   "url": "https://openalex.org/A5083250805"
+  },
+  {
+   "id": "A5100642698",
+   "name": "Yuchen He",
+   "institution": "The University of Sydney",
+   "country": "CN",
+   "phd_year": 2023,
+   "phd_source": "estimate",
+   "first_year": 2020,
+   "similarity": 0.9,
+   "topics": [
+    "Nonlinear Waves and Solitons",
+    "Ocean Waves and Remote Sensing",
+    "Coastal and Marine Dynamics"
+   ],
+   "coauthor": false,
+   "citations": 265,
+   "works": 23,
+   "h_index": 9,
+   "by_year": [
+    {
+     "year": 2020,
+     "cites": 1,
+     "works": 2
+    },
+    {
+     "year": 2021,
+     "cites": 5,
+     "works": 2
+    },
+    {
+     "year": 2022,
+     "cites": 15,
+     "works": 7
+    },
+    {
+     "year": 2023,
+     "cites": 56,
+     "works": 5
+    },
+    {
+     "year": 2024,
+     "cites": 49,
+     "works": 3
+    },
+    {
+     "year": 2025,
+     "cites": 63,
+     "works": 2
+    },
+    {
+     "year": 2026,
+     "cites": 76,
+     "works": 2
+    }
+   ],
+   "url": "https://openalex.org/A5100642698"
+  },
+  {
+   "id": "A5000157986",
+   "name": "Yanyan Zhai",
+   "institution": "Technical University of Denmark",
+   "country": "DK",
+   "phd_year": 2019,
+   "phd_source": "estimate",
+   "first_year": 2016,
+   "similarity": 0.88,
+   "topics": [
+    "Coastal and Marine Dynamics",
+    "Ocean Waves and Remote Sensing",
+    "Nonlinear Waves and Solitons"
+   ],
+   "coauthor": false,
+   "citations": 178,
+   "works": 27,
+   "h_index": 8,
+   "by_year": [
+    {
+     "year": 2016,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2017,
+     "cites": 0,
+     "works": 3
+    },
+    {
+     "year": 2018,
+     "cites": 1,
+     "works": 2
+    },
+    {
+     "year": 2019,
+     "cites": 8,
+     "works": 2
+    },
+    {
+     "year": 2020,
+     "cites": 5,
+     "works": 1
+    },
+    {
+     "year": 2021,
+     "cites": 13,
+     "works": 1
+    },
+    {
+     "year": 2022,
+     "cites": 15,
+     "works": 2
+    },
+    {
+     "year": 2023,
+     "cites": 18,
+     "works": 2
+    },
+    {
+     "year": 2024,
+     "cites": 36,
+     "works": 7
+    },
+    {
+     "year": 2025,
+     "cites": 26,
+     "works": 3
+    },
+    {
+     "year": 2026,
+     "cites": 56,
+     "works": 3
+    }
+   ],
+   "url": "https://openalex.org/A5000157986"
+  }
+ ]
+}
