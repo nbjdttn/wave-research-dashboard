@@ -104,6 +104,8 @@ ANALYSIS_SCHEMA = _obj({
     "next_steps": {"type": "array", "items": STR},
 })
 
+RELEVANCE = re.compile(r"\brelevan|\byour?\b", re.I)      # a bullet about the reader, not the paper: dropped
+
 BULLETS_SCHEMA = _obj({
     "papers": {"type": "array", "items": _obj({
         "id": STR,
@@ -379,16 +381,17 @@ class Claude:
             blocks = "\n\n".join(f"[{p['id']}] {p['title']}\n{p['abstract']}" for p in chunk)
             user = (
                 "Below are new papers (id in brackets, title, abstract) from the researcher's reading feed. For each, write "
-                "the summary they would want on a phone: two or three bullet points, each at most 12 words, plain and "
-                "specific. First: what was done. Second: the main finding, with the number if the abstract gives one. "
-                "Third (only if it is real): why it matters for THIS researcher's own work. No hedging, no 'this paper', "
-                "no restating the title, nothing that is not in the abstract. Return every id.\n\n" + blocks)
+                "the summary they would want on a phone: two bullet points, or three when there is a second real result, "
+                "each at most 12 words, plain and specific. First: what was done. Then: what was found, with the number "
+                "if the abstract gives one. Do NOT say why the paper is relevant or how it relates to the researcher — "
+                "everything in the feed is relevant. No hedging, no 'this paper', no restating the title, nothing that "
+                "is not in the abstract. Return every id.\n\n" + blocks)
             try:
                 data = self._json(self._request(user=user, schema=BULLETS_SCHEMA, effort="low", max_tokens=6000))
             except Budget:
                 break
             for row in (data or {}).get("papers", []):
-                points = [squash(b).rstrip(".") for b in row.get("bullets") or [] if squash(b)][:3]
+                points = [squash(b).rstrip(".") for b in row.get("bullets") or [] if squash(b) and not RELEVANCE.search(b)][:3]
                 if points:
                     out[row["id"]] = points
         return out

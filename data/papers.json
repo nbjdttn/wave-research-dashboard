@@ -90,8 +90,7 @@
    "is_new": false,
    "bullets": [
     "Developed fully nonlinear pseudo-spectral potential-flow model for cylinder wave diffraction",
-    "Verified against Fourier-based and theoretical solutions; efficient and convergent",
-    "Directly relevant to extreme loads on monopile wind foundations"
+    "Verified against Fourier-based and theoretical solutions; efficient and convergent"
    ]
   },
   {
@@ -139,8 +138,7 @@
    "is_new": false,
    "bullets": [
     "GenWave with HOS generates designed extreme waves at set time and place",
-    "Rogue wave and persistent group agree reasonably with Peregrine and soliton",
-    "Useful for designing extreme-load cases in your tank and simulations"
+    "Rogue wave and persistent group agree reasonably with Peregrine and soliton"
    ]
   },
   {
@@ -225,8 +223,7 @@
    "is_new": false,
    "bullets": [
     "Derived stochastic water-wave equations using location uncertainty principle",
-    "Stochastic Saint-Venant, Boussinesq, Serre-Green-Naghdi models break wave symmetry numerically",
-    "Offers uncertainty-aware reduced wave models for your wave statistics work"
+    "Stochastic Saint-Venant, Boussinesq, Serre-Green-Naghdi models break wave symmetry numerically"
    ]
   },
   {
@@ -400,8 +397,7 @@
    "is_new": false,
    "bullets": [
     "Added depth-induced breaking onset and dissipation to pseudo-spectral potential-flow model",
-    "Validated against regular and irregular waves over 2D and 3D bathymetries",
-    "Extends fully nonlinear wave simulation to coastal breaking you study"
+    "Validated against regular and irregular waves over 2D and 3D bathymetries"
    ]
   },
   {
@@ -448,8 +444,7 @@
    "is_new": true,
    "bullets": [
     "Deep learning plus compressed sensing reconstructs wave fields from one gauge",
-    "Forecast soliton-driven rogue waves matching wave-tank measurements closely",
-    "Directly relevant to your rogue-wave forecasting and scientific ML"
+    "Forecast soliton-driven rogue waves matching wave-tank measurements closely"
    ]
   },
   {
@@ -973,8 +968,7 @@
    "is_new": true,
    "bullets": [
     "Bayesian posterior uncertainty quantifies wave-field predictability from sensor data",
-    "Shows predictability even where classical group-velocity zone degenerates",
-    "Relevant to your phase-resolved wave prediction and Gaussian process methods"
+    "Shows predictability even where classical group-velocity zone degenerates"
    ]
   },
   {
@@ -1141,8 +1135,7 @@
    "is_new": false,
    "bullets": [
     "Linear theory of deformable surfaces forced by turbulent pressure fluctuations",
-    "Validated with air–water and rubber-layer simulations; predicts distinct regimes",
-    "Relevant to your understanding of wind-driven wave generation"
+    "Validated with air–water and rubber-layer simulations; predicts distinct regimes"
    ]
   },
   {
@@ -1438,8 +1431,7 @@
    "is_new": false,
    "bullets": [
     "Saddle-point derivation of closed-form third-order surface elevation PDF",
-    "Matches positive-tail asymptotics exactly, no unphysical negative-tail oscillations",
-    "Directly useful for your rogue-wave and wave statistics work"
+    "Matches positive-tail asymptotics exactly, no unphysical negative-tail oscillations"
    ]
   },
   {
@@ -1618,8 +1610,7 @@
    "is_new": false,
    "bullets": [
     "Derived explicit modulational stability criterion for finite-depth Stokes waves with vorticity",
-    "Positive vorticity range suppresses modulational instability at every depth",
-    "Relevant to rogue-wave formation in sheared currents"
+    "Positive vorticity range suppresses modulational instability at every depth"
    ]
   },
   {
@@ -1701,8 +1692,7 @@
    "is_new": false,
    "bullets": [
     "Fourier neural operator learns evolution of nonlinear standing waves",
-    "Small in-distribution errors; errors concentrate at sharpening crests out-of-distribution",
-    "Equation residual diagnostic relevant to your neural-operator wave modelling"
+    "Small in-distribution errors; errors concentrate at sharpening crests out-of-distribution"
    ]
   },
   {
@@ -1968,8 +1958,7 @@
    "is_new": true,
    "bullets": [
     "Large-basin stereo experiments and Tolosa-lct simulations of shallow-water solitons",
-    "Mach reflection at a wall gave amplitude amplification of 3.2",
-    "Relevant to your nonlinear wave and coastal extreme-wave research"
+    "Mach reflection at a wall gave amplitude amplification of 3.2"
    ]
   },
   {
@@ -2182,8 +2171,7 @@
    "is_new": false,
    "bullets": [
     "New lab experiments with increasingly broadband deep-water wave trains",
-    "Generalised NLS equations accurately model the broadband measurements",
-    "Supports using NLS-type models for your broadband wave statistics work"
+    "Generalised NLS equations accurately model the broadband measurements"
    ]
   },
   {
@@ -2274,8 +2262,7 @@
    "is_new": true,
    "bullets": [
     "Coupled OrcaFlex model of floating wind turbine with shared-anchor mooring",
-    "Misalignment shifts motion to multidirectional coupling; sea state sets intensity",
-    "Relevant to your offshore wind extreme-load and wave–structure work"
+    "Misalignment shifts motion to multidirectional coupling; sea state sets intensity"
    ]
   },
   {
@@ -2402,8 +2389,7 @@
    "is_new": true,
    "bullets": [
     "EnKF with HOS and Cummins equation reconstructs waves from ship motion",
-    "Phase-resolved reconstruction improves with more ships and estimated parameters",
-    "Relevant to your wave–structure interaction and data assimilation interests"
+    "Phase-resolved reconstruction improves with more ships and estimated parameters"
    ]
   },
   {
@@ -3362,8 +3348,7 @@
    "is_new": false,
    "bullets": [
     "Proposed observer-based bathymetry identification from free-surface measurements",
-    "Proved true profile recovered for linear dispersive models; works numerically nonlinearly",
-    "Possible inverse tool for your coastal field data analysis"
+    "Proved true profile recovered for linear dispersive models; works numerically nonlinearly"
    ]
   },
   {
@@ -3409,8 +3394,7 @@
    "is_new": false,
    "bullets": [
     "Assessed global wind and wave energy from Jason altimetry, 1993–2024",
-    "Southern Ocean strongest; leading wind–wave co-variability mode correlation r = 0.72",
-    "Useful resource context for your marine renewable energy work"
+    "Southern Ocean strongest; leading wind–wave co-variability mode correlation r = 0.72"
    ]
   },
   {
@@ -3615,8 +3599,7 @@
    "is_new": false,
    "bullets": [
     "Agent-guided framework combining seven equation-discovery methods with experience library",
-    "On noisy PDEs, recovers more equations than seven expert-tuned methods combined",
-    "Directly relevant tool for your symbolic regression and equation discovery"
+    "On noisy PDEs, recovers more equations than seven expert-tuned methods combined"
    ]
   },
   {
@@ -3894,8 +3877,7 @@
    "is_new": false,
    "bullets": [
     "PINN with sensitivity analysis estimates bubbly-liquid KdVB equation parameters",
-    "Five parameters estimated within 0.8-2.1%; surface tension not identifiable",
-    "Sensitivity-first inverse approach transferable to your PINN wave problems"
+    "Five parameters estimated within 0.8-2.1%; surface tension not identifiable"
    ]
   },
   {
@@ -4553,8 +4535,7 @@
    "is_new": true,
    "bullets": [
     "Cross-PDE learned denoiser and encoder identifies governing equations from noise",
-    "Recovers exact terms for 92% of trajectories at 80% noise",
-    "Useful benchmark against SINDy and PySR for your equation discovery"
+    "Recovers exact terms for 92% of trajectories at 80% noise"
    ]
   },
   {
@@ -4840,8 +4821,7 @@
    "is_new": false,
    "bullets": [
     "Modelled heaving WEC integrated with perforated caisson breakwater using potential flow",
-    "Energy partition shifts from capture-reflection competition to dissipation at higher frequencies",
-    "Relevant to your marine renewable energy and wave–structure interaction interests"
+    "Energy partition shifts from capture-reflection competition to dissipation at higher frequencies"
    ]
   },
   {
@@ -5221,8 +5201,7 @@
    "is_new": false,
    "bullets": [
     "Bilinear neural networks and enhanced PINN applied to extended BK equation",
-    "PINN reproduces lump and kink solutions and identifies parameters",
-    "PINN inverse parameter discovery method relevant to your equation discovery"
+    "PINN reproduces lump and kink solutions and identifies parameters"
    ]
   },
   {
@@ -5269,8 +5248,7 @@
    "is_new": false,
    "bullets": [
     "Wave-aware PINN fuses Sentinel-2 optics and wave dispersion for bathymetry",
-    "Validity factor weights dispersion constraint by retrieved wave-field coherence",
-    "Physics-informed coastal depth retrieval useful for your coastal hydrodynamics"
+    "Validity factor weights dispersion constraint by retrieved wave-field coherence"
    ]
   },
   {
@@ -5314,8 +5292,7 @@
    "is_new": false,
    "bullets": [
     "Analytical shallow-water model of tidal response to bottom-friction perturbations",
-    "Perturbations radiate rotating Poincaré waves at odd tidal-frequency multiples",
-    "Guides friction calibration in your tidal and coastal models"
+    "Perturbations radiate rotating Poincaré waves at odd tidal-frequency multiples"
    ]
   },
   {
@@ -5764,8 +5741,7 @@
    "is_new": false,
    "bullets": [
     "Theory of capillary-gravity-acoustic triad resonance in laboratory basins",
-    "Colliding wavepackets give bottom pressure of tens of Pascals",
-    "Suggests measurable acoustic signals in your wave-tank experiments"
+    "Colliding wavepackets give bottom pressure of tens of Pascals"
    ]
   },
   {
@@ -5805,8 +5781,7 @@
    "is_new": false,
    "bullets": [
     "Recurrent model hindcasts Baltic buoy wave spectra with physics constraints",
-    "Relaxation constraint cuts wave-height RMSE by 5.01%; upper bounds hurt",
-    "Shows modest gains from physics guidance in your field-data ML work"
+    "Relaxation constraint cuts wave-height RMSE by 5.01%; upper bounds hurt"
    ]
   },
   {
@@ -6369,8 +6344,7 @@
    "is_new": false,
    "bullets": [
     "Analysed inverse cascade stability in 3D NLS wave kinetic equation",
-    "Kolmogorov-Zakharov solution stable without condensate; condensate destabilises it",
-    "Relevant to wave turbulence theory behind your wave statistics work"
+    "Kolmogorov-Zakharov solution stable without condensate; condensate destabilises it"
    ]
   },
   {
@@ -6939,8 +6913,7 @@
    "is_new": false,
    "bullets": [
     "MHACS ridge regression inverts eight Japan Sea tides from Sentinel-3A",
-    "Vector difference 1.39 cm versus 4.52 cm for tidal response method",
-    "Relevant to your tides and coastal hydrodynamics work"
+    "Vector difference 1.39 cm versus 4.52 cm for tidal response method"
    ]
   },
   {
@@ -7498,8 +7471,7 @@
    "is_new": false,
    "bullets": [
     "Built π-former, learning dimensionless groups from 1,288 established ones",
-    "Finds predictive coordinates within seconds across seven physical problems",
-    "Could close condition-dependent coefficients in your symbolic-regression wave models"
+    "Finds predictive coordinates within seconds across seven physical problems"
    ]
   },
   {

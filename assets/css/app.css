@@ -566,8 +566,6 @@ button, summary, .chip, .seg, .tabbar a, .ticker a, .brand { -webkit-user-select
 .bullets { display: grid; grid-template-columns: minmax(0, 1fr); gap: 5px; margin-top: 10px; }
 .bullets li { position: relative; padding-left: 14px; font-size: .875rem; line-height: 1.4; color: var(--ink-2); }
 .bullets li::before { content: ""; position: absolute; left: 1px; top: .55em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
-.near { margin-top: 8px; font-size: .75rem; line-height: 1.45; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.near b { font-weight: 600; color: var(--ink-2); }
 .cites-you i { font-style: normal; font-weight: 600; color: var(--ink); }
 .story-foot { margin-top: 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .act { height: 36px; min-width: 36px; padding: 0 11px; display: inline-flex; align-items: center; justify-content: center; gap: 5px; border-radius: 12px; font-size: .75rem; font-weight: 600; color: var(--ink-2); background: var(--bg-2); border: 1px solid transparent; transition: transform .12s; }

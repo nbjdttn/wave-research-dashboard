@@ -69,9 +69,6 @@ export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abs
   // `plain` (the Today screen): every card the same size, bullet points only, no abstract
   paperIndex.set(p.id, p);
   const venue = p.venue ? `<span class="venue">${esc(p.venue)}</span><span class="sep">·</span>` : '';
-  const near = p.similar_to && !(p.cites || []).length
-    ? `<p class="near">Like your <b>${esc(p.similar_to.title)}</b></p>`
-    : '';
   const cites = (p.cites || []).map((id) => ownTitle?.(id)).filter(Boolean);
   return `<article class="story${lead ? ' lead' : ''}" data-paper="${esc(p.id)}">
     <div class="kicker">${venue}<span>${esc(paperDate(p))}</span>
@@ -83,7 +80,6 @@ export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abs
     ${p.bullets?.length ? `<ul class="bullets">${p.bullets.slice(0, 3).map((b) => `<li>${esc(b)}</li>`).join('')}</ul>` : ''}
     ${p.abstract && !plain ? `<p class="abstract" data-toggle="abstract"${lead && abstract && !p.bullets?.length ? '' : ' hidden'}>${esc(p.abstract)}</p>` : ''}
     ${cites.length ? `<div class="cites-you">${icon('quote', 'sm')}<span>Cites <i>${esc(cites[0])}</i>${cites.length > 1 ? ` +${cites.length - 1}` : ''}</span></div>` : ''}
-    ${near}
     <div class="story-foot">
       <span class="match" title="How close this is to your own papers"><span class="meter" style="--v:${Number(p.score) || 0}"></span>${Number(p.score) || 0}%</span>
       <span class="story-actions">

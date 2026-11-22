@@ -15,6 +15,8 @@ static site with no build step, published by GitHub Pages from the branch
 - **Public.** The site and everything in `data/` can be read by anyone. Nothing private goes in. The
   owner's email address is never written into the repository or sent to an outside service.
 - **Secrets** live in GitHub Actions secrets (`ANTHROPIC_API_KEY`). Never in files; never asked for in chat.
+- **No explaining relevance.** Everything shown is relevant; never write why a paper or call relates to
+  the owner's work ("close to your…", "relevant to…"). Say what it is and what it found or offers.
 - **Terse.** The owner reads this on a phone and has asked for no long paragraphs: one short sentence
   per field. The word limits are in `scripts/wave/claude.py` under "Brevity" and apply to anything you write.
 - **Outside services** get a generic client name (see `scripts/wave/util.py`), never the owner's name.
@@ -58,8 +60,8 @@ fails, skip it and say so.
      `title`, `funder`, `url`, `status`, `opens`, `closes`, `typical_cycle`, `recurrence`, `analysis`,
      `source_urls`), import it, then run `python scripts/update.py grants` to rebuild the page data.
      Never invent a date; leave it empty and say what to check.
-3. **Papers.** From the new items in `data/papers.json`, pick at most three worth the owner's time
-   today and say why in one line each.
+3. **Papers.** From the new items in `data/papers.json`, pick at most two worth the owner's time
+   today; one line each on what the paper did and found.
 4. **Record.** Run `python scripts/update.py profile citations`. Google Scholar often refuses
    GitHub's servers but may answer here, which refreshes the headline numbers.
 5. **Briefing.** Write `data/briefing.json` — it appears at the top of the Today screen for four days.
