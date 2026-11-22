@@ -1,6 +1,23 @@
 // The two repeating units of the app: a paper "story" and a funding opportunity card.
 import { esc, safeUrl, icon, fmtDate, fmtTime, fmtMonth, daysTo, rel, left, people, parseDay, isoDay, today, store, download } from './util.js';
 
+// ── profile numbers ──────────────────────────────────────────────────────────
+/**
+ * The line under the citations figure. Scholar's count only changes on days Scholar could be read,
+ * so month-on-month movement is taken from OpenAlex, which is recorded every day, and labelled.
+ */
+export function citationTrend(profile) {
+  const m = profile.metrics, hist = profile.history || [];
+  const now = hist.at(-1);
+  const then = [...hist].reverse().find((h) => daysTo(h.date) <= -27 && h.oa_citations != null);
+  if (now?.oa_citations != null && then && now.oa_citations > then.oa_citations) {
+    return `<b>+${(now.oa_citations - then.oa_citations).toLocaleString('en-GB')}</b> in the last month <span class="muted">(OpenAlex)</span>`;
+  }
+  return `<b>+${Number(m.citations_this_year || 0).toLocaleString('en-GB')}</b> in ${String(m.as_of || '').slice(0, 4)} so far`;
+}
+/** Days since Google Scholar was last read successfully. */
+export const scholarAge = (profile) => { const d = daysTo(profile.metrics?.as_of); return d == null ? 0 : -d; };
+
 // ── papers ───────────────────────────────────────────────────────────────────
 export function paperDate(p) {
   if (p.in_press) return 'In press';

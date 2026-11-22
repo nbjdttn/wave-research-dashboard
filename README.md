@@ -46,8 +46,8 @@ That is all. To install it like an app, open the site on your phone and choose *
 `python scripts/update.py`, commits the refreshed files in `data/`, and Pages republishes the site.
 
 ```
-profile   Google Scholar profile page ─┐
-          ORCID · Crossref · OpenAlex ─┴─► data/profile.json   (metrics, publications, history)
+profile   Google Scholar snapshot (when reachable) ─┐
+          ORCID · Crossref · OpenAlex (daily) ──────┴─► data/profile.json   (metrics, publications, history)
 
 papers    Semantic Scholar recommendations (seeded with your papers)
           arXiv · Crossref · papers citing you ─► scored against your own work ─► data/papers.json
@@ -100,8 +100,12 @@ Saving a change to either file (the GitHub app or website editor is fine) starts
   only in the browser of the device you use.
 - **Dates marked `~` are estimates** inferred from earlier rounds. Always confirm on the funder's page —
   each card links to it.
-- **Google Scholar** has no API. The job reads your public profile page once a day (which Scholar's
-  robots.txt permits). If Scholar blocks a run, the previous numbers are kept and the Settings sheet says so.
+- **Google Scholar figures are a dated snapshot.** Scholar has no API and turns away requests from
+  GitHub's servers, so the daily job cannot refresh them. The headline numbers therefore show the
+  date they were read, and the page also shows OpenAlex figures, which do update every day (they run
+  a little lower than Scholar's). New papers still arrive daily through ORCID. To refresh the Scholar
+  snapshot, run `python scripts/update.py profile` from a personal computer and push `data/`, or ask
+  a Claude Code session to do it.
 - **Some funder sites block scripts** (Leverhulme, ICE). With a Claude key those pages are looked up
   with Claude's web search tool about once a fortnight instead.
 - GitHub pauses scheduled workflows in repositories with no activity for 60 days; the daily data

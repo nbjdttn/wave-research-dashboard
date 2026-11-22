@@ -117,8 +117,9 @@ function sourceRows(group, labels) {
   return Object.entries(labels).map(([key, label]) => {
     const s = group?.[key];
     if (!s) return '';
-    const note = s.ok ? (s.count != null ? `${num(s.count)} items` : s.added != null ? `${num(s.added)} found` : s.note || 'ok') : 'unavailable on the last run';
-    return `<div class="src${s.ok ? '' : ' bad'}"><b style="font-weight:500">${esc(label)}</b><span>${esc(note)}<br>${esc(ago(s.checked))}</span></div>`;
+    const note = s.ok ? (s.count != null ? `${num(s.count)} items` : s.added != null ? `${num(s.added)} found` : s.note || 'ok') : 'not available on the last run';
+    const when = s.ok ? ago(s.checked) : (s.last_success ? `last read ${ago(s.last_success)}` : ago(s.checked));
+    return `<div class="src${s.ok ? '' : ' bad'}"><b style="font-weight:500">${esc(label)}</b><span>${esc(note)}<br>${esc(when)}</span></div>`;
   }).join('');
 }
 

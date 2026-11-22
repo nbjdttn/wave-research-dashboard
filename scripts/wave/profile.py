@@ -174,11 +174,14 @@ def _d(s):
 
 
 # ── main ─────────────────────────────────────────────────────────────────────
+SNAPSHOT_KEYS = ("citations", "citations_recent", "h_index", "h_index_recent", "i10_index", "i10_index_recent", "recent_since")
+
+
 def build(cfg: dict) -> dict:
     r = cfg["researcher"]
     prev = read_json(DATA / "profile.json", {}) or {}
     sources: dict[str, dict] = dict(prev.get("sources") or {})
-    stamp = now_iso()
+    stamp, tday = now_iso(), today().isoformat()
 
     def mark(name: str, ok: bool, note: str = "") -> None:
         entry = dict(sources.get(name) or {})
@@ -187,7 +190,9 @@ def build(cfg: dict) -> dict:
             entry["last_success"] = stamp
         sources[name] = entry
 
-    # 1 ─ Google Scholar (master list + headline metrics)
+    # 1 ─ Google Scholar: the list the researcher curates, and the figures academics quote.
+    #     Scholar turns away requests from data-centre addresses (GitHub's runners get HTTP 403),
+    #     so a successful read is treated as a dated snapshot and kept until the next one.
     scholar = None
     try:
         scholar = S.scholar_profile(r["scholar_id"])
@@ -197,7 +202,7 @@ def build(cfg: dict) -> dict:
         mark("scholar", False, str(exc))
         log("scholar unavailable:", exc)
 
-    # 2 ─ ORCID (DOIs and work types)
+    # 2 ─ ORCID: DOIs, work types — and new papers on the days Scholar cannot be read.
     orcid_works: list[dict] = []
     try:
         orcid_works = S.orcid_works(r["orcid"])
@@ -207,13 +212,8 @@ def build(cfg: dict) -> dict:
         mark("orcid", False, str(exc))
         log("orcid unavailable:", exc)
 
-    if scholar is None:
-        if not prev.get("publications"):
-            raise SourceError("no Scholar data and no previous snapshot — cannot build the profile")
-        log("keeping previous publication list and metrics")
-        prev["sources"] = sources
-        prev["checked_at"] = stamp
-        return prev
+    if scholar is None and not prev.get("publications"):
+        raise SourceError("no Scholar data and no previous snapshot — cannot build the profile")
 
     cr_cache = read_json(CACHE / "crossref.json", {}) or {}
     oa_cache = read_json(CACHE / "openalex.json", {}) or {}
@@ -222,6 +222,7 @@ def build(cfg: dict) -> dict:
     for w in orcid_works:
         if w.get("title"):
             orcid_by_title[norm_title(w["title"])].append(w)
+    me = author_key(f"{r['given_initial']} {r['family_name']}")
 
     def pick_orcid(row: dict) -> dict | None:
         """Choose the ORCID record that is the same *version* as the Scholar row."""
@@ -239,14 +240,11 @@ def build(cfg: dict) -> dict:
             same_venue = title_similarity(w.get("journal") or "", tidy_venue(row["venue_raw"])[0] or "") >= 0.6
             return (same_venue, is_pre == wants_preprint, bool(w.get("doi")))
         return max(cands, key=rank)
-    me = author_key(f"{r['given_initial']} {r['family_name']}")
 
-    pubs: list[dict] = []
-    for row in scholar["publications"]:
+    def make_pub(row: dict, ow: dict | None, origin: str) -> dict:
+        """One publication record from a Scholar row (or an ORCID work shaped like one)."""
         key = norm_title(row["title"])
-        ow = pick_orcid(row)
         doi = ow.get("doi") if ow else None
-
         # No DOI from ORCID: ask Crossref once, remember the answer (including "none").
         if not doi and row.get("venue_raw") and not OTHER_RE.search(row["venue_raw"]):
             if key in doi_cache:
@@ -263,21 +261,20 @@ def build(cfg: dict) -> dict:
                     log("  crossref search failed:", exc)
 
         cr, oa = _enrich(doi, cr_cache, oa_cache) if doi else ({}, {})
-        short, truncated = split_short_authors(row["authors_short"])
+        short, truncated = split_short_authors(row.get("authors_short") or "")
         full = oa.get("authors") or cr.get("authors") or []
         authors = full if len(full) >= len(short) and full else short
         venue_src = cr.get("venue") or (ow or {}).get("journal") or oa.get("venue")
-        venue, detail = tidy_venue(row["venue_raw"])
+        venue, detail = tidy_venue(row.get("venue_raw"))
         v2 = tidy_venue(venue_src)[0] if venue_src else None
         if v2 and (not venue or title_similarity(venue, v2) >= 0.6):
             venue = v2
-
         keys = [author_key(a) for a in authors]
         pos = keys.index(me) if me in keys else None
         role = None
         if pos is not None:
             role = "first" if pos == 0 else ("last" if pos == len(keys) - 1 and not (truncated and authors is short) else "middle")
-
+        on_scholar = origin == "scholar"
         pub = {
             "id": row.get("scholar_id") or sha(key, n=12),
             "title": row["title"],
@@ -285,13 +282,16 @@ def build(cfg: dict) -> dict:
             "authors_truncated": bool(truncated and authors is short),
             "me_index": pos,
             "role": role,
-            "year": row["year"] or (ow or {}).get("year") or cr.get("year"),
+            "year": row.get("year") or (ow or {}).get("year") or cr.get("year"),
             "date": cr.get("date") or oa.get("date"),
             "venue": venue,
             "venue_detail": detail,
-            "venue_raw": row["venue_raw"],
+            "venue_raw": row.get("venue_raw"),
             "orcid_type": (ow or {}).get("type"),
-            "citations": row["citations"],
+            # Scholar's count where Scholar lists the paper; OpenAlex's for papers it has not shown us yet
+            "citations": row["citations"] if on_scholar else int(oa.get("citations") or 0),
+            "citations_source": "scholar" if on_scholar else "openalex",
+            "origin": origin,
             "doi": doi,
             "url": f"https://doi.org/{doi}" if doi else None,
             "scholar_url": (f"https://scholar.google.com/citations?view_op=view_citation&hl=en&user={r['scholar_id']}"
@@ -306,29 +306,70 @@ def build(cfg: dict) -> dict:
         title_l = pub["title"].lower()
         pub["themes"] = [k for k, _, pat in THEMES if re.search(pat, title_l)] or \
                         [k for k, _, pat in THEMES if re.search(pat, blob)][:2]
-        pubs.append(pub)
+        pub.pop("venue_raw", None)
+        pub.pop("orcid_type", None)
+        return pub
+
+    # 3 ─ the publication list
+    if scholar is not None:
+        snapshot = {**{k: scholar[k] for k in SNAPSHOT_KEYS}, "citations_by_year": scholar["citations_by_year"],
+                    "as_of": tday, "interests": scholar.get("interests") or [], "coauthors": scholar.get("coauthors") or []}
+        pubs = [make_pub(row, pick_orcid(row), "scholar") for row in scholar["publications"]]
+        # Collapse exact duplicate listings (same title and year), keeping the richer record.
+        merged: dict[tuple, dict] = {}
+        for p in pubs:
+            k = (norm_title(p["title"]), p["year"], p["type"] if p["type"] == "preprint" else "x")
+            if k in merged:
+                keep = merged[k]
+                if (p["citations"], bool(p["doi"])) > (keep["citations"], bool(keep["doi"])):
+                    p["duplicates"] = keep.get("duplicates", 1) + 1
+                    merged[k] = p
+                else:
+                    keep["duplicates"] = keep.get("duplicates", 1) + 1
+            else:
+                merged[k] = p
+        pubs = list(merged.values())
+    else:
+        pm = prev.get("metrics") or {}
+        snapshot = prev.get("scholar_snapshot") or {
+            **{k: pm.get(k) for k in SNAPSHOT_KEYS}, "citations_by_year": prev.get("citations_by_year") or [],
+            "as_of": pm.get("as_of"), "interests": (prev.get("researcher") or {}).get("interests") or [], "coauthors": []}
+        pubs = [dict(p) for p in prev["publications"]]
+        log(f"keeping the Scholar snapshot of {snapshot.get('as_of')} ({len(pubs)} outputs)")
+        for p in pubs:                      # open-access status and OpenAlex counts still move
+            if p.get("doi"):
+                _, oa = _enrich(p["doi"], cr_cache, oa_cache)
+                if oa.get("is_oa") and not p.get("oa_url"):
+                    p["oa_url"] = oa.get("oa_url")
+                if p.get("citations_source") == "openalex":
+                    p["citations"] = int(oa.get("citations") or p.get("citations") or 0)
+
+    # Recent work ORCID knows about and the list does not (a new paper Scholar has not shown us yet).
+    known_dois = {p["doi"] for p in pubs if p.get("doi")}
+    known_titles = [p["title"] for p in pubs]
+    added = 0
+    for w in orcid_works:
+        if not w.get("title") or (w.get("year") or 0) < today().year - 1:
+            continue
+        if w.get("type") not in ("journal-article", "conference-paper", "book-chapter"):
+            continue
+        if (w.get("doi") and w["doi"] in known_dois) or any(title_similarity(w["title"], t) >= 0.85 for t in known_titles):
+            continue
+        p = make_pub({"title": w["title"], "authors_short": "", "venue_raw": w.get("journal") or "",
+                      "citations": 0, "year": w.get("year"), "scholar_id": None}, w, "orcid")
+        if p["authors"] and p["me_index"] is None:
+            continue                         # ORCID lists it, but the author list does not include them
+        pubs.append(p)
+        known_titles.append(p["title"])
+        known_dois.add(p.get("doi"))
+        added += 1
+    if added:
+        log(f"  {added} recent output(s) added from ORCID")
+    pubs.sort(key=lambda p: (-(p["year"] or 0), -(p["citations"] or 0), p["title"]))
 
     write_json(CACHE / "crossref.json", cr_cache, compact=True)
     write_json(CACHE / "openalex.json", oa_cache, compact=True)
     write_json(CACHE / "title_doi.json", doi_cache)
-
-    # Collapse exact duplicate listings (same title and year), keeping the richer record.
-    merged: dict[tuple, dict] = {}
-    for p in pubs:
-        k = (norm_title(p["title"]), p["year"], p["type"] if p["type"] in ("preprint",) else "x")
-        if k in merged:
-            keep = merged[k]
-            if (p["citations"], bool(p["doi"])) > (keep["citations"], bool(keep["doi"])):
-                p["duplicates"] = keep.get("duplicates", 1) + 1
-                merged[k] = p
-            else:
-                keep["duplicates"] = keep.get("duplicates", 1) + 1
-        else:
-            merged[k] = p
-    pubs = sorted(merged.values(), key=lambda p: (-(p["year"] or 0), -(p["citations"] or 0), p["title"]))
-    for p in pubs:
-        p.pop("venue_raw", None)
-        p.pop("orcid_type", None)
 
     # ── aggregates ───────────────────────────────────────────────────────────
     this_year = today().year
@@ -348,9 +389,8 @@ def build(cfg: dict) -> dict:
                            "citations": sum(p["citations"] for p in sel),
                            "journal": sum(1 for p in sel if p["type"] == "journal")})
 
-    # co-authors
     co: dict[str, dict] = {}
-    scholar_names = {author_key(n): n for n in scholar.get("coauthors", [])}
+    scholar_names = {author_key(n): n for n in snapshot.get("coauthors") or []}
     for p in pubs:
         for a in p["authors"]:
             k = author_key(a)
@@ -371,60 +411,63 @@ def build(cfg: dict) -> dict:
     coauthors.sort(key=lambda c: (-c["count"], -c["citations"], c["name"]))
 
     venues = Counter(p["venue"] for p in pubs if p["venue"] and p["type"] == "journal")
-    venue_cites = Counter()
+    venue_cites: Counter = Counter()
     for p in pubs:
         if p["venue"] and p["type"] == "journal":
             venue_cites[p["venue"]] += p["citations"]
     countries = Counter(c for p in pubs for c in p["countries"])
     institutions = Counter(i for p in pubs for i in p["institutions"])
 
-    n_journal = sum(1 for p in pubs if p["type"] == "journal")
-    cby = scholar["citations_by_year"]
+    cby = snapshot.get("citations_by_year") or []
     cite_now = next((c["count"] for c in cby if c["year"] == this_year), 0)
     cite_prev = next((c["count"] for c in cby if c["year"] == this_year - 1), 0)
     first_year = min((p["year"] for p in pubs if p["year"]), default=this_year)
     metrics = {
-        "citations": scholar["citations"], "citations_recent": scholar["citations_recent"],
-        "h_index": scholar["h_index"], "h_index_recent": scholar["h_index_recent"],
-        "i10_index": scholar["i10_index"], "i10_index_recent": scholar["i10_index_recent"],
-        "recent_since": scholar["recent_since"],
-        "outputs": len(pubs), "journal_articles": n_journal,
+        **{k: snapshot.get(k) for k in SNAPSHOT_KEYS},
+        "outputs": len(pubs), "journal_articles": sum(1 for p in pubs if p["type"] == "journal"),
         "conference_papers": sum(1 for p in pubs if p["type"] == "conference"),
         "preprints": sum(1 for p in pubs if p["type"] == "preprint"),
         "citations_this_year": cite_now, "citations_last_year": cite_prev,
         "first_year": first_year, "active_years": this_year - first_year + 1,
-        "m_index": round(scholar["h_index"] / max(1, this_year - first_year + 1), 2),
-        "citations_per_output": round(scholar["citations"] / max(1, len(pubs)), 1),
+        "m_index": round((snapshot.get("h_index") or 0) / max(1, this_year - first_year + 1), 2),
+        "citations_per_output": round((snapshot.get("citations") or 0) / max(1, len(pubs)), 1),
         "first_author": sum(1 for p in pubs if p["role"] == "first"),
         "senior_author": sum(1 for p in pubs if p["role"] == "last"),
         "coauthors": len(coauthors),
         "ml_share": round(sum(1 for p in pubs if "ml" in p["themes"]) / max(1, len(pubs)), 2),
         "open_access": sum(1 for p in pubs if p.get("oa_url")),
         "with_doi": sum(1 for p in pubs if p.get("doi")),
-        "source": "Google Scholar", "as_of": today().isoformat(),
+        "source": "Google Scholar", "as_of": snapshot.get("as_of"),
+        "scholar_live": scholar is not None,
     }
 
-    # Daily history → lets the page show "+N citations in the last 30 days".
-    history = [h for h in (prev.get("history") or []) if h.get("date") != today().isoformat()]
-    history.append({"date": today().isoformat(), "citations": metrics["citations"], "h_index": metrics["h_index"],
-                    "i10_index": metrics["i10_index"], "outputs": metrics["outputs"]})
-    history = sorted(history, key=lambda h: h["date"])[-800:]
-
-    # Cross-check numbers from OpenAlex (free single-record look-up).
+    # OpenAlex: read every day (free single-record look-up), so there is always a figure that moves.
+    oa_live = (prev.get("metrics") or {}).get("openalex") or {}
     try:
-        metrics["openalex"] = {k: v for k, v in S.openalex_author(r["openalex_id"]).items()
-                               if k in ("works_count", "cited_by_count", "h_index", "i10_index")}
+        got = S.openalex_author(r["openalex_id"])
+        oa_live = {k: got.get(k) for k in ("works_count", "cited_by_count", "h_index", "i10_index")}
+        oa_live["by_year"] = sorted(({"year": c["year"], "count": c.get("cited_by_count", 0)} for c in got.get("counts_by_year") or []),
+                                    key=lambda c: c["year"])
+        oa_live["as_of"] = tday
         mark("openalex", True)
     except SourceError as exc:
         mark("openalex", False, str(exc))
-        if (prev.get("metrics") or {}).get("openalex"):
-            metrics["openalex"] = prev["metrics"]["openalex"]
+    metrics["openalex"] = oa_live
     mark("crossref", True, f"{len(cr_cache)} records cached")
+
+    # Daily history → "+N citations in the last month". Scholar's figure only changes on days it
+    # could be read; OpenAlex's is recorded every day.
+    history = [h for h in (prev.get("history") or []) if h.get("date") != tday]
+    history.append({"date": tday, "citations": metrics["citations"], "h_index": metrics["h_index"],
+                    "i10_index": metrics["i10_index"], "outputs": metrics["outputs"],
+                    "scholar": scholar is not None,
+                    "oa_citations": oa_live.get("cited_by_count"), "oa_h_index": oa_live.get("h_index")})
+    history = sorted(history, key=lambda h: h["date"])[-800:]
 
     # Profile photo (the researcher's own public Scholar picture), refreshed weekly.
     avatar = ROOT / "assets" / "img" / "avatar.jpg"
     try:
-        if scholar.get("photo_url") and (not avatar.exists() or today().weekday() == 0):
+        if scholar is not None and scholar.get("photo_url") and (not avatar.exists() or today().weekday() == 0):
             avatar.write_bytes(S.scholar_photo(r["scholar_id"]))
     except SourceError as exc:
         log("photo:", exc)
@@ -445,12 +488,12 @@ def build(cfg: dict) -> dict:
     researcher = {k: r[k] for k in ("name", "short_name", "title", "department", "institution", "location", "tagline")}
     researcher.update({
         "bio": squash(r.get("bio")), "links": r.get("links", {}), "orcid": r["orcid"],
-        "interests": scholar.get("interests") or [], "avatar": "assets/img/avatar.jpg" if avatar.exists() else None,
+        "interests": snapshot.get("interests") or [], "avatar": "assets/img/avatar.jpg" if avatar.exists() else None,
         "career": {k: cfg["career"][k] for k in ("stage", "appointed_year", "current_awards", "recognition") if k in cfg["career"]},
     })
     return {
         "generated_at": stamp, "checked_at": stamp,
-        "researcher": researcher, "metrics": metrics,
+        "researcher": researcher, "metrics": metrics, "scholar_snapshot": snapshot,
         "citations_by_year": cby, "publications_by_year": pubs_by_year,
         "themes": themes, "theme_labels": THEME_LABELS,
         "coauthors": coauthors[:60],
@@ -468,5 +511,6 @@ def run(cfg: dict) -> dict:
     if sim:
         write_json(DATA / "similarity.json", sim, compact=True)
     m = profile["metrics"]
-    log(f"profile.json: {m['outputs']} outputs · {m['citations']} citations · h={m['h_index']}")
+    log(f"profile.json: {m['outputs']} outputs · {m['citations']} citations · h={m['h_index']} "
+        f"(Scholar as of {m['as_of']}; OpenAlex {(m.get('openalex') or {}).get('cited_by_count')} citations)")
     return profile

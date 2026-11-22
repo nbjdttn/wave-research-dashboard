@@ -1,6 +1,6 @@
 // "Today" — the front page: what is new in papers and funding since you last looked.
 import { esc, icon, longToday, daysTo, num, plural } from './util.js';
-import { storyHTML, oppRow, isLive } from './cards.js';
+import { storyHTML, oppRow, isLive, citationTrend } from './cards.js';
 import { sparkline } from './charts.js';
 import { mountWave } from './wave.js';
 
@@ -34,10 +34,6 @@ export function renderToday(root, D, ctx) {
 
   const lead = stories[0];
   const rest = stories.slice(1, 6);
-  const hist = (profile?.history || []);
-  const monthAgo = [...hist].reverse().find((h) => daysTo(h.date) <= -28);
-  const delta = monthAgo ? m.citations - monthAgo.citations : null;
-
   root.innerHTML = `
     <header class="masthead">
       <div class="mast-date">${esc(longToday())}</div>
@@ -76,7 +72,7 @@ export function renderToday(root, D, ctx) {
           <div class="section-head"><h2 class="eyebrow" id="h-num">Your numbers</h2><a class="more" href="#profile">Profile ${icon('arrow', 'xs')}</a></div>
           <div class="kpis" style="grid-template-columns:repeat(2,minmax(0,1fr))">
             <div class="card kpi"><div class="kpi-label">Citations</div><div class="kpi-value">${num(m.citations)}</div>
-              <div class="kpi-delta">${delta != null && delta > 0 ? `<b>+${num(delta)}</b> in the last month` : `<b>+${num(m.citations_this_year)}</b> so far this year`}</div>
+              <div class="kpi-delta">${citationTrend(profile)}</div>
               ${sparkline((profile.citations_by_year || []).map((c) => c.count))}</div>
             <div class="card kpi"><div class="kpi-label">h-index</div><div class="kpi-value">${num(m.h_index)}</div>
               <div class="kpi-delta">i10-index ${num(m.i10_index)} · ${num(m.outputs)} outputs</div></div>

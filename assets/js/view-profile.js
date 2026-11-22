@@ -2,6 +2,7 @@
 // collaborators and the full publication list.
 import { esc, safeUrl, icon, num, initials, $, copyText, daysTo, fmtDate } from './util.js';
 import { columns, stacked, dataTable, sparkline } from './charts.js';
+import { citationTrend, scholarAge } from './cards.js';
 
 const state = { tab: 'overview', q: '', type: 'all', theme: 'all', sort: 'year', tables: {} };
 const TYPE_LABEL = { journal: 'Journal', conference: 'Conference', preprint: 'Preprint', thesis: 'Thesis', other: 'Other' };
@@ -62,10 +63,9 @@ export function renderProfile(root, D, ctx, sub) {
 // ── overview ─────────────────────────────────────────────────────────────────
 function overviewHTML(P) {
   const r = P.researcher, m = P.metrics;
-  const year = new Date().getFullYear();
-  const hist = P.history || [];
-  const monthAgo = [...hist].reverse().find((h) => daysTo(h.date) <= -28);
-  const delta = monthAgo ? m.citations - monthAgo.citations : null;
+  const year = Number(String(m.as_of || '').slice(0, 4)) || new Date().getFullYear();
+  const age = scholarAge(P);
+  const oa = m.openalex || {};
   const top = [...P.publications].sort((a, b) => b.citations - a.citations).slice(0, 5);
   const themeMax = Math.max(1, ...P.themes.map((t) => t.count));
   const venueMax = Math.max(1, ...P.venues.map((v) => v.count));
@@ -81,7 +81,7 @@ function overviewHTML(P) {
     <section class="section" aria-label="Headline numbers">
       <div class="kpis">
         <div class="card kpi"><div class="kpi-label">Citations</div><div class="kpi-value">${num(m.citations)}</div>
-          <div class="kpi-delta">${delta != null && delta > 0 ? `<b>+${num(delta)}</b> in the last month` : `<b>+${num(m.citations_this_year)}</b> in ${year} so far`}</div>
+          <div class="kpi-delta">${citationTrend(P)}</div>
           ${sparkline(P.citations_by_year.map((c) => c.count))}</div>
         <div class="card kpi"><div class="kpi-label">h-index</div><div class="kpi-value">${num(m.h_index)}</div>
           <div class="kpi-delta">${num(m.h_index)} papers with at least ${num(m.h_index)} citations · ${m.m_index} per active year</div></div>
@@ -90,12 +90,13 @@ function overviewHTML(P) {
         <div class="card kpi"><div class="kpi-label">Outputs</div><div class="kpi-value">${num(m.outputs)}</div>
           <div class="kpi-delta">${num(m.journal_articles)} journal articles · ${num(m.conference_papers)} conference papers</div></div>
       </div>
-      <p class="scan"><span>Source: <b>${esc(m.source)}</b>, ${fmtDate(m.as_of, { year: true })}</span>
-        ${m.openalex ? `<span>OpenAlex cross-check: <b>${num(m.openalex.cited_by_count)}</b> citations, h-index <b>${num(m.openalex.h_index)}</b></span>` : ''}</p>
+      <p class="scan"><span>Figures above: <b>Google Scholar</b>, as read on ${fmtDate(m.as_of, { year: true })}</span>
+        ${oa.cited_by_count != null ? `<span>OpenAlex, updated daily: <b>${num(oa.cited_by_count)}</b> citations · h-index <b>${num(oa.h_index)}</b></span>` : ''}</p>
+      ${age > 10 ? `<div class="notice" style="margin-top:12px">${icon('info', 'sm')}<span><b>The Scholar figures are ${age} days old.</b> Google Scholar turns away the automatic daily update, so they are refreshed only when the update is run from a personal computer or a Claude Code session. The OpenAlex figures and the publication list keep updating every day.</span></div>` : ''}
     </section>
 
     <div class="cols half section">
-      ${chartCard('cites', 'Citations per year', `${year} is the year to date`)}
+      ${chartCard('cites', 'Citations per year', `Google Scholar · ${year} is the year to ${age > 10 ? fmtDate(m.as_of) : 'date'}`)}
       ${chartCard('outputs', 'Outputs per year', 'By type of output',
         `<div class="legend" style="margin-bottom:10px">${SERIES.map((s) => `<span><i style="background:${s.color}"></i>${esc(s.label)}</span>`).join('')}</div>`)}
     </div>
@@ -131,7 +132,7 @@ function overviewHTML(P) {
 }
 
 function mountCharts(root, P) {
-  const year = new Date().getFullYear();
+  const year = Number(String(P.metrics.as_of || '').slice(0, 4)) || new Date().getFullYear();
   const cites = P.citations_by_year.map((c) => ({ label: String(c.year), value: c.count, partial: c.year === year }));
   const el1 = $('#chart-cites', root);
   if (state.tables.cites) el1.innerHTML = dataTable([{ key: 'label', label: 'Year' }, { key: 'value', label: 'Citations' }], cites);
@@ -160,10 +161,10 @@ function pubHTML(p, withActions = true) {
   const link = p.url || p.scholar_url;
   return `<article class="pub">
     <h3>${link ? `<a href="${safeUrl(link)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title)}</h3>
-    <div class="cite-n"><b>${num(p.citations)}</b><span>cites</span></div>
+    <div class="cite-n"${p.citations_source === 'openalex' ? ' title="Not on your Scholar list yet — count from OpenAlex"' : ''}><b>${num(p.citations)}</b><span>cites</span></div>
     <p class="byline">${authorsHTML(p)}</p>
     <p class="where">${p.venue ? `<i>${esc(p.venue)}</i>` : ''}${p.venue_detail ? `<span>${esc(p.venue_detail)}</span>` : ''}<span>${p.year || ''}</span>
-      ${p.type !== 'journal' ? `<span class="tag">${esc(TYPE_LABEL[p.type] || p.type)}</span>` : ''}${p.oa_url ? '<span class="tag accent">Open access</span>' : ''}</p>
+      ${p.type !== 'journal' ? `<span class="tag">${esc(TYPE_LABEL[p.type] || p.type)}</span>` : ''}${p.oa_url ? '<span class="tag accent">Open access</span>' : ''}${p.origin === 'orcid' ? '<span class="tag new">New · via ORCID</span>' : ''}</p>
     ${withActions ? `${p.abstract ? `<p class="abstract" data-toggle="abstract">${esc(p.abstract)}</p>` : ''}
     <div class="pub-actions">
       ${p.oa_url ? `<a class="act" href="${safeUrl(p.oa_url)}" target="_blank" rel="noopener">${icon('pdf', 'sm')}Read</a>` : ''}
