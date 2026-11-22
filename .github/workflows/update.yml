@@ -5,6 +5,9 @@ name: Update data
 on:
   schedule:
     - cron: "17 5 * * *"          # every day at 05:17 UTC — ready before the UK morning
+  push:
+    paths:                        # edit your profile, interests or watch-list → data rebuilds
+      - "config/**"
   workflow_dispatch:
     inputs:
       steps:

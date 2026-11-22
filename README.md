@@ -42,7 +42,7 @@ That is all. To install it like an app, open the site on your phone and choose *
 
 ## How the daily update works
 
-`.github/workflows/update.yml` runs every day at 05:17 UTC (and on demand). It runs
+`.github/workflows/update.yml` runs every day at 05:17 UTC, whenever `config/` changes, and on demand. It runs
 `python scripts/update.py`, commits the refreshed files in `data/`, and Pages republishes the site.
 
 ```
@@ -90,7 +90,7 @@ Everything the pipeline knows about you is in **`config/researcher.toml`**:
 `config/schemes.json` is the watch-list of recurring schemes that have no machine-readable feed
 (Royal Society, Leverhulme, Royal Academy of Engineering, ERC, …). Add or remove entries freely.
 
-Edits take effect on the next run.
+Saving a change to either file (the GitHub app or website editor is fine) starts an update straight away.
 
 ## Good to know
 
