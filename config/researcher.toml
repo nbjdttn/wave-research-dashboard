@@ -45,8 +45,7 @@ linkedin   = "https://www.linkedin.com/in/nbjdttn"
 stage              = "Early-career academic: Lecturer (Assistant Professor), permanent post"
 appointed_year     = 2025          # first permanent academic appointment
 phd                = "DPhil in Engineering Science, University of Oxford"
-phd_award_year     = 0             # ← set this (e.g. 2021). 0 = unknown, so 'years since PhD' rules are flagged "check"
-phd_note           = "Thesis dated Michaelmas Term 2020, so the award was most likely late 2020 or 2021 — exact date not recorded here"
+phd_award_year     = 2022          # used for every 'years since PhD' eligibility rule
 previous_roles     = [
   "Eric and Wendy Schmidt AI in Science Postdoctoral Fellow, University of Oxford (2023–2025)",
   "Course Director, Intelligent Earth CDT, University of Oxford",
@@ -343,3 +342,7 @@ max_calls_per_run  = 40                  # spending guard: at most this many ana
 reanalyse_after_days = 30                # refresh an unchanged call's analysis after this long
 scheme_check_days  = 7                   # how often a recurring scheme's page is re-read when unchanged
 use_web_tools      = true                # let Claude search/fetch when a funder page blocks the script
+# When you edit the [career] or [interests] text above, which existing reviews are redone?
+#   "uncertain" – only calls whose eligibility was marked "needs checking" (cheap; the default)
+#   "all"       – every call (thorough; roughly $4–5 with the default model)   ·   "none"
+reassess_on_profile_change = "uncertain"

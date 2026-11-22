@@ -24,23 +24,33 @@ try:  # the site still builds without the SDK or a key; funding entries are then
 except ImportError:  # pragma: no cover
     anthropic = None  # type: ignore[assignment]
 
-PROMPT_VERSION = "2026-11-b"   # bump to force every opportunity to be re-analysed
+PROMPT_VERSION = "2026-11-c"   # bump to force every opportunity to be re-analysed
 
 # Approximate list prices in USD per million tokens (input, output) — used only for the run log.
 PRICES = {"claude-opus-5-5": (4, 20), "claude-sonnet-5-5": (2, 10), "claude-haiku-5-5": (0.1, 0.5),
           "claude-fable-5-2": (8, 40), "claude-opus-5": (5, 25), "claude-sonnet-5": (2, 10)}
 
 
-def _nullable(schema: dict) -> dict:
-    return {"anyOf": [schema, {"type": "null"}]}
-
-
 def _obj(props: dict) -> dict:
     return {"type": "object", "properties": props, "required": list(props), "additionalProperties": False}
 
 
-STR, NSTR = {"type": "string"}, _nullable({"type": "string"})
-NINT = _nullable({"type": "integer"})
+# "Not stated" is an empty string (or 0 for a month), never null. A nullable field is a union type,
+# and the API allows at most 16 of those per schema and compiles them slowly; this schema has none.
+# _tidy() turns the blanks back into None, so the cache and the page still see null.
+STR = {"type": "string"}
+NSTR = {"type": "string"}     # may be "" = not stated
+NINT = {"type": "integer"}    # may be 0 = not known
+BLANKABLE = {                 # object → its fields that may be blank
+    None: ("concerns",),
+    "round": ("opens", "closes", "closes_time", "stage", "notes"),
+    "award_summary": ("amount", "duration"),
+    "effort": ("start_by",),
+    "recurrence": ("typical_open_month", "typical_close_month", "next_expected_open", "next_expected_close", "evidence"),
+}
+DATE = r"\d{4}-\d{2}(-\d{2})?$"
+DATE_FIELDS = {"opens": DATE, "closes": DATE, "start_by": DATE, "next_expected_open": DATE, "next_expected_close": DATE,
+               "closes_time": r"\d{1,2}:\d{2}$"}
 THEMES = ["ocean", "offshore-energy", "coastal", "fluids", "climate-environment", "digital-twin",
           "ai-for-science", "infrastructure", "international", "industry", "any-discipline"]
 
@@ -169,8 +179,8 @@ focus: "domain" (physical science/engineering call), "domain_ai" (AI applied to 
 # Deadline, requirements and effort — the part they care about most
 - round: the current or next round. Use the listing facts given to you as the authority for status and dates; add the \
 stage (outline, expression of interest, full application...) and any other key dates you find (intent to submit, \
-webinar, interviews, panel, latest start date). Dates are ISO "YYYY-MM-DD"; closes_time is 24-hour UK time. \
-Use null for anything not stated. Never invent a date.
+webinar, interviews, panel, latest start date). Dates are ISO "YYYY-MM-DD"; closes_time is 24-hour UK time "HH:MM". \
+Use an empty string "" for anything not stated (and 0 for an unknown month). Never invent a date.
 - requirements: the concrete checklist of what they must prepare or supply, in the order they would tackle it — \
 each proposal section with its word or page limit, CV / track-record format, costings, letters of support, partner \
 commitments, head-of-department or institutional statements, internal selection steps, registration on a submission \
@@ -181,16 +191,23 @@ guidance" in `detail`.
 work; "heavy" = 1-2 months (full case for support, costings, letters); "major" = 3 months or more (consortium \
 building, multi-stage, interview). prep_time is a phrase of at most six words such as "3-4 weeks part-time"; person_days a bare \
 range such as "10-15". drivers: 2-4 short phrases naming what makes it that much work. start_by: the latest sensible date \
-to begin, counted back from the deadline using your prep_time (ISO date), or null when there is no deadline.
+to begin, counted back from the deadline using your prep_time (ISO date), or "" when there is no deadline.
 - recurrence: does this call repeat? Use the round history supplied, round numbers in the title, and statements in \
 the text. cadence "one_off" for a single strategic call; "rolling" for always-open schemes. If the current round is \
 closed or not yet announced and the call repeats, estimate next_expected_open / next_expected_close as "YYYY-MM" \
 from past rounds and set is_estimate true, citing the evidence. If the next round is officially announced, give the \
 announced months and set is_estimate false.
-- next_steps: 2-4 concrete actions, most important first.
+- next_steps: 2-3 concrete actions, most important first.
 
-Write plainly and specifically, in British English, addressing the researcher as "you". Keep `summary` to two \
-sentences, the `notes` fields to one or two sentences each. Do not pad."""
+# Brevity — this is read on a phone and the researcher has asked for no long paragraphs
+Write plainly, in British English, addressing the researcher as "you". Every text field is ONE short sentence \
+or phrase. No hedging, no restating the title, no second sentence.
+- summary: at most 22 words — what is funded and for whom.
+- every `notes` field, why_fit, concerns, recommend_reason: at most 20 words each.
+- requirements: `item` at most 6 words; `detail` at most 14 words — the limit or specific only.
+- effort.drivers: at most 6 words each. next_steps: at most 3, each at most 14 words, starting with a verb.
+- round.notes and recurrence.evidence: at most 20 words, or "".
+- concerns: "" when there is nothing worth flagging."""
 
 
 class Budget(RuntimeError):
@@ -211,7 +228,7 @@ class Claude:
         self.errors: list[str] = []
         self.client = None
         if anthropic is not None and os.environ.get("ANTHROPIC_API_KEY", "").strip():
-            self.client = anthropic.Anthropic(max_retries=3, timeout=300.0)
+            self.client = anthropic.Anthropic(max_retries=2, timeout=600.0)
         self._system = [{"type": "text", "text": system_prompt(cfg), "cache_control": {"type": "ephemeral"}}]
 
     @property
@@ -382,8 +399,42 @@ class Claude:
         return notes if len(notes) > 200 else None
 
 
+def fill_blanks(a: dict) -> dict:
+    """The reverse of what _tidy() does to blanks: None → "" / 0, so stored answers fit the API schema again."""
+    for owner, keys in BLANKABLE.items():
+        obj = a if owner is None else a.get(owner)
+        if isinstance(obj, dict):
+            for k in keys:
+                if obj.get(k) is None and k in obj:
+                    obj[k] = 0 if k.startswith("typical_") else ""
+    for r in a.get("requirements") or []:
+        if isinstance(r, dict) and r.get("detail") is None:
+            r["detail"] = ""
+    return a
+
+
 def _tidy(a: dict) -> dict:
     """Clamp and normalise a model answer so the page can rely on its shape."""
+    for owner, keys in BLANKABLE.items():                 # blanks ("" / 0 / placeholders) become None
+        obj = a if owner is None else a.get(owner)
+        for k in keys if isinstance(obj, dict) else ():
+            v = obj.get(k)
+            if isinstance(v, str):
+                v = squash(v)
+                if k in DATE_FIELDS and not re.match(DATE_FIELDS[k], v):
+                    v = ""                                # "not stated", "TBC" … are not dates
+                elif v.lower() in ("null", "none", "n/a", "not stated", "unknown"):
+                    v = ""
+            if k.startswith("typical_") and not (isinstance(v, int) and 1 <= v <= 12):
+                v = None
+            obj[k] = v or None
+    for r in a.get("requirements") or []:
+        r["detail"] = squash(r.get("detail")) or None
+    for owner, k in ((a.get("topic_fit"), "verdict"), (a.get("career_stage"), "verdict"), (a.get("eligibility"), "verdict"),
+                     (a, "fit_label"), (a, "focus"), (a, "opportunity_type"), (a, "role"),
+                     (a.get("round"), "status"), (a.get("effort"), "level"), (a.get("recurrence"), "cadence")):
+        if isinstance(owner, dict) and isinstance(owner.get(k), str):
+            owner[k] = owner[k].strip().lower()           # enum casing is not guaranteed by the API
     a["fit_score"] = max(0, min(100, int(a.get("fit_score") or 0)))
     s = a["fit_score"]
     a["fit_label"] = "excellent" if s >= 85 else "strong" if s >= 70 else "possible" if s >= 45 else "weak"

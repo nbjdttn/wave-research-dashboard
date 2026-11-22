@@ -22,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from wave import funders as F  # noqa: E402
 from wave import grants as G  # noqa: E402
-from wave.claude import ANALYSIS_SCHEMA, PROMPT_VERSION, _tidy, system_prompt  # noqa: E402
+from wave.claude import ANALYSIS_SCHEMA, PROMPT_VERSION, _tidy, fill_blanks, system_prompt  # noqa: E402
 from wave.util import CACHE, CONFIG, load_config, log, read_json, sha, today, write_json  # noqa: E402
 
 SEED_MODEL = "claude (build-time review)"
@@ -129,15 +129,14 @@ def import_analysis(cfg, src: Path) -> None:
             log(f"  skip {f.name}: unknown id or unreadable")
             bad += 1
             continue
-        errs = validate(data, ANALYSIS_SCHEMA)
+        errs = validate(fill_blanks(data), ANALYSIS_SCHEMA)
         if errs:
             log(f"  {f.name}: " + "; ".join(errs[:4]))
             bad += 1
             continue
         prep = G.prepare(it, arch, cache, fetch_detail=False)
         cache["analysis"][it["id"]] = {
-            "hash": sha(prompt_hash, prep["facts"], prep["body_hash"]),
-            "facts_hash": sha(prep["facts"], prep["body_hash"]),
+            "content": sha(prep["facts"], prep["body_hash"]), "profile": prompt_hash,
             "at": today().isoformat(), "model": SEED_MODEL, "seeded": True, "data": _tidy(data)}
         ok += 1
     G.save_cache(cache)
@@ -173,7 +172,7 @@ def import_schemes(cfg, src: Path) -> None:
             a["role"] = "any"
         if a.get("focus") not in ("domain", "domain_ai", "ai_only", "open"):
             a["focus"] = "open"
-        errs = validate(a, ANALYSIS_SCHEMA)
+        errs = validate(fill_blanks(a), ANALYSIS_SCHEMA)
         if errs:
             log(f"  {s.get('slug')}: " + "; ".join(errs[:5]))
             bad += 1
@@ -202,7 +201,7 @@ def validate_dir(cfg, src: Path) -> None:
         if f.name.startswith("_"):
             continue
         data = read_json(f)
-        errs = ["not valid JSON"] if not isinstance(data, dict) else validate(data, ANALYSIS_SCHEMA)
+        errs = ["not valid JSON"] if not isinstance(data, dict) else validate(fill_blanks(data), ANALYSIS_SCHEMA)
         if errs:
             bad += 1
             print(f"{f.name}: " + "; ".join(errs[:6]))

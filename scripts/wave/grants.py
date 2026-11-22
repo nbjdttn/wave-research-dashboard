@@ -420,22 +420,32 @@ def run(cfg: dict) -> dict:
     out_items: list[dict] = []
     pending = 0
     refresh_days = int(cc.get("reanalyse_after_days", 30))
+    reassess = str(cc.get("reassess_on_profile_change", "uncertain")).lower()
+
+    def profile_stale(entry: dict | None) -> bool:
+        """Has the researcher's own description changed since this review, in a way that matters?"""
+        if not entry or entry.get("profile") == prompt_hash or reassess == "none":
+            return False
+        if reassess == "all":
+            return True
+        return entry["data"]["eligibility"]["verdict"] == "check"     # reviews that were waiting on a fact
+
     for it in shortlist:
         prep = prepare(it, archive_list, cache)
-        h = sha(prompt_hash, prep["facts"], prep["body_hash"])
+        content = sha(prep["facts"], prep["body_hash"])
         entry = cache["analysis"].get(it["id"])
         age = (today() - (parse_date((entry or {}).get("at")) or today())).days if entry else 0
-        # a build-time review stays valid until the call itself changes; an API analysis also
-        # expires after `reanalyse_after_days`
-        fresh = bool(entry) and (age < refresh_days or it["status"] == "closed") and (
-            entry.get("hash") == h or (entry.get("seeded") and entry.get("facts_hash") == sha(prep["facts"], prep["body_hash"])))
+        # A review stays valid while the call's own text is unchanged, for up to `reanalyse_after_days`
+        # (closed calls never change), unless the researcher's profile has changed underneath it.
+        fresh = (bool(entry) and (entry.get("content") or entry.get("facts_hash")) == content
+                 and (age < refresh_days or it["status"] == "closed") and not profile_stale(entry))
         if not fresh and claude.available and claude.remaining > 0:
             try:
                 data = claude.analyse(prep["facts"], prep["body"], prep["hist"])
             except Budget:
                 data = None
             if data:
-                entry = {"hash": h, "at": tday, "model": claude.model, "data": data}
+                entry = {"content": content, "profile": prompt_hash, "at": tday, "model": claude.model, "data": data}
                 cache["analysis"][it["id"]] = entry
         if entry is None:
             pending += 1
@@ -478,19 +488,19 @@ def run(cfg: dict) -> dict:
         entry = cache["analysis"].get(sid)
         if text:
             facts = scheme_facts(sc)
-            h = sha(prompt_hash, facts, text_hash)
             if entry is not None and not entry.get("page_hash"):
                 entry["page_hash"] = text_hash          # what the page looked like at the last review
             age_a = days_since((entry or {}).get("at"))
             changed = entry is not None and entry.get("page_hash") != text_hash
-            stale = entry is None or age_a >= refresh_days or (changed and age_a >= check_days)
+            stale = entry is None or age_a >= refresh_days or (changed and age_a >= check_days) or profile_stale(entry)
             if stale and claude.available and claude.remaining > 0:
                 try:
                     data = claude.analyse(facts, text)
                 except Budget:
                     data = None
                 if data:
-                    entry = {"hash": h, "page_hash": text_hash, "at": tday, "model": claude.model, "data": data}
+                    entry = {"page_hash": text_hash, "profile": prompt_hash, "at": tday, "model": claude.model, "data": data,
+                             "last_round": (entry or {}).get("last_round")}
                     cache["analysis"][sid] = entry
         if entry is None:
             pending += 1

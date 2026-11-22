@@ -108,47 +108,23 @@ def _collect(cfg: dict, profile: dict, status: dict) -> dict[str, dict]:
         return n
     attempt("openalex", openalex)
 
-    # Who cited the researcher recently (Semantic Scholar, cached per paper for three days).
+    # Who cited the researcher recently — read from the lists the citations step keeps up to date.
     cite_cache = read_json(CACHE / "citations.json", {}) or {}
-    cited = sorted((p for p in pubs if p["citations"] > 0), key=lambda p: -p["citations"])[:45]
-    fresh = 0
 
     def citing() -> int:
-        nonlocal fresh
-        n = failures = 0
-        for p in cited:
-            entry = cite_cache.get(p["doi"])
-            age = (today() - dt.date.fromisoformat(entry["at"])).days if entry else 99
-            if age >= 3 and fresh < 45 and failures < 3:      # after three refusals, stop asking this run
-                try:
-                    resp = S.fetch(
-                        f"https://api.semanticscholar.org/graph/v1/paper/DOI:{p['doi']}/citations",
-                        params={"fields": S.S2_FIELDS, "limit": 200}, headers=S.s2_headers(), retries=3,
-                        min_interval=1.2, ok_statuses=(200, 404),
-                    )
-                    rows = resp.json().get("data", []) if resp.status_code == 200 else []
-                    recent = []
-                    for r in rows:
-                        c = S._s2_paper(r["citingPaper"]) if r.get("citingPaper") else None
-                        when = c and (c.get("date") or (f"{c['year']}-01-01" if c.get("year") else None))
-                        if when and when >= since.isoformat():      # the feed only needs recent citers
-                            recent.append(c)
-                    entry = {"at": today().isoformat(), "papers": recent}
-                    cite_cache[p["doi"]] = entry
-                    fresh += 1
-                    failures = 0
-                except SourceError:
-                    failures += 1
-                    if not entry:
-                        continue
-            for c in (entry or {}).get("papers", []):
-                if not _valid(c):
+        n = 0
+        for p in pubs:
+            for c in (cite_cache.get(p["doi"]) or {}).get("papers", []):
+                d = c.get("date")
+                if not d or d < since.isoformat() or not c.get("title"):
                     continue
-                d = c.get("date") or (f"{c['year']}-01-01" if c.get("year") else None)
-                if not d or d < since.isoformat():
+                paper = {"s2_id": c.get("s2"), "doi": c.get("doi"), "arxiv": c.get("arxiv"), "title": c["title"],
+                         "authors": [a["n"] for a in c.get("authors", [])], "venue": c.get("venue"), "year": c.get("year"),
+                         "date": d, "abstract": c.get("abstract"), "oa_url": c.get("oa_url"), "url": c.get("url")}
+                if not _valid(paper):
                     continue
-                n += add([c], "Semantic Scholar")
-                tk = norm_title(c["title"])
+                n += add([paper], "Semantic Scholar")
+                tk = norm_title(paper["title"])
                 hit = next((q for q in pool.values() if q["_tk"] == tk), None)
                 if hit is not None:
                     hit.setdefault("cites", [])
@@ -156,7 +132,6 @@ def _collect(cfg: dict, profile: dict, status: dict) -> dict[str, dict]:
                         hit["cites"].append(p["id"])
         return n
     attempt("citing", citing)
-    write_json(CACHE / "citations.json", cite_cache, compact=True)
     return pool
 
 
