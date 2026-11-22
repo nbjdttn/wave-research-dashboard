@@ -1,10 +1,11 @@
 // Hand a request to an agent of your choice: one of your own (for example a Claude Code session
-// working on your Mac), a new session, or simply the clipboard / the phone's share sheet.
-// Your list of agents is kept on this device only.
-import { esc, icon, store, toast, repoSlug } from './util.js';
+// working on your Mac), the Claude app, or simply the clipboard / the phone's share sheet.
+// Every choice that opens something copies the request first, so it is ready to paste on arrival:
+// the Claude app does not fill a request in from a link. Your list of agents is kept on this device only.
+import { esc, icon, store, toast } from './util.js';
 
 const OK_LINK = /^(https:\/\/|claude:\/\/|claude-cli:\/\/|sms:)/i;      // nothing else is ever opened
-const newSession = (q, repo) => `https://claude.ai/code/new?q=${encodeURIComponent(q)}${repo ? `&repo=${encodeURIComponent(repo)}` : ''}`;
+const newSession = (q) => `https://claude.ai/code/new?q=${encodeURIComponent(q)}`;   // "q" fills the request in where that is supported
 
 export const agents = {
   all: () => store.get('agents', []).filter((a) => a && a.name && OK_LINK.test(a.link || '')),
@@ -19,17 +20,15 @@ export const agents = {
   remove(id) { store.set('agents', this.all().filter((a) => a.id !== id)); },
 };
 
-/** Where a request can go, most recently used first. Each entry: { id, name, hint, href?, copy? }. */
+/** Where a request can go, most recently used first. Each entry: { id, name, hint, href? }. */
 function destinations(request) {
-  const repo = repoSlug();
   const mine = agents.all().map((a) => (a.link.includes('{q}')
-    ? { id: a.id, name: a.name, hint: 'Opens with the request filled in', href: a.link.replace('{q}', encodeURIComponent(request)) }
-    : { id: a.id, name: a.name, hint: 'Copies the request, then opens it — paste and send', href: a.link, copy: true }));
+    ? { id: a.id, name: a.name, hint: 'Opens with the request filled in — copied as well', href: a.link.replace('{q}', encodeURIComponent(request)) }
+    : { id: a.id, name: a.name, hint: 'Copies the request and opens it — paste and send', href: a.link }));
   const list = [
     ...mine,
-    { id: 'new', name: 'New Claude session', hint: 'A new session in the Claude app, with the request filled in', href: newSession(request) },
-    ...(repo ? [{ id: 'cloud', name: 'New cloud session on the dashboard’s files', hint: 'Can read your profile and the funding data', href: newSession(request, repo) }] : []),
-    { id: 'copy', name: 'Copy the request', hint: 'Paste it into any agent — on your Mac too, if Handoff is on' },
+    { id: 'new', name: 'Claude app', hint: 'Copies the request and opens a new session — paste and send', href: newSession(request) },
+    { id: 'copy', name: 'Copy only', hint: 'Paste it into any agent — on your Mac too, if Handoff is on' },
     ...(navigator.share ? [{ id: 'share', name: 'Share…', hint: 'AirDrop, Messages, Mail and other apps' }] : []),
   ];
   const last = store.raw('agent.last');
@@ -43,11 +42,34 @@ export function agentSheetHTML(request, subject) {
     <div class="agent-list">${destinations(request).map((d) => {
       const inner = `<span class="agent-ico">${icon(d.id === 'copy' ? 'copy' : d.id === 'share' ? 'ext' : 'spark', 'sm')}</span><span><b>${esc(d.name)}</b><span>${esc(d.hint)}</span></span>`;
       return d.href
-        ? `<a class="agent" href="${esc(d.href)}" target="_blank" rel="noopener" data-agent="${esc(d.id)}"${d.copy ? ' data-copy' : ''}>${inner}</a>`
+        ? `<a class="agent" href="${esc(d.href)}" target="_blank" rel="noopener" data-agent="${esc(d.id)}">${inner}</a>`
         : `<button class="agent" type="button" data-agent="${esc(d.id)}">${inner}</button>`;
     }).join('')}</div>
     <details class="fold" style="margin-top:14px"><summary>The request</summary><div class="fold-body"><p class="request">${esc(request)}</p></div></details>
     <p style="margin-top:14px"><button class="btn sm" type="button" data-manage-agents>${icon('plus', 'xs')}Add or remove agents</button></p>`;
+}
+
+/**
+ * Put text on the clipboard during the tap itself, so it is already there when another app comes to
+ * the front. The older, immediate way is tried first; the newer one covers browsers without it.
+ * Resolves to true when the text was copied.
+ */
+function copyNow(text) {
+  let done = false;
+  try {
+    const held = document.activeElement;
+    const box = Object.assign(document.createElement('textarea'), { value: text, readOnly: true });
+    box.setAttribute('aria-hidden', 'true');
+    box.style.cssText = 'position:absolute;left:0;top:0;width:1px;height:1px;padding:0;border:0;opacity:0;font-size:16px';
+    document.body.appendChild(box);
+    box.focus({ preventScroll: true });
+    box.setSelectionRange(0, text.length);
+    done = document.execCommand('copy');
+    box.remove();
+    held?.focus?.({ preventScroll: true });
+  } catch { /* not available: the newer way below */ }
+  if (done) return Promise.resolve(true);
+  return navigator.clipboard?.writeText ? navigator.clipboard.writeText(text).then(() => true, () => false) : Promise.resolve(false);
 }
 
 /** Call from the sheet's click handler. Returns true when the click was a destination (close the sheet). */
@@ -61,11 +83,12 @@ export async function agentClick(e, request) {
     try { await navigator.share({ text: request }); } catch { /* dismissed */ }
     return true;
   }
-  if (id === 'copy' || 'copy' in el.dataset) {             // the link (if any) opens by itself: this is a real tap on it
-    try { await navigator.clipboard.writeText(request); toast(id === 'copy' ? 'Request copied' : 'Request copied — paste it there'); }
-    catch { toast('Copying is not available here — open “The request” and copy it by hand'); return id !== 'copy'; }
-  }
-  return true;
+  // Copy before anything opens. A link opens by itself: this is a real tap on it, which is what lets
+  // the phone hand it to the Claude app.
+  const copied = await copyNow(request);
+  if (copied) toast(id === 'copy' ? 'Request copied' : 'Request copied — paste it there');
+  else toast('Copying is not available here — open “The request” and copy it by hand');
+  return copied || id !== 'copy';
 }
 
 /** Settings → Agents: the list and the form to add one. */

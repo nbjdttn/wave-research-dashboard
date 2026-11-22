@@ -13,13 +13,16 @@ home screen and it behaves like an app (pull down to refresh, swipe, no zooming 
 | **Profile** | Your record: citations, h-index, trends, themes, journals, collaborators and the full list. **Citations** shows who is citing you (independent groups, co-authors, yourself) by year, month, journal, country and institution. |
 
 Every paper and funding call has a **Send to an agent** button (✦). It opens a chooser: your own agents
-(add them in Settings — for example a Claude Code session working on your Mac), a new Claude session
-with the request filled in, *Copy the request*, or the phone's share sheet.
+(add them in Settings — for example a Claude Code session working on your Mac), the Claude app,
+*Copy only*, or the phone's share sheet. Whatever opens, the request is copied first, so it is ready
+to paste on arrival.
 
 Live site: **https://nbjdttn.github.io/wave-research-dashboard/**
 
-Tap the sliders icon (top right) to choose one of eight colour palettes — Ocean, Coast, Midnight, Kelp,
-Coral, Slate, Paper, Graphite — each in light and dark.
+Tap the sliders icon (top right) to choose a palette. Each one sets the colours *and* the typeface:
+**Paper** (cream and black, Inter), **Charcoal** (charcoal and soft green, Open Sans with a light serif
+figure), **Lilac** (near-black and lilac, Figtree) and **Midnight** (deep indigo, Inter). A palette opens
+in its own mode; *Light or dark* switches to its companion.
 
 ## Set-up — two steps, both doable from a phone
 
@@ -104,7 +107,7 @@ Everything the pipeline knows about you is in **`config/researcher.toml`**:
   `reassess_on_profile_change`: after you edit your profile, re-review only the calls whose eligibility
   was uncertain (`"uncertain"`, the default), every call (`"all"`) or none (`"none"`).
 
-To add a palette of your own, copy a block in `assets/js/palettes.js` and change the colours.
+To add a palette of your own, copy a block in `assets/js/palettes.js` and change the colours and type.
 
 `config/schemes.json` is the watch-list of recurring schemes that have no machine-readable feed
 (Royal Society, Leverhulme, Royal Academy of Engineering, ERC, …). Add or remove entries freely.
@@ -155,7 +158,7 @@ export the same briefs for review by hand and import the answers.
 ```
 index.html, sw.js, manifest.webmanifest   the app shell (no build step, no dependencies)
 assets/css, assets/js                     interface: views, charts, similarity scoring
-assets/fonts                              Inter (SIL Open Font License)
+assets/fonts                              Inter, Open Sans, Figtree, serif numerals (SIL Open Font License)
 config/                                   researcher.toml, schemes.json
 data/                                     generated JSON (+ data/cache, the pipeline's memory)
 scripts/update.py, scripts/wave/          the data pipeline (Python)

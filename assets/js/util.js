@@ -133,13 +133,6 @@ export function shellHeight({ inner, visual = 0, screenW = 0, screenH = 0, portr
   return Math.round(Math.min(h, full));
 }
 
-// ── hand a task to Claude ────────────────────────────────────────────────────
-/** owner/name of the GitHub repository behind a github.io page ('' anywhere else). */
-export function repoSlug() {
-  const m = /^([a-z0-9-]+)\.github\.io$/i.exec(location.hostname);
-  const name = location.pathname.split('/').filter(Boolean)[0];
-  return m && name ? `${m[1]}/${name}` : '';
-}
 // ── icons ────────────────────────────────────────────────────────────────────
 const PATHS = {
   ext: '<path d="M14 5h5v5M19 5l-8 8M11 6H6.500A1.500 1.500 0 0 0 5 7.500v10A1.500 1.500 0 0 0 6.500 19h10a1.500 1.500 0 0 0 1.500-1.500V13"/>',

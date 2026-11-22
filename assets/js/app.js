@@ -162,17 +162,20 @@ function sourceRows(group, labels) {
   }).join('');
 }
 
-/** A small preview of one palette: page, card, wave line, text and accent. */
-function swatch(key, pal, mode, on) {
-  const t = pal[mode];
+/** A small preview of one palette, drawn in its own colours and typeface (its home mode). */
+function swatch(key, pal, on) {
+  const t = pal[pal.home];
+  const ty = pal.type;
+  const cites = D.profile?.metrics?.citations;
   return `<button class="swatch" type="button" role="radio" aria-checked="${on}" data-palette-set="${esc(key)}">
-    <svg viewBox="0 0 96 60" aria-hidden="true">
-      <rect width="96" height="60" fill="${esc(t.bg)}"/>
-      <rect x="7" y="7" width="82" height="34" rx="8" fill="${esc(t.surface)}" stroke="${esc(t.line)}" stroke-width="1"/>
-      <path d="M7 27c8 0 9-3 13-3s5 8 9 8 5-16 10-16 5 12 9 12 5-4 9-4 6 3 10 3 8-1 22-1" fill="none" stroke="${esc(t.accent)}" stroke-width="1.8" stroke-linecap="round"/>
-      <rect x="8" y="47" width="30" height="5" rx="2.5" fill="${esc(t.ink)}"/><rect x="42" y="48" width="16" height="3" rx="1.5" fill="${esc(t.ink3)}"/>
-      <circle cx="83" cy="50" r="5" fill="${esc(t.accent)}"/>
-    </svg><span class="swatch-name">${esc(pal.name)}</span></button>`;
+    <span class="swatch-view" aria-hidden="true" style="background:${esc(t.bg)};color:${esc(t.ink)};font-family:${esc(ty.font)}">
+      <span class="swatch-card" style="background:${esc(t.surface)};border-color:${esc(t.edge)}">
+        <b style="font-family:${esc(ty.num || ty.font)};font-weight:${esc(ty.wNum)};letter-spacing:${esc(ty.lsNum)}">${cites ? num(cites) : '631'}</b>
+        <svg viewBox="0 0 64 22" preserveAspectRatio="none"><path d="M1 13c5 0 6-2 9-2s4 6 7 6 4-15 8-15 4 13 7 13 4-5 7-5 4 3 7 3 6-1 17-1" fill="none" stroke="${esc(t.wave)}" stroke-width="1.8" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+      </span>
+      <span class="swatch-row"><i style="font-weight:${esc(ty.wHead)};letter-spacing:${esc(ty.lsHead)}">Funding</i><em style="background:${esc(t.accent)};color:${esc(t.onAccent)}">Open</em></span>
+    </span>
+    <span class="swatch-name">${esc(pal.name)}<small>${esc(pal.face)}</small></span></button>`;
 }
 
 let sheetRequest = null;                                  // set while the sheet is the "send to an agent" chooser
@@ -197,7 +200,7 @@ function openSettings(focus) {
   const seg = (v, label) => `<button type="button" role="tab" data-theme-set="${v}" aria-selected="${theme === v}">${label}</button>`;
   $('#sheet-body').innerHTML = `
     ${WP ? `<h3>Palette</h3>
-    <div class="palettes" role="radiogroup" aria-label="Colour palette">${Object.entries(WP.all).map(([k, pal]) => swatch(k, pal, WP.mode(), WP.current() === k)).join('')}</div>` : ''}
+    <div class="palettes" role="radiogroup" aria-label="Colour palette">${Object.entries(WP.all).map(([k, pal]) => swatch(k, pal, WP.current() === k)).join('')}</div>` : ''}
 
     <h3>Light or dark</h3>
     <div class="seg" role="tablist" aria-label="Theme">${seg('auto', 'Auto')}${seg('light', 'Light')}${seg('dark', 'Dark')}</div>
@@ -249,8 +252,10 @@ sheet.addEventListener('click', async (e) => {
   if (gone) { agents.remove(gone.dataset.agentRemove); openSettings('agents'); return; }
   const pal = e.target.closest('[data-palette-set]');
   if (pal && window.WavePalettes) {
-    window.WavePalettes.choose(pal.dataset.paletteSet);
-    $$('[data-palette-set]', sheet).forEach((b) => b.setAttribute('aria-checked', String(b === pal)));
+    const chosen = pal.dataset.paletteSet;
+    window.WavePalettes.choose(chosen);                   // shown as drawn on the swatch: in the palette's home mode
+    openSettings();                                       // "Light or dark" may have moved with it
+    $(`[data-palette-set="${chosen}"]`, sheet)?.focus();
     return;
   }
   const t = e.target.closest('[data-theme-set]');
@@ -259,7 +264,7 @@ sheet.addEventListener('click', async (e) => {
     if (v === 'auto') { document.documentElement.removeAttribute('data-theme'); store.raw('theme', 'auto'); }
     else { document.documentElement.setAttribute('data-theme', v); store.raw('theme', v); }
     window.WavePalettes?.apply();                         // each palette has its own light and dark set
-    openSettings();                                       // redraw the swatches for the new mode
+    openSettings();
     return;
   }
   if (e.target.closest('#install-btn') && installEvent) {
