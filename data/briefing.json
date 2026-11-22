@@ -1,9 +1,12 @@
 {
- "generated_at": "2026-11-22T21:00:00Z",
+ "generated_at": "2026-11-22T21:25:00Z",
  "by": "Claude (agent pass)",
  "headline": "One deadline needs a decision this week",
  "items": [
   {"kind": "deadline", "important": true, "title": "UKRI Enabling AI adoption closes 1 Dec, 16:00", "text": "Nine days left; you need an AI or domain co-lead and your research office's internal sign-off.", "url": "#funding/ukri-204237"},
-  {"kind": "citation", "title": "Citations are up 277 this year", "text": "63% come from groups you have never published with; your peer group's median at the same stage is 146.", "url": "#profile/peers"}
+  {"kind": "funding", "title": "Horizon wave and tidal call opens 3 Dec", "text": "One €43m grant, closing 31 March; ask your contacts now which consortium still needs a wave-loading partner.", "url": "#funding/eu-HORIZON-CL5-2027-02-D3-09"},
+  {"kind": "paper", "title": "Extreme-wave forecast from a single observation", "text": "Hilliard, Chabchoub and Farazmand reconstruct and forecast rogue waves from one measurement, close to your tank work.", "url": "https://doi.org/10.48550/arxiv.2611.21068"},
+  {"kind": "citation", "title": "Scholar now shows 631 citations, h-index 16", "text": "Up 277 this year; your peer group's median at the same stage is 118.", "url": "#profile/peers"},
+  {"kind": "note", "title": "Two peers moved out of your cohort", "text": "Thesis records put McAllister at 2017 and Karmpadakis at 2018, before your comparison window.", "url": "#profile/peers"}
  ]
 }

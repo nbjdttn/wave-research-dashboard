@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T20:55:33Z",
+ "generated_at": "2026-11-22T21:19:58Z",
  "source": "OpenAlex",
  "you": {
   "id": "A5039175173",
@@ -59,17 +59,17 @@
   ],
   "candidates": 1437,
   "looked_up": 474,
-  "eligible": 44,
+  "eligible": 42,
   "shown": 12,
   "bench": 24,
   "institutions": 64,
-  "estimated_phd": 9
+  "estimated_phd": 7
  },
  "summary": {
   "age": 4,
   "you": 587,
-  "reached": 7,
-  "median": 146,
+  "reached": 5,
+  "median": 118,
   "rank": 1
  },
  "show_names": true,
@@ -125,73 +125,6 @@
     }
    ],
    "url": "https://openalex.org/A5101119020"
-  },
-  {
-   "id": "A5066246575",
-   "name": "Mark L. McAllister",
-   "institution": "University of Oxford",
-   "country": "GB",
-   "phd_year": 2020,
-   "phd_source": "estimate",
-   "first_year": 2017,
-   "similarity": 0.97,
-   "coauthor": false,
-   "citations": 481,
-   "works": 29,
-   "h_index": 11,
-   "by_year": [
-    {
-     "year": 2017,
-     "cites": 1,
-     "works": 3
-    },
-    {
-     "year": 2018,
-     "cites": 5,
-     "works": 2
-    },
-    {
-     "year": 2019,
-     "cites": 25,
-     "works": 5
-    },
-    {
-     "year": 2020,
-     "cites": 20,
-     "works": 2
-    },
-    {
-     "year": 2021,
-     "cites": 36,
-     "works": 3
-    },
-    {
-     "year": 2022,
-     "cites": 58,
-     "works": 4
-    },
-    {
-     "year": 2023,
-     "cites": 54,
-     "works": 2
-    },
-    {
-     "year": 2024,
-     "cites": 72,
-     "works": 5
-    },
-    {
-     "year": 2025,
-     "cites": 100,
-     "works": 1
-    },
-    {
-     "year": 2026,
-     "cites": 110,
-     "works": 2
-    }
-   ],
-   "url": "https://openalex.org/A5066246575"
   },
   {
    "id": "A5018450038",
@@ -504,68 +437,6 @@
    "url": "https://openalex.org/A5076371762"
   },
   {
-   "id": "A5020068453",
-   "name": "Ioannis Karmpadakis",
-   "institution": "Imperial College London",
-   "country": "GB",
-   "phd_year": 2021,
-   "phd_source": "estimate",
-   "first_year": 2018,
-   "similarity": 0.93,
-   "coauthor": false,
-   "citations": 403,
-   "works": 44,
-   "h_index": 10,
-   "by_year": [
-    {
-     "year": 2018,
-     "cites": 0,
-     "works": 1
-    },
-    {
-     "year": 2019,
-     "cites": 1,
-     "works": 4
-    },
-    {
-     "year": 2020,
-     "cites": 13,
-     "works": 2
-    },
-    {
-     "year": 2021,
-     "cites": 17,
-     "works": 0
-    },
-    {
-     "year": 2022,
-     "cites": 40,
-     "works": 2
-    },
-    {
-     "year": 2023,
-     "cites": 46,
-     "works": 4
-    },
-    {
-     "year": 2024,
-     "cites": 52,
-     "works": 3
-    },
-    {
-     "year": 2025,
-     "cites": 87,
-     "works": 13
-    },
-    {
-     "year": 2026,
-     "cites": 147,
-     "works": 15
-    }
-   ],
-   "url": "https://openalex.org/A5020068453"
-  },
-  {
    "id": "A5062369285",
    "name": "Jinyu Yao",
    "institution": "Shanghai Jiao Tong University",
@@ -660,7 +531,7 @@
    "institution": "The University of Sydney",
    "country": "CN",
    "phd_year": 2023,
-   "phd_source": "estimate",
+   "phd_source": "config",
    "first_year": 2020,
    "similarity": 0.9,
    "coauthor": false,
@@ -777,9 +648,7 @@
     }
    ],
    "url": "https://openalex.org/A5000157986"
-  }
- ],
- "bench": [
+  },
   {
    "id": "A5001591448",
    "name": "Thobani Hlophe",
@@ -830,8 +699,7 @@
      "works": 1
     }
    ],
-   "url": "https://openalex.org/A5001591448",
-   "near_stage": false
+   "url": "https://openalex.org/A5001591448"
   },
   {
    "id": "A5010041690",
@@ -883,9 +751,10 @@
      "works": 2
     }
    ],
-   "url": "https://openalex.org/A5010041690",
-   "near_stage": false
-  },
+   "url": "https://openalex.org/A5010041690"
+  }
+ ],
+ "bench": [
   {
    "id": "A5021288849",
    "name": "Zhuxiao Shao",
@@ -2165,6 +2034,127 @@
     }
    ],
    "url": "https://openalex.org/A5052638728",
+   "near_stage": false
+  },
+  {
+   "id": "A5068721514",
+   "name": "León-Carlos Dempwolff",
+   "institution": "Norwegian University of Science and Technology",
+   "country": "NO",
+   "phd_year": 2022,
+   "phd_source": "estimate",
+   "first_year": 2019,
+   "similarity": 0.45,
+   "coauthor": false,
+   "citations": 108,
+   "works": 19,
+   "h_index": 6,
+   "by_year": [
+    {
+     "year": 2019,
+     "cites": 0,
+     "works": 2
+    },
+    {
+     "year": 2020,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2021,
+     "cites": 1,
+     "works": 0
+    },
+    {
+     "year": 2022,
+     "cites": 5,
+     "works": 4
+    },
+    {
+     "year": 2023,
+     "cites": 9,
+     "works": 3
+    },
+    {
+     "year": 2024,
+     "cites": 14,
+     "works": 2
+    },
+    {
+     "year": 2025,
+     "cites": 39,
+     "works": 3
+    },
+    {
+     "year": 2026,
+     "cites": 40,
+     "works": 4
+    }
+   ],
+   "url": "https://openalex.org/A5068721514",
+   "near_stage": false
+  },
+  {
+   "id": "A5060244400",
+   "name": "Olav Rømcke",
+   "institution": "Norwegian University of Science and Technology",
+   "country": "NO",
+   "phd_year": 2021,
+   "phd_source": "estimate",
+   "first_year": 2018,
+   "similarity": 0.45,
+   "coauthor": false,
+   "citations": 88,
+   "works": 21,
+   "h_index": 4,
+   "by_year": [
+    {
+     "year": 2018,
+     "cites": 0,
+     "works": 2
+    },
+    {
+     "year": 2019,
+     "cites": 0,
+     "works": 1
+    },
+    {
+     "year": 2020,
+     "cites": 0,
+     "works": 0
+    },
+    {
+     "year": 2021,
+     "cites": 1,
+     "works": 6
+    },
+    {
+     "year": 2022,
+     "cites": 3,
+     "works": 0
+    },
+    {
+     "year": 2023,
+     "cites": 12,
+     "works": 5
+    },
+    {
+     "year": 2024,
+     "cites": 16,
+     "works": 0
+    },
+    {
+     "year": 2025,
+     "cites": 22,
+     "works": 1
+    },
+    {
+     "year": 2026,
+     "cites": 34,
+     "works": 6
+    }
+   ],
+   "url": "https://openalex.org/A5060244400",
    "near_stage": false
   }
  ]

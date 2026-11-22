@@ -376,7 +376,9 @@ institutions = [
 
 # Corrections. If you know someone's PhD year, put it here: name (as shown) or OpenAlex id = year.
 [peers.phd_years]
-# "Mark L. McAllister" = 2018
+"Mark L. McAllister" = 2017    # Edinburgh thesis record
+"Ioannis Karmpadakis" = 2018   # Imperial thesis record
+"Yuchen He" = 2023             # Sydney thesis record
 
 # ─────────────────────────────────────────────────────────────────────────────
 #  Claude — used only by the scheduled GitHub Action (never by the web page).
