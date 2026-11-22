@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Draws the app icons (a focused wave group on an ocean gradient). Run once: needs Pillow."""
+"""Draws the app icons: a blue wave group on white. Run once: needs Pillow."""
 import math
 from pathlib import Path
 
 from PIL import Image, ImageDraw
 
 OUT = Path(__file__).resolve().parents[1] / "assets" / "icons"
-A, B = (6, 40, 58), (15, 116, 128)          # deep navy → teal
+WHITE = (255, 255, 255)
+DEEP, SKY = (24, 78, 214), (20, 164, 232)       # the wave: deep blue → sky blue, left to right
+WASH = (232, 241, 255)                           # a pale wash of water under the wave
 
 
 def wave(x: float) -> float:
@@ -16,23 +18,23 @@ def wave(x: float) -> float:
 
 def draw(size: int, radius: float, inset: float) -> Image.Image:
     s = size * 4                                             # supersample, then shrink
-    img = Image.new("RGB", (s, s))
-    px = img.load()
-    for y in range(s):
-        for x in range(s):
-            t = (x + y) / (2 * s)
-            px[x, y] = tuple(round(A[i] + (B[i] - A[i]) * t) for i in range(3))
+    img = Image.new("RGB", (s, s), WHITE)
     d = ImageDraw.Draw(img)
     lo, hi = s * inset, s * (1 - inset)
-    # Stamp overlapping discs along a finely sampled curve: a perfectly smooth round stroke.
     scale = (1 - 2 * inset) / 0.72
-    w = max(4, round(s * 0.056 * scale))
     steps = 2400
+    pts = []
     for i in range(steps + 1):
         u = i / steps
-        x = lo + (hi - lo) * u
-        y = s * 0.555 - wave(-3.3 + 6.6 * u) * s * 0.255 * scale
-        d.ellipse([x - w / 2, y - w / 2, x + w / 2, y + w / 2], fill=(255, 255, 255))
+        pts.append((lo + (hi - lo) * u, s * 0.535 - wave(-3.3 + 6.6 * u) * s * 0.25 * scale))
+    # water under the wave, edge to edge, then the wave itself as overlapping discs (a smooth round stroke)
+    level = pts[0][1]
+    d.polygon([(0, level)] + pts + [(s, level), (s, s), (0, s)], fill=WASH)
+    w = max(4, round(s * 0.066 * scale))
+    for i, (x, y) in enumerate(pts):
+        u = i / steps
+        colour = tuple(round(DEEP[k] + (SKY[k] - DEEP[k]) * u) for k in range(3))
+        d.ellipse([x - w / 2, y - w / 2, x + w / 2, y + w / 2], fill=colour)
     img = img.resize((size, size), Image.LANCZOS)
     if radius:
         mask = Image.new("L", (size * 4, size * 4), 0)

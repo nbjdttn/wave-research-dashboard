@@ -401,15 +401,25 @@ def run(cfg: dict) -> dict:
 
     # 2 ─ screen ──────────────────────────────────────────────────────────────
     pool = build_pool(live, eu_items, archive_list, gc)
-    need = [it for it in pool.values() if (cache["triage"].get(it["id"]) or {}).get("hash") != it["_th"]]
-    log(f"  in scope: {len(pool)} calls ({len(need)} not yet screened)")
+    # A call is screened once — and again if the research topics in the profile change, but then only
+    # the ones that were turned away (a wider interest can only let more in).
+    reassess = str(cfg.get("claude", {}).get("reassess_on_profile_change", "uncertain")).lower()
+    topics = sha(cfg["interests"].get("summary", ""), sorted(cfg["interests"].get("watch", {})), cfg["career"].get("priorities", []))
+
+    def unscreened(it: dict) -> bool:
+        t = cache["triage"].get(it["id"]) or {}
+        return t.get("hash") != it["_th"] or (not t.get("keep") and t.get("topics") != topics and reassess != "none")
+
+    need = [it for it in pool.values() if unscreened(it)]
+    log(f"  in scope: {len(pool)} calls ({len(need)} to screen)")
     if need and claude.available:
         try:
             decided = claude.triage(sorted(need, key=lambda i: -i["_kw"]))
             for it in need:
                 d = decided.get(it["id"])
                 if d:
-                    cache["triage"][it["id"]] = {"hash": it["_th"], "keep": d["keep"], "reason": d["reason"], "by": claude.model}
+                    cache["triage"][it["id"]] = {"hash": it["_th"], "keep": d["keep"], "reason": d["reason"], "by": claude.model,
+                                                 "topics": topics}
             log(f"  triage: {sum(1 for d in decided.values() if d['keep'])} kept of {len(decided)} screened")
         except Budget as exc:
             log("  triage stopped:", exc)

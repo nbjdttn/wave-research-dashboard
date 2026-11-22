@@ -154,10 +154,13 @@ What they do NOT want to see:
 
 # How to judge
 topic_fit — judged on the science only:
-- "core": the call is squarely about ocean waves, wave-structure interaction, offshore/marine renewable energy, \
-coastal or ocean hydrodynamics, extreme events in fluids, or scientific machine learning applied to such problems.
+- "core": the call is squarely about ocean waves (including spectral wave modelling and forecasting, and nonlinear \
+wave-wave interactions), wave-structure interaction, offshore/marine renewable energy, coastal or ocean \
+hydrodynamics, air-sea interaction, extreme events in fluids, or scientific machine learning applied to such problems.
 - "strong": a neighbouring area where their expertise is clearly wanted (fluid mechanics, digital twins of physical \
-systems, ocean/climate/environmental prediction, energy infrastructure, AI for science and engineering).
+systems, ocean/climate/environmental prediction, energy infrastructure, AI for science and engineering). NERC's \
+remit counts here — physical oceanography, marine and coastal processes, environmental prediction — whenever the \
+science involves waves, ocean or coastal modelling, air-sea interaction or forecasting.
 - "open_call": the scheme is open to any topic in their discipline (responsive-mode grants, personal fellowships, \
 discipline-wide prizes) so they could propose their own research.
 - "partial": only a small part of the call touches their work.

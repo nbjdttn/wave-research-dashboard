@@ -28,6 +28,10 @@ THEMES = [
      r"breaking|bound wave|bound component|superharmonic|harmonic|four.wave|mnls|envelope|solitary|soliton|"
      r"wind wave|wind impact|wind forcing|unsteady wind|phase manipulation|phase decomposition|nonlinear changes|"
      r"water wave equation|nonlinearity|non-linearity|data assimilation|phase-resolved"),
+    ("spectral", "Spectral wave modelling",
+     r"spectral wave|wave spectr|wave model|wavewatch|\bswan\b|four.wave|quadruplet|wave.wave interaction|"
+     r"nonlinear (wave )?interaction|energy transfer|kinetic equation|hasselmann|wave action|source term|"
+     r"phase.averaged|wave turbulence|directional spectr|hindcast|wave forecast|whitecap|wind.wave growth"),
     ("tides", "Tides, sea level & coastal",
      r"\btid(e|es|al)\b|rtide|swot|seiche|sea surface|sea level|coastal flood|estuar|pentland|response method|"
      r"response framework|response.based"),
@@ -482,6 +486,7 @@ def build(cfg: dict) -> dict:
             vectors.append({"id": p["id"], "v": tfidf.vector(d, top=40)})
     similarity = {"idf": {t: round(v, 3) for t, v in tfidf.idf.items()}, "vectors": vectors,
                   "core": core, "methods": methods, "avoid": cfg["interests"].get("avoid", {}),
+                  "watch": cfg["interests"].get("watch", {}),
                   "venues": sorted({v for v in (p["venue"] for p in pubs if p["type"] == "journal") if v}
                                    | set(cfg["papers"].get("preferred_venues", [])))}
 

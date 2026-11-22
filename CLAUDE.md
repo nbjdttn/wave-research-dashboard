@@ -49,9 +49,11 @@ fails, skip it and say so.
 2. **Funding — the main job.** Read `data/grants.json` and `config/schemes.json`, then search the web
    for opportunities the feeds miss or have out of date: funders without feeds (Royal Society,
    Leverhulme, Royal Academy of Engineering, ICE, Lloyd's Register Foundation, ONR Global, ARIA,
-   Supergen ORE, ERC and MSCA work programmes, bilateral and travel schemes), new calls on waves,
-   offshore and marine energy, coastal and ocean engineering, fluid mechanics, digital twins and
-   scientific machine learning, and pages the script could not read (listed under `sources` and in
+   Supergen ORE, ERC and MSCA work programmes, bilateral and travel schemes), NERC schemes and
+   highlight topics, and the wave-forecasting world (Met Office, ECMWF, Copernicus Marine / Mercator
+   Ocean, National Oceanography Centre, ESA, EUMETSAT); new calls on waves, spectral wave modelling
+   and forecasting, nonlinear wave interactions, offshore and marine energy, coastal and ocean
+   engineering, fluid mechanics, digital twins and scientific machine learning, and pages the script could not read (listed under `sources` and in
    the Action log). Keep only what passes **both** tests in `scripts/wave/claude.py`: research topic
    *and* career stage (early-career lecturer, PhD 2022). Purely AI/ML calls are not wanted.
    - A changed date or status on an existing scheme: correct its `note` in `config/schemes.json`.

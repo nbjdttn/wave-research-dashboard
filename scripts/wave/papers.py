@@ -189,6 +189,7 @@ def run(cfg: dict) -> dict:
     tfidf = Tfidf.from_idf(sim["idf"])
     vectors = sim["vectors"]
     core, methods, avoid = sim["core"], sim["methods"], sim.get("avoid", {})
+    watch = sim.get("watch", {})                 # topics the researcher is moving into
     venues = [v.lower() for v in sim.get("venues", [])]
     since = (today() - dt.timedelta(days=int(pc["window_days"]))).isoformat()
 
@@ -223,6 +224,8 @@ def run(cfg: dict) -> dict:
         score += 0.05 if good_venue else 0.0
         score += 0.05 if coauthor else 0.0
         score += 0.08 if p.get("cites") else 0.0
+        watch_score, watch_hits = phrase_hits(text, watch)
+        score += min(0.22, 0.11 * watch_score)    # kept even when not yet close to past papers
         score -= min(0.40, 0.13 * avoid_score)
         score = max(0.0, min(1.0, score))
         if score < float(pc["min_score"]) and not p.get("cites"):
@@ -244,7 +247,7 @@ def run(cfg: dict) -> dict:
             "sources": p["sources"],
             "score": round(score * 100),
             "similar_to": ({"id": near["id"], "title": near["title"], "year": near["year"]} if near else None),
-            "matched": (core_hits + meth_hits)[:6],
+            "matched": list(dict.fromkeys(watch_hits + core_hits + meth_hits))[:6],
             "focus": focus,
             "cites": p.get("cites") or [],
             "coauthor": coauthor,

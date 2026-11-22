@@ -60,6 +60,8 @@ priorities = [
   "Networking, travel and international collaboration awards that are light to apply for",
   "Fellowships that let me host a postdoctoral researcher in my group",
   "Co-investigator or partner roles in larger consortia where ocean/fluids expertise is needed",
+  "Funding for spectral wave modelling, wave forecasting and nonlinear wave-interaction research (a growing part of my work)",
+  "NERC schemes where ocean waves fit: physical oceanography, wave and ocean modelling, forecasting, air-sea interaction",
 ]
 not_wanted = [
   "Calls that are purely about core AI/ML research with no physical-science or engineering application",
@@ -76,8 +78,9 @@ not_wanted = [
 [interests]
 summary = """
 Extreme events in fluid mechanics with an emphasis on ocean waves: rogue waves and wave statistics, \
-nonlinear wave dynamics and instabilities, wave breaking, long–short wave interaction, nonlinear \
-wave–structure interaction and extreme loads on offshore wind foundations, tides and coastal \
+nonlinear wave dynamics and instabilities, wave breaking, long–short wave interaction, spectral \
+(phase-averaged) wave modelling and forecasting — source terms, nonlinear wave–wave interactions and \
+energy transfer between wave components — nonlinear wave–structure interaction and extreme loads on offshore wind foundations, tides and coastal \
 hydrodynamics, and marine renewable energy. Methods span wave-tank experiments, field data analysis, \
 numerical simulation and scientific machine learning — physics-informed neural networks, symbolic \
 regression and equation discovery, Gaussian processes, neural operators and reduced-order modelling."""
@@ -122,7 +125,7 @@ regression and equation discovery, Gaussian processes, neural operators and redu
 "fluid mechanics"            = 1.5
 "hydrodynamics"              = 1.5
 "sea state"                  = 1.5
-"wave forecasting"           = 2.0
+"wave forecasting"           = 2.5
 "storm surge"                = 1.2
 "turbulence"                 = 1.0
 "phase resolved"             = 2.0
@@ -133,7 +136,7 @@ regression and equation discovery, Gaussian processes, neural operators and redu
 "focused wave"               = 2.0
 "wave focusing"              = 2.0
 "directional spreading"      = 2.0
-"wave spectrum"              = 1.5
+"wave spectrum"              = 2.5
 "wave height"                = 1.2
 "wave crest"                 = 1.8
 "wave impact"                = 2.0
@@ -146,8 +149,66 @@ regression and equation discovery, Gaussian processes, neural operators and redu
 "deep water"                 = 1.2
 "finite depth"               = 1.5
 "numerical wave tank"        = 2.0
-"spectral wave model"        = 2.0
+"wave turbulence"            = 2.5
+# spectral wave modelling and nonlinear wave interactions
+"spectral wave model"        = 3.0
+"spectral wave modelling"    = 3.0
+"spectral wave modeling"     = 3.0
+"wave modelling"             = 2.0
+"wave modeling"              = 2.0
+"wave model"                 = 2.0
+"nonlinear wave interaction" = 3.0
+"nonlinear interaction"      = 2.0
+"wave-wave interaction"      = 3.0
+"four-wave interaction"      = 3.0
+"quadruplet"                 = 2.5
+"resonant interaction"       = 2.5
+"triad interaction"          = 2.0
+"nonlinear energy transfer"  = 3.0
+"nonlinear transfer"         = 2.5
+"kinetic equation"           = 2.5
+"hasselmann"                 = 3.0
+"zakharov equation"          = 2.5
+"wave action"                = 2.5
+"action balance"             = 2.5
+"wavewatch"                  = 3.0
+"swan model"                 = 2.0
+"third-generation wave"      = 2.5
+"source term"                = 2.0
+"wind input"                 = 2.0
+"whitecapping"               = 2.5
+"wave dissipation"           = 2.0
+"wave growth"                = 2.0
+"wind sea"                   = 1.8
+"swell"                      = 1.8
+"directional spectrum"       = 2.5
+"wave spectra"               = 2.5
+"spectral evolution"         = 2.5
+"wave hindcast"              = 2.5
+"wave climate"               = 1.8
+"phase-averaged"             = 2.5
+"wave-current interaction"   = 2.0
+"air-sea"                    = 1.5
+
+[interests.watch]           # where my work is heading: papers on these are kept and ranked up even
+"spectral wave model"        = 2.0   # though I have published little there yet
+"spectral wave modelling"    = 2.0
+"spectral wave modeling"     = 2.0
+"nonlinear wave interaction" = 2.0
+"wave-wave interaction"      = 2.0
+"four-wave interaction"      = 2.0
+"quadruplet"                 = 2.0
+"nonlinear energy transfer"  = 2.0
+"kinetic equation"           = 1.5
+"hasselmann"                 = 2.0
+"wave action"                = 1.5
+"wavewatch"                  = 2.0
+"third-generation wave"      = 2.0
+"whitecapping"               = 1.5
+"source term"                = 1.0
+"directional spectrum"       = 1.5
 "wave turbulence"            = 1.5
+"phase-averaged"             = 1.5
 
 [interests.methods]         # how the work is done — counts only alongside the domain
 "physics-informed"           = 2.0
@@ -221,6 +282,7 @@ preferred_venues = [
   "Nature Communications", "Proceedings of the Royal Society A", "Journal of Physical Oceanography",
   "Physical Review Letters", "Journal of Computational Physics", "Computer Methods in Applied Mechanics and Engineering",
   "Renewable Energy", "Marine Structures", "Journal of Fluids and Structures", "Ocean Modelling", "arXiv",
+  "Ocean Dynamics", "Journal of Atmospheric and Oceanic Technology", "Geoscientific Model Development", "Wave Motion",
 ]
 arxiv_categories = ["physics.flu-dyn", "physics.ao-ph", "physics.geo-ph", "nlin.PS", "cs.LG", "cs.CE", "math.NA", "eess.SP"]
 # Search phrases sent to arXiv / Crossref / OpenAlex. Keep them specific.
@@ -233,6 +295,10 @@ queries = [
   "phase-resolved wave prediction", "tidal prediction machine learning",
   "wave energy converter nonlinear hydrodynamics", "digital twin offshore wind",
   "surface gravity waves modulational instability",
+  "spectral wave model source terms", "nonlinear four-wave interactions wind waves", "wave action balance equation",
+  "WAVEWATCH III wave model", "SWAN wave model nearshore", "Hasselmann kinetic equation ocean waves",
+  "wind wave growth dissipation whitecapping", "wave turbulence ocean surface waves", "directional wave spectrum evolution",
+  "machine learning spectral wave model",
 ]
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -251,6 +317,7 @@ eu_queries = [
   "ocean waves", "offshore renewable energy", "wave energy", "tidal energy", "offshore wind",
   "coastal resilience extreme events", "digital twin ocean", "marine hydrodynamics",
   "fluid dynamics machine learning", "extreme weather sea level",
+  "ocean wave forecasting", "wave modelling", "metocean", "air-sea interaction", "ocean prediction",
 ]
 # Always pull these programmes regardless of keywords (bottom-up schemes with no topic text).
 eu_always = ["ERC-2027-STG", "ERC-2028-STG", "ERC-2027-COG", "HORIZON-MSCA-2027-PF", "HORIZON-MSCA-2027-DN", "HORIZON-MSCA-2026-DN"]
@@ -263,6 +330,18 @@ eu_always = ["ERC-2027-STG", "ERC-2028-STG", "ERC-2027-COG", "HORIZON-MSCA-2027-
 "offshore"         = 2.0
 "coastal"          = 1.8
 "wave"             = 2.0
+"wave model"       = 2.5
+"wave forecast"    = 2.5
+"sea state"        = 2.0
+"metocean"         = 2.0
+"oceanograph"      = 1.8
+"ocean model"      = 2.0
+"ocean forecast"   = 2.0
+"ocean prediction" = 2.0
+"air-sea"          = 1.5
+"weather"          = 0.8
+"forecast"         = 0.8
+"earth system"     = 0.8
 "tidal"            = 2.0
 "sea level"        = 1.5
 "flood"            = 1.0
@@ -276,7 +355,8 @@ eu_always = ["ERC-2027-STG", "ERC-2028-STG", "ERC-2027-COG", "HORIZON-MSCA-2027-
 "climate"          = 0.8
 "extreme weather"  = 1.5
 "extreme events"   = 1.5
-"environmental science" = 0.8
+"environmental science" = 1.2
+"natural environment" = 1.2
 "arctic"           = 1.0
 "engineering"      = 0.8
 "physical sciences" = 0.8

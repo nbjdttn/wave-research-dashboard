@@ -77,17 +77,19 @@ export function makeScorer(model) {
     const [core, coreHits] = phraseHits(text, model.core);
     const [meth, methHits] = phraseHits(text, model.methods);
     const [avoid] = phraseHits(text, model.avoid);
+    const [watch, watchHits] = phraseHits(text, model.watch || {});     // topics being moved into
     const domain = Math.min(1, core / 6), method = Math.min(1, meth / 4);
     const venue = (paper.venue || '').toLowerCase();
     let score = 0.46 * closeness + (core >= 1 ? 0.24 * domain + 0.08 * method : 0.03 * method);
     if (venue && venues.some((v) => venue.includes(v))) score += 0.05;
+    score += Math.min(0.22, 0.11 * watch);
     score -= Math.min(0.4, 0.13 * avoid);
     // live results have no recommender signal, so stretch the scale to match the feed's
     score = Math.max(0, Math.min(1, score / 0.83));
     return {
       score: Math.round(score * 100),
       nearId: best >= 0.12 ? bestId : null,
-      matched: [...coreHits, ...methHits].slice(0, 6),
+      matched: [...new Set([...watchHits, ...coreHits, ...methHits])].slice(0, 6),
       focus: core >= 1 && method > 0 ? 'domain_ai' : core >= 1 ? 'domain' : method > 0 ? 'ai_only' : 'adjacent',
     };
   };
