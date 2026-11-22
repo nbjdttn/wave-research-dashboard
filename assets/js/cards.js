@@ -1,5 +1,6 @@
 // The two repeating units of the app: a paper "story" and a funding opportunity card.
-import { esc, safeUrl, icon, fmtDate, fmtTime, fmtMonth, daysTo, rel, left, people, parseDay, isoDay, today, store, download, brief, claudeLink } from './util.js';
+import { esc, safeUrl, icon, fmtDate, fmtTime, fmtMonth, daysTo, rel, left, people, parseDay, isoDay, today, store, download, brief } from './util.js';
+import { badge } from './badges.js';
 
 // ── funder names ─────────────────────────────────────────────────────────────
 const FUNDERS = [
@@ -21,20 +22,20 @@ export function funderShort(name) {
   return n.replace(/\s*\([^)]*\)\s*$/, '');
 }
 /** The funder tag used on every funding card and row. */
-export const funderTag = (name, cls = 'accent') => `<span class="tag clip ${cls}" title="${esc(name || '')}">${esc(funderShort(name))}</span>`;
+export const funderTag = (name) => badge(funderShort(name), { kind: 'funder', full: name || '' });
 
-// ── prompts handed to Claude (opened in a new session; you press send there) ──
-function paperPrompt(p) {
-  return `Read this paper and tell me, in five short bullets, what is new in it and how it bears on my own research. `
-    + `My profile and interests are in config/researcher.toml in this repository.\n\n`
+// ── requests handed to an agent (they stand on their own: the agent may know nothing about this site) ──
+export function paperPrompt(p) {
+  return `Read this paper and tell me, in five short bullets, what was done and what was found:\n\n`
     + `"${p.title}"${p.venue ? ` — ${p.venue}` : ''}${p.year ? `, ${p.year}` : ''}\n${p.url || (p.doi ? `https://doi.org/${p.doi}` : '')}`;
 }
-function oppPrompt(o) {
+export function oppPrompt(o, who = '') {
+  const a = o.analysis || {};
   const when = o.closes ? ` The deadline is ${String(o.closes).slice(0, 10)}.` : '';
+  const needs = (a.requirements || []).map((r) => r.item).slice(0, 8).join('; ');
   return `Help me decide on, and then plan, an application to "${o.title}" (${o.funder}).${when}\n\n`
-    + `The call: ${o.url}\nMy profile and priorities are in config/researcher.toml; the dashboard's own assessment of this call is in `
-    + `data/grants.json under the id "${o.id}".\n\nStart with a go / no-go view in five bullets, then a week-by-week plan to the deadline `
-    + `and a first outline of the case for support.`;
+    + `The call: ${o.url}\n${who ? `About me: ${who}\n` : ''}${needs ? `What it asks for: ${needs}.\n` : ''}\n`
+    + `Start with a go / no-go view in five bullets, then a week-by-week plan to the deadline and a first outline of the case for support.`;
 }
 
 // ── profile numbers ──────────────────────────────────────────────────────────
@@ -68,14 +69,14 @@ export const paperIndex = new Map();
 export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abstract = true, showNew = true, plain = false } = {}) {
   // `plain` (the Today screen): every card the same size, bullet points only, no abstract
   paperIndex.set(p.id, p);
-  const venue = p.venue ? `<span class="venue">${esc(p.venue)}</span><span class="sep">·</span>` : '';
+  const venue = p.venue ? badge(p.venue) : '';
   const cites = (p.cites || []).map((id) => ownTitle?.(id)).filter(Boolean);
   return `<article class="story${lead ? ' lead' : ''}" data-paper="${esc(p.id)}">
+    <h3 class="story-title"><a href="${safeUrl(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a></h3>
     <div class="kicker">${venue}<span>${esc(paperDate(p))}</span>
       ${showNew && p.is_new ? '<span class="tag new">New</span>' : ''}
       ${p.coauthor ? `<span class="tag accent">Co-author: ${esc(p.coauthor)}</span>` : ''}
     </div>
-    <h3 class="story-title"><a href="${safeUrl(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a></h3>
     <p class="byline">${people(p.authors, p.author_count, 2)}</p>
     ${p.bullets?.length ? `<ul class="bullets">${p.bullets.slice(0, 3).map((b) => `<li>${esc(b)}</li>`).join('')}</ul>` : ''}
     ${p.abstract && !plain ? `<p class="abstract" data-toggle="abstract"${lead && abstract && !p.bullets?.length ? '' : ' hidden'}>${esc(p.abstract)}</p>` : ''}
@@ -85,7 +86,7 @@ export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abs
       <span class="story-actions">
         ${p.abstract && !plain && !(lead && abstract && !p.bullets?.length) ? `<button class="act" type="button" data-abs aria-expanded="false">Abstract</button>` : ''}
         ${p.pdf_url ? `<a class="act" href="${safeUrl(p.pdf_url)}" target="_blank" rel="noopener">${icon('pdf', 'sm')}PDF</a>` : ''}
-        <a class="act" href="${safeUrl(claudeLink(paperPrompt(p)))}" target="_blank" rel="noopener" aria-label="Send to Claude" title="Send to Claude">${icon('spark', 'sm')}</a>
+        <button class="act" type="button" data-ask="paper" data-id="${esc(p.id)}" aria-label="Send to an agent" title="Send to an agent">${icon('spark', 'sm')}</button>
         <button class="act" type="button" data-save-paper="${esc(p.id)}" aria-pressed="${saved}" aria-label="${saved ? 'Remove from reading list' : 'Save to reading list'}">${icon('save', 'sm')}</button>
       </span>
     </div>
@@ -194,6 +195,8 @@ export function oppHTML(o, { saved = false, open = false } = {}) {
   const host = a.role === 'host' || a.opportunity_type === 'hosting';
   const canCal = o.bucket === 'deadline' || (o.bucket === 'prepare' && a.effort.start_by);
   return `<article class="card opp" id="opp-${esc(o.id)}" data-opp="${esc(o.id)}">
+    <button class="act opp-save" type="button" data-save-opp="${esc(o.id)}" aria-pressed="${saved}" aria-label="${saved ? 'Remove from shortlist' : 'Add to shortlist'}">${icon('save', 'sm')}</button>
+    <h3 class="opp-title"><a href="${safeUrl(o.url)}" target="_blank" rel="noopener">${esc(o.title)}</a></h3>
     <div class="opp-head">
       ${funderTag(o.funder)}
       <span class="tag">${host ? icon('host', 'xs') : ''}${esc(TYPES[a.opportunity_type] || 'Funding')}</span>
@@ -201,8 +204,6 @@ export function oppHTML(o, { saved = false, open = false } = {}) {
       ${o.bucket === 'prepare' ? `<span class="tag sand">${icon('repeat', 'xs')}Not open yet</span>` : ''}
       ${o.is_new ? '<span class="tag new">New</span>' : ''}
     </div>
-    <button class="act opp-save" type="button" data-save-opp="${esc(o.id)}" aria-pressed="${saved}" aria-label="${saved ? 'Remove from shortlist' : 'Add to shortlist'}">${icon('save', 'sm')}</button>
-    <h3 class="opp-title"><a href="${safeUrl(o.url)}" target="_blank" rel="noopener">${esc(o.title)}</a></h3>
     <div class="facts">
       ${deadlineFact(o)}
       <div class="fact"><div class="fact-label">Effort</div>
@@ -240,7 +241,7 @@ export function oppHTML(o, { saved = false, open = false } = {}) {
     <div class="opp-actions">
       <a class="btn primary" href="${safeUrl(o.url)}" target="_blank" rel="noopener">Open the call ${icon('ext', 'sm')}</a>
       ${canCal ? `<button class="btn" type="button" data-cal="${esc(o.id)}">${icon('cal', 'sm')}Add to calendar</button>` : ''}
-      <a class="btn" href="${safeUrl(claudeLink(oppPrompt(o)))}" target="_blank" rel="noopener">${icon('spark', 'sm')}Plan it with Claude</a>
+      <button class="btn" type="button" data-ask="opp" data-id="${esc(o.id)}">${icon('spark', 'sm')}Send to an agent</button>
     </div>
     <div class="opp-foot">${icon('spark', 'xs')}Reviewed by Claude · ${fmtDate(o.analysed?.at)}</div>
   </article>`;

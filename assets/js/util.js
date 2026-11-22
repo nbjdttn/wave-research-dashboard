@@ -140,15 +140,6 @@ export function repoSlug() {
   const name = location.pathname.split('/').filter(Boolean)[0];
   return m && name ? `${m[1]}/${name}` : '';
 }
-/**
- * A link that opens a new Claude Code session (in the Claude app or the browser) on this repository,
- * with the prompt typed in ready to send — nothing is sent until you press send there.
- */
-export function claudeLink(prompt) {
-  const repo = repoSlug();
-  return `https://claude.ai/code/new?q=${encodeURIComponent(prompt)}${repo ? `&repo=${encodeURIComponent(repo)}` : ''}`;
-}
-
 // ── icons ────────────────────────────────────────────────────────────────────
 const PATHS = {
   ext: '<path d="M14 5h5v5M19 5l-8 8M11 6H6.500A1.500 1.500 0 0 0 5 7.500v10A1.500 1.500 0 0 0 6.500 19h10a1.500 1.500 0 0 0 1.500-1.500V13"/>',
@@ -160,6 +151,7 @@ const PATHS = {
   info: '<circle cx="12" cy="12" r="8.500"/><path d="M12 11v5.500M12 7.700v.2"/>',
   search: '<circle cx="11" cy="11" r="6.500"/><path d="M16 16l4 4"/>',
   x: '<path d="M6 6l12 12M18 6L6 18"/>',
+  plus: '<path d="M12 5.500v13M5.500 12h13"/>',
   arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
   quote: '<path d="M9.500 7C6.500 8 5 10.300 5 13.500V17h5v-5H7.500c0-1.800.8-3 2.500-3.600zM18.500 7c-3 1-4.500 3.300-4.500 6.500V17h5v-5h-2.500c0-1.800.8-3 2.500-3.600z"/>',
   spark: '<path d="M12 3.500l1.800 5.200 5.200 1.800-5.200 1.800L12 17.500l-1.800-5.200L5 10.500l5.200-1.800zM18.500 15.500l.8 2.200 2.200.8-2.200.8-.8 2.200-.8-2.200-2.200-.8 2.200-.8z"/>',

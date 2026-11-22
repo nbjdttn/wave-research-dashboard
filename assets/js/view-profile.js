@@ -3,6 +3,7 @@
 import { esc, safeUrl, icon, num, initials, $, copyText, fmtDate, brief } from './util.js';
 import { columns, stacked, dataTable, sparkline, heatgrid } from './charts.js';
 import { citationTrend, scholarAge } from './cards.js';
+import { badge } from './badges.js';
 
 const state = { tab: 'overview', q: '', type: 'all', theme: 'all', sort: 'year', tables: {} };
 const TYPE_LABEL = { journal: 'Journal', conference: 'Conference', preprint: 'Preprint', thesis: 'Thesis', other: 'Other' };
@@ -210,7 +211,7 @@ function citationsHTML(P, C) {
       <div class="section-head"><h2 class="eyebrow" id="h-latest">Latest citations</h2><a class="more" href="#papers/citing">All ${icon('arrow', 'xs')}</a></div>
       <div class="card pad">${C.latest.slice(0, 5).map((l) => `<a class="rowlink" href="${safeUrl(l.url)}" target="_blank" rel="noopener">
         <h3>${esc(l.title)}</h3><div class="right"><b>${fmtDate(l.date)}</b></div>
-        <div class="meta">${l.venue ? `<span class="tag accent">${esc(l.venue)}</span>` : ''}${l.cites?.[0] ? `<span>cites ${esc(l.cites[0].slice(0, 46))}${l.cites[0].length > 46 ? '…' : ''}</span>` : ''}</div></a>`).join('')}</div>
+        <div class="meta">${l.venue ? badge(l.venue) : ''}${l.cites?.[0] ? `<span>cites ${esc(l.cites[0].slice(0, 46))}${l.cites[0].length > 46 ? '…' : ''}</span>` : ''}</div></a>`).join('')}</div>
     </section>` : ''}
 
     <p class="scan"><span>Traced by <b>Semantic Scholar</b>: ${num(t.links)} of Scholar’s ${num(t.scholar_citations)} citations</span><span>Places from <b>OpenAlex</b></span></p>`;
@@ -250,7 +251,7 @@ function pubHTML(p, withActions = true) {
     <h3>${link ? `<a href="${safeUrl(link)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title)}</h3>
     <div class="cite-n"${p.citations_source === 'openalex' ? ' title="Not on your Scholar list yet — count from OpenAlex"' : ''}><b>${num(p.citations)}</b><span>cites</span></div>
     <p class="byline">${authorsHTML(p)}</p>
-    <p class="where">${p.venue ? `<i>${esc(p.venue)}</i>` : ''}<span>${p.year || ''}</span>
+    <p class="where">${p.venue ? badge(p.venue) : ''}<span>${p.year || ''}</span>
       ${p.type !== 'journal' ? `<span class="tag">${esc(TYPE_LABEL[p.type] || p.type)}</span>` : ''}${p.oa_url ? '<span class="tag accent">Open</span>' : ''}${p.origin === 'orcid' ? '<span class="tag new">New</span>' : ''}</p>
     ${withActions ? `${p.abstract ? `<p class="abstract" data-toggle="abstract" hidden>${esc(p.abstract)}</p>` : ''}
     <div class="pub-actions">

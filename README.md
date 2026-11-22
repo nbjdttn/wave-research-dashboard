@@ -12,8 +12,9 @@ home screen and it behaves like an app (pull down to refresh, swipe, no zooming 
 | **Funding** | A short list of opportunities that pass **both** tests — your research topic *and* your career stage — each with its deadline, a checklist of what to submit, an effort estimate and a "start by" date. Recurring calls that are not open yet appear under *Prepare ahead*. |
 | **Profile** | Your record: citations, h-index, trends, themes, journals, collaborators and the full list. **Citations** shows who is citing you (independent groups, co-authors, yourself) by year, month, journal, country and institution. |
 
-Every paper has a **Send to Claude** button and every funding call a **Plan it with Claude** button:
-they open a new Claude Code session on this repository with the request typed in, ready to send.
+Every paper and funding call has a **Send to an agent** button (✦). It opens a chooser: your own agents
+(add them in Settings — for example a Claude Code session working on your Mac), a new Claude session
+with the request filled in, *Copy the request*, or the phone's share sheet.
 
 Live site: **https://nbjdttn.github.io/wave-research-dashboard/**
 

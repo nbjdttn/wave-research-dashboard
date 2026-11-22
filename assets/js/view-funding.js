@@ -143,7 +143,7 @@ function unreviewedHTML(G) {
     <p class="small muted" style="margin-bottom:10px">Matched your keywords; not yet assessed.</p>
     <div class="card pad">${list.map((u) => `<a class="rowlink" href="${safeUrl(u.url)}" target="_blank" rel="noopener">
       <h3>${esc(u.title)}</h3><div class="right">${u.closes ? `<b>${fmtDate(u.closes)}</b>` : `<b>${esc(u.closes_note || '')}</b>`}</div>
-      <div class="meta">${funderTag(u.funder, '')}</div></a>`).join('')}</div></section>`;
+      <div class="meta">${funderTag(u.funder)}</div></a>`).join('')}</div></section>`;
 }
 
 function filteredHTML(G) {
@@ -153,6 +153,6 @@ function filteredHTML(G) {
     <summary>Read and left out <span class="n">${list.length}</span></summary>
     <div class="fold-body">
       ${list.map((f) => `<div class="rowlink"><h3 style="font-size:.9375rem"><a href="${safeUrl(f.url)}" target="_blank" rel="noopener">${esc(f.title)}</a></h3>
-        <div class="meta">${funderTag(f.funder, '')}<span>${esc(splitSentence(f.reason)[0])}</span></div></div>`).join('')}
+        <div class="meta">${funderTag(f.funder)}<span>${esc(splitSentence(f.reason)[0])}</span></div></div>`).join('')}
     </div></details></section>`;
 }

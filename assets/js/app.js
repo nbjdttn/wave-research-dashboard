@@ -1,7 +1,8 @@
 // Wave Research — bootstrap, routing and the settings sheet.
 import { $, $$, esc, icon, store, shelf, toast, ago, daysTo, fmtDate, safeUrl, num, shellHeight } from './util.js';
 import { clearCharts } from './charts.js';
-import { paperIndex, isLive } from './cards.js';
+import { paperIndex, isLive, paperPrompt, oppPrompt } from './cards.js';
+import { agents, agentSheetHTML, agentClick, agentSettingsHTML } from './agents.js';
 import { renderToday } from './view-today.js';
 import { renderPapers } from './view-papers.js';
 import { renderFunding } from './view-funding.js';
@@ -74,6 +75,16 @@ document.addEventListener('click', (e) => {
     const on = ctx.grants.toggle({ id: o.id, title: o.title });
     so.setAttribute('aria-pressed', String(on));
     toast(on ? 'Added to your shortlist' : 'Removed from your shortlist');
+    return;
+  }
+  const ask = e.target.closest('[data-ask]');
+  if (ask) {
+    const r = D.profile?.researcher;
+    const who = r ? `${r.title}, ${r.institution}. ${r.tagline || ''}`.trim() : '';
+    const paper = ask.dataset.ask === 'paper' && (paperIndex.get(ask.dataset.id) || ctx.papers.all().find((x) => x.id === ask.dataset.id));
+    const opp = ask.dataset.ask === 'opp' && [...(D.grants?.opportunities || []), ...ctx.grants.all()].find((o) => o.id === ask.dataset.id);
+    if (paper) openAgents(paperPrompt(paper), paper.title);
+    else if (opp) openAgents(oppPrompt(opp, who), opp.title);
     return;
   }
   const more = e.target.closest('[data-more]');
@@ -164,7 +175,21 @@ function swatch(key, pal, mode, on) {
     </svg><span class="swatch-name">${esc(pal.name)}</span></button>`;
 }
 
-function openSettings() {
+let sheetRequest = null;                                  // set while the sheet is the "send to an agent" chooser
+function openAgents(request, subject) {
+  sheetRequest = request;
+  lastFocus = document.activeElement;
+  $('#sheet-title').textContent = 'Send to an agent';
+  $('#sheet-body').innerHTML = agentSheetHTML(request, subject);
+  $('#sheet-body').scrollTop = 0;
+  sheet.hidden = false;
+  backdrop.hidden = false;
+  $('#close-sheet').focus();
+}
+
+function openSettings(focus) {
+  sheetRequest = null;
+  $('#sheet-title').textContent = 'Settings';
   const theme = store.raw('theme') || 'auto';
   const ai = D.grants?.ai || {};
   const repo = repoUrl();
@@ -176,6 +201,9 @@ function openSettings() {
 
     <h3>Light or dark</h3>
     <div class="seg" role="tablist" aria-label="Theme">${seg('auto', 'Auto')}${seg('light', 'Light')}${seg('dark', 'Dark')}</div>
+
+    <h3 id="agents-h">Agents</h3>
+    ${agentSettingsHTML()}
 
     <h3>Daily update</h3>
     <p>${D.grants?.generated_at ? `Last run <b>${esc(ago(D.grants.generated_at))}</b> · ` : ''}every morning, 05:17 UTC</p>
@@ -196,21 +224,29 @@ function openSettings() {
     <p id="install-slot">${installEvent ? '<button class="btn sm primary" type="button" id="install-btn">Install the app</button>'
       : 'Safari: <b>Share → Add to Home Screen</b>. Chrome: <b>⋮ → Add to Home screen</b>.'}</p>
     <p class="small muted" style="margin-top:12px">Saved items and ticks stay on this device.</p>`;
-  lastFocus = document.activeElement;
+  if (sheet.hidden) lastFocus = document.activeElement;
   backdrop.hidden = false;
   sheet.hidden = false;
   $('#close-sheet').focus();
+  if (focus === 'agents') $('#agents-h')?.scrollIntoView({ block: 'start' });
 }
 function closeSettings() {
+  sheetRequest = null;
   sheet.hidden = true;
   backdrop.hidden = true;
   lastFocus?.focus?.();
 }
-$('#open-settings').addEventListener('click', openSettings);
+$('#open-settings').addEventListener('click', () => openSettings());
 $('#close-sheet').addEventListener('click', closeSettings);
 backdrop.addEventListener('click', closeSettings);
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !sheet.hidden) closeSettings(); });
 sheet.addEventListener('click', async (e) => {
+  if (sheetRequest != null) {
+    if (e.target.closest('[data-manage-agents]')) { openSettings('agents'); return; }
+    if (await agentClick(e, sheetRequest)) { setTimeout(closeSettings, 60); return; }    // after the link has opened
+  }
+  const gone = e.target.closest('[data-agent-remove]');
+  if (gone) { agents.remove(gone.dataset.agentRemove); openSettings('agents'); return; }
   const pal = e.target.closest('[data-palette-set]');
   if (pal && window.WavePalettes) {
     window.WavePalettes.choose(pal.dataset.paletteSet);
@@ -232,6 +268,14 @@ sheet.addEventListener('click', async (e) => {
     installEvent = null;
     closeSettings();
   }
+});
+sheet.addEventListener('submit', (e) => {
+  if (e.target.id !== 'agent-form') return;
+  e.preventDefault();
+  const problem = agents.add(e.target.name.value, e.target.link.value);
+  if (problem) { toast(problem); return; }
+  toast('Agent added');
+  openSettings('agents');
 });
 window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); installEvent = e; });
 
