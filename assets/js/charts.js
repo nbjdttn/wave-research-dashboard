@@ -94,7 +94,7 @@ export function columns(el, { data, unit = '', height = 190, partialNote = '' })
  * Stacked columns. data: [{label, values:{key:n}}], series: [{key,label,color}] in fixed order.
  * Segments are separated by a 2px surface gap; the legend is rendered by the caller.
  */
-export function stacked(el, { data, series, height = 190 }) {
+export function stacked(el, { data, series, height = 190, unit = 'outputs' }) {
   mount(el, () => {
     const W = el.clientWidth, H = height;
     const padL = 30, padR = 6, padT = 18, padB = 22, gap = 2;
@@ -134,7 +134,7 @@ export function stacked(el, { data, series, height = 190 }) {
     });
     s += '</svg>';
     el.innerHTML = s;
-    bindTips(el.firstChild, (i) => `<b>${esc(data[i].label)} · ${num(totals[i])} outputs</b>` + series
+    bindTips(el.firstChild, (i) => `<b>${esc(data[i].label)} · ${num(totals[i])} ${esc(unit)}</b>` + series
       .filter((sr) => data[i].values[sr.key])
       .map((sr) => `<span class="k"><span><i style="background:${sr.color}"></i>${esc(sr.label)}</span><span>${data[i].values[sr.key]}</span></span>`).join(''));
   });

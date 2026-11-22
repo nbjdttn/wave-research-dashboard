@@ -9,9 +9,11 @@ A personal research briefing that lives on GitHub Pages and is built for a phone
 | **Today** | The front page: new papers close to your work, new papers citing you, funding calls and the next deadlines. |
 | **Papers** | A daily feed of *new* work (not a literature review), ranked against your own publications, plus a live search of all journals scored the same way. |
 | **Funding** | A short list of opportunities that pass **both** tests — your research topic *and* your career stage — each with its deadline, a checklist of what to submit, an effort estimate and a "start by" date. Recurring calls that are not open yet appear under *Prepare ahead*. |
-| **Profile** | Your publication record and metrics: citations, h-index, trends, themes, journals, collaborators and the full list. |
+| **Profile** | Your publication record and metrics: citations, h-index, trends, themes, journals, collaborators and the full list. The **Citations** tab shows who is citing you: independent groups, co-authors or yourself, by year, journal, country and institution, and which of your papers are being cited now. |
 
-Live site: **https://nbjdttn.github.io/wave-research-dashboard/** (after step 1 below).
+Live site: **https://nbjdttn.github.io/wave-research-dashboard/**
+
+Tap the sliders icon (top right) to choose one of six colour palettes — Ocean, Coast, Midnight, Kelp, Coral, Slate — each in light and dark.
 
 ## Set-up — two steps, both doable from a phone
 
@@ -49,6 +51,9 @@ That is all. To install it like an app, open the site on your phone and choose *
 profile   Google Scholar snapshot (when reachable) ─┐
           ORCID · Crossref · OpenAlex (daily) ──────┴─► data/profile.json   (metrics, publications, history)
 
+citations Semantic Scholar: every paper citing yours ─► who they are (independent, co-author, self),
+          OpenAlex: where they work ─► data/citations.json   (by year, journal, country, institution)
+
 papers    Semantic Scholar recommendations (seeded with your papers)
           arXiv · Crossref · papers citing you ─► scored against your own work ─► data/papers.json
 
@@ -80,12 +85,15 @@ existing funding reviews are kept, and new calls are listed under *Awaiting revi
 
 Everything the pipeline knows about you is in **`config/researcher.toml`**:
 
-- **`[career]`** — the career stage Claude reasons about. Please set `phd_award_year`; several
-  fellowships hinge on years since the PhD, and until it is set those are flagged *needs checking*.
-  `priorities` and `not_wanted` are passed to Claude word for word.
+- **`[career]`** — the career stage Claude reasons about. `phd_award_year` matters: several
+  fellowships hinge on years since the PhD. `priorities` and `not_wanted` are passed to Claude word for word.
 - **`[interests]`** — weighted phrases that rank papers (`core`, `methods`) and look-alike topics to push down (`avoid`).
 - **`[papers]`** / **`[grants]`** — time windows, search phrases, thresholds.
-- **`[claude]`** — model, effort, spending guard, how often scheme pages are re-read.
+- **`[claude]`** — model, effort, spending guard, how often scheme pages are re-read, and
+  `reassess_on_profile_change`: after you edit your profile, re-review only the calls whose eligibility
+  was uncertain (`"uncertain"`, the default), every call (`"all"`) or none (`"none"`).
+
+To add a palette of your own, copy a block in `assets/js/palettes.js` and change the colours.
 
 `config/schemes.json` is the watch-list of recurring schemes that have no machine-readable feed
 (Royal Society, Leverhulme, Royal Academy of Engineering, ERC, …). Add or remove entries freely.
@@ -98,6 +106,8 @@ Saving a change to either file (the GitHub app or website editor is fine) starts
   the fit notes written about each funding call. The page asks search engines not to index it, but
   anyone with the link can read it. Reading list, shortlist and ticked checklist items are stored
   only in the browser of the device you use.
+- **Citation counts differ by source.** Google Scholar counts more than Semantic Scholar can trace
+  (theses, reports, some conference papers), so the *Citations* tab says how many it found.
 - **Dates marked `~` are estimates** inferred from earlier rounds. Always confirm on the funder's page —
   each card links to it.
 - **Google Scholar figures are a dated snapshot.** Scholar has no API and turns away requests from
@@ -115,7 +125,7 @@ Saving a change to either file (the GitHub app or website editor is fine) starts
 
 ```bash
 pip install -r requirements.txt
-python scripts/update.py            # or: profile | papers | grants
+python scripts/update.py            # or: profile | citations | papers | grants
 python -m http.server 8000          # then open http://localhost:8000
 ```
 
@@ -132,4 +142,5 @@ config/                                   researcher.toml, schemes.json
 data/                                     generated JSON (+ data/cache, the pipeline's memory)
 scripts/update.py, scripts/wave/          the data pipeline (Python)
 .github/workflows/update.yml              the daily job
+.github/workflows/pages.yml               publishes the site if Pages is set to "GitHub Actions"
 ```

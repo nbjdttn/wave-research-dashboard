@@ -9,7 +9,7 @@ import { renderProfile } from './view-profile.js';
 
 const VIEWS = { today: renderToday, papers: renderPapers, funding: renderFunding, profile: renderProfile };
 const TITLES = { today: 'Today', papers: 'Papers', funding: 'Funding', profile: 'Profile' };
-const D = { profile: null, papers: null, grants: null };
+const D = { profile: null, papers: null, grants: null, citations: null };
 const view = $('#view');
 let leave = [];
 let currentTab = null;
@@ -74,6 +74,24 @@ document.addEventListener('click', (e) => {
     toast(on ? 'Added to your shortlist' : 'Removed from your shortlist');
     return;
   }
+  const more = e.target.closest('[data-more]');
+  if (more) {                                             // swap a shortened line for the full text
+    const rest = more.nextElementSibling, lede = more.previousElementSibling;
+    if (rest) rest.hidden = false;
+    if (lede?.classList.contains('lede')) lede.hidden = true;
+    more.hidden = true;
+    return;
+  }
+  const absBtn = e.target.closest('[data-abs]');
+  if (absBtn) {
+    const para = absBtn.closest('article')?.querySelector('.abstract');
+    if (para) {
+      para.hidden = !para.hidden;
+      para.classList.toggle('open', !para.hidden);
+      absBtn.setAttribute('aria-expanded', String(!para.hidden));
+    }
+    return;
+  }
   const ab = e.target.closest('[data-toggle="abstract"]');
   if (ab) ab.classList.toggle('open');
 });
@@ -93,7 +111,7 @@ function freshness() {
   el.classList.toggle('is-stale', hours > 40);
   el.hidden = false;
   const d = new Date(latest);
-  ctx.updatedLine = `This edition was built ${d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })} at ${d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}. Papers: Semantic Scholar, arXiv, Crossref. Funding: UKRI, EU Funding & Tenders and funder schemes, reviewed by Claude.`;
+  ctx.updatedLine = `Built ${d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })}, ${d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}`;
 }
 
 function tabBadges() {
@@ -117,42 +135,56 @@ function sourceRows(group, labels) {
   return Object.entries(labels).map(([key, label]) => {
     const s = group?.[key];
     if (!s) return '';
-    const note = s.ok ? (s.count != null ? `${num(s.count)} items` : s.added != null ? `${num(s.added)} found` : s.note || 'ok') : 'not available on the last run';
-    const when = s.ok ? ago(s.checked) : (s.last_success ? `last read ${ago(s.last_success)}` : ago(s.checked));
-    return `<div class="src${s.ok ? '' : ' bad'}"><b style="font-weight:500">${esc(label)}</b><span>${esc(note)}<br>${esc(when)}</span></div>`;
+    const when = s.ok ? ago(s.checked) : (s.last_success ? `blocked · last read ${ago(s.last_success)}` : 'not available');
+    return `<div class="src${s.ok ? '' : ' bad'}"><b style="font-weight:500">${esc(label)}</b><span>${esc(when)}</span></div>`;
   }).join('');
+}
+
+/** A small preview of one palette: hero gradient, wave line, text and accent. */
+function swatch(key, pal, mode, on) {
+  const t = pal[mode];
+  return `<button class="swatch" type="button" role="radio" aria-checked="${on}" data-palette-set="${esc(key)}">
+    <svg viewBox="0 0 96 60" aria-hidden="true">
+      <defs><linearGradient id="sw-${esc(key)}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${esc(t.hero1)}"/><stop offset="1" stop-color="${esc(t.hero3)}"/></linearGradient></defs>
+      <rect width="96" height="60" fill="${esc(t.bg)}"/><rect width="96" height="36" fill="url(#sw-${esc(key)})"/>
+      <path d="M0 24c8 0 9-3 13-3s5 9 9 9 5-18 10-18 5 14 9 14 5-5 9-5 6 3 10 3 8-1 36-1" fill="none" stroke="${esc(t.heroAccent)}" stroke-width="1.8" stroke-linecap="round"/>
+      <rect x="8" y="43" width="30" height="5" rx="2.5" fill="${esc(t.ink)}"/><rect x="8" y="51" width="18" height="3" rx="1.5" fill="${esc(t.ink3)}"/>
+      <circle cx="82" cy="48" r="6" fill="${esc(t.accent)}"/><circle cx="66" cy="48" r="6" fill="${esc(t.surface)}" stroke="${esc(t.line2)}" stroke-width="1"/>
+    </svg><span class="swatch-name">${esc(pal.name)}</span></button>`;
 }
 
 function openSettings() {
   const theme = store.raw('theme') || 'auto';
   const ai = D.grants?.ai || {};
   const repo = repoUrl();
+  const WP = window.WavePalettes;
   const seg = (v, label) => `<button type="button" role="tab" data-theme-set="${v}" aria-selected="${theme === v}">${label}</button>`;
   $('#sheet-body').innerHTML = `
-    <h3>Appearance</h3>
-    <div class="seg" role="tablist" aria-label="Theme">${seg('auto', 'Automatic')}${seg('light', 'Light')}${seg('dark', 'Dark')}</div>
+    ${WP ? `<h3>Palette</h3>
+    <div class="palettes" role="radiogroup" aria-label="Colour palette">${Object.entries(WP.all).map(([k, pal]) => swatch(k, pal, WP.mode(), WP.current() === k)).join('')}</div>` : ''}
+
+    <h3>Light or dark</h3>
+    <div class="seg" role="tablist" aria-label="Theme">${seg('auto', 'Auto')}${seg('light', 'Light')}${seg('dark', 'Dark')}</div>
 
     <h3>Daily update</h3>
-    <p>A scheduled job rebuilds this edition every morning. ${D.grants?.generated_at ? `Last run: <b>${esc(ago(D.grants.generated_at))}</b>.` : ''}</p>
-    ${repo ? `<p style="margin-top:10px"><a class="btn sm" href="${safeUrl(repo + '/actions/workflows/update.yml')}" target="_blank" rel="noopener">Run an update now ${icon('ext', 'xs')}</a></p>` : ''}
+    <p>${D.grants?.generated_at ? `Last run <b>${esc(ago(D.grants.generated_at))}</b> · ` : ''}every morning, 05:17 UTC</p>
+    ${repo ? `<p style="margin-top:10px"><a class="btn sm" href="${safeUrl(repo + '/actions/workflows/update.yml')}" target="_blank" rel="noopener">Run now ${icon('ext', 'xs')}</a></p>` : ''}
 
-    <h3>Claude review of funding calls</h3>
+    <h3>Claude funding review</h3>
     ${ai.key_present
-      ? `<p>On, using <b>${esc(ai.model || 'Claude')}</b>. ${ai.last_ai_run ? `Last review ${esc(ago(ai.last_ai_run))}; ` : ''}${num(ai.total_calls || 0)} calls so far, about $${Number(ai.total_cost_usd || 0).toFixed(2)} in total.</p>`
-      : `<p>The current list was reviewed when the site was built. To have new calls reviewed automatically each day, add your Anthropic API key as a repository secret named <b>ANTHROPIC_API_KEY</b>${repo ? ` (<a href="${safeUrl(repo + '/settings/secrets/actions')}" target="_blank" rel="noopener" style="text-decoration:underline">repository → Settings → Secrets → Actions</a>)` : ''}. The key stays in GitHub; it is never part of this page.</p>`}
+      ? `<p><b>On</b> · ${esc(ai.model || 'Claude')} · ${num(ai.total_calls || 0)} calls · $${Number(ai.total_cost_usd || 0).toFixed(2)} so far</p>`
+      : `<p><b>Waiting for your key.</b> Add the repository secret <b>ANTHROPIC_API_KEY</b>${repo ? ` <a href="${safeUrl(repo + '/settings/secrets/actions')}" target="_blank" rel="noopener" style="text-decoration:underline">here</a>` : ''}.</p>`}
     ${ai.errors?.length ? `<div class="notice warn" style="margin-top:10px">${icon('alert', 'sm')}<span>${esc(ai.errors[0])}</span></div>` : ''}
 
-    <h3>Sources — your record</h3>
-    <div class="srcs">${sourceRows(D.profile?.sources, { scholar: 'Google Scholar', orcid: 'ORCID', crossref: 'Crossref', openalex: 'OpenAlex' })}</div>
-    <h3>Sources — papers</h3>
-    <div class="srcs">${sourceRows(D.papers?.sources, { semantic_scholar: 'Semantic Scholar recommendations', arxiv: 'arXiv', crossref: 'Crossref', openalex: 'OpenAlex', citing: 'Papers citing you' })}</div>
-    <h3>Sources — funding</h3>
-    <div class="srcs">${sourceRows(D.grants?.sources, { ukri: 'UKRI Funding Finder', ukri_archive: 'UKRI past calls', eu: 'EU Funding & Tenders', schemes: 'Funder schemes watch-list' })}</div>
+    <h3>Sources</h3>
+    <div class="srcs">${sourceRows(D.profile?.sources, { scholar: 'Google Scholar', orcid: 'ORCID', crossref: 'Crossref', openalex: 'OpenAlex' })}
+      ${sourceRows(D.papers?.sources, { semantic_scholar: 'Semantic Scholar', arxiv: 'arXiv', citing: 'Papers citing you' })}
+      ${sourceRows(D.grants?.sources, { ukri: 'UKRI Funding Finder', eu: 'EU Funding & Tenders', schemes: 'Funder schemes' })}</div>
 
     <h3>On your phone</h3>
     <p id="install-slot">${installEvent ? '<button class="btn sm primary" type="button" id="install-btn">Install the app</button>'
-      : 'Add this page to your home screen to open it like an app: in Safari tap <b>Share → Add to Home Screen</b>; in Chrome tap <b>⋮ → Add to Home screen</b>.'}</p>
-    <p class="small muted" style="margin-top:14px">Your reading list, shortlist and ticked checklist items are kept on this device only.</p>`;
+      : 'Safari: <b>Share → Add to Home Screen</b>. Chrome: <b>⋮ → Add to Home screen</b>.'}</p>
+    <p class="small muted" style="margin-top:12px">Saved items and ticks stay on this device.</p>`;
   lastFocus = document.activeElement;
   backdrop.hidden = false;
   sheet.hidden = false;
@@ -168,12 +200,19 @@ $('#close-sheet').addEventListener('click', closeSettings);
 backdrop.addEventListener('click', closeSettings);
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !sheet.hidden) closeSettings(); });
 sheet.addEventListener('click', async (e) => {
+  const pal = e.target.closest('[data-palette-set]');
+  if (pal && window.WavePalettes) {
+    window.WavePalettes.choose(pal.dataset.paletteSet);
+    $$('[data-palette-set]', sheet).forEach((b) => b.setAttribute('aria-checked', String(b === pal)));
+    return;
+  }
   const t = e.target.closest('[data-theme-set]');
   if (t) {
     const v = t.dataset.themeSet;
-    if (v === 'auto') { document.documentElement.removeAttribute('data-theme'); try { localStorage.removeItem('wave.theme'); } catch { /* ignore */ } }
+    if (v === 'auto') { document.documentElement.removeAttribute('data-theme'); store.raw('theme', 'auto'); }
     else { document.documentElement.setAttribute('data-theme', v); store.raw('theme', v); }
-    $$('[data-theme-set]', sheet).forEach((b) => b.setAttribute('aria-selected', String(b === t)));
+    window.WavePalettes?.apply();                         // each palette has its own light and dark set
+    openSettings();                                       // redraw the swatches for the new mode
     return;
   }
   if (e.target.closest('#install-btn') && installEvent) {
@@ -187,12 +226,13 @@ window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); inst
 
 // ── start ────────────────────────────────────────────────────────────────────
 async function start() {
-  const [profile, papers, grants] = await Promise.allSettled([load('profile'), load('papers'), load('grants')]);
+  const [profile, papers, grants, citations] = await Promise.allSettled([load('profile'), load('papers'), load('grants'), load('citations')]);
   D.profile = profile.status === 'fulfilled' ? profile.value : null;
   D.papers = papers.status === 'fulfilled' ? papers.value : null;
   D.grants = grants.status === 'fulfilled' ? grants.value : null;
+  D.citations = citations.status === 'fulfilled' ? citations.value : null;
   if (!D.profile && !D.papers && !D.grants) {
-    view.innerHTML = `<div class="empty"><h3>No data yet</h3><p>The data files have not been built. Run the “Update data” workflow, or <code>python scripts/update.py</code> locally.</p></div>`;
+    view.innerHTML = `<div class="empty"><h3>No data yet</h3><p>Run the “Update data” workflow.</p></div>`;
     return;
   }
   freshness();

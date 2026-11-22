@@ -1,7 +1,7 @@
 // "Funding" — only calls that pass both tests (topic and career stage), each with its deadline,
 // what to submit and how much work it is.
-import { esc, icon, daysTo, num, fmtDate, $, store, toast, safeUrl, ago } from './util.js';
-import { oppHTML, isLive, nextDate, dueClass, calendarFile, EFFORT, TYPES } from './cards.js';
+import { esc, icon, daysTo, num, fmtDate, $, store, toast, safeUrl, ago, splitSentence } from './util.js';
+import { oppHTML, isLive, nextDate, dueClass, calendarFile, funderTag, EFFORT, TYPES } from './cards.js';
 import { timeline } from './charts.js';
 
 const state = { tab: 'deadline', kind: 'all', sort: 'date', savedOnly: false };
@@ -48,9 +48,7 @@ export function renderFunding(root, D, ctx, sub) {
 
     root.innerHTML = `
       <h1 class="page-title">Funding</h1>
-      <p class="page-sub">${all.length
-        ? `<b>${num(all.length)}</b> opportunities chosen for your research topic <em>and</em> your career stage${scanned ? `, from ${num(scanned)} calls and schemes scanned` : ''}.`
-        : 'Opportunities chosen for your research topic and career stage will appear here.'}</p>
+      <p class="page-sub">${all.length ? `<b>${num(all.length)}</b> selected · topic and career stage both fit${scanned ? ` · ${num(scanned)} scanned` : ''}` : 'Nothing selected yet'}</p>
       ${aiNotice(G)}
       ${marks.length ? `<section class="card timeline" style="margin-top:16px" aria-label="Deadlines ahead">
         <div class="chart" id="tl"></div>
@@ -59,10 +57,10 @@ export function renderFunding(root, D, ctx, sub) {
           <span><i class="round" style="background:var(--serious)"></i>5 weeks</span>
           <span><i class="round" style="background:var(--warning)"></i>11 weeks</span>
           <span><i class="round" style="background:var(--good)"></i>later</span>
-          <span><i class="ring"></i>expected, not yet announced</span>
+          <span><i class="ring"></i>expected</span>
         </div>
         <div class="opp-actions" style="margin-top:12px">
-          <a class="btn sm" href="${calendarUrl()}">${icon('cal', 'sm')}Subscribe to all deadlines</a>
+          <a class="btn sm" href="${calendarUrl()}">${icon('cal', 'sm')}Add all to my calendar</a>
         </div></section>` : ''}
       <div class="toolbar">
         <div class="seg" role="tablist" aria-label="Funding lists">
@@ -79,10 +77,10 @@ export function renderFunding(root, D, ctx, sub) {
       ${tabIntro(state.tab)}
       <div class="opps two" id="opp-list">${list.length ? list.map((o) => oppHTML(o, { saved: savedIds.has(o.id), open: o.id === focusId })).join('')
         : `<div class="empty" style="grid-column:1/-1"><h3>${state.savedOnly ? 'Nothing shortlisted in this list' : 'Nothing in this list right now'}</h3>
-           <p>${state.savedOnly ? 'Tap “Shortlist” again to see every call.' : 'Check the other lists — the selection is refreshed every day.'}</p></div>`}</div>
+           </div>`}</div>
       ${unreviewedHTML(G)}
       ${filteredHTML(G)}
-      <p class="scan">${c.scanned ? `<span>Scanned: <b>${num(c.scanned.ukri_open)}</b> live UKRI calls</span><span><b>${num(c.scanned.ukri_past)}</b> past UKRI calls (for repeats)</span><span><b>${num(c.scanned.eu)}</b> EU topics</span><span><b>${num(c.scanned.schemes)}</b> funder schemes</span>` : ''}
+      <p class="scan">${c.scanned ? `<span>UKRI live <b>${num(c.scanned.ukri_open)}</b></span><span>UKRI past <b>${num(c.scanned.ukri_past)}</b></span><span>EU <b>${num(c.scanned.eu)}</b></span><span>Schemes <b>${num(c.scanned.schemes)}</b></span>` : ''}
         ${G.generated_at ? `<span>Updated ${esc(ago(G.generated_at))}</span>` : ''}</p>`;
 
     const tl = $('#tl', root);
@@ -123,22 +121,17 @@ function calendarUrl() {
 }
 
 function tabIntro(tab) {
-  const text = {
-    deadline: 'Open or announced calls with a fixed closing date, soonest first.',
-    rolling: 'No closing date — apply when your case is ready.',
-    prepare: 'Calls that come round again. Dates marked ~ are estimates from earlier rounds; the card says when to start preparing.',
-  }[tab];
-  return `<p class="small muted" style="margin:14px 0 12px">${esc(text)}</p>`;
+  return tab === 'prepare' ? '<p class="small muted" style="margin:14px 0 12px">Not open yet. “~” = estimated from earlier rounds.</p>' : '<div style="height:14px"></div>';
 }
 
 function aiNotice(G) {
   const ai = G.ai || {};
   if (ai.errors?.length) {
-    return `<div class="notice warn" style="margin-top:14px">${icon('alert', 'sm')}<span><b>The Claude review had a problem on the last run.</b> ${esc(ai.errors[0])}</span></div>`;
+    return `<div class="notice warn" style="margin-top:14px">${icon('alert', 'sm')}<span><b>Claude review problem.</b> ${esc(splitSentence(ai.errors[0])[0])}</span></div>`;
   }
   const pending = G.counts?.awaiting_review || 0;
   if (!ai.key_present && pending) {
-    return `<div class="notice" style="margin-top:14px">${icon('spark', 'sm')}<span><b>${num(pending)} new calls are waiting for a Claude review.</b> Add your API key as the repository secret <code>ANTHROPIC_API_KEY</code> and the daily run will assess them — see Settings for the steps.</span></div>`;
+    return `<div class="notice" style="margin-top:14px">${icon('spark', 'sm')}<span><b>${num(pending)} new calls await review.</b> Add the <code>ANTHROPIC_API_KEY</code> secret to review them daily.</span></div>`;
   }
   return '';
 }
@@ -147,10 +140,10 @@ function unreviewedHTML(G) {
   const list = G.unreviewed || [];
   if (!list.length) return '';
   return `<section class="section"><div class="section-head"><h2 class="eyebrow">Awaiting review<span class="count">${list.length}</span></h2></div>
-    <p class="small muted" style="margin-bottom:10px">New calls that matched your keywords but have not been assessed yet, so they may not suit you.</p>
+    <p class="small muted" style="margin-bottom:10px">Matched your keywords; not yet assessed.</p>
     <div class="card pad">${list.map((u) => `<a class="rowlink" href="${safeUrl(u.url)}" target="_blank" rel="noopener">
       <h3>${esc(u.title)}</h3><div class="right">${u.closes ? `<b>${fmtDate(u.closes)}</b>` : `<b>${esc(u.closes_note || '')}</b>`}</div>
-      <div class="meta"><span class="tag">${esc(u.funder || '')}</span></div></a>`).join('')}</div></section>`;
+      <div class="meta">${funderTag(u.funder, '')}</div></a>`).join('')}</div></section>`;
 }
 
 function filteredHTML(G) {
@@ -158,8 +151,8 @@ function filteredHTML(G) {
   if (!list.length) return '';
   return `<section class="section"><details class="fold" style="border-top:1px solid var(--ink)">
     <summary>Read and left out <span class="n">${list.length}</span></summary>
-    <div class="fold-body"><p style="margin-bottom:10px">These were read in full and did not pass the topic, career-stage or eligibility test. The reason is given for each.</p>
+    <div class="fold-body">
       ${list.map((f) => `<div class="rowlink"><h3 style="font-size:.9375rem"><a href="${safeUrl(f.url)}" target="_blank" rel="noopener">${esc(f.title)}</a></h3>
-        <div class="meta"><span class="tag">${esc(f.funder || '')}</span><span>${esc(f.reason)}</span></div></div>`).join('')}
+        <div class="meta">${funderTag(f.funder, '')}<span>${esc(splitSentence(f.reason)[0])}</span></div></div>`).join('')}
     </div></details></section>`;
 }

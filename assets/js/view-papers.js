@@ -44,7 +44,7 @@ export function renderPapers(root, D, ctx, sub) {
       body = liveHTML(state.live, ctx, ownTitle);
     } else if (!list.length) {
       body = `<div class="empty"><h3>${state.tab === 'saved' ? 'Your reading list is empty' : 'Nothing matches'}</h3>
-        <p>${state.tab === 'saved' ? 'Tap the bookmark on any paper to keep it here.' : 'Try a longer time range or clear the filters.'}</p></div>`;
+        <p>${state.tab === 'saved' ? 'Tap a bookmark to save a paper.' : 'Widen the filters.'}</p></div>`;
     } else if (byDate) {
       let rest = list;
       for (const [floor, label] of GROUPS) {
@@ -62,7 +62,7 @@ export function renderPapers(root, D, ctx, sub) {
     const chip = (key, value, label) => `<button class="chip" type="button" data-set="${key}" data-val="${value}" aria-pressed="${String(state[key]) === String(value)}">${label}</button>`;
     root.innerHTML = `
       <h1 class="page-title">Papers</h1>
-      <p class="page-sub">A daily feed of new work close to your own — not a literature review. Everything here appeared in the last ${num(D.papers?.window_days || 120)} days.</p>
+      <p class="page-sub">New work close to yours · last ${num(D.papers?.window_days || 120)} days</p>
       <div class="toolbar">
         <div class="seg" role="tablist" aria-label="Paper lists">
           <button role="tab" type="button" data-tab="new" aria-selected="${state.tab === 'new'}">New <span class="n">${counts.new}</span></button>
@@ -71,7 +71,7 @@ export function renderPapers(root, D, ctx, sub) {
         </div>
         <form class="search" id="paper-search" role="search">
           ${icon('search')}
-          <input type="search" name="q" value="${esc(state.q)}" placeholder="Filter the feed or search all journals" aria-label="Filter the feed or search the wider literature" autocomplete="off" enterkeyhint="search">
+          <input type="search" name="q" value="${esc(state.q)}" placeholder="Filter, or search all journals" aria-label="Filter the feed or search the wider literature" autocomplete="off" enterkeyhint="search">
           ${state.q || state.live ? `<button type="button" data-clear aria-label="Clear search">${icon('x', 'sm')}</button>` : ''}
         </form>
         ${state.tab !== 'saved' && !state.live ? `<div class="chips" role="group" aria-label="Filters">
@@ -153,9 +153,9 @@ const strip = (s) => { const d = document.createElement('div'); d.innerHTML = St
 
 function liveHTML(live, ctx, ownTitle) {
   if (live.loading) return `<div class="boot"><div class="skeleton sk-card"></div><div class="skeleton sk-card"></div><div class="skeleton sk-card"></div></div>`;
-  if (live.error) return `<div class="notice warn" style="margin-top:18px">${icon('alert', 'sm')}<span><b>The search did not go through.</b> ${esc(live.error)}. Check your connection and try again.</span></div>`;
+  if (live.error) return `<div class="notice warn" style="margin-top:18px">${icon('alert', 'sm')}<span><b>Search failed.</b> ${esc(live.error)}</span></div>`;
   if (!live.results.length) return `<div class="empty"><h3>No results for “${esc(live.query)}”</h3><p>Try different words.</p></div>`;
-  return `<h2 class="day-head">All journals · “${esc(live.query)}”<span class="n">${live.results.length}, ranked by closeness to your work</span></h2>
+  return `<h2 class="day-head">All journals · “${esc(live.query)}”<span class="n">${live.results.length}</span></h2>
     <div class="stories">${live.results.map((p) => storyHTML(p, { saved: ctx.papers.has(p.id), ownTitle, showNew: false })).join('')}</div>
-    <p class="scan">Results from Crossref (last two years), scored in your browser against your own papers.</p>`;
+    <p class="scan">Crossref · last two years · ranked against your papers</p>`;
 }

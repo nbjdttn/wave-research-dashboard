@@ -72,6 +72,38 @@ export function ago(iso) {
   return `${Math.round(mins / 1440)} days ago`;
 }
 
+/** Split off the first sentence. Abbreviations, initials and decimals do not end a sentence. */
+const ABBR = /(?:\b(?:e\.g|i\.e|etc|vs|approx|no|st|dr|prof|fig|al|inc|ltd|jr|sr)\.|\b[A-Z]\.)$/i;
+export function splitSentence(text) {
+  const t = String(text ?? '').trim();
+  const re = /[.!?](?=\s+["“'(£€]?[A-Z0-9])/g;
+  let m;
+  while ((m = re.exec(t))) {
+    const head = t.slice(0, m.index + 1);
+    if (head.length < 25 || ABBR.test(head)) continue;
+    return [head, t.slice(m.index + 1).trim()];
+  }
+  return [t, ''];
+}
+/**
+ * Keep it short: show the first sentence, cut at a clause if that is still long;
+ * the full text is one tap away. Always returns a single element.
+ */
+export function brief(text, limit = 150) {
+  const full = String(text ?? '').trim();
+  let [shown] = splitSentence(full);
+  if (shown.length > limit) {
+    const head = shown.slice(0, limit);
+    const clause = Math.max(...[', ', '; ', ' — ', ' – ', ': '].map((m) => head.lastIndexOf(m)));
+    const cut = clause > limit * 0.55 ? clause : head.lastIndexOf(' ');
+    shown = `${head.slice(0, cut > 0 ? cut : limit)
+      .replace(/(?:[\s,;:–—-]+(?:a|an|the|of|to|and|or|with|for|in|on|at|by|that|which|from|as))+$/i, '')   // do not end on a small word
+      .replace(/[\s,;:–—-]+$/, '')}…`;
+  }
+  if (shown === full) return `<span class="brief">${esc(full)}</span>`;
+  return `<span class="brief"><span class="lede">${esc(shown)}</span> <button class="more-btn" type="button" data-more aria-expanded="false">more</button><span class="rest" hidden>${esc(full)}</span></span>`;
+}
+
 export const num = (n) => (n == null ? '–' : Number(n).toLocaleString('en-GB'));
 export const plural = (n, one, many) => `${num(n)} ${n === 1 ? one : (many || one + 's')}`;
 

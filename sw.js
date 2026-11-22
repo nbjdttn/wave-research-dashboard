@@ -1,15 +1,15 @@
 // Offline support. Pages, scripts and data are fetched fresh whenever the network answers and
 // fall back to the last copy when it does not; fonts and icons are served from the cache.
-const CACHE = 'wave-research-v1';
+const CACHE = 'wave-research-v2';
 const SHELL = [
   './', 'index.html', 'manifest.webmanifest',
   'assets/css/app.css',
-  'assets/js/app.js', 'assets/js/util.js', 'assets/js/charts.js', 'assets/js/cards.js', 'assets/js/wave.js',
+  'assets/js/palettes.js', 'assets/js/app.js', 'assets/js/util.js', 'assets/js/charts.js', 'assets/js/cards.js', 'assets/js/wave.js',
   'assets/js/similarity.js', 'assets/js/view-today.js', 'assets/js/view-papers.js', 'assets/js/view-funding.js',
   'assets/js/view-profile.js',
   'assets/fonts/inter-var.woff2', 'assets/fonts/newsreader-var.woff2', 'assets/fonts/newsreader-italic-var.woff2',
   'assets/icons/favicon.svg', 'assets/icons/icon-192.png', 'assets/icons/icon-512.png',
-  'data/profile.json', 'data/papers.json', 'data/grants.json',
+  'data/profile.json', 'data/papers.json', 'data/grants.json', 'data/citations.json',
 ];
 
 self.addEventListener('install', (event) => {

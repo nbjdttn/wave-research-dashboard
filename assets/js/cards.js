@@ -1,5 +1,27 @@
 // The two repeating units of the app: a paper "story" and a funding opportunity card.
-import { esc, safeUrl, icon, fmtDate, fmtTime, fmtMonth, daysTo, rel, left, people, parseDay, isoDay, today, store, download } from './util.js';
+import { esc, safeUrl, icon, fmtDate, fmtTime, fmtMonth, daysTo, rel, left, people, parseDay, isoDay, today, store, download, brief } from './util.js';
+
+// ── funder names ─────────────────────────────────────────────────────────────
+const FUNDERS = [
+  [/advanced research and invention agency/i, 'ARIA'],
+  [/supergen offshore renewable energy/i, 'Supergen ORE Hub'],
+  [/marie sk[lł]odowska/i, 'EU · MSCA'],
+  [/european research council/i, 'ERC'],
+  [/exhibition of 1851/i, '1851 Royal Commission'],
+  [/office of naval research/i, 'ONR Global'],
+  [/institution of civil engineers/i, 'ICE'],
+  [/royal academy of engineering/i, 'RAEng'],
+  [/daiwa/i, 'Daiwa Foundation'],
+];
+/** A funder name short enough for a tag; the full name stays in the tooltip. */
+export function funderShort(name) {
+  const n = String(name || '').trim();
+  for (const [re, out] of FUNDERS) if (re.test(n)) return out;
+  if (/international science partnerships fund/i.test(n)) return `${n.split(' (')[0]} · ISPF`;
+  return n.replace(/\s*\([^)]*\)\s*$/, '');
+}
+/** The funder tag used on every funding card and row. */
+export const funderTag = (name, cls = 'accent') => `<span class="tag clip ${cls}" title="${esc(name || '')}">${esc(funderShort(name))}</span>`;
 
 // ── profile numbers ──────────────────────────────────────────────────────────
 /**
@@ -33,7 +55,7 @@ export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abs
   paperIndex.set(p.id, p);
   const venue = p.venue ? `<span class="venue">${esc(p.venue)}</span><span class="sep">·</span>` : '';
   const near = p.similar_to && !(p.cites || []).length
-    ? `<p class="near">Closest to your <b>${esc(p.similar_to.title)}</b>${p.similar_to.year ? ` (${p.similar_to.year})` : ''}</p>`
+    ? `<p class="near">Like your <b>${esc(p.similar_to.title)}</b></p>`
     : '';
   const cites = (p.cites || []).map((id) => ownTitle?.(id)).filter(Boolean);
   return `<article class="story${lead ? ' lead' : ''}" data-paper="${esc(p.id)}">
@@ -42,13 +64,14 @@ export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abs
       ${p.coauthor ? `<span class="tag accent">Co-author: ${esc(p.coauthor)}</span>` : ''}
     </div>
     <h3 class="story-title"><a href="${safeUrl(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a></h3>
-    <p class="byline">${people(p.authors, p.author_count)}</p>
-    ${abstract && p.abstract ? `<p class="abstract" data-toggle="abstract">${esc(p.abstract)}</p>` : ''}
-    ${cites.length ? `<div class="cites-you">${icon('quote', 'sm')}<span>Cites your ${cites.length > 1 ? `${cites.length} papers, including ` : ''}<i>${esc(cites[0])}</i></span></div>` : ''}
+    <p class="byline">${people(p.authors, p.author_count, 2)}</p>
+    ${p.abstract ? `<p class="abstract" data-toggle="abstract"${lead && abstract ? '' : ' hidden'}>${esc(p.abstract)}</p>` : ''}
+    ${cites.length ? `<div class="cites-you">${icon('quote', 'sm')}<span>Cites <i>${esc(cites[0])}</i>${cites.length > 1 ? ` +${cites.length - 1}` : ''}</span></div>` : ''}
     ${near}
     <div class="story-foot">
-      <span class="match" title="How close this is to your own papers"><span class="meter" style="--v:${Number(p.score) || 0}"></span>${Number(p.score) || 0}% match</span>
+      <span class="match" title="How close this is to your own papers"><span class="meter" style="--v:${Number(p.score) || 0}"></span>${Number(p.score) || 0}%</span>
       <span class="story-actions">
+        ${p.abstract && !(lead && abstract) ? `<button class="act" type="button" data-abs aria-expanded="false">Abstract</button>` : ''}
         ${p.pdf_url ? `<a class="act" href="${safeUrl(p.pdf_url)}" target="_blank" rel="noopener">${icon('pdf', 'sm')}PDF</a>` : ''}
         <button class="act" type="button" data-save-paper="${esc(p.id)}" aria-pressed="${saved}" aria-label="${saved ? 'Remove from reading list' : 'Save to reading list'}">${icon('save', 'sm')}</button>
       </span>
@@ -58,9 +81,9 @@ export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abs
 
 // ── funding ──────────────────────────────────────────────────────────────────
 export const EFFORT = { light: [1, 'Light'], moderate: [2, 'Moderate'], heavy: [3, 'Heavy'], major: [4, 'Major'] };
-const TOPIC = { core: 'core to your research', strong: 'strong match', open_call: 'open topic', partial: 'partial', off_topic: 'off topic' };
-const STAGE = { ideal: 'ideal', suitable: 'suitable', stretch: 'a stretch', not_applicable: 'as host / partner', too_early: 'too early', too_senior: 'for more junior staff' };
-const ELIG = { eligible: 'eligible', likely: 'likely eligible', check: 'needs checking', not_eligible: 'not eligible' };
+const TOPIC = { core: 'core', strong: 'strong', open_call: 'open topic', partial: 'partial', off_topic: 'off topic' };
+const STAGE = { ideal: 'ideal', suitable: 'suitable', stretch: 'stretch', not_applicable: 'host / partner', too_early: 'too early', too_senior: 'too junior a scheme' };
+const ELIG = { eligible: 'yes', likely: 'likely', check: 'check', not_eligible: 'no' };
 export const TYPES = {
   project_grant: 'Project grant', fellowship: 'Fellowship', network: 'Network', travel_exchange: 'Travel & exchange',
   prize: 'Prize', innovation: 'Innovation', hosting: 'Host a fellow', compute_equipment: 'Compute & equipment', other: 'Other',
@@ -112,8 +135,8 @@ function verdicts(a) {
   const pill = (label, value, ok) => `<span class="verdict${ok ? '' : ' check'}">${icon(ok ? 'check' : 'alert', 'xs')}${label}: <b>${esc(value)}</b></span>`;
   return `<div class="verdicts">
     ${pill('Topic', TOPIC[a.topic_fit.verdict] || a.topic_fit.verdict, true)}
-    ${pill('Career stage', STAGE[a.career_stage.verdict] || a.career_stage.verdict, a.career_stage.verdict !== 'stretch')}
-    ${pill('Eligibility', ELIG[a.eligibility.verdict] || a.eligibility.verdict, a.eligibility.verdict !== 'check')}
+    ${pill('Stage', STAGE[a.career_stage.verdict] || a.career_stage.verdict, a.career_stage.verdict !== 'stretch')}
+    ${pill('Eligible', ELIG[a.eligibility.verdict] || a.eligibility.verdict, a.eligibility.verdict !== 'check')}
   </div>`;
 }
 
@@ -121,7 +144,7 @@ function checklist(o) {
   const done = new Set(store.get(`check.${o.id}`, []));
   return `<ul class="checklist">${o.analysis.requirements.map((r, i) => `
     <li class="${done.has(i) ? 'done' : ''}"><input type="checkbox" id="c-${esc(o.id)}-${i}" data-check="${esc(o.id)}" data-i="${i}" ${done.has(i) ? 'checked' : ''}>
-      <label for="c-${esc(o.id)}-${i}"><b>${esc(r.item)}</b>${r.detail ? `<span>${esc(r.detail)}</span>` : ''}</label></li>`).join('')}</ul>`;
+      <label for="c-${esc(o.id)}-${i}"><b>${esc(r.item)}</b>${r.detail ? `<span>${brief(r.detail)}</span>` : ''}</label></li>`).join('')}</ul>`;
 }
 
 function datesBlock(o) {
@@ -144,8 +167,8 @@ function datesBlock(o) {
   html += row('Total fund', esc(o.award?.total_fund || ''));
   html += row('Repeats', esc(CADENCE[r.cadence] || ''));
   html += '</dl>';
-  if (rnd.notes) html += `<p style="margin-top:10px">${esc(rnd.notes)}</p>`;
-  if (r.evidence && o.bucket === 'prepare') html += `<h4>Why we expect another round</h4><p>${esc(r.evidence)}</p>`;
+  if (rnd.notes) html += `<p style="margin-top:10px">${brief(rnd.notes)}</p>`;
+  if (r.evidence && o.bucket === 'prepare') html += `<h4>Why another round is expected</h4><p>${brief(r.evidence)}</p>`;
   if (o.history?.length) {
     html += `<h4>Earlier rounds</h4><dl class="dates">${o.history.map((h) => `<div><dt>${esc(h.title)}</dt><dd>closed ${fmtDate(h.closes, { year: true })}</dd></div>`).join('')}</dl>`;
   }
@@ -159,7 +182,7 @@ export function oppHTML(o, { saved = false, open = false } = {}) {
   const canCal = o.bucket === 'deadline' || (o.bucket === 'prepare' && a.effort.start_by);
   return `<article class="card opp" id="opp-${esc(o.id)}" data-opp="${esc(o.id)}">
     <div class="opp-head">
-      <span class="tag accent">${esc(o.funder || '')}</span>
+      ${funderTag(o.funder)}
       <span class="tag">${host ? icon('host', 'xs') : ''}${esc(TYPES[a.opportunity_type] || 'Funding')}</span>
       ${a.role === 'partner' ? '<span class="tag">As partner</span>' : ''}
       ${o.bucket === 'prepare' ? `<span class="tag sand">${icon('repeat', 'xs')}Not open yet</span>` : ''}
@@ -178,34 +201,34 @@ export function oppHTML(o, { saved = false, open = false } = {}) {
     </div>
     ${startBy(o)}
     ${verdicts(a)}
-    <p class="opp-summary">${esc(a.summary)}</p>
+    <p class="opp-summary">${brief(a.summary)}</p>
     <details class="fold"${open ? ' open' : ''}>
-      <summary>What you need <span class="n">${a.requirements.length} items</span></summary>
+      <summary>What you need <span class="n">${a.requirements.length}</span></summary>
       <div class="fold-body">
         ${checklist(o)}
-        ${a.effort.drivers?.length ? `<h4>What makes it this much work</h4><p>${a.effort.drivers.map(esc).join(' · ')}${a.effort.person_days ? ` — about ${esc(a.effort.person_days)} working days` : ''}.</p>` : ''}
+        ${a.effort.drivers?.length ? `<h4>Why this much effort${a.effort.person_days ? ` · about ${esc(a.effort.person_days)} days` : ''}</h4><ul class="points">${a.effort.drivers.map((d) => `<li>${brief(d)}</li>`).join('')}</ul>` : ''}
       </div>
     </details>
     <details class="fold">
-      <summary>Why it fits you</summary>
-      <div class="fold-body">
-        <p>${esc(a.why_fit)}</p>
-        <h4>Topic</h4><p>${esc(a.topic_fit.notes)}</p>
-        <h4>Career stage</h4><p>${esc(a.career_stage.notes)}</p>
-        <h4>Eligibility</h4><p>${esc(a.eligibility.notes)}</p>
-        ${a.concerns ? `<h4>Watch out for</h4><p>${esc(a.concerns)}</p>` : ''}
-      </div>
+      <summary>Why it fits</summary>
+      <div class="fold-body"><ul class="points">
+        <li><b>Fit</b>${brief(a.why_fit)}</li>
+        <li><b>Topic</b>${brief(a.topic_fit.notes)}</li>
+        <li><b>Stage</b>${brief(a.career_stage.notes)}</li>
+        <li><b>Eligible</b>${brief(a.eligibility.notes)}</li>
+        ${a.concerns ? `<li class="warn"><b>Watch</b>${brief(a.concerns)}</li>` : ''}
+      </ul></div>
     </details>
     <details class="fold">
       <summary>Dates and award</summary>
       <div class="fold-body">${datesBlock(o)}</div>
     </details>
-    ${a.next_steps?.length ? `<details class="fold"><summary>Next steps</summary><div class="fold-body"><ol class="steps">${a.next_steps.map((s) => `<li>${esc(s)}</li>`).join('')}</ol></div></details>` : ''}
+    ${a.next_steps?.length ? `<details class="fold"><summary>Next steps</summary><div class="fold-body"><ol class="steps">${a.next_steps.slice(0, 3).map((x) => `<li><span>${brief(x)}</span></li>`).join('')}</ol></div></details>` : ''}
     <div class="opp-actions">
       <a class="btn primary" href="${safeUrl(o.url)}" target="_blank" rel="noopener">Open the call ${icon('ext', 'sm')}</a>
       ${canCal ? `<button class="btn" type="button" data-cal="${esc(o.id)}">${icon('cal', 'sm')}Add to calendar</button>` : ''}
     </div>
-    <div class="opp-foot">${icon('spark', 'xs')}Reviewed by ${esc(/^claude-/.test(o.analysed?.model || '') ? o.analysed.model.replace('claude-', 'Claude ').replace(/-/g, ' ') : 'Claude')} · ${fmtDate(o.analysed?.at, { year: true })}</div>
+    <div class="opp-foot">${icon('spark', 'xs')}Reviewed by Claude · ${fmtDate(o.analysed?.at)}</div>
   </article>`;
 }
 
@@ -220,8 +243,8 @@ export function oppRow(o) {
   return `<a class="rowlink" href="#funding/${esc(o.id)}">
     <h3>${esc(o.title)}</h3>
     <div class="right">${right}</div>
-    <div class="meta"><span class="tag accent">${esc(o.funder || '')}</span>
-      <span><span class="effort l${(EFFORT[a.effort.level] || [2])[0]}" aria-hidden="true"><i></i><i></i><i></i><i></i></span> ${esc((EFFORT[a.effort.level] || [0, 'Moderate'])[1])} effort</span>
+    <div class="meta">${funderTag(o.funder)}
+      <span><span class="effort l${(EFFORT[a.effort.level] || [2])[0]}" aria-hidden="true"><i></i><i></i><i></i><i></i></span> ${esc((EFFORT[a.effort.level] || [0, 'Moderate'])[1])}</span>
       <span>Fit ${a.fit_score}</span>${o.is_new ? '<span class="tag new">New</span>' : ''}</div>
   </a>`;
 }
