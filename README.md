@@ -1,6 +1,7 @@
 # Wave Research
 
-A personal research briefing that lives on GitHub Pages and is built for a phone.
+A personal research briefing that lives on GitHub Pages and is built for a phone: add it to the
+home screen and it behaves like an app (pull down to refresh, swipe, no zooming about).
 
 ![Today, Funding and Profile screens](docs/screens.jpg)
 
@@ -9,11 +10,15 @@ A personal research briefing that lives on GitHub Pages and is built for a phone
 | **Today** | The front page: new papers close to your work, new papers citing you, funding calls and the next deadlines. |
 | **Papers** | A daily feed of *new* work (not a literature review), ranked against your own publications, plus a live search of all journals scored the same way. |
 | **Funding** | A short list of opportunities that pass **both** tests — your research topic *and* your career stage — each with its deadline, a checklist of what to submit, an effort estimate and a "start by" date. Recurring calls that are not open yet appear under *Prepare ahead*. |
-| **Profile** | Your publication record and metrics: citations, h-index, trends, themes, journals, collaborators and the full list. The **Citations** tab shows who is citing you: independent groups, co-authors or yourself, by year, journal, country and institution, and which of your papers are being cited now. |
+| **Profile** | Your record: citations, h-index, trends, themes, journals, collaborators and the full list. **Citations** shows who is citing you (independent groups, co-authors, yourself) by year, month, journal, country and institution. **Peers** sets your growth since the PhD beside researchers at a similar stage in the same field at leading universities — swipe a person out of the group, or in from the bench. |
+
+Every paper has a **Send to Claude** button and every funding call a **Plan it with Claude** button:
+they open a new Claude Code session on this repository with the request typed in, ready to send.
 
 Live site: **https://nbjdttn.github.io/wave-research-dashboard/**
 
-Tap the sliders icon (top right) to choose one of six colour palettes — Ocean, Coast, Midnight, Kelp, Coral, Slate — each in light and dark.
+Tap the sliders icon (top right) to choose one of eight colour palettes — Ocean, Coast, Midnight, Kelp,
+Coral, Slate, Paper, Graphite — each in light and dark.
 
 ## Set-up — two steps, both doable from a phone
 
@@ -57,6 +62,9 @@ citations Semantic Scholar: every paper citing yours ─► who they are (indepe
 papers    Semantic Scholar recommendations (seeded with your papers)
           arXiv · Crossref · papers citing you ─► scored against your own work ─► data/papers.json
 
+peers     authors of the papers around your work, seen at a leading university (OpenAlex, free)
+          ─► same field, PhD within a few years of yours ─► data/peers.json   (yearly citations and papers)
+
 grants    UKRI Funding Finder (live calls + two years of past calls, to spot repeats)
           EU Funding & Tenders portal · watch-list of funder schemes (config/schemes.json)
              │  1. screen   out-of-field councils and invite-only calls dropped; Claude triages the rest
@@ -89,6 +97,8 @@ Everything the pipeline knows about you is in **`config/researcher.toml`**:
   fellowships hinge on years since the PhD. `priorities` and `not_wanted` are passed to Claude word for word.
 - **`[interests]`** — weighted phrases that rank papers (`core`, `methods`) and look-alike topics to push down (`avoid`).
 - **`[papers]`** / **`[grants]`** — time windows, search phrases, thresholds.
+- **`[peers]`** — who counts as a peer: the PhD window, topic overlap, the list of leading universities,
+  people to always include or leave out, and corrections to PhD years (those marked `~` are estimates).
 - **`[claude]`** — model, effort, spending guard, how often scheme pages are re-read, and
   `reassess_on_profile_change`: after you edit your profile, re-review only the calls whose eligibility
   was uncertain (`"uncertain"`, the default), every call (`"all"`) or none (`"none"`).
@@ -100,12 +110,22 @@ To add a palette of your own, copy a block in `assets/js/palettes.js` and change
 
 Saving a change to either file (the GitHub app or website editor is fine) starts an update straight away.
 
+## The daily agent
+
+Besides the scripted job, a scheduled Claude Code session can look at things a script cannot: funder
+pages that block scripts, new schemes with no feed, a fresh Google Scholar reading, peers' real PhD
+years. It follows `CLAUDE.md`, writes a short briefing (`data/briefing.json`, shown at the top of
+*Today*) and pushes to the published branch. It uses your Claude plan each time it runs; pause, change
+or delete it under scheduled tasks at claude.ai/code.
+
 ## Good to know
 
 - **It is public.** A public repository means the site and the files in `data/` are public, including
   the fit notes written about each funding call. The page asks search engines not to index it, but
   anyone with the link can read it. Reading list, shortlist and ticked checklist items are stored
   only in the browser of the device you use.
+- **The peer comparison names real people** using public OpenAlex figures. Set `show_names = false` under
+  `[peers]` to show "Peer 1, Peer 2 …" instead; the names are then left out of the data file as well.
 - **Citation counts differ by source.** Google Scholar counts more than Semantic Scholar can trace
   (theses, reports, some conference papers), so the *Citations* tab says how many it found.
 - **Dates marked `~` are estimates** inferred from earlier rounds. Always confirm on the funder's page —
@@ -125,7 +145,7 @@ Saving a change to either file (the GitHub app or website editor is fine) starts
 
 ```bash
 pip install -r requirements.txt
-python scripts/update.py            # or: profile | citations | papers | grants
+python scripts/update.py            # or: profile | citations | papers | peers | grants
 python -m http.server 8000          # then open http://localhost:8000
 ```
 

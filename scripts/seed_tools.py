@@ -103,7 +103,8 @@ def export_analysis(cfg, outdir: Path) -> None:
     index = []
     for it in G.shortlist_from(pool, cache["triage"], cfg["grants"]):
         prep = G.prepare(it, arch, cache)
-        if cache["analysis"].get(it["id"], {}).get("facts_hash") == sha(prep["facts"], prep["body_hash"]):
+        have = cache["analysis"].get(it["id"], {})
+        if (have.get("content") or have.get("facts_hash")) == sha(prep["facts"], prep["body_hash"]):
             continue
         user = (f"Today is {today().isoformat()}. Assess this funding opportunity for the researcher.\n\n"
                 f"# Listing facts (authoritative for status and dates)\n{prep['facts']}\n\n"
