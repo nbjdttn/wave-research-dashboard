@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T17:37:46Z",
+ "generated_at": "2026-11-22T20:10:17Z",
  "counts": {
   "scanned": {
    "ukri_open": 137,
@@ -14,8 +14,8 @@
   "awaiting_review": 0,
   "by_bucket": {
    "deadline": 6,
-   "rolling": 9,
-   "prepare": 9
+   "rolling": 10,
+   "prepare": 8
   }
  },
  "opportunities": [
@@ -40,28 +40,31 @@
    "history": [],
    "last_round": null,
    "analysis": {
-    "summary": "A UKRI call, with EPSRC as a lead funder, for exploratory projects of up to 12 months and £250,000 full economic cost that pair an AI expert with a domain expert to test how AI could transform a science or engineering research challenge. It closes on 1 December 2026 at 16:00 and is decided entirely by distributed peer review.",
+    "summary": "Up to £250k FEC, 12-month exploratory projects pairing AI experts with domain researchers to embed AI in science and engineering.",
     "topic_fit": {
      "verdict": "strong",
-     "notes": "AI applied to a clearly defined science or engineering challenge is your scientific machine-learning territory, and the call judges how well the AI approach suits the domain rather than AI novelty alone. Projects must sit in a 'priority research domain', and that list is cut off in the brief, so it is not yet certain that fluid mechanics, ocean or energy engineering is covered."
+     "notes": "AI applied to engineering suits your scientific machine learning for waves, though the domain is not ocean-specific."
     },
     "career_stage": {
      "verdict": "suitable",
-     "notes": "Standard UKRI eligibility applies and experience is judged as 'appropriate to career stage'. A one-year project of up to £250,000, shared with an AI co-lead, is a realistic scale for a new lecturer to lead."
+     "notes": "Small, one-year grant that an early-career PI can realistically lead."
     },
     "eligibility": {
-     "verdict": "check",
-     "notes": "You personally meet the standard UKRI organisational and individual eligibility rules as a permanent academic at Manchester. What needs checking is scope: the project must address a challenge within one of the call's priority research domains, and the brief does not show the list."
+     "verdict": "eligible",
+     "notes": "Manchester is UKRI-eligible; you need an AI or domain co-lead to meet the pairing expectation."
     },
     "fit_score": 72,
     "fit_label": "strong",
-    "why_fit": "You already work at the interface this call is trying to build: a fluid-mechanics specialist who uses physics-informed networks, neural operators and equation discovery, so you can pose a sharp domain challenge and judge what AI can realistically deliver. The award is small, quick and leadable by you, most naturally as the domain lead with an AI specialist as co-lead.",
-    "concerns": "The deadline of 1 December 2026 leaves very little time for a named AI partner, a four-page case and full costing through your research office, so it is realistic only if those are already largely in hand. The project must also be clearly distinct from your New Investigator Award (uninvited resubmissions are not accepted), your team must review about eight other proposals or be rejected, and the funding is still subject to Full Business Case approval.",
+    "why_fit": "Fits your physics-informed ML, equation discovery and digital-twin work on extreme waves and offshore loads.",
+    "concerns": "Only nine days remain, and the internal research office deadline may already have passed.",
     "recommend": true,
-    "recommend_reason": "AI for science and engineering at a scale an early-career PI can lead; worth a rapid application only if your area is among the priority domains and you can secure an AI co-lead and a research-office slot straight away, because nothing suggests the call will run again.",
+    "recommend_reason": "Good topic and stage fit with a short application, if a co-lead is ready now.",
     "focus": "domain_ai",
     "themes": [
-     "ai-for-science"
+     "ai-for-science",
+     "ocean",
+     "offshore-energy",
+     "fluids"
     ],
     "opportunity_type": "project_grant",
     "role": "lead",
@@ -70,93 +73,88 @@
      "opens": "2026-09-29",
      "closes": "2026-12-01",
      "closes_time": "16:00",
-     "stage": "Full application (single stage, distributed peer review)",
+     "stage": "full application",
      "other_dates": [
       {
-       "label": "Applicant webinar (held; slides and Q&A on the call page)",
+       "label": "Webinar (held)",
        "date": "2026-10-14"
       },
       {
-       "label": "Fixed project start date",
+       "label": "Fixed project start",
        "date": "2027-04-26"
       }
      ],
-     "notes": "Each application receives up to eight reviews from other applicant teams, and there is no panel or project lead response step. Funding for the opportunity is subject to Full Business Case approval."
+     "notes": "Distributed peer review, with no panel or response step; funding is subject to Full Business Case approval."
     },
     "award_summary": {
-     "amount": "Up to £250,000 full economic cost; UKRI pays 80%",
-     "duration": "Up to 12 months, starting 26 April 2027"
+     "amount": "Up to £250,000 FEC (80% funded)",
+     "duration": "Up to 12 months"
     },
     "requirements": [
      {
-      "item": "Scope check against the priority research domains",
-      "detail": "The list is cut off in the brief — confirm on the call page or in the webinar slides that your challenge sits in a priority domain before doing anything else."
+      "item": "Check internal research office deadline",
+      "detail": "Research office must check and submit via the Funding Service"
      },
      {
-      "item": "Research office slot",
-      "detail": "The research office must check and submit the application on the UKRI Funding Service before 16:00 on 1 December 2026, so agree its internal deadline first."
-     },
-     {
-      "item": "AI and domain pairing",
-      "detail": "The team must bring together an AI expert and an expert from a non-AI discipline, with a clearly defined, application-focused research challenge at its centre."
+      "item": "Core team and co-lead",
+      "detail": "Pair an AI expert with a non-AI domain expert"
      },
      {
       "item": "Summary",
-      "detail": "550 words, in plain English."
+      "detail": "550 words, plain English"
      },
      {
-      "item": "Vision and Approach document",
-      "detail": "PDF of no more than four sides of A4 (11-point Arial, margins of at least 2cm, maximum 8MB), plus one extra page for a diagrammatic workplan."
+      "item": "Vision and Approach PDF",
+      "detail": "4 A4 sides, 11pt Arial, 2cm margins, plus 1 workplan page"
      },
      {
-      "item": "Applicant and team capability to deliver",
-      "detail": "1,650 words."
+      "item": "Team capability statement",
+      "detail": "Word limit set in the Funding Service, typical — confirm in the guidance"
      },
      {
       "item": "Resources and cost justification",
-      "detail": "Up to £250,000 full economic cost at 80%; compute counts as a consumable; no PhD studentships and no equipment over £25,000 per item. The word limit is not shown in the brief."
+      "detail": "FEC costing; no PhD costs; equipment under £25k per item"
      },
      {
-      "item": "Ethics and responsible research and innovation; risk and reward",
-      "detail": "Both are assessment areas; their word limits are not shown in the brief — confirm in the guidance."
+      "item": "Ethics and RRI section",
+      "detail": "Typical — confirm in the guidance"
      },
      {
-      "item": "Nominated reviewers (distributed peer review)",
-      "detail": "Name any team members who will share the reviewing; the team must review around eight proposals, and missing the review deadline means automatic rejection."
+      "item": "Nominate DPR reviewers",
+      "detail": "Review about eight proposals, or your application is rejected"
      }
     ],
     "effort": {
      "level": "moderate",
-     "prep_time": "2-3 weeks part-time",
+     "prep_time": "8-10 days intensive",
      "person_days": "8-12",
      "drivers": [
-      "Securing an AI co-lead and agreeing the challenge",
-      "Four-page vision and approach plus a 1,650-word team section",
-      "Full economic costing and research-office checks",
-      "Reviewing about eight other proposals afterwards"
+      "Very tight remaining time",
+      "Securing an AI co-lead",
+      "Internal costing and sign-off",
+      "DPR reviewing commitment"
      ],
-     "start_by": "2026-11-10"
+     "start_by": "2026-11-22"
     },
     "recurrence": {
      "cadence": "one_off",
-     "typical_open_month": null,
-     "typical_close_month": null,
+     "typical_open_month": 9,
+     "typical_close_month": 12,
      "next_expected_open": null,
      "next_expected_close": null,
-     "is_estimate": false,
-     "evidence": "A strategic call delivered as part of a UKRI AI programme, with a fixed project start date of 26 April 2027; no earlier rounds are listed and nothing in the text mentions a further round."
+     "is_estimate": true,
+     "evidence": "Single call under the UKRI IS8 AI Programme; no earlier rounds are indicated."
     },
     "next_steps": [
-     "First check the list of priority research domains on the call page or in the webinar slides (the brief cuts it off); if your challenge does not fit one, stop there.",
-     "Ask your research office at once whether it can cost and submit by 16:00 on 1 December 2026, and what its internal deadline is.",
-     "Line up an AI specialist as co-lead and agree a one-paragraph statement of the research challenge.",
-     "If the partner or the research-office slot cannot be secured within a couple of days, let this one go rather than submit a rushed case."
+     "Ask the research office today about internal deadline and costing turnaround.",
+     "Confirm an AI or domain co-lead and a focused wave-structure challenge.",
+     "Draft the four-page Vision and Approach from your existing ML-waves material."
     ]
    },
    "analysed": {
-    "model": "claude (build-time review)",
+    "model": "claude-opus-5-5",
     "at": "2026-11-22",
-    "seeded": true
+    "seeded": false
    },
    "is_new": false
   },
@@ -1218,6 +1216,129 @@
    "is_new": false
   },
   {
+   "id": "scheme-onr-global",
+   "source": "scheme",
+   "title": "ONR Global research grants, Visiting Scientists Program and Collaborative Science Program",
+   "funder": "US Office of Naval Research Global",
+   "url": "https://www.onr.navy.mil/organization/onr-global/funding-opportunities",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "rolling",
+   "bucket": "rolling",
+   "opens": "2024-10-01",
+   "closes": "2026-12-31",
+   "closes_note": null,
+   "award": {},
+   "eu": null,
+   "history": [],
+   "last_round": {
+    "opened": null,
+    "closed": null,
+    "label": null
+   },
+   "analysis": {
+    "summary": "US Navy funding for non-US scientists: research grants, short visits to US naval labs, and support for workshops of naval interest.",
+    "topic_fit": {
+     "verdict": "strong",
+     "notes": "ONR backs ocean waves, extreme seas and ship–wave loading; fit depends on matching a naval programme."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "No seniority rules; programme officers routinely fund early-career international PIs with modest grants."
+    },
+    "eligibility": {
+     "verdict": "likely",
+     "notes": "International scientists are explicitly targeted; your university needs SAM, NCAGE and Grants.gov registration."
+    },
+    "fit_score": 74,
+    "fit_label": "strong",
+    "why_fit": "Naval interest in rogue waves, wave loads and ocean prediction matches your work and offers US collaboration.",
+    "concerns": "Grants need a programme officer's sponsorship; the current BAA closes 31 December 2026.",
+    "recommend": true,
+    "recommend_reason": "A light route to US funding and travel, aligned with your ocean-wave expertise.",
+    "focus": "domain",
+    "themes": [
+     "ocean",
+     "fluids",
+     "offshore-energy",
+     "ai-for-science",
+     "international"
+    ],
+    "opportunity_type": "project_grant",
+    "role": "lead",
+    "round": {
+     "status": "rolling",
+     "opens": "2024-10-01",
+     "closes": "2026-12-31",
+     "closes_time": null,
+     "stage": "White paper or programme-officer contact, then full proposal",
+     "other_dates": [],
+     "notes": "BAA N0001425SB001 closes 11:59 PM EST, which is 04:59 UK time on 1 January 2027."
+    },
+    "award_summary": {
+     "amount": null,
+     "duration": null
+    },
+    "requirements": [
+     {
+      "item": "Contact ONR Global science director",
+      "detail": "Discuss fit before submitting; typical — confirm in the guidance"
+     },
+     {
+      "item": "White paper",
+      "detail": "Short technical concept; typical — confirm in the BAA"
+     },
+     {
+      "item": "Institutional registrations",
+      "detail": "SAM, NCAGE code and Grants.gov account"
+     },
+     {
+      "item": "Technical proposal",
+      "detail": "Page limit set in the BAA; typical — confirm in the guidance"
+     },
+     {
+      "item": "Budget and justification",
+      "detail": "SF-424 forms; typical — confirm in the BAA"
+     },
+     {
+      "item": "Public abstract",
+      "detail": "One page, written for a lay audience"
+     }
+    ],
+    "effort": {
+     "level": "moderate",
+     "prep_time": "3-4 weeks part-time",
+     "person_days": "6-12",
+     "drivers": [
+      "US registrations (SAM, NCAGE)",
+      "Programme-officer engagement",
+      "Grants.gov forms and budget"
+     ],
+     "start_by": "2026-12-03"
+    },
+    "recurrence": {
+     "cadence": "rolling",
+     "typical_open_month": 10,
+     "typical_close_month": null,
+     "next_expected_open": null,
+     "next_expected_close": null,
+     "is_estimate": true,
+     "evidence": "ONR issues successive long-range BAAs, so a successor is expected after December 2026."
+    },
+    "next_steps": [
+     "Email the ONR Global London science director with a one-page wave-extremes concept.",
+     "Ask your research office to start SAM, NCAGE and Grants.gov registration now.",
+     "Use the Visiting Scientists Program to visit US naval hydrodynamics labs."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-22",
+    "seeded": false
+   },
+   "is_new": false
+  },
+  {
    "id": "ukri-122253",
    "source": "ukri",
    "title": "EPSRC working with overseas scientists: Nov 2023: responsive mode",
@@ -2108,144 +2229,132 @@
    "is_new": false
   },
   {
-   "id": "ukri-179370",
-   "source": "ukri",
-   "title": "Future Leaders Fellowships: round 11",
-   "funder": "UKRI",
-   "url": "https://www.ukri.org/opportunity/future-leaders-fellowship-round-11/",
-   "published": "2026-02-02",
+   "id": "scheme-leverhulme-philip-leverhulme-prizes",
+   "source": "scheme",
+   "title": "Philip Leverhulme Prizes",
+   "funder": "Leverhulme Trust",
+   "url": "https://www.leverhulme.ac.uk/philip-leverhulme-prizes",
+   "published": null,
    "first_seen": "2026-11-22",
-   "status": "closed",
+   "status": "upcoming",
    "bucket": "prepare",
-   "opens": "2026-02-02T09:00:00",
-   "closes": "2026-06-16T16:00:00",
+   "opens": null,
+   "closes": null,
    "closes_note": null,
-   "award": {
-    "total_fund": "£110,000,000"
-   },
+   "award": {},
    "eu": null,
-   "history": [
-    {
-     "title": "Future Leaders Fellowships: round 10",
-     "opens": "2025-02-03",
-     "closes": "2025-06-18",
-     "url": "https://www.ukri.org/opportunity/future-leaders-fellowships-round-10/"
-    }
-   ],
-   "last_round": null,
+   "history": [],
+   "last_round": {
+    "opened": null,
+    "closed": "2026-05-14",
+    "label": "2026 round"
+   },
    "analysis": {
-    "summary": "UKRI's flagship fellowship for researchers establishing independence, open to any topic, with four years of funding renewable to seven and no fixed cost limit. Round 11 closed on 16 June 2026; round 12 is not yet announced, but the last two rounds point to it opening around February 2027 and closing in mid-June.",
+    "summary": "£100,000 prize over 2–3 years for early-career UK researchers with international impact, nominated by head of department; subjects rotate.",
     "topic_fit": {
      "verdict": "open_call",
-     "notes": "Applications are welcome from across UKRI's whole remit, so you would propose your own programme on extreme ocean waves and scientific machine learning."
+     "notes": "Engineering, your natural panel, returns in 2028; the 2027 subjects suit you poorly."
     },
     "career_stage": {
      "verdict": "ideal",
-     "notes": "Built for early-career researchers establishing or transitioning to independence, which is where you are as a lecturer appointed in 2025. A permanent post is no barrier, but with a New Investigator Award and a group already you sit at the more established end of the range."
+     "notes": "Aimed at researchers within ten years of PhD; yours dates from 2022."
     },
     "eligibility": {
-     "verdict": "check",
-     "notes": "The scheme excludes anyone who has 'already achieved research or innovation independence', for example by securing funding aimed at this career stage, so check the person specification annex on whether your EPSRC New Investigator Award and existing group count. You must also win a place under Manchester's capped internal selection and would have to relinquish substantial commitments on other grants."
+     "verdict": "likely",
+     "notes": "Your permanent Manchester post qualifies; you need head-of-department nomination and to pass the internal cap of three."
     },
-    "fit_score": 78,
-    "fit_label": "strong",
-    "why_fit": "It is a very large award aimed squarely at your career stage: up to seven years of protected research time, your own team and a free choice of topic, enough to build an extreme-wave and digital-twin programme well beyond the scale of your New Investigator Award. The brief sets no years-since-PhD limit, so the uncertainty over your DPhil award date does not matter here.",
-    "concerns": "It is very competitive and a long haul: internal shortlisting under an institutional cap, at least three expert reviews with 10 working days to respond, then a shortlisting panel and an interview. Fellows are expected to spend essentially all their working time on the fellowship (up to six hours a week on other duties), so your department would have to release you from most teaching.",
+    "fit_score": 66,
+    "fit_label": "possible",
+    "why_fit": "It is a prestigious, flexible £100k award for exactly your career stage, with light nominee effort.",
+    "concerns": "There is no Engineering round until 2028, and nominating in 2027 would bar you from Engineering in 2028.",
     "recommend": true,
-    "recommend_reason": "An open-topic fellowship designed for researchers at your stage, with up to seven years of support; worth the major effort provided the independence rule and Manchester's internal selection go your way.",
+    "recommend_reason": "Target the 2028 Engineering round; build an international-impact record meanwhile.",
     "focus": "open",
     "themes": [
-     "any-discipline"
+     "any-discipline",
+     "fluids",
+     "ocean"
     ],
-    "opportunity_type": "fellowship",
+    "opportunity_type": "prize",
     "role": "lead",
     "round": {
-     "status": "closed",
-     "opens": "2026-02-02",
-     "closes": "2026-06-16",
-     "closes_time": "16:00",
-     "stage": "Full application (no outline stage), then expert review, shortlisting panel and interview",
-     "other_dates": [],
-     "notes": "These are the dates of round 11, which has closed. Applications per academic host were capped, so universities ran their own selection ahead of the UKRI deadline."
+     "status": "upcoming",
+     "opens": null,
+     "closes": null,
+     "closes_time": null,
+     "stage": "Nomination by head of department via the Trust's Grants Management System",
+     "other_dates": [
+      {
+       "label": "2026 round closed",
+       "date": "2026-05-14"
+      },
+      {
+       "label": "2026 referee deadline (unconfirmed)",
+       "date": "2026-06-01"
+      }
+     ],
+     "notes": "The 2027 dates are unconfirmed and 2027 has no Engineering subject; Engineering returns in 2028."
     },
     "award_summary": {
-     "amount": "No minimum or maximum; past fellowships have ranged from £300,000 to over £2 million (tell UKRI if above £1.4 million); UKRI pays 80% of full economic cost",
-     "duration": "Up to 7 years: 4 years at first, renewable for a further 3"
+     "amount": "£100,000",
+     "duration": "2–3 years"
     },
     "requirements": [
      {
-      "item": "Suitability check against the person specification",
-      "detail": "Read the person specification annex in the round guidance for academic-hosted applicants and be ready to justify that you are still establishing independence"
+      "item": "Manchester internal selection",
+      "detail": "Up to three nominees per subject; internal deadline usually early March"
      },
      {
-      "item": "Internal selection at Manchester",
-      "detail": "Applications per academic host are capped; tell the university you intend to apply and go through its internal shortlisting before the UKRI deadline"
+      "item": "Head of department nomination letter",
+      "detail": "Typical — confirm in the guidance"
      },
      {
-      "item": "Host organisation support",
-      "detail": "Manchester must commit to a rising share of your salary and confirm an open-ended independent position (which you already hold); limit not shown in the brief"
+      "item": "CV and publication list",
+      "detail": "Typical — confirm in the guidance"
      },
      {
-      "item": "Proposed work: vision and delivery",
-      "detail": "What you hope to achieve and how you will deliver it; word limit not shown in the brief, confirm in the round guidance"
+      "item": "Statement of achievements and plans",
+      "detail": "Typical — confirm in the guidance"
      },
      {
-      "item": "Applicant capability (R4RI)",
-      "detail": "1,650 words: 1,150 for Résumé for Research and Innovation modules including references, plus an optional 500 for Additions"
+      "item": "Referee nominations",
+      "detail": "Referees report after the closing date; number unconfirmed"
      },
      {
-      "item": "Career development and skills plan",
-      "detail": "Why a fellowship is the right vehicle and how you will use it to benefit others; a clear programme of skills development is essential; limit not shown in the brief"
-     },
-     {
-      "item": "Resources and cost justification",
-      "detail": "No cost limit, funded at 80% FEC with tapered salary support; email fellows@ukri.org if the total will exceed £1.4 million"
-     },
-     {
-      "item": "Ethics and responsible research and innovation",
-      "detail": "Implications and issues raised by the proposed work; limit not shown in the brief"
-     },
-     {
-      "item": "Summary and core team",
-      "detail": "550-word plain-English summary; list team members by role (fellow, research and innovation associate, technician and so on)"
-     },
-     {
-      "item": "Response to reviewers and interview",
-      "detail": "10 working days to respond to at least three expert reviews; shortlisted applicants are interviewed by an expert panel"
+      "item": "Grants Management System submission",
+      "detail": "Your institution approves and submits by the 16:00 deadline"
      }
     ],
     "effort": {
-     "level": "major",
-     "prep_time": "4-5 months part-time",
-     "person_days": "30-45",
+     "level": "moderate",
+     "prep_time": "2-3 weeks part-time",
+     "person_days": "5-10",
      "drivers": [
-      "4-5 months part-time, including internal selection",
-      "Internal shortlisting under an institutional cap",
-      "Full fellowship case with host commitment and costings",
-      "Reviewer response and panel interview"
+      "Internal competition for nomination slot",
+      "Evidencing international impact",
+      "Securing strong referees"
      ],
-     "start_by": "2027-01-01"
+     "start_by": "2027-04-03"
     },
     "recurrence": {
      "cadence": "annual",
-     "typical_open_month": 2,
-     "typical_close_month": 6,
-     "next_expected_open": "2027-02",
-     "next_expected_close": "2027-06",
+     "typical_open_month": 1,
+     "typical_close_month": 5,
+     "next_expected_open": "2027-01",
+     "next_expected_close": "2027-05",
      "is_estimate": true,
-     "evidence": "Round 10 ran from 3 February to 18 June 2025 and round 11 from 2 February to 16 June 2026, so round 12 is likely to open in early February 2027 and close in mid-June 2027. UKRI has not announced it in this listing."
+     "evidence": "The 2022, 2025 and 2026 rounds closed mid-May; Engineering is next in the 2028 round."
     },
     "next_steps": [
-     "Ask Manchester's research office now for the internal selection timetable and cap for the next round, because internal deadlines fall well before UKRI's.",
-     "Read the person specification annex in the round 11 guidance and get a view on whether your New Investigator Award and existing group count as having already achieved independence.",
-     "Sketch a four-year programme (with a three-year extension) that is clearly bigger than and distinct from your New Investigator Award, and discuss salary taper and teaching release with your head of department.",
-     "Watch for the round 12 announcement, expected around February 2027."
+     "Skip 2027 to keep your one nomination for Engineering in 2028.",
+     "Ask Manchester's research office about the 2028 internal selection timetable.",
+     "Build international-impact evidence: invited keynotes, prizes and overseas collaborations."
     ]
    },
    "analysed": {
-    "model": "claude (build-time review)",
+    "model": "claude-opus-5-5",
     "at": "2026-11-22",
-    "seeded": true
+    "seeded": false
    },
    "is_new": false
   },
@@ -2378,147 +2487,6 @@
      "next_expected_close": "2027-06",
      "is_estimate": true,
      "evidence": "Scheme page: 'There are multiple calls for applications open each year'. 2026 Global Round 2 opened 9 April and closed 4 June 2026; Round 3 opened 30 July and closed 24 September 2026. No 2027 International Exchanges dates were on the Royal Society application-dates page on 22 November 2026; the round numbering implies an earlier Round 1 each year whose dates were not shown, so a round could open before April."
-    }
-   },
-   "analysed": {
-    "model": "claude (build-time review)",
-    "at": "2026-11-22",
-    "seeded": true
-   },
-   "is_new": false
-  },
-  {
-   "id": "scheme-raeng-research-fellowships",
-   "source": "scheme",
-   "title": "Research Fellowships",
-   "funder": "Royal Academy of Engineering",
-   "url": "https://raeng.org.uk/programmes-and-prizes/programmes/uk-grants-and-prizes/support-for-research/research-fellowships/",
-   "published": null,
-   "first_seen": "2026-11-22",
-   "status": "closed",
-   "bucket": "prepare",
-   "opens": null,
-   "closes": null,
-   "closes_note": null,
-   "award": {},
-   "eu": null,
-   "history": [],
-   "last_round": {
-    "opened": null,
-    "closed": "2026-06-25",
-    "label": "2026/27 round - Expression of Interest stage"
-   },
-   "analysis": {
-    "summary": "Five-year fellowship for early-career engineering researchers: up to £800,000 from the Academy (projects costed up to £1 million at 80% fEC), protected research time and mentoring from an Academy Fellow.",
-    "fit_score": 76,
-    "fit_label": "strong",
-    "why_fit": "Engineering-only and aimed at people a few years past their PhD building an independent programme - a natural home for extreme-wave, offshore wind loading and digital-twin research; holding a permanent post is no longer a bar.",
-    "concerns": "Eligibility hinges on your PhD award date (no more than four years before the Expression of Interest deadline; the extra six months applied to 2026/27 only), and each university may submit only two Expressions of Interest (up to four under positive action), so you must win an internal selection.",
-    "focus": "open",
-    "themes": [
-     "fluids",
-     "offshore-energy",
-     "infrastructure"
-    ],
-    "opportunity_type": "fellowship",
-    "role": "lead",
-    "eligibility": {
-     "verdict": "check",
-     "notes": "PhD must have been awarded no more than four years before the Expression of Interest deadline (the 2026/27 cut-off was 25 December 2021 because of a one-off six-month margin); career breaks are taken into account. Your DPhil award date is not confirmed - with a deadline around June 2027 and a strict four-year window, a PhD awarded before about June 2023 would be too early. The former rule excluding holders of permanent academic posts has been removed. The host must be a UK university or eligible research organisation, capped at two applications (four where candidates from under-represented groups are included)."
-    },
-    "award_summary": {
-     "amount": "Up to £800,000 Academy contribution (project costed up to £1 million, funded at 80% fEC), covering salary, experimental costs, equipment, travel and engagement",
-     "duration": "5 years full-time (pro rata if part-time, minimum 50%)"
-    },
-    "requirements": [
-     {
-      "item": "PhD date check",
-      "detail": "Confirm the DPhil award date against the four-year limit first; extenuating circumstances statement max 200 words."
-     },
-     {
-      "item": "Internal university selection",
-      "detail": "Host limit of two Expressions of Interest (up to four under the positive-action route)."
-     },
-     {
-      "item": "Expression of Interest - project details",
-      "detail": "Title (15 words), summary (250 words), engineering research vision (500 words), up to 10 keywords, external collaborators (50 words). The guidance estimates about four hours to complete the form."
-     },
-     {
-      "item": "Expression of Interest - statements",
-      "detail": "Motivation, profile and fit (500 words); engineering contribution (200); choice of host institution (150); collaborations (200); diversity, inclusion and research culture (200). No costings at this stage."
-     },
-     {
-      "item": "Host institution declaration letter",
-      "detail": "From the research support office; confirms the application limit has been respected and that the fellow will get the support normal for a permanent employee."
-     },
-     {
-      "item": "Invited full application (stage 2)",
-      "detail": "Detailed proposal with cost breakdown and collaborator letters of support; assessed by three expert reviewers."
-     },
-     {
-      "item": "Interview",
-      "detail": "30 minutes with a panel of four Academy Fellows, including a five-minute presentation."
-     }
-    ],
-    "effort": {
-     "level": "major",
-     "prep_time": "2-3 weeks, then 5-6 weeks",
-     "person_days": "20-35",
-     "drivers": [
-      "University internal selection before the Expression of Interest",
-      "Two-stage application with full costing at stage 2",
-      "Collaborator letters of support",
-      "Panel interview",
-      "Internal selection and Expression of Interest: 2-3 weeks; invited full application: 5-6 weeks; then interview preparation (working days cover all stages)"
-     ],
-     "start_by": "2027-03-01"
-    },
-    "next_steps": [
-     "Confirm your DPhil award date and test it against the four-year rule; email the Academy's research programmes team if it is borderline.",
-     "Ask Manchester's research office now about the internal selection process and dates for the 2027/28 round.",
-     "Draft the 500-word engineering research vision and line up an industry or international collaborator.",
-     "Watch the scheme page for the 2027/28 guidance, expected around May 2027."
-    ],
-    "career_stage": {
-     "verdict": "ideal",
-     "notes": "Built for early-career engineering researchers a few years after their PhD, and permanent lecturers are now allowed - provided your PhD date is inside the window."
-    },
-    "recommend": true,
-    "recommend_reason": "The best-matched engineering fellowship for your field and stage, provided your PhD date falls inside the four-year window and you clear Manchester's internal selection.",
-    "topic_fit": {
-     "verdict": "open_call",
-     "notes": "Engineering-only and aimed at people a few years past their PhD building an independent programme - a natural home for extreme-wave, offshore wind loading and digital-twin research; holding a permanent post is no longer a bar."
-    },
-    "round": {
-     "status": "closed",
-     "opens": null,
-     "closes": null,
-     "closes_time": null,
-     "stage": "Expression of Interest (stage 1 of 2, then interview)",
-     "other_dates": [
-      {
-       "label": "2026/27 invited full applications due (invited applicants only)",
-       "date": "2026-12-10"
-      },
-      {
-       "label": "2026/27 interviews",
-       "date": "May 2027"
-      },
-      {
-       "label": "2026/27 fellowships start",
-       "date": "1 August - 31 October 2027"
-      }
-     ],
-     "notes": "2027/28 dates are not published. Because of the two-application cap, Manchester will need to select internally before the Expression of Interest deadline - ask the research office for its timetable. The 2026/27 Expression of Interest closed at 5pm BST."
-    },
-    "recurrence": {
-     "cadence": "annual",
-     "typical_open_month": 5,
-     "typical_close_month": 6,
-     "next_expected_open": "2027-05",
-     "next_expected_close": "2027-06",
-     "is_estimate": true,
-     "evidence": "2026/27 guidance: 'There is one round of applications each year'; the Expression of Interest system opened in May 2026 and closed at 5pm BST on 25 June 2026, with invited applications due at 5pm GMT on 10 December 2026 and interviews in May 2027. 2027/28 dates are not yet published."
     }
    },
    "analysed": {
@@ -3219,18 +3187,6 @@
    "fit_score": 66
   },
   {
-   "id": "scheme-onr-global",
-   "source": "scheme",
-   "title": "ONR Global research grants, Visiting Scientists Program and Collaborative Science Program",
-   "funder": "US Office of Naval Research Global",
-   "url": "https://www.onr.navy.mil/organization/onr-global/funding-opportunities",
-   "published": null,
-   "first_seen": "2026-11-22",
-   "status": "rolling",
-   "reason": "Relevant in topic but relationship-driven and administratively heavy; worth a short exploratory email, not a proposal, at this stage.",
-   "fit_score": 64
-  },
-  {
    "id": "scheme-royal-society-newton-international",
    "source": "scheme",
    "title": "Newton International Fellowships",
@@ -3240,18 +3196,6 @@
    "first_seen": "2026-11-22",
    "status": "upcoming",
    "reason": "With a 3% success rate and a one-candidate-per-sponsor limit it is worth your time only for a truly outstanding overseas candidate; MSCA and Leverhulme are better hosting bets.",
-   "fit_score": 62
-  },
-  {
-   "id": "scheme-lrf-grant-funding",
-   "source": "scheme",
-   "title": "Grant funding (invited applications and themed calls)",
-   "funder": "Lloyd's Register Foundation",
-   "url": "https://www.lrfoundation.org.uk/partnerships-and-funding/grant-funding",
-   "published": null,
-   "first_seen": "2026-11-22",
-   "status": "rolling",
-   "reason": "No open research call in your area; worth monitoring and a short idea pitch, not an application effort now.",
    "fit_score": 62
   },
   {
@@ -3339,18 +3283,6 @@
    "fit_score": 55
   },
   {
-   "id": "scheme-ice-rd-enabling-fund",
-   "source": "scheme",
-   "title": "ICE Research and Development Enabling Fund",
-   "funder": "Institution of Civil Engineers",
-   "url": "https://www.ice.org.uk/get-involved/awards-and-grants/research-and-development-enabling-fund",
-   "published": null,
-   "first_seen": "2026-11-22",
-   "status": "open",
-   "reason": "Practice-oriented, small and unverified in detail; only worth it if the confirmed theme matches a ready-made idea.",
-   "fit_score": 55
-  },
-  {
    "id": "scheme-royal-commission-1851-research-fellowships",
    "source": "scheme",
    "title": "1851 Research Fellowships",
@@ -3360,6 +3292,18 @@
    "first_seen": "2026-11-22",
    "status": "open",
    "reason": "A 2-3% success rate and a strong independence requirement make this worthwhile only for an exceptional candidate who approaches you.",
+   "fit_score": 55
+  },
+  {
+   "id": "scheme-british-council-ispf-research-collaborations",
+   "source": "scheme",
+   "title": "ISPF Research Collaboration Grants",
+   "funder": "British Council (International Science Partnerships Fund)",
+   "url": "https://opportunities-insight.britishcouncil.org/short-articles/opportunities/ispf-research-collaboration-grants-2025",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "closed",
+   "reason": "The round is closed and recurrence is unconfirmed, so it is worth watching rather than acting on.",
    "fit_score": 55
   },
   {
@@ -3411,27 +3355,27 @@
    "fit_score": 50
   },
   {
-   "id": "scheme-aria-opportunity-seeds",
+   "id": "scheme-lrf-grant-funding",
    "source": "scheme",
-   "title": "ARIA opportunity seeds",
-   "funder": "Advanced Research and Invention Agency (ARIA)",
-   "url": "https://www.aria.org.uk/funding-opportunities",
+   "title": "Grant funding (invited applications and themed calls)",
+   "funder": "Lloyd's Register Foundation",
+   "url": "https://www.lrfoundation.org.uk/partnerships-and-funding/grant-funding",
    "published": null,
    "first_seen": "2026-11-22",
-   "status": "closed",
-   "reason": "No seed call is open and none of ARIA's current spaces targets your field; keep on watch only.",
+   "status": "unknown",
+   "reason": "There is no actionable round; watch the Calls for Funding page for specific maritime or networking calls instead.",
    "fit_score": 50
   },
   {
-   "id": "scheme-british-council-ispf-research-collaborations",
+   "id": "scheme-ice-rd-enabling-fund",
    "source": "scheme",
-   "title": "ISPF Research Collaboration Grants",
-   "funder": "British Council (International Science Partnerships Fund)",
-   "url": "https://opportunities-insight.britishcouncil.org/short-articles/opportunities/ispf-research-collaboration-grants-2025",
+   "title": "ICE Research and Development Enabling Fund",
+   "funder": "Institution of Civil Engineers",
+   "url": "https://www.ice.org.uk/get-involved/awards-and-grants/research-and-development-enabling-fund",
    "published": null,
    "first_seen": "2026-11-22",
-   "status": "closed",
-   "reason": "No open call, and country lists that may not match your partners; simply monitor.",
+   "status": "open",
+   "reason": "Topic: Civil engineering themes unknown; offshore foundations or coastal resilience might fit.",
    "fit_score": 50
   },
   {
@@ -3459,6 +3403,18 @@
    "fit_score": 48
   },
   {
+   "id": "scheme-raeng-industrial-fellowships",
+   "source": "scheme",
+   "title": "Industrial Fellowships",
+   "funder": "Royal Academy of Engineering",
+   "url": "https://raeng.org.uk/industrial-fellowships",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "closed",
+   "reason": "It is paused, aimed at mid-career staff and poorly timed for a newly appointed lecturer.",
+   "fit_score": 48
+  },
+  {
    "id": "scheme-leverhulme-research-fellowships",
    "source": "scheme",
    "title": "Research Fellowships",
@@ -3483,15 +3439,15 @@
    "fit_score": 46
   },
   {
-   "id": "scheme-raeng-industrial-fellowships",
-   "source": "scheme",
-   "title": "Industrial Fellowships",
-   "funder": "Royal Academy of Engineering",
-   "url": "https://raeng.org.uk/industrial-fellowships",
-   "published": null,
+   "id": "ukri-179370",
+   "source": "ukri",
+   "title": "Future Leaders Fellowships: round 11",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/future-leaders-fellowship-round-11/",
+   "published": "2026-02-02",
    "first_seen": "2026-11-22",
    "status": "closed",
-   "reason": "Paused with no reopening date and pitched at mid-career staff.",
+   "reason": "Your existing New Investigator Award likely makes you ineligible; major effort for a doubtful case.",
    "fit_score": 45
   },
   {
@@ -3519,6 +3475,18 @@
    "fit_score": 45
   },
   {
+   "id": "scheme-british-council-ispf-early-career-fellowships",
+   "source": "scheme",
+   "title": "ISPF Early Career Fellowships 2026",
+   "funder": "British Council (International Science Partnerships Fund)",
+   "url": "https://opportunities-insight.britishcouncil.org/short-articles/opportunities/ispf-early-career-fellowships-2026",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "open",
+   "reason": "Topic: The AI strand targets public-sector policy challenges; coastal forecasting could fit, but this is not its focus.",
+   "fit_score": 45
+  },
+  {
    "id": "ukri-178467",
    "source": "ukri",
    "title": "AIRR compute opportunity: AI for Science",
@@ -3531,16 +3499,28 @@
    "fit_score": 42
   },
   {
-   "id": "scheme-leverhulme-philip-leverhulme-prizes",
+   "id": "ukri-157246",
+   "source": "ukri",
+   "title": "Proof of concept",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/proof-of-concept/",
+   "published": "2025-03-12",
+   "first_seen": "2026-11-22",
+   "status": "closed",
+   "reason": "Topic: Any discipline, but commercialisation only; your wave-prediction or loading tools would need a market case.",
+   "fit_score": 40
+  },
+  {
+   "id": "scheme-aria-opportunity-seeds",
    "source": "scheme",
-   "title": "Philip Leverhulme Prizes",
-   "funder": "Leverhulme Trust",
-   "url": "https://www.leverhulme.ac.uk/philip-leverhulme-prizes",
+   "title": "ARIA opportunity seeds",
+   "funder": "Advanced Research and Invention Agency (ARIA)",
+   "url": "https://www.aria.org.uk/funding-opportunities",
    "published": null,
    "first_seen": "2026-11-22",
    "status": "closed",
-   "reason": "Engineering is not offered until 2028 and you would be a junior nominee for a track-record prize.",
-   "fit_score": 40
+   "reason": "Topic: Seeds sit within ARIA opportunity spaces; none currently centres on ocean waves or offshore engineering.",
+   "fit_score": 38
   },
   {
    "id": "ukri-193290",
@@ -3551,8 +3531,8 @@
    "published": "2026-05-28",
    "first_seen": "2026-11-22",
    "status": "closed",
-   "reason": "On topic but business-led and closed, with no further round indicated; a university cannot lead, so it is something to join only if an offshore-wind company invites you into a future bid.",
-   "fit_score": 38
+   "reason": "Business-led competition where a university is a minor partner, and the round has closed.",
+   "fit_score": 35
   },
   {
    "id": "ukri-207677",
@@ -3567,28 +3547,16 @@
    "fit_score": 30
   },
   {
-   "id": "ukri-157246",
-   "source": "ukri",
-   "title": "Proof of concept",
-   "funder": "UKRI",
-   "url": "https://www.ukri.org/opportunity/proof-of-concept/",
-   "published": "2025-03-12",
-   "first_seen": "2026-11-22",
-   "status": "closed",
-   "reason": "Closed since May 2025 with no further round indicated, and it funds commercialisation rather than the research grants, fellowships or collaboration awards you asked for.",
-   "fit_score": 30
-  },
-  {
-   "id": "scheme-british-council-ispf-early-career-fellowships",
+   "id": "scheme-raeng-research-fellowships",
    "source": "scheme",
-   "title": "ISPF Early Career Fellowships 2026",
-   "funder": "British Council (International Science Partnerships Fund)",
-   "url": "https://opportunities-insight.britishcouncil.org/short-articles/opportunities/ispf-early-career-fellowships-2026",
+   "title": "Research Fellowships",
+   "funder": "Royal Academy of Engineering",
+   "url": "https://raeng.org.uk/programmes-and-prizes/programmes/uk-grants-and-prizes/support-for-research/research-fellowships/",
    "published": null,
    "first_seen": "2026-11-22",
-   "status": "open",
-   "reason": "Both strands sit outside your research and the deadline is nine days away.",
-   "fit_score": 25
+   "status": "closed",
+   "reason": "Not eligible: The 2026 EoI has closed; the 2027 cut-off (about Dec 2022) likely excludes your 2022 PhD.",
+   "fit_score": 30
   },
   {
    "id": "scheme-royal-society-urf",
@@ -3608,43 +3576,43 @@
   "ukri": {
    "ok": true,
    "count": 137,
-   "checked": "2026-11-22T17:37:46Z",
-   "last_success": "2026-11-22T17:37:46Z"
+   "checked": "2026-11-22T20:10:17Z",
+   "last_success": "2026-11-22T20:10:17Z"
   },
   "ukri_archive": {
    "ok": true,
    "count": 10,
-   "checked": "2026-11-22T17:37:46Z",
-   "last_success": "2026-11-22T17:37:46Z"
+   "checked": "2026-11-22T20:10:17Z",
+   "last_success": "2026-11-22T20:10:17Z"
   },
   "eu": {
    "ok": true,
    "count": 87,
-   "checked": "2026-11-22T17:37:46Z",
-   "last_success": "2026-11-22T17:37:46Z"
+   "checked": "2026-11-22T20:10:17Z",
+   "last_success": "2026-11-22T20:10:17Z"
   },
   "schemes": {
    "ok": true,
    "count": 31,
-   "checked": "2026-11-22T17:37:46Z"
+   "checked": "2026-11-22T20:10:17Z"
   }
  },
  "ai": {
-  "enabled": false,
-  "key_present": false,
+  "enabled": true,
+  "key_present": true,
   "model": "claude-opus-5-5",
-  "calls_this_run": 0,
-  "estimated_cost_usd": 0.0,
+  "calls_this_run": 18,
+  "estimated_cost_usd": 1.6,
   "usage": {
-   "input_tokens": 0,
-   "output_tokens": 0,
-   "cache_read_input_tokens": 0,
-   "cache_creation_input_tokens": 0,
-   "web_searches": 0
+   "input_tokens": 35017,
+   "output_tokens": 38871,
+   "cache_read_input_tokens": 622520,
+   "cache_creation_input_tokens": 68678,
+   "web_searches": 9
   },
   "errors": [],
-  "last_ai_run": null,
-  "total_calls": 0,
-  "total_cost_usd": 0.0
+  "last_ai_run": "2026-11-22T20:10:17Z",
+  "total_calls": 18,
+  "total_cost_usd": 1.6
  }
 }
