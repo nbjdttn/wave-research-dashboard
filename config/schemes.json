@@ -1,5 +1,6 @@
 {
- "_about": "Recurring funder schemes without a machine-readable feed. The daily job re-reads each page and asks Claude to refresh the round dates. Add or remove entries freely. \"sector\": \"industry\" marks money from industry or industry-led bodies, and schemes run with industry; they appear under the Industry-led filter on Funding.",
+ "_about": "Recurring funder schemes without a machine-readable feed. The daily job re-reads each page and asks Claude to refresh the round dates. Add or remove entries freely. \"sector\": \"industry\" marks money from industry or industry-led bodies, and schemes run with industry; they appear under the Industry-led filter on Funding. \"industry_match\" (a regular expression on funder and title) marks calls from the funder listings the same way.",
+ "industry_match": "Knowledge Transfer Partnership|Innovate UK|Prosperity Partnership|industrial CASE|Industr(y|ial) Fellowship|Carbon Trust|Lloyd's Register|EMEC|Catapult|joint industry",
  "schemes": [
   {
    "slug": "royal-society-urf",
@@ -64,7 +65,7 @@
    "title": "Industrial Fellowships",
    "funder": "Royal Academy of Engineering",
    "url": "https://raeng.org.uk/industrial-fellowships",
-   "note": null,
+   "note": "Paused for a review; expected to resume in 2026/27, but no round is announced. Funds academics' secondments into industry, or industry staff into universities, for six months to two years: up to £50,000 a year towards salary, at most £100,000 (last published terms).",
    "sector": "industry"
   },
   {
@@ -222,6 +223,62 @@
    "funder": "Engineering and Physical Sciences Research Council (UKRI)",
    "url": "https://www.ukri.org/opportunity/epsrc-standard-research-grant-nov-2023-responsive-mode/",
    "note": "Always open; applications are batched and sent to quarterly responsive-mode panels (Engineering, ICT, Mathematical Sciences, Physical Sciences)"
+  },
+  {
+   "slug": "carbon-trust-offshore-wind-tenders",
+   "title": "Offshore Wind Accelerator and Floating Wind JIP tenders",
+   "funder": "Carbon Trust",
+   "url": "https://www.carbontrust.com/news-and-insights/tenders",
+   "note": "Paid research tenders and innovation competitions funded by offshore wind developers, issued through the year and open a few weeks each; academics, companies and consortia can bid. Recent: Design Gusts study (closed 14 September 2026) and floating substructure freeboard study (closed 6 March 2026). Budgets are set per tender.",
+   "sector": "industry"
+  },
+  {
+   "slug": "emec-offshore-wind-ri-calls",
+   "title": "Offshore Wind Research and Innovation Programme: innovation calls",
+   "funder": "European Marine Energy Centre (EMEC)",
+   "url": "https://offshoreinnovation.scot/innovation-calls",
+   "note": "Occasional calls sponsored by West of Orkney Windfarm, with Crown Estate Scotland: up to £300,000 per project for up to two years; companies, research institutions and consortia may apply. Call 2 closed 9 April 2025; no later call published. Challenge areas include metocean and site conditions, foundations and weather prediction.",
+   "sector": "industry"
+  },
+  {
+   "slug": "royal-commission-1851-industrial-fellowships",
+   "title": "Industrial Fellowships",
+   "funder": "Royal Commission for the Exhibition of 1851",
+   "url": "https://royalcommission1851.org/fellowships/industrial-fellowships",
+   "note": "Annual; the 2027 round closes 10 February 2027 at 12 noon GMT. A graduate employed by a UK company applies for a PhD or EngD with a university supervisor: 50% of salary up to £30,000 a year, fees and £3,500 a year for travel, for up to three years.",
+   "sector": "industry"
+  },
+  {
+   "slug": "raeng-research-chairs-senior-research-fellowships",
+   "title": "Research Chairs and Senior Research Fellowships",
+   "funder": "Royal Academy of Engineering",
+   "url": "https://raeng.org.uk/programmes-and-prizes/programmes/uk-grants-and-prizes/support-for-research/research-chairs-and-senior-research-fellowships",
+   "note": "Annual from 2026; the 2026 round closed 26 March 2026 and 2027 dates are not published. An industrial sponsor co-funds five years of research; Senior Research Fellowships are for lecturers or readers with a grant record.",
+   "sector": "industry"
+  },
+  {
+   "slug": "lloyds-of-london-foundation-research-grant",
+   "title": "Lloyd's of London Foundation Research Grant",
+   "funder": "Lloyd's of London Foundation",
+   "url": "https://www.lloyds.com/2026-grant-guidelines-and-criteria",
+   "note": "Annual; the 2026 round has closed (end of August or early September 2026) and the guidelines mention a single grant for 2027. About £100,000 for one year, or £50,000 a year for two, for university research on risk, especially climate adaptation, with non-academic partners involved.",
+   "sector": "industry"
+  },
+  {
+   "slug": "catapult-researcher-in-residence",
+   "title": "Researcher in Residence Sprint",
+   "funder": "Innovation Launchpad Network+ with the Catapult Network",
+   "url": "https://innovationlaunchpad.group.shef.ac.uk/rirsprint/",
+   "note": "Runs in tranches; the 2026 Sprint closed 31 August 2026 (placements 1 October 2026 to 28 February 2027) and no next tranche is announced. £25,000 to £50,000 of researcher costs for a placement with a host Catapult, such as the Offshore Renewable Energy Catapult.",
+   "sector": "industry"
+  },
+  {
+   "slug": "istructe-research-award",
+   "title": "Research Award",
+   "funder": "Institution of Structural Engineers",
+   "url": "https://www.istructe.org/training-and-development/apply-for-grants/research-award/",
+   "note": "Every two years; closed now, next opening April 2028. £6,000 for a joint academic and industry project signed by both partners; membership is not required.",
+   "sector": "industry"
   }
  ]
 }

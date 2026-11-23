@@ -377,8 +377,9 @@ class Claude:
                 "pass both tests — topic (core, strong or open to their discipline) and career stage — and they could "
                 "plausibly apply, co-lead, partner or host. Closed calls are included so that recurring schemes can "
                 "be prepared for in advance: keep a closed call only if it looks like a repeating scheme that would "
-                "suit them next time. Drop medical, biological, social-science, arts, business-only, invite-only and "
-                "purely AI/ML calls. Give a reason of at most 12 words. Return a decision for every id.\n\n"
+                "suit them next time. Drop medical, biological, social-science, arts, invite-only and purely AI/ML calls, "
+                "and calls only businesses can enter; keep a business-led call on a fitting topic when a university can "
+                "be a funded partner. Give a reason of at most 12 words. Return a decision for every id.\n\n"
                 + "\n".join(lines))
             data = self._json(self._request(user=user, schema=TRIAGE_SCHEMA, effort="low", max_tokens=12000))
             for d in (data or {}).get("decisions", []):

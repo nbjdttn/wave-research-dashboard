@@ -313,7 +313,7 @@ def add_odds(selected: list[dict]) -> None:
         hit = None
         for r in rates:
             m = r.get("match") or {}
-            if o["id"] in (m.get("ids") or []) or (
+            if o["id"] in (m.get("ids") or []) or (m.get("id") and re.search(m["id"], o["id"])) or (
                     m.get("title") and re.search(m["title"], o["title"], re.I)
                     and re.search(m.get("funder") or ".", o["funder"], re.I)):
                 hit = r
@@ -328,10 +328,14 @@ def add_odds(selected: list[dict]) -> None:
 
 def add_sector(selected: list[dict]) -> None:
     """Mark the calls whose money comes from industry, or that are run with industry, as the watch-list says."""
-    by_id = {f"scheme-{sc['slug']}": sc.get("sector") for sc in (read_json(CONFIG / "schemes.json", {}) or {}).get("schemes", [])}
+    watch = read_json(CONFIG / "schemes.json", {}) or {}
+    by_id = {f"scheme-{sc['slug']}": sc.get("sector") for sc in watch.get("schemes", [])}
+    rule = re.compile(watch["industry_match"], re.I) if watch.get("industry_match") else None
     for o in selected:
         if by_id.get(o["id"]):
             o["sector"] = by_id[o["id"]]
+        elif rule and not o["id"].startswith("scheme-") and rule.search(f"{o['funder']} {o['title']}"):
+            o["sector"] = "industry"
         else:
             o.pop("sector", None)
 

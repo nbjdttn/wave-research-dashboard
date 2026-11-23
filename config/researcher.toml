@@ -62,11 +62,12 @@ priorities = [
   "Co-investigator or partner roles in larger consortia where ocean/fluids expertise is needed",
   "Funding for spectral wave modelling, wave forecasting and nonlinear wave-interaction research (a growing part of my work)",
   "NERC schemes where ocean waves fit: physical oceanography, wave and ocean modelling, forecasting, air-sea interaction",
+  "Money from industry and industry-led programmes, as lead or as the funded academic partner: Knowledge Transfer Partnerships, Innovate UK competitions where a university is a funded partner, joint-industry and developer programmes (e.g. Carbon Trust Offshore Wind Accelerator tenders, EMEC's offshore wind R&I calls), industry-funded charities (e.g. Lloyd's Register Foundation) and industry fellowships",
 ]
 not_wanted = [
   "Calls that are purely about core AI/ML research with no physical-science or engineering application",
   "Awards aimed at established professors or large centres that I could not credibly lead yet",
-  "Business-led innovation competitions where a university can only be a minor subcontractor",
+  "Competitions only businesses can enter, where a university cannot be a funded partner",
   "Medical, biological, social-science or arts-and-humanities calls",
   "Schemes I already hold or cannot hold twice (e.g. EPSRC New Investigator Award)",
 ]

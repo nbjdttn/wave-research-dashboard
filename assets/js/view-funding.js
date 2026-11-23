@@ -58,7 +58,7 @@ export function renderFunding(root, D, ctx, sub) {
     const scanned = c.scanned ? c.scanned.ukri_open + c.scanned.ukri_past + c.scanned.eu + c.scanned.schemes : 0;
     const chip = (key, value, label) => `<button class="chip" type="button" data-set="${key}" data-val="${value}" aria-pressed="${state[key] === value}">${label}</button>`;
     const marks = all.filter((o) => o.bucket !== 'rolling' && nextDate(o)).map((o) => ({
-      id: o.id, title: o.title, date: nextDate(o), kind: o.bucket === 'deadline' ? 'deadline' : 'expected',
+      id: o.id, title: o.title, date: nextDate(o), kind: o.bucket === 'deadline' ? 'deadline' : 'expected', money: moneyOf(o).headline,
       status: o.bucket === 'deadline' ? dueClass(daysTo(o.closes)) : null }));
 
     root.innerHTML = `

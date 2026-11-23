@@ -26,7 +26,8 @@ static site with no build step, published by GitHub Pages from the branch
 | Where | What |
 | --- | --- |
 | `config/researcher.toml` | Profile, career stage, interests, thresholds |
-| `config/schemes.json` | Watch-list of recurring funder schemes that have no feed |
+| `config/schemes.json` | Watch-list of recurring funder schemes that have no feed; `"sector": "industry"` marks industry money |
+| `config/success_rates.json` | Published success rates shown on the funding cards, each with its source |
 | `scripts/update.py`, `scripts/wave/` | The pipeline: `profile`, `citations`, `papers`, `grants`, `alerts` |
 | `scripts/seed_tools.py` | Review funding calls by hand (no API key) and import the answers |
 | `data/*.json`, `data/cache/` | Generated data and the pipeline's memory |
@@ -50,8 +51,12 @@ fails, skip it and say so.
    for opportunities the feeds miss or have out of date: funders without feeds (Royal Society,
    Leverhulme, Royal Academy of Engineering, ICE, Lloyd's Register Foundation, ONR Global, ARIA,
    Supergen ORE, ERC and MSCA work programmes, bilateral and travel schemes), NERC schemes and
-   highlight topics, and the wave-forecasting world (Met Office, ECMWF, Copernicus Marine / Mercator
-   Ocean, National Oceanography Centre, ESA, EUMETSAT); new calls on waves, spectral wave modelling
+   highlight topics, the wave-forecasting world (Met Office, ECMWF, Copernicus Marine / Mercator
+   Ocean, National Oceanography Centre, ESA, EUMETSAT), and industry money (developer programmes such
+   as the Carbon Trust Offshore Wind Accelerator and Floating Wind JIP tenders, EMEC's offshore wind R&I
+   calls, Catapult placements, Knowledge Transfer Partnerships, Innovate UK competitions where a
+   university is a funded partner, the Lloyd's of London Foundation and Lloyd's Register Foundation);
+   new calls on waves, spectral wave modelling
    and forecasting, nonlinear wave interactions, offshore and marine energy, coastal and ocean
    engineering, fluid mechanics, digital twins and scientific machine learning, and pages the script could not read (listed under `sources` and in
    the Action log). Keep only what passes **both** tests in `scripts/wave/claude.py`: research topic
@@ -61,7 +66,11 @@ fails, skip it and say so.
      catalogue format `seed_tools.py import-schemes` reads (see that function for the fields: `slug`,
      `title`, `funder`, `url`, `status`, `opens`, `closes`, `typical_cycle`, `recurrence`, `analysis`,
      `source_urls`), import it, then run `python scripts/update.py grants` to rebuild the page data.
-     Never invent a date; leave it empty and say what to check.
+     Never invent a date; leave it empty and say what to check. Give industry money `"sector": "industry"`.
+   - Money and odds: every card leads with what one award brings and a rough success rate. When a
+     selected call has no rate in `config/success_rates.json`, look for the funder's own published
+     figures (applications against awards, with the period) and add an entry with its source. Never
+     estimate one; without a published figure the card says so.
 3. **Papers.** From the new items in `data/papers.json`, pick at most two worth the owner's time
    today; one line each on what the paper did and found.
 4. **Record.** Run `python scripts/update.py profile citations`. Google Scholar often refuses

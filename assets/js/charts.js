@@ -231,7 +231,7 @@ export function timeline(el, { items, onPick }) {
         const level = placed.filter((p) => Math.abs(p.x - xx) < 13).length;
         placed.push({ x: xx });
         const cy = axisY - 9 - level * 13;
-        const lbl = `${it.title} — ${it.kind === 'expected' ? 'expected around ' : ''}${fmtDate(it.date, { year: true })}`;
+        const lbl = `${it.title}${it.money ? `, ${it.money}` : ''} — ${it.kind === 'expected' ? 'expected around ' : ''}${fmtDate(it.date, { year: true })}`;
         s += `<g class="col" tabindex="0" role="button" data-i="${esc(it.id)}" data-top="${cy - 8}" aria-label="${esc(lbl)}">`;
         s += `<circle class="hit" cx="${xx}" cy="${cy}" r="12"/>`;
         s += it.kind === 'expected'
@@ -244,7 +244,7 @@ export function timeline(el, { items, onPick }) {
     const byId = Object.fromEntries(items.map((it) => [it.id, it]));
     el.querySelectorAll('g.col').forEach((g) => {
       const it = byId[g.dataset.i];
-      const show = () => { const r = g.getBoundingClientRect(); showTip(`<b>${esc(it.title)}</b>${it.kind === 'expected' ? 'Expected around ' : 'Closes '}${fmtDate(it.date, { year: true })}`, r.left + r.width / 2, r.top); };
+      const show = () => { const r = g.getBoundingClientRect(); showTip(`<b>${esc(it.title)}</b>${it.money ? `${esc(it.money)} · ` : ''}${it.kind === 'expected' ? 'expected around ' : 'closes '}${fmtDate(it.date, { year: true })}`, r.left + r.width / 2, r.top); };
       g.addEventListener('pointerenter', show);
       g.addEventListener('pointerleave', hideTip);
       g.addEventListener('focus', show);
