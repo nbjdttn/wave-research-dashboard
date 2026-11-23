@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-23T06:52:44Z",
+ "generated_at": "2026-11-23T11:31:35Z",
  "ai": {
-  "calls": 4,
-  "estimated_cost_usd": 0.183,
-  "added": 41,
+  "calls": 0,
+  "estimated_cost_usd": 0.0,
+  "added": 0,
   "with_bullets": 118
  },
  "window_days": 120,
@@ -12,31 +12,31 @@
   "semantic_scholar": {
    "ok": true,
    "added": 297,
-   "checked": "2026-11-23T06:49:49Z"
+   "checked": "2026-11-23T11:29:22Z"
   },
   "arxiv": {
    "ok": true,
    "added": 382,
-   "checked": "2026-11-23T06:51:21Z"
+   "checked": "2026-11-23T11:30:54Z"
   },
   "crossref": {
    "ok": true,
-   "added": 446,
-   "checked": "2026-11-23T06:51:54Z"
+   "added": 447,
+   "checked": "2026-11-23T11:31:26Z"
   },
   "openalex": {
    "ok": true,
    "added": 308,
-   "checked": "2026-11-23T06:52:00Z"
+   "checked": "2026-11-23T11:31:29Z"
   },
   "citing": {
    "ok": true,
    "added": 37,
-   "checked": "2026-11-23T06:52:00Z"
+   "checked": "2026-11-23T11:31:29Z"
   }
  },
  "counts": {
-  "candidates": 1470,
+  "candidates": 1471,
   "kept": 195,
   "citing": 55,
   "new": 22
