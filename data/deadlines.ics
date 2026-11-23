@@ -8,7 +8,7 @@ X-PUBLISHED-TTL:PT12H
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 BEGIN:VEVENT
 UID:ukri-204237-deadline@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Deadline 16:00 UK — UKRI Enabling AI adoption across science an
@@ -39,7 +39,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-206585-deadline@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270127
 DTEND;VALUE=DATE:20270128
 SUMMARY:Deadline 11:00 UK — Knowledge Transfer Partnership: 2026 to 202
@@ -72,7 +72,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-206585-start@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
 SUMMARY:Start preparing — Knowledge Transfer Partnership: 2026 to 2027 
@@ -102,7 +102,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-leverhulme-early-career-fellowships-deadline@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270218
 DTEND;VALUE=DATE:20270219
 SUMMARY:Deadline 16:00 UK — Early Career Fellowships (Leverhulme Trust)
@@ -133,7 +133,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-leverhulme-early-career-fellowships-start@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Start preparing — Early Career Fellowships (Leverhulme Trust)
@@ -161,7 +161,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-research-grants-deadline@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270325
 DTEND;VALUE=DATE:20270326
 SUMMARY:Deadline — Research Grants (Royal Society)
@@ -197,7 +197,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-research-grants-start@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:Start preparing — Research Grants (Royal Society)
@@ -230,7 +230,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:eu-HORIZON-CL5-2027-02-D3-09-deadline@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Deadline — Innovative technologies and solutions to improve wav
@@ -269,7 +269,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:eu-HORIZON-CL5-2027-02-D3-09-start@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Start preparing — Innovative technologies and solutions to impr
@@ -303,7 +303,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-short-industry-fellowship-deadline@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270527
 DTEND;VALUE=DATE:20270528
 SUMMARY:Deadline — Short Industry Fellowship (Royal Society)
@@ -339,7 +339,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-short-industry-fellowship-start@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Start preparing — Short Industry Fellowship (Royal Society)
@@ -372,7 +372,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-msca-postdoctoral-fellowships-deadline@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270908
 DTEND;VALUE=DATE:20270909
 SUMMARY:Deadline — Marie Sklodowska-Curie Postdoctoral Fellowships 2027
@@ -407,7 +407,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-msca-postdoctoral-fellowships-start@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Start preparing — Marie Sklodowska-Curie Postdoctoral Fellowshi
@@ -438,67 +438,8 @@ TRIGGER:-P1D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ukri-202875-start@wave-research
-DTSTAMP:20261123T114752Z
-DTSTART;VALUE=DATE:20261203
-DTEND;VALUE=DATE:20261204
-SUMMARY:Start preparing (round expected\, dates not announced) — Knowle
- dge Transfer Partnership (KTP): 2026 – 2027 Round 3 (Innovate UK)
-DESCRIPTION:Effort: heavy (6-8 weeks with partner).\n\nWhat you need:\n
- • Contact Manchester KTP office/adviser — Early engagement with an I
- nnovate UK KTP adviser is typical — confirm in the guidance\n• Secur
- e UK business partner — Two or more full-time employees\; must contrib
- ute to costs\n• Agree business cash contribution — Typically about a
-  third for SMEs\, half for large firms — confirm\n• Project plan and
-  work packages — Associate role\, milestones\, knowledge-transfer obje
- ctives — typical\, confirm in the guidance\n• Budget and costings 
- — Associate salary\, supervision\, development budget — typical\, co
- nfirm in the guidance\n• Online application on IFS — Register on the
-  Innovation Funding Service\; answer scored questions\n\nhttps://www.ukr
- i.org/opportunity/knowledge-transfer-partnership-ktp-2026-2027-round-3/
-URL:https://www.ukri.org/opportunity/knowledge-transfer-partnership-ktp-2
- 026-2027-round-3/
-TRANSP:TRANSPARENT
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Start preparing (round expected\, dates not announced) — Kn
- owledge Transfer Partnership (KTP): 2026 – 2027 Round 3 (Innovate UK)
-TRIGGER:-P1D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:scheme-emec-offshore-wind-ri-calls-start@wave-research
-DTSTAMP:20261123T114752Z
-DTSTART;VALUE=DATE:20270304
-DTEND;VALUE=DATE:20270305
-SUMMARY:Start preparing (round expected\, dates not announced) — Offsho
- re Wind Research and Innovation Programme: innovation calls (European Ma
- rine Energy Centre (EMEC))
-DESCRIPTION:Effort: moderate (2-3 weeks part-time).\n\nWhat you need:\n
- • Online stage 1 application form — Submitted via EMEC online form\;
-  typical — confirm in the guidance\n• Challenge relevance and innova
- tion case — Must address a sponsor challenge\; no market-procurable se
- rvices\n• Budget and secured external funds — Full project budget pl
- us sources of funds already secured\n• Sponsor and UK benefit statemen
- t — Benefit to West of Orkney\, offshore wind sector and Scottish supp
- ly chain\n• Risk assessment and mitigations — Covers sponsor safety\
- , reputation and assets\n• Detailed proposal stage — With EMEC works
- hop support if shortlisted\n• Agreement on sponsor T&Cs and IP — Spo
- nsor may require preferential terms\; university contracts office review
- \n\nhttps://offshoreinnovation.scot/innovation-calls
-URL:https://offshoreinnovation.scot/innovation-calls
-TRANSP:TRANSPARENT
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Start preparing (round expected\, dates not announced) — Of
- fshore Wind Research and Innovation Programme: innovation calls (Europea
- n Marine Energy Centre (EMEC))
-TRIGGER:-P1D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:ukri-173818-start@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Start preparing (round expected\, dates not announced) — Access
@@ -535,7 +476,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-leverhulme-philip-leverhulme-prizes-start@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270403
 DTEND;VALUE=DATE:20270404
 SUMMARY:Start preparing (round expected\, dates not announced) — Philip
@@ -561,7 +502,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-international-exchanges-start@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Start preparing (round expected\, dates not announced) — Intern
@@ -598,7 +539,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-191210-start@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Start preparing (round expected\, dates not announced) — Enviro
@@ -638,7 +579,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-193012-start@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270603
 DTEND;VALUE=DATE:20270604
 SUMMARY:Start preparing (round expected\, dates not announced) — Accele
@@ -666,7 +607,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-erc-starting-grant-start@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Start preparing (round expected\, dates not announced) — ERC St
@@ -696,7 +637,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-202899-start@wave-research
-DTSTAMP:20261123T120125Z
+DTSTAMP:20261123T121339Z
 DTSTART;VALUE=DATE:20271001
 DTEND;VALUE=DATE:20271002
 SUMMARY:Start preparing (round expected\, dates not announced) — Explor
