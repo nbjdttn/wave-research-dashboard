@@ -635,17 +635,20 @@ button, summary, .chip, .seg, .tabbar a, .ticker a, .brand { -webkit-user-select
 .agent-row { grid-template-columns: 10px minmax(0, 1fr) auto; }
 .icon-btn.sm { width: 32px; height: 32px; background: none; }
 
-/* ── swipe a card: right saves it, left archives it (assets/js/swipe.js) ───── */
+/* ── swipe a card to uncover a button; tap the button to save or archive (assets/js/swipe.js) ── */
 [data-swipe] { touch-action: pan-y; -webkit-user-drag: none; }       /* up and down still scrolls the page */
 .swiping { position: relative; z-index: 1; will-change: transform; -webkit-user-select: none; user-select: none; }
 a.rowlink.swiping { background: var(--surface); }
-.swipe-under { position: absolute; z-index: 0; display: flex; align-items: flex-start; justify-content: space-between; padding: 0 18px; overflow: hidden; background: var(--bg-2); color: var(--ink-2); font-size: .8125rem; font-weight: 700; transition: background-color .15s, color .15s; }
-.swipe-under span { display: inline-flex; align-items: center; gap: 8px; height: 24px; margin-top: calc(var(--at, 50%) - 12px); white-space: nowrap; transition: transform .15s; }   /* level with the finger */
-.swipe-under .ico { width: 20px; height: 20px; }
-.swipe-under[data-side="right"] .swipe-left, .swipe-under[data-side="left"] .swipe-right { visibility: hidden; }
-.swipe-under.armed[data-side="right"] { background: var(--accent); color: var(--on-accent); }
-.swipe-under.armed[data-side="left"] { background: var(--ink); color: var(--bg); }
-.swipe-under.armed span { transform: scale(1.08); }
+.swipe-under { position: absolute; z-index: 0; display: flex; justify-content: space-between; overflow: hidden; background: var(--bg-2); }
+.swipe-under[data-side="right"] { background: var(--accent); }
+.swipe-under[data-side="left"] { background: var(--ink); }
+.swipe-do { flex: 0 0 96px; display: flex; flex-direction: column; align-items: center; gap: 5px; padding-top: calc(var(--at, 50%) - 22px); font-size: .75rem; font-weight: 700; line-height: 1.2; }
+.swipe-do .ico { width: 22px; height: 22px; }
+.swipe-do.at-left { color: var(--on-accent); }
+.swipe-do.at-right { color: var(--bg); }
+.swipe-under[data-side="right"] .at-right, .swipe-under[data-side="left"] .at-left { visibility: hidden; }
+.swipe-under.short .swipe-do { flex-direction: row; justify-content: center; gap: 6px; padding-top: 0; }
+.swipe-under.open button.swipe-do:active { opacity: .65; }
 /* On a touch screen the swipe archives a paper, so its button is kept only for screen readers there;
    an archived paper shows Restore in place of the bookmark. */
 @media (hover: none) {
@@ -660,6 +663,10 @@ a.rowlink.swiping { background: var(--surface); }
 @media (max-width: 359px) {
   .fresh { display: none; }                                          /* the narrowest phones: room for the settings button */
 }
+
+/* ── funding: a chip for each funder ──────────────────────────────────────── */
+.chips.funders { margin-top: 14px; }
+.chip .dot { flex: none; width: 9px; height: 9px; border-radius: 50%; }
 
 /* ── larger screens ───────────────────────────────────────────────────────── */
 @media (min-width: 620px) {

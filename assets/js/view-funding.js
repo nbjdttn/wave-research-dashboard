@@ -1,10 +1,11 @@
 // "Funding" — only calls that pass both tests (topic and career stage), each with its deadline,
 // what to submit and how much work it is.
 import { esc, icon, daysTo, num, fmtDate, $, store, toast, safeUrl, ago, splitSentence } from './util.js';
-import { oppHTML, isLive, nextDate, dueClass, calendarFile, funderTag, EFFORT, TYPES } from './cards.js';
+import { oppHTML, isLive, nextDate, dueClass, calendarFile, funderTag, funderShort, EFFORT, TYPES } from './cards.js';
+import { funderColour } from './badges.js';
 import { timeline } from './charts.js';
 
-const state = { tab: 'deadline', kind: 'all', sort: 'date', savedOnly: false };
+const state = { tab: 'deadline', kind: 'all', sort: 'date', savedOnly: false, funder: 'all' };
 
 const KINDS = [
   ['all', 'All'],
@@ -22,12 +23,19 @@ export function renderFunding(root, D, ctx, sub) {
   const byId = Object.fromEntries(live.map((o) => [o.id, o]));
   const isAway = (o) => ctx.away.grants.has(o.id);              // archived by the reader: off every list but its own
   const firstTab = () => ['deadline', 'rolling', 'prepare'].find((b) => live.some((o) => o.bucket === b && !isAway(o))) || 'deadline';
-  if (sub && byId[sub]) { state.tab = isAway(byId[sub]) ? 'archived' : byId[sub].bucket; state.kind = 'all'; state.savedOnly = false; }
+  if (sub && byId[sub]) { state.tab = isAway(byId[sub]) ? 'archived' : byId[sub].bucket; state.kind = 'all'; state.savedOnly = false; state.funder = 'all'; }
+  const ofFunder = (o) => state.funder === 'all' || funderShort(o.funder) === state.funder;
   if (state.tab !== 'archived' && !live.some((o) => o.bucket === state.tab && !isAway(o))) state.tab = firstTab();
 
   const draw = (focusId) => {
-    const all = live.filter((o) => !isAway(o));
-    const gone = live.filter(isAway);
+    const pool = live.filter((o) => !isAway(o));
+    const tally = new Map();                                    // funder → its calls, over all three lists
+    for (const o of pool) { const f = funderShort(o.funder); tally.set(f, { n: (tally.get(f)?.n || 0) + 1, full: o.funder }); }
+    const funders = [...tally].sort((x, y) => y[1].n - x[1].n || x[0].localeCompare(y[0]));
+    if (state.funder !== 'all' && !tally.has(state.funder)) state.funder = 'all';
+    const all = pool.filter(ofFunder);
+    const gone = live.filter((o) => isAway(o) && ofFunder(o));
+    const along = $('.funders', root)?.scrollLeft || 0;         // keep the chip row where it was scrolled to
     if (state.tab === 'archived' && !gone.length) state.tab = firstTab();
     const savedIds = new Set(ctx.grants.all().map((o) => o.id));
     if (!all.some((o) => savedIds.has(o.id))) state.savedOnly = false;
@@ -53,8 +61,12 @@ export function renderFunding(root, D, ctx, sub) {
 
     root.innerHTML = `
       <h1 class="page-title">Funding</h1>
-      <p class="page-sub">${all.length ? `<b>${num(all.length)}</b> selected · topic and career stage both fit${scanned ? ` · ${num(scanned)} scanned` : ''}` : 'Nothing selected yet'}</p>
+      <p class="page-sub">${pool.length ? `<b>${num(pool.length)}</b> selected · topic and career stage both fit${scanned ? ` · ${num(scanned)} scanned` : ''}` : 'Nothing selected yet'}</p>
       ${aiNotice(G)}
+      ${funders.length > 1 ? `<div class="chips funders" role="group" aria-label="Funder">
+        <button class="chip" type="button" data-funder="all" aria-pressed="${state.funder === 'all'}">All funders <span class="n">${pool.length}</span></button>
+        ${funders.map(([f, v]) => `<button class="chip" type="button" data-funder="${esc(f)}" aria-pressed="${state.funder === f}"><i class="dot" style="background:${funderColour(v.full)}"></i>${esc(f)} <span class="n">${v.n}</span></button>`).join('')}
+      </div>` : ''}
       ${marks.length ? `<section class="card timeline" style="margin-top:16px" aria-label="Deadlines ahead">
         <div class="chart" id="tl"></div>
         <div class="legend" style="margin-top:6px">
@@ -89,14 +101,25 @@ export function renderFunding(root, D, ctx, sub) {
       <p class="scan">${c.scanned ? `<span>UKRI live <b>${num(c.scanned.ukri_open)}</b></span><span>UKRI past <b>${num(c.scanned.ukri_past)}</b></span><span>EU <b>${num(c.scanned.eu)}</b></span><span>Schemes <b>${num(c.scanned.schemes)}</b></span>` : ''}
         ${G.generated_at ? `<span>Updated ${esc(ago(G.generated_at))}</span>` : ''}</p>`;
 
+    const row = $('.funders', root);
+    if (row) row.scrollLeft = along;
     const tl = $('#tl', root);
     if (tl) timeline(tl, { items: marks, onPick: (id) => { const o = byId[id]; if (o) { state.tab = o.bucket; state.kind = 'all'; draw(id); } } });
     if (focusId) requestAnimationFrame(() => document.getElementById(`opp-${focusId}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
   };
 
   root.onclick = (e) => {
-    const t = e.target.closest('[data-tab],[data-set],[data-cal],[data-saved]');
+    const t = e.target.closest('[data-tab],[data-set],[data-cal],[data-saved],[data-funder]');
     if (!t) return;
+    if (t.dataset.funder) {                                     // one funder's calls, wherever they are: go to a list that has some
+      state.funder = t.dataset.funder;
+      state.kind = 'all';
+      const has = (b) => live.some((o) => !isAway(o) && o.bucket === b && ofFunder(o));
+      if (state.tab !== 'archived' && !has(state.tab)) state.tab = ['deadline', 'rolling', 'prepare'].find(has) || state.tab;
+      if (state.tab === 'rolling' && state.sort === 'fit') state.sort = 'date';
+      draw();
+      return;
+    }
     if ('saved' in t.dataset) { state.savedOnly = !state.savedOnly; draw(); return; }
     if (t.dataset.cal) {
       const o = byId[t.dataset.cal];

@@ -48,6 +48,9 @@ function colourFor(name, table) {
   return SPARE[h % SPARE.length];
 }
 
+/** The colour a funder's label is drawn in. */
+export const funderColour = (name) => colourFor(String(name || ''), FUNDERS);
+
 /** A bold coloured label: <span class="badge" …>Name</span>. `full` is kept as the tooltip. */
 export function badge(label, { kind = 'venue', full = label } = {}) {
   if (!label) return '';

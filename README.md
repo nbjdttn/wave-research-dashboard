@@ -17,9 +17,13 @@ Every paper and funding call has a **Send to an agent** button (✦). It opens a
 *Copy only*, or the phone's share sheet. Whatever opens, the request is copied first, so it is ready
 to paste on arrival.
 
-Swipe a paper or a funding call **right** to save it and **left** to archive it. An archived item leaves
-every list (Today included) and waits in *Archived*, where a swipe right or *Restore* brings it back;
-*Undo* appears straight after archiving. Saved and archived items are kept on the device.
+Swipe a paper or a funding call **right** to uncover *Save* and **left** to uncover *Archive*, then tap
+the button: a swipe alone never acts, and a tap anywhere else closes the card again. An archived item
+leaves every list (Today included) and waits in *Archived*, where *Restore* brings it back; *Undo*
+appears straight after archiving. Saved and archived items are kept on the device.
+
+On **Funding**, a row of chips lists every funder with its number of calls; tap one (say *NERC*) to see
+all of that funder's calls across *Deadlines*, *Always open* and *Prepare ahead*.
 
 Live site: **https://nbjdttn.github.io/wave-research-dashboard/**
 

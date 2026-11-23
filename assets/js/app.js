@@ -101,7 +101,7 @@ enableSwipe(scroller, {
     if (awayOf(kind).has(id)) return { right: { label: 'Restore', icon: icon('undo'), leaves: true } };
     const saved = kind === 'paper' ? ctx.papers.has(id) : ctx.grants.has(id);
     return {
-      right: { label: saved ? 'Remove from saved' : kind === 'paper' ? 'Save' : 'Shortlist', icon: icon('save') },
+      right: { label: saved ? 'Unsave' : kind === 'paper' ? 'Save' : 'Shortlist', icon: icon('save') },
       left: { label: 'Archive', icon: icon('archive'), leaves: true },
     };
   },
@@ -277,7 +277,7 @@ function openSettings(focus) {
     <h3>On your phone</h3>
     <p id="install-slot">${installEvent ? '<button class="btn sm primary" type="button" id="install-btn">Install the app</button>'
       : 'Safari: <b>Share → Add to Home Screen</b>. Chrome: <b>⋮ → Add to Home screen</b>.'}</p>
-    <p class="small muted" style="margin-top:12px">Swipe a card right to save it, left to archive it. Saved and archived items and ticks stay on this device.</p>`;
+    <p class="small muted" style="margin-top:12px">Swipe a card right for Save, left for Archive, then tap the button. Saved and archived items and ticks stay on this device.</p>`;
   if (sheet.hidden) lastFocus = document.activeElement;
   backdrop.hidden = false;
   sheet.hidden = false;
