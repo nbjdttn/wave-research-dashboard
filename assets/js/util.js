@@ -145,6 +145,8 @@ const PATHS = {
   search: '<circle cx="11" cy="11" r="6.500"/><path d="M16 16l4 4"/>',
   x: '<path d="M6 6l12 12M18 6L6 18"/>',
   plus: '<path d="M12 5.500v13M5.500 12h13"/>',
+  archive: '<rect x="3.500" y="4.500" width="17" height="4" rx="1"/><path d="M5 8.500V18a1.500 1.500 0 0 0 1.500 1.500h11A1.500 1.500 0 0 0 19 18V8.500M10 12.500h4"/>',
+  undo: '<path d="M8.500 6.500L4 11l4.500 4.500"/><path d="M4 11h10.500a4.500 4.500 0 0 1 0 9H11"/>',
   arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
   quote: '<path d="M9.500 7C6.500 8 5 10.300 5 13.500V17h5v-5H7.500c0-1.800.8-3 2.500-3.600zM18.500 7c-3 1-4.500 3.300-4.500 6.500V17h5v-5h-2.500c0-1.800.8-3 2.500-3.600z"/>',
   spark: '<path d="M12 3.500l1.800 5.200 5.200 1.800-5.200 1.800L12 17.500l-1.800-5.200L5 10.500l5.200-1.800zM18.500 15.500l.8 2.200 2.200.8-2.200.8-.8 2.200-.8-2.200-2.200-.8 2.200-.8z"/>',
@@ -187,6 +189,17 @@ export function shelf(key) {
   };
 }
 
+/** Ids the reader has archived (put away), with the day it happened. Kept on this device. */
+export function awayList(key) {
+  let items = store.get(key, {});
+  return {
+    has: (id) => Object.prototype.hasOwnProperty.call(items, id),
+    add(id) { items[id] = isoDay(today()); store.set(key, items); },
+    remove(id) { delete items[id]; store.set(key, items); },
+    get size() { return Object.keys(items).length; },
+  };
+}
+
 // ── tooltip & toast ──────────────────────────────────────────────────────────
 const tip = () => document.getElementById('tooltip');
 export function showTip(html, x, y) {
@@ -203,12 +216,19 @@ export function hideTip() { const el = tip(); if (el) el.hidden = true; }
 document.addEventListener('scroll', hideTip, { passive: true, capture: true });   // the page scrolls inside #scroller
 
 let toastTimer;
-export function toast(msg) {
+/** A short message. `action` ({ label, run }) adds one button, such as Undo, and keeps it up longer. */
+export function toast(msg, action) {
   const el = document.getElementById('toast');
   el.textContent = msg;
+  el.classList.toggle('has-action', !!action);
+  if (action) {
+    const b = Object.assign(document.createElement('button'), { type: 'button', textContent: action.label });
+    b.addEventListener('click', () => { el.hidden = true; action.run(); }, { once: true });
+    el.appendChild(b);
+  }
   el.hidden = false;
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => { el.hidden = true; }, 2200);
+  toastTimer = setTimeout(() => { el.hidden = true; }, action ? 5500 : 2200);
 }
 
 export async function copyText(text, done = 'Copied') {

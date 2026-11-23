@@ -1,8 +1,9 @@
 // Wave Research — bootstrap, routing and the settings sheet.
-import { $, $$, esc, icon, store, shelf, toast, ago, daysTo, fmtDate, safeUrl, num, shellHeight } from './util.js';
+import { $, $$, esc, icon, store, shelf, awayList, toast, ago, daysTo, fmtDate, safeUrl, num, shellHeight } from './util.js';
 import { clearCharts } from './charts.js';
 import { paperIndex, isLive, paperPrompt, oppPrompt } from './cards.js';
 import { agents, agentSheetHTML, agentClick, agentSettingsHTML } from './agents.js';
+import { enableSwipe, sendOff } from './swipe.js';
 import { renderToday } from './view-today.js';
 import { renderPapers } from './view-papers.js';
 import { renderFunding } from './view-funding.js';
@@ -21,6 +22,7 @@ let installEvent = null;
 const ctx = {
   papers: shelf('saved.papers'),
   grants: shelf('saved.grants'),
+  away: { papers: awayList('archived.papers'), grants: awayList('archived.grants') },   // archived: off every list, on this device
   onLeave: (fn) => { if (typeof fn === 'function') leave.push(fn); },
   similarity: () => (similarityPromise ||= fetch('data/similarity.json').then((r) => { if (!r.ok) throw new Error('similarity model missing'); return r.json(); })),
   redraw: null,
@@ -39,6 +41,7 @@ function route() {
   const tab = VIEWS[tabRaw] ? tabRaw : 'today';
   leave.forEach((fn) => { try { fn(); } catch { /* ignore */ } });
   leave = [];
+  view.classList.remove('quiet');
   clearCharts();
   ctx.redraw = null;
   view.onclick = view.oninput = view.onsubmit = view.onchange = null;
@@ -56,25 +59,73 @@ function route() {
 }
 
 // ── actions shared by every screen ───────────────────────────────────────────
+function savePaper(id) {
+  const p = paperIndex.get(id) || ctx.papers.all().find((x) => x.id === id);
+  if (!p) return;
+  const on = ctx.papers.toggle(p);
+  $$(`[data-save-paper="${CSS.escape(p.id)}"]`).forEach((b) => b.setAttribute('aria-pressed', String(on)));
+  toast(on ? 'Saved to your reading list' : 'Removed from your reading list');
+  const n = $('.seg [data-tab="saved"] .n', view);
+  if (n && currentTab === 'papers') n.textContent = ctx.papers.all().filter((x) => !ctx.away.papers.has(x.id)).length;
+}
+function saveOpp(id) {
+  const o = (D.grants?.opportunities || []).find((x) => x.id === id);
+  if (!o) return;
+  const on = ctx.grants.toggle({ id: o.id, title: o.title });
+  $$(`[data-save-opp="${CSS.escape(o.id)}"]`).forEach((b) => b.setAttribute('aria-pressed', String(on)));
+  toast(on ? 'Added to your shortlist' : 'Removed from your shortlist');
+}
+
+// ── archive: put a paper or a call away so it stops appearing; it can be brought back ──
+const awayOf = (kind) => (kind === 'paper' ? ctx.away.papers : ctx.away.grants);
+/** Draw the current screen again where it stands: no scrolling, no entrance animation. */
+function redrawInPlace() {
+  const top = scroller.scrollTop;
+  view.classList.add('quiet');
+  if (ctx.redraw) ctx.redraw(); else route();
+  scroller.scrollTop = top;
+  tabBadges();
+}
+function restore(kind, id) {
+  awayOf(kind).remove(id);
+  redrawInPlace();
+}
+function putAway(kind, id) {
+  awayOf(kind).add(id);
+  redrawInPlace();
+  toast('Archived', { label: 'Undo', run: () => restore(kind, id) });
+}
+enableSwipe(scroller, {
+  sides(el) {
+    const kind = el.dataset.swipe, id = el.dataset.id;
+    if (awayOf(kind).has(id)) return { right: { label: 'Restore', icon: icon('undo'), leaves: true } };
+    const saved = kind === 'paper' ? ctx.papers.has(id) : ctx.grants.has(id);
+    return {
+      right: { label: saved ? 'Remove from saved' : kind === 'paper' ? 'Save' : 'Shortlist', icon: icon('save') },
+      left: { label: 'Archive', icon: icon('archive'), leaves: true },
+    };
+  },
+  act(el, side) {
+    const kind = el.dataset.swipe, id = el.dataset.id;
+    if (awayOf(kind).has(id)) { restore(kind, id); toast('Back on your list'); }
+    else if (side === 'left') putAway(kind, id);
+    else if (kind === 'paper') savePaper(id);
+    else saveOpp(id);
+  },
+});
+
 document.addEventListener('click', (e) => {
   const sp = e.target.closest('[data-save-paper]');
-  if (sp) {
-    const p = paperIndex.get(sp.dataset.savePaper) || ctx.papers.all().find((x) => x.id === sp.dataset.savePaper);
-    if (!p) return;
-    const on = ctx.papers.toggle(p);
-    $$(`[data-save-paper="${CSS.escape(p.id)}"]`).forEach((b) => b.setAttribute('aria-pressed', String(on)));
-    toast(on ? 'Saved to your reading list' : 'Removed from your reading list');
-    const n = $('.seg [data-tab="saved"] .n', view);
-    if (n && currentTab === 'papers') n.textContent = ctx.papers.size;
-    return;
-  }
+  if (sp) { savePaper(sp.dataset.savePaper); return; }
   const so = e.target.closest('[data-save-opp]');
-  if (so) {
-    const o = (D.grants?.opportunities || []).find((x) => x.id === so.dataset.saveOpp);
-    if (!o) return;
-    const on = ctx.grants.toggle({ id: o.id, title: o.title });
-    so.setAttribute('aria-pressed', String(on));
-    toast(on ? 'Added to your shortlist' : 'Removed from your shortlist');
+  if (so) { saveOpp(so.dataset.saveOpp); return; }
+  const away = e.target.closest('[data-away]');
+  if (away) {                                             // the Archive / Restore button: the same as a swipe
+    const kind = away.dataset.away, id = away.dataset.id;
+    const back = awayOf(kind).has(id);
+    const card = away.closest('[data-swipe]');
+    const done = () => { if (back) { restore(kind, id); toast('Back on your list'); } else putAway(kind, id); };
+    if (card) sendOff(card, back ? 'right' : 'left').then(done); else done();
     return;
   }
   const ask = e.target.closest('[data-ask]');
@@ -112,7 +163,7 @@ document.addEventListener('click', (e) => {
 // ── top bar ──────────────────────────────────────────────────────────────────
 // ── getting back to the top: a button after a long scroll, or tap the current tab ──
 const toTop = $('#to-top');
-const onScroll = () => { toTop.hidden = scroller.scrollTop < 1400; };
+const onScroll = () => { toTop.hidden = scroller.scrollTop < 1400; if (scroller.scrollLeft) scroller.scrollLeft = 0; };   // the page never sits sideways
 scroller.addEventListener('scroll', onScroll, { passive: true });
 toTop.addEventListener('click', () => scroller.scrollTo({ top: 0, behavior: 'smooth' }));
 document.querySelector('.tabbar').addEventListener('click', (e) => {
@@ -137,7 +188,7 @@ function freshness() {
 }
 
 function tabBadges() {
-  const urgent = (D.grants?.opportunities || []).filter((o) => o.bucket === 'deadline' && isLive(o) && daysTo(o.closes) <= 14).length;
+  const urgent = (D.grants?.opportunities || []).filter((o) => o.bucket === 'deadline' && isLive(o) && daysTo(o.closes) <= 14 && !ctx.away.grants.has(o.id)).length;
   const tab = $('.tabbar [data-tab="funding"]');
   tab.querySelector('.dot')?.remove();
   if (urgent) tab.insertAdjacentHTML('beforeend', `<span class="dot" aria-label="${urgent} deadlines within two weeks">${urgent}</span>`);
@@ -226,7 +277,7 @@ function openSettings(focus) {
     <h3>On your phone</h3>
     <p id="install-slot">${installEvent ? '<button class="btn sm primary" type="button" id="install-btn">Install the app</button>'
       : 'Safari: <b>Share → Add to Home Screen</b>. Chrome: <b>⋮ → Add to Home screen</b>.'}</p>
-    <p class="small muted" style="margin-top:12px">Saved items and ticks stay on this device.</p>`;
+    <p class="small muted" style="margin-top:12px">Swipe a card right to save it, left to archive it. Saved and archived items and ticks stay on this device.</p>`;
   if (sheet.hidden) lastFocus = document.activeElement;
   backdrop.hidden = false;
   sheet.hidden = false;

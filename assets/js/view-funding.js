@@ -18,16 +18,20 @@ const KINDS = [
 
 export function renderFunding(root, D, ctx, sub) {
   const G = D.grants || {};
-  const all = (G.opportunities || []).filter(isLive);
-  const byId = Object.fromEntries(all.map((o) => [o.id, o]));
-  if (sub && byId[sub]) { state.tab = byId[sub].bucket; state.kind = 'all'; }
-  if (sub && byId[sub]) state.savedOnly = false;
-  if (!all.some((o) => o.bucket === state.tab)) state.tab = ['deadline', 'rolling', 'prepare'].find((b) => all.some((o) => o.bucket === b)) || 'deadline';
+  const live = (G.opportunities || []).filter(isLive);
+  const byId = Object.fromEntries(live.map((o) => [o.id, o]));
+  const isAway = (o) => ctx.away.grants.has(o.id);              // archived by the reader: off every list but its own
+  const firstTab = () => ['deadline', 'rolling', 'prepare'].find((b) => live.some((o) => o.bucket === b && !isAway(o))) || 'deadline';
+  if (sub && byId[sub]) { state.tab = isAway(byId[sub]) ? 'archived' : byId[sub].bucket; state.kind = 'all'; state.savedOnly = false; }
+  if (state.tab !== 'archived' && !live.some((o) => o.bucket === state.tab && !isAway(o))) state.tab = firstTab();
 
   const draw = (focusId) => {
+    const all = live.filter((o) => !isAway(o));
+    const gone = live.filter(isAway);
+    if (state.tab === 'archived' && !gone.length) state.tab = firstTab();
     const savedIds = new Set(ctx.grants.all().map((o) => o.id));
-    if (!savedIds.size) state.savedOnly = false;
-    const inTab = all.filter((o) => o.bucket === state.tab && (!state.savedOnly || savedIds.has(o.id)));
+    if (!all.some((o) => savedIds.has(o.id))) state.savedOnly = false;
+    const inTab = (state.tab === 'archived' ? gone : all.filter((o) => o.bucket === state.tab)).filter((o) => !state.savedOnly || savedIds.has(o.id));
     const kinds = KINDS.filter(([key, , test]) => key === 'all' || inTab.some(test));
     if (!kinds.some(([k]) => k === state.kind)) state.kind = 'all';
     const test = KINDS.find(([k]) => k === state.kind)?.[2];
@@ -39,6 +43,7 @@ export function renderFunding(root, D, ctx, sub) {
           : (nextDate(a) || '9999').localeCompare(nextDate(b) || '9999') || b.analysis.fit_score - a.analysis.fit_score));
 
     const n = (b) => all.filter((o) => o.bucket === b).length;
+    const shortlisted = all.filter((o) => savedIds.has(o.id)).length;
     const c = G.counts || {};
     const scanned = c.scanned ? c.scanned.ukri_open + c.scanned.ukri_past + c.scanned.eu + c.scanned.schemes : 0;
     const chip = (key, value, label) => `<button class="chip" type="button" data-set="${key}" data-val="${value}" aria-pressed="${state[key] === value}">${label}</button>`;
@@ -63,19 +68,20 @@ export function renderFunding(root, D, ctx, sub) {
           <a class="btn sm" href="${calendarUrl()}">${icon('cal', 'sm')}Add all to my calendar</a>
         </div></section>` : ''}
       <div class="toolbar">
-        <div class="seg" role="tablist" aria-label="Funding lists">
+        <div class="seg${gone.length ? ' four' : ''}" role="tablist" aria-label="Funding lists">
           <button role="tab" type="button" data-tab="deadline" aria-selected="${state.tab === 'deadline'}">Deadlines <span class="n">${n('deadline')}</span></button>
           <button role="tab" type="button" data-tab="rolling" aria-selected="${state.tab === 'rolling'}">Always open <span class="n">${n('rolling')}</span></button>
           <button role="tab" type="button" data-tab="prepare" aria-selected="${state.tab === 'prepare'}">Prepare ahead <span class="n">${n('prepare')}</span></button>
+          ${gone.length ? `<button role="tab" type="button" data-tab="archived" aria-selected="${state.tab === 'archived'}" aria-label="Archived" title="Archived">${icon('archive', 'sm')}<span class="n">${gone.length}</span></button>` : ''}
         </div>
-        ${inTab.length > 1 || savedIds.size ? `<div class="chips" role="group" aria-label="Filters">
-          ${savedIds.size ? `<button class="chip" type="button" data-saved aria-pressed="${state.savedOnly}">${icon('save', 'xs')}Shortlist <span class="n">${savedIds.size}</span></button><span style="flex:none;width:1px;background:var(--line-2);margin:6px 2px"></span>` : ''}
+        ${inTab.length > 1 || shortlisted ? `<div class="chips" role="group" aria-label="Filters">
+          ${shortlisted ? `<button class="chip" type="button" data-saved aria-pressed="${state.savedOnly}">${icon('save', 'xs')}Shortlist <span class="n">${shortlisted}</span></button><span style="flex:none;width:1px;background:var(--line-2);margin:6px 2px"></span>` : ''}
           ${kinds.length > 2 ? kinds.map(([k, label]) => chip('kind', k, label)).join('') + '<span style="flex:none;width:1px;background:var(--line-2);margin:6px 2px"></span>' : ''}
           ${chip('sort', 'date', state.tab === 'rolling' ? 'Best fit' : 'Soonest')}${state.tab === 'rolling' ? '' : chip('sort', 'fit', 'Best fit')}${chip('sort', 'effort', 'Least effort')}
         </div>` : ''}
       </div>
       ${tabIntro(state.tab)}
-      <div class="opps two" id="opp-list">${list.length ? list.map((o) => oppHTML(o, { saved: savedIds.has(o.id), open: o.id === focusId })).join('')
+      <div class="opps two" id="opp-list">${list.length ? list.map((o) => oppHTML(o, { saved: savedIds.has(o.id), open: o.id === focusId, away: state.tab === 'archived' })).join('')
         : `<div class="empty" style="grid-column:1/-1"><h3>${state.savedOnly ? 'Nothing shortlisted in this list' : 'Nothing in this list right now'}</h3>
            </div>`}</div>
       ${unreviewedHTML(G)}
@@ -121,7 +127,9 @@ function calendarUrl() {
 }
 
 function tabIntro(tab) {
-  return tab === 'prepare' ? '<p class="small muted" style="margin:14px 0 12px">Not open yet. “~” = estimated from earlier rounds.</p>' : '<div style="height:14px"></div>';
+  return tab === 'prepare' ? '<p class="small muted" style="margin:14px 0 12px">Not open yet. “~” = estimated from earlier rounds.</p>'
+    : tab === 'archived' ? '<p class="small muted" style="margin:14px 0 12px">Put away on this device. Swipe right or tap Restore to bring one back.</p>'
+      : '<div style="height:14px"></div>';
 }
 
 function aiNotice(G) {

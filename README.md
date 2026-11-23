@@ -17,6 +17,10 @@ Every paper and funding call has a **Send to an agent** button (✦). It opens a
 *Copy only*, or the phone's share sheet. Whatever opens, the request is copied first, so it is ready
 to paste on arrival.
 
+Swipe a paper or a funding call **right** to save it and **left** to archive it. An archived item leaves
+every list (Today included) and waits in *Archived*, where a swipe right or *Restore* brings it back;
+*Undo* appears straight after archiving. Saved and archived items are kept on the device.
+
 Live site: **https://nbjdttn.github.io/wave-research-dashboard/**
 
 Tap the sliders icon (top right) to choose a palette. Each one sets the colours *and* the typeface:

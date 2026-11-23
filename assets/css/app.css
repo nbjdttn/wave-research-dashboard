@@ -231,7 +231,7 @@ svg { display: block; }
 .abstract.open { display: block; }
 .cites-you { display: flex; gap: 8px; align-items: flex-start; margin-top: 8px; padding: 8px 10px; border-radius: 10px; background: var(--accent-soft); font-size: .8125rem; color: var(--ink-2); }
 .cites-you .ico { color: var(--accent-strong); flex: none; margin-top: 2px; }
-.story-actions { display: flex; gap: 6px; margin-left: auto; }
+.story-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; margin-left: auto; }
 .act:hover { color: var(--ink); border-color: var(--line-2); }
 .act[aria-pressed="true"] { color: var(--accent-strong); background: var(--accent-soft); border-color: transparent; }
 .act[aria-pressed="true"] .ico { fill: currentColor; }
@@ -587,8 +587,8 @@ button, summary, .chip, .seg, .tabbar a, .ticker a, .brand { -webkit-user-select
 .bullets li { position: relative; padding-left: 14px; font-size: .875rem; line-height: 1.4; color: var(--ink-2); }
 .bullets li::before { content: ""; position: absolute; left: 1px; top: .55em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 .cites-you i { font-style: normal; font-weight: 600; color: var(--ink); }
-.story-foot { margin-top: 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.act { height: 36px; min-width: 36px; padding: 0 11px; display: inline-flex; align-items: center; justify-content: center; gap: 5px; border-radius: 12px; font-size: .75rem; font-weight: 600; color: var(--ink-2); background: var(--bg-2); border: 1px solid transparent; transition: transform .12s; }
+.story-foot { margin-top: 12px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }   /* the buttons drop to a second row on the narrowest phones */
+.act { height: 36px; min-width: 36px; padding: 0 10px; display: inline-flex; align-items: center; justify-content: center; gap: 5px; border-radius: 12px; font-size: .75rem; font-weight: 600; color: var(--ink-2); background: var(--bg-2); border: 1px solid transparent; transition: transform .12s; }
 .day-head { display: flex; align-items: center; margin: 28px 0 12px; font: var(--w-head) 1.25rem/1.1 var(--sans); letter-spacing: var(--ls-head); color: var(--ink); }
 
 /* ── funding, profile: type ───────────────────────────────────────────────── */
@@ -634,6 +634,32 @@ button, summary, .chip, .seg, .tabbar a, .ticker a, .brand { -webkit-user-select
 .agent-form input:focus { outline: none; border-color: var(--accent); background: var(--surface); }
 .agent-row { grid-template-columns: 10px minmax(0, 1fr) auto; }
 .icon-btn.sm { width: 32px; height: 32px; background: none; }
+
+/* ── swipe a card: right saves it, left archives it (assets/js/swipe.js) ───── */
+[data-swipe] { touch-action: pan-y; -webkit-user-drag: none; }       /* up and down still scrolls the page */
+.swiping { position: relative; z-index: 1; will-change: transform; -webkit-user-select: none; user-select: none; }
+a.rowlink.swiping { background: var(--surface); }
+.swipe-under { position: absolute; z-index: 0; display: flex; align-items: flex-start; justify-content: space-between; padding: 0 18px; overflow: hidden; background: var(--bg-2); color: var(--ink-2); font-size: .8125rem; font-weight: 700; transition: background-color .15s, color .15s; }
+.swipe-under span { display: inline-flex; align-items: center; gap: 8px; height: 24px; margin-top: calc(var(--at, 50%) - 12px); white-space: nowrap; transition: transform .15s; }   /* level with the finger */
+.swipe-under .ico { width: 20px; height: 20px; }
+.swipe-under[data-side="right"] .swipe-left, .swipe-under[data-side="left"] .swipe-right { visibility: hidden; }
+.swipe-under.armed[data-side="right"] { background: var(--accent); color: var(--on-accent); }
+.swipe-under.armed[data-side="left"] { background: var(--ink); color: var(--bg); }
+.swipe-under.armed span { transform: scale(1.08); }
+/* On a touch screen the swipe archives a paper, so its button is kept only for screen readers there;
+   an archived paper shows Restore in place of the bookmark. */
+@media (hover: none) {
+  .story-actions [data-away]:not(.back) { position: absolute; width: 1px; height: 1px; min-width: 0; padding: 0; border: 0; overflow: hidden; clip-path: inset(50%); }
+}
+.seg.four button { padding: 0 8px; }                                 /* with the Archived list there are four: keep them on one row */
+.seg.four [data-tab="archived"] { flex: 0 0 auto; padding: 0 10px; }
+.view.quiet > * { animation: none; }                                 /* a redraw in place: nothing rises in again */
+.toast.has-action { display: flex; align-items: center; gap: 14px; overflow: visible; }
+.toast button { padding: 8px 2px; margin: -8px 0; font-weight: 700; color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 359px) {
+  .fresh { display: none; }                                          /* the narrowest phones: room for the settings button */
+}
 
 /* ── larger screens ───────────────────────────────────────────────────────── */
 @media (min-width: 620px) {

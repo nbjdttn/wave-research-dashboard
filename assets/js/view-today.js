@@ -7,80 +7,86 @@ import { mountWave } from './wave.js';
 const greeting = () => { const h = new Date().getHours(); return h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening'; };
 
 export function renderToday(root, D, ctx) {
-  const { profile, papers, grants } = D;
-  const feed = papers?.papers || [];
-  const newDays = papers?.new_days || 10;
-  const isNew = (p) => { const d = daysTo(p.news_date); return d != null && d >= -newDays; };
-  const fresh = feed.filter(isNew).sort((a, b) => b.score - a.score);
-  const stories = fresh.filter((p) => !p.cites?.length);
-  const citing = feed.filter((p) => p.cites?.length).sort((a, b) => (b.news_date || '').localeCompare(a.news_date || '') || b.score - a.score);
-  const citingNew = citing.filter(isNew);
-  const opps = (grants?.opportunities || []).filter(isLive);
-  const deadlines = opps.filter((o) => o.bucket === 'deadline').sort((a, b) => a.closes.localeCompare(b.closes));
-  const newOpps = opps.filter((o) => o.is_new);
-  const prepare = opps.filter((o) => o.bucket === 'prepare');
-  const next = deadlines[0];
-  const nextDays = next ? daysTo(next.closes) : null;
-  const m = profile?.metrics;
-  const first = (profile?.researcher?.short_name || '').split(' ')[0];
-  const own = Object.fromEntries((profile?.publications || []).map((p) => [p.id, p.title]));
-  const ownTitle = (id) => own[id];
+  let stopSea = null;
+  const draw = () => {
+    const { profile, papers, grants } = D;
+    const feed = (papers?.papers || []).filter((p) => !ctx.away.papers.has(p.id));          // archived items stay off this page
+    const newDays = papers?.new_days || 10;
+    const isNew = (p) => { const d = daysTo(p.news_date); return d != null && d >= -newDays; };
+    const fresh = feed.filter(isNew).sort((a, b) => b.score - a.score);
+    const stories = fresh.filter((p) => !p.cites?.length);
+    const citing = feed.filter((p) => p.cites?.length).sort((a, b) => (b.news_date || '').localeCompare(a.news_date || '') || b.score - a.score);
+    const citingNew = citing.filter(isNew);
+    const opps = (grants?.opportunities || []).filter((o) => isLive(o) && !ctx.away.grants.has(o.id));
+    const deadlines = opps.filter((o) => o.bucket === 'deadline').sort((a, b) => a.closes.localeCompare(b.closes));
+    const newOpps = opps.filter((o) => o.is_new);
+    const prepare = opps.filter((o) => o.bucket === 'prepare');
+    const next = deadlines[0];
+    const nextDays = next ? daysTo(next.closes) : null;
+    const m = profile?.metrics;
+    const first = (profile?.researcher?.short_name || '').split(' ')[0];
+    const own = Object.fromEntries((profile?.publications || []).map((p) => [p.id, p.title]));
+    const ownTitle = (id) => own[id];
 
-  const lead = stories[0];
-  const rest = stories.slice(1, 6);
-  root.innerHTML = `
-    <header class="masthead">
-      <div class="mast-date">${esc(longToday())}</div>
-      <h1 class="mast-title">${esc(greeting())}${first ? `, <em>${esc(first)}</em>` : ''}</h1>
-      <div class="mast-wave" id="mast-wave"></div>
-      <nav class="ticker" aria-label="Today at a glance">
-        <a href="#papers"><b>${num(stories.length)}</b><span>new papers</span></a>
-        <a href="#papers/citing"><b>${num(citingNew.length || citing.length)}</b><span>${citingNew.length ? 'new citations' : 'recent citations'}</span></a>
-        <a href="#funding"><b>${num(opps.length)}</b><span>funding calls</span></a>
-        <a href="#funding">${next ? `<b>${nextDays === 0 ? 'Today' : `${num(nextDays)} d`}</b><span>next deadline</span>` : '<b>–</b><span>no deadline</span>'}</a>
-      </nav>
-    </header>
-    ${briefingHTML(D.briefing)}
-    ${recordHTML(D)}
+    const lead = stories[0];
+    const rest = stories.slice(1, 6);
+    const sea = stopSea && root.querySelector('#mast-wave');     // a redraw keeps the sea that is already running
+    root.innerHTML = `
+      <header class="masthead">
+        <div class="mast-date">${esc(longToday())}</div>
+        <h1 class="mast-title">${esc(greeting())}${first ? `, <em>${esc(first)}</em>` : ''}</h1>
+        <div class="mast-wave" id="mast-wave"></div>
+        <nav class="ticker" aria-label="Today at a glance">
+          <a href="#papers"><b>${num(stories.length)}</b><span>new papers</span></a>
+          <a href="#papers/citing"><b>${num(citingNew.length || citing.length)}</b><span>${citingNew.length ? 'new citations' : 'recent citations'}</span></a>
+          <a href="#funding"><b>${num(opps.length)}</b><span>funding calls</span></a>
+          <a href="#funding">${next ? `<b>${nextDays === 0 ? 'Today' : `${num(nextDays)} d`}</b><span>next deadline</span>` : '<b>–</b><span>no deadline</span>'}</a>
+        </nav>
+      </header>
+      ${briefingHTML(D.briefing, ctx)}
+      ${recordHTML(D)}
 
-    <div class="cols split">
-      <div>
-        <section class="section" aria-labelledby="h-stories">
-          <div class="section-head"><h2 class="eyebrow" id="h-stories">New papers<span class="count">${num(stories.length)}</span></h2><a class="more" href="#papers">All papers ${icon('arrow', 'xs')}</a></div>
-          ${lead ? `<div class="stories">${[lead, ...rest].map((p) => storyHTML(p, { saved: ctx.papers.has(p.id), ownTitle, plain: true, showNew: false })).join('')}</div>`
-            : `<div class="empty"><h3>No new papers this week</h3></div>`}
-        </section>
+      <div class="cols split">
+        <div>
+          <section class="section" aria-labelledby="h-stories">
+            <div class="section-head"><h2 class="eyebrow" id="h-stories">New papers<span class="count">${num(stories.length)}</span></h2><a class="more" href="#papers">All papers ${icon('arrow', 'xs')}</a></div>
+            ${lead ? `<div class="stories">${[lead, ...rest].map((p) => storyHTML(p, { saved: ctx.papers.has(p.id), ownTitle, plain: true, showNew: false })).join('')}</div>`
+              : `<div class="empty"><h3>No new papers this week</h3></div>`}
+          </section>
+        </div>
+
+        <div>
+          <section class="section" aria-labelledby="h-fund">
+            <div class="section-head"><h2 class="eyebrow" id="h-fund">Funding desk</h2><a class="more" href="#funding">All funding ${icon('arrow', 'xs')}</a></div>
+            ${fundingDesk(newOpps, deadlines, prepare, opps, grants)}
+          </section>
+
+          ${citing.length ? `<section class="section" aria-labelledby="h-cite">
+            <div class="section-head"><h2 class="eyebrow" id="h-cite">Citing your work<span class="count">${num(citing.length)}</span></h2><a class="more" href="#papers/citing">All ${icon('arrow', 'xs')}</a></div>
+            <div class="stories">${citing.slice(0, 3).map((p) => storyHTML(p, { saved: ctx.papers.has(p.id), ownTitle, abstract: false })).join('')}</div>
+          </section>` : ''}
+
+          ${m ? `<section class="section" aria-labelledby="h-num">
+            <div class="section-head"><h2 class="eyebrow" id="h-num">Your numbers</h2><a class="more" href="#profile">Profile ${icon('arrow', 'xs')}</a></div>
+            <div class="kpis" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+              <div class="card kpi"><div class="kpi-label">Citations</div><div class="kpi-value">${num(m.citations)}</div>
+                <div class="kpi-delta">${citationTrend(profile)}</div>
+                ${sparkline((profile.citations_by_year || []).map((c) => c.count))}</div>
+              <div class="card kpi"><div class="kpi-label">h-index</div><div class="kpi-value">${num(m.h_index)}</div>
+                <div class="kpi-delta">i10 ${num(m.i10_index)} · ${num(m.outputs)} outputs</div></div>
+            </div>
+            ${D.citations ? `<p class="scan"><a class="more" href="#profile/citations">${num(D.citations.totals.last_12_months)} citing papers this year · ${num(D.citations.totals.countries)} countries ${icon('arrow', 'xs')}</a></p>` : ''}
+          </section>` : ''}
+        </div>
       </div>
 
-      <div>
-        <section class="section" aria-labelledby="h-fund">
-          <div class="section-head"><h2 class="eyebrow" id="h-fund">Funding desk</h2><a class="more" href="#funding">All funding ${icon('arrow', 'xs')}</a></div>
-          ${fundingDesk(newOpps, deadlines, prepare, opps, grants)}
-        </section>
-
-        ${citing.length ? `<section class="section" aria-labelledby="h-cite">
-          <div class="section-head"><h2 class="eyebrow" id="h-cite">Citing your work<span class="count">${num(citing.length)}</span></h2><a class="more" href="#papers/citing">All ${icon('arrow', 'xs')}</a></div>
-          <div class="stories">${citing.slice(0, 3).map((p) => storyHTML(p, { saved: ctx.papers.has(p.id), ownTitle, abstract: false })).join('')}</div>
-        </section>` : ''}
-
-        ${m ? `<section class="section" aria-labelledby="h-num">
-          <div class="section-head"><h2 class="eyebrow" id="h-num">Your numbers</h2><a class="more" href="#profile">Profile ${icon('arrow', 'xs')}</a></div>
-          <div class="kpis" style="grid-template-columns:repeat(2,minmax(0,1fr))">
-            <div class="card kpi"><div class="kpi-label">Citations</div><div class="kpi-value">${num(m.citations)}</div>
-              <div class="kpi-delta">${citationTrend(profile)}</div>
-              ${sparkline((profile.citations_by_year || []).map((c) => c.count))}</div>
-            <div class="card kpi"><div class="kpi-label">h-index</div><div class="kpi-value">${num(m.h_index)}</div>
-              <div class="kpi-delta">i10 ${num(m.i10_index)} · ${num(m.outputs)} outputs</div></div>
-          </div>
-          ${D.citations ? `<p class="scan"><a class="more" href="#profile/citations">${num(D.citations.totals.last_12_months)} citing papers this year · ${num(D.citations.totals.countries)} countries ${icon('arrow', 'xs')}</a></p>` : ''}
-        </section>` : ''}
-      </div>
-    </div>
-
-    <p class="scan" style="margin-top:28px">${esc(ctx.updatedLine || '')}</p>`;
-
-  const stop = mountWave(root.querySelector('#mast-wave'));
-  ctx.onLeave(stop);
+      <p class="scan" style="margin-top:28px">${esc(ctx.updatedLine || '')}</p>`;
+    if (sea) root.querySelector('#mast-wave').replaceWith(sea);
+    else stopSea = mountWave(root.querySelector('#mast-wave'));
+  };
+  ctx.onLeave(() => stopSea?.());
+  ctx.redraw = draw;
+  draw();
 }
 
 function fundingDesk(newOpps, deadlines, prepare, opps, grants) {
@@ -106,13 +112,17 @@ function fundingDesk(newOpps, deadlines, prepare, opps, grants) {
 }
 
 /** What the daily agent found: a headline and a few lines, shown for four days. */
-function briefingHTML(B) {
+function briefingHTML(B, ctx) {
   if (!B?.items?.length || daysTo(String(B.generated_at || '').slice(0, 10)) < -4) return '';
+  const archived = (it) => { const m = /^#funding\/(.+)$/.exec(it.url || ''); return !!m && ctx.away.grants.has(decodeURIComponent(m[1])); };
+  const items = B.items.filter((it) => !archived(it));          // nothing about a call the reader has archived
+  if (!items.length) return '';
+  const headline = archived(B.items[0]) ? '' : B.headline;       // the headline speaks of the first item
   const ICON = { funding: 'spark', deadline: 'clock', paper: 'pdf', citation: 'quote', note: 'info' };
   return `<section class="card briefing" aria-label="From your agent">
     <div class="record-top"><span class="kpi-label">From your agent · ${esc(fmtDate(String(B.generated_at).slice(0, 10)))}</span></div>
-    ${B.headline ? `<h2>${esc(B.headline)}</h2>` : ''}
-    <ul>${B.items.slice(0, 5).map((it) => `<li class="${it.important ? 'hot' : ''}">${icon(ICON[it.kind] || 'info')}
+    ${headline ? `<h2>${esc(headline)}</h2>` : ''}
+    <ul>${items.slice(0, 5).map((it) => `<li class="${it.important ? 'hot' : ''}">${icon(ICON[it.kind] || 'info')}
       <span><b>${esc(it.title)}</b>${esc(it.text || '')}${it.url ? ` <a href="${safeUrl(it.url)}"${/^#/.test(it.url) ? '' : ' target="_blank" rel="noopener"'}>Open</a>` : ''}</span></li>`).join('')}</ul>
   </section>`;
 }

@@ -66,12 +66,12 @@ export function paperDate(p) {
 /** Every paper rendered so far, by id — lets a tap on "save" find the object (incl. live search hits). */
 export const paperIndex = new Map();
 
-export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abstract = true, showNew = true, plain = false } = {}) {
+export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abstract = true, showNew = true, plain = false, away = false } = {}) {
   // `plain` (the Today screen): every card the same size, bullet points only, no abstract
   paperIndex.set(p.id, p);
   const venue = p.venue ? badge(p.venue) : '';
   const cites = (p.cites || []).map((id) => ownTitle?.(id)).filter(Boolean);
-  return `<article class="story${lead ? ' lead' : ''}" data-paper="${esc(p.id)}">
+  return `<article class="story${lead ? ' lead' : ''}" data-paper="${esc(p.id)}" data-swipe="paper" data-id="${esc(p.id)}">
     <h3 class="story-title"><a href="${safeUrl(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a></h3>
     <div class="kicker">${venue}<span>${esc(paperDate(p))}</span>
       ${showNew && p.is_new ? '<span class="tag new">New</span>' : ''}
@@ -87,7 +87,8 @@ export function storyHTML(p, { lead = false, saved = false, ownTitle = null, abs
         ${p.abstract && !plain && !(lead && abstract && !p.bullets?.length) ? `<button class="act" type="button" data-abs aria-expanded="false">Abstract</button>` : ''}
         ${p.pdf_url ? `<a class="act" href="${safeUrl(p.pdf_url)}" target="_blank" rel="noopener">${icon('pdf', 'sm')}PDF</a>` : ''}
         <button class="act" type="button" data-ask="paper" data-id="${esc(p.id)}" aria-label="Send to an agent" title="Send to an agent">${icon('spark', 'sm')}</button>
-        <button class="act" type="button" data-save-paper="${esc(p.id)}" aria-pressed="${saved}" aria-label="${saved ? 'Remove from reading list' : 'Save to reading list'}">${icon('save', 'sm')}</button>
+        ${away ? '' : `<button class="act" type="button" data-save-paper="${esc(p.id)}" aria-pressed="${saved}" aria-label="${saved ? 'Remove from reading list' : 'Save to reading list'}">${icon('save', 'sm')}</button>`}
+        <button class="act${away ? ' back' : ''}" type="button" data-away="paper" data-id="${esc(p.id)}" aria-label="${away ? 'Restore' : 'Archive'}" title="${away ? 'Restore' : 'Archive'}">${icon(away ? 'undo' : 'archive', 'sm')}</button>
       </span>
     </div>
   </article>`;
@@ -189,12 +190,12 @@ function datesBlock(o) {
   return html;
 }
 
-export function oppHTML(o, { saved = false, open = false } = {}) {
+export function oppHTML(o, { saved = false, open = false, away = false } = {}) {
   const a = o.analysis;
   const [lvl, word] = EFFORT[a.effort.level] || [2, 'Moderate'];
   const host = a.role === 'host' || a.opportunity_type === 'hosting';
   const canCal = o.bucket === 'deadline' || (o.bucket === 'prepare' && a.effort.start_by);
-  return `<article class="card opp" id="opp-${esc(o.id)}" data-opp="${esc(o.id)}">
+  return `<article class="card opp" id="opp-${esc(o.id)}" data-opp="${esc(o.id)}" data-swipe="opp" data-id="${esc(o.id)}">
     <button class="act opp-save" type="button" data-save-opp="${esc(o.id)}" aria-pressed="${saved}" aria-label="${saved ? 'Remove from shortlist' : 'Add to shortlist'}">${icon('save', 'sm')}</button>
     <h3 class="opp-title"><a href="${safeUrl(o.url)}" target="_blank" rel="noopener">${esc(o.title)}</a></h3>
     <div class="opp-head">
@@ -242,6 +243,7 @@ export function oppHTML(o, { saved = false, open = false } = {}) {
       <a class="btn primary" href="${safeUrl(o.url)}" target="_blank" rel="noopener">Open the call ${icon('ext', 'sm')}</a>
       ${canCal ? `<button class="btn" type="button" data-cal="${esc(o.id)}">${icon('cal', 'sm')}Add to calendar</button>` : ''}
       <button class="btn" type="button" data-ask="opp" data-id="${esc(o.id)}">${icon('spark', 'sm')}Send to an agent</button>
+      <button class="btn" type="button" data-away="opp" data-id="${esc(o.id)}">${icon(away ? 'undo' : 'archive', 'sm')}${away ? 'Restore' : 'Archive'}</button>
     </div>
     <div class="opp-foot">${icon('spark', 'xs')}Reviewed by Claude · ${fmtDate(o.analysed?.at)}</div>
   </article>`;
@@ -255,7 +257,7 @@ export function oppRow(o) {
     ? `<b>${fmtDate(o.closes)}</b><span class="due ${dueClass(d)}">${esc(left(d))}</span>`
     : o.bucket === 'rolling' ? '<b>Always open</b><span class="muted">no deadline</span>'
       : `<b>${a.recurrence.is_estimate ? '~' : ''}${esc(fmtMonth(nextDate(o)) || 'TBA')}</b><span class="muted">next round</span>`;
-  return `<a class="rowlink" href="#funding/${esc(o.id)}">
+  return `<a class="rowlink" href="#funding/${esc(o.id)}" data-swipe="opp" data-id="${esc(o.id)}">
     <h3>${esc(o.title)}</h3>
     <div class="right">${right}</div>
     <div class="meta">${funderTag(o.funder)}
