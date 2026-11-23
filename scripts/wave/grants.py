@@ -326,6 +326,28 @@ def add_odds(selected: list[dict]) -> None:
             o["odds"] = {"awards": int(pot[0][1] // top[0][1])}
 
 
+def one_per_family(selected: list[dict]) -> list[dict]:
+    """One card per call: when a funder lists the same scheme more than once (a general page and this
+    round, or last round and this one), keep the most actionable — a deadline, then always open, then
+    prepare ahead — and, among equals, the better fit."""
+    rank = {"deadline": 0, "rolling": 1, "prepare": 2}
+    best: dict[str, dict] = {}
+    for o in selected:
+        fam = family(re.sub(r"\([^)]*\)", " ", o["title"]))                # "(KTP)" and the like do not make a new scheme
+        who = "UKRI" if o.get("source") == "ukri" else o["funder"]     # UKRI lists one scheme under several council names
+        key = f"{who}|{fam}" if len(fam) >= 12 else o["id"]
+        held = best.get(key)
+        if held is None or (rank.get(o["bucket"], 3), -o["analysis"]["fit_score"]) < (rank.get(held["bucket"], 3), -held["analysis"]["fit_score"]):
+            best[key] = o
+    keep = {id(o) for o in best.values()}
+    out, seen = [], set()
+    for o in selected:
+        if id(o) in keep and o["id"] not in seen:
+            seen.add(o["id"])
+            out.append(o)
+    return out
+
+
 def add_sector(selected: list[dict]) -> None:
     """Mark the calls whose money comes from industry, or that are run with industry, as the watch-list says."""
     watch = read_json(CONFIG / "schemes.json", {}) or {}
@@ -349,6 +371,7 @@ def refresh_published() -> None:
     class _Off:                      # no Claude here: cached figures, else the plain reading
         available, remaining, model = False, 0, ""
 
+    data["opportunities"] = one_per_family(data.get("opportunities", []))
     add_money(data.get("opportunities", []), cache, _Off())
     add_odds(data.get("opportunities", []))
     add_sector(data.get("opportunities", []))
@@ -706,6 +729,7 @@ def run(cfg: dict) -> dict:
                           and (today() - (parse_date(cache["first_seen"][it["id"]]) or today())).days <= 7),
         })
 
+    selected = one_per_family(selected)
     add_money(selected, cache, claude)
     add_odds(selected)
     add_sector(selected)

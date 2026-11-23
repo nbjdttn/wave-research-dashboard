@@ -29,7 +29,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
+      # The branch as it stands now, not the commit that triggered the run: a run that waited in the
+      # queue must start from the data and memory the run before it left.
       - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
 
       - uses: actions/setup-python@v6
         with:
@@ -65,16 +69,28 @@ jobs:
             echo "Nothing changed."
             exit 0
           fi
+          git diff --cached --name-only --diff-filter=d > "$RUNNER_TEMP/written"
+          git diff --cached --name-only --diff-filter=D > "$RUNNER_TEMP/removed"
           git commit --quiet -m "Daily data refresh ($(date -u +%F))"
-          # Someone else may have pushed meanwhile (another run, or the daily agent). The files here are
-          # generated, so on a clash this run's fresh copy wins; if it still cannot be published, the
-          # next run will do it — a busy branch must not fail the job.
+          ours=$(git rev-parse HEAD)
+          # Someone else may have pushed meanwhile (the daily agent, or a change to the code). The files
+          # this run wrote are then laid whole on top of the branch as it stands: generated JSON is
+          # never merged line by line, which can mix two runs' entries. A busy branch must not fail the
+          # job; if it cannot be published, the next run will do it.
           for attempt in 1 2 3; do
-            if git pull --quiet --rebase -X theirs origin "${GITHUB_REF_NAME}" \
-               && git push --quiet origin "HEAD:${GITHUB_REF_NAME}"; then
+            if git push --quiet origin "HEAD:${GITHUB_REF_NAME}"; then
               exit 0
             fi
-            git rebase --abort 2>/dev/null || true
-            sleep 7
+            sleep 5
+            git fetch --quiet origin "${GITHUB_REF_NAME}"
+            git reset --quiet --hard FETCH_HEAD
+            xargs -r -d '\n' -a "$RUNNER_TEMP/written" git checkout "$ours" --
+            xargs -r -d '\n' -a "$RUNNER_TEMP/removed" git rm -q --ignore-unmatch --
+            git add -A data assets/img
+            if git diff --cached --quiet; then
+              echo "The branch already has these files."
+              exit 0
+            fi
+            git commit --quiet -m "Daily data refresh ($(date -u +%F))"
           done
           echo "::warning::This refresh could not be published because the branch kept changing; the next run will publish."

@@ -421,6 +421,7 @@ class Claude:
                 "- headline: at most 14 characters, the most one successful application can bring, rounded, with k and m: "
                 "'£250k', '£100k–£200k', '€1.5m'. When it pays a salary or allowances rather than a sum, say so: "
                 "'Salary, 3 yrs', 'Salary + £1k'. No cap: 'No limit'. Computer time rather than money: 'Compute time'. "
+                "When only the whole pot is stated, never show it as one award: 'Pot £12.5m', with max_gbp 0. "
                 "Nothing stated: ''.\n"
                 "- label: at most 6 words saying what the figure is, e.g. 'max per award, 80% FEC', 'one consortium, total', "
                 "'average per project'.\n"
