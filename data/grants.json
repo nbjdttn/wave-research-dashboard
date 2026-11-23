@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23T11:50:11Z",
+ "generated_at": "2026-11-23T12:12:46Z",
  "counts": {
   "scanned": {
    "ukri_open": 137,
@@ -9,13 +9,13 @@
   },
   "screened": 486,
   "read": 83,
-  "selected": 33,
+  "selected": 31,
   "filtered": 50,
   "awaiting_review": 0,
   "by_bucket": {
    "deadline": 7,
-   "rolling": 13,
-   "prepare": 13
+   "rolling": 12,
+   "prepare": 12
   }
  },
  "opportunities": [
@@ -4885,18 +4885,6 @@
    "fit_score": 28
   },
   {
-   "id": "ukri-175287",
-   "source": "ukri",
-   "title": "Ofgem Strategic Innovation Fund: round five discovery competition four",
-   "funder": "Innovate UK",
-   "url": "https://www.ukri.org/opportunity/ofgem-strategic-innovation-fund-round-five-discovery-competition-four/",
-   "published": "2025-09-26",
-   "first_seen": "2026-11-23",
-   "status": "closed",
-   "reason": "Topic: Energy network challenges; offshore wind or marine links are occasional, not central to your wave research.",
-   "fit_score": 28
-  },
-  {
    "id": "eu-HORIZON-NATURE-2027-04-01",
    "source": "eu",
    "title": "A stronger Global Ocean Observing System to enhance Europe’s strategic autonomy, climate resilience and biodiversity conservation",
@@ -5010,39 +4998,39 @@
   "ukri": {
    "ok": true,
    "count": 137,
-   "checked": "2026-11-23T11:50:11Z",
-   "last_success": "2026-11-23T11:50:11Z"
+   "checked": "2026-11-23T12:12:46Z",
+   "last_success": "2026-11-23T12:12:46Z"
   },
   "ukri_archive": {
    "ok": true,
    "count": 10,
-   "checked": "2026-11-23T11:50:11Z",
-   "last_success": "2026-11-23T11:50:11Z"
+   "checked": "2026-11-23T12:12:46Z",
+   "last_success": "2026-11-23T12:12:46Z"
   },
   "eu": {
    "ok": true,
    "count": 103,
-   "checked": "2026-11-23T11:50:11Z",
-   "last_success": "2026-11-23T11:50:11Z"
+   "checked": "2026-11-23T12:12:46Z",
+   "last_success": "2026-11-23T12:12:46Z"
   },
   "schemes": {
    "ok": true,
    "count": 38,
-   "checked": "2026-11-23T11:50:11Z"
+   "checked": "2026-11-23T12:12:46Z"
   }
  },
  "ai": {
   "enabled": true,
   "key_present": true,
   "model": "claude-opus-5-5",
-  "calls_this_run": 36,
-  "estimated_cost_usd": 2.944,
+  "calls_this_run": 0,
+  "estimated_cost_usd": 0.0,
   "usage": {
-   "input_tokens": 108297,
-   "output_tokens": 63084,
-   "cache_read_input_tokens": 1042816,
-   "cache_creation_input_tokens": 156378,
-   "web_searches": 5
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "web_searches": 0
   },
   "errors": [],
   "last_ai_run": "2026-11-23T11:50:11Z",
