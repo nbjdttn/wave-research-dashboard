@@ -310,6 +310,7 @@ def add_odds(selected: list[dict]) -> None:
     that states its pot and its largest award, how many awards that makes at most."""
     rates = (read_json(CONFIG / "success_rates.json", {}) or {}).get("rates", [])
     for o in selected:
+        o.pop("odds", None)
         hit = None
         for r in rates:
             m = r.get("match") or {}

@@ -137,7 +137,7 @@ export function oddsOf(o) {
 
 function moneyBlock(o) {
   const m = moneyOf(o), odds = oddsOf(o);
-  const sub = [m.label, m.pot && m.headline !== m.pot ? `pot ${m.pot}` : ''].filter(Boolean).join(' · ');
+  const sub = [m.label, m.pot && !(m.headline || '').includes(m.pot) ? `pot ${m.pot}` : ''].filter(Boolean).join(' · ');
   return `<div class="money">
     <div class="money-main">
       <div class="money-fig${m.headline && SIGN.test(m.headline) ? '' : ' words'}">${esc(m.headline || 'Amount not stated')}</div>
@@ -162,10 +162,15 @@ function deadlineFact(o) {
     return `<div class="fact"><div class="fact-label">Deadline</div><div class="fact-value">Always open</div>
       <div class="fact-sub">${esc(a.round?.stage || 'Apply any time')}</div></div>`;
   }
-  const close = r.next_expected_close, open = r.next_expected_open || (o.opens ? o.opens.slice(0, 7) : null);
+  // the call's own opening date counts only while it is still ahead: a past one is the last round, not the next
+  const ahead = o.opens && daysTo(o.opens) >= 0 ? o.opens.slice(0, 7) : null;
+  const close = r.next_expected_close, open = r.next_expected_open || ahead;
   const when = close ? `${r.is_estimate ? '~' : ''}${fmtMonth(close)}` : open ? `Opens ${r.is_estimate ? '~' : ''}${fmtMonth(open)}` : 'To be announced';
+  const sub = close || open
+    ? `${close && open ? `opens ${r.is_estimate ? '~' : ''}${esc(fmtMonth(open))} · ` : ''}${r.is_estimate ? 'estimate' : 'announced'}`
+    : (o.opens ? `last opened ${esc(fmtMonth(o.opens.slice(0, 7)))}` : 'no date yet');
   return `<div class="fact"><div class="fact-label">Next round</div><div class="fact-value">${esc(when)}</div>
-    <div class="fact-sub">${close && open ? `opens ${r.is_estimate ? '~' : ''}${esc(fmtMonth(open))} · ` : ''}${r.is_estimate ? 'estimate' : 'announced'}</div></div>`;
+    <div class="fact-sub">${sub}</div></div>`;
 }
 
 function startBy(o) {
