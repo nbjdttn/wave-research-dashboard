@@ -319,7 +319,7 @@ def add_odds(selected: list[dict]) -> None:
                 hit = r
                 break
         if hit:
-            o["odds"] = {k: hit.get(k) for k in ("rate", "text", "period", "basis", "source") if hit.get(k) not in (None, "")}
+            o["odds"] = {k: hit.get(k) for k in ("rate", "qualifier", "text", "period", "basis", "source") if hit.get(k) not in (None, "")}
             continue
         pot, top = _amounts((o.get("award") or {}).get("total_fund") or ""), _amounts((o.get("award") or {}).get("max_award") or "")
         if pot and top and top[0][1] and pot[0][1] / top[0][1] >= 2:

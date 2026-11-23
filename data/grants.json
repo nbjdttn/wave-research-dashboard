@@ -304,6 +304,14 @@
     "headline": "£130k",
     "label": "max: salary + expenses, 3 yrs",
     "max_gbp": 130000
+   },
+   "odds": {
+    "rate": 29,
+    "qualifier": "≤",
+    "text": "under 1 in 3",
+    "period": "2026-27 awards",
+    "basis": "Leverhulme Early Career Fellowships: 145 awards from over 500 applications, as quoted from the Trust by Cambridge's Isaac Newton Trust (a ceiling; York's research office cites 18.4% for the 2022 call)",
+    "source": "https://www.newtontrust.cam.ac.uk/ECFs/LeverhulmeECF/LECFFAQ"
    }
   },
   {
@@ -456,6 +464,13 @@
     "headline": "£30k",
     "label": "max, equipment and travel",
     "max_gbp": 30000
+   },
+   "odds": {
+    "rate": 21.0,
+    "text": "about 1 in 5",
+    "period": "2025/26",
+    "basis": "Royal Society Research Grants, 99 offers of 472 eligible applications (2024/25: 220 of 805)",
+    "source": "https://royalsociety.org/grants/research-grants/"
    }
   },
   {
@@ -587,6 +602,13 @@
     "headline": "€43m",
     "label": "one consortium, total",
     "max_gbp": 36550000
+   },
+   "odds": {
+    "rate": 25,
+    "text": "about 1 in 4",
+    "period": "Cluster 5, 2021–23",
+    "basis": "Horizon Europe Cluster 5 (climate, energy, mobility) as a whole: 25% of eligible proposals funded, per an expert report published by the Commission; single topics vary",
+    "source": "https://technopolis-group.com/wp-content/uploads/2024/09/horizon-europe-and-the-green-transition-KI0524589ENN.pdf"
    }
   },
   {
@@ -736,7 +758,14 @@
     "label": "your pay while seconded",
     "max_gbp": 0
    },
-   "sector": "industry"
+   "sector": "industry",
+   "odds": {
+    "rate": 14.0,
+    "text": "about 1 in 7",
+    "period": "2025/26",
+    "basis": "Royal Society Short Industry Fellowships, 7 offers of 50 eligible applications (2024/25: 9 of 34)",
+    "source": "https://royalsociety.org/grants/short-industry-fellowships/"
+   }
   },
   {
    "id": "scheme-msca-postdoctoral-fellowships",
@@ -876,6 +905,13 @@
     "headline": "Salary, 2 yrs",
     "label": "fellow's pay and costs, by EU",
     "max_gbp": 0
+   },
+   "odds": {
+    "rate": 9.4,
+    "text": "just under 1 in 10",
+    "period": "2025 call",
+    "basis": "MSCA Postdoctoral Fellowships: 1,610 selected among 17,066 applicants",
+    "source": "https://marie-sklodowska-curie-actions.ec.europa.eu/news/msca-awards-eu4043-million-to-postdoctoral-researchers"
    }
   },
   {
@@ -1010,6 +1046,13 @@
     "headline": "No limit",
     "label": "EPSRC pays 80% FEC",
     "max_gbp": 0
+   },
+   "odds": {
+    "rate": 20.9,
+    "text": "about 1 in 5",
+    "period": "at panel, 2025/26",
+    "basis": "EPSRC standard grants (68 of 411) and New Investigator Awards (67 of 234) decided at panel; bids dropped after peer review are not counted, so the overall rate is lower",
+    "source": "https://www.ukri.org/publications/epsrc-funding-application-outcomes/"
    }
   },
   {
@@ -1135,6 +1178,13 @@
     "headline": "Visit costs",
     "label": "travel and salary, 80% FEC",
     "max_gbp": 0
+   },
+   "odds": {
+    "rate": 20.9,
+    "text": "about 1 in 5",
+    "period": "at panel, 2025/26",
+    "basis": "EPSRC standard grants (68 of 411) and New Investigator Awards (67 of 234) decided at panel; bids dropped after peer review are not counted, so the overall rate is lower",
+    "source": "https://www.ukri.org/publications/epsrc-funding-application-outcomes/"
    }
   },
   {
@@ -1263,6 +1313,13 @@
     "headline": "£500k",
     "label": "max per award",
     "max_gbp": 500000
+   },
+   "odds": {
+    "rate": 20,
+    "text": "about 1 in 5",
+    "period": "2018",
+    "basis": "Leverhulme Research Project Grants, 856 applications, 20% funded (a table of the Trust's 2018 figures; nothing newer is published)",
+    "source": "https://lims.ac.uk/funding-rates"
    }
   },
   {
@@ -1530,6 +1587,13 @@
     "headline": "No limit",
     "label": "UK side, 80% FEC",
     "max_gbp": 0
+   },
+   "odds": {
+    "rate": 20.9,
+    "text": "about 1 in 5",
+    "period": "at panel, 2025/26",
+    "basis": "EPSRC standard grants (68 of 411) and New Investigator Awards (67 of 234) decided at panel; bids dropped after peer review are not counted, so the overall rate is lower",
+    "source": "https://www.ukri.org/publications/epsrc-funding-application-outcomes/"
    }
   },
   {
@@ -1676,6 +1740,13 @@
     "headline": "£950k",
     "label": "max per award, 80% FEC",
     "max_gbp": 950000
+   },
+   "odds": {
+    "rate": 20.4,
+    "text": "about 1 in 5",
+    "period": "Jan 2025 round",
+    "basis": "NERC Pushing the Frontiers, 37 funded of 181 (July 2024 round: 40 of 172); lead-agency routes go through the same scheme",
+    "source": "https://www.ukri.org/wp-content/uploads/2022/11/NERC-191225-PushingFrontiersEnvironmentalResearchFundingOutcomesJanuary2025.pdf"
    }
   },
   {
@@ -1928,6 +1999,13 @@
     "headline": "£950k–£3.45m",
     "label": "whole joint project",
     "max_gbp": 3450000
+   },
+   "odds": {
+    "rate": 20.4,
+    "text": "about 1 in 5",
+    "period": "Jan 2025 round",
+    "basis": "NERC Pushing the Frontiers, 37 funded of 181 (July 2024 round: 40 of 172); lead-agency routes go through the same scheme",
+    "source": "https://www.ukri.org/wp-content/uploads/2022/11/NERC-191225-PushingFrontiersEnvironmentalResearchFundingOutcomesJanuary2025.pdf"
    }
   },
   {
@@ -2431,6 +2509,13 @@
     "headline": "£300k",
     "label": "UK share when NSF leads",
     "max_gbp": 300000
+   },
+   "odds": {
+    "rate": 20.4,
+    "text": "about 1 in 5",
+    "period": "Jan 2025 round",
+    "basis": "NERC Pushing the Frontiers, 37 funded of 181 (July 2024 round: 40 of 172); lead-agency routes go through the same scheme",
+    "source": "https://www.ukri.org/wp-content/uploads/2022/11/NERC-191225-PushingFrontiersEnvironmentalResearchFundingOutcomesJanuary2025.pdf"
    }
   },
   {
@@ -2710,6 +2795,14 @@
     "headline": "£100k",
     "label": "prize, over 2–3 years",
     "max_gbp": 100000
+   },
+   "odds": {
+    "rate": 7.5,
+    "qualifier": "≤",
+    "text": "under 1 in 13",
+    "period": "2026 prizes",
+    "basis": "Philip Leverhulme Prizes: 30 prizes from over 400 nominations (a ceiling)",
+    "source": "https://www.ox.ac.uk/news/2026-10-23-three-oxford-researchers-awarded-2026-philip-leverhulme-prizes"
    }
   },
   {
@@ -2853,6 +2946,13 @@
     "headline": "£3k–£12k",
     "label": "travel, by length of visits",
     "max_gbp": 12000
+   },
+   "odds": {
+    "rate": 23.5,
+    "text": "about 1 in 4",
+    "period": "2025/26",
+    "basis": "Royal Society International Exchanges, 274 offers of 1,164 eligible applications (2024/25: 320 of 923)",
+    "source": "https://royalsociety.org/grants/international-exchanges/"
    }
   },
   {
@@ -3007,7 +3107,11 @@
     "pot": "£1m"
    },
    "odds": {
-    "awards": 10
+    "rate": 18.6,
+    "text": "about 1 in 5",
+    "period": "Mar 2023 round",
+    "basis": "NERC Global Partnerships Seedcorn Fund, 13 funded of 70; same £1m pot and £100,000 maximum as now",
+    "source": "https://www.ukri.org/wp-content/uploads/2024/02/NERC-270224-GlobalPartnershipsSeedcornFundFundingOutcomesMarch2023.pdf"
    }
   },
   {
@@ -3155,6 +3259,13 @@
     "headline": "≈£79k",
     "label": "average per project",
     "max_gbp": 79000
+   },
+   "odds": {
+    "rate": 5.3,
+    "text": "about 1 in 19",
+    "period": "3rd call, 2025",
+    "basis": "British Council ISPF global research collaborations, 26 funded of 485 eligible applications (round 1: 45 of 263)",
+    "source": "https://opportunities-insight.britishcouncil.org/short-articles/news/over-ps28m-new-ispf-grants-awarded-33-uk-universities"
    }
   },
   {
@@ -3300,6 +3411,13 @@
     "headline": "€1.5m",
     "label": "+ up to €1m extra, 5 yrs",
     "max_gbp": 1275000
+   },
+   "odds": {
+    "rate": 8.8,
+    "text": "about 1 in 11",
+    "period": "2026 call",
+    "basis": "ERC Starting Grants: 421 selected of 4,807 proposals (Physical Sciences and Engineering: 169 of 1,971)",
+    "source": "https://erc.europa.eu/system/files/2026-09/erc-2026-stg-statistics.pdf"
    }
   },
   {
@@ -3455,6 +3573,13 @@
     "label": "per award, 80% FEC",
     "max_gbp": 200000,
     "pot": "£8m"
+   },
+   "odds": {
+    "rate": 29.0,
+    "text": "about 3 in 10",
+    "period": "June 2022 round",
+    "basis": "NERC Exploring the Frontiers, 100 funded of 345 lead proposals; the latest round with published decisions",
+    "source": "https://www.ukri.org/wp-content/uploads/2024/02/NERC-060224-ExploringFrontiersFundingDecisionsJune2022.pdf"
    }
   },
   {
@@ -3583,6 +3708,14 @@
     "headline": "£100k",
     "label": "max per project, 80% FEC",
     "max_gbp": 100000
+   },
+   "odds": {
+    "rate": 10,
+    "qualifier": "≤",
+    "text": "under 1 in 10",
+    "period": "2020 call",
+    "basis": "Supergen ORE Flexible Funding call 2: 12 awards from over 120 applicants (a ceiling; call 1: 10 awards from over 80)",
+    "source": "https://supergen-ore.net/flexible-funding"
    }
   },
   {
@@ -3706,6 +3839,13 @@
     "headline": "≈£4k",
     "label": "average award, recent calls",
     "max_gbp": 4000
+   },
+   "odds": {
+    "rate": 55.3,
+    "text": "just over 1 in 2",
+    "period": "calls 1–6",
+    "basis": "Supergen ORE ECR Research Fund: 47 awards from 85 applications over the first six calls (awards of up to £5,000)",
+    "source": "https://supergen-ore.net/uploads/ECR-Research-Fund-Call-for-Proposals-Round-7-July-2024.pdf"
    }
   }
  ],

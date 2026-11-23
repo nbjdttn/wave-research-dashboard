@@ -129,8 +129,9 @@ export function moneyOf(o) {
 /** A rough chance of success, as published; or, for a new call, how many awards its pot allows. */
 export function oddsOf(o) {
   const d = o.odds || {};
-  if (d.rate != null) return { big: `${d.rate < 10 ? '≈' : '≈'}${Math.round(d.rate)}%`, small: `funded${d.period ? ` · ${d.period}` : ''}`, short: `≈${Math.round(d.rate)}% funded` };
-  if (d.awards) return { big: `~${d.awards}`, small: 'awards at most', short: `~${d.awards} awards` };
+  const q = d.qualifier || '≈';                          // '≤' when the published count gives only a ceiling
+  if (d.rate != null) return { big: `${q}${Math.round(d.rate)}%`, small: `funded${d.period ? ` · ${d.period}` : ''}`, short: `${q}${Math.round(d.rate)}% funded` };
+  if (d.awards) return { big: `~${d.awards}`, small: 'awards, if each is the max', short: `~${d.awards} awards` };
   return null;
 }
 
@@ -215,10 +216,10 @@ function datesBlock(o) {
   html += row('Duration', esc(a.award_summary?.duration || ''));
   html += row('Total fund', esc(o.award?.total_fund || ''));
   if (o.odds?.rate != null) {
-    html += row('Success rate', `about ${Math.round(o.odds.rate)}%${o.odds.basis ? ` · ${esc(o.odds.basis)}` : ''}${o.odds.period ? `, ${esc(o.odds.period)}` : ''}`
+    html += row('Success rate', `${o.odds.qualifier === '≤' ? 'at most' : 'about'} ${Math.round(o.odds.rate)}%${o.odds.basis ? ` · ${esc(o.odds.basis)}` : ''}${o.odds.period ? `, ${esc(o.odds.period)}` : ''}`
       + (o.odds.source ? ` · <a href="${safeUrl(o.odds.source)}" target="_blank" rel="noopener">source</a>` : ''));
   } else if (o.odds?.awards) {
-    html += row('Awards', `at most about ${o.odds.awards} (the pot divided by the largest award)`);
+    html += row('Awards', `about ${o.odds.awards} if every award is the largest allowed (the pot divided by the largest award); more if smaller`);
   }
   html += row('Repeats', esc(CADENCE[r.cadence] || ''));
   html += '</dl>';

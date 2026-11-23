@@ -1,0 +1,287 @@
+{
+ "_about": "Rough chances of success shown on the funding cards. Published figures only — from the funder's own pages, or counted from its published lists of decisions — each with its period and source; never an estimate. \"qualifier\": \"≤\" marks a ceiling, from counts such as 'over 400 applications'. 'match' picks the calls: 'ids' (exact), 'id' (a pattern on the identifier), or 'title' with an optional 'funder' (patterns). The daily agent pass adds entries for calls that have none.",
+ "rates": [
+  {
+   "key": "epsrc-responsive",
+   "match": {
+    "ids": [
+     "ukri-121997",
+     "ukri-122105",
+     "ukri-122253",
+     "scheme-epsrc-standard-research-grant"
+    ],
+    "title": "EPSRC (standard research grant|new investigator)",
+    "funder": "EPSRC"
+   },
+   "rate": 20.9,
+   "text": "about 1 in 5",
+   "period": "at panel, 2025/26",
+   "basis": "EPSRC standard grants (68 of 411) and New Investigator Awards (67 of 234) decided at panel; bids dropped after peer review are not counted, so the overall rate is lower",
+   "source": "https://www.ukri.org/publications/epsrc-funding-application-outcomes/",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "nerc-pushing-the-frontiers",
+   "match": {
+    "ids": [
+     "ukri-187145",
+     "ukri-72597",
+     "ukri-64485",
+     "scheme-nerc-pushing-the-frontiers"
+    ],
+    "title": "pushing the frontiers"
+   },
+   "rate": 20.4,
+   "text": "about 1 in 5",
+   "period": "Jan 2025 round",
+   "basis": "NERC Pushing the Frontiers, 37 funded of 181 (July 2024 round: 40 of 172); lead-agency routes go through the same scheme",
+   "source": "https://www.ukri.org/wp-content/uploads/2022/11/NERC-191225-PushingFrontiersEnvironmentalResearchFundingOutcomesJanuary2025.pdf",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "nerc-exploring-the-frontiers",
+   "match": {
+    "ids": [
+     "ukri-202899"
+    ],
+    "title": "exploring the frontiers"
+   },
+   "rate": 29.0,
+   "text": "about 3 in 10",
+   "period": "June 2022 round",
+   "basis": "NERC Exploring the Frontiers, 100 funded of 345 lead proposals; the latest round with published decisions",
+   "source": "https://www.ukri.org/wp-content/uploads/2024/02/NERC-060224-ExploringFrontiersFundingDecisionsJune2022.pdf",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "nerc-global-partnerships-seedcorn",
+   "match": {
+    "ids": [
+     "ukri-191210"
+    ],
+    "title": "Global Partnerships Seedcorn"
+   },
+   "rate": 18.6,
+   "text": "about 1 in 5",
+   "period": "Mar 2023 round",
+   "basis": "NERC Global Partnerships Seedcorn Fund, 13 funded of 70; same £1m pot and £100,000 maximum as now",
+   "source": "https://www.ukri.org/wp-content/uploads/2024/02/NERC-270224-GlobalPartnershipsSeedcornFundFundingOutcomesMarch2023.pdf",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "ukri-future-leaders",
+   "match": {
+    "ids": [
+     "scheme-ukri-future-leaders-fellowships"
+    ],
+    "title": "Future Leaders Fellowship"
+   },
+   "rate": 18,
+   "text": "just under 1 in 5",
+   "period": "round 8",
+   "basis": "UKRI Future Leaders Fellowships, 69 awards of about 370 applications, after universities' own selection",
+   "source": "https://www.ukri.org/publications/future-leaders-fellowships-outcomes-and-edi-data/",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "royal-society-research-grants",
+   "match": {
+    "ids": [
+     "scheme-royal-society-research-grants"
+    ]
+   },
+   "rate": 21.0,
+   "text": "about 1 in 5",
+   "period": "2025/26",
+   "basis": "Royal Society Research Grants, 99 offers of 472 eligible applications (2024/25: 220 of 805)",
+   "source": "https://royalsociety.org/grants/research-grants/",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "royal-society-international-exchanges",
+   "match": {
+    "ids": [
+     "scheme-royal-society-international-exchanges"
+    ]
+   },
+   "rate": 23.5,
+   "text": "about 1 in 4",
+   "period": "2025/26",
+   "basis": "Royal Society International Exchanges, 274 offers of 1,164 eligible applications (2024/25: 320 of 923)",
+   "source": "https://royalsociety.org/grants/international-exchanges/",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "royal-society-short-industry-fellowship",
+   "match": {
+    "ids": [
+     "scheme-royal-society-short-industry-fellowship"
+    ]
+   },
+   "rate": 14.0,
+   "text": "about 1 in 7",
+   "period": "2025/26",
+   "basis": "Royal Society Short Industry Fellowships, 7 offers of 50 eligible applications (2024/25: 9 of 34)",
+   "source": "https://royalsociety.org/grants/short-industry-fellowships/",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "royal-society-industry-fellowship",
+   "match": {
+    "ids": [
+     "scheme-royal-society-industry-fellowship"
+    ]
+   },
+   "rate": 24.3,
+   "text": "about 1 in 4",
+   "period": "2025/26",
+   "basis": "Royal Society Industry Fellowships, 9 offers of 37 eligible applications (2024/25: 8 of 32)",
+   "source": "https://royalsociety.org/grants/industry-fellowships/",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "british-council-ispf-rcg",
+   "match": {
+    "ids": [
+     "scheme-british-council-ispf-research-collaborations"
+    ]
+   },
+   "rate": 5.3,
+   "text": "about 1 in 19",
+   "period": "3rd call, 2025",
+   "basis": "British Council ISPF global research collaborations, 26 funded of 485 eligible applications (round 1: 45 of 263)",
+   "source": "https://opportunities-insight.britishcouncil.org/short-articles/news/over-ps28m-new-ispf-grants-awarded-33-uk-universities",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "innovate-uk-future-offshore-wind",
+   "match": {
+    "title": "Future offshore wind technologies",
+    "funder": "Innovate UK|UKRI"
+   },
+   "rate": 30,
+   "text": "about 1 in 3",
+   "period": "Innovate UK's figure",
+   "basis": "the competition page says applicants 'could have 30% chance of success'",
+   "source": "https://apply-for-innovation-funding.service.gov.uk/competition/2433/overview/4458acff-f0d2-4e2d-836c-c151ebd82a1d",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "leverhulme-early-career-fellowships",
+   "match": {
+    "ids": [
+     "scheme-leverhulme-early-career-fellowships"
+    ]
+   },
+   "rate": 29,
+   "qualifier": "≤",
+   "text": "under 1 in 3",
+   "period": "2026-27 awards",
+   "basis": "Leverhulme Early Career Fellowships: 145 awards from over 500 applications, as quoted from the Trust by Cambridge's Isaac Newton Trust (a ceiling; York's research office cites 18.4% for the 2022 call)",
+   "source": "https://www.newtontrust.cam.ac.uk/ECFs/LeverhulmeECF/LECFFAQ",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "leverhulme-research-project-grants",
+   "match": {
+    "ids": [
+     "scheme-leverhulme-research-project-grants"
+    ]
+   },
+   "rate": 20,
+   "text": "about 1 in 5",
+   "period": "2018",
+   "basis": "Leverhulme Research Project Grants, 856 applications, 20% funded (a table of the Trust's 2018 figures; nothing newer is published)",
+   "source": "https://lims.ac.uk/funding-rates",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "leverhulme-philip-leverhulme-prizes",
+   "match": {
+    "ids": [
+     "scheme-leverhulme-philip-leverhulme-prizes"
+    ]
+   },
+   "rate": 7.5,
+   "qualifier": "≤",
+   "text": "under 1 in 13",
+   "period": "2026 prizes",
+   "basis": "Philip Leverhulme Prizes: 30 prizes from over 400 nominations (a ceiling)",
+   "source": "https://www.ox.ac.uk/news/2026-10-23-three-oxford-researchers-awarded-2026-philip-leverhulme-prizes",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "erc-starting-grant",
+   "match": {
+    "ids": [
+     "scheme-erc-starting-grant"
+    ],
+    "title": "ERC.*Starting Grant|Starting Grant.*ERC",
+    "funder": "European Research Council|ERC"
+   },
+   "rate": 8.8,
+   "text": "about 1 in 11",
+   "period": "2026 call",
+   "basis": "ERC Starting Grants: 421 selected of 4,807 proposals (Physical Sciences and Engineering: 169 of 1,971)",
+   "source": "https://erc.europa.eu/system/files/2026-09/erc-2026-stg-statistics.pdf",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "msca-postdoctoral-fellowships",
+   "match": {
+    "ids": [
+     "scheme-msca-postdoctoral-fellowships"
+    ],
+    "title": "Postdoctoral Fellowships",
+    "funder": "Marie|MSCA"
+   },
+   "rate": 9.4,
+   "text": "just under 1 in 10",
+   "period": "2025 call",
+   "basis": "MSCA Postdoctoral Fellowships: 1,610 selected among 17,066 applicants",
+   "source": "https://marie-sklodowska-curie-actions.ec.europa.eu/news/msca-awards-eu4043-million-to-postdoctoral-researchers",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "horizon-europe-cluster-5",
+   "match": {
+    "id": "^eu-HORIZON-CL5-"
+   },
+   "rate": 25,
+   "text": "about 1 in 4",
+   "period": "Cluster 5, 2021–23",
+   "basis": "Horizon Europe Cluster 5 (climate, energy, mobility) as a whole: 25% of eligible proposals funded, per an expert report published by the Commission; single topics vary",
+   "source": "https://technopolis-group.com/wp-content/uploads/2024/09/horizon-europe-and-the-green-transition-KI0524589ENN.pdf",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "supergen-ore-flexible-fund",
+   "match": {
+    "ids": [
+     "scheme-supergen-ore-flexible-fund"
+    ]
+   },
+   "rate": 10,
+   "qualifier": "≤",
+   "text": "under 1 in 10",
+   "period": "2020 call",
+   "basis": "Supergen ORE Flexible Funding call 2: 12 awards from over 120 applicants (a ceiling; call 1: 10 awards from over 80)",
+   "source": "https://supergen-ore.net/flexible-funding",
+   "checked": "2026-11-23"
+  },
+  {
+   "key": "supergen-ore-ecr-fund",
+   "match": {
+    "ids": [
+     "scheme-supergen-ore-ecr-research-fund"
+    ]
+   },
+   "rate": 55.3,
+   "text": "just over 1 in 2",
+   "period": "calls 1–6",
+   "basis": "Supergen ORE ECR Research Fund: 47 awards from 85 applications over the first six calls (awards of up to £5,000)",
+   "source": "https://supergen-ore.net/uploads/ECR-Research-Fund-Call-for-Proposals-Round-7-July-2024.pdf",
+   "checked": "2026-11-23"
+  }
+ ]
+}

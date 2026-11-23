@@ -121,7 +121,11 @@ Everything the pipeline knows about you is in **`config/researcher.toml`**:
 To add a palette of your own, copy a block in `assets/js/palettes.js` and change the colours and type.
 
 `config/schemes.json` is the watch-list of recurring schemes that have no machine-readable feed
-(Royal Society, Leverhulme, Royal Academy of Engineering, ERC, …). Add or remove entries freely.
+(Royal Society, Leverhulme, Royal Academy of Engineering, ERC, industry-led programmes, …). Add or
+remove entries freely; `"sector": "industry"` puts a scheme under the *Industry-led* filter.
+
+`config/success_rates.json` holds the success rates shown on the funding cards: published figures
+only, each with its period and source (a `≤` marks a ceiling from counts like "over 400 applications").
 
 Saving a change to either file (the GitHub app or website editor is fine) starts an update straight away.
 
