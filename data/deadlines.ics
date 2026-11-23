@@ -8,7 +8,7 @@ X-PUBLISHED-TTL:PT12H
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 BEGIN:VEVENT
 UID:ukri-204237-deadline@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Deadline 16:00 UK — UKRI Enabling AI adoption across science an
@@ -39,26 +39,27 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-206585-deadline@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270127
 DTEND;VALUE=DATE:20270128
 SUMMARY:Deadline 11:00 UK — Knowledge Transfer Partnership: 2026 to 202
  7 round 4 (Innovate UK)
-DESCRIPTION:Innovate UK part-funds a graduate Associate embedded in a UK 
- business on a university-led innovation project\; you would be academic 
- lead.\n\nEffort: heavy (6-8 weeks part-time).\n\nWhat you need:\n• Bus
- iness partner commitment — UK firm\, two or more full-time staff\, cas
- h contribution to costs\n• University KTP office engagement — Typica
- l — confirm in the guidance\n• Innovate UK KTP adviser approval — 
- Adviser reviews draft before submission\; typical — confirm in the gui
- dance\n• IFS registration and application form — Online question res
- ponses\; typical — confirm in the guidance\n• Project plan and Gantt
-  — Associate workplan and milestones\; typical — confirm in the guid
- ance\n• Costings and business contribution — Grant rate depends on c
- ompany size\; typical — confirm in the guidance\n• Associate role an
- d supervision plan — Job description\, academic time commitment\; typi
- cal — confirm in the guidance\n\nhttps://www.ukri.org/opportunity/know
- ledge-transfer-partnership-2026-to-2027-round-4/
+DESCRIPTION:Innovate UK funds a university-led partnership placing a grad
+ uate associate in a UK business for an innovation project\, part-funded 
+ by the business.\n\nEffort: heavy (6-8 weeks part-time).\n\nWhat you nee
+ d:\n• Business partner commitment — UK firm with at least two full-t
+ ime employees\; cash contribution required\n• KTP adviser engagement 
+ — Expression of interest and adviser approval — typical\, confirm in
+  the guidance\n• University KTP office approval — Internal costing a
+ nd sign-off — typical\, confirm in the guidance\n• Project plan and 
+ workplan — Objectives\, milestones and associate tasks — typical\, c
+ onfirm in the guidance\n• Budget and contribution breakdown — SMEs u
+ sually pay about a third\; large firms half — confirm in the guidance\
+ n• Academic supervision commitment — About half a day per week of su
+ pervisor time — typical\, confirm in the guidance\n• IFS application
+  submission — Online form on the Innovation Funding Service\n\nhttps:/
+ /www.ukri.org/opportunity/knowledge-transfer-partnership-2026-to-2027-ro
+ und-4/
 URL:https://www.ukri.org/opportunity/knowledge-transfer-partnership-2026-
  to-2027-round-4/
 TRANSP:TRANSPARENT
@@ -71,24 +72,24 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-206585-start@wave-research
-DTSTAMP:20261123T114752Z
-DTSTART;VALUE=DATE:20261130
-DTEND;VALUE=DATE:20261201
+DTSTAMP:20261123T120125Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
 SUMMARY:Start preparing — Knowledge Transfer Partnership: 2026 to 2027 
  round 4 (Innovate UK)
 DESCRIPTION:Effort: heavy (6-8 weeks part-time).\n\nWhat you need:\n• B
- usiness partner commitment — UK firm\, two or more full-time staff\, c
- ash contribution to costs\n• University KTP office engagement — Typi
- cal — confirm in the guidance\n• Innovate UK KTP adviser approval 
- — Adviser reviews draft before submission\; typical — confirm in the
-  guidance\n• IFS registration and application form — Online question
-  responses\; typical — confirm in the guidance\n• Project plan and G
- antt — Associate workplan and milestones\; typical — confirm in the 
- guidance\n• Costings and business contribution — Grant rate depends 
- on company size\; typical — confirm in the guidance\n• Associate rol
- e and supervision plan — Job description\, academic time commitment\; 
- typical — confirm in the guidance\n\nhttps://www.ukri.org/opportunity/
- knowledge-transfer-partnership-2026-to-2027-round-4/
+ usiness partner commitment — UK firm with at least two full-time emplo
+ yees\; cash contribution required\n• KTP adviser engagement — Expres
+ sion of interest and adviser approval — typical\, confirm in the guida
+ nce\n• University KTP office approval — Internal costing and sign-of
+ f — typical\, confirm in the guidance\n• Project plan and workplan 
+ — Objectives\, milestones and associate tasks — typical\, confirm in
+  the guidance\n• Budget and contribution breakdown — SMEs usually pa
+ y about a third\; large firms half — confirm in the guidance\n• Acad
+ emic supervision commitment — About half a day per week of supervisor 
+ time — typical\, confirm in the guidance\n• IFS application submissi
+ on — Online form on the Innovation Funding Service\n\nhttps://www.ukri
+ .org/opportunity/knowledge-transfer-partnership-2026-to-2027-round-4/
 URL:https://www.ukri.org/opportunity/knowledge-transfer-partnership-2026-
  to-2027-round-4/
 TRANSP:TRANSPARENT
@@ -101,7 +102,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-leverhulme-early-career-fellowships-deadline@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270218
 DTEND;VALUE=DATE:20270219
 SUMMARY:Deadline 16:00 UK — Early Career Fellowships (Leverhulme Trust)
@@ -132,7 +133,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-leverhulme-early-career-fellowships-start@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Start preparing — Early Career Fellowships (Leverhulme Trust)
@@ -160,7 +161,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-research-grants-deadline@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270325
 DTEND;VALUE=DATE:20270326
 SUMMARY:Deadline — Research Grants (Royal Society)
@@ -196,7 +197,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-research-grants-start@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:Start preparing — Research Grants (Royal Society)
@@ -229,7 +230,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:eu-HORIZON-CL5-2027-02-D3-09-deadline@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Deadline — Innovative technologies and solutions to improve wav
@@ -268,7 +269,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:eu-HORIZON-CL5-2027-02-D3-09-start@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Start preparing — Innovative technologies and solutions to impr
@@ -302,7 +303,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-short-industry-fellowship-deadline@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270527
 DTEND;VALUE=DATE:20270528
 SUMMARY:Deadline — Short Industry Fellowship (Royal Society)
@@ -338,7 +339,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-short-industry-fellowship-start@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Start preparing — Short Industry Fellowship (Royal Society)
@@ -371,7 +372,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-msca-postdoctoral-fellowships-deadline@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270908
 DTEND;VALUE=DATE:20270909
 SUMMARY:Deadline — Marie Sklodowska-Curie Postdoctoral Fellowships 2027
@@ -406,7 +407,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-msca-postdoctoral-fellowships-start@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Start preparing — Marie Sklodowska-Curie Postdoctoral Fellowshi
@@ -497,7 +498,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-173818-start@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Start preparing (round expected\, dates not announced) — Access
@@ -534,7 +535,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-leverhulme-philip-leverhulme-prizes-start@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270403
 DTEND;VALUE=DATE:20270404
 SUMMARY:Start preparing (round expected\, dates not announced) — Philip
@@ -560,7 +561,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-international-exchanges-start@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Start preparing (round expected\, dates not announced) — Intern
@@ -597,7 +598,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-191210-start@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Start preparing (round expected\, dates not announced) — Enviro
@@ -637,21 +638,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-193012-start@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270603
 DTEND;VALUE=DATE:20270604
 SUMMARY:Start preparing (round expected\, dates not announced) — Accele
  rated Knowledge Transfer Partnerships 6 (AKT 6) (Innovate UK)
 DESCRIPTION:Effort: moderate (3-4 weeks part-time).\n\nWhat you need:\n
- • UK business partner — Four or more full-time employees\; UK regist
- ered\n• Business cash contribution — Minimum 10% of project costs\n
- • Project plan and innovation case — typical — confirm in the guid
- ance\n• Associate role description — typical — confirm in the guid
- ance\n• Project costings — Finance form on Innovation Funding Servic
- e\; typical — confirm in the guidance\n• Innovation Funding Service 
- registration — Academic lead and business both registered\n\nhttps://w
- ww.ukri.org/opportunity/accelerated-knowledge-transfer-partnerships-6-ak
- t-6/
+ • Business partner agreement — UK business with four or more full-ti
+ me employees\n• Business cash contribution — Minimum 10% of project 
+ costs\n• Innovation Funding Service registration — Lead applicant ac
+ count for the university\n• Application question responses — Typical
+  — confirm in the guidance\n• Project costs and finance forms — Ty
+ pical — confirm in the guidance\n• Associate role and work plan — 
+ Typical — confirm in the guidance\n• Institutional sign-off — Manc
+ hester research office approval\; typical — confirm in the guidance\n\
+ nhttps://www.ukri.org/opportunity/accelerated-knowledge-transfer-partner
+ ships-6-akt-6/
 URL:https://www.ukri.org/opportunity/accelerated-knowledge-transfer-partn
  erships-6-akt-6/
 TRANSP:TRANSPARENT
@@ -664,7 +666,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-erc-starting-grant-start@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Start preparing (round expected\, dates not announced) — ERC St
@@ -694,7 +696,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-202899-start@wave-research
-DTSTAMP:20261123T114752Z
+DTSTAMP:20261123T120125Z
 DTSTART;VALUE=DATE:20271001
 DTEND;VALUE=DATE:20271002
 SUMMARY:Start preparing (round expected\, dates not announced) — Explor
