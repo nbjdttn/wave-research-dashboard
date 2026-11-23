@@ -1,21 +1,21 @@
 {
- "generated_at": "2026-11-23T11:31:35Z",
+ "generated_at": "2026-11-23T11:36:36Z",
  "counts": {
   "scanned": {
    "ukri_open": 137,
    "ukri_past": 525,
-   "eu": 104,
-   "schemes": 31
+   "eu": 102,
+   "schemes": 38
   },
-  "screened": 487,
-  "read": 71,
-  "selected": 27,
-  "filtered": 44,
+  "screened": 485,
+  "read": 84,
+  "selected": 33,
+  "filtered": 51,
   "awaiting_review": 0,
   "by_bucket": {
-   "deadline": 6,
-   "rolling": 12,
-   "prepare": 9
+   "deadline": 7,
+   "rolling": 13,
+   "prepare": 13
   }
  },
  "opportunities": [
@@ -166,6 +166,159 @@
    "odds": {
     "awards": 20
    }
+  },
+  {
+   "id": "ukri-206585",
+   "source": "ukri",
+   "title": "Knowledge Transfer Partnership: 2026 to 2027 round 4",
+   "funder": "Innovate UK",
+   "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-2026-to-2027-round-4/",
+   "published": "2026-10-21",
+   "first_seen": "2026-11-22",
+   "status": "open",
+   "bucket": "deadline",
+   "opens": "2026-10-19T09:30:00",
+   "closes": "2027-01-27T11:00:00",
+   "closes_note": null,
+   "award": {},
+   "eu": null,
+   "history": [
+    {
+     "title": "Knowledge Transfer Partnership: 2026 to 2027 round one",
+     "opens": "2026-02-02",
+     "closes": "2026-04-01",
+     "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-ktp-2026-to-2027-round-one/"
+    },
+    {
+     "title": "Knowledge Transfer Partnership: 2025 to 2026 round five",
+     "opens": "2025-12-01",
+     "closes": "2026-02-04",
+     "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-2025-to-2026-round-five/"
+    },
+    {
+     "title": "Knowledge Transfer Partnership: 2025 to 2026 round four",
+     "opens": "2025-10-27",
+     "closes": "2025-11-26",
+     "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-2025-to-2026-round-four/"
+    },
+    {
+     "title": "Knowledge Transfer Partnership: 2025 to 2026 round three",
+     "opens": "2025-06-16",
+     "closes": "2025-09-17",
+     "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-2025-to-2026-round-three/"
+    }
+   ],
+   "last_round": null,
+   "analysis": {
+    "summary": "Innovate UK part-funds a graduate Associate embedded in a UK business on a university-led innovation project; you would be academic lead.",
+    "topic_fit": {
+     "verdict": "open_call",
+     "notes": "Any topic works if a business needs it, e.g. offshore wind loads or wave forecasting."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "Lecturers routinely lead KTPs as knowledge-base supervisor; no seniority bar."
+    },
+    "eligibility": {
+     "verdict": "eligible",
+     "notes": "Manchester is a UK HEI; you need a UK business partner with two or more full-time staff."
+    },
+    "fit_score": 74,
+    "fit_label": "strong",
+    "why_fit": "You explicitly want KTPs, and they suit offshore wind, consultancy and marine-energy firms using your methods.",
+    "concerns": "About nine weeks remain over Christmas, and you have no named business partner or adviser sign-off yet.",
+    "recommend": true,
+    "recommend_reason": "Explicitly wanted industry route, open topic, realistic for you; go if a partner firm is ready.",
+    "focus": "open",
+    "themes": [
+     "industry",
+     "offshore-energy",
+     "any-discipline"
+    ],
+    "opportunity_type": "innovation",
+    "role": "lead",
+    "round": {
+     "status": "open",
+     "opens": "2026-10-19",
+     "closes": "2027-01-27",
+     "closes_time": "11:00",
+     "stage": "Full application via Innovation Funding Service",
+     "other_dates": [],
+     "notes": "KTP adviser approval is usually needed before submission, so engage them early."
+    },
+    "award_summary": {
+     "amount": "Share of £12.5m pot; business co-funds (typically about one-third to one-half)",
+     "duration": "Typically 12-36 months (Associate post)"
+    },
+    "requirements": [
+     {
+      "item": "Business partner commitment",
+      "detail": "UK firm, two or more full-time staff, cash contribution to costs"
+     },
+     {
+      "item": "University KTP office engagement",
+      "detail": "Typical — confirm in the guidance"
+     },
+     {
+      "item": "Innovate UK KTP adviser approval",
+      "detail": "Adviser reviews draft before submission; typical — confirm in the guidance"
+     },
+     {
+      "item": "IFS registration and application form",
+      "detail": "Online question responses; typical — confirm in the guidance"
+     },
+     {
+      "item": "Project plan and Gantt",
+      "detail": "Associate workplan and milestones; typical — confirm in the guidance"
+     },
+     {
+      "item": "Costings and business contribution",
+      "detail": "Grant rate depends on company size; typical — confirm in the guidance"
+     },
+     {
+      "item": "Associate role and supervision plan",
+      "detail": "Job description, academic time commitment; typical — confirm in the guidance"
+     }
+    ],
+    "effort": {
+     "level": "heavy",
+     "prep_time": "6-8 weeks part-time",
+     "person_days": "12-20",
+     "drivers": [
+      "Securing committed business partner",
+      "KTP adviser review cycle",
+      "Joint costings with company",
+      "Christmas break compresses timeline"
+     ],
+     "start_by": "2026-11-30"
+    },
+    "recurrence": {
+     "cadence": "quarterly",
+     "typical_open_month": null,
+     "typical_close_month": null,
+     "next_expected_open": "2027-01",
+     "next_expected_close": "2027-03",
+     "is_estimate": true,
+     "evidence": "Four to five KTP rounds yearly; last year's round five ran December to February."
+    },
+    "next_steps": [
+     "Contact Manchester's KTP office and Innovate UK KTP adviser this week.",
+     "Approach an offshore wind or marine consultancy partner with a scoped problem.",
+     "Target the next round if partner commitment slips past mid-December."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-23",
+    "seeded": false
+   },
+   "is_new": false,
+   "money": {
+    "headline": "",
+    "label": "share of £12.5m pot",
+    "max_gbp": 0
+   },
+   "sector": "industry"
   },
   {
    "id": "scheme-leverhulme-early-career-fellowships",
@@ -1321,6 +1474,159 @@
     "basis": "Leverhulme Research Project Grants, 856 applications, 20% funded (a table of the Trust's 2018 figures; nothing newer is published)",
     "source": "https://lims.ac.uk/funding-rates"
    }
+  },
+  {
+   "id": "ukri-1631",
+   "source": "ukri",
+   "title": "Knowledge Transfer Partnership",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership/",
+   "published": "2020-09-20",
+   "first_seen": "2026-11-22",
+   "status": "rolling",
+   "bucket": "rolling",
+   "opens": null,
+   "closes": null,
+   "closes_note": "Open - no closing date",
+   "award": {},
+   "eu": null,
+   "history": [
+    {
+     "title": "Knowledge Transfer Partnership: 2026 to 2027 round one",
+     "opens": "2026-02-02",
+     "closes": "2026-04-01",
+     "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-ktp-2026-to-2027-round-one/"
+    },
+    {
+     "title": "Knowledge Transfer Partnership: 2025 to 2026 round five",
+     "opens": "2025-12-01",
+     "closes": "2026-02-04",
+     "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-2025-to-2026-round-five/"
+    },
+    {
+     "title": "Knowledge Transfer Partnership: 2025 to 2026 round four",
+     "opens": "2025-10-27",
+     "closes": "2025-11-26",
+     "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-2025-to-2026-round-four/"
+    },
+    {
+     "title": "Knowledge Transfer Partnership: 2025 to 2026 round three",
+     "opens": "2025-06-16",
+     "closes": "2025-09-17",
+     "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-2025-to-2026-round-three/"
+    }
+   ],
+   "last_round": null,
+   "analysis": {
+    "summary": "Part-funded 12–36 month partnerships placing a graduate associate, employed by your university, in a UK business innovation project.",
+    "topic_fit": {
+     "verdict": "open_call",
+     "notes": "Any sector or innovation; suits offshore wind, wave forecasting or digital-twin firms."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "You would be lead academic supervisor; no seniority threshold applies."
+    },
+    "eligibility": {
+     "verdict": "eligible",
+     "notes": "UK universities are eligible; you need a UK business partner and adviser sign-off."
+    },
+    "fit_score": 74,
+    "fit_label": "strong",
+    "why_fit": "KTPs are on your wish list, fund a researcher in industry, and build your industry track record.",
+    "concerns": "Everything depends on finding a committed business partner willing to co-fund roughly £35k–£50k per year.",
+    "recommend": true,
+    "recommend_reason": "Explicitly requested industry route, open to your topics, realistic for you to lead.",
+    "focus": "open",
+    "themes": [
+     "industry",
+     "offshore-energy",
+     "digital-twin",
+     "any-discipline"
+    ],
+    "opportunity_type": "innovation",
+    "role": "lead",
+    "round": {
+     "status": "open",
+     "opens": null,
+     "closes": null,
+     "closes_time": null,
+     "stage": "full application",
+     "other_dates": [],
+     "notes": "Rolling deadlines through the year; decision normally within 12 weeks."
+    },
+    "award_summary": {
+     "amount": "Grant covers part of costs; business pays about one-third to half",
+     "duration": "12–36 months"
+    },
+    "requirements": [
+     {
+      "item": "Committed UK business partner",
+      "detail": "SME contributes about £35k/year; large firm over £50k/year"
+     },
+     {
+      "item": "Engagement with Manchester KTP office",
+      "detail": "KTP office develops the project with you and the business"
+     },
+     {
+      "item": "Knowledge transfer adviser agreement",
+      "detail": "Adviser must approve the application before submission"
+     },
+     {
+      "item": "Joint application form",
+      "detail": "Participants, objectives, associate tasks and deliverables; typical — confirm in the guidance"
+     },
+     {
+      "item": "Academic outcome statement",
+      "detail": "Clear benefit to you, e.g. papers or teaching cases"
+     },
+     {
+      "item": "Prior research council funding note",
+      "detail": "State your EPSRC New Investigator Award link if relevant"
+     },
+     {
+      "item": "Submission via KTP applicant site",
+      "detail": "Submitted by the university, not the business"
+     }
+    ],
+    "effort": {
+     "level": "moderate",
+     "prep_time": "3-5 weeks part-time",
+     "person_days": "8-15",
+     "drivers": [
+      "Finding and securing business partner",
+      "Co-writing with company and adviser",
+      "Agreeing business financial contribution"
+     ],
+     "start_by": null
+    },
+    "recurrence": {
+     "cadence": "quarterly",
+     "typical_open_month": null,
+     "typical_close_month": null,
+     "next_expected_open": "2026-12",
+     "next_expected_close": "2027-02",
+     "is_estimate": true,
+     "evidence": "Several rounds yearly; last year's round five ran December 2025 to February 2026."
+    },
+    "next_steps": [
+     "Contact Manchester's KTP office to discuss offshore wind and wave-forecasting partners.",
+     "Approach existing offshore wind or marine industry contacts about a KTP associate project.",
+     "Check the KTP deadlines page for the next round's cut-off date."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-23",
+    "seeded": false
+   },
+   "is_new": false,
+   "money": {
+    "headline": "",
+    "label": "part of costs, business co-funds",
+    "max_gbp": 0
+   },
+   "sector": "industry"
   },
   {
    "id": "scheme-onr-global",
@@ -2519,6 +2825,286 @@
    }
   },
   {
+   "id": "ukri-202875",
+   "source": "ukri",
+   "title": "Knowledge Transfer Partnership (KTP): 2026 – 2027 Round 3",
+   "funder": "Innovate UK",
+   "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-ktp-2026-2027-round-3/",
+   "published": "2026-08-25",
+   "first_seen": "2026-11-22",
+   "status": "closed",
+   "bucket": "prepare",
+   "opens": "2026-08-13T09:00:00",
+   "closes": "2026-10-14T11:30:00",
+   "closes_note": null,
+   "award": {
+    "total_fund": "£12,500,000"
+   },
+   "eu": null,
+   "history": [
+    {
+     "title": "Knowledge Transfer Partnership (KTP): 2026 to 2027 round 2",
+     "opens": "2026-05-20",
+     "closes": "2026-06-24",
+     "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-ktp-2026-to-2027-round-2/"
+    },
+    {
+     "title": "Knowledge Transfer Partnership (KTP): 2025 to 2026 round two",
+     "opens": "2025-04-14",
+     "closes": "2025-06-11",
+     "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-ktp-2025-to-2026-round-two/"
+    }
+   ],
+   "last_round": null,
+   "analysis": {
+    "summary": "Innovate UK part-funds a graduate Associate embedded in a UK business, with a university academic leading the knowledge transfer.",
+    "topic_fit": {
+     "verdict": "open_call",
+     "notes": "Any topic works if a business needs it, such as offshore wind loads or wave forecasting."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "Lecturers routinely act as lead academic supervisor; no seniority requirement."
+    },
+    "eligibility": {
+     "verdict": "eligible",
+     "notes": "Manchester is a UK HEI; you need a UK business with at least two full-time staff."
+    },
+    "fit_score": 72,
+    "fit_label": "strong",
+    "why_fit": "It is industry money you explicitly want, and it builds your group with an embedded Associate.",
+    "concerns": "This round has closed; you need a committed business partner able to co-fund.",
+    "recommend": true,
+    "recommend_reason": "It is a recurring, realistic industry scheme for an early-career academic with an offshore or marine partner.",
+    "focus": "open",
+    "themes": [
+     "industry",
+     "offshore-energy",
+     "any-discipline"
+    ],
+    "opportunity_type": "innovation",
+    "role": "lead",
+    "round": {
+     "status": "closed",
+     "opens": "2026-08-13",
+     "closes": "2026-10-14",
+     "closes_time": "11:30",
+     "stage": "full application via Innovation Funding Service",
+     "other_dates": [],
+     "notes": "Projects should be deliverable within 24 months; the next round is expected soon."
+    },
+    "award_summary": {
+     "amount": "Share of £12.5m round; business co-funds",
+     "duration": "Up to 24 months encouraged"
+    },
+    "requirements": [
+     {
+      "item": "Contact Manchester KTP office/adviser",
+      "detail": "Early engagement with an Innovate UK KTP adviser is typical — confirm in the guidance"
+     },
+     {
+      "item": "Secure UK business partner",
+      "detail": "Two or more full-time employees; must contribute to costs"
+     },
+     {
+      "item": "Agree business cash contribution",
+      "detail": "Typically about a third for SMEs, half for large firms — confirm"
+     },
+     {
+      "item": "Project plan and work packages",
+      "detail": "Associate role, milestones, knowledge-transfer objectives — typical, confirm in the guidance"
+     },
+     {
+      "item": "Budget and costings",
+      "detail": "Associate salary, supervision, development budget — typical, confirm in the guidance"
+     },
+     {
+      "item": "Online application on IFS",
+      "detail": "Register on the Innovation Funding Service; answer scored questions"
+     }
+    ],
+    "effort": {
+     "level": "heavy",
+     "prep_time": "6-8 weeks with partner",
+     "person_days": "12-20",
+     "drivers": [
+      "Finding a committed co-funding business",
+      "Adviser review of drafts",
+      "Joint project plan and budget"
+     ],
+     "start_by": "2026-12-03"
+    },
+    "recurrence": {
+     "cadence": "quarterly",
+     "typical_open_month": null,
+     "typical_close_month": null,
+     "next_expected_open": "2026-12",
+     "next_expected_close": "2027-02",
+     "is_estimate": true,
+     "evidence": "There are several KTP rounds per year; 2026 rounds closed in June and October."
+    },
+    "next_steps": [
+     "Approach offshore wind or marine firms about a KTP-sized problem.",
+     "Contact Manchester's KTP office to book a KTP adviser meeting.",
+     "Check the IFS for the next round's dates and target it."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-23",
+    "seeded": false
+   },
+   "is_new": false,
+   "money": {
+    "headline": "",
+    "label": "share of £12.5m round",
+    "max_gbp": 0,
+    "pot": "£12.5m"
+   },
+   "sector": "industry"
+  },
+  {
+   "id": "scheme-emec-offshore-wind-ri-calls",
+   "source": "scheme",
+   "title": "Offshore Wind Research and Innovation Programme: innovation calls",
+   "funder": "European Marine Energy Centre (EMEC)",
+   "url": "https://offshoreinnovation.scot/innovation-calls",
+   "published": null,
+   "first_seen": "2026-11-23",
+   "status": "closed",
+   "bucket": "prepare",
+   "opens": "2025-02-26",
+   "closes": "2025-04-09T13:00:00",
+   "closes_note": null,
+   "award": {},
+   "eu": null,
+   "history": [],
+   "last_round": null,
+   "analysis": {
+    "summary": "Industry-sponsored offshore wind innovation projects, up to £300k over two years, for companies, research institutions and consortia, on sponsor challenges.",
+    "topic_fit": {
+     "verdict": "core",
+     "notes": "Past challenges covered metocean, real-time wave prediction and weather-window forecasting with ML."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "Research institutions can apply; an early-career PI with an industry-relevant idea is credible."
+    },
+    "eligibility": {
+     "verdict": "likely",
+     "notes": "Research institutions are eligible; confirm specifics in the next call's Scope and Guidance."
+    },
+    "fit_score": 72,
+    "fit_label": "strong",
+    "why_fit": "It directly targets wave and weather-window forecasting at an exposed offshore wind site, an explicitly requested programme.",
+    "concerns": "No round is open; calls are irregular, and funding intensity may be below 100%.",
+    "recommend": true,
+    "recommend_reason": "It is a core-topic industry programme you named; watch for call 3 and prepare an idea.",
+    "focus": "domain_ai",
+    "themes": [
+     "ocean",
+     "offshore-energy",
+     "industry",
+     "ai-for-science"
+    ],
+    "opportunity_type": "innovation",
+    "role": "lead",
+    "round": {
+     "status": "closed",
+     "opens": "2025-02-26",
+     "closes": "2025-04-09",
+     "closes_time": "13:00",
+     "stage": "Stage 1 application",
+     "other_dates": [
+      {
+       "label": "Call 2 webinar",
+       "date": "2025-03-13"
+      },
+      {
+       "label": "Queries deadline",
+       "date": "2025-04-02"
+      },
+      {
+       "label": "Outcomes notified",
+       "date": "2025-05-09"
+      }
+     ],
+     "notes": "Call 2 closed; no later call published as of November 2026."
+    },
+    "award_summary": {
+     "amount": "Up to £300,000 per project (10–100% intensity)",
+     "duration": "Up to 2 years"
+    },
+    "requirements": [
+     {
+      "item": "Online stage 1 application form",
+      "detail": "Submitted via EMEC online form; typical — confirm in the guidance"
+     },
+     {
+      "item": "Challenge relevance and innovation case",
+      "detail": "Must address a sponsor challenge; no market-procurable services"
+     },
+     {
+      "item": "Budget and secured external funds",
+      "detail": "Full project budget plus sources of funds already secured"
+     },
+     {
+      "item": "Sponsor and UK benefit statement",
+      "detail": "Benefit to West of Orkney, offshore wind sector and Scottish supply chain"
+     },
+     {
+      "item": "Risk assessment and mitigations",
+      "detail": "Covers sponsor safety, reputation and assets"
+     },
+     {
+      "item": "Detailed proposal stage",
+      "detail": "With EMEC workshop support if shortlisted"
+     },
+     {
+      "item": "Agreement on sponsor T&Cs and IP",
+      "detail": "Sponsor may require preferential terms; university contracts office review"
+     }
+    ],
+    "effort": {
+     "level": "moderate",
+     "prep_time": "2-3 weeks part-time",
+     "person_days": "6-10",
+     "drivers": [
+      "Industry-facing benefit case",
+      "Budget and match funding",
+      "Contracts office IP review"
+     ],
+     "start_by": "2027-03-04"
+    },
+    "recurrence": {
+     "cadence": "irregular",
+     "typical_open_month": 2,
+     "typical_close_month": 4,
+     "next_expected_open": "2027-02",
+     "next_expected_close": "2027-04",
+     "is_estimate": true,
+     "evidence": "Calls closed Feb 2024 and Apr 2025; Crown Estate Scotland joined Nov 2025, suggesting further calls."
+    },
+    "next_steps": [
+     "Sign up for EMEC Offshore Wind R&I Programme alerts and news.",
+     "Contact EMEC to discuss wave-forecasting ideas for future challenges.",
+     "Draft a short weather-window forecasting concept ready for call 3."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-23",
+    "seeded": false
+   },
+   "is_new": true,
+   "money": {
+    "headline": "£300k",
+    "label": "max per project",
+    "max_gbp": 300000
+   },
+   "sector": "industry"
+  },
+  {
    "id": "ukri-173818",
    "source": "ukri",
    "title": "Access to high performance computing facilities: autumn 2025",
@@ -3115,158 +3701,137 @@
    }
   },
   {
-   "id": "scheme-british-council-ispf-research-collaborations",
-   "source": "scheme",
-   "title": "ISPF Research Collaboration Grants",
-   "funder": "British Council (International Science Partnerships Fund)",
-   "url": "https://opportunities-insight.britishcouncil.org/short-articles/opportunities/ispf-research-collaboration-grants-2025",
-   "published": null,
+   "id": "ukri-193012",
+   "source": "ukri",
+   "title": "Accelerated Knowledge Transfer Partnerships 6 (AKT 6)",
+   "funder": "Innovate UK",
+   "url": "https://www.ukri.org/opportunity/accelerated-knowledge-transfer-partnerships-6-akt-6/",
+   "published": "2026-05-21",
    "first_seen": "2026-11-22",
    "status": "closed",
    "bucket": "prepare",
-   "opens": "2025-06-02",
-   "closes": "2025-08-04",
+   "opens": "2026-05-26T09:00:00",
+   "closes": "2026-07-15T11:30:00",
    "closes_note": null,
-   "award": {},
-   "eu": null,
-   "history": [],
-   "last_round": {
-    "opened": "2025-06-02",
-    "closed": "2025-08-04",
-    "label": "ISPF Research Collaboration Grants 2025 (third call)"
+   "award": {
+    "total_fund": "£2,500,000"
    },
+   "eu": null,
+   "history": [
+    {
+     "title": "Accelerated Knowledge Transfer Partnerships 6 (AKT 6)",
+     "opens": "2026-05-26",
+     "closes": "2026-07-15",
+     "url": "https://www.ukri.org/opportunity/accelerated-knowledge-transfer-partnerships-6-akt-6-2/"
+    }
+   ],
+   "last_round": null,
    "analysis": {
-    "summary": "Small seed grants for UK institutions to start or deepen bilateral research collaborations with named ISPF partner countries.",
+    "summary": "Innovate UK funds short university-led knowledge transfer projects with a UK business, which co-funds at least 10%.",
     "topic_fit": {
      "verdict": "open_call",
-     "notes": "Any research topic; you could propose coastal or wave work with Indonesian, Malaysian, Thai or Turkish partners."
+     "notes": "Any innovation project with a business; offshore wind or wave forecasting firms would fit."
     },
     "career_stage": {
      "verdict": "suitable",
-     "notes": "Small seed projects are realistic for an early-career PI to lead."
+     "notes": "An academic lead supervises an associate; realistic for a lecturer with an industry contact."
     },
     "eligibility": {
-     "verdict": "check",
-     "notes": "Partner-country list changes each call; you need an eligible partner institution in a listed country."
+     "verdict": "likely",
+     "notes": "Manchester can lead, but needs a UK business partner with four or more full-time staff."
     },
-    "fit_score": 62,
+    "fit_score": 68,
     "fit_label": "possible",
-    "why_fit": "It is a light international collaboration award, which you asked for, with partners in coastal nations.",
-    "concerns": "The 2025 round has closed and no later round is confirmed; future ISPF funding is uncertain.",
+    "why_fit": "It brings industry money that you lead, which you explicitly want.",
+    "concerns": "This round is closed, and you need a committed business partner before the next one.",
     "recommend": true,
-    "recommend_reason": "Worth watching for the next call if a suitable partner country is listed.",
+    "recommend_reason": "Light-touch industry funding you can lead; prepare a business partner for the next round.",
     "focus": "open",
     "themes": [
-     "international",
-     "coastal",
-     "any-discipline"
+     "industry",
+     "offshore-energy",
+     "digital-twin"
     ],
-    "opportunity_type": "travel_exchange",
+    "opportunity_type": "innovation",
     "role": "lead",
     "round": {
      "status": "closed",
-     "opens": "2025-06-02",
-     "closes": "2025-08-04",
-     "closes_time": null,
-     "stage": "Expression of interest, then full application by invitation",
-     "other_dates": [
-      {
-       "label": "EOI deadline",
-       "date": "2025-06-30"
-      },
-      {
-       "label": "Invitation to full application",
-       "date": "2025-07-04"
-      },
-      {
-       "label": "Outcome of selection",
-       "date": "2025-12-01"
-      },
-      {
-       "label": "Project start",
-       "date": "2026-01-01"
-      },
-      {
-       "label": "Project end",
-       "date": "2027-12-31"
-      }
-     ],
-     "notes": "Third call; EOI closed 30 June 2025 at 12:00; panels in October 2025."
+     "opens": "2026-05-26",
+     "closes": "2026-07-15",
+     "closes_time": "11:30",
+     "stage": "Full application via Innovation Funding Service",
+     "other_dates": [],
+     "notes": "AKT 6 closed; next round not yet announced."
     },
     "award_summary": {
-     "amount": "About £79k per project on average (£1.9m across up to 24 projects)",
-     "duration": "Up to 2 years (January 2026 to December 2027)"
+     "amount": "Share of £2.5 million total fund",
+     "duration": null
     },
     "requirements": [
      {
-      "item": "Eligible partner institution",
-      "detail": "Partner must be in a listed country; it applies in parallel locally"
+      "item": "UK business partner",
+      "detail": "Four or more full-time employees; UK registered"
      },
      {
-      "item": "Expression of interest",
-      "detail": "Submitted via grants.britishcouncil.org; eligibility checked"
+      "item": "Business cash contribution",
+      "detail": "Minimum 10% of project costs"
      },
      {
-      "item": "Full application form",
-      "detail": "By invitation only; no corrections allowed after the deadline"
+      "item": "Project plan and innovation case",
+      "detail": "typical — confirm in the guidance"
      },
      {
-      "item": "Project plan and impact",
-      "detail": "Should include non-academic engagement; typical, confirm in the guidance"
+      "item": "Associate role description",
+      "detail": "typical — confirm in the guidance"
      },
      {
-      "item": "Budget and costings",
-      "detail": "UK-side costs only; typical, confirm in the guidance"
+      "item": "Project costings",
+      "detail": "Finance form on Innovation Funding Service; typical — confirm in the guidance"
      },
      {
-      "item": "Institutional approval",
-      "detail": "Research office sign-off; typical, confirm in the guidance"
+      "item": "Innovation Funding Service registration",
+      "detail": "Academic lead and business both registered"
      }
     ],
     "effort": {
      "level": "moderate",
      "prep_time": "3-4 weeks part-time",
-     "person_days": "10-15",
+     "person_days": "8-12",
      "drivers": [
-      "Finding a partner in an eligible country",
-      "Two-stage process",
-      "Coordinating with the partner's in-country application"
+      "Securing a committed business partner",
+      "Agreeing scope and contribution",
+      "Online application and costings"
      ],
-     "start_by": "2027-07-04"
+     "start_by": "2027-06-03"
     },
     "recurrence": {
      "cadence": "irregular",
-     "typical_open_month": 6,
-     "typical_close_month": 8,
-     "next_expected_open": "2027-06",
-     "next_expected_close": "2027-08",
+     "typical_open_month": 5,
+     "typical_close_month": 7,
+     "next_expected_open": "2027-05",
+     "next_expected_close": "2027-07",
      "is_estimate": true,
-     "evidence": "Third call ran from June to August 2025; country-specific calls are occasional and ISPF continuation is unconfirmed."
+     "evidence": "Round number 6 implies repeats; timing is estimated from AKT 6 only."
     },
     "next_steps": [
-     "Set an alert on the British Council ISPF opportunities page for new calls.",
-     "Identify coastal or wave researchers in likely partner countries, such as Indonesia or Malaysia.",
-     "Email UK-ISPF@britishcouncil.org to ask about future call timing."
+     "Approach offshore wind or wave-forecasting firms about a joint short project.",
+     "Contact Manchester's KTP office about the next AKT round timing.",
+     "Subscribe to Innovate UK alerts for the AKT 7 announcement."
     ]
    },
    "analysed": {
     "model": "claude-opus-5-5",
-    "at": "2026-11-22",
+    "at": "2026-11-23",
     "seeded": false
    },
    "is_new": false,
    "money": {
-    "headline": "≈£79k",
-    "label": "average per project",
-    "max_gbp": 79000
+    "headline": "",
+    "label": "share of £2.5m fund",
+    "max_gbp": 0,
+    "pot": "£2.5m"
    },
-   "odds": {
-    "rate": 5.3,
-    "text": "about 1 in 19",
-    "period": "3rd call, 2025",
-    "basis": "British Council ISPF global research collaborations, 26 funded of 485 eligible applications (round 1: 45 of 263)",
-    "source": "https://opportunities-insight.britishcouncil.org/short-articles/news/over-ps28m-new-ispf-grants-awarded-33-uk-universities"
-   }
+   "sector": "industry"
   },
   {
    "id": "scheme-erc-starting-grant",
@@ -3847,6 +4412,259 @@
     "basis": "Supergen ORE ECR Research Fund: 47 awards from 85 applications over the first six calls (awards of up to £5,000)",
     "source": "https://supergen-ore.net/uploads/ECR-Research-Fund-Call-for-Proposals-Round-7-July-2024.pdf"
    }
+  },
+  {
+   "id": "scheme-raeng-industrial-fellowships",
+   "source": "scheme",
+   "title": "Industrial Fellowships",
+   "funder": "Royal Academy of Engineering",
+   "url": "https://raeng.org.uk/industrial-fellowships",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "closed",
+   "bucket": "prepare",
+   "opens": null,
+   "closes": null,
+   "closes_note": null,
+   "award": {},
+   "eu": null,
+   "history": [],
+   "last_round": {
+    "opened": null,
+    "closed": null,
+    "label": null
+   },
+   "analysis": {
+    "summary": "Salary support (up to £50,000 a year) for academics seconded into industry, or industry staff into universities, for collaborative engineering research.",
+    "topic_fit": {
+     "verdict": "open_call",
+     "notes": "Open to engineers in all disciplines, so you could pursue an offshore wind or wave-loads project with industry."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "Billed as mid-career, but it requires a permanent academic post, which you hold."
+    },
+    "eligibility": {
+     "verdict": "likely",
+     "notes": "A UK permanent lecturer was eligible under past rules; check the revised rules when the scheme resumes."
+    },
+    "fit_score": 66,
+    "fit_label": "possible",
+    "why_fit": "It is an industry fellowship of the kind you asked for, ideal for embedding with an offshore wind developer.",
+    "concerns": "The scheme is paused with no round announced, and the revised rules may change.",
+    "recommend": true,
+    "recommend_reason": "It matches your industry-funding goals at moderate effort; register for alerts now.",
+    "focus": "open",
+    "themes": [
+     "industry",
+     "offshore-energy",
+     "any-discipline"
+    ],
+    "opportunity_type": "fellowship",
+    "role": "lead",
+    "round": {
+     "status": "closed",
+     "opens": null,
+     "closes": null,
+     "closes_time": null,
+     "stage": null,
+     "other_dates": [],
+     "notes": "Paused for review; expected to resume in 2026/27, but no round is announced."
+    },
+    "award_summary": {
+     "amount": "Up to £50,000 a year salary contribution; £100,000 maximum",
+     "duration": "6 months to 2 years"
+    },
+    "requirements": [
+     {
+      "item": "Industrial host agreement",
+      "detail": "Host commitment and letter of support; typical — confirm in the guidance"
+     },
+     {
+      "item": "Collaborative research project description",
+      "detail": "Use-inspired impact focus; typical — confirm in the guidance"
+     },
+     {
+      "item": "Applicant CV and track record",
+      "detail": "Academy format; typical — confirm in the guidance"
+     },
+     {
+      "item": "Salary costings",
+      "detail": "Basic salary pro-rata, excluding overheads; at most £50,000 a year"
+     },
+     {
+      "item": "Head of department support",
+      "detail": "University approval of the secondment; typical — confirm in the guidance"
+     },
+     {
+      "item": "Online submission via Academy portal",
+      "detail": "Typical — confirm in the guidance"
+     }
+    ],
+    "effort": {
+     "level": "moderate",
+     "prep_time": "3-4 weeks part-time",
+     "person_days": "8-12",
+     "drivers": [
+      "Securing an industrial host",
+      "Agreeing the secondment arrangements",
+      "Writing the project plan"
+     ],
+     "start_by": null
+    },
+    "recurrence": {
+     "cadence": "irregular",
+     "typical_open_month": null,
+     "typical_close_month": null,
+     "next_expected_open": null,
+     "next_expected_close": null,
+     "is_estimate": true,
+     "evidence": "Previously run regularly; paused for review and expected to resume in 2026/27."
+    },
+    "next_steps": [
+     "Email the Academy's Research team to receive alerts about new calls.",
+     "Approach offshore wind developers about hosting a secondment.",
+     "Outline a use-inspired project on extreme wave loads."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-23",
+    "seeded": false
+   },
+   "is_new": false,
+   "money": {
+    "headline": "£100k",
+    "label": "max salary contribution, total",
+    "max_gbp": 100000
+   },
+   "sector": "industry"
+  },
+  {
+   "id": "ukri-190491",
+   "source": "ukri",
+   "title": "Future offshore wind technologies: feasibility studies",
+   "funder": "Innovate UK",
+   "url": "https://www.ukri.org/opportunity/future-offshore-wind-technologies-feasibility-studies/",
+   "published": "2026-04-17",
+   "first_seen": "2026-11-23",
+   "status": "closed",
+   "bucket": "prepare",
+   "opens": "2026-04-07T09:30:00",
+   "closes": "2026-06-03T11:00:00",
+   "closes_note": null,
+   "award": {
+    "total_fund": "£10,000,000"
+   },
+   "eu": null,
+   "history": [],
+   "last_round": null,
+   "analysis": {
+    "summary": "Innovate UK grants for business-led feasibility studies on future offshore wind technologies; universities join as collaborators.",
+    "topic_fit": {
+     "verdict": "core",
+     "notes": "Offshore wind technology feasibility squarely overlaps your wave loading and foundation work."
+    },
+    "career_stage": {
+     "verdict": "not_applicable",
+     "notes": "Business must lead; you would be a funded research partner."
+    },
+    "eligibility": {
+     "verdict": "check",
+     "notes": "Universities can partner only; an SME claiming grant is required; this round is closed."
+    },
+    "fit_score": 60,
+    "fit_label": "possible",
+    "why_fit": "Offshore wind innovation where wave-structure interaction and extreme-load expertise is directly valuable.",
+    "concerns": "Round closed; recurrence unconfirmed and depends on finding an SME lead.",
+    "recommend": true,
+    "recommend_reason": "Industry-led offshore wind funding with university partner role, which you explicitly want; prepare for a repeat.",
+    "focus": "domain",
+    "themes": [
+     "offshore-energy",
+     "industry",
+     "ocean"
+    ],
+    "opportunity_type": "innovation",
+    "role": "partner",
+    "round": {
+     "status": "closed",
+     "opens": "2026-04-07",
+     "closes": "2026-06-03",
+     "closes_time": "11:00",
+     "stage": "full application",
+     "other_dates": [],
+     "notes": "Two strands; full details on the Innovation Funding Service."
+    },
+    "award_summary": {
+     "amount": "Share of £10 million total",
+     "duration": null
+    },
+    "requirements": [
+     {
+      "item": "SME lead or partner",
+      "detail": "UK business leads; at least one SME claiming grant"
+     },
+     {
+      "item": "Innovation Funding Service registration",
+      "detail": "typical — confirm in the guidance"
+     },
+     {
+      "item": "Application question responses",
+      "detail": "Scored questions, limited word counts — typical, confirm in the guidance"
+     },
+     {
+      "item": "Project costs and finance forms",
+      "detail": "Each partner submits costs; university claims at 80% FEC typical"
+     },
+     {
+      "item": "Project plan and Gantt chart",
+      "detail": "typical — confirm in the guidance"
+     },
+     {
+      "item": "Collaboration agreement",
+      "detail": "Required before grant start — typical, confirm in the guidance"
+     }
+    ],
+    "effort": {
+     "level": "heavy",
+     "prep_time": "5-6 weeks with partners",
+     "person_days": "10-20",
+     "drivers": [
+      "Finding a committed SME lead",
+      "Joint costings and finance forms",
+      "Collaborative project plan"
+     ],
+     "start_by": null
+    },
+    "recurrence": {
+     "cadence": "irregular",
+     "typical_open_month": 4,
+     "typical_close_month": 6,
+     "next_expected_open": null,
+     "next_expected_close": null,
+     "is_estimate": true,
+     "evidence": "No round history supplied; Innovate UK offshore wind competitions recur irregularly."
+    },
+    "next_steps": [
+     "Build relationships with offshore wind SMEs needing wave-load expertise.",
+     "Set Innovate UK and Innovation Funding Service alerts for offshore wind.",
+     "Draft a reusable feasibility study concept on extreme foundation loads."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-23",
+    "seeded": false
+   },
+   "is_new": true,
+   "money": {
+    "headline": "",
+    "label": "share of £10m total",
+    "max_gbp": 0,
+    "pot": "£10m"
+   },
+   "sector": "industry"
   }
  ],
  "filtered": [
@@ -3875,15 +4693,15 @@
    "fit_score": 62
   },
   {
-   "id": "eu-HORIZON-MISS-2024-OCEAN-IBA",
-   "source": "eu",
-   "title": "EU Public Infrastructure for the European Digital Twin Ocean, phase 2",
-   "funder": "Horizon Europe",
-   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2024-OCEAN-IBA",
-   "published": null,
+   "id": "ukri-193290",
+   "source": "ukri",
+   "title": "Future offshore wind technologies: industrial research (research organisations)",
+   "funder": "Innovate UK",
+   "url": "https://www.ukri.org/opportunity/future-offshore-wind-technologies-industrial-research-research-organisations/",
+   "published": "2026-05-28",
    "first_seen": "2026-11-22",
-   "status": "open",
-   "reason": "The topic is promising but scope, budget and eligibility are unknown; monitor rather than commit now.",
+   "status": "closed",
+   "reason": "Closed now; worth monitoring for a future offshore wind competition rather than acting on.",
    "fit_score": 60
   },
   {
@@ -3983,6 +4801,18 @@
    "fit_score": 55
   },
   {
+   "id": "scheme-british-council-ispf-research-collaborations",
+   "source": "scheme",
+   "title": "ISPF Research Collaboration Grants",
+   "funder": "British Council (International Science Partnerships Fund)",
+   "url": "https://opportunities-insight.britishcouncil.org/short-articles/opportunities/ispf-research-collaboration-grants-2025",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "closed",
+   "reason": "No open round, uncertain recurrence and a narrow partner-country list; watch for the next call instead.",
+   "fit_score": 55
+  },
+  {
    "id": "ukri-122216",
    "source": "ukri",
    "title": "EPSRC network grant: Nov 2023: responsive mode",
@@ -3995,51 +4825,39 @@
    "fit_score": 52
   },
   {
-   "id": "ukri-206585",
+   "id": "ukri-190107",
    "source": "ukri",
-   "title": "Knowledge Transfer Partnership: 2026 to 2027 round 4",
+   "title": "Future offshore wind technologies: industrial research",
    "funder": "Innovate UK",
-   "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-2026-to-2027-round-4/",
-   "published": "2026-10-21",
-   "first_seen": "2026-11-22",
-   "status": "open",
-   "reason": "Open and leadable, but worth the effort only if a company has already asked for your help; rounds follow one another every few months, so nothing is lost by waiting until you have a partner.",
-   "fit_score": 52
+   "url": "https://www.ukri.org/opportunity/future-offshore-wind-technologies-industrial-research/",
+   "published": "2026-04-09",
+   "first_seen": "2026-11-23",
+   "status": "closed",
+   "reason": "Strong topic match, but the round is closed with no confirmed repeat.",
+   "fit_score": 50
   },
   {
-   "id": "ukri-1631",
+   "id": "ukri-186855",
    "source": "ukri",
-   "title": "Knowledge Transfer Partnership",
+   "title": "UKRI Translation: EPSRC Prosperity Partnerships 2027",
+   "funder": "EPSRC",
+   "url": "https://www.ukri.org/opportunity/epsrc-prosperity-partnerships-2027/",
+   "published": "2026-03-12",
+   "first_seen": "2026-11-23",
+   "status": "closed",
+   "reason": "Round closed and the established-partnership and match-funding bar is unrealistic for you now.",
+   "fit_score": 50
+  },
+  {
+   "id": "ukri-157246",
+   "source": "ukri",
+   "title": "Proof of concept",
    "funder": "UKRI",
-   "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership/",
-   "published": "2020-09-20",
-   "first_seen": "2026-11-22",
-   "status": "rolling",
-   "reason": "Business-led innovation scheme with modest research value; pursue only if a company approaches you.",
-   "fit_score": 50
-  },
-  {
-   "id": "ukri-202875",
-   "source": "ukri",
-   "title": "Knowledge Transfer Partnership (KTP): 2026 – 2027 Round 3",
-   "funder": "Innovate UK",
-   "url": "https://www.ukri.org/opportunity/knowledge-transfer-partnership-ktp-2026-2027-round-3/",
-   "published": "2026-08-25",
+   "url": "https://www.ukri.org/opportunity/proof-of-concept/",
+   "published": "2025-03-12",
    "first_seen": "2026-11-22",
    "status": "closed",
-   "reason": "Only worth pursuing once a UK company with a concrete need and budget is on board; it funds innovation in a business rather than the research grants and fellowships you asked for.",
-   "fit_score": 50
-  },
-  {
-   "id": "scheme-raeng-industrial-fellowships",
-   "source": "scheme",
-   "title": "Industrial Fellowships",
-   "funder": "Royal Academy of Engineering",
-   "url": "https://raeng.org.uk/industrial-fellowships",
-   "published": null,
-   "first_seen": "2026-11-22",
-   "status": "closed",
-   "reason": "The programme is paused and mid-career-focused; revisit when the revised rules are published.",
+   "reason": "It is closed with no announced next round, and is only worth pursuing if you have a market-ready asset.",
    "fit_score": 50
   },
   {
@@ -4079,6 +4897,18 @@
    "fit_score": 50
   },
   {
+   "id": "scheme-raeng-research-chairs-senior-research-fellowships",
+   "source": "scheme",
+   "title": "Research Chairs and Senior Research Fellowships",
+   "funder": "Royal Academy of Engineering",
+   "url": "https://raeng.org.uk/programmes-and-prizes/programmes/uk-grants-and-prizes/support-for-research/research-chairs-and-senior-research-fellowships",
+   "published": null,
+   "first_seen": "2026-11-23",
+   "status": "closed",
+   "reason": "Premature now; revisit in 2–3 years once an offshore wind partnership is established.",
+   "fit_score": 50
+  },
+  {
    "id": "ukri-207050",
    "source": "ukri",
    "title": "Arctic frontier: accelerating innovation in ocean autonomy",
@@ -4100,18 +4930,6 @@
    "first_seen": "2026-11-22",
    "status": "rolling",
    "reason": "Mechanism, not new money; worthwhile only if a Luxembourg partner already exists.",
-   "fit_score": 48
-  },
-  {
-   "id": "ukri-193012",
-   "source": "ukri",
-   "title": "Accelerated Knowledge Transfer Partnerships 6 (AKT 6)",
-   "funder": "Innovate UK",
-   "url": "https://www.ukri.org/opportunity/accelerated-knowledge-transfer-partnerships-6-akt-6/",
-   "published": "2026-05-21",
-   "first_seen": "2026-11-22",
-   "status": "closed",
-   "reason": "Closed, dependent on a company partner you would have to find first, and outside the funding types you asked for; keep it in mind only if an industrial contact wants a joint project.",
    "fit_score": 48
   },
   {
@@ -4137,6 +4955,18 @@
    "status": "upcoming",
    "reason": "Topic: The topic is mostly about demonstrating nature-based solutions with public authorities, ecological restoration and replication plans. Storm surge, flooding, erosion under extreme events and the required link to th",
    "fit_score": 46
+  },
+  {
+   "id": "eu-HORIZON-MISS-2024-OCEAN-IBA",
+   "source": "eu",
+   "title": "EU Public Infrastructure for the European Digital Twin Ocean, phase 2",
+   "funder": "Horizon Europe",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2024-OCEAN-IBA",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "open",
+   "reason": "Probably a closed indirect-management action without an open route for you; revisit if a cascade call appears.",
+   "fit_score": 45
   },
   {
    "id": "scheme-lrf-small-grants",
@@ -4211,6 +5041,42 @@
    "fit_score": 42
   },
   {
+   "id": "scheme-lloyds-of-london-foundation-research-grant",
+   "source": "scheme",
+   "title": "Lloyd's of London Foundation Research Grant",
+   "funder": "Lloyd's of London Foundation",
+   "url": "https://www.lloyds.com/2026-grant-guidelines-and-criteria",
+   "published": null,
+   "first_seen": "2026-11-23",
+   "status": "closed",
+   "reason": "Topic: Climate and natural-hazard risk finance; your work fits only if framed as coastal flood or extreme-wave risk.",
+   "fit_score": 42
+  },
+  {
+   "id": "scheme-catapult-researcher-in-residence",
+   "source": "scheme",
+   "title": "Researcher in Residence Sprint",
+   "funder": "Innovation Launchpad Network+ with the Catapult Network",
+   "url": "https://innovationlaunchpad.group.shef.ac.uk/rirsprint/",
+   "published": null,
+   "first_seen": "2026-11-23",
+   "status": "closed",
+   "reason": "Not actionable now; revisit if a new Sprint or a main Researchers in Residence round opens.",
+   "fit_score": 42
+  },
+  {
+   "id": "scheme-royal-commission-1851-industrial-fellowships",
+   "source": "scheme",
+   "title": "Industrial Fellowships",
+   "funder": "Royal Commission for the Exhibition of 1851",
+   "url": "https://royalcommission1851.org/fellowships/industrial-fellowships",
+   "published": null,
+   "first_seen": "2026-11-23",
+   "status": "open",
+   "reason": "Not eligible: You cannot apply yourself; the applicant must be a company-employed graduate.",
+   "fit_score": 40
+  },
+  {
    "id": "scheme-aria-opportunity-seeds",
    "source": "scheme",
    "title": "ARIA opportunity seeds",
@@ -4223,16 +5089,16 @@
    "fit_score": 38
   },
   {
-   "id": "ukri-157246",
-   "source": "ukri",
-   "title": "Proof of concept",
-   "funder": "UKRI",
-   "url": "https://www.ukri.org/opportunity/proof-of-concept/",
-   "published": "2025-03-12",
-   "first_seen": "2026-11-22",
+   "id": "scheme-istructe-research-award",
+   "source": "scheme",
+   "title": "Research Award",
+   "funder": "Institution of Structural Engineers",
+   "url": "https://www.istructe.org/training-and-development/apply-for-grants/research-award/",
+   "published": null,
+   "first_seen": "2026-11-23",
    "status": "closed",
-   "reason": "Topic: Open to any discipline, but funds commercialisation only, not the wave research you want funded.",
-   "fit_score": 32
+   "reason": "Topic: Structural engineering focus; only offshore wind foundation loads overlaps with your work.",
+   "fit_score": 38
   },
   {
    "id": "ukri-207677",
@@ -4247,27 +5113,27 @@
    "fit_score": 30
   },
   {
-   "id": "eu-ERC-2027-COG",
-   "source": "eu",
-   "title": "ERC Consolidator Grant",
-   "funder": "ERC",
-   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERC-2027-COG",
-   "published": null,
-   "first_seen": "2026-11-22",
-   "status": "open",
-   "reason": "Career stage: Built for PIs 7–12 years post-PhD with an established team; you are four years out.",
+   "id": "ukri-157696",
+   "source": "ukri",
+   "title": "Clean Maritime Demonstration Competition round six, strand one pre-deployment trials",
+   "funder": "Innovate UK",
+   "url": "https://www.ukri.org/opportunity/clean-maritime-demonstration-competition-round-six-strand-one-pre-deployment-trials/",
+   "published": "2025-01-24",
+   "first_seen": "2026-11-23",
+   "status": "closed",
+   "reason": "Topic: Clean maritime technology is about decarbonising vessels and ports; it barely touches waves or offshore wind loads.",
    "fit_score": 30
   },
   {
-   "id": "ukri-193290",
+   "id": "ukri-158177",
    "source": "ukri",
-   "title": "Future offshore wind technologies: industrial research (research organisations)",
+   "title": "Ofgem Strategic Innovation Fund: round four, discovery cycle two",
    "funder": "Innovate UK",
-   "url": "https://www.ukri.org/opportunity/future-offshore-wind-technologies-industrial-research-research-organisations/",
-   "published": "2026-05-28",
-   "first_seen": "2026-11-22",
+   "url": "https://www.ukri.org/opportunity/ofgem-strategic-innovation-fund-round-four-discovery-cycle-two/",
+   "published": "2025-01-31",
+   "first_seen": "2026-11-23",
    "status": "closed",
-   "reason": "Business-led innovation competition you cannot lead, which you asked to exclude, and it is closed.",
+   "reason": "Topic: Energy network innovation; offshore wind or marine links only occasionally relevant to round challenges.",
    "fit_score": 30
   },
   {
@@ -4292,6 +5158,18 @@
    "first_seen": "2026-11-22",
    "status": "upcoming",
    "reason": "Topic: Mainly port pollution, biodiversity and circularity; coastal resilience to extreme events is only a minor strand.",
+   "fit_score": 28
+  },
+  {
+   "id": "ukri-175287",
+   "source": "ukri",
+   "title": "Ofgem Strategic Innovation Fund: round five discovery competition four",
+   "funder": "Innovate UK",
+   "url": "https://www.ukri.org/opportunity/ofgem-strategic-innovation-fund-round-five-discovery-competition-four/",
+   "published": "2025-09-26",
+   "first_seen": "2026-11-23",
+   "status": "closed",
+   "reason": "Topic: Energy network challenges; offshore wind or marine links are occasional, not central to your wave research.",
    "fit_score": 28
   },
   {
@@ -4331,6 +5209,30 @@
    "fit_score": 22
   },
   {
+   "id": "scheme-carbon-trust-offshore-wind-tenders",
+   "source": "scheme",
+   "title": "Offshore Wind Accelerator and Floating Wind JIP tenders",
+   "funder": "Carbon Trust",
+   "url": "https://www.carbontrust.com/news-and-insights/tenders",
+   "published": null,
+   "first_seen": "2026-11-23",
+   "status": "open",
+   "reason": "Topic: Turbine component repair and replacement at sea, not waves, hydrodynamics or wave–structure interaction.",
+   "fit_score": 20
+  },
+  {
+   "id": "eu-ERC-2027-COG",
+   "source": "eu",
+   "title": "ERC Consolidator Grant",
+   "funder": "ERC",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERC-2027-COG",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "open",
+   "reason": "Career stage: This scheme is for PIs 7–12 years post-PhD; you are about four years post-PhD.",
+   "fit_score": 18
+  },
+  {
    "id": "ukri-185188",
    "source": "ukri",
    "title": "Early Independence: NERC Independent Research Fellowship 2026",
@@ -4363,7 +5265,7 @@
    "published": "2020-09-20",
    "first_seen": "2026-11-22",
    "status": "rolling",
-   "reason": "Topic: Remit is AHRC, BBSRC, ESRC and NSF/SBE; ocean waves and fluids fall outside.",
+   "reason": "Topic: Remit is arts, humanities, biosciences and social sciences; ocean waves and fluids fall outside it.",
    "fit_score": 5
   },
   {
@@ -4384,43 +5286,43 @@
   "ukri": {
    "ok": true,
    "count": 137,
-   "checked": "2026-11-23T11:31:35Z",
-   "last_success": "2026-11-23T11:31:35Z"
+   "checked": "2026-11-23T11:36:36Z",
+   "last_success": "2026-11-23T11:36:36Z"
   },
   "ukri_archive": {
    "ok": true,
    "count": 10,
-   "checked": "2026-11-23T11:31:35Z",
-   "last_success": "2026-11-23T11:31:35Z"
+   "checked": "2026-11-23T11:36:36Z",
+   "last_success": "2026-11-23T11:36:36Z"
   },
   "eu": {
    "ok": true,
-   "count": 104,
-   "checked": "2026-11-23T11:31:35Z",
-   "last_success": "2026-11-23T11:31:35Z"
+   "count": 102,
+   "checked": "2026-11-23T11:36:36Z",
+   "last_success": "2026-11-23T11:36:36Z"
   },
   "schemes": {
    "ok": true,
-   "count": 31,
-   "checked": "2026-11-23T11:31:35Z"
+   "count": 38,
+   "checked": "2026-11-23T11:36:36Z"
   }
  },
  "ai": {
   "enabled": true,
   "key_present": true,
   "model": "claude-opus-5-5",
-  "calls_this_run": 0,
-  "estimated_cost_usd": 0.0,
+  "calls_this_run": 37,
+  "estimated_cost_usd": 2.79,
   "usage": {
-   "input_tokens": 0,
-   "output_tokens": 0,
-   "cache_read_input_tokens": 0,
-   "cache_creation_input_tokens": 0,
-   "web_searches": 0
+   "input_tokens": 98608,
+   "output_tokens": 61558,
+   "cache_read_input_tokens": 1058053,
+   "cache_creation_input_tokens": 140252,
+   "web_searches": 4
   },
   "errors": [],
-  "last_ai_run": "2026-11-23T06:52:45Z",
-  "total_calls": 52,
-  "total_cost_usd": 3.78
+  "last_ai_run": "2026-11-23T11:36:36Z",
+  "total_calls": 89,
+  "total_cost_usd": 6.57
  }
 }
