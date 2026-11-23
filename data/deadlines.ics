@@ -8,7 +8,7 @@ X-PUBLISHED-TTL:PT12H
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 BEGIN:VEVENT
 UID:ukri-204237-deadline@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Deadline 16:00 UK — UKRI Enabling AI adoption across science an
@@ -38,38 +38,8 @@ TRIGGER:-P7D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ukri-204237-start@wave-research
-DTSTAMP:20261122T220416Z
-DTSTART;VALUE=DATE:20261122
-DTEND;VALUE=DATE:20261123
-SUMMARY:Start preparing — UKRI Enabling AI adoption across science and 
- engineering (UKRI)
-DESCRIPTION:Effort: moderate (8-10 days intensive).\n\nWhat you need:\n
- • Check internal research office deadline — Research office must che
- ck and submit via the Funding Service\n• Core team and co-lead — Pai
- r an AI expert with a non-AI domain expert\n• Summary — 550 words\, 
- plain English\n• Vision and Approach PDF — 4 A4 sides\, 11pt Arial\,
-  2cm margins\, plus 1 workplan page\n• Team capability statement — W
- ord limit set in the Funding Service\, typical — confirm in the guidan
- ce\n• Resources and cost justification — FEC costing\; no PhD costs\
- ; equipment under £25k per item\n• Ethics and RRI section — Typical
-  — confirm in the guidance\n• Nominate DPR reviewers — Review abou
- t eight proposals\, or your application is rejected\n\nhttps://www.ukri.
- org/opportunity/ukri-enabling-ai-adoption-across-science-and-engineering
- /
-URL:https://www.ukri.org/opportunity/ukri-enabling-ai-adoption-across-sci
- ence-and-engineering/
-TRANSP:TRANSPARENT
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Start preparing — UKRI Enabling AI adoption across science 
- and engineering (UKRI)
-TRIGGER:-P1D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:scheme-leverhulme-early-career-fellowships-deadline@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270218
 DTEND;VALUE=DATE:20270219
 SUMMARY:Deadline 16:00 UK — Early Career Fellowships (Leverhulme Trust)
@@ -100,7 +70,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-leverhulme-early-career-fellowships-start@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Start preparing — Early Career Fellowships (Leverhulme Trust)
@@ -128,7 +98,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-research-grants-deadline@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270325
 DTEND;VALUE=DATE:20270326
 SUMMARY:Deadline — Research Grants (Royal Society)
@@ -164,7 +134,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-research-grants-start@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:Start preparing — Research Grants (Royal Society)
@@ -197,7 +167,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:eu-HORIZON-CL5-2027-02-D3-09-deadline@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Deadline — Innovative technologies and solutions to improve wav
@@ -236,7 +206,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:eu-HORIZON-CL5-2027-02-D3-09-start@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Start preparing — Innovative technologies and solutions to impr
@@ -270,7 +240,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-short-industry-fellowship-deadline@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270527
 DTEND;VALUE=DATE:20270528
 SUMMARY:Deadline — Short Industry Fellowship (Royal Society)
@@ -306,7 +276,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-short-industry-fellowship-start@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Start preparing — Short Industry Fellowship (Royal Society)
@@ -339,7 +309,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-msca-postdoctoral-fellowships-deadline@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270908
 DTEND;VALUE=DATE:20270909
 SUMMARY:Deadline — Marie Sklodowska-Curie Postdoctoral Fellowships 2027
@@ -374,7 +344,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-msca-postdoctoral-fellowships-start@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Start preparing — Marie Sklodowska-Curie Postdoctoral Fellowshi
@@ -406,7 +376,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-173818-start@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Start preparing (round expected\, dates not announced) — Access
@@ -443,7 +413,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-leverhulme-philip-leverhulme-prizes-start@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270403
 DTEND;VALUE=DATE:20270404
 SUMMARY:Start preparing (round expected\, dates not announced) — Philip
@@ -469,7 +439,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-international-exchanges-start@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Start preparing (round expected\, dates not announced) — Intern
@@ -506,7 +476,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-191210-start@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Start preparing (round expected\, dates not announced) — Enviro
@@ -547,7 +517,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:scheme-british-council-ispf-research-collaborations-start@wave-resear
  ch
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270704
 DTEND;VALUE=DATE:20270705
 SUMMARY:Start preparing (round expected\, dates not announced) — ISPF R
@@ -577,7 +547,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-erc-starting-grant-start@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Start preparing (round expected\, dates not announced) — ERC St
@@ -607,7 +577,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-202899-start@wave-research
-DTSTAMP:20261122T220416Z
+DTSTAMP:20261123T065550Z
 DTSTART;VALUE=DATE:20271001
 DTEND;VALUE=DATE:20271002
 SUMMARY:Start preparing (round expected\, dates not announced) — Explor
