@@ -114,6 +114,40 @@ export function dueClass(days) {
 export const isLive = (o) => !(o.bucket === 'deadline' && daysTo(o.closes) < 0);
 export const nextDate = (o) => (o.bucket === 'deadline' ? o.closes : o.bucket === 'prepare' ? (o.analysis.recurrence.next_expected_close || o.analysis.recurrence.next_expected_open || o.opens) : null);
 
+// ── money and odds ───────────────────────────────────────────────────────────
+const SIGN = /^[£€$≈~]|\d/;
+/** The money one award brings, as written by the daily job; failing that, the call's own maximum. */
+export function moneyOf(o) {
+  if (o.money?.headline) return o.money;
+  const raw = o.award?.max_award || o.award?.award_range || '';
+  const m = /([£€$])\s?([\d,.]+)/.exec(raw);
+  if (!m) return { headline: '', label: '', max_gbp: 0 };
+  const v = Number(m[2].replace(/,/g, ''));
+  const short = v >= 1e6 ? `${+(v / 1e6).toFixed(2)}m` : v >= 1e3 ? `${+(v / 1e3).toFixed(1)}k` : String(v);
+  return { headline: `${m[1]}${short}`, label: 'max per award', max_gbp: v };
+}
+/** A rough chance of success, as published; or, for a new call, how many awards its pot allows. */
+export function oddsOf(o) {
+  const d = o.odds || {};
+  if (d.rate != null) return { big: `${d.rate < 10 ? '≈' : '≈'}${Math.round(d.rate)}%`, small: `funded${d.period ? ` · ${d.period}` : ''}`, short: `≈${Math.round(d.rate)}% funded` };
+  if (d.awards) return { big: `~${d.awards}`, small: 'awards at most', short: `~${d.awards} awards` };
+  return null;
+}
+
+function moneyBlock(o) {
+  const m = moneyOf(o), odds = oddsOf(o);
+  const sub = [m.label, m.pot && m.headline !== m.pot ? `pot ${m.pot}` : ''].filter(Boolean).join(' · ');
+  return `<div class="money">
+    <div class="money-main">
+      <div class="money-fig${m.headline && SIGN.test(m.headline) ? '' : ' words'}">${esc(m.headline || 'Amount not stated')}</div>
+      ${sub ? `<div class="money-sub">${esc(sub)}</div>` : ''}
+    </div>
+    <div class="odds${odds ? '' : ' none'}">${odds
+      ? `<b>${esc(odds.big)}</b><span>${esc(odds.small)}</span>`
+      : '<b>Success rate</b><span>not published</span>'}</div>
+  </div>`;
+}
+
 function deadlineFact(o) {
   const a = o.analysis, r = a.recurrence || {};
   if (o.bucket === 'deadline') {
@@ -180,6 +214,12 @@ function datesBlock(o) {
   html += row('Award', esc(a.award_summary?.amount || o.award?.award_range || o.award?.max_award || ''));
   html += row('Duration', esc(a.award_summary?.duration || ''));
   html += row('Total fund', esc(o.award?.total_fund || ''));
+  if (o.odds?.rate != null) {
+    html += row('Success rate', `about ${Math.round(o.odds.rate)}%${o.odds.basis ? ` · ${esc(o.odds.basis)}` : ''}${o.odds.period ? `, ${esc(o.odds.period)}` : ''}`
+      + (o.odds.source ? ` · <a href="${safeUrl(o.odds.source)}" target="_blank" rel="noopener">source</a>` : ''));
+  } else if (o.odds?.awards) {
+    html += row('Awards', `at most about ${o.odds.awards} (the pot divided by the largest award)`);
+  }
   html += row('Repeats', esc(CADENCE[r.cadence] || ''));
   html += '</dl>';
   if (rnd.notes) html += `<p style="margin-top:10px">${brief(rnd.notes)}</p>`;
@@ -205,14 +245,12 @@ export function oppHTML(o, { saved = false, open = false, away = false } = {}) {
       ${o.bucket === 'prepare' ? `<span class="tag sand">${icon('repeat', 'xs')}Not open yet</span>` : ''}
       ${o.is_new ? '<span class="tag new">New</span>' : ''}
     </div>
+    ${moneyBlock(o)}
     <div class="facts">
       ${deadlineFact(o)}
       <div class="fact"><div class="fact-label">Effort</div>
         <div class="fact-value"><span class="effort l${lvl}" aria-hidden="true"><i></i><i></i><i></i><i></i></span> ${word}</div>
         <div class="fact-sub">${esc(a.effort.prep_time || '')}</div></div>
-      <div class="fact"><div class="fact-label">Fit</div>
-        <div class="fact-value">${a.fit_score}<span class="muted" style="font-weight:500">/100</span></div>
-        <div class="fact-sub">${esc(a.fit_label)}</div></div>
     </div>
     ${startBy(o)}
     ${verdicts(a)}
@@ -260,9 +298,8 @@ export function oppRow(o) {
   return `<a class="rowlink" href="#funding/${esc(o.id)}" data-swipe="opp" data-id="${esc(o.id)}">
     <h3>${esc(o.title)}</h3>
     <div class="right">${right}</div>
-    <div class="meta">${funderTag(o.funder)}
-      <span><span class="effort l${(EFFORT[a.effort.level] || [2])[0]}" aria-hidden="true"><i></i><i></i><i></i><i></i></span> ${esc((EFFORT[a.effort.level] || [0, 'Moderate'])[1])}</span>
-      <span>Fit ${a.fit_score}</span>${o.is_new ? '<span class="tag new">New</span>' : ''}</div>
+    <div class="meta"><b class="row-money">${esc(moneyOf(o).headline || 'Amount not stated')}</b>${funderTag(o.funder)}
+      ${oddsOf(o) ? `<span>${esc(oddsOf(o).short)}</span>` : ''}${o.is_new ? '<span class="tag new">New</span>' : ''}</div>
   </a>`;
 }
 

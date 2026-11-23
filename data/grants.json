@@ -156,7 +156,16 @@
     "at": "2026-11-22",
     "seeded": false
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "£250k",
+    "label": "max per project, 80% FEC",
+    "max_gbp": 250000,
+    "pot": "£5m"
+   },
+   "odds": {
+    "awards": 20
+   }
   },
   {
    "id": "scheme-leverhulme-early-career-fellowships",
@@ -290,7 +299,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "£130k",
+    "label": "max: salary + expenses, 3 yrs",
+    "max_gbp": 130000
+   }
   },
   {
    "id": "scheme-royal-society-research-grants",
@@ -437,7 +451,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "£30k",
+    "label": "max, equipment and travel",
+    "max_gbp": 30000
+   }
   },
   {
    "id": "eu-HORIZON-CL5-2027-02-D3-09",
@@ -563,7 +582,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "€43m",
+    "label": "one consortium, total",
+    "max_gbp": 36550000
+   }
   },
   {
    "id": "scheme-royal-society-short-industry-fellowship",
@@ -706,7 +730,13 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "Salary + £1k",
+    "label": "your pay while seconded",
+    "max_gbp": 0
+   },
+   "sector": "industry"
   },
   {
    "id": "scheme-msca-postdoctoral-fellowships",
@@ -841,7 +871,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "Salary, 2 yrs",
+    "label": "fellow's pay and costs, by EU",
+    "max_gbp": 0
+   }
   },
   {
    "id": "ukri-121997",
@@ -970,7 +1005,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "No limit",
+    "label": "EPSRC pays 80% FEC",
+    "max_gbp": 0
+   }
   },
   {
    "id": "ukri-122105",
@@ -1090,7 +1130,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "Visit costs",
+    "label": "travel and salary, 80% FEC",
+    "max_gbp": 0
+   }
   },
   {
    "id": "scheme-leverhulme-research-project-grants",
@@ -1213,7 +1258,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "£500k",
+    "label": "max per award",
+    "max_gbp": 500000
+   }
   },
   {
    "id": "scheme-onr-global",
@@ -1336,7 +1386,12 @@
     "at": "2026-11-22",
     "seeded": false
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "",
+    "label": "",
+    "max_gbp": 0
+   }
   },
   {
    "id": "ukri-122253",
@@ -1470,7 +1525,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "No limit",
+    "label": "UK side, 80% FEC",
+    "max_gbp": 0
+   }
   },
   {
    "id": "ukri-187145",
@@ -1611,7 +1671,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "£950k",
+    "label": "max per award, 80% FEC",
+    "max_gbp": 950000
+   }
   },
   {
    "id": "ukri-172727",
@@ -1727,7 +1792,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "Compute time",
+    "label": "10,000 GPU hours, no money",
+    "max_gbp": 0
+   }
   },
   {
    "id": "ukri-72597",
@@ -1853,7 +1923,12 @@
     "at": "2026-11-22",
     "seeded": false
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "£950k–£3.45m",
+    "label": "whole joint project",
+    "max_gbp": 3450000
+   }
   },
   {
    "id": "ukri-198686",
@@ -1968,7 +2043,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "Compute time",
+    "label": "no money",
+    "max_gbp": 0
+   }
   },
   {
    "id": "ukri-90327",
@@ -2086,7 +2166,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "Partner costs",
+    "label": "Norway side, ≤30% of total",
+    "max_gbp": 0
+   }
   },
   {
    "id": "ukri-115004",
@@ -2209,7 +2294,12 @@
     "at": "2026-11-22",
     "seeded": false
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "Via EPSRC/NERC",
+    "label": "FAPESP pays the Brazil side",
+    "max_gbp": 0
+   }
   },
   {
    "id": "ukri-64485",
@@ -2336,7 +2426,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "£300k",
+    "label": "UK share when NSF leads",
+    "max_gbp": 300000
+   }
   },
   {
    "id": "ukri-173818",
@@ -2475,7 +2570,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "Compute time",
+    "label": "no money",
+    "max_gbp": 0
+   }
   },
   {
    "id": "scheme-leverhulme-philip-leverhulme-prizes",
@@ -2605,7 +2705,12 @@
     "at": "2026-11-22",
     "seeded": false
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "£100k",
+    "label": "prize, over 2–3 years",
+    "max_gbp": 100000
+   }
   },
   {
    "id": "scheme-royal-society-international-exchanges",
@@ -2743,7 +2848,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "£3k–£12k",
+    "label": "travel, by length of visits",
+    "max_gbp": 12000
+   }
   },
   {
    "id": "ukri-191210",
@@ -2889,7 +2999,16 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "£100k",
+    "label": "max, 80% FEC",
+    "max_gbp": 100000,
+    "pot": "£1m"
+   },
+   "odds": {
+    "awards": 10
+   }
   },
   {
    "id": "scheme-british-council-ispf-research-collaborations",
@@ -3031,7 +3150,12 @@
     "at": "2026-11-22",
     "seeded": false
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "≈£79k",
+    "label": "average per project",
+    "max_gbp": 79000
+   }
   },
   {
    "id": "scheme-erc-starting-grant",
@@ -3171,7 +3295,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "€1.5m",
+    "label": "+ up to €1m extra, 5 yrs",
+    "max_gbp": 1275000
+   }
   },
   {
    "id": "ukri-202899",
@@ -3320,7 +3449,13 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "£100k–£200k",
+    "label": "per award, 80% FEC",
+    "max_gbp": 200000,
+    "pot": "£8m"
+   }
   },
   {
    "id": "scheme-supergen-ore-flexible-fund",
@@ -3443,7 +3578,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "£100k",
+    "label": "max per project, 80% FEC",
+    "max_gbp": 100000
+   }
   },
   {
    "id": "scheme-supergen-ore-ecr-research-fund",
@@ -3561,7 +3701,12 @@
     "at": "2026-11-22",
     "seeded": true
    },
-   "is_new": false
+   "is_new": false,
+   "money": {
+    "headline": "≈£4k",
+    "label": "average award, recent calls",
+    "max_gbp": 4000
+   }
   }
  ],
  "filtered": [

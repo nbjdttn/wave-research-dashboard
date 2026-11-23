@@ -27,7 +27,7 @@ from .util import (CACHE, CONFIG, DATA, SourceError, log, now_iso, parse_date, r
 
 # The pipeline's memory, split so that the large, slow-changing parts are not rewritten every day.
 CACHE_FILES = {
-    "grants.json": ("triage", "analysis", "first_seen", "last_seen", "baseline"),   # decisions
+    "grants.json": ("triage", "analysis", "first_seen", "last_seen", "baseline", "money"),   # decisions
     "grants_listings.json": ("ukri_live", "ukri_archive", "eu_live"),         # what the funders list
     "grants_texts.json": ("detail", "scheme_pages"),                          # call texts already read
 }
@@ -37,7 +37,7 @@ def load_cache() -> dict:
     cache: dict = {}
     for name in CACHE_FILES:
         cache.update(read_json(CACHE / name, {}) or {})
-    for k in ("triage", "analysis", "detail", "first_seen", "last_seen", "scheme_pages"):
+    for k in ("triage", "analysis", "detail", "first_seen", "last_seen", "scheme_pages", "money"):
         cache.setdefault(k, {})
     for k in ("ukri_live", "ukri_archive", "eu_live"):
         cache.setdefault(k, [])
@@ -220,6 +220,135 @@ def facts_text(item: dict, history: list[dict], forecast: dict | None) -> tuple[
             hist += (f"\nSimple projection from these dates: {forecast['cadence']}, next round closing around "
                      f"{forecast['next_expected_close']} (opening around {forecast['next_expected_open']}).")
     return "\n".join(lines), hist
+
+
+# ── money and odds ───────────────────────────────────────────────────────────
+_AMOUNT = re.compile(r"([£€$])\s?(\d[\d,]*(?:\.\d+)?)\s*(k\b|m\b|million|billion|bn\b)?", re.I)
+_TO_GBP = {"£": 1.0, "€": 0.85, "$": 0.8}
+
+
+def _amounts(text: str) -> list[tuple[str, float]]:
+    """Every sum of money in a text, as (currency sign, value)."""
+    found = []
+    for sign, digits, unit in _AMOUNT.findall(text or ""):
+        value = float(digits.replace(",", ""))
+        unit = (unit or "").lower()
+        value *= 1e3 if unit == "k" else 1e6 if unit in ("m", "million") else 1e9 if unit in ("bn", "billion") else 1
+        found.append((sign, value))
+    return found
+
+
+def compact(sign: str, value: float) -> str:
+    """£950,000 → £950k; €1,500,000 → €1.5m."""
+    if value >= 1e6:
+        return f"{sign}{value / 1e6:.2f}".rstrip("0").rstrip(".") + "m"
+    if value >= 1e3:
+        return f"{sign}{value / 1e3:.1f}".rstrip("0").rstrip(".") + "k"
+    return f"{sign}{value:,.0f}"
+
+
+def money_text(o: dict) -> str:
+    """What is known about the money of one call, as the money job is shown it."""
+    award = o.get("award") or {}
+    parts = [f"{k.replace('_', ' ')}: {v}" for k, v in award.items() if v]
+    amount = (o["analysis"].get("award_summary") or {}).get("amount")
+    duration = (o["analysis"].get("award_summary") or {}).get("duration")
+    if amount:
+        parts.append(f"award: {amount}")
+    if duration:
+        parts.append(f"duration: {duration}")
+    return "; ".join(parts) or "nothing stated"
+
+
+def money_rule(o: dict) -> dict:
+    """A plain reading of the figures, used when Claude is not available."""
+    award = o.get("award") or {}
+    amount = (o["analysis"].get("award_summary") or {}).get("amount") or ""
+    for field, label in (("award_range", "per award"), ("max_award", "max per award")):
+        got = _amounts(award.get(field) or "")
+        if got:
+            sign, top = got[-1]
+            head = "–".join(compact(s, v) for s, v in got[:2]) if field == "award_range" and len(got) > 1 else compact(sign, top)
+            return {"headline": head, "label": label, "max_gbp": round(top * _TO_GBP[sign])}
+    if re.search(r"\bno (upper )?limit\b", amount, re.I):
+        return {"headline": "No limit", "label": "", "max_gbp": 0}
+    if re.search(r"compute|GPU|core hours", amount, re.I) and re.search(r"no funding|only", amount, re.I):
+        return {"headline": "Compute time", "label": "no money", "max_gbp": 0}
+    got = _amounts(amount)
+    if got:
+        m = re.search(r"up to\s*([£€$])", amount, re.I)
+        sign, value = (got[0] if not m else next(((s, v) for s, v in got if s == m.group(1)), got[0]))
+        return {"headline": compact(sign, value), "label": "", "max_gbp": round(value * _TO_GBP[sign])}
+    return {"headline": "", "label": "", "max_gbp": 0}
+
+
+def add_money(selected: list[dict], cache: dict, claude: Claude) -> None:
+    """Give every call a short money figure. Claude writes it once per call (cached while the figures
+    are unchanged); without Claude, a plain reading of the figures stands in and is not kept."""
+    store = cache.setdefault("money", {})
+    keys = {o["id"]: sha(o["title"], money_text(o)) for o in selected}
+    need = [o for o in selected if (store.get(o["id"]) or {}).get("hash") != keys[o["id"]]]
+    if need and claude.available and claude.remaining > 0:
+        try:
+            got = claude.money([{"id": o["id"], "title": o["title"], "funder": o["funder"], "money": money_text(o)} for o in need])
+        except Budget:
+            got = {}
+        for o in need:
+            if o["id"] in got:
+                store[o["id"]] = {"hash": keys[o["id"]], **got[o["id"]], "by": claude.model, "at": today().isoformat()}
+    for o in selected:
+        hit = store.get(o["id"])
+        m = {k: hit[k] for k in ("headline", "label", "max_gbp")} if hit and hit.get("hash") == keys[o["id"]] else money_rule(o)
+        pot = _amounts((o.get("award") or {}).get("total_fund") or "")
+        if pot:
+            m["pot"] = compact(*pot[0])
+        o["money"] = m
+
+
+def add_odds(selected: list[dict]) -> None:
+    """A rough chance of success from config/success_rates.json (published figures only), or, for a call
+    that states its pot and its largest award, how many awards that makes at most."""
+    rates = (read_json(CONFIG / "success_rates.json", {}) or {}).get("rates", [])
+    for o in selected:
+        hit = None
+        for r in rates:
+            m = r.get("match") or {}
+            if o["id"] in (m.get("ids") or []) or (
+                    m.get("title") and re.search(m["title"], o["title"], re.I)
+                    and re.search(m.get("funder") or ".", o["funder"], re.I)):
+                hit = r
+                break
+        if hit:
+            o["odds"] = {k: hit.get(k) for k in ("rate", "text", "period", "basis", "source") if hit.get(k) not in (None, "")}
+            continue
+        pot, top = _amounts((o.get("award") or {}).get("total_fund") or ""), _amounts((o.get("award") or {}).get("max_award") or "")
+        if pot and top and top[0][1] and pot[0][1] / top[0][1] >= 2:
+            o["odds"] = {"awards": int(pot[0][1] // top[0][1])}
+
+
+def add_sector(selected: list[dict]) -> None:
+    """Mark the calls whose money comes from industry, or that are run with industry, as the watch-list says."""
+    by_id = {f"scheme-{sc['slug']}": sc.get("sector") for sc in (read_json(CONFIG / "schemes.json", {}) or {}).get("schemes", [])}
+    for o in selected:
+        if by_id.get(o["id"]):
+            o["sector"] = by_id[o["id"]]
+        else:
+            o.pop("sector", None)
+
+
+def refresh_published() -> None:
+    """Apply the money figures and odds to data/grants.json as it stands, without fetching anything
+    (used after editing config/success_rates.json or seeding money figures by hand)."""
+    cache = load_cache()
+    data = read_json(DATA / "grants.json", {}) or {}
+
+    class _Off:                      # no Claude here: cached figures, else the plain reading
+        available, remaining, model = False, 0, ""
+
+    add_money(data.get("opportunities", []), cache, _Off())
+    add_odds(data.get("opportunities", []))
+    add_sector(data.get("opportunities", []))
+    write_json(DATA / "grants.json", data)
 
 
 # ── selection ────────────────────────────────────────────────────────────────
@@ -494,7 +623,7 @@ def run(cfg: dict) -> dict:
                     log(f"  scheme page not readable by script: {sc['slug']} ({str(exc)[:60]})")
         it = {"id": sid, "source": "scheme", "title": sc["title"], "funder": sc["funder"], "funders": [sc["funder"]],
               "url": sc["url"], "status": "unknown", "summary": sc.get("note") or "", "opens": None, "closes": None,
-              "closes_note": None, "published": None}
+              "closes_note": None, "published": None, "sector": sc.get("sector")}
         entry = cache["analysis"].get(sid)
         if text:
             facts = scheme_facts(sc)
@@ -573,6 +702,10 @@ def run(cfg: dict) -> dict:
                           and (today() - (parse_date(cache["first_seen"][it["id"]]) or today())).days <= 7),
         })
 
+    add_money(selected, cache, claude)
+    add_odds(selected)
+    add_sector(selected)
+
     order = {"deadline": 0, "rolling": 1, "prepare": 2}
     selected.sort(key=lambda o: (
         order[o["bucket"]],
@@ -587,7 +720,7 @@ def run(cfg: dict) -> dict:
     for cid in {r["item"]["id"] for r in out_items} | set(pool):
         cache["last_seen"][cid] = tday
     gone = {cid for cid, seen in cache["last_seen"].items() if days_since(seen) > 60}
-    for part in ("detail", "analysis", "triage", "first_seen", "last_seen"):
+    for part in ("detail", "analysis", "triage", "first_seen", "last_seen", "money"):
         cache[part] = {k: v for k, v in cache[part].items()
                        if k not in gone and (k in cache["last_seen"] or k.startswith("scheme-") or part == "last_seen")}
     save_cache(cache)

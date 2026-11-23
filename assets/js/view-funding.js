@@ -1,7 +1,7 @@
 // "Funding" — only calls that pass both tests (topic and career stage), each with its deadline,
 // what to submit and how much work it is.
 import { esc, icon, daysTo, num, fmtDate, $, store, toast, safeUrl, ago, splitSentence } from './util.js';
-import { oppHTML, isLive, nextDate, dueClass, calendarFile, funderTag, funderShort, EFFORT, TYPES } from './cards.js';
+import { oppHTML, isLive, nextDate, dueClass, calendarFile, funderTag, funderShort, moneyOf, EFFORT, TYPES } from './cards.js';
 import { funderColour } from './badges.js';
 import { timeline } from './charts.js';
 
@@ -15,6 +15,7 @@ const KINDS = [
   ['host', 'Host a fellow', (o) => o.analysis.role === 'host' || o.analysis.opportunity_type === 'hosting'],
   ['partner', 'Partner roles', (o) => o.analysis.role === 'partner'],
   ['compute', 'Compute', (o) => o.analysis.opportunity_type === 'compute_equipment'],
+  ['industry', 'Industry-led', (o) => o.sector === 'industry'],
 ];
 
 export function renderFunding(root, D, ctx, sub) {
@@ -46,7 +47,8 @@ export function renderFunding(root, D, ctx, sub) {
     let list = test ? inTab.filter(test) : inTab;
     const lvl = (o) => (EFFORT[o.analysis.effort.level] || [2])[0];
     list = [...list].sort((a, b) => (
-      state.sort === 'fit' ? b.analysis.fit_score - a.analysis.fit_score
+      state.sort === 'money' ? (moneyOf(b).max_gbp || 0) - (moneyOf(a).max_gbp || 0) || b.analysis.fit_score - a.analysis.fit_score
+        : state.sort === 'fit' ? b.analysis.fit_score - a.analysis.fit_score
         : state.sort === 'effort' ? lvl(a) - lvl(b) || b.analysis.fit_score - a.analysis.fit_score
           : (nextDate(a) || '9999').localeCompare(nextDate(b) || '9999') || b.analysis.fit_score - a.analysis.fit_score));
 
@@ -89,7 +91,7 @@ export function renderFunding(root, D, ctx, sub) {
         ${inTab.length > 1 || shortlisted ? `<div class="chips" role="group" aria-label="Filters">
           ${shortlisted ? `<button class="chip" type="button" data-saved aria-pressed="${state.savedOnly}">${icon('save', 'xs')}Shortlist <span class="n">${shortlisted}</span></button><span style="flex:none;width:1px;background:var(--line-2);margin:6px 2px"></span>` : ''}
           ${kinds.length > 2 ? kinds.map(([k, label]) => chip('kind', k, label)).join('') + '<span style="flex:none;width:1px;background:var(--line-2);margin:6px 2px"></span>' : ''}
-          ${chip('sort', 'date', state.tab === 'rolling' ? 'Best fit' : 'Soonest')}${state.tab === 'rolling' ? '' : chip('sort', 'fit', 'Best fit')}${chip('sort', 'effort', 'Least effort')}
+          ${chip('sort', 'date', state.tab === 'rolling' ? 'Best fit' : 'Soonest')}${chip('sort', 'money', 'Largest award')}${state.tab === 'rolling' ? '' : chip('sort', 'fit', 'Best fit')}${chip('sort', 'effort', 'Least effort')}
         </div>` : ''}
       </div>
       ${tabIntro(state.tab)}

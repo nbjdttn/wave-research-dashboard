@@ -596,7 +596,7 @@ button, summary, .chip, .seg, .tabbar a, .ticker a, .brand { -webkit-user-select
 .opp-title { font: 650 1.125rem/1.28 var(--sans); letter-spacing: -.016em; text-wrap: pretty; padding-right: 44px; }
 .opp-summary { margin-top: 12px; font: 400 .9375rem/1.5 var(--sans); color: var(--ink-2); }
 .rowlink h3 { font: 600 .9375rem/1.35 var(--sans); letter-spacing: -.005em; }
-.facts { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, .72fr); margin: 14px 0 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--surface-2); }
+.facts { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); margin: 14px 0 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--surface-2); }
 .profile-name { font: var(--w-title) 1.5rem/1.15 var(--sans); letter-spacing: var(--ls-title); }
 .profile-bio { margin-top: 14px; font: 400 .9375rem/1.5 var(--sans); color: var(--ink-2); max-width: 68ch; }
 .pub h3 { font: 600 1rem/1.35 var(--sans); letter-spacing: -.008em; grid-column: 1; text-wrap: pretty; }
@@ -663,6 +663,18 @@ a.rowlink.swiping { background: var(--surface); }
 @media (max-width: 359px) {
   .fresh { display: none; }                                          /* the narrowest phones: room for the settings button */
 }
+
+/* ── funding: the money first, large, with the rough chance of success beside it ── */
+.money { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; margin-top: 14px; padding: 13px 14px; border-radius: 16px; background: var(--accent-soft); }
+.money-main { min-width: 0; }
+.money-fig { font: var(--w-num) 2.125rem/1 var(--num); letter-spacing: var(--ls-num); font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.money-fig.words { font: var(--w-title) 1.375rem/1.15 var(--sans); letter-spacing: var(--ls-head); white-space: normal; }
+.money-sub { margin-top: 6px; font-size: .75rem; line-height: 1.3; color: var(--ink-2); }
+.odds { text-align: right; padding-left: 12px; border-left: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
+.odds b { display: block; font: var(--w-fig) 1.5rem/1 var(--sans); letter-spacing: var(--ls-head); color: var(--ink); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.odds span { display: block; margin-top: 6px; font-size: .6875rem; line-height: 1.25; color: var(--ink-2); max-width: 92px; margin-left: auto; }
+.odds.none b { font: 600 .8125rem/1.2 var(--sans); letter-spacing: 0; color: var(--ink-2); }
+.row-money { font: var(--w-fig) 1rem/1 var(--sans); letter-spacing: var(--ls-head); color: var(--ink); font-variant-numeric: tabular-nums; }
 
 /* ── funding: a chip for each funder ──────────────────────────────────────── */
 .chips.funders { margin-top: 14px; }

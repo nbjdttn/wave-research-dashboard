@@ -113,6 +113,15 @@ BULLETS_SCHEMA = _obj({
     })},
 })
 
+MONEY_SCHEMA = _obj({
+    "calls": {"type": "array", "items": _obj({
+        "id": STR,
+        "headline": NSTR,      # "£250k", "£100k–£200k", "€1.5m", "Salary, 3 yrs", "No limit", "Compute time"; "" = not stated
+        "label": NSTR,         # what the figure is, e.g. "max per award, 80% FEC"
+        "max_gbp": NINT,       # one award at most, in pounds; 0 = not a sum of money, or not stated
+    })},
+})
+
 TRIAGE_SCHEMA = _obj({
     "decisions": {"type": "array", "items": _obj({
         "id": STR,
@@ -397,6 +406,35 @@ class Claude:
                 points = [squash(b).rstrip(".") for b in row.get("bullets") or [] if squash(b) and not RELEVANCE.search(b)][:3]
                 if points:
                     out[row["id"]] = points
+        return out
+
+    def money(self, calls: list[dict]) -> dict[str, dict]:
+        """The money one award brings, as a short figure for a phone card. Returns {id: {headline, label, max_gbp}}."""
+        out: dict[str, dict] = {}
+        for start in range(0, len(calls), 30):
+            chunk = calls[start:start + 30]
+            blocks = "\n\n".join(f"[{c['id']}] {c['title']} — {c['funder']}\n{c['money']}" for c in chunk)
+            user = (
+                "Below are funding calls (id in brackets, title and funder, then what is known about the money). For each, "
+                "write the figure a researcher sees first on a phone card:\n"
+                "- headline: at most 14 characters, the most one successful application can bring, rounded, with k and m: "
+                "'£250k', '£100k–£200k', '€1.5m'. When it pays a salary or allowances rather than a sum, say so: "
+                "'Salary, 3 yrs', 'Salary + £1k'. No cap: 'No limit'. Computer time rather than money: 'Compute time'. "
+                "Nothing stated: ''.\n"
+                "- label: at most 6 words saying what the figure is, e.g. 'max per award, 80% FEC', 'one consortium, total', "
+                "'average per project'.\n"
+                "- max_gbp: that most, in pounds, as a whole number (euros × 0.85, US dollars × 0.8); 0 when it is not a "
+                "sum of money or is not stated.\n"
+                "Use only the text given; never guess a figure. Return every id.\n\n" + blocks)
+            try:
+                data = self._json(self._request(user=user, schema=MONEY_SCHEMA, effort="low", max_tokens=4000))
+            except Budget:
+                break
+            for row in (data or {}).get("calls", []):
+                head = squash(row.get("headline") or "")
+                if len(head) <= 18:
+                    out[row["id"]] = {"headline": head, "label": squash(row.get("label") or "")[:60],
+                                      "max_gbp": max(0, int(row.get("max_gbp") or 0))}
         return out
 
     def analyse(self, facts: str, body: str, history: str = "") -> dict | None:

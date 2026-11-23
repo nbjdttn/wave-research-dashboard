@@ -1,5 +1,5 @@
 {
- "_about": "Recurring funder schemes without a machine-readable feed. The daily job re-reads each page and asks Claude to refresh the round dates. Add or remove entries freely.",
+ "_about": "Recurring funder schemes without a machine-readable feed. The daily job re-reads each page and asks Claude to refresh the round dates. Add or remove entries freely. \"sector\": \"industry\" marks money from industry or industry-led bodies, and schemes run with industry; they appear under the Industry-led filter on Funding.",
  "schemes": [
   {
    "slug": "royal-society-urf",
@@ -20,14 +20,16 @@
    "title": "Industry Fellowship",
    "funder": "Royal Society",
    "url": "https://royalsociety.org/grants/industry-fellowships/",
-   "note": "Two rounds a year: opens early February and closes around 31 March/1 April; opens late July and closes mid-September"
+   "note": "Two rounds a year: opens early February and closes around 31 March/1 April; opens late July and closes mid-September",
+   "sector": "industry"
   },
   {
    "slug": "royal-society-short-industry-fellowship",
    "title": "Short Industry Fellowship",
    "funder": "Royal Society",
    "url": "https://royalsociety.org/grants/short-industry-fellowships/",
-   "note": "Two rounds a year: opens early April and closes late May; opens mid-August and closes early October"
+   "note": "Two rounds a year: opens early April and closes late May; opens mid-August and closes early October",
+   "sector": "industry"
   },
   {
    "slug": "royal-society-newton-international",
@@ -62,7 +64,8 @@
    "title": "Industrial Fellowships",
    "funder": "Royal Academy of Engineering",
    "url": "https://raeng.org.uk/industrial-fellowships",
-   "note": null
+   "note": null,
+   "sector": "industry"
   },
   {
    "slug": "raeng-green-future-fellowships",
@@ -125,14 +128,16 @@
    "title": "Small Grants Programme 2026",
    "funder": "Lloyd's Register Foundation",
    "url": "https://www.lrfoundation.org.uk/news/small-grants-programme-2026",
-   "note": "Appears annual: the 2026 programme was announced on 14 October 2026 and closes on 14 December 2026"
+   "note": "Appears annual: the 2026 programme was announced on 14 October 2026 and closes on 14 December 2026",
+   "sector": "industry"
   },
   {
    "slug": "lrf-grant-funding",
    "title": "Grant funding (invited applications and themed calls)",
    "funder": "Lloyd's Register Foundation",
    "url": "https://www.lrfoundation.org.uk/partnerships-and-funding/grant-funding",
-   "note": "No fixed cycle: most funding is directed or by invitation; open competitive calls are announced on the Calls for funding page"
+   "note": "No fixed cycle: most funding is directed or by invitation; open competitive calls are announced on the Calls for funding page",
+   "sector": "industry"
   },
   {
    "slug": "supergen-ore-flexible-fund",

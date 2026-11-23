@@ -9,7 +9,7 @@ home screen and it behaves like an app (pull down to refresh, swipe, no zooming 
 | --- | --- |
 | **Today** | The front page: new papers close to your work, new papers citing you, funding calls and the next deadlines. |
 | **Papers** | A daily feed of *new* work (not a literature review), ranked against your own publications, each with two or three bullet points written by Claude, plus a live search of all journals scored the same way. |
-| **Funding** | A short list of opportunities that pass **both** tests — your research topic *and* your career stage — each with its deadline, a checklist of what to submit, an effort estimate and a "start by" date. Recurring calls that are not open yet appear under *Prepare ahead*. |
+| **Funding** | A short list of opportunities that pass **both** tests — your research topic *and* your career stage. Each card leads with **the money** one award brings and a rough **success rate** from the funder's published figures, then its deadline, a checklist of what to submit, an effort estimate and a "start by" date. Recurring calls that are not open yet appear under *Prepare ahead*; industry-led ones under the *Industry-led* filter. |
 | **Profile** | Your record: citations, h-index, trends, themes, journals, collaborators and the full list. **Citations** shows who is citing you (independent groups, co-authors, yourself) by year, month, journal, country and institution. |
 
 Every paper and funding call has a **Send to an agent** button (✦). It opens a chooser: your own agents
