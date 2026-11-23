@@ -1,26 +1,11 @@
 {
- "generated_at": "2026-11-22T21:25:00Z",
+ "generated_at": "2026-11-23T07:05:00Z",
  "by": "Claude (agent pass)",
- "headline": "One deadline needs a decision this week",
+ "headline": "UKRI deadline in eight days",
  "items": [
-  {
-   "kind": "deadline",
-   "important": true,
-   "title": "UKRI Enabling AI adoption closes 1 Dec, 16:00",
-   "text": "Nine days left; you need an AI or domain co-lead and your research office's internal sign-off.",
-   "url": "#funding/ukri-204237"
-  },
-  {
-   "kind": "funding",
-   "title": "Horizon wave and tidal call opens 3 Dec",
-   "text": "One €43m grant, closing 31 March; ask your contacts now which consortium still needs a wave-loading partner.",
-   "url": "#funding/eu-HORIZON-CL5-2027-02-D3-09"
-  },
-  {
-   "kind": "paper",
-   "title": "Extreme-wave forecast from a single observation",
-   "text": "Hilliard, Chabchoub and Farazmand reconstruct and forecast rogue waves from one measurement.",
-   "url": "https://doi.org/10.48550/arxiv.2611.21068"
-  }
+  {"kind": "deadline", "important": true, "title": "UKRI Enabling AI adoption closes 1 Dec, 16:00", "text": "Eight days left; you need an AI or domain co-lead and your research office's internal sign-off.", "url": "#funding/ukri-204237"},
+  {"kind": "funding", "title": "Horizon wave and tidal call opens 3 Dec", "text": "One €43m grant, closing 31 March; ask your contacts now which consortium still needs a wave-loading partner.", "url": "#funding/eu-HORIZON-CL5-2027-02-D3-09"},
+  {"kind": "paper", "title": "A Bayesian measure of wave predictability", "text": "Du, Maki and Sun map posterior uncertainty from one sensor; it matches the classical predictable zone and extends it to unbounded spectra.", "url": "https://www.semanticscholar.org/paper/77675b19c23d2237c646fd9af266d9cbcbcc667c"},
+  {"kind": "paper", "title": "Extreme-wave forecast from a single observation", "text": "Hilliard, Chabchoub and Farazmand reconstruct and forecast rogue waves from one measurement.", "url": "https://doi.org/10.48550/arxiv.2611.21068"}
  ]
 }
