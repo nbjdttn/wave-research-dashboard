@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23T12:12:46Z",
+ "generated_at": "2026-11-23T12:16:22Z",
  "counts": {
   "scanned": {
    "ukri_open": 137,
@@ -4250,13 +4250,6 @@
     "max_gbp": 0,
     "pot": "£10m"
    },
-   "odds": {
-    "rate": 30,
-    "text": "about 1 in 3",
-    "period": "Innovate UK's figure",
-    "basis": "the competition page says applicants 'could have 30% chance of success'",
-    "source": "https://apply-for-innovation-funding.service.gov.uk/competition/2433/overview/4458acff-f0d2-4e2d-836c-c151ebd82a1d"
-   },
    "sector": "industry"
   },
   {
@@ -4998,25 +4991,25 @@
   "ukri": {
    "ok": true,
    "count": 137,
-   "checked": "2026-11-23T12:12:46Z",
-   "last_success": "2026-11-23T12:12:46Z"
+   "checked": "2026-11-23T12:16:22Z",
+   "last_success": "2026-11-23T12:16:22Z"
   },
   "ukri_archive": {
    "ok": true,
    "count": 10,
-   "checked": "2026-11-23T12:12:46Z",
-   "last_success": "2026-11-23T12:12:46Z"
+   "checked": "2026-11-23T12:16:22Z",
+   "last_success": "2026-11-23T12:16:22Z"
   },
   "eu": {
    "ok": true,
    "count": 103,
-   "checked": "2026-11-23T12:12:46Z",
-   "last_success": "2026-11-23T12:12:46Z"
+   "checked": "2026-11-23T12:16:22Z",
+   "last_success": "2026-11-23T12:16:22Z"
   },
   "schemes": {
    "ok": true,
    "count": 38,
-   "checked": "2026-11-23T12:12:46Z"
+   "checked": "2026-11-23T12:16:22Z"
   }
  },
  "ai": {

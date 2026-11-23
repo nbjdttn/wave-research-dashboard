@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-23T11:48:08Z",
- "checked_at": "2026-11-23T11:48:08Z",
+ "generated_at": "2026-11-23T12:14:18Z",
+ "checked_at": "2026-11-23T12:14:18Z",
  "researcher": {
   "name": "Tim (Tianning) Tang",
   "short_name": "Tim Tang",
@@ -3891,27 +3891,27 @@
  "sources": {
   "scholar": {
    "ok": false,
-   "checked": "2026-11-23T11:48:08Z",
+   "checked": "2026-11-23T12:14:18Z",
    "note": "scholar.google.com: HTTP 403 for https://scholar.google.com/citations",
    "last_success": "2026-11-23T06:56:20Z"
   },
   "orcid": {
    "ok": true,
-   "checked": "2026-11-23T11:48:08Z",
+   "checked": "2026-11-23T12:14:18Z",
    "note": "45 works",
-   "last_success": "2026-11-23T11:48:08Z"
+   "last_success": "2026-11-23T12:14:18Z"
   },
   "openalex": {
    "ok": true,
-   "checked": "2026-11-23T11:48:08Z",
+   "checked": "2026-11-23T12:14:18Z",
    "note": "",
-   "last_success": "2026-11-23T11:48:08Z"
+   "last_success": "2026-11-23T12:14:18Z"
   },
   "crossref": {
    "ok": true,
-   "checked": "2026-11-23T11:48:08Z",
+   "checked": "2026-11-23T12:14:18Z",
    "note": "56 records cached",
-   "last_success": "2026-11-23T11:48:08Z"
+   "last_success": "2026-11-23T12:14:18Z"
   }
  }
 }
