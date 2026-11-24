@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-23T07:05:00Z",
+ "generated_at": "2026-11-24T07:00:00Z",
  "by": "Claude (agent pass)",
- "headline": "UKRI deadline in eight days",
+ "headline": "UKRI deadline in seven days",
  "items": [
-  {"kind": "deadline", "important": true, "title": "UKRI Enabling AI adoption closes 1 Dec, 16:00", "text": "Eight days left; you need an AI or domain co-lead and your research office's internal sign-off.", "url": "#funding/ukri-204237"},
-  {"kind": "funding", "title": "Horizon wave and tidal call opens 3 Dec", "text": "One €43m grant, closing 31 March; ask your contacts now which consortium still needs a wave-loading partner.", "url": "#funding/eu-HORIZON-CL5-2027-02-D3-09"},
-  {"kind": "paper", "title": "A Bayesian measure of wave predictability", "text": "Du, Maki and Sun map posterior uncertainty from one sensor; it matches the classical predictable zone and extends it to unbounded spectra.", "url": "https://www.semanticscholar.org/paper/77675b19c23d2237c646fd9af266d9cbcbcc667c"},
-  {"kind": "paper", "title": "Extreme-wave forecast from a single observation", "text": "Hilliard, Chabchoub and Farazmand reconstruct and forecast rogue waves from one measurement.", "url": "https://doi.org/10.48550/arxiv.2611.21068"}
+  {"kind": "deadline", "important": true, "title": "UKRI Enabling AI adoption closes 1 Dec, 16:00", "text": "Seven days left; you need an AI or domain co-lead and your research office's internal sign-off.", "url": "#funding/ukri-204237"},
+  {"kind": "funding", "title": "Horizon wave and tidal call opens 3 Dec", "text": "One €43m grant, closing 31 March; consortia are forming now.", "url": "#funding/eu-HORIZON-CL5-2027-02-D3-09"},
+  {"kind": "paper", "title": "Review of AI wave modelling by physics", "text": "Jiang and Li sort data-driven wave models by which terms of the action balance equation they replace, flagging under-constrained designs.", "url": "https://doi.org/10.1175/aies-d-26-0093.1"},
+  {"kind": "paper", "title": "Certified neural-network solutions for nonlinear water waves", "text": "Shavit, Wang and Buckmaster train PINNs to near machine precision, then rigorously certify Stokes, Crapper and Wilton-ripple solutions.", "url": "https://doi.org/10.48550/arxiv.2611.07395"}
  ]
 }
