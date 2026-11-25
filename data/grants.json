@@ -170,7 +170,14 @@
     "label": "typical per partnership",
     "max_gbp": 250000
    },
-   "sector": "industry"
+   "sector": "industry",
+   "odds": {
+    "rate": 90,
+    "text": "about 9 in 10",
+    "period": "Innovate UK's figure, 2018",
+    "basis": "Innovate UK Business Connect: 'around 90% are successful'; no counts given, and the page dates from June 2018",
+    "source": "https://iuk-business-connect.org.uk/news/improve-business-competitiveness-through-knowledge-transfer-partnerships"
+   }
   },
   {
    "id": "scheme-leverhulme-early-career-fellowships",
@@ -906,14 +913,14 @@
     "label": "your pay while seconded",
     "max_gbp": 0
    },
+   "sector": "industry",
    "odds": {
     "rate": 14.0,
     "text": "about 1 in 7",
     "period": "2025/26",
     "basis": "Royal Society Short Industry Fellowships, 7 offers of 50 eligible applications (2024/25: 9 of 34)",
     "source": "https://royalsociety.org/grants/short-industry-fellowships/"
-   },
-   "sector": "industry"
+   }
   },
   {
    "id": "scheme-msca-postdoctoral-fellowships",
@@ -3560,7 +3567,14 @@
     "max_gbp": 35000,
     "pot": "£2.5m"
    },
-   "sector": "industry"
+   "sector": "industry",
+   "odds": {
+    "rate": 90,
+    "text": "about 9 in 10",
+    "period": "Innovate UK's figure, 2018",
+    "basis": "Innovate UK Business Connect: 'around 90% are successful'; no counts given, and the page dates from June 2018",
+    "source": "https://iuk-business-connect.org.uk/news/improve-business-competitiveness-through-knowledge-transfer-partnerships"
+   }
   },
   {
    "id": "scheme-erc-starting-grant",

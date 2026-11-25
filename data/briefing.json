@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-24T07:00:00Z",
+ "generated_at": "2026-11-25T12:30:00Z",
  "by": "Claude (agent pass)",
- "headline": "UKRI deadline in seven days",
+ "headline": "UKRI deadline in six days",
  "items": [
-  {"kind": "deadline", "important": true, "title": "UKRI Enabling AI adoption closes 1 Dec, 16:00", "text": "Seven days left; you need an AI or domain co-lead and your research office's internal sign-off.", "url": "#funding/ukri-204237"},
+  {"kind": "deadline", "important": true, "title": "UKRI Enabling AI adoption closes 1 Dec, 16:00", "text": "Six days left; you need an AI or domain co-lead and your research office's internal sign-off.", "url": "#funding/ukri-204237"},
   {"kind": "funding", "title": "Horizon wave and tidal call opens 3 Dec", "text": "One €43m grant, closing 31 March; consortia are forming now.", "url": "#funding/eu-HORIZON-CL5-2027-02-D3-09"},
-  {"kind": "paper", "title": "Review of AI wave modelling by physics", "text": "Jiang and Li sort data-driven wave models by which terms of the action balance equation they replace, flagging under-constrained designs.", "url": "https://doi.org/10.1175/aies-d-26-0093.1"},
-  {"kind": "paper", "title": "Certified neural-network solutions for nonlinear water waves", "text": "Shavit, Wang and Buckmaster train PINNs to near machine precision, then rigorously certify Stokes, Crapper and Wilton-ripple solutions.", "url": "https://doi.org/10.48550/arxiv.2611.07395"}
+  {"kind": "paper", "title": "Hybrid neural operator for monopile response under wind and waves", "text": "DeepOJamba predicts a 15 MW monopile's response with 9.4% fatigue error, against 14.6% for the best attention-only operator.", "url": "https://doi.org/10.48550/arxiv.2611.29334"},
+  {"kind": "paper", "title": "SWENSE versus Navier–Stokes for a heaving buoy", "text": "Both match experiments for heave and wetted height; SWENSE needs a smaller domain and fewer cells.", "url": "https://doi.org/10.1063/5.0352747"}
  ]
 }
