@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T15:51:50Z",
+ "generated_at": "2026-11-25T12:06:34Z",
  "source": "Semantic Scholar (citing papers) and OpenAlex (institutions, countries)",
  "totals": {
   "citing_papers": 288,
@@ -11,8 +11,8 @@
   "last_12_months": 133,
   "countries": 44,
   "institutions": 347,
-  "venues": 90,
-  "located": 269,
+  "venues": 91,
+  "located": 270,
   "papers_covered": 55,
   "papers_with_doi": 55,
   "scholar_citations": 631
@@ -398,7 +398,7 @@
  "countries": [
   {
    "code": "CN",
-   "count": 152
+   "count": 153
   },
   {
    "code": "GB",

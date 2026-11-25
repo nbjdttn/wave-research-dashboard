@@ -7,39 +7,8 @@ X-WR-CALNAME:Funding deadlines
 X-PUBLISHED-TTL:PT12H
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 BEGIN:VEVENT
-UID:ukri-204237-deadline@wave-research
-DTSTAMP:20261124T155512Z
-DTSTART;VALUE=DATE:20261201
-DTEND;VALUE=DATE:20261202
-SUMMARY:Deadline 16:00 UK — UKRI Enabling AI adoption across science an
- d engineering (UKRI)
-DESCRIPTION:Up to £250k FEC\, 12-month exploratory projects pairing AI e
- xperts with domain researchers to embed AI in science and engineering.\n
- \nEffort: moderate (8-10 days intensive).\n\nWhat you need:\n• Check i
- nternal research office deadline — Research office must check and subm
- it via the Funding Service\n• Core team and co-lead — Pair an AI exp
- ert with a non-AI domain expert\n• Summary — 550 words\, plain Engli
- sh\n• Vision and Approach PDF — 4 A4 sides\, 11pt Arial\, 2cm margin
- s\, plus 1 workplan page\n• Team capability statement — Word limit s
- et in the Funding Service\, typical — confirm in the guidance\n• Res
- ources and cost justification — FEC costing\; no PhD costs\; equipment
-  under £25k per item\n• Ethics and RRI section — Typical — confir
- m in the guidance\n• Nominate DPR reviewers — Review about eight pro
- posals\, or your application is rejected\n\nhttps://www.ukri.org/opportu
- nity/ukri-enabling-ai-adoption-across-science-and-engineering/
-URL:https://www.ukri.org/opportunity/ukri-enabling-ai-adoption-across-sci
- ence-and-engineering/
-TRANSP:TRANSPARENT
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Deadline 16:00 UK — UKRI Enabling AI adoption across scienc
- e and engineering (UKRI)
-TRIGGER:-P7D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:ukri-206585-deadline@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270127
 DTEND;VALUE=DATE:20270128
 SUMMARY:Deadline 11:00 UK — Knowledge Transfer Partnership: 2026 to 202
@@ -72,7 +41,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-206585-start@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
 SUMMARY:Start preparing — Knowledge Transfer Partnership: 2026 to 2027 
@@ -102,7 +71,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-leverhulme-early-career-fellowships-deadline@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270218
 DTEND;VALUE=DATE:20270219
 SUMMARY:Deadline 16:00 UK — Early Career Fellowships (Leverhulme Trust)
@@ -133,7 +102,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-leverhulme-early-career-fellowships-start@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Start preparing — Early Career Fellowships (Leverhulme Trust)
@@ -160,8 +129,70 @@ TRIGGER:-P1D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:eu-HORIZON-CL5-2027-01-D1-07-deadline@wave-research
+DTSTAMP:20261125T121815Z
+DTSTART;VALUE=DATE:20270304
+DTEND;VALUE=DATE:20270305
+SUMMARY:Deadline — Advancing understanding\, modelling and prediction o
+ f extreme events in a changing climate (Horizon Europe)
+DESCRIPTION:Horizon Europe Research and Innovation Action\, about €6m e
+ ach\, for consortia advancing modelling\, prediction and attribution of 
+ climate-driven extreme events.\n\nEffort: moderate (3-5 weeks part-time)
+ .\n\nWhat you need:\n• Join or form a consortium — Multi-country Hor
+ izon Europe consortium\; typical — confirm in the guidance\n• Partne
+ r work package description — Your tasks\, deliverables and person-mont
+ hs for the coordinator\n• Part B technical proposal — Page limit set
+  in the submission-system Part B template\n• Lump-sum detailed budget 
+ table — HE LS budget table per beneficiary\n• Participant registrati
+ on and PIC — Manchester PIC and legal details on Funding & Tenders Por
+ tal\n• Institutional research office approval — Internal costing and
+  sign-off\; typical — confirm in the guidance\n• Copernicus/DestinE 
+ and ESA coordination plan — Budget for cluster meetings and joint data
+  management\n\nhttps://ec.europa.eu/info/funding-tenders/opportunities/p
+ ortal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-07
+URL:https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen
+ /opportunities/topic-details/HORIZON-CL5-2027-01-D1-07
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Deadline — Advancing understanding\, modelling and predicti
+ on of extreme events in a changing climate (Horizon Europe)
+TRIGGER:-P7D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:eu-HORIZON-CL5-2027-01-D1-07-start@wave-research
+DTSTAMP:20261125T121815Z
+DTSTART;VALUE=DATE:20270128
+DTEND;VALUE=DATE:20270129
+SUMMARY:Start preparing — Advancing understanding\, modelling and predi
+ ction of extreme events in a changing climate (Horizon Europe)
+DESCRIPTION:Effort: moderate (3-5 weeks part-time).\n\nWhat you need:\n
+ • Join or form a consortium — Multi-country Horizon Europe consortiu
+ m\; typical — confirm in the guidance\n• Partner work package descri
+ ption — Your tasks\, deliverables and person-months for the coordinato
+ r\n• Part B technical proposal — Page limit set in the submission-sy
+ stem Part B template\n• Lump-sum detailed budget table — HE LS budge
+ t table per beneficiary\n• Participant registration and PIC — Manche
+ ster PIC and legal details on Funding & Tenders Portal\n• Institutiona
+ l research office approval — Internal costing and sign-off\; typical 
+ — confirm in the guidance\n• Copernicus/DestinE and ESA coordination
+  plan — Budget for cluster meetings and joint data management\n\nhttps
+ ://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportu
+ nities/topic-details/HORIZON-CL5-2027-01-D1-07
+URL:https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen
+ /opportunities/topic-details/HORIZON-CL5-2027-01-D1-07
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Start preparing — Advancing understanding\, modelling and p
+ rediction of extreme events in a changing climate (Horizon Europe)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:scheme-royal-society-research-grants-deadline@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270325
 DTEND;VALUE=DATE:20270326
 SUMMARY:Deadline — Research Grants (Royal Society)
@@ -197,7 +228,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-research-grants-start@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270215
 DTEND;VALUE=DATE:20270216
 SUMMARY:Start preparing — Research Grants (Royal Society)
@@ -230,7 +261,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:eu-HORIZON-CL5-2027-02-D3-09-deadline@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270331
 DTEND;VALUE=DATE:20270401
 SUMMARY:Deadline — Innovative technologies and solutions to improve wav
@@ -269,7 +300,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:eu-HORIZON-CL5-2027-02-D3-09-start@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:Start preparing — Innovative technologies and solutions to impr
@@ -303,7 +334,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-short-industry-fellowship-deadline@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270527
 DTEND;VALUE=DATE:20270528
 SUMMARY:Deadline — Short Industry Fellowship (Royal Society)
@@ -339,7 +370,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-short-industry-fellowship-start@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Start preparing — Short Industry Fellowship (Royal Society)
@@ -372,7 +403,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-msca-postdoctoral-fellowships-deadline@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270908
 DTEND;VALUE=DATE:20270909
 SUMMARY:Deadline — Marie Sklodowska-Curie Postdoctoral Fellowships 2027
@@ -407,7 +438,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-msca-postdoctoral-fellowships-start@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Start preparing — Marie Sklodowska-Curie Postdoctoral Fellowshi
@@ -439,7 +470,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-173818-start@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Start preparing (round expected\, dates not announced) — Access
@@ -476,7 +507,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-leverhulme-philip-leverhulme-prizes-start@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270403
 DTEND;VALUE=DATE:20270404
 SUMMARY:Start preparing (round expected\, dates not announced) — Philip
@@ -502,7 +533,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-royal-society-international-exchanges-start@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270401
 DTEND;VALUE=DATE:20270402
 SUMMARY:Start preparing (round expected\, dates not announced) — Intern
@@ -539,7 +570,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-191210-start@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Start preparing (round expected\, dates not announced) — Enviro
@@ -579,7 +610,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-193012-start@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270603
 DTEND;VALUE=DATE:20270604
 SUMMARY:Start preparing (round expected\, dates not announced) — Accele
@@ -607,7 +638,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:scheme-erc-starting-grant-start@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20270501
 DTEND;VALUE=DATE:20270502
 SUMMARY:Start preparing (round expected\, dates not announced) — ERC St
@@ -637,7 +668,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ukri-202899-start@wave-research
-DTSTAMP:20261124T155512Z
+DTSTAMP:20261125T121815Z
 DTSTART;VALUE=DATE:20271001
 DTEND;VALUE=DATE:20271002
 SUMMARY:Start preparing (round expected\, dates not announced) — Explor

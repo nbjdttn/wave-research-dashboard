@@ -1,172 +1,24 @@
 {
- "generated_at": "2026-11-24T15:54:17Z",
+ "generated_at": "2026-11-25T12:09:24Z",
  "counts": {
   "scanned": {
-   "ukri_open": 137,
-   "ukri_past": 525,
+   "ukri_open": 133,
+   "ukri_past": 529,
    "eu": 102,
    "schemes": 38
   },
   "screened": 485,
   "read": 83,
-  "selected": 31,
-  "filtered": 50,
+  "selected": 32,
+  "filtered": 49,
   "awaiting_review": 0,
   "by_bucket": {
    "deadline": 7,
-   "rolling": 12,
+   "rolling": 13,
    "prepare": 12
   }
  },
  "opportunities": [
-  {
-   "id": "ukri-204237",
-   "source": "ukri",
-   "title": "UKRI Enabling AI adoption across science and engineering",
-   "funder": "UKRI",
-   "url": "https://www.ukri.org/opportunity/ukri-enabling-ai-adoption-across-science-and-engineering/",
-   "published": "2026-09-17",
-   "first_seen": "2026-11-22",
-   "status": "open",
-   "bucket": "deadline",
-   "opens": "2026-09-29T09:00:00",
-   "closes": "2026-12-01T16:00:00",
-   "closes_note": null,
-   "award": {
-    "total_fund": "£5,000,000",
-    "max_award": "£250,000"
-   },
-   "eu": null,
-   "history": [],
-   "last_round": null,
-   "analysis": {
-    "summary": "Up to £250k FEC, 12-month exploratory projects pairing AI experts with domain researchers to embed AI in science and engineering.",
-    "topic_fit": {
-     "verdict": "strong",
-     "notes": "AI applied to engineering suits your scientific machine learning for waves, though the domain is not ocean-specific."
-    },
-    "career_stage": {
-     "verdict": "suitable",
-     "notes": "Small, one-year grant that an early-career PI can realistically lead."
-    },
-    "eligibility": {
-     "verdict": "eligible",
-     "notes": "Manchester is UKRI-eligible; you need an AI or domain co-lead to meet the pairing expectation."
-    },
-    "fit_score": 72,
-    "fit_label": "strong",
-    "why_fit": "Fits your physics-informed ML, equation discovery and digital-twin work on extreme waves and offshore loads.",
-    "concerns": "Only nine days remain, and the internal research office deadline may already have passed.",
-    "recommend": true,
-    "recommend_reason": "Good topic and stage fit with a short application, if a co-lead is ready now.",
-    "focus": "domain_ai",
-    "themes": [
-     "ai-for-science",
-     "ocean",
-     "offshore-energy",
-     "fluids"
-    ],
-    "opportunity_type": "project_grant",
-    "role": "lead",
-    "round": {
-     "status": "open",
-     "opens": "2026-09-29",
-     "closes": "2026-12-01",
-     "closes_time": "16:00",
-     "stage": "full application",
-     "other_dates": [
-      {
-       "label": "Webinar (held)",
-       "date": "2026-10-14"
-      },
-      {
-       "label": "Fixed project start",
-       "date": "2027-04-26"
-      }
-     ],
-     "notes": "Distributed peer review, with no panel or response step; funding is subject to Full Business Case approval."
-    },
-    "award_summary": {
-     "amount": "Up to £250,000 FEC (80% funded)",
-     "duration": "Up to 12 months"
-    },
-    "requirements": [
-     {
-      "item": "Check internal research office deadline",
-      "detail": "Research office must check and submit via the Funding Service"
-     },
-     {
-      "item": "Core team and co-lead",
-      "detail": "Pair an AI expert with a non-AI domain expert"
-     },
-     {
-      "item": "Summary",
-      "detail": "550 words, plain English"
-     },
-     {
-      "item": "Vision and Approach PDF",
-      "detail": "4 A4 sides, 11pt Arial, 2cm margins, plus 1 workplan page"
-     },
-     {
-      "item": "Team capability statement",
-      "detail": "Word limit set in the Funding Service, typical — confirm in the guidance"
-     },
-     {
-      "item": "Resources and cost justification",
-      "detail": "FEC costing; no PhD costs; equipment under £25k per item"
-     },
-     {
-      "item": "Ethics and RRI section",
-      "detail": "Typical — confirm in the guidance"
-     },
-     {
-      "item": "Nominate DPR reviewers",
-      "detail": "Review about eight proposals, or your application is rejected"
-     }
-    ],
-    "effort": {
-     "level": "moderate",
-     "prep_time": "8-10 days intensive",
-     "person_days": "8-12",
-     "drivers": [
-      "Very tight remaining time",
-      "Securing an AI co-lead",
-      "Internal costing and sign-off",
-      "DPR reviewing commitment"
-     ],
-     "start_by": "2026-11-22"
-    },
-    "recurrence": {
-     "cadence": "one_off",
-     "typical_open_month": 9,
-     "typical_close_month": 12,
-     "next_expected_open": null,
-     "next_expected_close": null,
-     "is_estimate": true,
-     "evidence": "Single call under the UKRI IS8 AI Programme; no earlier rounds are indicated."
-    },
-    "next_steps": [
-     "Ask the research office today about internal deadline and costing turnaround.",
-     "Confirm an AI or domain co-lead and a focused wave-structure challenge.",
-     "Draft the four-page Vision and Approach from your existing ML-waves material."
-    ]
-   },
-   "analysed": {
-    "model": "claude-opus-5-5",
-    "at": "2026-11-22",
-    "seeded": false
-   },
-   "is_new": false,
-   "money": {
-    "headline": "£250k",
-    "label": "max per project, 80% FEC",
-    "max_gbp": 250000,
-    "pot": "£5m"
-   },
-   "odds": {
-    "awards": 20
-   }
-  },
   {
    "id": "ukri-206585",
    "source": "ukri",
@@ -465,6 +317,149 @@
     "period": "2026-27 awards",
     "basis": "Leverhulme Early Career Fellowships: 145 awards from over 500 applications, as quoted from the Trust by Cambridge's Isaac Newton Trust (a ceiling; York's research office cites 18.4% for the 2022 call)",
     "source": "https://www.newtontrust.cam.ac.uk/ECFs/LeverhulmeECF/LECFFAQ"
+   }
+  },
+  {
+   "id": "eu-HORIZON-CL5-2027-01-D1-07",
+   "source": "eu",
+   "title": "Advancing understanding, modelling and prediction of extreme events in a changing climate",
+   "funder": "Horizon Europe",
+   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-07",
+   "published": null,
+   "first_seen": "2026-11-22",
+   "status": "open",
+   "bucket": "deadline",
+   "opens": "2026-11-17",
+   "closes": "2027-03-04",
+   "closes_note": null,
+   "award": {},
+   "eu": {
+    "identifier": "HORIZON-CL5-2027-01-D1-07",
+    "action_type": "HORIZON  Research and Innovation Actions",
+    "deadline_model": "single-stage",
+    "all_deadlines": [
+     "2027-03-04"
+    ]
+   },
+   "history": [],
+   "last_round": null,
+   "analysis": {
+    "summary": "Horizon Europe Research and Innovation Action, about €6m each, for consortia advancing modelling, prediction and attribution of climate-driven extreme events.",
+    "topic_fit": {
+     "verdict": "strong",
+     "notes": "Climate extremes, digital twins and AI emulation fit; coastal and marine wave extremes would be one component."
+    },
+    "career_stage": {
+     "verdict": "not_applicable",
+     "notes": "A €6m multi-country consortium is beyond early-career leadership; a partner work package is realistic."
+    },
+    "eligibility": {
+     "verdict": "likely",
+     "notes": "The UK is associated to Horizon Europe, so Manchester can be a funded beneficiary."
+    },
+    "fit_score": 62,
+    "fit_label": "possible",
+    "why_fit": "Your extreme-wave, coastal hazard and scientific ML expertise could fill a compound or marine-extremes work package.",
+    "concerns": "The call is atmosphere and climate dominated; you need a consortium that wants ocean extremes.",
+    "recommend": true,
+    "recommend_reason": "A partner role in a large consortium needing ocean extremes and AI expertise is something you want.",
+    "focus": "domain_ai",
+    "themes": [
+     "climate-environment",
+     "ocean",
+     "coastal",
+     "digital-twin",
+     "ai-for-science",
+     "international"
+    ],
+    "opportunity_type": "project_grant",
+    "role": "partner",
+    "round": {
+     "status": "open",
+     "opens": "2026-11-17",
+     "closes": "2027-03-04",
+     "closes_time": null,
+     "stage": "Single-stage full proposal",
+     "other_dates": [],
+     "notes": "Three grants expected; lump-sum funding; coordination with ESA FutureEO projects required."
+    },
+    "award_summary": {
+     "amount": "About €6,000,000 per project (consortium total)",
+     "duration": null
+    },
+    "requirements": [
+     {
+      "item": "Join or form a consortium",
+      "detail": "Multi-country Horizon Europe consortium; typical — confirm in the guidance"
+     },
+     {
+      "item": "Partner work package description",
+      "detail": "Your tasks, deliverables and person-months for the coordinator"
+     },
+     {
+      "item": "Part B technical proposal",
+      "detail": "Page limit set in the submission-system Part B template"
+     },
+     {
+      "item": "Lump-sum detailed budget table",
+      "detail": "HE LS budget table per beneficiary"
+     },
+     {
+      "item": "Participant registration and PIC",
+      "detail": "Manchester PIC and legal details on Funding & Tenders Portal"
+     },
+     {
+      "item": "Institutional research office approval",
+      "detail": "Internal costing and sign-off; typical — confirm in the guidance"
+     },
+     {
+      "item": "Copernicus/DestinE and ESA coordination plan",
+      "detail": "Budget for cluster meetings and joint data management"
+     }
+    ],
+    "effort": {
+     "level": "moderate",
+     "prep_time": "3-5 weeks part-time",
+     "person_days": "8-15",
+     "drivers": [
+      "Finding a willing consortium",
+      "Writing partner work package",
+      "Lump-sum budget negotiation"
+     ],
+     "start_by": "2027-01-28"
+    },
+    "recurrence": {
+     "cadence": "one_off",
+     "typical_open_month": 11,
+     "typical_close_month": 3,
+     "next_expected_open": null,
+     "next_expected_close": null,
+     "is_estimate": false,
+     "evidence": "Specific topic in the 2026-2027 work programme; similar extremes topics may reappear in later programmes."
+    },
+    "next_steps": [
+     "Contact likely coordinators in climate-extremes networks this week, offering a marine-extremes package.",
+     "Draft a one-page partner offer on wave and coastal extremes with ML emulation.",
+     "Alert Manchester's research office to Horizon Europe partner costing needs."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-25",
+    "seeded": false
+   },
+   "is_new": false,
+   "money": {
+    "headline": "€6m",
+    "label": "per project, consortium total",
+    "max_gbp": 5100000
+   },
+   "odds": {
+    "rate": 25,
+    "text": "about 1 in 4",
+    "period": "Cluster 5, 2021–23",
+    "basis": "Horizon Europe Cluster 5 (climate, energy, mobility) as a whole: 25% of eligible proposals funded, per an expert report published by the Commission; single topics vary",
+    "source": "https://technopolis-group.com/wp-content/uploads/2024/09/horizon-europe-and-the-green-transition-KI0524589ENN.pdf"
    }
   },
   {
@@ -1068,6 +1063,168 @@
    }
   },
   {
+   "id": "ukri-187145",
+   "source": "ukri",
+   "title": "Pushing the frontiers of environmental research",
+   "funder": "NERC",
+   "url": "https://www.ukri.org/opportunity/pushing-the-frontiers-of-environmental-research/",
+   "published": "2026-09-23",
+   "first_seen": "2026-11-22",
+   "status": "rolling",
+   "bucket": "rolling",
+   "opens": "2026-09-23T09:00:00",
+   "closes": null,
+   "closes_note": "Open - no closing date",
+   "award": {
+    "max_award": "£950,000"
+   },
+   "eu": null,
+   "history": [
+    {
+     "title": "Pushing the frontiers of environmental research: January 2026",
+     "opens": "2025-07-22",
+     "closes": "2026-01-21",
+     "url": "https://www.ukri.org/opportunity/pushing-the-frontiers-of-environmental-research-january-2026/"
+    },
+    {
+     "title": "Pushing the frontiers of environmental research: July 2025",
+     "opens": "2025-02-05",
+     "closes": "2025-07-16",
+     "url": "https://www.ukri.org/opportunity/pushing-the-frontiers-of-environmental-research-july-2025/"
+    }
+   ],
+   "last_round": null,
+   "analysis": {
+    "summary": "NERC responsive-mode grant up to £950k FEC for adventurous, curiosity-driven environmental research; any career stage, submit anytime.",
+    "topic_fit": {
+     "verdict": "open_call",
+     "notes": "Open NERC remit; ocean waves, spectral forecasting and air-sea interaction fit ocean–atmosphere or extreme-events disciplines."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "Explicitly open to any career stage; a 3–4 year project is realistic for you as PI."
+    },
+    "eligibility": {
+     "verdict": "eligible",
+     "notes": "Manchester is NERC-eligible and your permanent lectureship meets individual eligibility."
+    },
+    "fit_score": 82,
+    "fit_label": "strong",
+    "why_fit": "Lets you lead a major NERC grant on spectral wave modelling and nonlinear wave interactions, with no deadline.",
+    "concerns": "Offshore wind loading leans EPSRC; frame as environmental wave science or check via remit query.",
+    "recommend": true,
+    "recommend_reason": "Large, flexible NERC grant you can lead now, squarely open to your ocean-wave research.",
+    "focus": "domain",
+    "themes": [
+     "ocean",
+     "fluids",
+     "climate-environment",
+     "ai-for-science"
+    ],
+    "opportunity_type": "project_grant",
+    "role": "lead",
+    "round": {
+     "status": "rolling",
+     "opens": "2026-09-23",
+     "closes": null,
+     "closes_time": null,
+     "stage": "full application",
+     "other_dates": [],
+     "notes": "No deadline; NERC holds regular decision points, aiming for decisions within nine months of submission."
+    },
+    "award_summary": {
+     "amount": "Up to £950,000 FEC (NERC pays 80%)",
+     "duration": "Usually 3–4 years"
+    },
+    "requirements": [
+     {
+      "item": "Remit check with NERC",
+      "detail": "Remit query form if crossing EPSRC boundary; optional but advisable"
+     },
+     {
+      "item": "Funding Service account",
+      "detail": "Register as project lead on UKRI Funding Service"
+     },
+     {
+      "item": "Summary",
+      "detail": "550 words, plain English"
+     },
+     {
+      "item": "Primary discipline selection",
+      "detail": "10 words, e.g. Ocean – atmosphere interactions"
+     },
+     {
+      "item": "Vision section",
+      "detail": "1,100 words, references and images allowed"
+     },
+     {
+      "item": "Approach section",
+      "detail": "2,750 words, methods, risks, environment"
+     },
+     {
+      "item": "Applicant and team capability",
+      "detail": "Narrative CV-style section — typical, confirm in the guidance"
+     },
+     {
+      "item": "Ethics and RRI statement",
+      "detail": "typical — confirm in the guidance"
+     },
+     {
+      "item": "Resources and cost justification",
+      "detail": "Full costing via research office; no PhD studentships; equipment >£25k justified"
+     },
+     {
+      "item": "Facility and partner confirmations",
+      "detail": "HPC/facility technical assessments and partner letters where used"
+     }
+    ],
+    "effort": {
+     "level": "heavy",
+     "prep_time": "6-8 weeks part-time",
+     "person_days": "25-35",
+     "drivers": [
+      "Full case for support",
+      "Full economic costing",
+      "Remit framing for NERC",
+      "Facility or partner agreements"
+     ],
+     "start_by": null
+    },
+    "recurrence": {
+     "cadence": "rolling",
+     "typical_open_month": null,
+     "typical_close_month": null,
+     "next_expected_open": null,
+     "next_expected_close": null,
+     "is_estimate": false,
+     "evidence": "Ran twice-yearly with fixed deadlines in 2025–26; now open with no closing date since September 2026."
+    },
+    "next_steps": [
+     "Email pushingfrontiers@nerc.ukri.org to confirm wave-modelling project sits within NERC remit.",
+     "Draft vision and approach around adventurous spectral wave-interaction science.",
+     "Book research office costing early; target submission by spring 2027."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-25",
+    "seeded": false
+   },
+   "is_new": false,
+   "money": {
+    "headline": "£950k",
+    "label": "max per award, FEC",
+    "max_gbp": 950000
+   },
+   "odds": {
+    "rate": 20.4,
+    "text": "about 1 in 5",
+    "period": "Jan 2025 round",
+    "basis": "NERC Pushing the Frontiers, 37 funded of 181 (July 2024 round: 40 of 172); lead-agency routes go through the same scheme",
+    "source": "https://www.ukri.org/wp-content/uploads/2022/11/NERC-191225-PushingFrontiersEnvironmentalResearchFundingOutcomesJanuary2025.pdf"
+   }
+  },
+  {
    "id": "ukri-121997",
    "source": "ukri",
    "title": "EPSRC standard research grant, Nov 2023: responsive mode",
@@ -1085,27 +1242,31 @@
    "history": [],
    "last_round": null,
    "analysis": {
-    "summary": "EPSRC's always-open responsive-mode grant for a project of any size or length in any area of its remit, funded at 80% of full economic cost. There are no closing dates: you submit when ready and applications are batched to panels expected to meet quarterly.",
+    "summary": "EPSRC responsive-mode grant for any project within EPSRC remit, any size or length, at 80% FEC, for UK-based researchers.",
     "topic_fit": {
      "verdict": "open_call",
-     "notes": "Any topic within EPSRC's remit is eligible, and your fluid mechanics, offshore renewable energy and scientific machine learning sit squarely inside its engineering, energy and AI themes. You would propose your own research."
+     "notes": "Bottom-up within EPSRC remit; wave–structure interaction, offshore wind and scientific ML fit the engineering theme."
     },
     "career_stage": {
      "verdict": "suitable",
-     "notes": "Open to academics at any stage and the natural next step once a New Investigator Award is under way. Capability is judged 'appropriate to career stage', so a well-scoped project is realistic for you as lead."
+     "notes": "Open to any eligible academic; a modest grant is realistic for an early-career PI."
     },
     "eligibility": {
      "verdict": "eligible",
-     "notes": "EPSRC standard eligibility applies, and as a permanent academic at a UK university who already holds an EPSRC grant you meet it. Uninvited resubmissions are not accepted, so each idea gets one attempt."
+     "notes": "Permanent lecturer at an eligible UK university meets EPSRC standard eligibility."
     },
-    "fit_score": 82,
+    "fit_score": 80,
     "fit_label": "strong",
-    "why_fit": "This is the main route to a project grant you lead yourself: you set the topic, the size and the team, and there is no deadline pressure. It could fund the follow-on to your New Investigator Award, for example a larger programme on extreme wave loads, wave-tank validation and data-driven digital twins, and it accepts a Norway-based co-lead if you want one.",
-    "concerns": "You compete on merit with every other application and cannot resubmit, so only send it when it is strong. Reviewers will look for a clear distinction from, and capacity alongside, your current New Investigator Award.",
+    "why_fit": "Your main route for a next grant on spectral wave modelling or extreme loads, with no deadline.",
+    "concerns": "This November 2023 page passed its system closing date; confirm the current standard grant page on UKRI.",
     "recommend": true,
-    "recommend_reason": "An open-topic grant you are fully eligible to lead, with no deadline; it is the obvious vehicle for your next substantial project after the New Investigator Award.",
+    "recommend_reason": "Core responsive-mode route for your own research; apply when ready, ideally building on your New Investigator Award.",
     "focus": "open",
     "themes": [
+     "ocean",
+     "offshore-energy",
+     "fluids",
+     "ai-for-science",
      "any-discipline"
     ],
     "opportunity_type": "project_grant",
@@ -1115,61 +1276,61 @@
      "opens": "2023-11-13",
      "closes": null,
      "closes_time": null,
-     "stage": "Full application, batched to quarterly panels",
+     "stage": "full application",
      "other_dates": [],
-     "notes": "No closing dates are published: apply when the application is ready. The call text only speaks of processing applications through 2026, so check the live page for changes or a successor listing before you submit."
+     "notes": "No closing dates; applications batched to quarterly Engineering, Maths, ICT or Physical Sciences panels."
     },
     "award_summary": {
-     "amount": "No limit: ask for what the project needs (EPSRC pays 80% of full economic cost; equipment up to £400,000 per item)",
+     "amount": "No limit; 80% FEC funded",
      "duration": "No limit"
     },
     "requirements": [
      {
-      "item": "Vision and Approach document",
-      "detail": "One document of up to six sides of A4, single-spaced 11-point Arial with margins of at least 2cm; images, graphs and tables allowed"
+      "item": "Plain-English summary",
+      "detail": "Maximum 550 words"
      },
      {
-      "item": "Applicant and team capability to deliver",
-      "detail": "1,500 words on experience (appropriate to career stage), skills, leadership and management"
+      "item": "Core team and roles",
+      "detail": "Assign project lead, co-leads, researcher co-leads and other roles"
      },
      {
-      "item": "Project partners and letters of support",
-      "detail": "Details of each partner's contribution, plus a single PDF of letters or emails of support from every named partner"
+      "item": "Thematic area alignment",
+      "detail": "One letter; likely D (engineering) or C (energy)"
+     },
+     {
+      "item": "Vision and approach document",
+      "detail": "Six sides A4, 11-point Arial, 2cm margins"
+     },
+     {
+      "item": "Applicant and team capability",
+      "detail": "Maximum 1,500 words"
+     },
+     {
+      "item": "Project partners and support letters",
+      "detail": "Single PDF of letters or emails; N/A if none"
+     },
+     {
+      "item": "Facilities statement",
+      "detail": "Maximum 250 words; prior access agreement needed"
      },
      {
       "item": "Resources and cost justification",
-      "detail": "1,000 words with high-level costs under each fund heading; keep quotes for equipment costing more than £138,000"
+      "detail": "Maximum 1,000 words; high-level costs only"
      },
      {
-      "item": "Facilities",
-      "detail": "250 words if you need a facility; agree access with the facility beforehand"
-     },
-     {
-      "item": "Summary",
-      "detail": "Up to 550 words in plain English"
-     },
-     {
-      "item": "Core team and thematic area",
-      "detail": "Assign roles (project lead, co-leads, researcher co-lead and so on) and enter the one-letter EPSRC theme where most of the novelty lies, for example D for engineering"
-     },
-     {
-      "item": "Ethics and responsible research and innovation",
-      "detail": "An assessed criterion; word limit not shown in the brief"
-     },
-     {
-      "item": "Research office costing and submission",
-      "detail": "Only the lead research organisation can submit, through the UKRI Funding Service; allow time for Manchester's internal process"
+      "item": "Research office check and submission",
+      "detail": "Submitted via UKRI Funding Service; check institutional matched-funding rules"
      }
     ],
     "effort": {
      "level": "heavy",
      "prep_time": "6-8 weeks part-time",
-     "person_days": "15-25",
+     "person_days": "25-40",
      "drivers": [
-      "Six-page vision and approach case",
-      "Full costing and 1,000-word justification with the research office",
+      "Six-page vision and approach",
+      "Full costing via research office",
       "Partner letters of support",
-      "No resubmission, so it must be right first time"
+      "Capability narrative"
      ],
      "start_by": null
     },
@@ -1180,156 +1341,23 @@
      "next_expected_open": null,
      "next_expected_close": null,
      "is_estimate": false,
-     "evidence": "Open continuously since 13 November 2023 with no closing date; applications are batched to responsive-mode panels expected to meet quarterly."
+     "evidence": "EPSRC responsive mode is always open with internal quarterly batching since November 2023."
     },
     "next_steps": [
-     "Decide the project and write a one-page outline that is clearly distinct from your New Investigator Award.",
-     "Talk to the research office about costing, any internal review and timing against the quarterly Engineering panel.",
-     "Approach industrial or overseas partners early for letters of support, including a Norway-based co-lead if that would help.",
-     "Check the live EPSRC page for changes before you submit."
+     "Check UKRI for the current standard research grant opportunity page.",
+     "Draft a six-page case on spectral wave modelling or extreme offshore loads.",
+     "Contact Manchester research office early about costings and matched funding."
     ]
    },
    "analysed": {
-    "model": "claude (build-time review)",
-    "at": "2026-11-22",
-    "seeded": true
+    "model": "claude-opus-5-5",
+    "at": "2026-11-25",
+    "seeded": false
    },
    "is_new": false,
    "money": {
     "headline": "No limit",
-    "label": "EPSRC pays 80% FEC",
-    "max_gbp": 0
-   },
-   "odds": {
-    "rate": 20.9,
-    "text": "about 1 in 5",
-    "period": "at panel, 2025/26",
-    "basis": "EPSRC standard grants (68 of 411) and New Investigator Awards (67 of 234) decided at panel; bids dropped after peer review are not counted, so the overall rate is lower",
-    "source": "https://www.ukri.org/publications/epsrc-funding-application-outcomes/"
-   }
-  },
-  {
-   "id": "ukri-122105",
-   "source": "ukri",
-   "title": "EPSRC overseas travel grant: Nov 2023: responsive mode",
-   "funder": "EPSRC",
-   "url": "https://www.ukri.org/opportunity/epsrc-overseas-travel-grant-nov-2023-responsive-mode/",
-   "published": "2023-11-13",
-   "first_seen": "2026-11-22",
-   "status": "rolling",
-   "bucket": "rolling",
-   "opens": "2023-11-13T09:00:00",
-   "closes": null,
-   "closes_note": "Open - no closing date",
-   "award": {},
-   "eu": null,
-   "history": [],
-   "last_round": null,
-   "analysis": {
-    "summary": "EPSRC's always-open overseas travel grant pays 80% FEC for a single visit of up to six months, or several visits totalling up to 12 months, to learn new techniques or to form and develop collaborations in any area of EPSRC remit. It is a short application built around a two-page case, and EPSRC aims to turn these grants around faster.",
-    "topic_fit": {
-     "verdict": "open_call",
-     "notes": "Any field of research in EPSRC remit, so the visit serves your own programme, for example time at an overseas wave facility or with a scientific machine learning group. The case rests on why this visit, to this place, at this time."
-    },
-    "career_stage": {
-     "verdict": "suitable",
-     "notes": "Open to any EPSRC-eligible academic and built around one named project lead, so it is realistic for a new lecturer building international links. It is not reserved for early-career staff, but it is exactly the light travel and collaboration award you asked for."
-    },
-    "eligibility": {
-     "verdict": "eligible",
-     "notes": "EPSRC standard eligibility applies, which you meet as a permanent lecturer at an eligible UK research organisation. Only one person can be listed as project lead, and uninvited resubmissions are not accepted."
-    },
-    "fit_score": 80,
-    "fit_label": "strong",
-    "why_fit": "It covers travel, subsistence, visas, your own salary time and indirect costs for a research visit, with no deadline and a two-page case, so it is a low-effort way to start an overseas collaboration. Well-supported applications can be funded without going to a panel, and a visit could seed a later joint bid through EPSRC's working with overseas scientists route.",
-    "concerns": "No equipment (including laptops) or estates costs can be claimed, and you must show why the travel is necessary and alternatives would not do. Keep the visit distinct from travel already costed on your New Investigator Award, and agree the time away with your department.",
-    "recommend": true,
-    "recommend_reason": "Open topic, light to apply for, always open and exactly the kind of travel and collaboration award you asked for.",
-    "focus": "open",
-    "themes": [
-     "international",
-     "any-discipline"
-    ],
-    "opportunity_type": "travel_exchange",
-    "role": "lead",
-    "round": {
-     "status": "rolling",
-     "opens": "2023-11-13",
-     "closes": null,
-     "closes_time": null,
-     "stage": "Full application, any time",
-     "other_dates": [],
-     "notes": "EPSRC publishes no closing dates and batches applications; any closing date shown in the Funding Service is only a system requirement. At least three reviewers assess each application, and one with enough support can be funded without going to a panel."
-    },
-    "award_summary": {
-     "amount": "80% of full economic cost: travel, subsistence, visas, project lead salary and indirect costs (no equipment or estates)",
-     "duration": "One visit of up to six months, or several visits totalling up to 12 months"
-    },
-    "requirements": [
-     {
-      "item": "Host agreement and partner support",
-      "detail": "Agree the visit with the overseas host; if you name them as a project partner, record their contribution and upload letters or emails of support as a single PDF (otherwise enter N/A)"
-     },
-     {
-      "item": "Purpose document",
-      "detail": "No more than two sides of A4, single-spaced 11-point Arial, margins of at least 2cm, one PDF of up to 8MB with no personal data; explain why the travel is needed, why you, why there and why now"
-     },
-     {
-      "item": "Resources and cost justification",
-      "detail": "1,000 words; travel, subsistence, visas, your salary and indirect costs at 80% FEC"
-     },
-     {
-      "item": "Summary",
-      "detail": "550 words maximum, in plain English"
-     },
-     {
-      "item": "Core team and thematic area",
-      "detail": "One project lead only; copy one EPSRC theme letter into the form"
-     },
-     {
-      "item": "Ethics and responsible research and innovation",
-      "detail": "Assessed criterion; limit not shown in the brief (typical — confirm in the guidance)"
-     },
-     {
-      "item": "Research office check and submission",
-      "detail": "UKRI Funding Service (not Je-S); applications are not returned for amendment"
-     }
-    ],
-    "effort": {
-     "level": "light",
-     "prep_time": "3-5 days over two to three weeks",
-     "person_days": "3-5",
-     "drivers": [
-      "Two-page case for the visit",
-      "Simple FEC costing through the research office",
-      "Agreement and support from the host"
-     ],
-     "start_by": null
-    },
-    "recurrence": {
-     "cadence": "rolling",
-     "typical_open_month": null,
-     "typical_close_month": null,
-     "next_expected_open": null,
-     "next_expected_close": null,
-     "is_estimate": false,
-     "evidence": "Listed with no closing date since 13 November 2023; EPSRC batches applications instead of running rounds."
-    },
-    "next_steps": [
-     "Choose the host group and what the visit will achieve that remote working cannot, and agree dates with them.",
-     "Ask the research office to cost travel, subsistence, visas and your salary time at FEC.",
-     "Draft the two-page purpose document and submit when ready; there is no deadline."
-    ]
-   },
-   "analysed": {
-    "model": "claude (build-time review)",
-    "at": "2026-11-22",
-    "seeded": true
-   },
-   "is_new": false,
-   "money": {
-    "headline": "Visit costs",
-    "label": "travel and salary, 80% FEC",
+    "label": "no cap, 80% FEC",
     "max_gbp": 0
    },
    "odds": {
@@ -1476,6 +1504,140 @@
    }
   },
   {
+   "id": "ukri-122105",
+   "source": "ukri",
+   "title": "EPSRC overseas travel grant: Nov 2023: responsive mode",
+   "funder": "EPSRC",
+   "url": "https://www.ukri.org/opportunity/epsrc-overseas-travel-grant-nov-2023-responsive-mode/",
+   "published": "2023-11-13",
+   "first_seen": "2026-11-22",
+   "status": "rolling",
+   "bucket": "rolling",
+   "opens": "2023-11-13T09:00:00",
+   "closes": null,
+   "closes_note": "Open - no closing date",
+   "award": {},
+   "eu": null,
+   "history": [],
+   "last_round": null,
+   "analysis": {
+    "summary": "Rolling EPSRC grant covering travel, subsistence and your salary for overseas visits to learn techniques or build collaborations.",
+    "topic_fit": {
+     "verdict": "open_call",
+     "notes": "Any EPSRC-remit topic; wave mechanics, offshore engineering and scientific ML fit comfortably."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "Open to any eligible academic; realistic and modest for an early-career lead."
+    },
+    "eligibility": {
+     "verdict": "eligible",
+     "notes": "Permanent lecturer at a UK university meets standard EPSRC eligibility."
+    },
+    "fit_score": 74,
+    "fit_label": "strong",
+    "why_fit": "Light, always-open route to fund extended visits to overseas wave or ocean modelling groups.",
+    "concerns": "This 2023 listing had a system closing date around March 2026; check it has not been superseded.",
+    "recommend": true,
+    "recommend_reason": "Matches your wish for light travel and collaboration awards, with no deadline pressure.",
+    "focus": "open",
+    "themes": [
+     "international",
+     "any-discipline",
+     "ocean",
+     "fluids"
+    ],
+    "opportunity_type": "travel_exchange",
+    "role": "lead",
+    "round": {
+     "status": "open",
+     "opens": "2023-11-13",
+     "closes": null,
+     "closes_time": null,
+     "stage": "Full application",
+     "other_dates": [],
+     "notes": "No closing date; applications batched for quarterly panels or approved after review."
+    },
+    "award_summary": {
+     "amount": "80% FEC of travel, subsistence, visas and your salary",
+     "duration": "Single visit up to 6 months, or visits totalling 12 months"
+    },
+    "requirements": [
+     {
+      "item": "Funding Service account and application",
+      "detail": "Project lead starts application; research office checks and submits"
+     },
+     {
+      "item": "Summary",
+      "detail": "Maximum 550 words, plain English"
+     },
+     {
+      "item": "Core team and thematic area",
+      "detail": "One project lead; choose one EPSRC theme letter"
+     },
+     {
+      "item": "Purpose of travel document",
+      "detail": "Two A4 sides, 11-pt Arial, 2 cm margins, PDF"
+     },
+     {
+      "item": "Host partner contributions and letters",
+      "detail": "Single PDF of support letters from each named partner"
+     },
+     {
+      "item": "Resources and cost justification",
+      "detail": "Maximum 1,000 words; no estates or equipment costs"
+     },
+     {
+      "item": "Ethics and responsible innovation",
+      "detail": "Typical — confirm in the guidance"
+     }
+    ],
+    "effort": {
+     "level": "moderate",
+     "prep_time": "1-2 weeks part-time",
+     "person_days": "5-8",
+     "drivers": [
+      "Two-page purpose case",
+      "Host letter of support",
+      "Costing via research office"
+     ],
+     "start_by": null
+    },
+    "recurrence": {
+     "cadence": "rolling",
+     "typical_open_month": null,
+     "typical_close_month": null,
+     "next_expected_open": null,
+     "next_expected_close": null,
+     "is_estimate": false,
+     "evidence": "Responsive-mode scheme with no closing dates; applications batched internally."
+    },
+    "next_steps": [
+     "Confirm with EPSRC or research office this listing is still the current version.",
+     "Agree visit plan and support letter with your chosen overseas host.",
+     "Draft the two-page purpose case and costings with your research office."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-25",
+    "seeded": false
+   },
+   "is_new": false,
+   "money": {
+    "headline": "Travel+salary",
+    "label": "80% FEC of visit costs",
+    "max_gbp": 0
+   },
+   "odds": {
+    "rate": 20.9,
+    "text": "about 1 in 5",
+    "period": "at panel, 2025/26",
+    "basis": "EPSRC standard grants (68 of 411) and New Investigator Awards (67 of 234) decided at panel; bids dropped after peer review are not counted, so the overall rate is lower",
+    "source": "https://www.ukri.org/publications/epsrc-funding-application-outcomes/"
+   }
+  },
+  {
    "id": "scheme-onr-global",
    "source": "scheme",
    "title": "ONR Global research grants, Visiting Scientists Program and Collaborative Science Program",
@@ -1604,6 +1766,143 @@
    }
   },
   {
+   "id": "ukri-122216",
+   "source": "ukri",
+   "title": "EPSRC network grant: Nov 2023: responsive mode",
+   "funder": "EPSRC",
+   "url": "https://www.ukri.org/opportunity/epsrc-network-grant-nov-2023-responsive-mode/",
+   "published": "2023-11-13",
+   "first_seen": "2026-11-22",
+   "status": "rolling",
+   "bucket": "rolling",
+   "opens": "2023-11-13T09:00:00",
+   "closes": null,
+   "closes_note": "Open - no closing date",
+   "award": {},
+   "eu": null,
+   "history": [],
+   "last_round": null,
+   "analysis": {
+    "summary": "EPSRC responsive-mode grant covering costs to build a new interdisciplinary research network (no research costs), at 80% FEC, up to three years.",
+    "topic_fit": {
+     "verdict": "open_call",
+     "notes": "Any EPSRC-remit topic; a network on wave extremes, offshore wind loads or scientific ML fits."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "Open to any eligible PI; early-career academics can credibly lead a focused, new network."
+    },
+    "eligibility": {
+     "verdict": "eligible",
+     "notes": "Permanent lecturer at an eligible UK university meets standard EPSRC rules."
+    },
+    "fit_score": 72,
+    "fit_label": "strong",
+    "why_fit": "Lets you convene a UK wave/offshore-energy/ML community with industry, seeding future consortium bids.",
+    "concerns": "The opportunity dates from Nov 2023 and may be superseded; it funds no research.",
+    "recommend": true,
+    "recommend_reason": "Open topic, realistic for you, no deadline, and builds the leadership profile for larger bids.",
+    "focus": "open",
+    "themes": [
+     "ocean",
+     "offshore-energy",
+     "ai-for-science",
+     "industry",
+     "any-discipline"
+    ],
+    "opportunity_type": "network",
+    "role": "lead",
+    "round": {
+     "status": "rolling",
+     "opens": "2023-11-13",
+     "closes": null,
+     "closes_time": null,
+     "stage": "Full application",
+     "other_dates": [],
+     "notes": "Applications are batched for roughly quarterly panels; check that this Nov 2023 listing is still current."
+    },
+    "award_summary": {
+     "amount": "No limit; 80% FEC",
+     "duration": "Up to 3 years"
+    },
+    "requirements": [
+     {
+      "item": "Funding Service account and core team",
+      "detail": "Normally no more than one project co-lead"
+     },
+     {
+      "item": "Plain-English summary",
+      "detail": "Maximum 550 words"
+     },
+     {
+      "item": "Thematic area alignment",
+      "detail": "One letter selected from themes A–J"
+     },
+     {
+      "item": "Vision and approach document",
+      "detail": "Six A4 sides, 11pt Arial, 2cm margins"
+     },
+     {
+      "item": "Applicant and team capability",
+      "detail": "Maximum 1,500 words"
+     },
+     {
+      "item": "Added value statement",
+      "detail": "Maximum 500 words"
+     },
+     {
+      "item": "Partner contributions and letters",
+      "detail": "Single PDF of letters or emails of support"
+     },
+     {
+      "item": "Resources and cost justification",
+      "detail": "Maximum 1,000 words plus costs table"
+     },
+     {
+      "item": "Research office check and submission",
+      "detail": "Submitted by the research office; allow internal lead time"
+     }
+    ],
+    "effort": {
+     "level": "heavy",
+     "prep_time": "4-6 weeks part-time",
+     "person_days": "15-25",
+     "drivers": [
+      "Recruiting network members and partners",
+      "Six-page vision and approach",
+      "Industry letters of support",
+      "Full costing via research office"
+     ],
+     "start_by": null
+    },
+    "recurrence": {
+     "cadence": "rolling",
+     "typical_open_month": null,
+     "typical_close_month": null,
+     "next_expected_open": null,
+     "next_expected_close": null,
+     "is_estimate": false,
+     "evidence": "Responsive mode has no closing dates; applications are batched for quarterly panels."
+    },
+    "next_steps": [
+     "Email EPSRC to confirm this network opportunity is still the live route.",
+     "Sketch a network theme, such as ML for extreme waves and offshore loads.",
+     "Line up 3-5 industry and SME partners for letters of support."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-25",
+    "seeded": false
+   },
+   "is_new": false,
+   "money": {
+    "headline": "No limit",
+    "label": "no cap, 80% FEC",
+    "max_gbp": 0
+   }
+  },
+  {
    "id": "ukri-122253",
    "source": "ukri",
    "title": "EPSRC working with overseas scientists: Nov 2023: responsive mode",
@@ -1621,27 +1920,30 @@
    "history": [],
    "last_round": null,
    "analysis": {
-    "summary": "EPSRC's always-open route for a joint project with researchers in Germany, Ireland, Luxembourg, Brazil (São Paulo) or the US: one application and one review under a lead agency agreement, with EPSRC paying 80% FEC of the UK costs and the partner agency funding its own side. It is a full responsive-mode grant on any topic in EPSRC remit, so it becomes worth your time once you have a named overseas collaborator.",
+    "summary": "Responsive-mode EPSRC grant for UK-led joint projects with partners in Germany, Ireland, Luxembourg, Brazil or the US, funded via lead-agency agreements.",
     "topic_fit": {
      "verdict": "open_call",
-     "notes": "Responsive mode across the whole EPSRC remit (engineering, energy and decarbonisation, mathematical sciences, AI), so you would propose your own wave, fluids or scientific machine learning project. The majority of the UK research must fall within EPSRC remit."
+     "notes": "Any topic in EPSRC remit; your wave and wave–structure research fits engineering or energy themes."
     },
     "career_stage": {
      "verdict": "suitable",
-     "notes": "EPSRC's standard eligibility applies with no seniority bar, and the team's experience is judged as appropriate to career stage. A standard-grant-sized project with one overseas partner is a realistic next step after your New Investigator Award."
+     "notes": "Standard responsive-mode rules; a permanent lecturer can lead, assessed relative to career stage."
     },
     "eligibility": {
      "verdict": "eligible",
-     "notes": "As a permanent lecturer at a UK university eligible for EPSRC funding you meet the standard rules. The US route is by invitation only after an expression of interest; Germany, Ireland, Luxembourg and Brazil need none."
+     "notes": "Manchester is EPSRC-eligible; US route needs an invited expression of interest first."
     },
-    "fit_score": 73,
+    "fit_score": 72,
     "fit_label": "strong",
-    "why_fit": "It lets you lead a full EPSRC project with an overseas wave, ocean-engineering or scientific machine learning group through a single application and a joint funding decision, so neither side ends up funded without the other. There is no closing date and no limit on grant value, and equipment of up to £400,000 per item can be included.",
-    "concerns": "It only works with a committed partner who is fundable by DFG, Research Ireland (formerly SFI), FNR, FAPESP or NSF, and the effort is that of a full standard grant plus the partner agency's paperwork. The US route needs an expression of interest at least three months ahead and EPSRC asks applicants to read NSF's current priorities guidance; uninvited resubmissions are not accepted.",
+    "why_fit": "Lets you lead an uncapped bottom-up grant while your overseas wave collaborators are funded by their own agency.",
+    "concerns": "Needs an active partner in a listed country; DFG projects capped at three years; NSF route slow.",
     "recommend": true,
-    "recommend_reason": "Open topic in your home council, realistic for an early-career PI and always open; worth the heavy effort once you have a specific overseas partner and a project distinct from your New Investigator Award.",
+    "recommend_reason": "Open-topic PI grant with international reach, worthwhile if you have a German, Irish or US partner.",
     "focus": "open",
     "themes": [
+     "ocean",
+     "offshore-energy",
+     "fluids",
      "international",
      "any-discipline"
     ],
@@ -1652,54 +1954,50 @@
      "opens": "2023-11-13",
      "closes": null,
      "closes_time": null,
-     "stage": "Full application, any time (US route: invited after an expression of interest)",
+     "stage": "Full application (US: invited after expression of interest)",
      "other_dates": [],
-     "notes": "EPSRC publishes no closing dates: applications are batched for responsive-mode panels expected to run quarterly, and any closing date shown in the Funding Service is only a system requirement. For a US partner, send the expression of interest at least three months before you plan to submit."
+     "notes": "Applications batched to quarterly panels; US expression of interest at least three months before submission."
     },
     "award_summary": {
-     "amount": "No limit on grant value; EPSRC pays 80% FEC of the UK costs and the overseas agency funds its own researchers",
-     "duration": "Not fixed; maximum three years under the EPSRC–DFG (Germany) agreement"
+     "amount": "No upper limit; 80% FEC of UK costs",
+     "duration": "Not fixed; maximum three years under DFG agreement"
     },
     "requirements": [
      {
-      "item": "Overseas partner and agency route",
-      "detail": "Partner must be fundable by DFG (Germany), Research Ireland, FNR (Luxembourg), FAPESP (São Paulo) or NSF (US); if most of the research lies in Germany or the US, the partner applies through their own agency instead"
+      "item": "Partner agency application or EOI",
+      "detail": "DFG parallel proposal, FAPESP SAGe letter, or NSF expression of interest"
      },
      {
-      "item": "Expression of interest (US route only)",
-      "detail": "EPSRC online form on behalf of both partners, at least three months before your planned submission; you can apply only once invited, and the grant value must stay within 10% of the figure in it"
+      "item": "Summary",
+      "detail": "550 words, plain English"
      },
      {
       "item": "Vision and Approach document",
-      "detail": "No more than six sides of A4, single-spaced 11-point Arial, margins of at least 2cm; images, graphs and tables allowed"
+      "detail": "Six sides A4, 11-point Arial, 2cm margins"
      },
      {
-      "item": "Applicant and team capability to deliver",
+      "item": "Applicant and team capability",
       "detail": "1,500 words"
      },
      {
       "item": "Resources and cost justification",
-      "detail": "1,000 words; EPSRC funds 80% FEC of UK staff, travel, impact and other costs, with equipment up to £400,000 per item"
+      "detail": "1,000 words plus costs table; 80% FEC"
      },
      {
       "item": "International agency documents",
-      "detail": "Select the agency (one letter) and upload a single PDF of no more than 8MB with the documents that agency requires; for FAPESP this includes the letter of eligibility and the SAGe application, and you must submit within seven days of receiving them"
+      "detail": "Single PDF, max 8MB, named with application number"
      },
      {
-      "item": "Project partner letters or emails of support",
-      "detail": "One PDF covering every named project partner; enter N/A if there are none"
+      "item": "Project partner letters of support",
+      "detail": "Single PDF of letters or emails"
      },
      {
-      "item": "Facilities",
-      "detail": "250 words, with prior agreement from any facility you plan to use"
-     },
-     {
-      "item": "Summary, core team and thematic area",
-      "detail": "550-word plain-English summary; team roles, with overseas collaborators recorded as project partners or visiting researchers; one EPSRC theme letter"
+      "item": "Facilities statement",
+      "detail": "250 words; prior access agreement"
      },
      {
       "item": "Research office check and submission",
-      "detail": "Through the UKRI Funding Service (not Je-S); only the lead research organisation can submit, and applications are not returned for amendment"
+      "detail": "Via UKRI Funding Service; allow internal lead time"
      }
     ],
     "effort": {
@@ -1707,10 +2005,10 @@
      "prep_time": "6-8 weeks part-time",
      "person_days": "20-30",
      "drivers": [
-      "Six-page vision and approach agreed with the overseas team",
-      "Full UK costing and 1,000-word justification",
-      "Partner agency documents and eligibility steps",
-      "Three months' notice for a US expression of interest"
+      "Full case for support",
+      "Coordinating partner-agency application",
+      "Full economic costings",
+      "Partner letters and documents"
      ],
      "start_by": null
     },
@@ -1721,24 +2019,23 @@
      "next_expected_open": null,
      "next_expected_close": null,
      "is_estimate": false,
-     "evidence": "Listed with no closing date since 13 November 2023; EPSRC batches applications for responsive-mode panels instead of running rounds."
+     "evidence": "Open since November 2023 with no closing date; applications batched to quarterly panels."
     },
     "next_steps": [
-     "Agree with your overseas collaborator which agency applies and where most of the research will be done, because that decides which side submits.",
-     "Read EPSRC's International Agreements page for that agency's extra documents; for a US partner, submit the expression of interest at least three months before your target date.",
-     "Ask the research office for a full costing and their internal lead time for a Funding Service submission.",
-     "If the project leans towards ocean or coastal science, use EPSRC's remit query form before you write."
+     "Identify a wave-research partner in Germany, Ireland or US to co-propose.",
+     "Email international@epsrc.ukri.org to confirm this call remains the live route.",
+     "Agree with your partner which agency leads and align both applications."
     ]
    },
    "analysed": {
-    "model": "claude (build-time review)",
-    "at": "2026-11-22",
-    "seeded": true
+    "model": "claude-opus-5-5",
+    "at": "2026-11-25",
+    "seeded": false
    },
    "is_new": false,
    "money": {
     "headline": "No limit",
-    "label": "UK side, 80% FEC",
+    "label": "no cap, 80% FEC UK costs",
     "max_gbp": 0
    },
    "odds": {
@@ -1747,159 +2044,6 @@
     "period": "at panel, 2025/26",
     "basis": "EPSRC standard grants (68 of 411) and New Investigator Awards (67 of 234) decided at panel; bids dropped after peer review are not counted, so the overall rate is lower",
     "source": "https://www.ukri.org/publications/epsrc-funding-application-outcomes/"
-   }
-  },
-  {
-   "id": "ukri-187145",
-   "source": "ukri",
-   "title": "Pushing the frontiers of environmental research",
-   "funder": "NERC",
-   "url": "https://www.ukri.org/opportunity/pushing-the-frontiers-of-environmental-research/",
-   "published": "2026-09-23",
-   "first_seen": "2026-11-22",
-   "status": "rolling",
-   "bucket": "rolling",
-   "opens": "2026-09-23T09:00:00",
-   "closes": null,
-   "closes_note": "Open - no closing date",
-   "award": {
-    "max_award": "£950,000"
-   },
-   "eu": null,
-   "history": [
-    {
-     "title": "Pushing the frontiers of environmental research: January 2026",
-     "opens": "2025-07-22",
-     "closes": "2026-01-21",
-     "url": "https://www.ukri.org/opportunity/pushing-the-frontiers-of-environmental-research-january-2026/"
-    },
-    {
-     "title": "Pushing the frontiers of environmental research: July 2025",
-     "opens": "2025-02-05",
-     "closes": "2025-07-16",
-     "url": "https://www.ukri.org/opportunity/pushing-the-frontiers-of-environmental-research-july-2025/"
-    }
-   ],
-   "last_round": null,
-   "analysis": {
-    "summary": "NERC's always-open grant for adventurous, curiosity-driven environmental science: up to £950,000 full economic cost (80% paid), usually three to four years, open to any career stage. You could lead one if the project answers a clearly defined environmental science question, for example on extreme waves, wave breaking or coastal and tidal dynamics, and not an engineering one.",
-    "topic_fit": {
-     "verdict": "open_call",
-     "notes": "Any topic that sits predominantly within NERC remit, so you would propose your own ocean-wave physics; NERC's discipline list includes ocean–atmosphere interactions, land–ocean interactions and regional weather and extreme events. Loads on offshore structures and marine energy would normally sit with EPSRC, so use the remit query form if unsure."
-    },
-    "career_stage": {
-     "verdict": "suitable",
-     "notes": "NERC welcomes project leads at any career stage, individuals as well as groups, and nothing obliges you to ask for the full £950,000. A focused three-year project is realistic, though your funding record so far is with EPSRC, so a co-lead with NERC experience would strengthen it."
-    },
-    "eligibility": {
-     "verdict": "eligible",
-     "notes": "You are at a UK research organisation eligible for NERC funding and in a permanent academic post, and no demand management applies. The project must sit predominantly within NERC remit, and uninvited resubmissions are not accepted."
-    },
-    "fit_score": 72,
-    "fit_label": "strong",
-    "why_fit": "It is a sizeable project grant you can lead yourself, with no deadline and a stated appetite for adventurous, high-reward ideas and for novel use of AI in environmental science, which suits physics-informed machine learning for extreme ocean events. NERC-led bids can also bring in US (NSF), São Paulo (FAPESP) or Luxembourg (FNR) partners under lead agency agreements.",
-    "concerns": "NERC says it is seeking its 'best environmental researchers', so reviewers will expect an environmental science question and not an engineering application; partners must fund their own involvement and PhD studentships cannot be costed. Any ship time or marine equipment needs an approved request before you submit, or the application is office rejected.",
-    "recommend": true,
-    "recommend_reason": "A lead-PI project grant open to any career stage and always open; recommended provided you can pose the science as an environmental question within NERC remit and not as offshore engineering.",
-    "focus": "open",
-    "themes": [
-     "climate-environment",
-     "ocean"
-    ],
-    "opportunity_type": "project_grant",
-    "role": "lead",
-    "round": {
-     "status": "rolling",
-     "opens": "2026-09-23",
-     "closes": null,
-     "closes_time": null,
-     "stage": "Full application, any time",
-     "other_dates": [],
-     "notes": "There is no deadline: NERC starts assessment when an application arrives, holds regular decision points and aims to decide within nine months; a closing date shown in the Funding Service is only a system requirement. Shortlisted applicants get 14 days to respond to reviewers' comments."
-    },
-    "award_summary": {
-     "amount": "Up to £950,000 full economic cost, of which NERC pays 80%",
-     "duration": "Usually three to four years (no fixed duration)"
-    },
-    "requirements": [
-     {
-      "item": "Remit check and primary discipline",
-      "detail": "Research must sit predominantly within NERC remit; copy one primary discipline from NERC's list into a 10-word field, and use the remit query form if the work straddles EPSRC"
-     },
-     {
-      "item": "Facility and marine-equipment approvals (if needed)",
-      "detail": "Prior agreement and a technical assessment from any NERC facility; a ship-time and marine equipment (SME) or autonomous deployment (ADF) request must be approved before you submit"
-     },
-     {
-      "item": "Vision",
-      "detail": "1,100 words on what you hope to achieve and why it matters"
-     },
-     {
-      "item": "Approach, team capability and ethics sections",
-      "detail": "Named as assessment areas (approach; applicant and team capability to deliver; ethics and responsible research and innovation); word limits not shown in the brief (typical — confirm in the guidance)"
-     },
-     {
-      "item": "Resources and cost justification",
-      "detail": "FEC up to £950,000 with 80% paid; fully justify any equipment over £25,000; no PhD studentship or data-archiving costs; ship time is not costed in the application"
-     },
-     {
-      "item": "Summary and core team",
-      "detail": "550-word plain-English summary; list the project lead, co-leads and other roles"
-     },
-     {
-      "item": "Research office check and submission",
-      "detail": "UKRI Funding Service only (not Je-S); submit when ready, as applications cannot be changed afterwards"
-     },
-     {
-      "item": "Response to reviewers",
-      "detail": "14 days to respond if your application is shortlisted"
-     }
-    ],
-    "effort": {
-     "level": "heavy",
-     "prep_time": "6-8 weeks part-time",
-     "person_days": "20-30",
-     "drivers": [
-      "Full case across five assessed areas",
-      "Costing of up to £950,000 with justification",
-      "Recasting your work as an environmental science question",
-      "Facility approvals if you need them"
-     ],
-     "start_by": null
-    },
-    "recurrence": {
-     "cadence": "rolling",
-     "typical_open_month": null,
-     "typical_close_month": null,
-     "next_expected_open": null,
-     "next_expected_close": null,
-     "is_estimate": false,
-     "evidence": "Earlier rounds had fixed closing dates (16 July 2025 and 21 January 2026), but the listing published on 23 September 2026 says there is no deadline and that NERC will hold regular decision points, so the twice-yearly projection no longer applies."
-    },
-    "next_steps": [
-     "Write a one-paragraph environmental science question and test it against NERC remit, using the remit query form if it sits between NERC and EPSRC.",
-     "Choose the primary discipline from NERC's list and sound out a co-lead with NERC experience.",
-     "If you need a NERC facility, ship time or marine equipment, start the access request now, because approval must be in place before you submit.",
-     "Ask the research office for a costing and submit when the case is ready."
-    ]
-   },
-   "analysed": {
-    "model": "claude (build-time review)",
-    "at": "2026-11-22",
-    "seeded": true
-   },
-   "is_new": false,
-   "money": {
-    "headline": "£950k",
-    "label": "max per award, 80% FEC",
-    "max_gbp": 950000
-   },
-   "odds": {
-    "rate": 20.4,
-    "text": "about 1 in 5",
-    "period": "Jan 2025 round",
-    "basis": "NERC Pushing the Frontiers, 37 funded of 181 (July 2024 round: 40 of 172); lead-agency routes go through the same scheme",
-    "source": "https://www.ukri.org/wp-content/uploads/2022/11/NERC-191225-PushingFrontiersEnvironmentalResearchFundingOutcomesJanuary2025.pdf"
    }
   },
   {
@@ -1920,28 +2064,30 @@
    "history": [],
    "last_round": null,
    "analysis": {
-    "summary": "An always-open route to up to 10,000 GPU hours on the Isambard-AI or Zenith national AI supercomputers, to be used within three months, for testing and benchmarking AI code and workflows. It provides compute only (no money), is reviewed lightly by the delivery team and is awarded in fortnightly batches.",
+    "summary": "Up to 10,000 GPU hours on Isambard-AI or Zenith for AI-related R&D projects; compute only, no funding, rolling applications.",
     "topic_fit": {
      "verdict": "strong",
-     "notes": "The route covers AI-related research across the whole UKRI remit and explicitly lists AI that makes simulations in climate modelling and engineering design more predictive and less computationally intensive, which is what your neural-operator and physics-informed surrogate work aims at. It is not a waves or fluids call as such."
+     "notes": "AI-related compute, explicitly including AI-enhanced simulation; fits your neural operators and wave ML work."
     },
     "career_stage": {
-     "verdict": "suitable",
-     "notes": "Open to any researcher whose contract outlasts the project, and pitched partly at first-time users of AI supercomputing. It is entirely realistic for you to lead."
+     "verdict": "ideal",
+     "notes": "Light-touch route aimed at first-time users and small projects; easy for an early-career PI."
     },
     "eligibility": {
      "verdict": "eligible",
-     "notes": "A project lead needs a contract longer than the proposed project with a research organisation eligible for UKRI funding, which your permanent post at Manchester satisfies. There is no limit on applications per researcher, but each must be standalone."
+     "notes": "UK university staff with a contract outlasting the project can lead."
     },
     "fit_score": 72,
     "fit_label": "strong",
-    "why_fit": "It is a quick, low-risk way to get serious GPU time for training wave surrogates and to benchmark your code on a national system, with priority given to applicants who have not used AIRR before. The route is also intended as the testing step before larger AIRR allocations.",
-    "concerns": "There is no funding, the hours must be used within three months of the award and the start cannot be deferred, so your code and data need to be ready to run. Resources at each batching date are limited and allocated by tier with partial randomisation, and unsuccessful applications are not automatically reconsidered.",
+    "why_fit": "Quick, low-effort GPU access to train neural operators or surrogates for wave and wave-structure problems.",
+    "concerns": "Compute only, no money; hours must be used within three months.",
     "recommend": true,
-    "recommend_reason": "A day or two of work for a useful block of GPU time that directly supports your machine-learning-for-waves programme, with no deadline to chase.",
+    "recommend_reason": "Light application for useful GPU time supporting your scientific ML on ocean waves.",
     "focus": "domain_ai",
     "themes": [
-     "ai-for-science"
+     "ai-for-science",
+     "ocean",
+     "fluids"
     ],
     "opportunity_type": "compute_equipment",
     "role": "lead",
@@ -1950,48 +2096,48 @@
      "opens": null,
      "closes": null,
      "closes_time": null,
-     "stage": "Apply any time; awards batched fortnightly",
+     "stage": "Single-stage application via AIRRPortal",
      "other_dates": [],
-     "notes": "UKRI aims to award GPU hours at fortnightly batching dates, with access estimated about one month after submission. You may name a preferred start date up to one month after applying, but resources are released as soon as the project is approved."
+     "notes": "Fortnightly batching; access roughly one month after submission; start cannot be deferred."
     },
     "award_summary": {
-     "amount": "Up to 10,000 GPU hours on Isambard-AI or Zenith (compute only, no funding); a one-off 50% top-up can be requested once over 90% is used",
-     "duration": "3 months from project start"
+     "amount": "Up to 10,000 GPU hours; no funding",
+     "duration": "3 months"
     },
     "requirements": [
      {
-      "item": "A workload that is ready to run",
-      "detail": "The 10,000 GPU hours must be used within three months of the award and the start date cannot be deferred."
+      "item": "AIRRPortal account registration",
+      "detail": "Official institutional emails for every team member; no Gmail"
      },
      {
-      "item": "AIRRPortal online form",
-      "detail": "Three unscored sections: project details, resource request (Isambard-AI or Zenith) and project team membership."
+      "item": "Online form: project details",
+      "detail": "Not scored; includes upload of supporting documents"
      },
      {
-      "item": "Assessment questions document",
-      "detail": "Scored; use the AIRRPortal template. Assessors look for fit to AIRR's scope and the novelty of your use of AI, the expected outputs and their wider benefit, and the link to the industrial strategy, government missions or other policy priorities."
+      "item": "Resource request",
+      "detail": "Choose Isambard-AI or Zenith; up to 10,000 GPU hours"
      },
      {
-      "item": "Project and organisation details document",
-      "detail": "AIRRPortal template covering compliance, project costs and subsidy history (not scored); academic organisations do not need to provide project costs."
+      "item": "Project team membership",
+      "detail": "List team; lead must hold contract longer than project"
      },
      {
-      "item": "Team email addresses",
-      "detail": "Official organisational addresses unique to each team member (no Gmail or shared mailboxes), and no links to external web resources anywhere in the application."
+      "item": "Project and organisation details template",
+      "detail": "Compliance and subsidy history; academic costs not required"
      },
      {
-      "item": "Preferred start date",
-      "detail": "Up to one month after submission; the start cannot be deferred once the award is made."
+      "item": "Assessment questions template",
+      "detail": "Scored: AI novelty, outputs and benefit, policy alignment; no external links"
      }
     ],
     "effort": {
      "level": "light",
-     "prep_time": "1-2 days",
-     "person_days": "1-2",
+     "prep_time": "2-3 days",
+     "person_days": "2-3",
      "drivers": [
-      "Short portal form and two templated documents",
-      "No costing or partner letters for academic applicants",
-      "Workload must be ready to run when the hours arrive"
+      "Two short templates",
+      "Justifying AI novelty",
+      "Planning three-month GPU use"
      ],
      "start_by": null
     },
@@ -2002,24 +2148,23 @@
      "next_expected_open": null,
      "next_expected_close": null,
      "is_estimate": false,
-     "evidence": "Listed as open with no closing date; GPU hours are awarded at fortnightly batching dates."
+     "evidence": "Open since August 2025 with no closing date; fortnightly award batches."
     },
     "next_steps": [
-     "Pick one training job that needs GPUs at scale (for example a neural-operator surrogate for wave–structure loads) and get the code running end to end on a small case.",
-     "Read the AIRRPortal 'how to apply' guidance and download the two document templates.",
-     "Submit when the code is ready, choosing Isambard-AI or Zenith, and time the three-month usage window around your group's availability.",
-     "Keep your usage figures and results: the larger AIRR calls so far (the Innovator route and the 2026 AI open access call) looked for earlier Gateway or GPU use as evidence that the work can scale."
+     "Have a student ready code and data so GPU hours are used promptly.",
+     "Draft assessment answers on AI novelty and offshore wind policy alignment.",
+     "Submit via AIRRPortal once workflow is ready to run."
     ]
    },
    "analysed": {
-    "model": "claude (build-time review)",
-    "at": "2026-11-22",
-    "seeded": true
+    "model": "claude-opus-5-5",
+    "at": "2026-11-25",
+    "seeded": false
    },
    "is_new": false,
    "money": {
     "headline": "Compute time",
-    "label": "10,000 GPU hours, no money",
+    "label": "up to 10,000 GPU hours",
     "max_gbp": 0
    }
   },
@@ -2299,148 +2444,25 @@
    "history": [],
    "last_round": null,
    "analysis": {
-    "summary": "A standing agreement between UKRI and the Research Council of Norway that lets you add Norway-based co-leads to a UK-led application to an existing research council scheme, with their direct costs paid by UKRI. It is not a separate fund: it has no deadline or budget of its own, and the rules of the scheme you apply through still govern.",
+    "summary": "Mechanism letting you add Norway-based co-leads, funded by UKRI, to EPSRC or NERC grant applications you lead.",
     "topic_fit": {
      "verdict": "open_call",
-     "notes": "Any discipline within the participating councils' remits qualifies, including EPSRC and NERC. Norway's strength in ocean waves and offshore engineering makes it a natural partner country for your work."
+     "notes": "Any topic in participating councils' remits; Norway is strong in waves and offshore wind."
     },
     "career_stage": {
      "verdict": "suitable",
-     "notes": "It rides on whichever scheme you apply to, so it is as realistic as that scheme: for you, most obviously an EPSRC standard research grant that you lead."
+     "notes": "Any eligible UK project lead; it attaches to standard responsive-mode grants."
     },
     "eligibility": {
      "verdict": "eligible",
-     "notes": "You qualify as a project lead employed by a UK research organisation eligible for EPSRC and NERC funding. The host opportunity must permit international co-leads; EPSRC's standard research grant explicitly allows a Norway-based one."
-    },
-    "fit_score": 66,
-    "fit_label": "possible",
-    "why_fit": "It is a cost-free way to put real money behind a Norwegian collaboration: the co-lead's justified salary, locally employed researchers, travel and consumables can be paid at 100% of direct costs, up to 30% of the project's total. That suits your interest in light-touch international collaboration and would strengthen a wave or offshore-wind proposal you were writing anyway.",
-    "concerns": "It only has value alongside a full application to another scheme, which is where the real effort and competition lie. Norwegian estates, overheads and indirect costs are not covered, no single item may cost more than £10,000, and Manchester must carry out due diligence and pass the funds on.",
-    "recommend": true,
-    "recommend_reason": "Worth keeping in view because it adds a funded Norwegian partner to a grant you would lead anyway for almost no extra effort; treat it as an option on your next EPSRC or NERC application rather than a call in itself.",
-    "focus": "open",
-    "themes": [
-     "international",
-     "any-discipline"
-    ],
-    "opportunity_type": "other",
-    "role": "lead",
-    "round": {
-     "status": "rolling",
-     "opens": null,
-     "closes": null,
-     "closes_time": null,
-     "stage": "No separate application: add a Norway co-lead to a host scheme",
-     "other_dates": [],
-     "notes": "Deadlines, budgets and conditions are those of the funding opportunity you apply through. The agreement was published on 1 April 2025."
-    },
-    "award_summary": {
-     "amount": "No separate budget: Norway-based co-lead costs are paid at 100% of direct costs, capped at 30% of the total project cost (at 100% full economic cost)",
-     "duration": "Set by the host funding opportunity"
-    },
-    "requirements": [
-     {
-      "item": "Host funding opportunity",
-      "detail": "A scheme from AHRC, ESRC, EPSRC, MRC or NERC that is open to project co-leads (international) and does not forbid international collaboration"
-     },
-     {
-      "item": "Norway-based project co-lead",
-      "detail": "Employed by a Norwegian research organisation of comparable standing to a UK one; expected to make a major intellectual contribution"
-     },
-     {
-      "item": "Case for the collaboration",
-      "detail": "Explain and justify the contribution and added value of the Norwegian participants within the application"
-     },
-     {
-      "item": "Norway costs in 'Resources and costs'",
-      "detail": "Itemise each budget line; direct costs only, entered as exceptions at 100%; no more than 30% of the total project cost; no estates, overheads or indirect costs and no item over £10,000"
-     },
-     {
-      "item": "Title prefix",
-      "detail": "Start the application title with 'UKRI-Norway'"
-     },
-     {
-      "item": "Due diligence by Manchester",
-      "detail": "The UK lead organisation must check the Norwegian organisation can receive and manage the funds and put agreements in place"
-     }
-    ],
-    "effort": {
-     "level": "light",
-     "prep_time": "2-4 extra days on top of the host",
-     "person_days": "2-4",
-     "drivers": [
-      "2-4 extra days on top of the host application",
-      "Agreeing the Norwegian co-lead's role and costs",
-      "Itemised cost justification within the 30% cap",
-      "The host scheme's own application is the real workload"
-     ],
-     "start_by": null
-    },
-    "recurrence": {
-     "cadence": "rolling",
-     "typical_open_month": null,
-     "typical_close_month": null,
-     "next_expected_open": null,
-     "next_expected_close": null,
-     "is_estimate": false,
-     "evidence": "A standing agreement listed since 1 April 2025 with no closing date."
-    },
-    "next_steps": [
-     "Decide which Norwegian group would add most to your next EPSRC or NERC proposal and sound them out.",
-     "Check the host call's guidance confirms that a Norway-based project co-lead is allowed.",
-     "Agree their costs early (direct costs only, within the 30% cap) and ask the research office about due diligence.",
-     "Remember the agreement is reciprocal: you can also be an international co-investigator on a Norwegian-led bid to the Research Council of Norway."
-    ]
-   },
-   "analysed": {
-    "model": "claude (build-time review)",
-    "at": "2026-11-22",
-    "seeded": true
-   },
-   "is_new": false,
-   "money": {
-    "headline": "Partner costs",
-    "label": "Norway side, ≤30% of total",
-    "max_gbp": 0
-   }
-  },
-  {
-   "id": "ukri-115004",
-   "source": "ukri",
-   "title": "Collaborate with researchers in Brazil",
-   "funder": "UKRI",
-   "url": "https://www.ukri.org/opportunity/collaborate-with-researchers-in-brazil/",
-   "published": "2020-09-20",
-   "first_seen": "2026-11-22",
-   "status": "rolling",
-   "bucket": "rolling",
-   "opens": null,
-   "closes": null,
-   "closes_note": "Open - no closing date",
-   "award": {},
-   "eu": null,
-   "history": [],
-   "last_round": null,
-   "analysis": {
-    "summary": "Route for joint UK–São Paulo research grants via EPSRC/NERC responsive mode, co-funded by FAPESP, led by UK PIs.",
-    "topic_fit": {
-     "verdict": "open_call",
-     "notes": "Any topic within EPSRC or NERC remit, so your wave and offshore research fits."
-    },
-    "career_stage": {
-     "verdict": "suitable",
-     "notes": "Standard responsive-mode grants are realistic for you as an early-career PI."
-    },
-    "eligibility": {
-     "verdict": "eligible",
-     "notes": "Manchester is UKRI-eligible, but you need a FAPESP-eligible São Paulo partner."
+     "notes": "Manchester is UKRI-eligible; you must meet the host opportunity's own rules."
     },
     "fit_score": 64,
     "fit_label": "possible",
-    "why_fit": "It lets you lead a full grant with São Paulo collaborators, such as USP offshore and ocean engineering groups.",
-    "concerns": "It is only worthwhile if you have or can build a credible São Paulo partner.",
+    "why_fit": "Funds partners such as NTNU, SINTEF Ocean or MET Norway inside your own EPSRC/NERC bids.",
+    "concerns": "Not new money; you still need a full grant through an existing scheme.",
     "recommend": true,
-    "recommend_reason": "It is a flexible, always-open route to a PI-led international grant in your own research area.",
+    "recommend_reason": "A cheap lever for adding strong Norwegian wave and offshore-wind partners to your next grant.",
     "focus": "open",
     "themes": [
      "international",
@@ -2455,53 +2477,56 @@
      "opens": null,
      "closes": null,
      "closes_time": null,
-     "stage": "Full application via the council's responsive-mode opportunity",
+     "stage": "Full application via host council opportunity",
      "other_dates": [],
-     "notes": "The lead agency agreement runs until December 2030; you submit within 7 days of receiving the SAGe copy."
+     "notes": "Deadlines follow whichever EPSRC or NERC opportunity you submit to."
     },
     "award_summary": {
-     "amount": "As per the EPSRC/NERC responsive-mode scheme; FAPESP funds the São Paulo costs",
-     "duration": "As per the chosen scheme"
+     "amount": "Norway co-lead costs up to 30% of project FEC, at 100% direct costs",
+     "duration": "Set by host opportunity"
     },
     "requirements": [
      {
-      "item": "FAPESP eligibility letter",
-      "detail": "Obtained by the São Paulo lead before applying"
+      "item": "Choose eligible host opportunity",
+      "detail": "Must allow PcL(I)s and not offer alternative support"
      },
      {
-      "item": "SAGe registration and confirmation",
-      "detail": "You create a SAGe login and confirm your participation"
+      "item": "Secure Norwegian project co-lead",
+      "detail": "Employed by a Norwegian research organisation of comparable standing"
      },
      {
-      "item": "FAPESP application in SAGe",
-      "detail": "Submitted by the São Paulo lead; await pre-assessment checks"
+      "item": "Application title prefix",
+      "detail": "Start title with 'UKRI-Norway'"
      },
      {
-      "item": "UKRI Funding Service application",
-      "detail": "Standard EPSRC/NERC responsive-mode sections — typical, confirm in guidance"
+      "item": "Case for support",
+      "detail": "Per host scheme; justify Norwegian partner's added value — confirm in guidance"
      },
      {
-      "item": "UK costings and justification",
-      "detail": "Entered in Funding Service finance fields"
+      "item": "Resources and costs",
+      "detail": "Itemise Norway costs; ≤30% of FEC; no overheads; items under £10,000"
      },
      {
-      "item": "FAPESP budget and proposal PDF",
-      "detail": "Uploaded as attachments; may be a separate budget form"
+      "item": "Norway salary justification",
+      "detail": "Show salary funding is standard practice at the partner's organisation"
      },
      {
-      "item": "Research office check",
-      "detail": "Follow internal institutional deadlines before submission"
+      "item": "Due diligence and agreements",
+      "detail": "Manchester checks partner and sets up collaboration agreement"
+     },
+     {
+      "item": "Submit via UKRI Funding Service",
+      "detail": "Through Manchester research office — typical, confirm in guidance"
      }
     ],
     "effort": {
      "level": "heavy",
-     "prep_time": "2-3 months part-time",
-     "person_days": "25-40",
+     "prep_time": "6-8 weeks part-time",
+     "person_days": "20-35",
      "drivers": [
-      "Full responsive-mode case for support",
-      "Coordinating a parallel FAPESP submission",
-      "Balancing effort across both sides",
-      "Strict 7-day submission window"
+      "Full UKRI grant proposal",
+      "Partner costing and justification",
+      "Cross-border collaboration agreement"
      ],
      "start_by": null
     },
@@ -2512,23 +2537,23 @@
      "next_expected_open": null,
      "next_expected_close": null,
      "is_estimate": false,
-     "evidence": "The call has no closing date; the MoU was renewed for applications until December 2030."
+     "evidence": "Standing agreement published April 2025 with no closing date."
     },
     "next_steps": [
-     "Identify São Paulo partners in ocean or offshore engineering, e.g. USP.",
-     "Choose between EPSRC and NERC responsive mode for the joint project.",
-     "Ask your partner to start FAPESP eligibility confirmation early."
+     "Approach NTNU, SINTEF Ocean or MET Norway wave colleagues about a joint bid.",
+     "Pick an EPSRC or NERC responsive-mode route and check PcL(I) rules.",
+     "Brief Manchester research office on Norway costing and due diligence."
     ]
    },
    "analysed": {
     "model": "claude-opus-5-5",
-    "at": "2026-11-22",
+    "at": "2026-11-25",
     "seeded": false
    },
    "is_new": false,
    "money": {
-    "headline": "Via EPSRC/NERC",
-    "label": "FAPESP pays the Brazil side",
+    "headline": "",
+    "label": "set by host scheme",
     "max_gbp": 0
    }
   },
@@ -2669,6 +2694,139 @@
     "period": "Jan 2025 round",
     "basis": "NERC Pushing the Frontiers, 37 funded of 181 (July 2024 round: 40 of 172); lead-agency routes go through the same scheme",
     "source": "https://www.ukri.org/wp-content/uploads/2022/11/NERC-191225-PushingFrontiersEnvironmentalResearchFundingOutcomesJanuary2025.pdf"
+   }
+  },
+  {
+   "id": "ukri-115004",
+   "source": "ukri",
+   "title": "Collaborate with researchers in Brazil",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/collaborate-with-researchers-in-brazil/",
+   "published": "2020-09-20",
+   "first_seen": "2026-11-22",
+   "status": "rolling",
+   "bucket": "rolling",
+   "opens": null,
+   "closes": null,
+   "closes_note": "Open - no closing date",
+   "award": {},
+   "eu": null,
+   "history": [],
+   "last_round": null,
+   "analysis": {
+    "summary": "Lead-agency route letting UK PIs submit joint responsive-mode proposals with São Paulo researchers, co-funded by UKRI and FAPESP, until 2030.",
+    "topic_fit": {
+     "verdict": "open_call",
+     "notes": "Any topic in EPSRC or NERC remit; you could propose wave modelling with São Paulo partners."
+    },
+    "career_stage": {
+     "verdict": "suitable",
+     "notes": "Standard responsive-mode PI eligibility; realistic for a permanent lecturer."
+    },
+    "eligibility": {
+     "verdict": "eligible",
+     "notes": "Permanent Manchester lecturer meets EPSRC/NERC PI rules; needs an eligible São Paulo partner."
+    },
+    "fit_score": 60,
+    "fit_label": "possible",
+    "why_fit": "Adds FAPESP money to an EPSRC or NERC standard grant you could lead on waves.",
+    "concerns": "Only useful with a São Paulo collaborator; multi-step FAPESP process adds workload.",
+    "recommend": true,
+    "recommend_reason": "Open-topic, always-open route suited to an early-career PI if a São Paulo partner exists.",
+    "focus": "open",
+    "themes": [
+     "international",
+     "ocean",
+     "fluids",
+     "any-discipline"
+    ],
+    "opportunity_type": "project_grant",
+    "role": "lead",
+    "round": {
+     "status": "rolling",
+     "opens": null,
+     "closes": null,
+     "closes_time": null,
+     "stage": "Full application via council responsive mode",
+     "other_dates": [
+      {
+       "label": "MoU ends; last applications",
+       "date": "2030-12-31"
+      }
+     ],
+     "notes": "Submit UKRI application within 7 days of receiving partner's SAGe proposal."
+    },
+    "award_summary": {
+     "amount": "Per council responsive-mode scheme; FAPESP funds São Paulo costs",
+     "duration": "Per council scheme"
+    },
+    "requirements": [
+     {
+      "item": "São Paulo partner FAPESP eligibility letter",
+      "detail": "Partner obtains from FAPESP before submission"
+     },
+     {
+      "item": "SAGe registration and participation confirmation",
+      "detail": "UK PI creates SAGe login and confirms participation"
+     },
+     {
+      "item": "FAPESP proposal via SAGe",
+      "detail": "Partner submits; PDF copy plus FAPESP budget attached to UKRI"
+     },
+     {
+      "item": "Funding Service application",
+      "detail": "EPSRC or NERC responsive-mode questions and word limits apply"
+     },
+     {
+      "item": "UK costings",
+      "detail": "Full economic costing via Funding Service finance fields"
+     },
+     {
+      "item": "Balanced joint work plan",
+      "detail": "Equivalent research effort and clear roles on both sides"
+     },
+     {
+      "item": "Research office submission",
+      "detail": "Follow Manchester internal deadlines"
+     }
+    ],
+    "effort": {
+     "level": "heavy",
+     "prep_time": "6-8 weeks part-time",
+     "person_days": "20-30",
+     "drivers": [
+      "Full responsive-mode case for support",
+      "Coordinating FAPESP SAGe submission",
+      "Partner eligibility check first",
+      "Dual-side budgets"
+     ],
+     "start_by": null
+    },
+    "recurrence": {
+     "cadence": "rolling",
+     "typical_open_month": null,
+     "typical_close_month": null,
+     "next_expected_open": null,
+     "next_expected_close": null,
+     "is_estimate": false,
+     "evidence": "Open with no closing date; MoU renewed to December 2030."
+    },
+    "next_steps": [
+     "Identify São Paulo wave or coastal modelling collaborator, e.g. USP oceanography.",
+     "Email EPSRC or NERC lead agency team to confirm eligible scheme.",
+     "Ask partner to request FAPESP eligibility letter early."
+    ]
+   },
+   "analysed": {
+    "model": "claude-opus-5-5",
+    "at": "2026-11-25",
+    "seeded": false
+   },
+   "is_new": false,
+   "money": {
+    "headline": "",
+    "label": "per council responsive scheme",
+    "max_gbp": 0
    }
   },
   {
@@ -4458,18 +4616,6 @@
    "fit_score": 57
   },
   {
-   "id": "eu-HORIZON-CL5-2027-01-D1-07",
-   "source": "eu",
-   "title": "Advancing understanding, modelling and prediction of extreme events in a changing climate",
-   "funder": "Horizon Europe",
-   "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-07",
-   "published": null,
-   "first_seen": "2026-11-22",
-   "status": "open",
-   "reason": "Marginal: a climate-science consortium call where you could only be a niche partner on marine extremes or machine learning for rare events; pursue it only if a consortium you know asks you in.",
-   "fit_score": 56
-  },
-  {
    "id": "ukri-175102",
    "source": "ukri",
    "title": "Artificial intelligence (AI) for environmental science phase one",
@@ -4554,18 +4700,6 @@
    "fit_score": 55
   },
   {
-   "id": "ukri-122216",
-   "source": "ukri",
-   "title": "EPSRC network grant: Nov 2023: responsive mode",
-   "funder": "EPSRC",
-   "url": "https://www.ukri.org/opportunity/epsrc-network-grant-nov-2023-responsive-mode/",
-   "published": "2023-11-13",
-   "first_seen": "2026-11-22",
-   "status": "rolling",
-   "reason": "The topic is open, but leading a national network is a stretch at your stage and the scheme is neither light to apply for nor a source of research funding. Revisit it in a few years, or join a senior colleague's bid as t",
-   "fit_score": 52
-  },
-  {
    "id": "ukri-186855",
    "source": "ukri",
    "title": "UKRI Translation: EPSRC Prosperity Partnerships 2027",
@@ -4636,18 +4770,6 @@
    "status": "closed",
    "reason": "Career-stage stretch without a secured sponsor; revisit around 2028 once your track record grows.",
    "fit_score": 50
-  },
-  {
-   "id": "ukri-207050",
-   "source": "ukri",
-   "title": "Arctic frontier: accelerating innovation in ocean autonomy",
-   "funder": "UKRI",
-   "url": "https://www.ukri.org/opportunity/arctic-frontier-accelerating-innovation-in-ocean-autonomy/",
-   "published": "2026-11-04",
-   "first_seen": "2026-11-22",
-   "status": "open",
-   "reason": "Topic: The call wants technology for marine autonomous vehicles in Arctic conditions; your wave and sea-state modelling touches only the harsh-environment side, so you could support a bid but not anchor one.",
-   "fit_score": 48
   },
   {
    "id": "ukri-95437",
@@ -4782,6 +4904,30 @@
    "fit_score": 42
   },
   {
+   "id": "ukri-207050",
+   "source": "ukri",
+   "title": "Arctic frontier: accelerating innovation in ocean autonomy",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/arctic-frontier-accelerating-innovation-in-ocean-autonomy/",
+   "published": "2026-11-04",
+   "first_seen": "2026-11-22",
+   "status": "open",
+   "reason": "Topic: Focuses on vehicle endurance, sensors, navigation and materials; your wave science touches it only marginally.",
+   "fit_score": 38
+  },
+  {
+   "id": "ukri-207677",
+   "source": "ukri",
+   "title": "Arctic frontier: shifts in science",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/arctic-frontier-shifts-in-science/",
+   "published": "2026-11-10",
+   "first_seen": "2026-11-22",
+   "status": "open",
+   "reason": "Topic: Arctic sea-ice and ocean observing campaign; waves and air-sea interaction are only marginal.",
+   "fit_score": 38
+  },
+  {
    "id": "ukri-164367",
    "source": "ukri",
    "title": "UKRI policy fellowships 2025",
@@ -4840,18 +4986,6 @@
    "status": "closed",
    "reason": "Topic: Climate adaptation commercialisation; coastal and offshore infrastructure resilience could fit, but this is training rather than research.",
    "fit_score": 35
-  },
-  {
-   "id": "ukri-207677",
-   "source": "ukri",
-   "title": "Arctic frontier: shifts in science",
-   "funder": "UKRI",
-   "url": "https://www.ukri.org/opportunity/arctic-frontier-shifts-in-science/",
-   "published": "2026-11-10",
-   "first_seen": "2026-11-22",
-   "status": "open",
-   "reason": "Topic: This is an observational oceanography and marine-autonomy mission in the Arctic; wave dynamics, wave–structure interaction and your modelling methods are not what it asks for, and the AI mission-planning system is",
-   "fit_score": 30
   },
   {
    "id": "scheme-raeng-research-fellowships",
@@ -4921,9 +5055,21 @@
    "url": "https://www.carbontrust.com/news-and-insights/tenders",
    "published": null,
    "first_seen": "2026-11-23",
-   "status": "open",
+   "status": "closed",
    "reason": "Topic: Mechanical component replacement and offshore lifting, not waves, wave loading or hydrodynamics.",
    "fit_score": 20
+  },
+  {
+   "id": "ukri-204237",
+   "source": "ukri",
+   "title": "UKRI Enabling AI adoption across science and engineering",
+   "funder": "UKRI",
+   "url": "https://www.ukri.org/opportunity/ukri-enabling-ai-adoption-across-science-and-engineering/",
+   "published": "2026-09-17",
+   "first_seen": "2026-11-22",
+   "status": "open",
+   "reason": "Topic: Priority domains exclude ocean, waves, fluids and offshore energy; fusion is the only remote link.",
+   "fit_score": 15
   },
   {
    "id": "eu-ERC-2027-COG",
@@ -4990,44 +5136,44 @@
  "sources": {
   "ukri": {
    "ok": true,
-   "count": 137,
-   "checked": "2026-11-24T15:54:17Z",
-   "last_success": "2026-11-24T15:54:17Z"
+   "count": 133,
+   "checked": "2026-11-25T12:09:24Z",
+   "last_success": "2026-11-25T12:09:24Z"
   },
   "ukri_archive": {
    "ok": true,
-   "count": 10,
-   "checked": "2026-11-24T15:54:17Z",
-   "last_success": "2026-11-24T15:54:17Z"
+   "count": 30,
+   "checked": "2026-11-25T12:09:24Z",
+   "last_success": "2026-11-25T12:09:24Z"
   },
   "eu": {
    "ok": true,
    "count": 102,
-   "checked": "2026-11-24T15:54:17Z",
-   "last_success": "2026-11-24T15:54:17Z"
+   "checked": "2026-11-25T12:09:24Z",
+   "last_success": "2026-11-25T12:09:24Z"
   },
   "schemes": {
    "ok": true,
    "count": 38,
-   "checked": "2026-11-24T15:54:17Z"
+   "checked": "2026-11-25T12:09:24Z"
   }
  },
  "ai": {
   "enabled": true,
   "key_present": true,
   "model": "claude-opus-5-5",
-  "calls_this_run": 1,
-  "estimated_cost_usd": 0.022,
+  "calls_this_run": 17,
+  "estimated_cost_usd": 2.181,
   "usage": {
-   "input_tokens": 421,
-   "output_tokens": 136,
-   "cache_read_input_tokens": 0,
-   "cache_creation_input_tokens": 3504,
-   "web_searches": 0
+   "input_tokens": 74582,
+   "output_tokens": 30144,
+   "cache_read_input_tokens": 1188966,
+   "cache_creation_input_tokens": 156823,
+   "web_searches": 2
   },
   "errors": [],
-  "last_ai_run": "2026-11-24T15:54:17Z",
-  "total_calls": 128,
-  "total_cost_usd": 9.58
+  "last_ai_run": "2026-11-25T12:09:24Z",
+  "total_calls": 145,
+  "total_cost_usd": 11.76
  }
 }
