@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-25T12:09:24Z",
+ "generated_at": "2026-11-25T12:21:15Z",
  "counts": {
   "scanned": {
-   "ukri_open": 133,
+   "ukri_open": 134,
    "ukri_past": 529,
    "eu": 102,
    "schemes": 38
@@ -170,14 +170,14 @@
     "label": "typical per partnership",
     "max_gbp": 250000
    },
-   "sector": "industry",
    "odds": {
     "rate": 90,
     "text": "about 9 in 10",
     "period": "Innovate UK's figure, 2018",
     "basis": "Innovate UK Business Connect: 'around 90% are successful'; no counts given, and the page dates from June 2018",
     "source": "https://iuk-business-connect.org.uk/news/improve-business-competitiveness-through-knowledge-transfer-partnerships"
-   }
+   },
+   "sector": "industry"
   },
   {
    "id": "scheme-leverhulme-early-career-fellowships",
@@ -913,14 +913,14 @@
     "label": "your pay while seconded",
     "max_gbp": 0
    },
-   "sector": "industry",
    "odds": {
     "rate": 14.0,
     "text": "about 1 in 7",
     "period": "2025/26",
     "basis": "Royal Society Short Industry Fellowships, 7 offers of 50 eligible applications (2024/25: 9 of 34)",
     "source": "https://royalsociety.org/grants/short-industry-fellowships/"
-   }
+   },
+   "sector": "industry"
   },
   {
    "id": "scheme-msca-postdoctoral-fellowships",
@@ -3567,14 +3567,14 @@
     "max_gbp": 35000,
     "pot": "£2.5m"
    },
-   "sector": "industry",
    "odds": {
     "rate": 90,
     "text": "about 9 in 10",
     "period": "Innovate UK's figure, 2018",
     "basis": "Innovate UK Business Connect: 'around 90% are successful'; no counts given, and the page dates from June 2018",
     "source": "https://iuk-business-connect.org.uk/news/improve-business-competitiveness-through-knowledge-transfer-partnerships"
-   }
+   },
+   "sector": "industry"
   },
   {
    "id": "scheme-erc-starting-grant",
@@ -5150,44 +5150,44 @@
  "sources": {
   "ukri": {
    "ok": true,
-   "count": 133,
-   "checked": "2026-11-25T12:09:24Z",
-   "last_success": "2026-11-25T12:09:24Z"
+   "count": 134,
+   "checked": "2026-11-25T12:21:15Z",
+   "last_success": "2026-11-25T12:21:15Z"
   },
   "ukri_archive": {
    "ok": true,
-   "count": 30,
-   "checked": "2026-11-25T12:09:24Z",
-   "last_success": "2026-11-25T12:09:24Z"
+   "count": 10,
+   "checked": "2026-11-25T12:21:15Z",
+   "last_success": "2026-11-25T12:21:15Z"
   },
   "eu": {
    "ok": true,
    "count": 102,
-   "checked": "2026-11-25T12:09:24Z",
-   "last_success": "2026-11-25T12:09:24Z"
+   "checked": "2026-11-25T12:21:15Z",
+   "last_success": "2026-11-25T12:21:15Z"
   },
   "schemes": {
    "ok": true,
    "count": 38,
-   "checked": "2026-11-25T12:09:24Z"
+   "checked": "2026-11-25T12:21:15Z"
   }
  },
  "ai": {
   "enabled": true,
   "key_present": true,
   "model": "claude-opus-5-5",
-  "calls_this_run": 17,
-  "estimated_cost_usd": 2.181,
+  "calls_this_run": 1,
+  "estimated_cost_usd": 0.02,
   "usage": {
-   "input_tokens": 74582,
-   "output_tokens": 30144,
-   "cache_read_input_tokens": 1188966,
-   "cache_creation_input_tokens": 156823,
-   "web_searches": 2
+   "input_tokens": 400,
+   "output_tokens": 63,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 3504,
+   "web_searches": 0
   },
   "errors": [],
-  "last_ai_run": "2026-11-25T12:09:24Z",
-  "total_calls": 145,
-  "total_cost_usd": 11.76
+  "last_ai_run": "2026-11-25T12:21:15Z",
+  "total_calls": 146,
+  "total_cost_usd": 11.78
  }
 }

@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-25T12:09:24Z",
+ "generated_at": "2026-11-25T12:21:15Z",
  "ai": {
-  "calls": 1,
-  "estimated_cost_usd": 0.051,
-  "added": 8,
+  "calls": 0,
+  "estimated_cost_usd": 0.0,
+  "added": 0,
   "with_bullets": 113
  },
  "window_days": 120,
@@ -12,27 +12,27 @@
   "semantic_scholar": {
    "ok": true,
    "added": 296,
-   "checked": "2026-11-25T12:06:37Z"
+   "checked": "2026-11-25T12:18:45Z"
   },
   "arxiv": {
    "ok": true,
    "added": 382,
-   "checked": "2026-11-25T12:08:25Z"
+   "checked": "2026-11-25T12:20:04Z"
   },
   "crossref": {
    "ok": true,
    "added": 445,
-   "checked": "2026-11-25T12:09:02Z"
+   "checked": "2026-11-25T12:20:57Z"
   },
   "openalex": {
    "ok": true,
    "added": 311,
-   "checked": "2026-11-25T12:09:09Z"
+   "checked": "2026-11-25T12:21:08Z"
   },
   "citing": {
    "ok": true,
    "added": 35,
-   "checked": "2026-11-25T12:09:09Z"
+   "checked": "2026-11-25T12:21:08Z"
   }
  },
  "counts": {
