@@ -282,6 +282,22 @@
    "basis": "Supergen ORE ECR Research Fund: 47 awards from 85 applications over the first six calls (awards of up to £5,000)",
    "source": "https://supergen-ore.net/uploads/ECR-Research-Fund-Call-for-Proposals-Round-7-July-2024.pdf",
    "checked": "2026-11-23"
+  },
+  {
+   "key": "innovate-uk-ktp",
+   "match": {
+    "ids": [
+     "ukri-206585"
+    ],
+    "title": "Knowledge Transfer Partnership",
+    "funder": "Innovate UK|UKRI"
+   },
+   "rate": 90,
+   "text": "about 9 in 10",
+   "period": "Innovate UK's figure, 2018",
+   "basis": "Innovate UK Business Connect: 'around 90% are successful'; no counts given, and the page dates from June 2018",
+   "source": "https://iuk-business-connect.org.uk/news/improve-business-competitiveness-through-knowledge-transfer-partnerships",
+   "checked": "2026-11-25"
   }
  ]
 }
