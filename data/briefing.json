@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-25T12:30:00Z",
+ "generated_at": "2026-11-26T07:00:00Z",
  "by": "Claude (agent pass)",
- "headline": "UKRI deadline in six days",
+ "headline": "UKRI deadline in five days",
  "items": [
-  {"kind": "deadline", "important": true, "title": "UKRI Enabling AI adoption closes 1 Dec, 16:00", "text": "Six days left; you need an AI or domain co-lead and your research office's internal sign-off.", "url": "#funding/ukri-204237"},
+  {"kind": "deadline", "important": true, "title": "UKRI Enabling AI adoption closes 1 Dec, 16:00", "text": "Five days left; you need an AI or domain co-lead and your research office's internal sign-off.", "url": "#funding/ukri-204237"},
   {"kind": "funding", "title": "Horizon wave and tidal call opens 3 Dec", "text": "One €43m grant, closing 31 March; consortia are forming now.", "url": "#funding/eu-HORIZON-CL5-2027-02-D3-09"},
-  {"kind": "paper", "title": "Hybrid neural operator for monopile response under wind and waves", "text": "DeepOJamba predicts a 15 MW monopile's response with 9.4% fatigue error, against 14.6% for the best attention-only operator.", "url": "https://doi.org/10.48550/arxiv.2611.29334"},
-  {"kind": "paper", "title": "SWENSE versus Navier–Stokes for a heaving buoy", "text": "Both match experiments for heave and wetted height; SWENSE needs a smaller domain and fewer cells.", "url": "https://doi.org/10.1063/5.0352747"}
+  {"kind": "paper", "title": "Damping and nonlinear transfer coupled in one kinetic equation", "text": "Ransome, Alberello and Proment derive it; total dissipation barely changes, but energy shifts noticeably between frequencies, especially under weak damping.", "url": "https://www.semanticscholar.org/paper/84f439e1cd073ab3ae1bbe64346a71c31872c5bf"},
+  {"kind": "paper", "title": "DeepONet surrogate for SWAN bulk wave parameters", "text": "Four orders of magnitude faster at Duck, NC, with significant wave height within 1.9% on unseen cases.", "url": "https://doi.org/10.1016/j.oceaneng.2026.127866"}
  ]
 }

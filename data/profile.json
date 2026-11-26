@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-26T06:48:06Z",
- "checked_at": "2026-11-26T06:48:06Z",
+ "generated_at": "2026-11-26T06:52:27Z",
+ "checked_at": "2026-11-26T06:52:27Z",
  "researcher": {
   "name": "Tim (Tianning) Tang",
   "short_name": "Tim Tang",
@@ -62,8 +62,8 @@
   "open_access": 49,
   "with_doi": 55,
   "source": "Google Scholar",
-  "as_of": "2026-11-24",
-  "scholar_live": false,
+  "as_of": "2026-11-26",
+  "scholar_live": true,
   "openalex": {
    "works_count": 77,
    "cited_by_count": 588,
@@ -148,7 +148,7 @@
     "count": 277
    }
   ],
-  "as_of": "2026-11-24",
+  "as_of": "2026-11-26",
   "interests": [
    "Ocean Engineering",
    "Rogue wave",
@@ -3913,35 +3913,35 @@
    "h_index": 16,
    "i10_index": 29,
    "outputs": 77,
-   "scholar": false,
+   "scholar": true,
    "oa_citations": 588,
    "oa_h_index": 15
   }
  ],
  "sources": {
   "scholar": {
-   "ok": false,
-   "checked": "2026-11-26T06:48:06Z",
-   "note": "scholar.google.com: HTTP 429 for https://scholar.google.com/citations",
-   "last_success": "2026-11-24T06:55:24Z"
+   "ok": true,
+   "checked": "2026-11-26T06:52:27Z",
+   "note": "78 items",
+   "last_success": "2026-11-26T06:52:27Z"
   },
   "orcid": {
    "ok": true,
-   "checked": "2026-11-26T06:48:06Z",
+   "checked": "2026-11-26T06:52:27Z",
    "note": "45 works",
-   "last_success": "2026-11-26T06:48:06Z"
+   "last_success": "2026-11-26T06:52:27Z"
   },
   "openalex": {
    "ok": true,
-   "checked": "2026-11-26T06:48:06Z",
+   "checked": "2026-11-26T06:52:27Z",
    "note": "",
-   "last_success": "2026-11-26T06:48:06Z"
+   "last_success": "2026-11-26T06:52:27Z"
   },
   "crossref": {
    "ok": true,
-   "checked": "2026-11-26T06:48:06Z",
+   "checked": "2026-11-26T06:52:27Z",
    "note": "56 records cached",
-   "last_success": "2026-11-26T06:48:06Z"
+   "last_success": "2026-11-26T06:52:27Z"
   }
  }
 }
