@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-25T15:37:16Z",
+ "generated_at": "2026-11-26T06:49:55Z",
  "ai": {
-  "calls": 0,
-  "estimated_cost_usd": 0.0,
-  "added": 0,
+  "calls": 1,
+  "estimated_cost_usd": 0.038,
+  "added": 5,
   "with_bullets": 113
  },
  "window_days": 120,
@@ -12,34 +12,34 @@
   "semantic_scholar": {
    "ok": true,
    "added": 296,
-   "checked": "2026-11-25T15:35:02Z"
+   "checked": "2026-11-26T06:48:13Z"
   },
   "arxiv": {
-   "ok": true,
-   "added": 382,
-   "checked": "2026-11-25T15:36:30Z"
+   "ok": false,
+   "note": "export.arxiv.org: HTTP 429 for https://export.arxiv.org/api/query",
+   "checked": "2026-11-26T06:49:06Z"
   },
   "crossref": {
    "ok": true,
-   "added": 445,
-   "checked": "2026-11-25T15:37:06Z"
+   "added": 447,
+   "checked": "2026-11-26T06:49:39Z"
   },
   "openalex": {
    "ok": true,
-   "added": 311,
-   "checked": "2026-11-25T15:37:10Z"
+   "added": 323,
+   "checked": "2026-11-26T06:49:44Z"
   },
   "citing": {
    "ok": true,
    "added": 35,
-   "checked": "2026-11-25T15:37:10Z"
+   "checked": "2026-11-26T06:49:44Z"
   }
  },
  "counts": {
-  "candidates": 1469,
-  "kept": 194,
-  "citing": 54,
-  "new": 22
+  "candidates": 1101,
+  "kept": 193,
+  "citing": 53,
+  "new": 23
  },
  "papers": [
   {
@@ -92,6 +92,54 @@
    ]
   },
   {
+   "id": "6d7ac2b879dd",
+   "title": "A consistent generalised kinetic equation for damped ocean waves",
+   "authors": [
+    "R. Ransome",
+    "A. Alberello",
+    "D. Proment",
+    "R. Stuhlmeier"
+   ],
+   "author_count": 4,
+   "venue": null,
+   "date": "2026-11-24",
+   "year": 2026,
+   "abstract": "Contemporary spectral wave models, including those used in operational wave forecasts and in coupled earth system models, assume damping and non-linear wave energy exchange to be independent. Here, we critically examine this assumption. Starting from the equations of weakly non-linear waves, we rigorously derive a governing equation that consistently couples damping and non-linear interactions. This consistent generalised kinetic equation does not lead to an appreciable change in total wave--energy dissipation, but compared to the standard additive damping approach there is a noticeable difference in the distribution of energy among the wave frequencies. This effect is particularly important for weak damping, and is a consequence of a memory effect retained in model. Even stronger differences are observed when damping is allowed to depend on wave frequency, as is characteristic of many wave processes of growing interest such as the interaction with other components of the earth system, e.g. the cryosphere. Compared to the purely additive formulation, our new damped generalised kinetic equation has improved numerical stability characteristics. The formulation presented therefore provides a possible basis for future operational wave modelling. While our results are for ocean waves, the derived generalised kinetic equation can be applied to other weakly nonlinear dispersive system",
+   "url": "https://www.semanticscholar.org/paper/84f439e1cd073ab3ae1bbe64346a71c31872c5bf",
+   "pdf_url": null,
+   "doi": null,
+   "arxiv": "2611.32589",
+   "sources": [
+    "Semantic Scholar"
+   ],
+   "score": 93,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:YFjsv_pBGBYC",
+    "title": "Nonlinear wave loads on monopile foundations and structural response in severe wave conditions",
+    "year": 2025
+   },
+   "matched": [
+    "spectral wave model",
+    "kinetic equation",
+    "nonlinear wave",
+    "ocean wave",
+    "wave energy",
+    "wave modelling"
+   ],
+   "focus": "domain",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-26",
+   "in_press": false,
+   "news_date": "2026-11-24",
+   "is_new": true,
+   "bullets": [
+    "Derived kinetic equation consistently coupling damping with nonlinear wave interactions",
+    "Total dissipation barely changes, but energy distribution across frequencies differs",
+    "Frequency-dependent damping gives larger differences; numerical stability improves"
+   ]
+  },
+  {
    "id": "00cfbc59e72e",
    "title": "Free surfaces in turbulence: A unified framework from water surfaces to elastic solids",
    "authors": [
@@ -107,10 +155,9 @@
    "url": "https://doi.org/10.1017/jfm.2026.12236",
    "pdf_url": "https://arxiv.org/pdf/2605.23166",
    "doi": "10.1017/jfm.2026.12236",
-   "arxiv": "2605.23166",
+   "arxiv": null,
    "sources": [
     "Semantic Scholar",
-    "arXiv",
     "OpenAlex"
    ],
    "score": 90,
@@ -153,12 +200,11 @@
    "year": 2026,
    "abstract": "The presence of extreme ocean waves poses substantial threats to the safety of marine engineering applications and navigational activities. Accurate prediction of the nonlinear wave loads on offshore structures in large-diameter cylindrical configuration, such as monopile wind turbines and platform columns, requires a robust solution to the high-order wave diffraction problem. This paper introduces a novel, highly nonlinear time-domain numerical pseudo-spectrum model based on potential flow theory. By leveraging the Fredholm integral equation of the second kind and Legendre polynomials, a distinct efficient solver for computing the velocity potential on the cylinder surface and vertical velocity at free surface is developed. The present method is verified by comparing with a direct approach based on Fourier transform and established theoretical models for simulating the scattering of small steepness uniform waves. The convergence and computational efficiency of the present method is also demonstrated. The validation of the new model for simulating highly nonlinear transient water waves will be reported in Part II. The proposed model provides a powerful and efficient new framework for analyzing high-order nonlinear wave diffraction and hydrodynamic loads, with significant implications for both scientific research and the engineering design of coastal and offshore structures.",
    "url": "https://doi.org/10.48550/arxiv.2611.02369",
-   "pdf_url": "https://arxiv.org/pdf/2611.02369v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.02369",
    "doi": "10.48550/arxiv.2611.02369",
    "arxiv": "2611.02369",
    "sources": [
     "Semantic Scholar",
-    "arXiv",
     "OpenAlex"
    ],
    "score": 88,
@@ -231,6 +277,57 @@
    "bullets": [
     "Analysed inverse cascade stability in 3D NLS wave kinetic equation",
     "Kolmogorov-Zakharov solution stable without condensate; condensate destabilises it"
+   ]
+  },
+  {
+   "id": "83c838ac6081",
+   "title": "Operator learning for predicting bulk wave parameters of spectral wave models",
+   "authors": [
+    "Shukai Cai",
+    "Sourav Dutta",
+    "Mark Loveland",
+    "Eirik Valseth",
+    "Peter Rivera-Casillas",
+    "Corey Trahan",
+    "Clint Dawson"
+   ],
+   "author_count": 7,
+   "venue": "Ocean Engineering",
+   "date": "2026-10",
+   "year": 2026,
+   "abstract": "The impact of wave-induced forcing on the mean water level and nearshore currents is typically modeled through excess momentum fluxes, also known as radiation stresses, and their spatial gradients. Accurate storm surge prediction requires coupled circulation and wave models, but the high computational cost of numerical wave models limits their temporal resolution. In this work, we explore a proof-of-concept application of Deep Operator Networks (DeepONets) as a surrogate for the Simulating WAves Nearshore (SWAN) numerical wave model. Unlike grid-dependent surrogate models, DeepONets learn the underlying continuous operator, and thus, can provide highly efficient prediction while enabling discretization-invariant inference. The proposed surrogate model is evaluated using two distinct 1-D and 2-D steady-state numerical examples with variable boundary wave conditions and wind fields. When applied to a realistic numerical example of steady-state wave simulation in Duck, NC, the DeepONet surrogate improves computational efficiency by four orders of magnitude. Furthermore, the model demonstrates consistently high accuracy in predicting the significant wave height and the x- and y- components of the radiation stress gradient, by achieving relative L 2 errors bounded by 1.91%, 10.98%, and 6.88%, respectively, across all unseen test scenarios.",
+   "url": "https://doi.org/10.1016/j.oceaneng.2026.127866",
+   "pdf_url": "https://www.sciencedirect.com/science/article/pii/S0029801826037005/pdf",
+   "doi": "10.1016/j.oceaneng.2026.127866",
+   "arxiv": null,
+   "sources": [
+    "Crossref",
+    "OpenAlex"
+   ],
+   "score": 81,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:hMod-77fHWUC",
+    "title": "Machine learning approximations for fast and accurate prediction of nonlinear four‐wave interactions in spectral wave models",
+    "year": 2026
+   },
+   "matched": [
+    "spectral wave model",
+    "storm surge",
+    "wave height",
+    "wave model",
+    "surrogate model"
+   ],
+   "focus": "domain_ai",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-26",
+   "in_press": false,
+   "news_date": "2026-10-01",
+   "is_new": false,
+   "bullets": [
+    "Trained DeepONet surrogate for SWAN on 1-D and 2-D steady cases",
+    "Duck, NC case: four orders of magnitude faster computation",
+    "Relative L2 errors: wave height 1.91%, radiation stress gradients 10.98%, 6.88%"
    ]
   },
   {
@@ -355,7 +452,7 @@
     "Semantic Scholar",
     "OpenAlex"
    ],
-   "score": 80,
+   "score": 79,
    "similar_to": {
     "id": "dofRHEwAAAAJ:hMod-77fHWUC",
     "title": "Machine learning approximations for fast and accurate prediction of nonlinear four‐wave interactions in spectral wave models",
@@ -378,56 +475,6 @@
     "Compared nested SWAN, Delft3D and fetch-based models at 14 Gulf of Riga sites",
     "No model reproduced waves well at all locations",
     "ERA5-forced SWAN best offshore; one-point-wind models better nearshore"
-   ]
-  },
-  {
-   "id": "9ece1ec951ca",
-   "title": "Decadal wave reconstruction in the Mediterranean Sea with graph neural networks",
-   "authors": [
-    "Federica Benassi",
-    "Lorenzo Mentaschi",
-    "Salvatore Causio",
-    "Daniel Holmberg",
-    "Ivan Federico",
-    "Nadia Pinardi"
-   ],
-   "author_count": 6,
-   "venue": "arXiv",
-   "date": "2026-08-17",
-   "year": 2026,
-   "abstract": "Accurate simulation and prediction of ocean waves are essential for coastal risk management and climate studies. Deep learning has shown promising results for wave modeling, but most approaches still operate on regular grids and on forecasting time scales, and do not generalize to unstructured discretization or to long time horizons. Here we present WaveGraph, a model based on Graph Neural Networks (GNNs) that emulates basin-scale wave dynamics directly on unstructured meshes with high resolution along the coasts (up to 2-3 km). Trained on bias-corrected simulation data over the Mediterranean Sea, WaveGraph uses a multiscale architecture combining the unstructured model mesh with a uniform graph, allowing simultaneous representation of local coastal interactions and large-scale wave dynamics. The model reconstructs the evolution of significant wave height, mean period, and mean direction, and is applied autoregressively for a continuous 17-year period without reinitialization or drift. Validation against buoy and satellite observations shows skill comparable to the input data set, and ablation experiments indicate that wind forcing drives most of the long-term stability while wave history improves swell-driven and basin-scale dynamics. These results show that GNNs can provide stable and efficient emulators of spectral wave models on unstructured domains, enabling decadal wave r",
-   "url": "https://arxiv.org/abs/2608.16449",
-   "pdf_url": "https://arxiv.org/pdf/2608.16449v1",
-   "doi": null,
-   "arxiv": "2608.16449",
-   "sources": [
-    "arXiv"
-   ],
-   "score": 79,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:e5wmG9Sq2KIC",
-    "title": "Physics-informed neural networks for phase-resolved data assimilation and prediction of nonlinear ocean waves",
-    "year": 2025
-   },
-   "matched": [
-    "spectral wave model",
-    "ocean wave",
-    "wave height",
-    "wave modeling",
-    "wave model",
-    "swell"
-   ],
-   "focus": "domain_ai",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-08-17",
-   "is_new": false,
-   "bullets": [
-    "Built WaveGraph, a multiscale graph neural network emulating Mediterranean spectral wave model",
-    "Ran autoregressively for 17 years without drift, matching buoy and satellite skill",
-    "Wind forcing drives long-term stability; wave history improves swell dynamics"
    ]
   },
   {
@@ -700,10 +747,10 @@
    "id": "89e60d6e508e",
    "title": "Stochastic Transport and Wave Interactions for Multiscale Surface Gravity Waves: Part II: Kinetic Theory and Ocean-Wave Applications",
    "authors": [
-    "E. Mémin",
-    "B. Chapron",
-    "A. Debussche",
-    "L Marié"
+    "Étienne Mémin",
+    "Bertrand Chapron",
+    "Arnaud Debussche",
+    "Louis Marié"
    ],
    "author_count": 4,
    "venue": "arXiv",
@@ -711,11 +758,10 @@
    "year": 2026,
    "abstract": "Building on the stochastic variational framework established in the companion paper, we investigate here the linearized stochastic water-wave system, consisting of a large-scale stochastic wave dynamics coupled to transport dynamics for the small-scale correlation modes. Within this framework, we develop, in the deep-water regime, a kinetic theory for surface gravity waves interacting with unresolved stochastic velocity fields. An energy analysis yields a wave-action kinetic equation exhibiting two distinct regimes: a diffusive scattering regime and a quartic interaction regime with structural similarities to Hasselmann--Zakharov theory. In the present framework, these effective quartic interactions arise through stochastic transport of unresolved fluctuations by the large-scale flow rather than through classical intrinsic resonant nonlinearity. Scaling laws are derived for the diffusion tensor and the effective growth rate, revealing a Miles-type production--dissipation mechanism. Using JONSWAP spectra, we then compare the strength of stochastic transport and classical Hasselmann interactions. For realistic oceanic values of unresolved velocity variance ($σ_u \\approx 0.1\\,\\mathrm{m\\,s^{-1}}$) and decorrelation time ($τ_c \\approx 10\\,\\mathrm{s}$), stochastic transport is found to compete with, and often exceed, classical four-wave interaction rates over broad spectral ranges. T",
    "url": "https://doi.org/10.48550/arxiv.2608.27105",
-   "pdf_url": "https://arxiv.org/pdf/2608.27105v1",
+   "pdf_url": "https://arxiv.org/pdf/2608.27105",
    "doi": "10.48550/arxiv.2608.27105",
-   "arxiv": "2608.27105",
+   "arxiv": null,
    "sources": [
-    "arXiv",
     "OpenAlex"
    ],
    "score": 74,
@@ -893,12 +939,11 @@
    "year": 2026,
    "abstract": "The state space of a dynamical system can, under suitable conditions, be reconstructed from a single observational time-series through delay-coordinate embedding. However, reconstructing the spatiotemporal evolution of nonlinear water waves from highly sparse measurements remains a considerable challenge. Here, by combining deep learning, compressed sensing, and the self-similarity properties of unidirectional nonlinear water wave evolution equation, we show that the evolving surface elevation of a highly nonlinear wave field can be reconstructed from observations collected at a {\\it single} measurement location. We subsequently use these reconstructions to forecast rogue waves associated with self-focusing soliton dynamics from point observations obtained in controlled water wave tank experiments, demonstrating excellent agreement with measurements of the fully evolved wave field. Our results show that extreme wave events can be forecast from remarkably sparse observations and provide a framework that may be extended to other nonlinear dispersive systems governed by the interplay of dispersion and nonlinearity.",
    "url": "https://doi.org/10.48550/arxiv.2611.21068",
-   "pdf_url": "https://arxiv.org/pdf/2611.21068v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.21068",
    "doi": "10.48550/arxiv.2611.21068",
    "arxiv": "2611.21068",
    "sources": [
     "Semantic Scholar",
-    "arXiv",
     "OpenAlex"
    ],
    "score": 74,
@@ -1021,49 +1066,6 @@
     "2-D non-rotating simulations test assumptions behind resonant internal-wave triad theory",
     "Slow-amplitude assumptions inconsistent with simulated dynamics at ocean energy levels",
     "Most resonant triads contribute little to nonlinear energy transfer"
-   ]
-  },
-  {
-   "id": "60b093f73c83",
-   "title": "Data-driven and physics-guided hindcasting of measured wave spectra",
-   "authors": [
-    "S. Rikka"
-   ],
-   "author_count": 1,
-   "venue": "arXiv",
-   "date": "2026-10-21",
-   "year": 2026,
-   "abstract": "Short-range hindcasts of measured wave spectra are evaluated using a recurrent model initialized by one hourly buoy spectrum and supplied with local wind, fetch and depth. Measurements from three Baltic Sea stations are combined for training in 2017--2020, validation in 2021 and testing in 2022. ERA5 reanalysis supplies winds throughout the twelve-hour prediction interval. The comparison examines supervision of spectral variance, peak frequency and peak amplitude, followed by empirical wind-sea bounds and a local relaxation constraint. Variance and peak-frequency supervision gives the lowest spectral error within the data-driven comparison, whereas additional peak-amplitude supervision gives the lowest wave-height error. In the matched physical comparison, relaxation reduces height RMSE by 5.01\\% to \\PhPtwoHs{}~cm. Extending this constraint through hours 13--24, without spectral targets at those hours, reduces primary spectral RMSE by 2.31\\% to \\PhPthreeSpec{}~$\\unitE$. Upper-bound constraints increase errors. Wind-condition comparisons show spectral gains from extended relaxation in increasing, decreasing and steady strong winds, with little change in steady weak winds. The results support modest, objective-dependent benefits from local physical guidance. Wave-height scores concern the retained frequency band, and operational forecasting and transfer to independent stations re",
-   "url": "https://www.semanticscholar.org/paper/6e386ffaa385c4028e9d164486f6c197c627f402",
-   "pdf_url": "https://arxiv.org/pdf/2610.29306v1",
-   "doi": null,
-   "arxiv": "2610.29306",
-   "sources": [
-    "Semantic Scholar",
-    "arXiv"
-   ],
-   "score": 73,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:zYLM7Y9cAGgC",
-    "title": "Data driven analysis on the extreme wave statistics over an area",
-    "year": 2021
-   },
-   "matched": [
-    "wave height",
-    "wind sea",
-    "wave spectra",
-    "data-driven"
-   ],
-   "focus": "domain_ai",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-10-21",
-   "is_new": false,
-   "bullets": [
-    "Recurrent model hindcasts Baltic buoy wave spectra with physics constraints",
-    "Relaxation constraint cuts wave-height RMSE by 5.01%; upper bounds hurt"
    ]
   },
   {
@@ -1328,49 +1330,88 @@
    ]
   },
   {
-   "id": "ddc7dc02f1fd",
-   "title": "Simulation of Breaking Waves in OpenFOAM: Numerical Assessment Using Stokes Wave Initial Conditions",
+   "id": "a15dca4c8dec",
+   "title": "Nonlinear evolution of Rossby solitary waves under time-dependent shear: A variable-coefficient Gardner model solved by physics-informed neural networks",
    "authors": [
-    "C. Zhang"
+    "Bao-Jun Zhao",
+    "Kang-Zuo Liang"
    ],
-   "author_count": 1,
-   "venue": "Water",
-   "date": "2026-10-04",
+   "author_count": 2,
+   "venue": "The Physics of Fluids",
+   "date": "2026-10-01",
    "year": 2026,
-   "abstract": "Understanding the characteristics of breaking waves in deep and intermediate water is essential for both air–sea interaction and wave-structure interaction. This paper explores optimal numerical methods for modelling breaking events within the OpenFOAM framework, using a 2D numerical wave tank. The present work discusses the implementation of initial wave conditions in the OpenFOAM framework and the optimal combination of numerical techniques used for modelling breaking events. Stokes wave theory is used to prescribe the initial wave field, which is first assessed against the corresponding analytical solution before the subsequent nonlinear evolution and breaking processes are investigated. Three orders of Stokes wave theory are used to investigate their capability in simulating wave propagation and modeling a single breaking wave event. Various numerical schemes implemented in OpenFOAM are tested to determine the optimal combination for achieving accurate results. The findings demonstrate that fifth-order Stokes wave theory is the most suitable for capturing the highly nonlinear evolution of waves leading up to breaking.",
-   "url": "https://doi.org/10.3390/w18192461",
-   "pdf_url": "https://doi.org/10.3390/w18192461",
-   "doi": "10.3390/w18192461",
+   "abstract": "Constant-coefficient models inadequately capture how time-dependent shear flows alter the propagation of Rossby solitary waves, and traditional numerical methods face inherent difficulties with such variable-coefficient systems. We derive a variable-coefficient Gardner equation from quasi-geostrophic dynamics and solve it using physics-informed neural networks (PINNs) that integrate residual-adaptive refinement with a two-stage Adam and Limited-memory Broyden–Fletcher–Goldfarb–Shanno optimizer. For the constant-coefficient test case, the PINNs reproduce the exact two-soliton solution with a maximum absolute error of 5.53×10−3, a relative L2 error of 1.02×10−3, and a mean absolute error of 6.41×10−4. In the time-dependent regime where the quadratic nonlinearity coefficient m(t) periodically crosses zero, the PINNs reveal a complete steepening-and-recovery cycle. At the zero-crossing instant, quadratic nonlinearity is momentarily suppressed, triggering abrupt wave steepening together with a transient compression of the wave field in which the crest–trough separation narrows; as m(t) recovers, the waveform broadens again. This cyclic mechanism accounts for the intermittent amplitude fluctuations documented in the satellite altimetry. The amplitude-dependent phase speed c=c0+(m/3)A0+(n/6)A02, together with mean-flow Doppler shifting, quantitatively explains a 50% phase-speed increa",
+   "url": "https://doi.org/10.1063/5.0352775",
+   "pdf_url": null,
+   "doi": "10.1063/5.0352775",
    "arxiv": null,
    "sources": [
-    "Semantic Scholar",
-    "Crossref",
-    "OpenAlex"
+    "Semantic Scholar"
    ],
    "score": 71,
    "similar_to": {
-    "id": "dofRHEwAAAAJ:eQOLeE2rZwMC",
-    "title": "A reduced order parameterization of random wave fields with deterministic wave groups",
-    "year": 2022
+    "id": "dofRHEwAAAAJ:e5wmG9Sq2KIC",
+    "title": "Physics-informed neural networks for phase-resolved data assimilation and prediction of nonlinear ocean waves",
+    "year": 2025
    },
    "matched": [
-    "breaking wave",
-    "wave-structure interaction",
-    "wave tank",
+    "ocean wave",
     "wave field",
-    "wave propagation",
-    "numerical wave tank"
+    "physics-informed",
+    "data assimilation"
+   ],
+   "focus": "domain_ai",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-26",
+   "in_press": false,
+   "news_date": "2026-10-01",
+   "is_new": false,
+   "bullets": [
+    "PINNs solve variable-coefficient Gardner equation for Rossby solitary waves",
+    "Two-soliton test relative L2 error 1.02×10⁻³",
+    "Nonlinearity zero-crossing triggers steepening-recovery cycle; explains 50% phase-speed increase"
+   ]
+  },
+  {
+   "id": "7ca93d9575b5",
+   "title": "Wave Turbulence of Capillary Waves in Finite Systems",
+   "authors": [
+    "A. Korotkevich"
+   ],
+   "author_count": 1,
+   "venue": null,
+   "date": "2026-10-29",
+   "year": 2026,
+   "abstract": "We consider classical problem of turbulence of capillary waves. In a series of numerical simulations it is shown that Zakharov-Filonenko spectrum corresponding to direct cascade of energy has a limited dynamic range of realization in a finite system, which shrinks with decreasing level of nonlinearity. Recent hypothesis that this dynamic range scales with average steepness as $\\sim\\mu^{8/3}$ is confirmed. As a byproduct the Zakharov-Filonenko spectrum was observed for record dynamic range close to or beyond one decade in a variety of simulation configurations.",
+   "url": "https://www.semanticscholar.org/paper/83e704357ea455f344390aee1b5d8787baa9e488",
+   "pdf_url": null,
+   "doi": null,
+   "arxiv": "2610.40217",
+   "sources": [
+    "Semantic Scholar"
+   ],
+   "score": 71,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:IjCSPb-OGe4C",
+    "title": "The influence of finite depth on the evolution of extreme wave statistics in numerical wave tanks",
+    "year": 2021
+   },
+   "matched": [
+    "wave turbulence",
+    "turbulence"
    ],
    "focus": "domain",
    "cites": [],
    "coauthor": null,
-   "first_seen": "2026-11-22",
+   "first_seen": "2026-11-26",
    "in_press": false,
-   "news_date": "2026-10-04",
+   "news_date": "2026-10-29",
    "is_new": false,
    "bullets": [
-    "Tested Stokes initial conditions and schemes for breaking waves in OpenFOAM",
-    "Fifth-order Stokes theory best captures nonlinear evolution before breaking"
+    "Simulated capillary wave turbulence in finite systems",
+    "Zakharov-Filonenko range shrinks with nonlinearity, scaling as steepness^(8/3)",
+    "Spectrum observed over about one decade, a record range"
    ]
   },
   {
@@ -1420,90 +1461,49 @@
    "bullets": null
   },
   {
-   "id": "0ca9c6571880",
-   "title": "Dynamic Simulation of an Oscillating Multibody Wave Energy Converter Under Caribbean Sea Conditions",
+   "id": "ddc7dc02f1fd",
+   "title": "Simulation of Breaking Waves in OpenFOAM: Numerical Assessment Using Stokes Wave Initial Conditions",
    "authors": [
-    "Manuel Alejandro Salinas-Casseres",
-    "Edgardo William Arrieta-Ortiz"
+    "C. Zhang"
    ],
-   "author_count": 2,
-   "venue": "Encuentro Internacional de Educación en Ingeniería",
-   "date": "2026-10-07",
+   "author_count": 1,
+   "venue": "Water",
+   "date": "2026-10-04",
    "year": 2026,
-   "abstract": "Access to reliable electricity service is still a significant challenge for many coastal and island communities, particularly in developing regions where connection to the national grid is limited or economically unfeasible. In this context, wave energy is a promising renewable resource due to its high energy density and continuous daily generator performance. This work presents the dynamic simulation of the SALUM wave energy converter, a floating multi-body oscillating system designed to extract energy from ocean waves. This study focuses on the mathematical modelling and numerical analysis of the device under representative sea states from the Caribbean region. The dynamic behaviour of the system is described through the Euler–Lagrange formalism, which enables the derivation of the equations of motion for a coupled three-body system. These equations capture the interaction between the vertical motion of the central buoy and the rotational dynamics of the lateral bodies. To incorporate fluid–structure interaction effects, the Cummins equation is employed, introducing added mass, radiation damping, and hydrodynamic memory effects into the model. Hydrodynamic coefficients are obtained using the Boundary Element Method (BEM), allowing close estimation of excitation forces and radiation effects. Realistic Caribbean wave data are introduced into the model to evaluate system perform",
-   "url": "https://doi.org/10.26507/paper.5150",
-   "pdf_url": "https://acofipapers.org/index.php/eiei/article/download/5150/3050",
-   "doi": "10.26507/paper.5150",
+   "abstract": "Understanding the characteristics of breaking waves in deep and intermediate water is essential for both air–sea interaction and wave-structure interaction. This paper explores optimal numerical methods for modelling breaking events within the OpenFOAM framework, using a 2D numerical wave tank. The present work discusses the implementation of initial wave conditions in the OpenFOAM framework and the optimal combination of numerical techniques used for modelling breaking events. Stokes wave theory is used to prescribe the initial wave field, which is first assessed against the corresponding analytical solution before the subsequent nonlinear evolution and breaking processes are investigated. Three orders of Stokes wave theory are used to investigate their capability in simulating wave propagation and modeling a single breaking wave event. Various numerical schemes implemented in OpenFOAM are tested to determine the optimal combination for achieving accurate results. The findings demonstrate that fifth-order Stokes wave theory is the most suitable for capturing the highly nonlinear evolution of waves leading up to breaking.",
+   "url": "https://doi.org/10.3390/w18192461",
+   "pdf_url": "https://doi.org/10.3390/w18192461",
+   "doi": "10.3390/w18192461",
    "arxiv": null,
    "sources": [
-    "Semantic Scholar"
+    "Semantic Scholar",
+    "Crossref",
+    "OpenAlex"
    ],
    "score": 70,
    "similar_to": {
-    "id": "dofRHEwAAAAJ:ns9cj8rnVeAC",
-    "title": "Performance study and multi-objective optimization of 3D cylindrical oscillating water column wave energy converter: balancing efficiency and structural cost",
-    "year": 2026
+    "id": "dofRHEwAAAAJ:eQOLeE2rZwMC",
+    "title": "A reduced order parameterization of random wave fields with deterministic wave groups",
+    "year": 2022
    },
    "matched": [
-    "ocean wave",
-    "wave energy",
-    "hydrodynamics",
-    "sea state"
+    "breaking wave",
+    "wave-structure interaction",
+    "wave tank",
+    "wave field",
+    "wave propagation",
+    "numerical wave tank"
    ],
    "focus": "domain",
    "cites": [],
    "coauthor": null,
    "first_seen": "2026-11-22",
    "in_press": false,
-   "news_date": "2026-10-07",
+   "news_date": "2026-10-04",
    "is_new": false,
    "bullets": [
-    "Simulated three-body SALUM wave energy converter using Cummins equation and BEM",
-    "Performance evaluated under realistic Caribbean sea states"
-   ]
-  },
-  {
-   "id": "d06bb2f9944b",
-   "title": "Direct spectral-inversion reconstruction of focused waves on sheared currents for cylinder-load prediction",
-   "authors": [
-    "Wei Shi",
-    "Ji Wu",
-    "Zai-Bin Lin",
-    "Xin-Meng Zeng",
-    "T. Tran"
-   ],
-   "author_count": 5,
-   "venue": "The Physics of Fluids",
-   "date": "2026-10-01",
-   "year": 2026,
-   "abstract": "Predicting the load of a focused wave group on a cylinder in a vertically sheared current requires the incident field to reproduce the focal crest, the current-dependent propagation, and the subsurface kinematics together. Existing wave-on-current focusing relies on four-phase harmonic decomposition, which needs a linearized target spectrum and four realizations per correction. We develop a direct spectral-inversion iteration for reduced-data cases with only an event-centred free-surface segment at one gauge. The target and simulated segments are projected onto a common complex spectrum, and inlet amplitude and phase are corrected using the amplitude ratio and wrapped phase error, with one numerical realization per iteration. A four-step procedure assesses current maintenance, focal-event reconstruction, unfitted subsurface velocities with two- to three-dimensional transfer, and the inertia-dominated cylinder load under no, adverse, and following currents. In the no-current example, five iterations reduce the focus-point root mean square error from 6.4599×10−3 to 4.2769×10−3 m and raise the correlation from 0.9679 to 0.9857. Peak-load errors remain within 8.79%, with focus-window root mean square errors of 1.82–3.19 N. The inlet phase corrections follow the shear-modified dispersion, with opposite signs for adverse and following currents. The only substantial discrepancy, the f",
-   "url": "https://doi.org/10.1063/5.0350941",
-   "pdf_url": null,
-   "doi": "10.1063/5.0350941",
-   "arxiv": null,
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 70,
-   "similar_to": null,
-   "matched": [
-    "wave group",
-    "free surface",
-    "focused wave"
-   ],
-   "focus": "domain",
-   "cites": [
-    "dofRHEwAAAAJ:9ZlFYXVOiuMC"
-   ],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-10-01",
-   "is_new": false,
-   "bullets": [
-    "Developed one-realisation spectral-inversion iteration for focused waves on sheared currents",
-    "Five iterations cut focus RMSE from 6.46e-3 to 4.28e-3 m",
-    "Cylinder peak-load errors stayed within 8.79%"
+    "Tested Stokes initial conditions and schemes for breaking waves in OpenFOAM",
+    "Fifth-order Stokes theory best captures nonlinear evolution before breaking"
    ]
   },
   {
@@ -1646,93 +1646,90 @@
    ]
   },
   {
-   "id": "7f3c9a80e36a",
-   "title": "Free-surface breaking dynamics and morphology of waves generated by the semi-submerged wedge-shaped body",
+   "id": "0ca9c6571880",
+   "title": "Dynamic Simulation of an Oscillating Multibody Wave Energy Converter Under Caribbean Sea Conditions",
    "authors": [
-    "Ming-Lei Ji",
-    "Hai-Hua Deng",
-    "Zhi-Ben Shen",
-    "Yi-Wei Fan",
-    "Yun-Fei Kuai",
-    "Yang Han"
+    "Manuel Alejandro Salinas-Casseres",
+    "Edgardo William Arrieta-Ortiz"
    ],
-   "author_count": 6,
-   "venue": "The Physics of Fluids",
-   "date": "2026-10-01",
+   "author_count": 2,
+   "venue": "Encuentro Internacional de Educación en Ingeniería",
+   "date": "2026-10-07",
    "year": 2026,
-   "abstract": "The breaking waves at the bow and stern represent a fundamental free-surface phenomenon involving violent interface deformation, air entrainment, and strong two-phase coupling. The temporal evolution and spatial distribution of wave breaking are fundamental to understanding water-air mixing flows around ships. The present study adopts the square stern of high-speed ships as a reference and selects a wedge model as the research object in order to investigate the characteristics of interface breaking and the flow morphology. The free-surface waves around the wedge model were measured using a binocular vision system. A systematic analysis was conducted to investigate the impact of various parameters on the flow patterns in the bow and stern regions. The parameters investigated included draft depth (D), stern width (B), attack angle (α), and draft Froude number FrD=U/gD. The results show that the wave profiles have strong similarity when FrD is chosen as the dominant parameter. The associated parameters of FrD and geometric parameters are found to have a significant influence on the morphological characteristics of the waves.",
-   "url": "https://doi.org/10.1063/5.0347162",
-   "pdf_url": null,
-   "doi": "10.1063/5.0347162",
+   "abstract": "Access to reliable electricity service is still a significant challenge for many coastal and island communities, particularly in developing regions where connection to the national grid is limited or economically unfeasible. In this context, wave energy is a promising renewable resource due to its high energy density and continuous daily generator performance. This work presents the dynamic simulation of the SALUM wave energy converter, a floating multi-body oscillating system designed to extract energy from ocean waves. This study focuses on the mathematical modelling and numerical analysis of the device under representative sea states from the Caribbean region. The dynamic behaviour of the system is described through the Euler–Lagrange formalism, which enables the derivation of the equations of motion for a coupled three-body system. These equations capture the interaction between the vertical motion of the central buoy and the rotational dynamics of the lateral bodies. To incorporate fluid–structure interaction effects, the Cummins equation is employed, introducing added mass, radiation damping, and hydrodynamic memory effects into the model. Hydrodynamic coefficients are obtained using the Boundary Element Method (BEM), allowing close estimation of excitation forces and radiation effects. Realistic Caribbean wave data are introduced into the model to evaluate system perform",
+   "url": "https://doi.org/10.26507/paper.5150",
+   "pdf_url": "https://acofipapers.org/index.php/eiei/article/download/5150/3050",
+   "doi": "10.26507/paper.5150",
    "arxiv": null,
    "sources": [
     "Semantic Scholar"
    ],
    "score": 69,
    "similar_to": {
-    "id": "dofRHEwAAAAJ:QIV2ME_5wuYC",
-    "title": "Discovering equations that govern wave breaking evolution using scientific machine learning",
-    "year": 2024
+    "id": "dofRHEwAAAAJ:ns9cj8rnVeAC",
+    "title": "Performance study and multi-objective optimization of 3D cylindrical oscillating water column wave energy converter: balancing efficiency and structural cost",
+    "year": 2026
    },
    "matched": [
-    "wave breaking",
-    "breaking wave",
-    "free surface"
+    "ocean wave",
+    "wave energy",
+    "hydrodynamics",
+    "sea state"
    ],
    "focus": "domain",
    "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-22",
+   "in_press": false,
+   "news_date": "2026-10-07",
+   "is_new": false,
+   "bullets": [
+    "Simulated three-body SALUM wave energy converter using Cummins equation and BEM",
+    "Performance evaluated under realistic Caribbean sea states"
+   ]
+  },
+  {
+   "id": "d06bb2f9944b",
+   "title": "Direct spectral-inversion reconstruction of focused waves on sheared currents for cylinder-load prediction",
+   "authors": [
+    "Wei Shi",
+    "Ji Wu",
+    "Zai-Bin Lin",
+    "Xin-Meng Zeng",
+    "T. Tran"
+   ],
+   "author_count": 5,
+   "venue": "The Physics of Fluids",
+   "date": "2026-10-01",
+   "year": 2026,
+   "abstract": "Predicting the load of a focused wave group on a cylinder in a vertically sheared current requires the incident field to reproduce the focal crest, the current-dependent propagation, and the subsurface kinematics together. Existing wave-on-current focusing relies on four-phase harmonic decomposition, which needs a linearized target spectrum and four realizations per correction. We develop a direct spectral-inversion iteration for reduced-data cases with only an event-centred free-surface segment at one gauge. The target and simulated segments are projected onto a common complex spectrum, and inlet amplitude and phase are corrected using the amplitude ratio and wrapped phase error, with one numerical realization per iteration. A four-step procedure assesses current maintenance, focal-event reconstruction, unfitted subsurface velocities with two- to three-dimensional transfer, and the inertia-dominated cylinder load under no, adverse, and following currents. In the no-current example, five iterations reduce the focus-point root mean square error from 6.4599×10−3 to 4.2769×10−3 m and raise the correlation from 0.9679 to 0.9857. Peak-load errors remain within 8.79%, with focus-window root mean square errors of 1.82–3.19 N. The inlet phase corrections follow the shear-modified dispersion, with opposite signs for adverse and following currents. The only substantial discrepancy, the f",
+   "url": "https://doi.org/10.1063/5.0350941",
+   "pdf_url": null,
+   "doi": "10.1063/5.0350941",
+   "arxiv": null,
+   "sources": [
+    "Semantic Scholar"
+   ],
+   "score": 69,
+   "similar_to": null,
+   "matched": [
+    "wave group",
+    "free surface",
+    "focused wave"
+   ],
+   "focus": "domain",
+   "cites": [
+    "dofRHEwAAAAJ:9ZlFYXVOiuMC"
+   ],
    "coauthor": null,
    "first_seen": "2026-11-22",
    "in_press": false,
    "news_date": "2026-10-01",
    "is_new": false,
    "bullets": [
-    "Measured breaking waves around a semi-submerged wedge using binocular vision",
-    "Wave profiles collapse when draft Froude number is the governing parameter"
-   ]
-  },
-  {
-   "id": "c074ddde7876",
-   "title": "A quantitative measure of predictability for surface gravity waves",
-   "authors": [
-    "Yi-Fan Du",
-    "K. Maki",
-    "Jing Sun",
-    "Yu-Lin Pan"
-   ],
-   "author_count": 4,
-   "venue": null,
-   "date": "2026-11-14",
-   "year": 2026,
-   "abstract": "We introduce a Bayesian inference framework to characterize the predictability of a one dimensional ocean surface wave field given surface elevation measurements from a sensor. Unlike the classical theories that only sketch the boundary of a predictable zone based on group velocity, we use the Bayesian posterior uncertainty of surface elevation to quantify the local predictability at every spatiotemporal location. Our approach first constructs a prior distribution to encode existing knowledge of the wave field such as the spectrum and propagation direction. By conditioning on the (possibly noisy) measurement data, we infer the posterior distribution of the wave field, from which a spatiotemporal uncertainty map is extracted. This map agrees well with the group-velocity-based classical predictable zone theory when the frequency spectrum has bounded support. Meanwhile, it also demonstrates predictability even for a spectrum with unbounded frequency support where the classical predictable zone degenerates. A refined analysis of posterior uncertainty using observability Gramian matrix reveals a `data-informed'part and an `un-informed'part of the wave field, with the latter being fundamentally un-predictable. Furthermore, nonlinear effects can be naturally introduced into the Bayesian framework by incorporating the nonlinear ocean surface wave equations. This is the first time that ",
-   "url": "https://www.semanticscholar.org/paper/77675b19c23d2237c646fd9af266d9cbcbcc667c",
-   "pdf_url": null,
-   "doi": null,
-   "arxiv": "2611.19494",
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 69,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:d1gkVwhDpl0C",
-    "title": "Field measurement of nonlinear changes to large gravity wave groups",
-    "year": 2019
-   },
-   "matched": [
-    "nonlinear wave",
-    "surface gravity wave",
-    "wave field"
-   ],
-   "focus": "domain",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-11-14",
-   "is_new": false,
-   "bullets": [
-    "Bayesian posterior uncertainty quantifies wave-field predictability from sensor data",
-    "Shows predictability even where classical group-velocity zone degenerates"
+    "Developed one-realisation spectral-inversion iteration for focused waves on sheared currents",
+    "Five iterations cut focus RMSE from 6.46e-3 to 4.28e-3 m",
+    "Cylinder peak-load errors stayed within 8.79%"
    ]
   },
   {
@@ -1777,49 +1774,49 @@
    "bullets": null
   },
   {
-   "id": "448d53371386",
-   "title": "Ice-thickness based scaling of wave attenuation in sea ice: Application and assessment of wave spectra",
+   "id": "7f3c9a80e36a",
+   "title": "Free-surface breaking dynamics and morphology of waves generated by the semi-submerged wedge-shaped body",
    "authors": [
-    "W. Erick Rogers",
-    "Jie Yu",
-    "Jean Rabault",
-    "Ana Carrasco",
-    "Malte Müller"
+    "Ming-Lei Ji",
+    "Hai-Hua Deng",
+    "Zhi-Ben Shen",
+    "Yi-Wei Fan",
+    "Yun-Fei Kuai",
+    "Yang Han"
    ],
-   "author_count": 5,
-   "venue": "arXiv",
-   "date": "2026-08-31",
+   "author_count": 6,
+   "venue": "The Physics of Fluids",
+   "date": "2026-10-01",
    "year": 2026,
-   "abstract": "This study discusses recent advances in modeling waves in sea ice in the U.S. Navy's regional modeling system. It is applied in the marginal seas of the eastern Arctic Ocean, including the Barents Sea, Kara Sea, parts of the Greenland Sea, Norwegian Sea, and waters north of Svalbard. The focus is to assess the skills of two formulations of wave attenuation by sea ice used operationally in WAVEWATCH III. Both are derived from large field datasets, one from the Arctic and the other from the Antarctic. The new model (IC4M9) describes wave attenuation depending on the ice thickness in association with the dependence on wave frequency, while the earlier default scheme (IC4M6) omits the dependence on ice thickness. The modeling results are evaluated against the satellite wave observations from SWIM/CFOSAT and the buoy measurements from the Svalbard Marginal Ice Zone 2024 Campaign (SvalMIZ-24). The comparisons with SWIM data validate the wave model skill in regions of open water or with light ice coverage. When evaluated against the SvalMIZ-24 data, the statistical performance of IC4M9 is substantially better than that of IC4M6, showing the influence of ice thickness on waves in the MIZ. Moreover, diagnosing systematic errors in the predictions by IC4M9, we find that the ice thickness field provided by the sea ice model CICE to the wave model is biased high in the MIZ, thus penalizing",
-   "url": "https://arxiv.org/abs/2608.30590",
-   "pdf_url": "https://arxiv.org/pdf/2608.30590v1",
-   "doi": null,
-   "arxiv": "2608.30590",
+   "abstract": "The breaking waves at the bow and stern represent a fundamental free-surface phenomenon involving violent interface deformation, air entrainment, and strong two-phase coupling. The temporal evolution and spatial distribution of wave breaking are fundamental to understanding water-air mixing flows around ships. The present study adopts the square stern of high-speed ships as a reference and selects a wedge model as the research object in order to investigate the characteristics of interface breaking and the flow morphology. The free-surface waves around the wedge model were measured using a binocular vision system. A systematic analysis was conducted to investigate the impact of various parameters on the flow patterns in the bow and stern regions. The parameters investigated included draft depth (D), stern width (B), attack angle (α), and draft Froude number FrD=U/gD. The results show that the wave profiles have strong similarity when FrD is chosen as the dominant parameter. The associated parameters of FrD and geometric parameters are found to have a significant influence on the morphological characteristics of the waves.",
+   "url": "https://doi.org/10.1063/5.0347162",
+   "pdf_url": null,
+   "doi": "10.1063/5.0347162",
+   "arxiv": null,
    "sources": [
-    "arXiv"
+    "Semantic Scholar"
    ],
    "score": 68,
    "similar_to": {
-    "id": "dofRHEwAAAAJ:u-x6o8ySG0sC",
-    "title": "The average shape of large waves in the Norwegian sea–is non-linear physics important?",
-    "year": 2019
+    "id": "dofRHEwAAAAJ:QIV2ME_5wuYC",
+    "title": "Discovering equations that govern wave breaking evolution using scientific machine learning",
+    "year": 2024
    },
    "matched": [
-    "wavewatch",
-    "wave model",
-    "wave spectra"
+    "wave breaking",
+    "breaking wave",
+    "free surface"
    ],
    "focus": "domain",
    "cites": [],
    "coauthor": null,
    "first_seen": "2026-11-22",
    "in_press": false,
-   "news_date": "2026-08-31",
+   "news_date": "2026-10-01",
    "is_new": false,
    "bullets": [
-    "Two WAVEWATCH III sea-ice attenuation schemes compared in eastern Arctic",
-    "Ice-thickness-dependent IC4M9 substantially beats IC4M6 against SvalMIZ-24 buoys",
-    "CICE ice thickness biased high in marginal ice zone"
+    "Measured breaking waves around a semi-submerged wedge using binocular vision",
+    "Wave profiles collapse when draft Froude number is the governing parameter"
    ]
   },
   {
@@ -1920,54 +1917,6 @@
    ]
   },
   {
-   "id": "ac038dcd9a30",
-   "title": "Internal solitary wave attenuation, spectral evolution, and induced flow fields beneath rigid ice covers",
-   "authors": [
-    "Ye-Lin Gao",
-    "Li Zou",
-    "Tao Zhao",
-    "Zong-Bing Yu",
-    "Guo-Qing Jin",
-    "Ying-Jie Hu"
-   ],
-   "author_count": 6,
-   "venue": "The Physics of Fluids",
-   "date": "2026-10-01",
-   "year": 2026,
-   "abstract": "The interaction between internal solitary waves (ISWs) and ice cover is an important process governing wave deformation, energy dissipation, and mixing in polar oceans. In this study, laboratory experiments were conducted in a strongly stratified silicone oil–water two-layer system using a rigid, nondeformable ice-cover model to examine the combined effects of ice-cover position and incident-wave amplitude on ISW evolution. Five dimensionless ice-cover positions and four incident-wave amplitudes were considered. Image-based interface extraction, particle image velocimetry, and wavelet analysis were used to quantify waveform evolution, spatial amplitude attenuation, spectral redistribution, and flow-field responses. The results show that the vertical position of the ice cover strongly regulates the transition of ISWs from stable propagation to instability-dominated evolution. Four representative regimes were identified: wave flattening, wave reflection, interfacial instability, and wave breaking. Under upper-layer ice-cover conditions (hi/h1 = 0.4, 0.6), wave-height attenuation was relatively limited, with the downstream normalized amplitude remaining at approximately 0.85–0.95. In contrast, when the ice cover was located near or below the density interface (hi/h1 = 0, −0.4, and −0.6), the normalized amplitude decreased sharply to approximately 0.50–0.65, indicating substantiall",
-   "url": "https://doi.org/10.1063/5.0352329",
-   "pdf_url": null,
-   "doi": "10.1063/5.0352329",
-   "arxiv": null,
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 67,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:QIV2ME_5wuYC",
-    "title": "Discovering equations that govern wave breaking evolution using scientific machine learning",
-    "year": 2024
-   },
-   "matched": [
-    "wave breaking",
-    "nonlinear wave",
-    "wave height",
-    "spectral evolution"
-   ],
-   "focus": "domain",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-10-01",
-   "is_new": false,
-   "bullets": [
-    "Lab experiments on internal solitary waves under rigid ice in two-layer fluid",
-    "Four regimes identified: flattening, reflection, interfacial instability, breaking",
-    "Ice near or below interface cut amplitude to 0.50–0.65, versus 0.85–0.95"
-   ]
-  },
-  {
    "id": "1fdb771c3219",
    "title": "Adverse Impact of Explicit Ocean‐Wave Coupling on the Climatology of Tropical Cyclones and Their Environment in E3SM",
    "authors": [
@@ -2017,51 +1966,45 @@
    ]
   },
   {
-   "id": "0895967b628b",
-   "title": "Parametric wave spectrum models for prediction of Stokes drift profiles",
+   "id": "60b093f73c83",
+   "title": "Data-driven and physics-guided hindcasting of measured wave spectra",
    "authors": [
-    "W. Rogers",
-    "Ya-Lin Fan",
-    "L. Zamudio",
-    "E. Douglass"
+    "S. Rikka"
    ],
-   "author_count": 4,
-   "venue": "arXiv",
-   "date": "2026-10-08",
+   "author_count": 1,
+   "venue": null,
+   "date": "2026-10-21",
    "year": 2026,
-   "abstract": "In this report, 15 variants of nine parametric models for non-directional ocean wave spectra are reviewed. They are compared against observation-based spectra created by taking spectra measured by moored buoys, binning by wind speed, and averaging. Surface Stokes drift (SSD) and Stokes drift profiles are computed using the model and observation-based spectra, and these are compared. This'parametric wave model'strategy for estimating Stokes drift is contrasted with other methods for estimating Stokes drift, such as using spectra from a dynamical wave model. Advantages and shortcomings are reviewed. One practical application for Stokes drift profiles is in ocean circulation modeling. Here, the information is used to compute wave-enhanced mixing ('Langmuir turbulence'). We present examples of such cases, in the context of a global ocean model, tested in two modes (coupled and uncoupled) and with two types of forcing (Stokes drift approximated using wind speed and Stokes drift computed using a full ocean wave model). A more comprehensive review of the uncoupled tests with the full ocean wave model can be found in a separate report, Fan et al. (2026). We evaluate simple Stokes drift models that use wind speed and/or wind stress but do not require a dynamical wave model. We find some are sufficiently accurate for routine prediction of SSD. A subset of these models can also predict St",
-   "url": "https://doi.org/10.48550/arxiv.2610.12752",
-   "pdf_url": "https://arxiv.org/pdf/2610.12752v1",
-   "doi": "10.48550/arxiv.2610.12752",
-   "arxiv": "2610.12752",
+   "abstract": "Short-range hindcasts of measured wave spectra are evaluated using a recurrent model initialized by one hourly buoy spectrum and supplied with local wind, fetch and depth. Measurements from three Baltic Sea stations are combined for training in 2017--2020, validation in 2021 and testing in 2022. ERA5 reanalysis supplies winds throughout the twelve-hour prediction interval. The comparison examines supervision of spectral variance, peak frequency and peak amplitude, followed by empirical wind-sea bounds and a local relaxation constraint. Variance and peak-frequency supervision gives the lowest spectral error within the data-driven comparison, whereas additional peak-amplitude supervision gives the lowest wave-height error. In the matched physical comparison, relaxation reduces height RMSE by 5.01\\% to \\PhPtwoHs{}~cm. Extending this constraint through hours 13--24, without spectral targets at those hours, reduces primary spectral RMSE by 2.31\\% to \\PhPthreeSpec{}~$\\unitE$. Upper-bound constraints increase errors. Wind-condition comparisons show spectral gains from extended relaxation in increasing, decreasing and steady strong winds, with little change in steady weak winds. The results support modest, objective-dependent benefits from local physical guidance. Wave-height scores concern the retained frequency band, and operational forecasting and transfer to independent stations re",
+   "url": "https://www.semanticscholar.org/paper/6e386ffaa385c4028e9d164486f6c197c627f402",
+   "pdf_url": null,
+   "doi": null,
+   "arxiv": "2610.29306",
    "sources": [
-    "Semantic Scholar",
-    "arXiv",
-    "OpenAlex"
+    "Semantic Scholar"
    ],
    "score": 67,
    "similar_to": {
-    "id": "dofRHEwAAAAJ:hMod-77fHWUC",
-    "title": "Machine learning approximations for fast and accurate prediction of nonlinear four‐wave interactions in spectral wave models",
-    "year": 2026
+    "id": "dofRHEwAAAAJ:zYLM7Y9cAGgC",
+    "title": "Data driven analysis on the extreme wave statistics over an area",
+    "year": 2021
    },
    "matched": [
-    "ocean wave",
-    "turbulence",
-    "wave spectrum",
-    "wave model",
-    "wave spectra"
+    "wave height",
+    "wind sea",
+    "wave spectra",
+    "data-driven"
    ],
-   "focus": "domain",
+   "focus": "domain_ai",
    "cites": [],
    "coauthor": null,
    "first_seen": "2026-11-22",
    "in_press": false,
-   "news_date": "2026-10-08",
+   "news_date": "2026-10-21",
    "is_new": false,
    "bullets": [
-    "Compared 15 variants of nine parametric spectra against buoy spectra",
-    "Some wind-based models accurately predict surface Stokes drift"
+    "Recurrent model hindcasts Baltic buoy wave spectra with physics constraints",
+    "Relaxation constraint cuts wave-height RMSE by 5.01%; upper bounds hurt"
    ]
   },
   {
@@ -2110,51 +2053,6 @@
    "bullets": null
   },
   {
-   "id": "8133503c3b18",
-   "title": "Surface Stokes drift from compact drifting wave buoys",
-   "authors": [
-    "Alexey S. Mironov",
-    "Fabrice Collard",
-    "Gwenaele Jan",
-    "Bertrand Chapron"
-   ],
-   "author_count": 4,
-   "venue": "arXiv",
-   "date": "2026-09-18",
-   "year": 2026,
-   "abstract": "Surface Stokes drift depends strongly on the energy and directions of short waves, which are incompletely resolved by routine wave observations. We derive surface Stokes drift vectors from wave measurements collected by compact drifting buoys during three deployments in the North-East Atlantic and the Alboran Sea. The calculation uses vertical-acceleration spectra and first directional Fourier moments, which describe the mean wave direction and directional concentration at each frequency; it accounts for the Doppler shift caused by buoy motion relative to the water and adds a calibrated high-frequency tail above an intrinsic frequency of 0.7 Hz. Across 13,139 records, the median estimated speed is 0.081 m/s at a median wind speed of 6.8 m/s. Over the measured band of 0.04-1 Hz, accounting for wave directions reduces the magnitude by a median 39% relative to the unidirectional assumption. The median ratio of the parameterised tail magnitude above 0.7 Hz to the total estimated magnitude is 0.37. Comparisons with WAVEWATCH III and Copernicus Marine MFWAM show strong covariation and similar wind-dependent differences from the buoy-derived estimates. On the station-matched sample from the two Atlantic deployments, WAVEWATCH III directional spectra indicate that these differences within the compared band arise mainly from spectral levels rather than from net directional reduction. Th",
-   "url": "https://doi.org/10.1016/j.ocemod.2026.102851",
-   "pdf_url": "https://arxiv.org/pdf/2609.21592v1",
-   "doi": "10.1016/j.ocemod.2026.102851",
-   "arxiv": "2609.21592",
-   "sources": [
-    "arXiv",
-    "Crossref"
-   ],
-   "score": 66,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:M3ejUd6NZC8C",
-    "title": "The influence of directional spreading on rogue waves triggered by abrupt depth transitions",
-    "year": 2023
-   },
-   "matched": [
-    "wavewatch",
-    "directional spreading"
-   ],
-   "focus": "domain",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-09-18",
-   "is_new": false,
-   "bullets": [
-    "Derived surface Stokes drift from drifting buoys across 13,139 records",
-    "Median speed 0.081 m/s; directional spreading cuts magnitude 39%",
-    "High-frequency tail contributes median 37%; WW3 differences stem from spectral levels"
-   ]
-  },
-  {
    "id": "a34efce5f98e",
    "title": "Phase velocity of gravity waves over prescribed shear counter-currents",
    "authors": [
@@ -2196,6 +2094,101 @@
     "Measured wave phase velocity over sheared counter-currents near blocking, using PIV",
     "Second-order approximation models gave the best theoretical estimates",
     "Uniform-current assumption systematically underestimates measured phase velocity"
+   ]
+  },
+  {
+   "id": "ac038dcd9a30",
+   "title": "Internal solitary wave attenuation, spectral evolution, and induced flow fields beneath rigid ice covers",
+   "authors": [
+    "Ye-Lin Gao",
+    "Li Zou",
+    "Tao Zhao",
+    "Zong-Bing Yu",
+    "Guo-Qing Jin",
+    "Ying-Jie Hu"
+   ],
+   "author_count": 6,
+   "venue": "The Physics of Fluids",
+   "date": "2026-10-01",
+   "year": 2026,
+   "abstract": "The interaction between internal solitary waves (ISWs) and ice cover is an important process governing wave deformation, energy dissipation, and mixing in polar oceans. In this study, laboratory experiments were conducted in a strongly stratified silicone oil–water two-layer system using a rigid, nondeformable ice-cover model to examine the combined effects of ice-cover position and incident-wave amplitude on ISW evolution. Five dimensionless ice-cover positions and four incident-wave amplitudes were considered. Image-based interface extraction, particle image velocimetry, and wavelet analysis were used to quantify waveform evolution, spatial amplitude attenuation, spectral redistribution, and flow-field responses. The results show that the vertical position of the ice cover strongly regulates the transition of ISWs from stable propagation to instability-dominated evolution. Four representative regimes were identified: wave flattening, wave reflection, interfacial instability, and wave breaking. Under upper-layer ice-cover conditions (hi/h1 = 0.4, 0.6), wave-height attenuation was relatively limited, with the downstream normalized amplitude remaining at approximately 0.85–0.95. In contrast, when the ice cover was located near or below the density interface (hi/h1 = 0, −0.4, and −0.6), the normalized amplitude decreased sharply to approximately 0.50–0.65, indicating substantiall",
+   "url": "https://doi.org/10.1063/5.0352329",
+   "pdf_url": null,
+   "doi": "10.1063/5.0352329",
+   "arxiv": null,
+   "sources": [
+    "Semantic Scholar"
+   ],
+   "score": 66,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:QIV2ME_5wuYC",
+    "title": "Discovering equations that govern wave breaking evolution using scientific machine learning",
+    "year": 2024
+   },
+   "matched": [
+    "wave breaking",
+    "nonlinear wave",
+    "wave height",
+    "spectral evolution"
+   ],
+   "focus": "domain",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-22",
+   "in_press": false,
+   "news_date": "2026-10-01",
+   "is_new": false,
+   "bullets": [
+    "Lab experiments on internal solitary waves under rigid ice in two-layer fluid",
+    "Four regimes identified: flattening, reflection, interfacial instability, breaking",
+    "Ice near or below interface cut amplitude to 0.50–0.65, versus 0.85–0.95"
+   ]
+  },
+  {
+   "id": "0895967b628b",
+   "title": "Parametric wave spectrum models for prediction of Stokes drift profiles",
+   "authors": [
+    "W. Rogers",
+    "Ya-Lin Fan",
+    "L. Zamudio",
+    "E. Douglass"
+   ],
+   "author_count": 4,
+   "venue": "arXiv",
+   "date": "2026-10-08",
+   "year": 2026,
+   "abstract": "In this report, 15 variants of nine parametric models for non-directional ocean wave spectra are reviewed. They are compared against observation-based spectra created by taking spectra measured by moored buoys, binning by wind speed, and averaging. Surface Stokes drift (SSD) and Stokes drift profiles are computed using the model and observation-based spectra, and these are compared. This'parametric wave model'strategy for estimating Stokes drift is contrasted with other methods for estimating Stokes drift, such as using spectra from a dynamical wave model. Advantages and shortcomings are reviewed. One practical application for Stokes drift profiles is in ocean circulation modeling. Here, the information is used to compute wave-enhanced mixing ('Langmuir turbulence'). We present examples of such cases, in the context of a global ocean model, tested in two modes (coupled and uncoupled) and with two types of forcing (Stokes drift approximated using wind speed and Stokes drift computed using a full ocean wave model). A more comprehensive review of the uncoupled tests with the full ocean wave model can be found in a separate report, Fan et al. (2026). We evaluate simple Stokes drift models that use wind speed and/or wind stress but do not require a dynamical wave model. We find some are sufficiently accurate for routine prediction of SSD. A subset of these models can also predict St",
+   "url": "https://doi.org/10.48550/arxiv.2610.12752",
+   "pdf_url": "https://arxiv.org/pdf/2610.12752",
+   "doi": "10.48550/arxiv.2610.12752",
+   "arxiv": "2610.12752",
+   "sources": [
+    "Semantic Scholar",
+    "OpenAlex"
+   ],
+   "score": 66,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:hMod-77fHWUC",
+    "title": "Machine learning approximations for fast and accurate prediction of nonlinear four‐wave interactions in spectral wave models",
+    "year": 2026
+   },
+   "matched": [
+    "ocean wave",
+    "turbulence",
+    "wave spectrum",
+    "wave model",
+    "wave spectra"
+   ],
+   "focus": "domain",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-22",
+   "in_press": false,
+   "news_date": "2026-10-08",
+   "is_new": false,
+   "bullets": [
+    "Compared 15 variants of nine parametric spectra against buoy spectra",
+    "Some wind-based models accurately predict surface Stokes drift"
    ]
   },
   {
@@ -2250,86 +2243,48 @@
    ]
   },
   {
-   "id": "511576b223f5",
-   "title": "Modulational stability of finite-depth Stokes waves with constant vorticity",
+   "id": "be82c0bc21b6",
+   "title": "Rigorously Certified Neural-Network Computation of Nonlinear Water Waves at Near-Machine Precision",
    "authors": [
-    "Li-Li Fan",
-    "Chang-Zhen Sun"
+    "M. Shavit",
+    "Yong-Jian Wang",
+    "T. Buckmaster"
    ],
-   "author_count": 2,
-   "venue": null,
-   "date": "2026-11-03",
+   "author_count": 3,
+   "venue": "arXiv",
+   "date": "2026-11-05",
    "year": 2026,
-   "abstract": "We investigate the effect of constant vorticity on the modulational spectral stability of small-amplitude periodic gravity waves for the two-dimensional finite-depth water-wave system. We derive an explicit stability criterion that agrees with the prediction obtained by Thomas, Kharif and Manna [43] through a nonlinear Schr\\\"odinger approximation. For waves propagating to the right, we identify a sharp range of dimensionless positive (counterclockwise) vorticity, for which modulational instability is suppressed at every depth, while at any fixed depth sufficiently strong negative (clockwise) vorticity also restores modulational stability. We give a complete description of the spectrum near the origin and identify a figure-eight spectral curve in the unstable regime. A key distinction from the irrotational case is that the usual Hamiltonian factorization of the linearized operator fails at zero Floquet exponent on the full periodic Sobolev space. We therefore carry out a spectral reduction based on reversibility, without relying on Hamiltonian factorization.",
-   "url": "https://www.semanticscholar.org/paper/52193c4f0bdf5b586f580a921d6b1dd3b431c63d",
-   "pdf_url": null,
-   "doi": null,
-   "arxiv": "2611.05237",
+   "abstract": "We present a computational framework that combines machine-learning-based discovery with rigorous computer-assisted numerical certification and formal verification for strongly nonlinear partial differential equations. We demonstrate the approach for periodic gravity-capillary traveling water waves. Physics-informed neural networks are used as a search mechanism, with the wave profile, wave speed and, in continuation experiments, surface tension learned directly from the governing equations without training data. Through a staged training and refinement procedure, the neural networks achieve near-machine-precision residuals of the governing equations, even in strongly nonlinear regimes. A single formulation recovers high-amplitude Stokes waves, Crapper waves and Wilton ripples. Continuation from a high-amplitude Wilton ripple in surface tension reveals new high-amplitude candidate solutions. We freeze one candidate as an explicit finite representation and rigorously certify a uniform bound on its governing-equation residual using interval arithmetic, accounting for floating-point roundoff, Fourier truncation, aliasing and grid-to-continuum errors. This independently validates the neural-network accuracy. We formalize the certification argument in Lean, which machine-checks the deductions from certified numerical bounds to the residual theorem. Both the interval certification an",
+   "url": "https://doi.org/10.48550/arxiv.2611.07395",
+   "pdf_url": "https://arxiv.org/pdf/2611.07395",
+   "doi": "10.48550/arxiv.2611.07395",
+   "arxiv": "2611.07395",
    "sources": [
-    "Semantic Scholar"
+    "Semantic Scholar",
+    "OpenAlex"
    ],
    "score": 66,
    "similar_to": {
-    "id": "dofRHEwAAAAJ:IjCSPb-OGe4C",
-    "title": "The influence of finite depth on the evolution of extreme wave statistics in numerical wave tanks",
-    "year": 2021
+    "id": "dofRHEwAAAAJ:J_g5lzvAfSwC",
+    "title": "Learning mesh-free discrete differential operators with self-supervised graph neural networks",
+    "year": 2027
    },
    "matched": [
     "water wave",
-    "modulational instability",
-    "finite depth"
+    "physics-informed",
+    "machine learning"
    ],
-   "focus": "domain",
+   "focus": "domain_ai",
    "cites": [],
    "coauthor": null,
-   "first_seen": "2026-11-22",
+   "first_seen": "2026-11-26",
    "in_press": false,
-   "news_date": "2026-11-03",
+   "news_date": "2026-11-05",
    "is_new": false,
    "bullets": [
-    "Derived explicit modulational stability criterion for finite-depth Stokes waves with vorticity",
-    "Positive vorticity range suppresses modulational instability at every depth"
-   ]
-  },
-  {
-   "id": "665e9e6e42e7",
-   "title": "New third-order probability density function for the surface elevation in irregular seas",
-   "authors": [
-    "D. Fuhrman",
-    "Yan-Yan Zhai",
-    "Mathias Klahn"
-   ],
-   "author_count": 3,
-   "venue": "Journal of Fluid Mechanics",
-   "date": "2026-11-06",
-   "year": 2026,
-   "abstract": "Abstract Content of image described in text. We develop saddle-point approximations of the probability density function (PDF) for the surface elevation in nonlinear, irregular seas, without any assumptions regarding uni-directionality of the wave field or narrow-bandedness of the spectrum. A new, closed-form approximation of the PDF at third order is derived, accounting for both skewness and kurtosis. The approximate PDF matches known asymptotics of the third-order positive tail exactly and is free of unphysical oscillations in the negative tail, which widely plague existing PDFs describing nonlinear seas. A normalisation procedure is introduced to enforce unit integral, zero mean and unit variance. We further show that the input cumulants can be adjusted to likewise yield prescribed skewness and kurtosis. Comparison of the new third-order PDF against challenging datasets stemming from irregular wave theory, a fully nonlinear wave model as well as laboratory experiments establishes accuracy. In the Appendix we additionally develop a novel perturbation method, which is used to derive the full form of the asymptotic positive and negative tails at fourth and fifth order, including (previously unknown) prefactors. Collectively, it is shown that even-order solutions inevitably involve oscillatory negative tails, whereas odd orders admit non-oscillatory negative-tail solutions.",
-   "url": "https://doi.org/10.1017/jfm.2026.12257",
-   "pdf_url": null,
-   "doi": "10.1017/jfm.2026.12257",
-   "arxiv": null,
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 66,
-   "similar_to": null,
-   "matched": [
-    "nonlinear wave",
-    "kurtosis",
-    "wave field",
-    "irregular wave",
-    "wave model"
-   ],
-   "focus": "domain",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-11-06",
-   "is_new": false,
-   "bullets": [
-    "Saddle-point derivation of closed-form third-order surface elevation PDF",
-    "Matches positive-tail asymptotics exactly, no unphysical negative-tail oscillations"
+    "PINNs compute gravity-capillary waves, certified by interval arithmetic and Lean",
+    "Near-machine-precision residuals recover Stokes, Crapper waves and Wilton ripples",
+    "Continuation in surface tension finds new high-amplitude candidate solutions"
    ]
   },
   {
@@ -2472,6 +2427,47 @@
    ]
   },
   {
+   "id": "ff07a8b4b3f7",
+   "title": "Modulational instability and parameter-controlled rogue waves in a generalized Gerdjikov–Ivanov model with dispersion",
+   "authors": [
+    "Xue Guan",
+    "Yu-Si Chen",
+    "Yi-You Guo"
+   ],
+   "author_count": 3,
+   "venue": "European Physical Journal B : Condensed Matter Physics",
+   "date": "2026-10-01",
+   "year": 2026,
+   "abstract": null,
+   "url": "https://doi.org/10.1140/epjb/s10051-026-01265-5",
+   "pdf_url": null,
+   "doi": "10.1140/epjb/s10051-026-01265-5",
+   "arxiv": null,
+   "sources": [
+    "Semantic Scholar",
+    "Crossref",
+    "OpenAlex"
+   ],
+   "score": 65,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:M3ejUd6NZC8C",
+    "title": "The influence of directional spreading on rogue waves triggered by abrupt depth transitions",
+    "year": 2023
+   },
+   "matched": [
+    "rogue wave",
+    "modulational instability"
+   ],
+   "focus": "domain",
+   "cites": [],
+   "coauthor": "Yuntian Chen",
+   "first_seen": "2026-11-26",
+   "in_press": false,
+   "news_date": "2026-10-01",
+   "is_new": false,
+   "bullets": null
+  },
+  {
    "id": "f2b34b518db5",
    "title": "Lagrangian transport resulting from superposition of surface gravity waves and an internal solitary wave",
    "authors": [
@@ -2561,94 +2557,44 @@
    "bullets": null
   },
   {
-   "id": "a523fa3a9ee6",
-   "title": "Experimental and numerical simulations of near resonant 2D soliton interaction in shallow water",
+   "id": "665e9e6e42e7",
+   "title": "New third-order probability density function for the surface elevation in irregular seas",
    "authors": [
-    "Thibault Leduque",
-    "F. Couderc",
-    "Maxime Kaczmarek",
-    "E. Barthélemy",
-    "N. Mordant",
-    "H. Michallet"
+    "D. Fuhrman",
+    "Yan-Yan Zhai",
+    "Mathias Klahn"
    ],
-   "author_count": 6,
-   "venue": null,
-   "date": "2026-11-12",
+   "author_count": 3,
+   "venue": "Journal of Fluid Mechanics",
+   "date": "2026-11-06",
    "year": 2026,
-   "abstract": "Experiments were carried out in {a} large wave basin ($27\\times 30$\\,m$^2$) to study the interactions of non-linear waves in shallow water (0.35\\,m deep). A stereoscopic technique was used to measure the waves accurately over a vast area ($180$\\,m$^2$). The numerical code {Tolosa-lct}, designed for simulating wave propagation in shallow water, reproduces the observations and extends the analysis for larger domains. The diffraction of oblique solitons is discussed. Mach interaction of two solitons occurs for some given incidence and amplitudes, producing a third soliton. A focus is made on the near resonant interaction of a soliton with a vertical wall. An example of a regular Mach interaction is shown, where a steady solution is achieved experimentally, with a maximum amplitude amplification of 3.2 at the wall.",
-   "url": "https://www.semanticscholar.org/paper/feef4a8f0be625215110054db6a838e631c28f6e",
+   "abstract": "Abstract Content of image described in text. We develop saddle-point approximations of the probability density function (PDF) for the surface elevation in nonlinear, irregular seas, without any assumptions regarding uni-directionality of the wave field or narrow-bandedness of the spectrum. A new, closed-form approximation of the PDF at third order is derived, accounting for both skewness and kurtosis. The approximate PDF matches known asymptotics of the third-order positive tail exactly and is free of unphysical oscillations in the negative tail, which widely plague existing PDFs describing nonlinear seas. A normalisation procedure is introduced to enforce unit integral, zero mean and unit variance. We further show that the input cumulants can be adjusted to likewise yield prescribed skewness and kurtosis. Comparison of the new third-order PDF against challenging datasets stemming from irregular wave theory, a fully nonlinear wave model as well as laboratory experiments establishes accuracy. In the Appendix we additionally develop a novel perturbation method, which is used to derive the full form of the asymptotic positive and negative tails at fourth and fifth order, including (previously unknown) prefactors. Collectively, it is shown that even-order solutions inevitably involve oscillatory negative tails, whereas odd orders admit non-oscillatory negative-tail solutions.",
+   "url": "https://doi.org/10.1017/jfm.2026.12257",
    "pdf_url": null,
-   "doi": null,
-   "arxiv": "2611.16520",
+   "doi": "10.1017/jfm.2026.12257",
+   "arxiv": null,
    "sources": [
     "Semantic Scholar"
    ],
    "score": 65,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:LkGwnXOMwfcC",
-    "title": "On rogue waves generated by abrupt depth transitions",
-    "year": 2022
-   },
+   "similar_to": null,
    "matched": [
     "nonlinear wave",
-    "wave basin",
-    "wave propagation",
-    "resonant interaction"
+    "kurtosis",
+    "wave field",
+    "irregular wave",
+    "wave model"
    ],
    "focus": "domain",
    "cites": [],
    "coauthor": null,
    "first_seen": "2026-11-22",
    "in_press": false,
-   "news_date": "2026-11-12",
+   "news_date": "2026-11-06",
    "is_new": false,
    "bullets": [
-    "Large-basin stereo experiments and Tolosa-lct simulations of shallow-water solitons",
-    "Mach reflection at a wall gave amplitude amplification of 3.2"
-   ]
-  },
-  {
-   "id": "a89be32d7803",
-   "title": "Ship-as-a-buoy for Phase-resolved Reconstruction of Surface Waves",
-   "authors": [
-    "Yi-Fan Du",
-    "Guang-Yao Wang",
-    "Yu-Lin Pan"
-   ],
-   "author_count": 3,
-   "venue": null,
-   "date": "2026-11-14",
-   "year": 2026,
-   "abstract": "We develop a data assimilation framework to address the ``ship-as-a-buoy''problem, i.e., estimation of the wave field from time series of ship motion. Unlike previous algorithms which only provide information of wave spectrum, our approach reconstructs the instantaneous phase-resolved wave field. The full framework includes two steps: the first step to generate an initial (rough) estimation of the wave field using the response-amplitude-operators (RAOs), and the second step to refine the reconstruction using an ensemble Kalman filter (EnKF) to incorporate the measured motion time series. Together with EnKF in the second step, we model the coupled wave-ship dynamics by a high-order spectral (HOS) method for waves and a Cummins equation for ship motion (although higher-fidelity ship model can be applied). We conduct extensive tests of our method for the case with one ship, and the naturally extended cases with multiple ships or with uncertain parameters in the ship motion model. For all test cases we demonstrate favorable reconstruction of the wave field, which in general further improves with the number of ships available and with uncertain parameters properly estimated. We also provide insights on the successful reconstruction in terms of ensemble correlations between the motion time series and features of the wave field.",
-   "url": "https://www.semanticscholar.org/paper/e61f52b94815905d5f702b95166c1a7b12679cfe",
-   "pdf_url": null,
-   "doi": null,
-   "arxiv": "2611.19488",
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 65,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:Wp0gIr-vW9MC",
-    "title": "Spatial estimation of unidirectional wave evolution based on ensemble data assimilation",
-    "year": 2024
-   },
-   "matched": [
-    "phase resolved",
-    "wave field",
-    "wave spectrum",
-    "data assimilation"
-   ],
-   "focus": "domain_ai",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-11-14",
-   "is_new": false,
-   "bullets": [
-    "EnKF with HOS and Cummins equation reconstructs waves from ship motion",
-    "Phase-resolved reconstruction improves with more ships and estimated parameters"
+    "Saddle-point derivation of closed-form third-order surface elevation PDF",
+    "Matches positive-tail asymptotics exactly, no unphysical negative-tail oscillations"
    ]
   },
   {
@@ -2878,89 +2824,92 @@
    ]
   },
   {
-   "id": "531ac497d85f",
-   "title": "Learning the solution operator of standing waves with a Fourier neural operator",
+   "id": "511576b223f5",
+   "title": "Modulational stability of finite-depth Stokes waves with constant vorticity",
    "authors": [
-    "Chang-Hong Mou",
-    "Savana Ammons",
-    "Di Qi",
-    "V. M. Hur"
-   ],
-   "author_count": 4,
-   "venue": null,
-   "date": "2026-10-27",
-   "year": 2026,
-   "abstract": "The standing wave problem concerns the space-time periodic motion at the free surface of a two-dimensional, infinitely deep, irrotational flow of an incompressible inviscid fluid under gravity. Although spectrally accurate computations have revealed a rich array of nonlinear wave phenomena, repeatedly evaluating their evolution over large parameter spaces remains challenging, particularly when resolving fine-scale spatial oscillations. We employ a Fourier neural operator (FNO) architecture to learn the solution operator along a numerically computed one-parameter family of symmetric standing waves. Given a wave profile at an instant of rest and a normalized observation time, the learned operator predicts the fluid surface, the velocity potential and the dipole density at the surface at that time. In-distribution tests yield uniformly small relative errors within the training range. Two out-of-distribution experiments characterize extrapolation toward contrasting physical regimes. Toward the free-fall limit, errors concentrate near the sharpening crest, consistent with the spectral truncation in the FNO architecture. Toward the linear limit, absolute errors remain small whereas relative errors increase as the amplitude vanishes. A residual of the governing equations, evaluated independently of reference solutions, complements these tests and provides a diagnostic for exploratory ",
-   "url": "https://www.semanticscholar.org/paper/a6d9a8041326e39cabc93412030e9ea910b59e3f",
-   "pdf_url": null,
-   "doi": null,
-   "arxiv": "2610.36747",
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 64,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:J_g5lzvAfSwC",
-    "title": "Learning mesh-free discrete differential operators with self-supervised graph neural networks",
-    "year": 2027
-   },
-   "matched": [
-    "nonlinear wave",
-    "free surface",
-    "neural operator"
-   ],
-   "focus": "domain_ai",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-10-27",
-   "is_new": false,
-   "bullets": [
-    "Fourier neural operator learns evolution of nonlinear standing waves",
-    "Small in-distribution errors; errors concentrate at sharpening crests out-of-distribution"
-   ]
-  },
-  {
-   "id": "bef5b451bfa5",
-   "title": "Bottom-boundary identification using asymptotic observers in dispersive shallow-water models",
-   "authors": [
-    "Vishal Neeraje",
-    "V. Vasan"
+    "Li-Li Fan",
+    "Chang-Zhen Sun"
    ],
    "author_count": 2,
    "venue": null,
-   "date": "2026-11-01",
+   "date": "2026-11-03",
    "year": 2026,
-   "abstract": "In this paper we consider the problem of identifying the bottom-boundary of an ocean basin, particularly in the coastal region where shallow-water theory applies. Our main contribution is the development of an easy-to-implement observer-based approach of identifying the bottom-boundary profile from measurements of the free-surface. Furthermore, we prove that the true profile can be obtained by minimising the long-time observation-error as computed from the observer equations associated with a class of linear dispersive shallow water-wave models. Numerical simulations indicate the same optimisation problem can recover the true profile for the nonlinear versions of the same dispersive water-wave models.",
-   "url": "https://www.semanticscholar.org/paper/9abb7b0186c9eb72969eec56b3679c6730458f1e",
+   "abstract": "We investigate the effect of constant vorticity on the modulational spectral stability of small-amplitude periodic gravity waves for the two-dimensional finite-depth water-wave system. We derive an explicit stability criterion that agrees with the prediction obtained by Thomas, Kharif and Manna [43] through a nonlinear Schr\\\"odinger approximation. For waves propagating to the right, we identify a sharp range of dimensionless positive (counterclockwise) vorticity, for which modulational instability is suppressed at every depth, while at any fixed depth sufficiently strong negative (clockwise) vorticity also restores modulational stability. We give a complete description of the spectrum near the origin and identify a figure-eight spectral curve in the unstable regime. A key distinction from the irrotational case is that the usual Hamiltonian factorization of the linearized operator fails at zero Floquet exponent on the full periodic Sobolev space. We therefore carry out a spectral reduction based on reversibility, without relying on Hamiltonian factorization.",
+   "url": "https://www.semanticscholar.org/paper/52193c4f0bdf5b586f580a921d6b1dd3b431c63d",
    "pdf_url": null,
    "doi": null,
-   "arxiv": "2611.01738",
+   "arxiv": "2611.05237",
    "sources": [
     "Semantic Scholar"
    ],
    "score": 64,
    "similar_to": {
-    "id": "dofRHEwAAAAJ:qjMakFHDy7sC",
-    "title": "Comparison of two versions of the MNLS with the full water wave equations",
-    "year": 2020
+    "id": "dofRHEwAAAAJ:IjCSPb-OGe4C",
+    "title": "The influence of finite depth on the evolution of extreme wave statistics in numerical wave tanks",
+    "year": 2021
    },
    "matched": [
     "water wave",
-    "free surface",
-    "wave model"
+    "modulational instability",
+    "finite depth"
    ],
    "focus": "domain",
    "cites": [],
    "coauthor": null,
    "first_seen": "2026-11-22",
    "in_press": false,
-   "news_date": "2026-11-01",
+   "news_date": "2026-11-03",
    "is_new": false,
    "bullets": [
-    "Proposed observer-based bathymetry identification from free-surface measurements",
-    "Proved true profile recovered for linear dispersive models; works numerically nonlinearly"
+    "Derived explicit modulational stability criterion for finite-depth Stokes waves with vorticity",
+    "Positive vorticity range suppresses modulational instability at every depth"
+   ]
+  },
+  {
+   "id": "a523fa3a9ee6",
+   "title": "Experimental and numerical simulations of near resonant 2D soliton interaction in shallow water",
+   "authors": [
+    "Thibault Leduque",
+    "F. Couderc",
+    "Maxime Kaczmarek",
+    "E. Barthélemy",
+    "N. Mordant",
+    "H. Michallet"
+   ],
+   "author_count": 6,
+   "venue": null,
+   "date": "2026-11-12",
+   "year": 2026,
+   "abstract": "Experiments were carried out in {a} large wave basin ($27\\times 30$\\,m$^2$) to study the interactions of non-linear waves in shallow water (0.35\\,m deep). A stereoscopic technique was used to measure the waves accurately over a vast area ($180$\\,m$^2$). The numerical code {Tolosa-lct}, designed for simulating wave propagation in shallow water, reproduces the observations and extends the analysis for larger domains. The diffraction of oblique solitons is discussed. Mach interaction of two solitons occurs for some given incidence and amplitudes, producing a third soliton. A focus is made on the near resonant interaction of a soliton with a vertical wall. An example of a regular Mach interaction is shown, where a steady solution is achieved experimentally, with a maximum amplitude amplification of 3.2 at the wall.",
+   "url": "https://www.semanticscholar.org/paper/feef4a8f0be625215110054db6a838e631c28f6e",
+   "pdf_url": null,
+   "doi": null,
+   "arxiv": "2611.16520",
+   "sources": [
+    "Semantic Scholar"
+   ],
+   "score": 64,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:LkGwnXOMwfcC",
+    "title": "On rogue waves generated by abrupt depth transitions",
+    "year": 2022
+   },
+   "matched": [
+    "nonlinear wave",
+    "wave basin",
+    "wave propagation",
+    "resonant interaction"
+   ],
+   "focus": "domain",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-22",
+   "in_press": false,
+   "news_date": "2026-11-12",
+   "is_new": false,
+   "bullets": [
+    "Large-basin stereo experiments and Tolosa-lct simulations of shallow-water solitons",
+    "Mach reflection at a wall gave amplitude amplification of 3.2"
    ]
   },
   {
@@ -3011,46 +2960,179 @@
    ]
   },
   {
-   "id": "935a72b19039",
-   "title": "Evaluating parametric and blended typhoon wind fields for waves and storm surges simulation in semi-enclosed coastal seas",
+   "id": "531ac497d85f",
+   "title": "Learning the solution operator of standing waves with a Fourier neural operator",
    "authors": [
-    "Dong-Xue Mo",
-    "Jun-Yan Wang",
-    "Po Hu"
+    "Chang-Hong Mou",
+    "Savana Ammons",
+    "Di Qi",
+    "V. M. Hur"
    ],
-   "author_count": 3,
-   "venue": "Frontiers in Marine Science",
-   "date": "2026-11-03",
+   "author_count": 4,
+   "venue": null,
+   "date": "2026-10-27",
    "year": 2026,
-   "abstract": "Accurate typhoon wind fields are essential for simulating typhoon-induced waves and storm surges, yet the applicability of parametric wind field models and blending methods in semi-enclosed coastal seas remains uncertain. This study evaluates three representative parametric models combined with four blending methods for simulating waves and storm surges in the Bohai and Yellow Seas. A coupled SWAN-ADCIRC model was applied to representative typhoons Muifa and Lekima. Wind speed, significant wave height, and storm surge were evaluated against observations from buoys and tide gauges. Statistical metrics and TOPSIS were used for comprehensive assessment. The three parametric wind fields exhibit substantial differences in spatial structure, which propagate differently into wave and storm surge responses. Holland generally produces stronger inner-core winds, whereas Jelesnianski has a faster radial decay and Dual maintains a broader circulation. Consequently, Holland- and Dual-based fields generally produce stronger waves, while Jelesnianski tends to yield lower extreme storm surges. No single parametric configuration consistently performs best across wind, wave, and surge variables, and blending strategy substantially affects overall performance. Notably, parametric blending does not consistently improve marine simulations in the two cases examined. Comparison with buoy observations",
-   "url": "https://doi.org/10.3389/fmars.2026.1989880",
-   "pdf_url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2026.1989880/pdf",
-   "doi": "10.3389/fmars.2026.1989880",
-   "arxiv": null,
+   "abstract": "The standing wave problem concerns the space-time periodic motion at the free surface of a two-dimensional, infinitely deep, irrotational flow of an incompressible inviscid fluid under gravity. Although spectrally accurate computations have revealed a rich array of nonlinear wave phenomena, repeatedly evaluating their evolution over large parameter spaces remains challenging, particularly when resolving fine-scale spatial oscillations. We employ a Fourier neural operator (FNO) architecture to learn the solution operator along a numerically computed one-parameter family of symmetric standing waves. Given a wave profile at an instant of rest and a normalized observation time, the learned operator predicts the fluid surface, the velocity potential and the dipole density at the surface at that time. In-distribution tests yield uniformly small relative errors within the training range. Two out-of-distribution experiments characterize extrapolation toward contrasting physical regimes. Toward the free-fall limit, errors concentrate near the sharpening crest, consistent with the spectral truncation in the FNO architecture. Toward the linear limit, absolute errors remain small whereas relative errors increase as the amplitude vanishes. A residual of the governing equations, evaluated independently of reference solutions, complements these tests and provides a diagnostic for exploratory ",
+   "url": "https://www.semanticscholar.org/paper/a6d9a8041326e39cabc93412030e9ea910b59e3f",
+   "pdf_url": null,
+   "doi": null,
+   "arxiv": "2610.36747",
    "sources": [
     "Semantic Scholar"
    ],
    "score": 63,
    "similar_to": {
-    "id": "dofRHEwAAAAJ:M3NEmzRMIkIC",
-    "title": "RTide: Automating the tidal response method",
+    "id": "dofRHEwAAAAJ:J_g5lzvAfSwC",
+    "title": "Learning mesh-free discrete differential operators with self-supervised graph neural networks",
+    "year": 2027
+   },
+   "matched": [
+    "nonlinear wave",
+    "free surface",
+    "neural operator"
+   ],
+   "focus": "domain_ai",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-22",
+   "in_press": false,
+   "news_date": "2026-10-27",
+   "is_new": false,
+   "bullets": [
+    "Fourier neural operator learns evolution of nonlinear standing waves",
+    "Small in-distribution errors; errors concentrate at sharpening crests out-of-distribution"
+   ]
+  },
+  {
+   "id": "bef5b451bfa5",
+   "title": "Bottom-boundary identification using asymptotic observers in dispersive shallow-water models",
+   "authors": [
+    "Vishal Neeraje",
+    "V. Vasan"
+   ],
+   "author_count": 2,
+   "venue": null,
+   "date": "2026-11-01",
+   "year": 2026,
+   "abstract": "In this paper we consider the problem of identifying the bottom-boundary of an ocean basin, particularly in the coastal region where shallow-water theory applies. Our main contribution is the development of an easy-to-implement observer-based approach of identifying the bottom-boundary profile from measurements of the free-surface. Furthermore, we prove that the true profile can be obtained by minimising the long-time observation-error as computed from the observer equations associated with a class of linear dispersive shallow water-wave models. Numerical simulations indicate the same optimisation problem can recover the true profile for the nonlinear versions of the same dispersive water-wave models.",
+   "url": "https://www.semanticscholar.org/paper/9abb7b0186c9eb72969eec56b3679c6730458f1e",
+   "pdf_url": null,
+   "doi": null,
+   "arxiv": "2611.01738",
+   "sources": [
+    "Semantic Scholar"
+   ],
+   "score": 63,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:qjMakFHDy7sC",
+    "title": "Comparison of two versions of the MNLS with the full water wave equations",
+    "year": 2020
+   },
+   "matched": [
+    "water wave",
+    "free surface",
+    "wave model"
+   ],
+   "focus": "domain",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-22",
+   "in_press": false,
+   "news_date": "2026-11-01",
+   "is_new": false,
+   "bullets": [
+    "Proposed observer-based bathymetry identification from free-surface measurements",
+    "Proved true profile recovered for linear dispersive models; works numerically nonlinearly"
+   ]
+  },
+  {
+   "id": "f4f6fcfa9c01",
+   "title": "A plea for Miles'approach to wind-wave interaction",
+   "authors": [
+    "N. Kern",
+    "M. Manna",
+    "F. Bouchette",
+    "C. Chaubet"
+   ],
+   "author_count": 4,
+   "venue": null,
+   "date": "2026-11-04",
+   "year": 2026,
+   "abstract": "Although the phenomenon of wave growth under the effect of wind still holds many open questions, the approach initiated by Miles [1] is a cornerstone of the current comprehension. This theory is based on physical arguments, keeping phenomenological input to a minimum, but it can be perceived as intimidating, especially in view of concrete applications. Here we argue that Miles'results can be summarised in terms of a simple functional form, which provides an easy-to-use expression to work with. We furthermore show that Miles'predictions do not, as is often stated, underestimate growth rates, once the presence of a whole wave spectrum is accounted for. Finally, we illustrate that the generalisation of Miles'original result to complex hydrodynamic situations can be quite straightforward. Our hands-on summary should make it heretofore very easy to exploit Miles'approach in practice.",
+   "url": "https://www.semanticscholar.org/paper/8365a975d02d094f971661ed9bc1d46a1af44e07",
+   "pdf_url": null,
+   "doi": null,
+   "arxiv": "2611.06317",
+   "sources": [
+    "Semantic Scholar"
+   ],
+   "score": 63,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:blknAaTinKkC",
+    "title": "Experimental design and analysis of the evolution of unidirectional wind wave interaction",
     "year": 2025
    },
    "matched": [
     "wind wave",
-    "storm surge",
-    "wave height"
+    "hydrodynamics",
+    "wave spectrum",
+    "wave growth"
    ],
    "focus": "domain",
    "cites": [],
-   "coauthor": "Jinghua Wang",
-   "first_seen": "2026-11-25",
+   "coauthor": null,
+   "first_seen": "2026-11-26",
    "in_press": false,
-   "news_date": "2026-11-03",
+   "news_date": "2026-11-04",
    "is_new": false,
    "bullets": [
-    "Three parametric typhoon wind models, four blendings, tested with SWAN-ADCIRC",
-    "No single configuration best; blending does not consistently improve wave or surge"
+    "Summarised Miles' wind-wave growth theory as a simple functional form",
+    "Accounting for full spectrum, Miles does not underestimate growth rates",
+    "Generalisation to complex hydrodynamic situations shown to be straightforward"
+   ]
+  },
+  {
+   "id": "a89be32d7803",
+   "title": "Ship-as-a-buoy for Phase-resolved Reconstruction of Surface Waves",
+   "authors": [
+    "Yi-Fan Du",
+    "Guang-Yao Wang",
+    "Yu-Lin Pan"
+   ],
+   "author_count": 3,
+   "venue": null,
+   "date": "2026-11-14",
+   "year": 2026,
+   "abstract": "We develop a data assimilation framework to address the ``ship-as-a-buoy''problem, i.e., estimation of the wave field from time series of ship motion. Unlike previous algorithms which only provide information of wave spectrum, our approach reconstructs the instantaneous phase-resolved wave field. The full framework includes two steps: the first step to generate an initial (rough) estimation of the wave field using the response-amplitude-operators (RAOs), and the second step to refine the reconstruction using an ensemble Kalman filter (EnKF) to incorporate the measured motion time series. Together with EnKF in the second step, we model the coupled wave-ship dynamics by a high-order spectral (HOS) method for waves and a Cummins equation for ship motion (although higher-fidelity ship model can be applied). We conduct extensive tests of our method for the case with one ship, and the naturally extended cases with multiple ships or with uncertain parameters in the ship motion model. For all test cases we demonstrate favorable reconstruction of the wave field, which in general further improves with the number of ships available and with uncertain parameters properly estimated. We also provide insights on the successful reconstruction in terms of ensemble correlations between the motion time series and features of the wave field.",
+   "url": "https://www.semanticscholar.org/paper/e61f52b94815905d5f702b95166c1a7b12679cfe",
+   "pdf_url": null,
+   "doi": null,
+   "arxiv": "2611.19488",
+   "sources": [
+    "Semantic Scholar"
+   ],
+   "score": 63,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:Wp0gIr-vW9MC",
+    "title": "Spatial estimation of unidirectional wave evolution based on ensemble data assimilation",
+    "year": 2024
+   },
+   "matched": [
+    "phase resolved",
+    "wave field",
+    "wave spectrum",
+    "data assimilation"
+   ],
+   "focus": "domain_ai",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-22",
+   "in_press": false,
+   "news_date": "2026-11-14",
+   "is_new": false,
+   "bullets": [
+    "EnKF with HOS and Cummins equation reconstructs waves from ship motion",
+    "Phase-resolved reconstruction improves with more ships and estimated parameters"
    ]
   },
   {
@@ -3182,47 +3264,6 @@
    ]
   },
   {
-   "id": "a451dd8920ec",
-   "title": "Analytical investigation of extreme ocean waves induced by seabed fault motion",
-   "authors": [
-    "Sarfaraz Ahmed",
-    "Jian-Bo Fei",
-    "Muhammad Irslan Khalid",
-    "Hao Xiong",
-    "Xiang-Sheng Chen"
-   ],
-   "author_count": 5,
-   "venue": "The European Physical Journal Plus",
-   "date": "2026-10-01",
-   "year": 2026,
-   "abstract": null,
-   "url": "https://doi.org/10.1140/epjp/s13360-026-08415-9",
-   "pdf_url": null,
-   "doi": "10.1140/epjp/s13360-026-08415-9",
-   "arxiv": null,
-   "sources": [
-    "Semantic Scholar",
-    "Crossref"
-   ],
-   "score": 62,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:e5wmG9Sq2KIC",
-    "title": "Physics-informed neural networks for phase-resolved data assimilation and prediction of nonlinear ocean waves",
-    "year": 2025
-   },
-   "matched": [
-    "ocean wave"
-   ],
-   "focus": "domain",
-   "cites": [],
-   "coauthor": "Xi Chen",
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-10-01",
-   "is_new": false,
-   "bullets": null
-  },
-  {
    "id": "2959c10e7651",
    "title": "Free-surface response and waveform reconstruction of granular landslide-generated impulse waves in the generation zone under mainstream–tributary confluence conditions",
    "authors": [
@@ -3352,48 +3393,45 @@
    "bullets": null
   },
   {
-   "id": "e427e57b9ea6",
-   "title": "Modeling breaking waves for surf-pool design: A comparative analysis of SPH and VOF methods",
+   "id": "a451dd8920ec",
+   "title": "Analytical investigation of extreme ocean waves induced by seabed fault motion",
    "authors": [
-    "E. R. Akhmetshina",
-    "С. В. Сіренко",
-    "P. V. Tuponosov"
+    "Sarfaraz Ahmed",
+    "Jian-Bo Fei",
+    "Muhammad Irslan Khalid",
+    "Hao Xiong",
+    "Xiang-Sheng Chen"
    ],
-   "author_count": 3,
-   "venue": "Uchenye Zapiski Kazanskogo Universiteta. Seriya Fiziko-Matematicheskie Nauki",
-   "date": "2026-10-11",
+   "author_count": 5,
+   "venue": "The European Physical Journal Plus",
+   "date": "2026-10-01",
    "year": 2026,
-   "abstract": "This article examines the applicability of the mesh-free Smoothed Particle Hydrodynamics (SPH) method for numerical simulation of surfable solitary waves propagating over an artificial seabed in a wave pool. The simulations were performed using DualSPHysics, with particular attention given to the accurate reproduction of the free-surface profile. The wave crest overturning, which is highly sensitive to the accuracy of the numerical method, was considered separately. A series of computations was carried out for different bottom geometries and a range of Froude numbers to assess the influence of depth and kinematic parameters on the process of wave formation. The reliability of the SPH approach was verified through additional simulations in OpenFOAM using the finite-volume framework (VOF + RANS). The obtained numerical results were consistent with published experimental data, indicating that SPH simulation can be used for analyzing and optimizing bottom geometry in surf-pool design.",
-   "url": "https://doi.org/10.26907/2541-7746.2026.3.377-394",
-   "pdf_url": "https://uzakufismat.elpub.ru/jour/article/download/370/145",
-   "doi": "10.26907/2541-7746.2026.3.377-394",
+   "abstract": null,
+   "url": "https://doi.org/10.1140/epjp/s13360-026-08415-9",
+   "pdf_url": null,
+   "doi": "10.1140/epjp/s13360-026-08415-9",
    "arxiv": null,
    "sources": [
-    "Semantic Scholar"
+    "Semantic Scholar",
+    "Crossref"
    ],
    "score": 61,
    "similar_to": {
-    "id": "dofRHEwAAAAJ:J_g5lzvAfSwC",
-    "title": "Learning mesh-free discrete differential operators with self-supervised graph neural networks",
-    "year": 2027
+    "id": "dofRHEwAAAAJ:e5wmG9Sq2KIC",
+    "title": "Physics-informed neural networks for phase-resolved data assimilation and prediction of nonlinear ocean waves",
+    "year": 2025
    },
    "matched": [
-    "breaking wave",
-    "free surface",
-    "hydrodynamics",
-    "wave crest"
+    "ocean wave"
    ],
    "focus": "domain",
    "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-24",
+   "coauthor": "Xi Chen",
+   "first_seen": "2026-11-22",
    "in_press": false,
-   "news_date": "2026-10-11",
+   "news_date": "2026-10-01",
    "is_new": false,
-   "bullets": [
-    "Compared SPH and OpenFOAM VOF for surf-pool solitary wave breaking",
-    "SPH matched experiments and VOF, including crest overturning"
-   ]
+   "bullets": null
   },
   {
    "id": "dbf09c725436",
@@ -3435,43 +3473,6 @@
     "Built Morison-type torque model for vertical axis tidal turbines in waves",
     "Monochromatic-fitted parameters reproduce wave-induced torque fluctuations in irregular waves"
    ]
-  },
-  {
-   "id": "672c54dddbc4",
-   "title": "New Localized Wave Structures of a (3+1)-Dimensional Generalized Nonlinear Evolution Equation in Shallow Water Waves",
-   "authors": [
-    "Long-Xing Li",
-    "Zheng-De Dai"
-   ],
-   "author_count": 2,
-   "venue": "Qualitative Theory of Dynamical Systems",
-   "date": "2026-10-16",
-   "year": 2026,
-   "abstract": null,
-   "url": "https://doi.org/10.1007/s12346-026-01618-6",
-   "pdf_url": null,
-   "doi": "10.1007/s12346-026-01618-6",
-   "arxiv": null,
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 61,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:qjMakFHDy7sC",
-    "title": "Comparison of two versions of the MNLS with the full water wave equations",
-    "year": 2020
-   },
-   "matched": [
-    "water wave"
-   ],
-   "focus": "domain",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-10-16",
-   "is_new": false,
-   "bullets": null
   },
   {
    "id": "a7deb7e0c937",
@@ -3563,7 +3564,7 @@
    "id": "db47e8e6be05",
    "title": "Hybrid state-space and attention neural operators for nonlinear structural dynamics under environmental loading",
    "authors": [
-    "Anastasios Stamou",
+    "ΑΝΑΣΤΑΣΙΟΣ ΣΤΑΜΟΥ",
     "Rui Teixeira",
     "Maria Nogal",
     "Michalis Fragiadakis"
@@ -3574,11 +3575,10 @@
    "year": 2026,
    "abstract": "The computational burden of repeated nonlinear time-history analyses limits their application for structural assessment and design. We therefore propose DeepOJamba, a hybrid neural operator that combines selective state-space recurrence with full attention to predict the structural response history due to dynamic loading. Physical-parameter conditioning and predicted-state transfer between sequences enable a single trained operator to represent varying system conditions and generate response histories beyond its training sequence length. DeepOJamba is evaluated on a 15~MW monopile offshore wind turbine under wind and wave loading. The proposed operator is compared to pure attention, pure state-space, Fourier, and DeepONet operators and is found to give the lowest window error on every channel and the lowest closed-loop fatigue and ultimate-load errors of $9.4\\%$ and $6.0\\%$, against $14.6\\%$ and $8.7\\%$ for the next-best pure attention operator examined. Moreover, on sea states outside the training wave band, the error slightly increases by approximately $0.4$ percentage points. Pure state-space operators can approach similar low errors only with a much wider convolution kernel tuned to the tower eigenperiod, which increases the training cost by $40\\%$. In all, the results obtained support hybrid neural operators for robust long-duration structural response and demand predictio",
    "url": "https://doi.org/10.48550/arxiv.2611.29334",
-   "pdf_url": "https://arxiv.org/pdf/2611.29334v1",
+   "pdf_url": "https://doi.org/10.48550/arxiv.2611.29334",
    "doi": "10.48550/arxiv.2611.29334",
-   "arxiv": "2611.29334",
+   "arxiv": null,
    "sources": [
-    "arXiv",
     "OpenAlex"
    ],
    "score": 61,
@@ -3701,6 +3701,50 @@
    "bullets": null
   },
   {
+   "id": "e427e57b9ea6",
+   "title": "Modeling breaking waves for surf-pool design: A comparative analysis of SPH and VOF methods",
+   "authors": [
+    "E. R. Akhmetshina",
+    "С. В. Сіренко",
+    "P. V. Tuponosov"
+   ],
+   "author_count": 3,
+   "venue": "Uchenye Zapiski Kazanskogo Universiteta. Seriya Fiziko-Matematicheskie Nauki",
+   "date": "2026-10-11",
+   "year": 2026,
+   "abstract": "This article examines the applicability of the mesh-free Smoothed Particle Hydrodynamics (SPH) method for numerical simulation of surfable solitary waves propagating over an artificial seabed in a wave pool. The simulations were performed using DualSPHysics, with particular attention given to the accurate reproduction of the free-surface profile. The wave crest overturning, which is highly sensitive to the accuracy of the numerical method, was considered separately. A series of computations was carried out for different bottom geometries and a range of Froude numbers to assess the influence of depth and kinematic parameters on the process of wave formation. The reliability of the SPH approach was verified through additional simulations in OpenFOAM using the finite-volume framework (VOF + RANS). The obtained numerical results were consistent with published experimental data, indicating that SPH simulation can be used for analyzing and optimizing bottom geometry in surf-pool design.",
+   "url": "https://doi.org/10.26907/2541-7746.2026.3.377-394",
+   "pdf_url": "https://uzakufismat.elpub.ru/jour/article/download/370/145",
+   "doi": "10.26907/2541-7746.2026.3.377-394",
+   "arxiv": null,
+   "sources": [
+    "Semantic Scholar"
+   ],
+   "score": 60,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:J_g5lzvAfSwC",
+    "title": "Learning mesh-free discrete differential operators with self-supervised graph neural networks",
+    "year": 2027
+   },
+   "matched": [
+    "breaking wave",
+    "free surface",
+    "hydrodynamics",
+    "wave crest"
+   ],
+   "focus": "domain",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-24",
+   "in_press": false,
+   "news_date": "2026-10-11",
+   "is_new": false,
+   "bullets": [
+    "Compared SPH and OpenFOAM VOF for surf-pool solitary wave breaking",
+    "SPH matched experiments and VOF, including crest overturning"
+   ]
+  },
+  {
    "id": "ec2910c02d1f",
    "title": "Turbulent mixing by non-breaking surface waves in the ocean: theory, observation and modeling",
    "authors": [
@@ -3748,24 +3792,21 @@
    ]
   },
   {
-   "id": "c91c9c57e6de",
-   "title": "Probabilistic well-posedness of dispersive PDEs beyond variance blowup II: quadratic nonlinear wave equation",
+   "id": "672c54dddbc4",
+   "title": "New Localized Wave Structures of a (3+1)-Dimensional Generalized Nonlinear Evolution Equation in Shallow Water Waves",
    "authors": [
-    "Guo-Peng Li",
-    "Jia-Wei Li",
-    "Shao Liu",
-    "Tadahiro Oh",
-    "N. Tzvetkov"
+    "Long-Xing Li",
+    "Zheng-De Dai"
    ],
-   "author_count": 5,
-   "venue": null,
-   "date": "2026-11-23",
+   "author_count": 2,
+   "venue": "Qualitative Theory of Dynamical Systems",
+   "date": "2026-10-16",
    "year": 2026,
-   "abstract": "We study the quadratic nonlinear wave equation (NLW), posed on the two-dimensional torus, with rough Gaussian random initial data beyond the variance blowup threshold observed by Okamoto and the fourth author (2021). By introducing a suitable vanishing multiplicative renormalization constant on the frequency-truncated Gaussian random initial data, we prove that the corresponding solutions converge in law to a solution to the stochastic NLW with zero initial data, driven by a Gaussian space-time noise whose temporal covariance at each spatial Fourier mode is given by the Bessel function of order $0$. We also show that the solution to the limiting equation almost surely blows up in a finite time, and that the convergence above holds on every compact time interval before the maximal existence time. %on the maximal time of existence. A main new ingredient is the analysis of the oscillatory covariance of the second Picard iterates. We identify the limiting covariance by averaging the leading oscillatory phase over the angular variable. In contrast to our previous work on the Benjamin-Bona-Mahony equation (2025), multilinear dispersive smoothing plays an essential role both in proving tightness of the second Picard iterates and in controlling the rough nonlinear interactions via paracontrolled analysis. The resulting gain of a quarter of a derivative persists in the limit, where it i",
-   "url": "https://www.semanticscholar.org/paper/6133627e87a35fa1b6038c51501c3eee8c01f552",
+   "abstract": null,
+   "url": "https://doi.org/10.1007/s12346-026-01618-6",
    "pdf_url": null,
-   "doi": null,
-   "arxiv": "2611.30936",
+   "doi": "10.1007/s12346-026-01618-6",
+   "arxiv": null,
    "sources": [
     "Semantic Scholar"
    ],
@@ -3776,22 +3817,16 @@
     "year": 2020
    },
    "matched": [
-    "nonlinear wave",
-    "nonlinear interaction",
-    "data-driven"
+    "water wave"
    ],
-   "focus": "domain_ai",
+   "focus": "domain",
    "cites": [],
-   "coauthor": "Jinxuan Li",
-   "first_seen": "2026-11-25",
+   "coauthor": null,
+   "first_seen": "2026-11-22",
    "in_press": false,
-   "news_date": "2026-11-23",
-   "is_new": true,
-   "bullets": [
-    "Quadratic nonlinear wave equation on 2D torus with rough Gaussian data",
-    "Renormalised solutions converge in law to stochastic NLW with Bessel-covariance noise",
-    "Limiting solution almost surely blows up in finite time"
-   ]
+   "news_date": "2026-10-16",
+   "is_new": false,
+   "bullets": null
   },
   {
    "id": "d4431cf8253d",
@@ -4135,131 +4170,135 @@
    ]
   },
   {
-   "id": "2ebed5df9fea",
-   "title": "Simulation of wave-induced heave motion of a buoy using solvers based on the Navier–Stokes equations and spectral wave explicit Navier–Stokes equations",
+   "id": "00ba7d64f84c",
+   "title": "Shoaling of internal solitary waves over linear slopes with variable topography",
    "authors": [
-    "Cong Shen",
-    "Nian-Zhong Chen"
+    "Magda Carr",
+    "S. Hartharn-Evans",
+    "Jack Smith",
+    "M. Stastna"
    ],
-   "author_count": 2,
-   "venue": "The Physics of Fluids",
-   "date": "2026-10-01",
+   "author_count": 4,
+   "venue": "Journal of Fluid Mechanics",
+   "date": "2026-10-14",
    "year": 2026,
-   "abstract": "Based on the NS (Navier–Stokes) equations and the SWENSE (Spectral Wave Explicit Navier–Stokes Equations), a domain decomposition potential–viscous-flow coupling solver and a functional decomposition potential–viscous-flow coupling solver using the overset mesh method are established in this paper. In the NS solver, the potential-flow wave field is prescribed using the stream function wave theory, and the viscous-flow wave field is resolved by the NS equations. In the SWENSE solver, the total wave field is decomposed into incident and complementary components. The incident field is obtained from the stream function wave theory, whereas the complementary field is governed by the SWENSE, which are derived by subtracting the Euler equations from the NS equations. A numerical study is conducted to compare the performance of the developed solvers. One regular-wave condition is used for wave-only and buoy-response validation, while additional wave conditions with different wave steepnesses are considered for wave-load assessment. The vertical displacement and wetted height predicted by both solvers agree well with the experimental results. The SWENSE solver reduces the number of mesh cells and computational cost by using a reduced cylindrical domain while maintaining satisfactory accuracy. Under different wave-steepness conditions, the NS- and SWENSE-based simulations provide consist",
-   "url": "https://doi.org/10.1063/5.0352747",
-   "pdf_url": null,
-   "doi": "10.1063/5.0352747",
+   "abstract": "Abstract Content of image described in text. This study investigates the influence of variable topography on the kinematics of internal solitary wave shoaling across various breaking regimes under the unifying condition of a slope-intersecting pycnocline. It is demonstrated that bottom corrugations can significantly modify the dynamics: in plunging, collapsing and fission cases, variable topography alters wave shape and induces Kelvin–Helmholtz billows within the pycnocline; in surging scenarios, it impedes upslope propagation and generates a reflected mode-2 wave offshore. Despite these pronounced mechanical effects during the breaking phase, analysis of density and enstrophy fields via a user-defined scatter plot method suggests that potential post-wave mixing distributions remain largely unaffected by changes in the topography parameter, indicating a transient influence confined to the active shoaling region. In the fission case, the length scale of the topography can be much larger than the wavelength. In this case, undulating topography locally modifies layer depths, potentially arresting and restarting the fission process as critical depth ratios are traversed. A comparison between two- and three-dimensional simulations is made in the collapsing case and it is shown that the two-dimensional simulations accurately capture the dynamics of wave breaking at onset.",
+   "url": "https://doi.org/10.1017/jfm.2026.12129",
+   "pdf_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/35C958FBB104DAB9B2D7AFB0C96B48D6/S0022112026121296a.pdf/div-class-title-shoaling-of-internal-solitary-waves-over-linear-slopes-with-variable-topography-div.pdf",
+   "doi": "10.1017/jfm.2026.12129",
    "arxiv": null,
+   "sources": [
+    "Semantic Scholar",
+    "OpenAlex"
+   ],
+   "score": 59,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:LkGwnXOMwfcC",
+    "title": "On rogue waves generated by abrupt depth transitions",
+    "year": 2022
+   },
+   "matched": [
+    "wave breaking"
+   ],
+   "focus": "domain",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-26",
+   "in_press": false,
+   "news_date": "2026-10-14",
+   "is_new": false,
+   "bullets": [
+    "Simulated internal solitary waves shoaling over corrugated linear slopes",
+    "Topography alters breaking shape, but post-wave mixing largely unaffected",
+    "2D simulations capture breaking onset as well as 3D"
+   ]
+  },
+  {
+   "id": "33a8d1d14f9e",
+   "title": "Physics Informed Neural Network for Multi-dimensional Turbulent Self-gravitating Flows",
+   "authors": [
+    "T. De",
+    "S. Auddy",
+    "Ramit Dey",
+    "S. Basu"
+   ],
+   "author_count": 4,
+   "venue": null,
+   "date": "2026-10-23",
+   "year": 2026,
+   "abstract": "Molecular clouds exhibit complex, multi-scale dynamics driven by the interplay of turbulence, self-gravity, and gas pressure. Modelling these systems with conventional grid-based methods becomes increasingly expensive as spatial resolution and dimensionality increase. Physics-Informed Neural Networks (PINNs) offer a mesh-free alternative by incorporating the governing equations directly into the training objective, but their ability to model realistic turbulent self-gravitating flows remains largely unexplored. We apply PINNs to isothermal molecular clouds initialized with astrophysically motivated turbulent velocity fields, considering subsonic and supersonic evolution in two and three dimensions. We benchmark the predicted density and velocity fields against the finite-volume code Athena++. PINNs accurately recover the global evolution of the flow over multiple free-fall times across turbulent realizations, Mach numbers, and dimensionalities. Their training cost also exhibits weak dependence on spatial resolution, increasing by less than 25% from 128^3 to 1024^3 in our experiments. These results demonstrate that PINNs can model substantially more realistic self-gravitating turbulent flows than previously explored and provide a promising complementary framework for studying these systems.",
+   "url": "https://www.semanticscholar.org/paper/a52d84f5957af91a96d871b2b8266808f73f9e12",
+   "pdf_url": null,
+   "doi": null,
+   "arxiv": "2610.32840",
    "sources": [
     "Semantic Scholar"
    ],
    "score": 59,
    "similar_to": {
-    "id": "dofRHEwAAAAJ:_Qo2XoVZTnwC",
-    "title": "Influence of non-linear wave load models on monopile supported offshore wind turbines for extreme conditions",
+    "id": "dofRHEwAAAAJ:e5wmG9Sq2KIC",
+    "title": "Physics-informed neural networks for phase-resolved data assimilation and prediction of nonlinear ocean waves",
     "year": 2025
    },
    "matched": [
+    "turbulence",
+    "physics-informed"
+   ],
+   "focus": "domain_ai",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-26",
+   "in_press": false,
+   "news_date": "2026-10-23",
+   "is_new": false,
+   "bullets": [
+    "Applied PINNs to 2D/3D turbulent self-gravitating molecular clouds versus Athena++",
+    "Recovered global flow evolution over multiple free-fall times and Mach numbers",
+    "Training cost rose under 25% from 128^3 to 1024^3"
+   ]
+  },
+  {
+   "id": "c891238fd4d3",
+   "title": "Heaving wave energy converter–partial wave-absorbing caisson breakwater system: Frequency-dependent partitioning of incident wave energy",
+   "authors": [
+    "Yu-Han Wang",
+    "A. Law"
+   ],
+   "author_count": 2,
+   "venue": "The Physics of Fluids",
+   "date": "2026-11-01",
+   "year": 2026,
+   "abstract": "The coupled hydrodynamics of an integrated system comprising a heaving wave energy converter (WEC) and a partial wave-absorbing caisson breakwater (PWCB) is systematically investigated from the perspective of incident wave-energy partitioning. A three-dimensional linear potential-flow model is developed to evaluate wave energy capture, wave reflection, perforated-wall dissipation, and wave loads acting on the WEC. Numerical convergence and wave-energy conservation are verified, and the model is further assessed through comparison with published limiting-case results. Subsequently, the proposed concept is compared with several related PWCB configurations, followed by a parametric study on the perforated curtain wall, WEC arrangement, and caisson geometry. The results show that the integrated system is governed by a frequency-dependent partition of incident wave energy among wave energy capture, wave reflection, and perforated-wall dissipation. At low frequencies, where perforated-wall dissipation remains weak, capture-reflection competition dominates, whereas dissipation becomes increasingly important at higher frequencies, leading to transitions among different energy-partition regimes. Chamber-induced wave concentration strengthens the hydrodynamic excitation of the WEC near the low-frequency capture peak, while the perforated curtain wall provides an additional dissipation pa",
+   "url": "https://doi.org/10.1063/5.0357294",
+   "pdf_url": null,
+   "doi": "10.1063/5.0357294",
+   "arxiv": null,
+   "sources": [
+    "Semantic Scholar",
+    "Crossref"
+   ],
+   "score": 59,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:ns9cj8rnVeAC",
+    "title": "Performance study and multi-objective optimization of 3D cylindrical oscillating water column wave energy converter: balancing efficiency and structural cost",
+    "year": 2026
+   },
+   "matched": [
     "wave load",
+    "wave energy",
+    "hydrodynamics",
     "wave field"
    ],
    "focus": "domain",
    "cites": [],
    "coauthor": null,
-   "first_seen": "2026-11-25",
+   "first_seen": "2026-11-26",
    "in_press": false,
-   "news_date": "2026-10-01",
+   "news_date": "2026-11-01",
    "is_new": false,
    "bullets": [
-    "NS and SWENSE overset-mesh solvers simulate wave-induced buoy heave",
-    "Both match experimental displacement; SWENSE cuts mesh cells and computational cost"
-   ]
-  },
-  {
-   "id": "6ba9ec9735a7",
-   "title": "A Nonlinear Three-Mode Model of Solar Activity Based on Coupled Oscillators and Nonlinear Energy Transfer",
-   "authors": [
-    "V. Kapytin",
-    "A. Andreyev",
-    "B. Zhumabayev",
-    "A. Yanina",
-    "Yekaterina Chsherbulova",
-    "Stanislav Utebayev"
-   ],
-   "author_count": 6,
-   "venue": "Entropy",
-   "date": "2026-10-01",
-   "year": 2026,
-   "abstract": "Solar activity exhibits a dominant decadal timescale embedded in nonlinear multiscale dynamics. We present a minimal autonomous three-mode hybrid model to investigate whether such a timescale can arise from internal nonlinear energy exchange rather than external periodic forcing or direct inheritance of a prescribed modal period. The model couples a slow internal reservoir, a tachocline-associated transfer mode, and a nonlinear magnetic subsystem described by Duffing and Van der Pol–Duffing dynamics. Magnetic-energy release is implemented through a threshold-triggered reset, while a D-index-based structural energy-exchange index characterizes relative magnetic-energy changes. The system develops a persistent bounded hybrid regime with a dominant period of approximately 10 yr. Initial-condition ensembles and variations in the intrinsic modal periods demonstrate that this timescale does not simply track the prescribed 11 yr tachocline period. Parameter studies identify the release depth and magnetic recovery rate as stronger controls, supporting an accumulation–release mechanism of timescale selection. Release events exhibit organized recurrence and significant tachocline-phase preference, with localized event skipping separating spectral and release timescales. Saltation-based Lyapunov analysis reveals no robust positive largest exponent for the baseline regime over the investig",
-   "url": "https://doi.org/10.3390/e28101114",
-   "pdf_url": "https://doi.org/10.3390/e28101114",
-   "doi": "10.3390/e28101114",
-   "arxiv": null,
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 59,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:L8Ckcad2t8MC",
-    "title": "Energy transfer in the spatial evolution of double-wave-group focusing",
-    "year": 2024
-   },
-   "matched": [
-    "nonlinear energy transfer"
-   ],
-   "focus": "domain",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-10-01",
-   "is_new": false,
-   "bullets": [
-    "Built three-mode coupled oscillator model of solar activity with threshold release",
-    "Model produces dominant ~10-year period independent of prescribed 11-year mode",
-    "Release depth and magnetic recovery rate control timescale selection"
-   ]
-  },
-  {
-   "id": "7947dd914201",
-   "title": "Capillary–gravity–acoustic triad resonance in laboratory basins",
-   "authors": [
-    "E. Zuccoli",
-    "U. Kadri"
-   ],
-   "author_count": 2,
-   "venue": "Journal of Fluid Mechanics",
-   "date": "2026-10-19",
-   "year": 2026,
-   "abstract": "Abstract Content of image described in text. We study weakly nonlinear resonant interactions between two counter-propagating capillary–gravity waves and a horizontally uniform acoustic mode in a slightly compressible fluid of finite depth. Surface tension changes the resonance condition by allowing the large capillary–gravity wavenumbers needed to match the acoustic frequency at laboratory-scale depths. For the Longuet-Higgins configuration, in which the two surface modes have equal and opposite horizontal wavenumbers, the linear eigenfunctions and resonant wavenumber are obtained in closed form in the weakly compressible regime relevant to water-wave experiments. A multiple-scale calculation gives a three-wave interaction system with explicit coupling coefficients. We then use a leading-order spatially modulated approximation to estimate the acoustic pressure signal generated when two localised surface wavepackets collide. The bottom pressure scales quadratically with the characteristic surface-wave amplitude and linearly with the initial surface-wave width; for a representative laboratory configuration, the inviscid estimate is of order tens of Pascals.",
-   "url": "https://doi.org/10.1017/jfm.2026.12161",
-   "pdf_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/59354DDA2A59322AE6001227BB032A86/S0022112026121612a.pdf/div-class-title-capillary-gravity-acoustic-triad-resonance-in-laboratory-basins-div.pdf",
-   "doi": "10.1017/jfm.2026.12161",
-   "arxiv": null,
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 59,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:IjCSPb-OGe4C",
-    "title": "The influence of finite depth on the evolution of extreme wave statistics in numerical wave tanks",
-    "year": 2021
-   },
-   "matched": [
-    "water wave",
-    "finite depth",
-    "resonant interaction"
-   ],
-   "focus": "domain",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-10-19",
-   "is_new": false,
-   "bullets": [
-    "Theory of capillary-gravity-acoustic triad resonance in laboratory basins",
-    "Colliding wavepackets give bottom pressure of tens of Pascals"
+    "Modelled heaving WEC integrated with perforated caisson breakwater using potential flow",
+    "Energy partition shifts from capture-reflection competition to dissipation at higher frequencies"
    ]
   },
   {
@@ -4563,45 +4602,45 @@
    ]
   },
   {
-   "id": "e7d11d3e85f9",
-   "title": "Error Estimates in Physics-Informed Neural Networks to Heat-Wave Fluid-Structure Interactive System",
+   "id": "7947dd914201",
+   "title": "Capillary–gravity–acoustic triad resonance in laboratory basins",
    "authors": [
-    "P. G. Geredeli",
-    "Mohammad Mahabubur Rahman",
-    "Deepanshu Verma"
+    "E. Zuccoli",
+    "U. Kadri"
    ],
-   "author_count": 3,
-   "venue": null,
-   "date": "2026-10-02",
+   "author_count": 2,
+   "venue": "Journal of Fluid Mechanics",
+   "date": "2026-10-19",
    "year": 2026,
-   "abstract": "We study a physics-informed neural network (PINN) approximation of a coupled PDE system that models the interaction between fluid and elastic dynamics. The canonical heat-wave model considered here couples a parabolic and a hyperbolic equation through transmission conditions on a fixed boundary interface, and serves as a prototype for the Stokes-elastic systems that arises in real world applications. This coupling makes the error analysis more delicate than that for a single PDE. We bound the error between the exact and PINN solutions by the associated PINN residuals, and we moreover prove that the generalization error is controlled by the training error, the number of quadrature points, and the size of the network. {To the best of our knowledge}, these are the first error estimates for a PINN approximation of a coupled fluid-structure interaction PDE system. We also show that numerical experiments with respect to a given test problem.",
-   "url": "https://www.semanticscholar.org/paper/b49508409a2c3de0b1aa930a17131ba9dbe281ed",
-   "pdf_url": null,
-   "doi": null,
-   "arxiv": "2610.03575",
+   "abstract": "Abstract Content of image described in text. We study weakly nonlinear resonant interactions between two counter-propagating capillary–gravity waves and a horizontally uniform acoustic mode in a slightly compressible fluid of finite depth. Surface tension changes the resonance condition by allowing the large capillary–gravity wavenumbers needed to match the acoustic frequency at laboratory-scale depths. For the Longuet-Higgins configuration, in which the two surface modes have equal and opposite horizontal wavenumbers, the linear eigenfunctions and resonant wavenumber are obtained in closed form in the weakly compressible regime relevant to water-wave experiments. A multiple-scale calculation gives a three-wave interaction system with explicit coupling coefficients. We then use a leading-order spatially modulated approximation to estimate the acoustic pressure signal generated when two localised surface wavepackets collide. The bottom pressure scales quadratically with the characteristic surface-wave amplitude and linearly with the initial surface-wave width; for a representative laboratory configuration, the inviscid estimate is of order tens of Pascals.",
+   "url": "https://doi.org/10.1017/jfm.2026.12161",
+   "pdf_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/59354DDA2A59322AE6001227BB032A86/S0022112026121612a.pdf/div-class-title-capillary-gravity-acoustic-triad-resonance-in-laboratory-basins-div.pdf",
+   "doi": "10.1017/jfm.2026.12161",
+   "arxiv": null,
    "sources": [
     "Semantic Scholar"
    ],
    "score": 58,
    "similar_to": {
-    "id": "dofRHEwAAAAJ:e5wmG9Sq2KIC",
-    "title": "Physics-informed neural networks for phase-resolved data assimilation and prediction of nonlinear ocean waves",
-    "year": 2025
+    "id": "dofRHEwAAAAJ:IjCSPb-OGe4C",
+    "title": "The influence of finite depth on the evolution of extreme wave statistics in numerical wave tanks",
+    "year": 2021
    },
    "matched": [
-    "wave model",
-    "physics-informed"
+    "water wave",
+    "finite depth",
+    "resonant interaction"
    ],
-   "focus": "domain_ai",
+   "focus": "domain",
    "cites": [],
    "coauthor": null,
-   "first_seen": "2026-11-24",
+   "first_seen": "2026-11-22",
    "in_press": false,
-   "news_date": "2026-10-02",
+   "news_date": "2026-10-19",
    "is_new": false,
    "bullets": [
-    "Derived PINN error estimates for coupled heat-wave fluid-structure system",
-    "Generalisation error bounded by training error, quadrature points, network size"
+    "Theory of capillary-gravity-acoustic triad resonance in laboratory basins",
+    "Colliding wavepackets give bottom pressure of tens of Pascals"
    ]
   },
   {
@@ -4728,6 +4767,52 @@
     "Derived two-component b-family system for medium-amplitude shallow-water waves",
     "Proved local well-posedness, including in critical Besov space",
     "Gave blow-up criterion and finite-time blow-up for certain initial data"
+   ]
+  },
+  {
+   "id": "c91c9c57e6de",
+   "title": "Probabilistic well-posedness of dispersive PDEs beyond variance blowup II: quadratic nonlinear wave equation",
+   "authors": [
+    "Guo-Peng Li",
+    "Jia-Wei Li",
+    "Shao Liu",
+    "Tadahiro Oh",
+    "N. Tzvetkov"
+   ],
+   "author_count": 5,
+   "venue": null,
+   "date": "2026-11-23",
+   "year": 2026,
+   "abstract": "We study the quadratic nonlinear wave equation (NLW), posed on the two-dimensional torus, with rough Gaussian random initial data beyond the variance blowup threshold observed by Okamoto and the fourth author (2021). By introducing a suitable vanishing multiplicative renormalization constant on the frequency-truncated Gaussian random initial data, we prove that the corresponding solutions converge in law to a solution to the stochastic NLW with zero initial data, driven by a Gaussian space-time noise whose temporal covariance at each spatial Fourier mode is given by the Bessel function of order $0$. We also show that the solution to the limiting equation almost surely blows up in a finite time, and that the convergence above holds on every compact time interval before the maximal existence time. %on the maximal time of existence. A main new ingredient is the analysis of the oscillatory covariance of the second Picard iterates. We identify the limiting covariance by averaging the leading oscillatory phase over the angular variable. In contrast to our previous work on the Benjamin-Bona-Mahony equation (2025), multilinear dispersive smoothing plays an essential role both in proving tightness of the second Picard iterates and in controlling the rough nonlinear interactions via paracontrolled analysis. The resulting gain of a quarter of a derivative persists in the limit, where it i",
+   "url": "https://www.semanticscholar.org/paper/6133627e87a35fa1b6038c51501c3eee8c01f552",
+   "pdf_url": null,
+   "doi": null,
+   "arxiv": "2611.30936",
+   "sources": [
+    "Semantic Scholar"
+   ],
+   "score": 58,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:qjMakFHDy7sC",
+    "title": "Comparison of two versions of the MNLS with the full water wave equations",
+    "year": 2020
+   },
+   "matched": [
+    "nonlinear wave",
+    "nonlinear interaction",
+    "data-driven"
+   ],
+   "focus": "domain_ai",
+   "cites": [],
+   "coauthor": "Jinxuan Li",
+   "first_seen": "2026-11-25",
+   "in_press": false,
+   "news_date": "2026-11-23",
+   "is_new": true,
+   "bullets": [
+    "Quadratic nonlinear wave equation on 2D torus with rough Gaussian data",
+    "Renormalised solutions converge in law to stochastic NLW with Bessel-covariance noise",
+    "Limiting solution almost surely blows up in finite time"
    ]
   },
   {
@@ -4926,6 +5011,51 @@
    "bullets": null
   },
   {
+   "id": "6ba9ec9735a7",
+   "title": "A Nonlinear Three-Mode Model of Solar Activity Based on Coupled Oscillators and Nonlinear Energy Transfer",
+   "authors": [
+    "V. Kapytin",
+    "A. Andreyev",
+    "B. Zhumabayev",
+    "A. Yanina",
+    "Yekaterina Chsherbulova",
+    "Stanislav Utebayev"
+   ],
+   "author_count": 6,
+   "venue": "Entropy",
+   "date": "2026-10-01",
+   "year": 2026,
+   "abstract": "Solar activity exhibits a dominant decadal timescale embedded in nonlinear multiscale dynamics. We present a minimal autonomous three-mode hybrid model to investigate whether such a timescale can arise from internal nonlinear energy exchange rather than external periodic forcing or direct inheritance of a prescribed modal period. The model couples a slow internal reservoir, a tachocline-associated transfer mode, and a nonlinear magnetic subsystem described by Duffing and Van der Pol–Duffing dynamics. Magnetic-energy release is implemented through a threshold-triggered reset, while a D-index-based structural energy-exchange index characterizes relative magnetic-energy changes. The system develops a persistent bounded hybrid regime with a dominant period of approximately 10 yr. Initial-condition ensembles and variations in the intrinsic modal periods demonstrate that this timescale does not simply track the prescribed 11 yr tachocline period. Parameter studies identify the release depth and magnetic recovery rate as stronger controls, supporting an accumulation–release mechanism of timescale selection. Release events exhibit organized recurrence and significant tachocline-phase preference, with localized event skipping separating spectral and release timescales. Saltation-based Lyapunov analysis reveals no robust positive largest exponent for the baseline regime over the investig",
+   "url": "https://doi.org/10.3390/e28101114",
+   "pdf_url": "https://doi.org/10.3390/e28101114",
+   "doi": "10.3390/e28101114",
+   "arxiv": null,
+   "sources": [
+    "Semantic Scholar"
+   ],
+   "score": 57,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:L8Ckcad2t8MC",
+    "title": "Energy transfer in the spatial evolution of double-wave-group focusing",
+    "year": 2024
+   },
+   "matched": [
+    "nonlinear energy transfer"
+   ],
+   "focus": "domain",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-22",
+   "in_press": false,
+   "news_date": "2026-10-01",
+   "is_new": false,
+   "bullets": [
+    "Built three-mode coupled oscillator model of solar activity with threshold release",
+    "Model produces dominant ~10-year period independent of prescribed 11-year mode",
+    "Release depth and magnetic recovery rate control timescale selection"
+   ]
+  },
+  {
    "id": "e3a60b8e8188",
    "title": "Topographic Modulation of Multi-Source Internal Solitary Waves in a Complex Sea Basin: Nonlinear Dynamics and Energetics",
    "authors": [
@@ -5026,12 +5156,11 @@
    "year": 2026,
    "abstract": "We study rogue wave formation in the dam-break problem for the Kundu--Eckhaus equation with deterministic and randomly perturbed box initial data. For the unperturbed real box, the gauge transformation and Galilean invariance relate the intensity evolution to that of the focusing nonlinear Schr\\\"odinger equation. The Kundu--Eckhaus parameter determines the phase, the real shift of the discrete spectrum and the drift velocity. We compare uniform, Gaussian and Laplace perturbations with equal variance and the same correlation scale in the underlying Gaussian field. At the larger perturbation strengths considered, the Laplace perturbations yield larger mean maximum intensities and higher exceedance probabilities for the normalized intensity at the final simulation time, but smaller amplification relative to the initial maximum intensity.",
    "url": "https://doi.org/10.48550/arxiv.2611.01073",
-   "pdf_url": "https://arxiv.org/pdf/2611.01073v1",
+   "pdf_url": "https://arxiv.org/pdf/2611.01073",
    "doi": "10.48550/arxiv.2611.01073",
    "arxiv": "2611.01073",
    "sources": [
     "Semantic Scholar",
-    "arXiv",
     "OpenAlex"
    ],
    "score": 57,
@@ -5309,91 +5438,139 @@
    "bullets": null
   },
   {
-   "id": "93570cc8e34d",
-   "title": "Wave diffraction modifies attenuation in semi‐infinite submerged vegetation",
+   "id": "e7d11d3e85f9",
+   "title": "Error Estimates in Physics-Informed Neural Networks to Heat-Wave Fluid-Structure Interactive System",
    "authors": [
-    "Guan-Yi Gao",
-    "Yu-Fei Wang",
-    "Jia-Rui Lei"
+    "P. G. Geredeli",
+    "Mohammad Mahabubur Rahman",
+    "Deepanshu Verma"
    ],
    "author_count": 3,
-   "venue": "Limnology and Oceanography",
-   "date": "2026-10-01",
+   "venue": null,
+   "date": "2026-10-02",
    "year": 2026,
-   "abstract": "Coastal vegetation is increasingly recognized for enhancing coastal resilience against climate change. Studies show that alternating vegetated and unvegetated patches can effectively dissipate wave energy, while emphasizing the need to better characterize wave diffraction in such configurations. In this study, we develop a semi‐analytical framework that combines vegetation‐induced wave attenuation with diffraction for regions partially covered by submerged vegetation and evaluate it using experiments. The model extends classical semi‐infinite breakwater diffraction theory by incorporating Dalrymple‐type dissipation due to an array of vegetation elements and an empirical lateral scaling that accounts for the porous nature of the vegetation. Under assumptions of spatially uniform vegetation within the vegetated region, laterally uniform incident waves, and linear wave dynamics, the local velocity potential is expressed as the incident potential multiplied by a modified diffraction coefficient. Twenty‐one experiments were conducted in a shallow wave basin under varying wave heights, periods, and water depths for semi‐infinite and periodically arranged vegetation patches. Comparisons between analytical predictions and over 15,000 wave‐height measurements show that the model captures the dominant attenuation–diffraction patterns under the tested conditions, with a typical normalized",
-   "url": "https://doi.org/10.1002/lno.70529",
-   "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/lno.70529",
-   "doi": "10.1002/lno.70529",
-   "arxiv": null,
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 56,
-   "similar_to": null,
-   "matched": [
-    "wave energy",
-    "wave basin",
-    "hydrodynamics",
-    "wave field",
-    "wave height"
-   ],
-   "focus": "domain",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-25",
-   "in_press": false,
-   "news_date": "2026-10-01",
-   "is_new": false,
-   "bullets": [
-    "Extended breakwater diffraction theory with vegetation dissipation for submerged patches",
-    "Tested against 21 basin experiments and over 15,000 wave-height measurements",
-    "Model captures dominant attenuation–diffraction patterns"
-   ]
-  },
-  {
-   "id": "dba4863ee7a0",
-   "title": "A Synergistic Assessment of Global Wind and Wave Energy Resources Using Satellite Altimetry",
-   "authors": [
-    "Qian-Qian Li",
-    "Lin Wu",
-    "Li-Feng Bao",
-    "Yong Wang",
-    "Li Yang"
-   ],
-   "author_count": 5,
-   "venue": "Journal of Marine Science and Engineering",
-   "date": "2026-11-02",
-   "year": 2026,
-   "abstract": "The combined exploitation of marine wind and wave energy contributes to addressing pressing energy challenges. Satellite altimetry enables global synergistic assessment of these resources. Here, we utilize the longest altimeter observations available (Jason series, 1993–2024) to assess the spatiotemporal distribution, correlation, variability, and synergy of global wind and wave energy. Altimeter-derived wind speed and significant wave height were validated against buoy data, showing high consistency. Results indicate that wind and wave energy share similar spatiotemporal distributions. The Southern Ocean exhibits the most powerful and persistent resources, with moderate variability and correlation. Other energetic regions, including the Arabian Sea, North Atlantic, and North Pacific, show higher correlation and variability. Maximum covariance analysis (MCA) identified a leading mode of wind–wave co-variability, with a positive correlation between the expansion coefficients (r = 0.72). The result indicates a positive temporal association within the leading mode. The spatial patterns of the leading mode qualitatively resemble features associated with large-scale climate variability, including ENSO-related patterns. However, these similarities do not establish a direct statistical relationship with ENSO or demonstrate a causal climate influence. This study establishes satellite a",
-   "url": "https://doi.org/10.3390/jmse14212048",
-   "pdf_url": "https://doi.org/10.3390/jmse14212048",
-   "doi": "10.3390/jmse14212048",
-   "arxiv": null,
+   "abstract": "We study a physics-informed neural network (PINN) approximation of a coupled PDE system that models the interaction between fluid and elastic dynamics. The canonical heat-wave model considered here couples a parabolic and a hyperbolic equation through transmission conditions on a fixed boundary interface, and serves as a prototype for the Stokes-elastic systems that arises in real world applications. This coupling makes the error analysis more delicate than that for a single PDE. We bound the error between the exact and PINN solutions by the associated PINN residuals, and we moreover prove that the generalization error is controlled by the training error, the number of quadrature points, and the size of the network. {To the best of our knowledge}, these are the first error estimates for a PINN approximation of a coupled fluid-structure interaction PDE system. We also show that numerical experiments with respect to a given test problem.",
+   "url": "https://www.semanticscholar.org/paper/b49508409a2c3de0b1aa930a17131ba9dbe281ed",
+   "pdf_url": null,
+   "doi": null,
+   "arxiv": "2610.03575",
    "sources": [
     "Semantic Scholar"
    ],
    "score": 56,
    "similar_to": {
-    "id": "dofRHEwAAAAJ:lSLTfruPkqcC",
-    "title": "Preliminary investigation on statistical properties of extreme waves under unsteady wind",
-    "year": 2021
+    "id": "dofRHEwAAAAJ:e5wmG9Sq2KIC",
+    "title": "Physics-informed neural networks for phase-resolved data assimilation and prediction of nonlinear ocean waves",
+    "year": 2025
    },
    "matched": [
-    "wave energy",
-    "marine energy",
-    "wind wave",
-    "wave height"
+    "wave model",
+    "physics-informed"
+   ],
+   "focus": "domain_ai",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-24",
+   "in_press": false,
+   "news_date": "2026-10-02",
+   "is_new": false,
+   "bullets": [
+    "Derived PINN error estimates for coupled heat-wave fluid-structure system",
+    "Generalisation error bounded by training error, quadrature points, network size"
+   ]
+  },
+  {
+   "id": "a609f175deda",
+   "title": "Integrable turbulence and statistical properties of chaotic wave fields in the complex modified Korteweg-de Vries equation",
+   "authors": [
+    "Ya-Xin Luo",
+    "Xiao-Qun Lan",
+    "Wei-Qi Peng"
+   ],
+   "author_count": 3,
+   "venue": "arXiv",
+   "date": "2026-10-23",
+   "year": 2026,
+   "abstract": "This paper investigates integrable turbulence and the mechanism for generating rogue waves in the complex modified Korteweg--de Vries (mKdV) equation through numerical simulations and statistical analysis. We solve the Lax pair eigenvalue problem using the Fourier collocation method and establish a correspondence among solitons, breathers, and rogue waves on the spectral plane. We generate chaotic wave fields by simulating the complex mKdV equation using the split-step Fourier method, starting from a plane wave with superimposed random noise. We analyze the effects of the standard deviation \\(\\mu\\) and the correlation length \\(L_c\\). The results show that increasing \\(\\mu\\) drives a transition from breather turbulence to soliton turbulence, increasing the probability of rogue-wave generation.In contrast, \\(L_c\\) primarily influences the spatial scale of the structures. As the constant background of the complex mKdV equation is modulationally stable, its integrable turbulence does not depend on modulational instability. Compared with the nonlinear Schr\\\"odinger (NLS) equation under identical initial conditions, the complex mKdV equation attains comparable amplitudes under strong perturbations, but exhibits a higher spatial gradient. This suggests that third-order dispersion and derivative nonlinearity alter the excitation mechanism and steepen the waveform.",
+   "url": "https://doi.org/10.48550/arxiv.2610.32397",
+   "pdf_url": "https://arxiv.org/pdf/2610.32397",
+   "doi": "10.48550/arxiv.2610.32397",
+   "arxiv": "2610.32397",
+   "sources": [
+    "Semantic Scholar",
+    "OpenAlex"
+   ],
+   "score": 56,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:M3ejUd6NZC8C",
+    "title": "The influence of directional spreading on rogue waves triggered by abrupt depth transitions",
+    "year": 2023
+   },
+   "matched": [
+    "rogue wave",
+    "modulational instability",
+    "turbulence",
+    "wave field"
    ],
    "focus": "domain",
    "cites": [],
    "coauthor": null,
-   "first_seen": "2026-11-22",
+   "first_seen": "2026-11-26",
    "in_press": false,
-   "news_date": "2026-11-02",
+   "news_date": "2026-10-23",
    "is_new": false,
    "bullets": [
-    "Assessed global wind and wave energy from Jason altimetry, 1993–2024",
-    "Southern Ocean strongest; leading wind–wave co-variability mode correlation r = 0.72"
+    "Simulated integrable turbulence in complex mKdV from noisy plane waves",
+    "Larger noise shifts breather to soliton turbulence, raising rogue-wave probability",
+    "Versus NLS: comparable amplitudes but steeper spatial gradients"
+   ]
+  },
+  {
+   "id": "5da73fd6249e",
+   "title": "Acoustic Signature-Based Methodology for Classifying Breaking Waves",
+   "authors": [
+    "M. Shtremel",
+    "Hao-Yun Zhang",
+    "D. Liberzon"
+   ],
+   "author_count": 3,
+   "venue": "Water Waves",
+   "date": "2026-11-01",
+   "year": 2026,
+   "abstract": "Breaking waves play a major role in wave-energy dissipation and air–sea exchange, but their short duration and complex dynamics make direct measurements difficult. Passive acoustic measurements appear to provide a valuable source of information about wave-breaking processes. While detection of breaking waves can be achieved using one of the existing methods, estimation of breakers energy dissipation is a more complex task. Here we report on development of a new hydroacoustic method for distinguishing plunging and spilling breakers as a first step toward acoustic-signature-based estimation of breaking-wave-energy dissipation. Laboratory experiments were conducted in two configurations: depth-induced breaking over a submerged slope and deep-water breaking generated by dispersive focusing, with synchronized wave-gauges and hydrophones measurements. Although total acoustic energy showed only a scattered relationship with wave-energy dissipation, plunging and spilling breakers produced distinct time–frequency signatures: plungers generated short, intense, low-frequency-rich bursts; while spillers produced longer, weaker, higher-frequency-dominated signals. Two acoustic features, normalized low-frequency energy fraction and effective signal duration, were selected and used in a class-balanced logistic-regression classifier trained on 225 events, achieving 94.2% cross-validated accura",
+   "url": "https://doi.org/10.1007/s42286-026-00156-7",
+   "pdf_url": "https://link.springer.com/content/pdf/10.1007/s42286-026-00156-7.pdf",
+   "doi": "10.1007/s42286-026-00156-7",
+   "arxiv": null,
+   "sources": [
+    "Semantic Scholar",
+    "Crossref",
+    "OpenAlex"
+   ],
+   "score": 56,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:QIV2ME_5wuYC",
+    "title": "Discovering equations that govern wave breaking evolution using scientific machine learning",
+    "year": 2024
+   },
+   "matched": [
+    "wave breaking",
+    "breaking wave",
+    "wave energy",
+    "deep water",
+    "air-sea"
+   ],
+   "focus": "domain",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-26",
+   "in_press": false,
+   "news_date": "2026-11-01",
+   "is_new": false,
+   "bullets": [
+    "Lab tests with hydrophones on depth-induced and focused deep-water breakers",
+    "Plungers give short low-frequency bursts; spillers longer, higher-frequency signals",
+    "Logistic-regression classifier on 225 events reached 94.2% cross-validated accuracy"
    ]
   },
   {
@@ -5700,22 +5877,21 @@
    "bullets": null
   },
   {
-   "id": "f751088f786b",
-   "title": "Bifurcation taxonomy of three-dimensional flexural-gravity waves beneath elastic covers",
+   "id": "93570cc8e34d",
+   "title": "Wave diffraction modifies attenuation in semi‐infinite submerged vegetation",
    "authors": [
-    "Ming-Yue Wang",
-    "Bin Zhang",
-    "You-He Zhou",
-    "Ji-Zeng Wang"
+    "Guan-Yi Gao",
+    "Yu-Fei Wang",
+    "Jia-Rui Lei"
    ],
-   "author_count": 4,
-   "venue": "The Physics of Fluids",
+   "author_count": 3,
+   "venue": "Limnology and Oceanography",
    "date": "2026-10-01",
    "year": 2026,
-   "abstract": "Flexural-gravity waves beneath elastic covers are central to understanding ice-shelf dynamics and very large floating structures, yet their three-dimensional nonlinear wave states remain poorly classified. We derive a three-dimensional Boussinesq model with asymptotic scaling anchored to the plate-rigidity and transverse-coupling scales, supplemented by physically motivated effective parameterizations for mixed-derivative anisotropy and Landau-type polynomial restoring terms arising from material nonlinearity and fluid–structure interaction. Analyzing this model via a complementary dynamical-algebraic framework, we obtain seven exact traveling-wave solutions that form a bifurcation taxonomy organized by a single solution discriminant set by the combined model coefficients: symmetric cnoidal waves transition through a rational critical state to asymmetric periodic waves, with homoclinic and heteroclinic orbits acting as topological separatrices between physically realizable and mathematically singular regimes. The elliptic modulus of the cnoidal family provides an unbroken bridge from infinitesimal linear waves to the isolated soliton. Five representative parameter sets are used to illustrate the solution classes and their bifurcation topology; quantitative physical interpretation is restricted to parameter regimes consistent with the weakly nonlinear long-wave assumptions. The ",
-   "url": "https://doi.org/10.1063/5.0354991",
-   "pdf_url": null,
-   "doi": "10.1063/5.0354991",
+   "abstract": "Coastal vegetation is increasingly recognized for enhancing coastal resilience against climate change. Studies show that alternating vegetated and unvegetated patches can effectively dissipate wave energy, while emphasizing the need to better characterize wave diffraction in such configurations. In this study, we develop a semi‐analytical framework that combines vegetation‐induced wave attenuation with diffraction for regions partially covered by submerged vegetation and evaluate it using experiments. The model extends classical semi‐infinite breakwater diffraction theory by incorporating Dalrymple‐type dissipation due to an array of vegetation elements and an empirical lateral scaling that accounts for the porous nature of the vegetation. Under assumptions of spatially uniform vegetation within the vegetated region, laterally uniform incident waves, and linear wave dynamics, the local velocity potential is expressed as the incident potential multiplied by a modified diffraction coefficient. Twenty‐one experiments were conducted in a shallow wave basin under varying wave heights, periods, and water depths for semi‐infinite and periodically arranged vegetation patches. Comparisons between analytical predictions and over 15,000 wave‐height measurements show that the model captures the dominant attenuation–diffraction patterns under the tested conditions, with a typical normalized",
+   "url": "https://doi.org/10.1002/lno.70529",
+   "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/lno.70529",
+   "doi": "10.1002/lno.70529",
    "arxiv": null,
    "sources": [
     "Semantic Scholar"
@@ -5723,59 +5899,23 @@
    "score": 55,
    "similar_to": null,
    "matched": [
-    "nonlinear wave"
-   ],
-   "focus": "domain",
-   "cites": [],
-   "coauthor": "Jinghua Wang",
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-10-01",
-   "is_new": false,
-   "bullets": [
-    "Derived 3D Boussinesq model for flexural-gravity waves beneath elastic covers",
-    "Found seven exact travelling-wave solutions organised by one discriminant",
-    "Cnoidal family bridges linear waves to the isolated soliton"
-   ]
-  },
-  {
-   "id": "40371c69db7b",
-   "title": "A Comparative Study of Exact Solutions for the Two Nonlinear Partial Differential Equations Using the (G'⁄G)-Expansion Method",
-   "authors": [
-    "S. Abu-Amr"
-   ],
-   "author_count": 1,
-   "venue": "Alqalam Journal of Science",
-   "date": "2026-10-01",
-   "year": 2026,
-   "abstract": "In the present work, the -expansion technique is applied to construct closed-form traveling-wave solutions for two nonlinear systems: the modified dispersive water-wave (MDWW) system and the variant Boussinesq system. Compared with more elaborate symbolic approaches, this technique reaches explicit, verifiable solution families with comparatively little algebraic overhead, which in turn sheds light on how these nonlinear systems behave. Because it converts an otherwise unwieldy governing equation into a tractable algebraic system, the method is well suited to producing accurate closed-form expressions. The results reported here support the view that the -expansion approach is a useful tool both for the theoretical study of nonlinear wave phenomena and for problems arising in applied nonlinear dynamics.",
-   "url": "https://doi.org/10.69667/ajs.261003",
-   "pdf_url": "https://alqalam.utripoli.edu.ly/index.php/AR/article/download/168/139",
-   "doi": "10.69667/ajs.261003",
-   "arxiv": null,
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 55,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:isC4tDSrTZIC",
-    "title": "Generative discovery of partial differential equations by learning from math handbooks",
-    "year": 2025
-   },
-   "matched": [
-    "nonlinear wave",
-    "water wave"
+    "wave energy",
+    "wave basin",
+    "hydrodynamics",
+    "wave field",
+    "wave height"
    ],
    "focus": "domain",
    "cites": [],
    "coauthor": null,
-   "first_seen": "2026-11-24",
+   "first_seen": "2026-11-25",
    "in_press": false,
    "news_date": "2026-10-01",
    "is_new": false,
    "bullets": [
-    "Applied (G'/G)-expansion method to modified dispersive water-wave and variant Boussinesq systems",
-    "Obtained explicit closed-form travelling-wave solution families"
+    "Extended breakwater diffraction theory with vegetation dissipation for submerged patches",
+    "Tested against 21 basin experiments and over 15,000 wave-height measurements",
+    "Model captures dominant attenuation–diffraction patterns"
    ]
   },
   {
@@ -5821,6 +5961,52 @@
     "Lab tests over 345 conditions on oscillating water column efficiency",
     "Ignoring parameter coupling causes efficiency errors up to 58%",
     "New coupled method predicts efficiency with R² of 0.96"
+   ]
+  },
+  {
+   "id": "dba4863ee7a0",
+   "title": "A Synergistic Assessment of Global Wind and Wave Energy Resources Using Satellite Altimetry",
+   "authors": [
+    "Qian-Qian Li",
+    "Lin Wu",
+    "Li-Feng Bao",
+    "Yong Wang",
+    "Li Yang"
+   ],
+   "author_count": 5,
+   "venue": "Journal of Marine Science and Engineering",
+   "date": "2026-11-02",
+   "year": 2026,
+   "abstract": "The combined exploitation of marine wind and wave energy contributes to addressing pressing energy challenges. Satellite altimetry enables global synergistic assessment of these resources. Here, we utilize the longest altimeter observations available (Jason series, 1993–2024) to assess the spatiotemporal distribution, correlation, variability, and synergy of global wind and wave energy. Altimeter-derived wind speed and significant wave height were validated against buoy data, showing high consistency. Results indicate that wind and wave energy share similar spatiotemporal distributions. The Southern Ocean exhibits the most powerful and persistent resources, with moderate variability and correlation. Other energetic regions, including the Arabian Sea, North Atlantic, and North Pacific, show higher correlation and variability. Maximum covariance analysis (MCA) identified a leading mode of wind–wave co-variability, with a positive correlation between the expansion coefficients (r = 0.72). The result indicates a positive temporal association within the leading mode. The spatial patterns of the leading mode qualitatively resemble features associated with large-scale climate variability, including ENSO-related patterns. However, these similarities do not establish a direct statistical relationship with ENSO or demonstrate a causal climate influence. This study establishes satellite a",
+   "url": "https://doi.org/10.3390/jmse14212048",
+   "pdf_url": "https://doi.org/10.3390/jmse14212048",
+   "doi": "10.3390/jmse14212048",
+   "arxiv": null,
+   "sources": [
+    "Semantic Scholar"
+   ],
+   "score": 55,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:lSLTfruPkqcC",
+    "title": "Preliminary investigation on statistical properties of extreme waves under unsteady wind",
+    "year": 2021
+   },
+   "matched": [
+    "wave energy",
+    "marine energy",
+    "wind wave",
+    "wave height"
+   ],
+   "focus": "domain",
+   "cites": [],
+   "coauthor": null,
+   "first_seen": "2026-11-22",
+   "in_press": false,
+   "news_date": "2026-11-02",
+   "is_new": false,
+   "bullets": [
+    "Assessed global wind and wave energy from Jason altimetry, 1993–2024",
+    "Southern Ocean strongest; leading wind–wave co-variability mode correlation r = 0.72"
    ]
   },
   {
@@ -6290,48 +6476,42 @@
    ]
   },
   {
-   "id": "88bb3fe6a4bd",
-   "title": "Sensitivity-Guided Parameter Estimation of Bubbly Liquid via a Nonlinear Wave Equation and Physics-InformedNeuralNetworks",
+   "id": "f751088f786b",
+   "title": "Bifurcation taxonomy of three-dimensional flexural-gravity waves beneath elastic covers",
    "authors": [
-    "Takeru Hasegawa",
-    "N. Mitsume",
-    "Shota Deguchi",
-    "M. Asai",
-    "T. Kanagawa"
+    "Ming-Yue Wang",
+    "Bin Zhang",
+    "You-He Zhou",
+    "Ji-Zeng Wang"
    ],
-   "author_count": 5,
-   "venue": null,
-   "date": "2026-10-23",
+   "author_count": 4,
+   "venue": "The Physics of Fluids",
+   "date": "2026-10-01",
    "year": 2026,
-   "abstract": "Interactions between ultrasound and microbubbles underlie a range of biomedical and industrial applications, yet predicting how the physical parameters of the medium and bubbles govern nonlinear wave propagation remains difficult. This study proposes a parameter estimation framework that combines a Korteweg-de Vries-Burgers (KdVB) equation, describing weakly nonlinear wave propagation in a bubbly liquid, with a physics-informed neural network (PINN). The contributions are threefold. First, the PINN reproduces the reference solution of the governing equation in the forward problem, with a near-zero prediction error at the initial time that confirms the initial condition is enforced exactly as intended. Second, prior to inverse estimation, a sensitivity analysis is introduced that quantifies, at both the coefficient and solution levels, how each of eight physical parameters influences the KdVB equation, allowing the expected difficulty of estimating each parameter to be assessed in advance. Third, based on this assessment, single-parameter inverse estimation is performed for seven of the eight parameters using the PINN. Liquid viscosity, bubble initial radius, liquid density, sound speed, and liquid pressure are estimated with errors of 0.8-2.1%, the polytropic exponent converges only partially, and the surface tension coefficient cannot be estimated at all, consistent with the s",
-   "url": "https://www.semanticscholar.org/paper/12de2522003b63231c7ee9e111b903ca2bb414a3",
+   "abstract": "Flexural-gravity waves beneath elastic covers are central to understanding ice-shelf dynamics and very large floating structures, yet their three-dimensional nonlinear wave states remain poorly classified. We derive a three-dimensional Boussinesq model with asymptotic scaling anchored to the plate-rigidity and transverse-coupling scales, supplemented by physically motivated effective parameterizations for mixed-derivative anisotropy and Landau-type polynomial restoring terms arising from material nonlinearity and fluid–structure interaction. Analyzing this model via a complementary dynamical-algebraic framework, we obtain seven exact traveling-wave solutions that form a bifurcation taxonomy organized by a single solution discriminant set by the combined model coefficients: symmetric cnoidal waves transition through a rational critical state to asymmetric periodic waves, with homoclinic and heteroclinic orbits acting as topological separatrices between physically realizable and mathematically singular regimes. The elliptic modulus of the cnoidal family provides an unbroken bridge from infinitesimal linear waves to the isolated soliton. Five representative parameter sets are used to illustrate the solution classes and their bifurcation topology; quantitative physical interpretation is restricted to parameter regimes consistent with the weakly nonlinear long-wave assumptions. The ",
+   "url": "https://doi.org/10.1063/5.0354991",
    "pdf_url": null,
-   "doi": null,
-   "arxiv": "2610.32668",
+   "doi": "10.1063/5.0354991",
+   "arxiv": null,
    "sources": [
     "Semantic Scholar"
    ],
    "score": 54,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:e5wmG9Sq2KIC",
-    "title": "Physics-informed neural networks for phase-resolved data assimilation and prediction of nonlinear ocean waves",
-    "year": 2025
-   },
+   "similar_to": null,
    "matched": [
-    "nonlinear wave",
-    "wave propagation",
-    "physics-informed"
+    "nonlinear wave"
    ],
-   "focus": "domain_ai",
+   "focus": "domain",
    "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-25",
+   "coauthor": "Jinghua Wang",
+   "first_seen": "2026-11-22",
    "in_press": false,
-   "news_date": "2026-10-23",
+   "news_date": "2026-10-01",
    "is_new": false,
    "bullets": [
-    "PINN with sensitivity analysis estimates bubbly-liquid KdVB equation parameters",
-    "Five parameters estimated within 0.8-2.1%; surface tension not identifiable"
+    "Derived 3D Boussinesq model for flexural-gravity waves beneath elastic covers",
+    "Found seven exact travelling-wave solutions organised by one discriminant",
+    "Cnoidal family bridges linear waves to the isolated soliton"
    ]
   },
   {
@@ -6385,48 +6565,6 @@
    ]
   },
   {
-   "id": "86136620e1fa",
-   "title": "Inherent Failure Modes of Physics-Informed Neural Networks for Buoyancy-Driven Flow: Role of Non-Dimensionalization in Network Training",
-   "authors": [
-    "K. Chand",
-    "A. Peyvan",
-    "Hao-Xiang Luo"
-   ],
-   "author_count": 3,
-   "venue": null,
-   "date": "2026-10-28",
-   "year": 2026,
-   "abstract": "We investigate the influence of non-dimensionalization on the trainability and accuracy of physics-informed neural networks (PINNs) for buoyancy-driven flows. Using a differentially heated square cavity at $\\mathrm{Pr}=0.71$ and $\\mathrm{Ra}=10^3$--$10^5$, we compare thermal-diffusive and free-fall velocity scalings under identical training conditions. The free-fall scaling, with a unit buoyancy coefficient, achieves errors below 1.1\\% in the mean Nusselt number for $\\mathrm{Ra}\\le10^4$, whereas the diffusive scaling, with a buoyancy coefficient of $\\mathrm{Ra}\\,\\mathrm{Pr}$, produces errors of 157--650\\% and diverges at $\\mathrm{Ra}=10^5$. We identify a coefficient-induced gradient imbalance, with the dominant buoyancy-related contribution to the loss gradient scaling as $(\\mathrm{Ra}\\,\\mathrm{Pr})^2$, and confirm it through direct gradient measurements. Neither sparse-data supervision nor adaptive loss weighting resolves the training difficulties under the tested conditions. For unsteady convection, the free-fall PINN accurately predicts long-time heat transfer but fails to capture the transient Nusselt-number overshoot. These findings establish non-dimensionalization as an important design consideration for improving PINN trainability in buoyancy-driven flows.",
-   "url": "https://www.semanticscholar.org/paper/b0d88f2686e9e97f1cc88b076611dfaf43c44370",
-   "pdf_url": null,
-   "doi": null,
-   "arxiv": "2610.38889",
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 54,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:e5wmG9Sq2KIC",
-    "title": "Physics-informed neural networks for phase-resolved data assimilation and prediction of nonlinear ocean waves",
-    "year": 2025
-   },
-   "matched": [
-    "physics-informed"
-   ],
-   "focus": "ai_only",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-25",
-   "in_press": false,
-   "news_date": "2026-10-28",
-   "is_new": false,
-   "bullets": [
-    "PINNs for heated cavity compared under diffusive and free-fall scalings",
-    "Free-fall scaling errors below 1.1%; diffusive scaling 157–650%, diverging at Ra=10^5",
-    "Gradient imbalance scales as (Ra Pr)^2; adaptive weighting does not fix it"
-   ]
-  },
-  {
    "id": "c9fe2ae06417",
    "title": "Realistic Wind–Wave Loading Versus the Hub-Load Idealisation: Lateral Response of a Large-Diameter Offshore Wind Turbine Monopile",
    "authors": [
@@ -6471,47 +6609,6 @@
     "Compared hub-load idealisation with realistic wind–wave loading on 5 m monopile",
     "Extreme sea state needed 3.1–3.5 times hub-load horizontal force",
     "Extreme loading cut maximum bending moment by 21–25%"
-   ]
-  },
-  {
-   "id": "d654ad419a77",
-   "title": "Radiation and persistent shape dynamics for the five-dimensional energy-critical nonlinear wave equation",
-   "authors": [
-    "Xu-Wen Chen",
-    "J. Holmer",
-    "Shun-Lin Shen"
-   ],
-   "author_count": 3,
-   "venue": null,
-   "date": "2026-11-12",
-   "year": 2026,
-   "abstract": "We consider the nonradial five-dimensional focusing energy-critical wave equation. We construct a forward-global solution which remains arbitrarily close to a nondegenerate sign-changing stationary state in the energy space and is asymptotic to a varying stationary profile plus one free wave. The stationary profile moves in a compact conformal family, but its limit set contains a continuum of classes modulo translations, dilations and rotations. Consequently, the solution admits no soliton resolution using a fixed finite collection of stationary profiles and fixed Lorentz velocities, with pairwise orthogonal spatial parameters. That is, we disprove the fixed-profile soliton resolution conjecture for the five-dimensional focusing energy-critical wave equation. The construction uses a sequence of incoming waves with summable energies. Their quadratic impulses produce fixed shape displacements on increasing time scales. The main estimates control the zero eigenvalue of the linearized operator and the nonlinear error uniformly over the entire sequence. The stationary input uses a computer-assisted spectral bound for a symmetric single-node state.",
-   "url": "https://www.semanticscholar.org/paper/e9dc19f96f28e1e60a8404a5e74815aad1bc7c9b",
-   "pdf_url": null,
-   "doi": null,
-   "arxiv": "2611.17243",
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 54,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:qjMakFHDy7sC",
-    "title": "Comparison of two versions of the MNLS with the full water wave equations",
-    "year": 2020
-   },
-   "matched": [
-    "nonlinear wave"
-   ],
-   "focus": "domain",
-   "cites": [],
-   "coauthor": "Xi Chen",
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-11-12",
-   "is_new": false,
-   "bullets": [
-    "Constructs 5D energy-critical wave solution near sign-changing stationary state",
-    "Disproves fixed-profile soliton resolution conjecture in five dimensions"
    ]
   },
   {
@@ -6636,45 +6733,6 @@
    "first_seen": "2026-11-22",
    "in_press": false,
    "news_date": "2026-08-01",
-   "is_new": false,
-   "bullets": null
-  },
-  {
-   "id": "f42bf42da893",
-   "title": "Analysing observation based source terms: validations and spatial analysis of high-resolution wave hindcast in the Arabian Sea, emphasizing low wind conditions",
-   "authors": [
-    "Muhammad Yasrab",
-    "Alexander V. Babanin",
-    "Murtaza Taak"
-   ],
-   "author_count": 3,
-   "venue": "Ocean Dynamics",
-   "date": "2026-07-28",
-   "year": 2026,
-   "abstract": null,
-   "url": "https://doi.org/10.1007/s10236-026-01839-y",
-   "pdf_url": null,
-   "doi": "10.1007/s10236-026-01839-y",
-   "arxiv": null,
-   "sources": [
-    "Crossref"
-   ],
-   "score": 53,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:hMod-77fHWUC",
-    "title": "Machine learning approximations for fast and accurate prediction of nonlinear four‐wave interactions in spectral wave models",
-    "year": 2026
-   },
-   "matched": [
-    "source term",
-    "wave hindcast"
-   ],
-   "focus": "domain",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-25",
-   "in_press": false,
-   "news_date": "2026-07-28",
    "is_new": false,
    "bullets": null
   },
@@ -6847,54 +6905,6 @@
    "news_date": "2026-09-03",
    "is_new": false,
    "bullets": null
-  },
-  {
-   "id": "e489d32c5fd0",
-   "title": "Applications of a moving surface drag model: From Stokes waves to offshore wind farms",
-   "authors": [
-    "Manuel Ayala",
-    "Zein Sadek",
-    "Raul. B Cal",
-    "Dennice. F Gayme",
-    "Charles Meneveau"
-   ],
-   "author_count": 5,
-   "venue": "arXiv",
-   "date": "2026-09-18",
-   "year": 2026,
-   "abstract": "Offshore wind farms operate within the marine atmospheric boundary layer, where ocean waves can modify air-sea momentum transfer, turbine inflow, and wake recovery. Wave-resolved simulations can capture phase-dependent wind--wave interactions, but their computational cost and implementation complexity limit their use in large atmospheric and wind-farm domains. This study describes applications and tests of the recently proposed moving surface drag (MOSD) model, a flat-bottom wall-stress formulation for horizontally resolved moving waves, to a sequence of increasingly complex wind--wave and offshore wind-energy applications. The model is first evaluated for turbulent flow over Stokes-like waves using laboratory measurements, where it reproduces mean velocity profiles and captures the qualitative structure of wave-induced motions, although their amplitude is underpredicted. MOSD is then applied to broadband wave spectra fields and offshore wind-farm boundary layers, showing good agreement with mean velocity profiles from wave-resolved simulations across different wave ages, grid resolutions, and turbine spacings. Finally, exploratory offshore wind-farm simulations using MOSD under conventionally neutral conditions demonstrate its application at wind-farm scale. Large-scale waves leave detectable signatures in near-surface velocity spectra, but these signatures decay with height a",
-   "url": "https://arxiv.org/abs/2609.22448",
-   "pdf_url": "https://arxiv.org/pdf/2609.22448v1",
-   "doi": null,
-   "arxiv": "2609.22448",
-   "sources": [
-    "arXiv"
-   ],
-   "score": 53,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:_Qo2XoVZTnwC",
-    "title": "Influence of non-linear wave load models on monopile supported offshore wind turbines for extreme conditions",
-    "year": 2025
-   },
-   "matched": [
-    "ocean wave",
-    "offshore wind",
-    "wind wave",
-    "wave spectra",
-    "air-sea"
-   ],
-   "focus": "domain",
-   "cites": [],
-   "coauthor": null,
-   "first_seen": "2026-11-25",
-   "in_press": false,
-   "news_date": "2026-09-18",
-   "is_new": false,
-   "bullets": [
-    "Moving surface drag model tested from Stokes waves to offshore wind farms",
-    "Matches wave-resolved mean velocity profiles; underpredicts wave-induced motion amplitude",
-    "Large-wave signatures in near-surface velocity spectra decay with height"
-   ]
   },
   {
    "id": "0be00c870195",
@@ -7762,51 +7772,6 @@
    "bullets": null
   },
   {
-   "id": "0828ad65e69a",
-   "title": "Discovering like a scientist: Literature-informed dimensionless learning for physical closure of data-driven equations",
-   "authors": [
-    "Hao Xu",
-    "Tianhao Wu",
-    "Dongxiao Zhang"
-   ],
-   "author_count": 3,
-   "venue": "arXiv",
-   "date": "2026-11-04",
-   "year": 2026,
-   "abstract": "Data-driven methods can recover compact equations, yet the physical dependence of their coefficients across operating conditions often remains unresolved. Dimensionless groups can explain this variation, but selecting relevant groups from the many dimensionally admissible combinations remains challenging. Here, we introduce a knowledge-guided framework for dimensionless learning, called π-former. It learns patterns of variable association and exponent assignment from a corpus of 1,288 established dimensionless groups. Under exact dimensional constraints, the model proposes interpretable basic groups whose combinations are optimized against observations. Across seven physical problems, the framework identifies predictive dimensionless coordinates within seconds. Integration with equation discovery further expresses condition-dependent coefficients through these coordinates, recovering established physical scalings in multi-condition simulations. Applied to experimental measurements of evaporation-driven wetting, the framework discovers dimensionless coordinates and uses them to construct a unified trajectory equation. The resulting model generalizes to held-out conditions across liquids and initial volumes, outperforming existing empirical models. These results establish dimensionless learning as a transferable bridge between accumulated scientific knowledge and data-driven equa",
-   "url": "https://arxiv.org/abs/2611.05780",
-   "pdf_url": "https://arxiv.org/pdf/2611.05780v1",
-   "doi": null,
-   "arxiv": "2611.05780",
-   "sources": [
-    "arXiv",
-    "Semantic Scholar"
-   ],
-   "score": 43,
-   "similar_to": {
-    "id": "dofRHEwAAAAJ:QIV2ME_5wuYC",
-    "title": "Discovering equations that govern wave breaking evolution using scientific machine learning",
-    "year": 2024
-   },
-   "matched": [
-    "equation discovery",
-    "data-driven"
-   ],
-   "focus": "ai_only",
-   "cites": [
-    "dofRHEwAAAAJ:isC4tDSrTZIC"
-   ],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-11-04",
-   "is_new": false,
-   "bullets": [
-    "Built π-former, learning dimensionless groups from 1,288 established ones",
-    "Finds predictive coordinates within seconds across seven physical problems"
-   ]
-  },
-  {
    "id": "d60ce3df5d14",
    "title": "Adaptive spatiotemporal infinite-dimensional Bayesian inversion for hull wave load fields under sparse measurement conditions",
    "authors": [
@@ -7983,6 +7948,50 @@
     "Agent framework jointly discovers PDE structure and unknown spatial coefficient fields",
     "Recovered the true operator in all five 2D systems with 5% noise",
     "Recovered fields: median correlation about 0.85, relative L2 error about 0.28"
+   ]
+  },
+  {
+   "id": "0828ad65e69a",
+   "title": "Discovering like a scientist: Literature-informed dimensionless learning for physical closure of data-driven equations",
+   "authors": [
+    "Hao Xu",
+    "Tian-Hao Wu",
+    "Dong-Xiao Zhang"
+   ],
+   "author_count": 3,
+   "venue": null,
+   "date": "2026-11-04",
+   "year": 2026,
+   "abstract": "Data-driven methods can recover compact equations, yet the physical dependence of their coefficients across operating conditions often remains unresolved. Dimensionless groups can explain this variation, but selecting relevant groups from the many dimensionally admissible combinations remains challenging. Here, we introduce a knowledge-guided framework for dimensionless learning, called {\\pi}-former. It learns patterns of variable association and exponent assignment from a corpus of 1,288 established dimensionless groups. Under exact dimensional constraints, the model proposes interpretable basic groups whose combinations are optimized against observations. Across seven physical problems, the framework identifies predictive dimensionless coordinates within seconds. Integration with equation discovery further expresses condition-dependent coefficients through these coordinates, recovering established physical scalings in multi-condition simulations. Applied to experimental measurements of evaporation-driven wetting, the framework discovers dimensionless coordinates and uses them to construct a unified trajectory equation. The resulting model generalizes to held-out conditions across liquids and initial volumes, outperforming existing empirical models. These results establish dimensionless learning as a transferable bridge between accumulated scientific knowledge and data-driven",
+   "url": "https://www.semanticscholar.org/paper/0d6898a5b0c9abf8ded8845dcb807c146c35b2ab",
+   "pdf_url": null,
+   "doi": null,
+   "arxiv": "2611.05780",
+   "sources": [
+    "Semantic Scholar"
+   ],
+   "score": 37,
+   "similar_to": {
+    "id": "dofRHEwAAAAJ:QIV2ME_5wuYC",
+    "title": "Discovering equations that govern wave breaking evolution using scientific machine learning",
+    "year": 2024
+   },
+   "matched": [
+    "equation discovery",
+    "data-driven"
+   ],
+   "focus": "ai_only",
+   "cites": [
+    "dofRHEwAAAAJ:isC4tDSrTZIC"
+   ],
+   "coauthor": null,
+   "first_seen": "2026-11-22",
+   "in_press": false,
+   "news_date": "2026-11-04",
+   "is_new": false,
+   "bullets": [
+    "Built π-former, learning dimensionless groups from 1,288 established ones",
+    "Finds predictive coordinates within seconds across seven physical problems"
    ]
   },
   {
@@ -8372,45 +8381,6 @@
    "first_seen": "2026-11-22",
    "in_press": false,
    "news_date": "2026-09-16",
-   "is_new": false,
-   "bullets": null
-  },
-  {
-   "id": "4edee9895d7f",
-   "title": "Artificial Intelligence for Atmospheric and Oceanic Forecasting and Research: A Fudan University Perspective",
-   "authors": [
-    "G. Dai",
-    "Hao Li",
-    "M. Mu",
-    "Gui-Hua Wang",
-    "Bo Qin",
-    "Xiao-Hui Zhong",
-    "Feng Zhang",
-    "San X. Liang"
-   ],
-   "author_count": 8,
-   "venue": "Advances in Atmospheric Sciences",
-   "date": "2026-07-28",
-   "year": 2026,
-   "abstract": null,
-   "url": "https://doi.org/10.1007/s00376-026-6149-7",
-   "pdf_url": null,
-   "doi": "10.1007/s00376-026-6149-7",
-   "arxiv": null,
-   "sources": [
-    "Semantic Scholar"
-   ],
-   "score": 21,
-   "similar_to": null,
-   "matched": [],
-   "focus": "adjacent",
-   "cites": [
-    "dofRHEwAAAAJ:isC4tDSrTZIC"
-   ],
-   "coauthor": null,
-   "first_seen": "2026-11-22",
-   "in_press": false,
-   "news_date": "2026-07-28",
    "is_new": false,
    "bullets": null
   },
