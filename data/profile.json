@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-27T06:49:05Z",
- "checked_at": "2026-11-27T06:49:05Z",
+ "generated_at": "2026-11-27T06:56:39Z",
+ "checked_at": "2026-11-27T06:56:39Z",
  "researcher": {
   "name": "Tim (Tianning) Tang",
   "short_name": "Tim Tang",
@@ -38,8 +38,8 @@
   }
  },
  "metrics": {
-  "citations": 631,
-  "citations_recent": 624,
+  "citations": 634,
+  "citations_recent": 627,
   "h_index": 16,
   "h_index_recent": 16,
   "i10_index": 29,
@@ -49,7 +49,7 @@
   "journal_articles": 43,
   "conference_papers": 20,
   "preprints": 4,
-  "citations_this_year": 277,
+  "citations_this_year": 280,
   "citations_last_year": 157,
   "first_year": 2019,
   "active_years": 8,
@@ -62,8 +62,8 @@
   "open_access": 49,
   "with_doi": 55,
   "source": "Google Scholar",
-  "as_of": "2026-11-26",
-  "scholar_live": false,
+  "as_of": "2026-11-27",
+  "scholar_live": true,
   "openalex": {
    "works_count": 81,
    "cited_by_count": 589,
@@ -107,8 +107,8 @@
   }
  },
  "scholar_snapshot": {
-  "citations": 631,
-  "citations_recent": 624,
+  "citations": 634,
+  "citations_recent": 627,
   "h_index": 16,
   "h_index_recent": 16,
   "i10_index": 29,
@@ -145,10 +145,10 @@
    },
    {
     "year": 2026,
-    "count": 277
+    "count": 280
    }
   ],
-  "as_of": "2026-11-26",
+  "as_of": "2026-11-27",
   "interests": [
    "Ocean Engineering",
    "Rogue wave",
@@ -202,7 +202,7 @@
   },
   {
    "year": 2026,
-   "count": 277
+   "count": 280
   }
  ],
  "publications_by_year": [
@@ -298,21 +298,21 @@
    "id": "physics",
    "label": "Nonlinear wave physics & breaking",
    "count": 22,
-   "citations": 139,
+   "citations": 140,
    "journal": 13
   },
   {
    "id": "spectral",
    "label": "Spectral wave modelling",
    "count": 3,
-   "citations": 5,
+   "citations": 6,
    "journal": 2
   },
   {
    "id": "tides",
    "label": "Tides, sea level & coastal",
    "count": 18,
-   "citations": 83,
+   "citations": 85,
    "journal": 5
   },
   {
@@ -326,7 +326,7 @@
    "id": "ml",
    "label": "Scientific machine learning",
    "count": 28,
-   "citations": 200,
+   "citations": 201,
    "journal": 12
   }
  ],
@@ -343,7 +343,7 @@
   {
    "name": "Thomas Adcock",
    "count": 56,
-   "citations": 447,
+   "citations": 450,
    "first_year": 2019,
    "last_year": 2026
   },
@@ -357,14 +357,14 @@
   {
    "name": "Thomas Monahan",
    "count": 18,
-   "citations": 83,
+   "citations": 85,
    "first_year": 2023,
    "last_year": 2025
   },
   {
    "name": "Stephen Roberts",
    "count": 16,
-   "citations": 48,
+   "citations": 50,
    "first_year": 2023,
    "last_year": 2025
   },
@@ -553,7 +553,7 @@
   {
    "name": "Qingxiang Liu",
    "count": 3,
-   "citations": 9,
+   "citations": 10,
    "first_year": 2022,
    "last_year": 2026
   },
@@ -630,14 +630,14 @@
   {
    "name": "Jialun Chen",
    "count": 2,
-   "citations": 2,
+   "citations": 3,
    "first_year": 2026,
    "last_year": 2026
   },
   {
    "name": "Ronald Clark",
    "count": 2,
-   "citations": 2,
+   "citations": 3,
    "first_year": 2026,
    "last_year": 2026
   },
@@ -795,7 +795,7 @@
   {
    "name": "JGR: Machine Learning and Computation",
    "count": 2,
-   "citations": 14
+   "citations": 16
   },
   {
    "name": "Journal of Ocean Engineering and Marine Energy",
@@ -810,7 +810,7 @@
   {
    "name": "JGR: Oceans",
    "count": 2,
-   "citations": 16
+   "citations": 17
   },
   {
    "name": "Proceedings of the Royal Society A",
@@ -1021,7 +1021,7 @@
    "date": "2025-12-29",
    "venue": "JGR: Machine Learning and Computation",
    "venue_detail": null,
-   "citations": 2,
+   "citations": 3,
    "citations_source": "scholar",
    "origin": "scholar",
    "doi": "10.1029/2025jh000864",
@@ -1637,7 +1637,7 @@
    "date": "2025-05-23",
    "venue": "JGR: Machine Learning and Computation",
    "venue_detail": null,
-   "citations": 12,
+   "citations": 13,
    "citations_source": "scholar",
    "origin": "scholar",
    "doi": "10.1029/2024jh000525",
@@ -1786,6 +1786,42 @@
    ]
   },
   {
+   "id": "dofRHEwAAAAJ:GnPB-g6toBAC",
+   "title": "Response‐based prediction of tidal currents",
+   "authors": [
+    "Thomas Monahan",
+    "Tianning Tang",
+    "Stephen Roberts",
+    "Thomas A. A. Adcock"
+   ],
+   "authors_truncated": false,
+   "me_index": 1,
+   "role": "middle",
+   "year": 2025,
+   "date": "2025-12",
+   "venue": "JGR: Oceans",
+   "venue_detail": "130 (12), e2025JC022758",
+   "citations": 3,
+   "citations_source": "scholar",
+   "origin": "scholar",
+   "doi": "10.1029/2025jc022758",
+   "url": "https://doi.org/10.1029/2025jc022758",
+   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:GnPB-g6toBAC",
+   "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2025JC022758",
+   "abstract": "This study evaluates the response method for predicting tidal currents. We introduce a coupled response model which explicitly accounts for interactions between velocity components. By leveraging non‐parametric and data‐driven weight estimation, the approach demonstrates superior predictive accuracy compared to classical harmonic analysis (HA), particularly for fast‐moving and non‐linear tidal currents. Using ADCP data from the world's largest deployment of tidal stream turbines, the coupled model achieves superior accuracy with fewer than 30 days of input measurements compared to HA using over 180 days of data. Accuracy improvements extend to both current predictions and the derived harmonic constituents, obtained through a specialized procedure. The response approach shows greater robustness when applied to extremely sparse data. This is reflected by the pseudo‐admittances, which also show the non‐parametric approach advanced can effectively capture unsmooth deviations in the admittance. Analysis of 40 active NOAA current stations highlight when the response approach should and should not be used, yielding average reductions in absolute error of 9.6%. The framework offers new opportunities for studying non‐tidal forcing and sediment transport and has significant implications for tidal energy site development. The proposed method is implemented in the open‐source RTide Python package, providing a practical and accessible tool that reduces the level of expertise required to apply the response method to higher‐order nonlinear processes.",
+   "institutions": [
+    "University of Manchester",
+    "University of Oxford"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "type": "journal",
+   "themes": [
+    "tides"
+   ]
+  },
+  {
    "id": "dofRHEwAAAAJ:blknAaTinKkC",
    "title": "Experimental design and analysis of the evolution of unidirectional wind wave interaction",
    "authors": [
@@ -1862,42 +1898,6 @@
     "GB"
    ],
    "type": "conference",
-   "themes": [
-    "tides"
-   ]
-  },
-  {
-   "id": "dofRHEwAAAAJ:GnPB-g6toBAC",
-   "title": "Response‐based prediction of tidal currents",
-   "authors": [
-    "Thomas Monahan",
-    "Tianning Tang",
-    "Stephen Roberts",
-    "Thomas A. A. Adcock"
-   ],
-   "authors_truncated": false,
-   "me_index": 1,
-   "role": "middle",
-   "year": 2025,
-   "date": "2025-12",
-   "venue": "JGR: Oceans",
-   "venue_detail": "130 (12), e2025JC022758",
-   "citations": 2,
-   "citations_source": "scholar",
-   "origin": "scholar",
-   "doi": "10.1029/2025jc022758",
-   "url": "https://doi.org/10.1029/2025jc022758",
-   "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=dofRHEwAAAAJ&citation_for_view=dofRHEwAAAAJ:GnPB-g6toBAC",
-   "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2025JC022758",
-   "abstract": "This study evaluates the response method for predicting tidal currents. We introduce a coupled response model which explicitly accounts for interactions between velocity components. By leveraging non‐parametric and data‐driven weight estimation, the approach demonstrates superior predictive accuracy compared to classical harmonic analysis (HA), particularly for fast‐moving and non‐linear tidal currents. Using ADCP data from the world's largest deployment of tidal stream turbines, the coupled model achieves superior accuracy with fewer than 30 days of input measurements compared to HA using over 180 days of data. Accuracy improvements extend to both current predictions and the derived harmonic constituents, obtained through a specialized procedure. The response approach shows greater robustness when applied to extremely sparse data. This is reflected by the pseudo‐admittances, which also show the non‐parametric approach advanced can effectively capture unsmooth deviations in the admittance. Analysis of 40 active NOAA current stations highlight when the response approach should and should not be used, yielding average reductions in absolute error of 9.6%. The framework offers new opportunities for studying non‐tidal forcing and sediment transport and has significant implications for tidal energy site development. The proposed method is implemented in the open‐source RTide Python package, providing a practical and accessible tool that reduces the level of expertise required to apply the response method to higher‐order nonlinear processes.",
-   "institutions": [
-    "University of Manchester",
-    "University of Oxford"
-   ],
-   "countries": [
-    "GB"
-   ],
-   "type": "journal",
    "themes": [
     "tides"
    ]
@@ -3919,39 +3919,39 @@
   },
   {
    "date": "2026-11-27",
-   "citations": 631,
+   "citations": 634,
    "h_index": 16,
    "i10_index": 29,
    "outputs": 77,
-   "scholar": false,
+   "scholar": true,
    "oa_citations": 589,
    "oa_h_index": 15
   }
  ],
  "sources": {
   "scholar": {
-   "ok": false,
-   "checked": "2026-11-27T06:49:05Z",
-   "note": "scholar.google.com: HTTP 403 for https://scholar.google.com/citations",
-   "last_success": "2026-11-26T06:52:27Z"
+   "ok": true,
+   "checked": "2026-11-27T06:56:39Z",
+   "note": "78 items",
+   "last_success": "2026-11-27T06:56:39Z"
   },
   "orcid": {
    "ok": true,
-   "checked": "2026-11-27T06:49:05Z",
+   "checked": "2026-11-27T06:56:39Z",
    "note": "45 works",
-   "last_success": "2026-11-27T06:49:05Z"
+   "last_success": "2026-11-27T06:56:39Z"
   },
   "openalex": {
    "ok": true,
-   "checked": "2026-11-27T06:49:05Z",
+   "checked": "2026-11-27T06:56:39Z",
    "note": "",
-   "last_success": "2026-11-27T06:49:05Z"
+   "last_success": "2026-11-27T06:56:39Z"
   },
   "crossref": {
    "ok": true,
-   "checked": "2026-11-27T06:49:05Z",
+   "checked": "2026-11-27T06:56:39Z",
    "note": "56 records cached",
-   "last_success": "2026-11-27T06:49:05Z"
+   "last_success": "2026-11-27T06:56:39Z"
   }
  }
 }

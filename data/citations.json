@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T06:49:06Z",
+ "generated_at": "2026-11-27T06:56:42Z",
  "source": "Semantic Scholar (citing papers) and OpenAlex (institutions, countries)",
  "totals": {
   "citing_papers": 288,
@@ -15,7 +15,7 @@
   "located": 270,
   "papers_covered": 55,
   "papers_with_doi": 55,
-  "scholar_citations": 631
+  "scholar_citations": 634
  },
  "by_month": [
   {
@@ -745,7 +745,7 @@
    "title": "RTide: Automating the tidal response method",
    "year": 2025,
    "venue": "JGR: Machine Learning and Computation",
-   "scholar": 12,
+   "scholar": 13,
    "found": 7,
    "recent": 5,
    "influential": 0
@@ -841,20 +841,20 @@
    "influential": 0
   },
   {
-   "id": "dofRHEwAAAAJ:blknAaTinKkC",
-   "title": "Experimental design and analysis of the evolution of unidirectional wind wave interaction",
+   "id": "dofRHEwAAAAJ:GnPB-g6toBAC",
+   "title": "Response‐based prediction of tidal currents",
    "year": 2025,
-   "venue": "IEEE Journal of Oceanic Engineering",
-   "scholar": 2,
+   "venue": "JGR: Oceans",
+   "scholar": 3,
    "found": 2,
    "recent": 2,
    "influential": 0
   },
   {
-   "id": "dofRHEwAAAAJ:GnPB-g6toBAC",
-   "title": "Response‐based prediction of tidal currents",
+   "id": "dofRHEwAAAAJ:blknAaTinKkC",
+   "title": "Experimental design and analysis of the evolution of unidirectional wind wave interaction",
    "year": 2025,
-   "venue": "JGR: Oceans",
+   "venue": "IEEE Journal of Oceanic Engineering",
    "scholar": 2,
    "found": 2,
    "recent": 2,
@@ -905,7 +905,7 @@
    "title": "Machine learning approximations for fast and accurate prediction of nonlinear four‐wave interactions in spectral wave models",
    "year": 2026,
    "venue": "JGR: Machine Learning and Computation",
-   "scholar": 2,
+   "scholar": 3,
    "found": 1,
    "recent": 1,
    "influential": 0
