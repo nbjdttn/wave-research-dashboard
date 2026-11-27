@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-11-26T15:12:53Z",
+ "generated_at": "2026-11-27T06:54:24Z",
  "counts": {
   "scanned": {
-   "ukri_open": 137,
-   "ukri_past": 530,
-   "eu": 111,
+   "ukri_open": 136,
+   "ukri_past": 531,
+   "eu": 112,
    "schemes": 38
   },
-  "screened": 497,
+  "screened": 498,
   "read": 83,
   "selected": 32,
   "filtered": 49,
@@ -5150,26 +5150,26 @@
  "sources": {
   "ukri": {
    "ok": true,
-   "count": 137,
-   "checked": "2026-11-26T15:12:53Z",
-   "last_success": "2026-11-26T15:12:53Z"
+   "count": 136,
+   "checked": "2026-11-27T06:54:24Z",
+   "last_success": "2026-11-27T06:54:24Z"
   },
   "ukri_archive": {
    "ok": true,
-   "count": 10,
-   "checked": "2026-11-26T15:12:53Z",
-   "last_success": "2026-11-26T15:12:53Z"
+   "count": 20,
+   "checked": "2026-11-27T06:54:24Z",
+   "last_success": "2026-11-27T06:54:24Z"
   },
   "eu": {
    "ok": true,
-   "count": 111,
-   "checked": "2026-11-26T15:12:53Z",
-   "last_success": "2026-11-26T15:12:53Z"
+   "count": 112,
+   "checked": "2026-11-27T06:54:24Z",
+   "last_success": "2026-11-27T06:54:24Z"
   },
   "schemes": {
    "ok": true,
    "count": 38,
-   "checked": "2026-11-26T15:12:53Z"
+   "checked": "2026-11-27T06:54:24Z"
   }
  },
  "ai": {
@@ -5177,17 +5177,17 @@
   "key_present": true,
   "model": "claude-opus-5-5",
   "calls_this_run": 1,
-  "estimated_cost_usd": 0.024,
+  "estimated_cost_usd": 0.02,
   "usage": {
-   "input_tokens": 722,
-   "output_tokens": 187,
+   "input_tokens": 400,
+   "output_tokens": 59,
    "cache_read_input_tokens": 0,
    "cache_creation_input_tokens": 3504,
    "web_searches": 0
   },
   "errors": [],
-  "last_ai_run": "2026-11-26T15:12:53Z",
-  "total_calls": 150,
-  "total_cost_usd": 11.95
+  "last_ai_run": "2026-11-27T06:54:24Z",
+  "total_calls": 151,
+  "total_cost_usd": 11.97
  }
 }
