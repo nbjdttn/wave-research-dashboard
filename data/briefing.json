@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-27T07:05:00Z",
+ "generated_at": "2026-11-28T07:00:00Z",
  "by": "Claude (agent pass)",
  "headline": "UKRI deadline on Tuesday",
  "items": [
-  {"kind": "deadline", "important": true, "title": "UKRI Enabling AI adoption closes Tue 1 Dec, 16:00", "text": "Four days left; you need an AI or domain co-lead and your research office's internal sign-off.", "url": "#funding/ukri-204237"},
+  {"kind": "deadline", "important": true, "title": "UKRI Enabling AI adoption closes Tue 1 Dec, 16:00", "text": "Three days left; you need an AI or domain co-lead and your research office's internal sign-off.", "url": "#funding/ukri-204237"},
   {"kind": "funding", "title": "Horizon wave and tidal call opens 3 Dec", "text": "One €43m Innovation Action, closing 31 March; consortia are forming now.", "url": "#funding/eu-HORIZON-CL5-2027-02-D3-09"},
-  {"kind": "paper", "title": "New formulas for coastal wave heights and periods", "text": "Al Khalili, Christou and Karmpadakis fit Hrms and mean energy period to 2 million SWASH waves over five bed slopes.", "url": "https://doi.org/10.1680/jmaen.25.01912"},
-  {"kind": "paper", "title": "Damping and nonlinear transfer coupled in one kinetic equation", "text": "Ransome, Alberello and Proment derive it; total dissipation barely changes, but energy shifts noticeably between frequencies.", "url": "https://www.semanticscholar.org/paper/84f439e1cd073ab3ae1bbe64346a71c31872c5bf"}
+  {"kind": "paper", "title": "Neural spectral wave model transfers zero-shot across ocean basins", "text": "Trained only on the South China Sea, it reaches about 96% of a numerical model's accuracy elsewhere, at a fraction of the cost.", "url": "https://doi.org/10.1126/sciadv.aei3813"},
+  {"kind": "paper", "title": "Telling plunging from spilling breakers by sound", "text": "Hydrophone tests show plungers give short, intense low-frequency bursts, distinct from spillers; total acoustic energy tracks dissipation poorly.", "url": "https://doi.org/10.1007/s42286-026-00156-7"}
  ]
 }

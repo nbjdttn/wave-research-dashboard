@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-28T06:49:44Z",
+ "generated_at": "2026-11-28T06:55:10Z",
  "source": "Semantic Scholar (citing papers) and OpenAlex (institutions, countries)",
  "totals": {
   "citing_papers": 289,
@@ -15,7 +15,7 @@
   "located": 271,
   "papers_covered": 55,
   "papers_with_doi": 55,
-  "scholar_citations": 634
+  "scholar_citations": 635
  },
  "by_month": [
   {
@@ -595,7 +595,7 @@
    "title": "Influence of non-linear wave load models on monopile supported offshore wind turbines for extreme conditions",
    "year": 2025,
    "venue": "Ocean Engineering",
-   "scholar": 18,
+   "scholar": 19,
    "found": 17,
    "recent": 12,
    "influential": 0
@@ -795,7 +795,7 @@
    "title": "Response‐based prediction of tidal currents",
    "year": 2025,
    "venue": "JGR: Oceans",
-   "scholar": 3,
+   "scholar": 4,
    "found": 3,
    "recent": 3,
    "influential": 0
@@ -965,7 +965,7 @@
    "title": "Physics-informed neural networks for phase-resolved data assimilation and prediction of nonlinear ocean waves",
    "year": 2025,
    "venue": "Physical Review Fluids",
-   "scholar": 40,
+   "scholar": 39,
    "found": 0,
    "recent": 0,
    "influential": 0

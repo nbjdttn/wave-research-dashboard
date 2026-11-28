@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-28T06:48:27Z",
- "checked_at": "2026-11-28T06:48:27Z",
+ "generated_at": "2026-11-28T06:55:08Z",
+ "checked_at": "2026-11-28T06:55:08Z",
  "researcher": {
   "name": "Tim (Tianning) Tang",
   "short_name": "Tim Tang",
@@ -38,8 +38,8 @@
   }
  },
  "metrics": {
-  "citations": 634,
-  "citations_recent": 627,
+  "citations": 635,
+  "citations_recent": 628,
   "h_index": 16,
   "h_index_recent": 16,
   "i10_index": 29,
@@ -49,7 +49,7 @@
   "journal_articles": 43,
   "conference_papers": 20,
   "preprints": 4,
-  "citations_this_year": 280,
+  "citations_this_year": 281,
   "citations_last_year": 157,
   "first_year": 2019,
   "active_years": 8,
@@ -62,8 +62,8 @@
   "open_access": 49,
   "with_doi": 55,
   "source": "Google Scholar",
-  "as_of": "2026-11-27",
-  "scholar_live": false,
+  "as_of": "2026-11-28",
+  "scholar_live": true,
   "openalex": {
    "works_count": 81,
    "cited_by_count": 589,
@@ -107,8 +107,8 @@
   }
  },
  "scholar_snapshot": {
-  "citations": 634,
-  "citations_recent": 627,
+  "citations": 635,
+  "citations_recent": 628,
   "h_index": 16,
   "h_index_recent": 16,
   "i10_index": 29,
@@ -145,10 +145,10 @@
    },
    {
     "year": 2026,
-    "count": 280
+    "count": 281
    }
   ],
-  "as_of": "2026-11-27",
+  "as_of": "2026-11-28",
   "interests": [
    "Ocean Engineering",
    "Rogue wave",
@@ -202,7 +202,7 @@
   },
   {
    "year": 2026,
-   "count": 280
+   "count": 281
   }
  ],
  "publications_by_year": [
@@ -291,14 +291,14 @@
    "id": "wsi",
    "label": "Wave–structure interaction",
    "count": 15,
-   "citations": 172,
+   "citations": 173,
    "journal": 10
   },
   {
    "id": "physics",
    "label": "Nonlinear wave physics & breaking",
    "count": 22,
-   "citations": 140,
+   "citations": 139,
    "journal": 13
   },
   {
@@ -312,21 +312,21 @@
    "id": "tides",
    "label": "Tides, sea level & coastal",
    "count": 18,
-   "citations": 85,
+   "citations": 86,
    "journal": 5
   },
   {
    "id": "energy",
    "label": "Marine renewable energy",
    "count": 6,
-   "citations": 66,
+   "citations": 67,
    "journal": 4
   },
   {
    "id": "ml",
    "label": "Scientific machine learning",
    "count": 28,
-   "citations": 201,
+   "citations": 200,
    "journal": 12
   }
  ],
@@ -343,7 +343,7 @@
   {
    "name": "Thomas Adcock",
    "count": 56,
-   "citations": 450,
+   "citations": 452,
    "first_year": 2019,
    "last_year": 2026
   },
@@ -357,14 +357,14 @@
   {
    "name": "Thomas Monahan",
    "count": 18,
-   "citations": 85,
+   "citations": 86,
    "first_year": 2023,
    "last_year": 2025
   },
   {
    "name": "Stephen Roberts",
    "count": 16,
-   "citations": 50,
+   "citations": 51,
    "first_year": 2023,
    "last_year": 2025
   },
@@ -504,7 +504,7 @@
   {
    "name": "Rui Cao",
    "count": 3,
-   "citations": 71,
+   "citations": 70,
    "first_year": 2024,
    "last_year": 2025
   },
@@ -560,8 +560,15 @@
   {
    "name": "Adrian Callaghan",
    "count": 2,
-   "citations": 68,
+   "citations": 67,
    "first_year": 2025,
+   "last_year": 2025
+  },
+  {
+   "name": "Gerard V. Ryan",
+   "count": 2,
+   "citations": 41,
+   "first_year": 2024,
    "last_year": 2025
   },
   {
@@ -570,13 +577,6 @@
    "citations": 41,
    "first_year": 2023,
    "last_year": 2023
-  },
-  {
-   "name": "Gerard V. Ryan",
-   "count": 2,
-   "citations": 40,
-   "first_year": 2024,
-   "last_year": 2025
   },
   {
    "name": "Shuxue Liu",
@@ -672,35 +672,35 @@
   {
    "name": "Enrique M. Padilla",
    "count": 1,
-   "citations": 40,
+   "citations": 39,
    "first_year": 2025,
    "last_year": 2025
   },
   {
    "name": "Merten Stender",
    "count": 1,
-   "citations": 40,
+   "citations": 39,
    "first_year": 2025,
    "last_year": 2025
   },
   {
    "name": "Norbert Hoffmann",
    "count": 1,
-   "citations": 40,
+   "citations": 39,
    "first_year": 2025,
    "last_year": 2025
   },
   {
    "name": "Svenja Ehlers",
    "count": 1,
-   "citations": 40,
+   "citations": 39,
    "first_year": 2025,
    "last_year": 2025
   },
   {
    "name": "Yuxin Fang",
    "count": 1,
-   "citations": 40,
+   "citations": 39,
    "first_year": 2025,
    "last_year": 2025
   },
@@ -785,12 +785,12 @@
   {
    "name": "Physical Review Fluids",
    "count": 3,
-   "citations": 57
+   "citations": 56
   },
   {
    "name": "Ocean Engineering",
    "count": 3,
-   "citations": 44
+   "citations": 45
   },
   {
    "name": "JGR: Machine Learning and Computation",
@@ -810,7 +810,7 @@
   {
    "name": "JGR: Oceans",
    "count": 2,
-   "citations": 17
+   "citations": 18
   },
   {
    "name": "Proceedings of the Royal Society A",
@@ -1390,7 +1390,7 @@
    "date": "2025-09-02",
    "venue": "Physical Review Fluids",
    "venue_detail": "10 (9), 094901",
-   "citations": 40,
+   "citations": 39,
    "citations_source": "scholar",
    "origin": "scholar",
    "doi": "10.1103/ytyy-pvys",
@@ -1483,7 +1483,7 @@
    "date": "2025-04",
    "venue": "Ocean Engineering",
    "venue_detail": "323, 120510",
-   "citations": 18,
+   "citations": 19,
    "citations_source": "scholar",
    "origin": "scholar",
    "doi": "10.1016/j.oceaneng.2025.120510",
@@ -1801,7 +1801,7 @@
    "date": "2025-12",
    "venue": "JGR: Oceans",
    "venue_detail": "130 (12), e2025JC022758",
-   "citations": 3,
+   "citations": 4,
    "citations_source": "scholar",
    "origin": "scholar",
    "doi": "10.1029/2025jc022758",
@@ -3929,39 +3929,39 @@
   },
   {
    "date": "2026-11-28",
-   "citations": 634,
+   "citations": 635,
    "h_index": 16,
    "i10_index": 29,
    "outputs": 77,
-   "scholar": false,
+   "scholar": true,
    "oa_citations": 589,
    "oa_h_index": 15
   }
  ],
  "sources": {
   "scholar": {
-   "ok": false,
-   "checked": "2026-11-28T06:48:27Z",
-   "note": "scholar.google.com: HTTP 403 for https://scholar.google.com/citations",
-   "last_success": "2026-11-27T06:56:39Z"
+   "ok": true,
+   "checked": "2026-11-28T06:55:08Z",
+   "note": "78 items",
+   "last_success": "2026-11-28T06:55:08Z"
   },
   "orcid": {
    "ok": true,
-   "checked": "2026-11-28T06:48:27Z",
+   "checked": "2026-11-28T06:55:08Z",
    "note": "45 works",
-   "last_success": "2026-11-28T06:48:27Z"
+   "last_success": "2026-11-28T06:55:08Z"
   },
   "openalex": {
    "ok": true,
-   "checked": "2026-11-28T06:48:27Z",
+   "checked": "2026-11-28T06:55:08Z",
    "note": "",
-   "last_success": "2026-11-28T06:48:27Z"
+   "last_success": "2026-11-28T06:55:08Z"
   },
   "crossref": {
    "ok": true,
-   "checked": "2026-11-28T06:48:27Z",
+   "checked": "2026-11-28T06:55:08Z",
    "note": "56 records cached",
-   "last_success": "2026-11-28T06:48:27Z"
+   "last_success": "2026-11-28T06:55:08Z"
   }
  }
 }
